@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="Frequently asked questions about DMV Throwers yo-yo and skill toy club. Free meetups, all ages welcome."/>
+  <meta property="og:title" content="FAQ - DMV Throwers · Yo-Yo & Skill Toy Club"/>
+  <meta property="og:description" content="Answers to common questions about our free yo-yo meetups in the DMV area"/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #D42B2B;
+      --red-dark: #b01f1f;
+      --navy: #1a2744;
+      --navy-deep: #0e1833;
+      --cream: #f5f0e8;
+      --cream-mid: #f0ebe0;
+      --border: #d4cebc;
+      --text-muted: #6a7a9a;
+      --text-body: #3a4a6a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); }
+    #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    #top-bar span { font-size: 0.72rem; color: white; letter-spacing: 0.14em; font-weight: 600; }
+    #top-bar a { font-size: 0.72rem; color: white; letter-spacing: 0.12em; font-weight: 700; text-decoration: underline; white-space: nowrap; }
+    nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+    .nav-brand-text-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; line-height: 1; color: var(--navy); }
+    .nav-brand-text-sub { font-size: 0.6rem; letter-spacing: 0.18em; color: var(--red); font-weight: 700; margin-top: 2px; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-link { cursor: pointer; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 600; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; color: var(--navy); text-decoration: none; }
+    .nav-link:hover, .nav-link.active { border-bottom-color: var(--red); color: var(--red); }
+    .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
+    .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
+    .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
+    .section { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+    .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 18px; }
+    .section-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.2rem; color: var(--navy); margin-bottom: 32px; line-height: 1.1; }
+    .divider { width: 60px; height: 3px; background: var(--red); margin-bottom: 32px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1rem; user-select: none; }
+    .faq-q:hover { color: var(--red); }
+    .faq-toggle { color: var(--red); font-size: 1.4rem; font-weight: 300; line-height: 1; }
+    .faq-a { font-size: 0.92rem; line-height: 1.7; padding-bottom: 20px; color: var(--text-body); display: none; }
+    .faq-a.open { display: block; }
+    footer { background: var(--navy); padding: 40px 24px 24px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
+    .footer-brand { display: flex; align-items: center; gap: 12px; }
+    .footer-link { color: #a0a8c0; font-size: 0.8rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
+    .footer-link:hover { color: var(--red); }
+    .footer-bottom { border-top: 1px solid #2a3a5a; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .footer-copy { font-size: 0.75rem; color: #4a5a7a; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-top { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .hamburger { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="top-bar">
+  <span>NEXT MEET: APRIL 19 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
+  <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noreferrer">RSVP →</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="logo.png" alt="DMV Throwers Logo" style="width:38px;height:38px;object-fit:contain;"/>
+      <div>
+        <div class="nav-brand-text-main">DMV THROWERS</div>
+        <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#about" class="nav-link">ABOUT</a>
+      <a href="index.html#events" class="nav-link">EVENTS</a>
+      <a href="index.html#gallery" class="nav-link">GALLERY</a>
+      <a href="index.html#resources" class="nav-link">RESOURCES</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="index.html#contact" class="nav-link">CONTACT</a>
+      <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#about">ABOUT</a>
+  <a href="index.html#events">EVENTS</a>
+  <a href="index.html#gallery">GALLERY</a>
+  <a href="index.html#resources">RESOURCES</a>
+  <a href="faq.html">FAQ</a>
+  <a href="index.html#contact">CONTACT</a>
+  <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
+</div>
+
+<section id="faq" class="section">
+  <div class="red-tag">FAQ</div>
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="divider"></div>
+  <p style="color:var(--text-muted);margin-bottom:32px;font-size:0.95rem;">Got a question? Chances are it's answered below. If not, reach us at <strong>contact@dmvthrowers.club</strong> or <strong>@DMV_THROWERS</strong> on Instagram.</p>
+
+  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">General</div>
+  
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>What is DMV Throwers?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">DMV Throwers is a free, community-run yo-yo and skill toy club serving the Washington DC, Maryland, and Virginia area. We bring together throwers of all ages and experience levels — from total beginners to national competitors. Our goal is simple: build a fun, welcoming community around yo-yo and skill toys.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Who runs the club?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">The club was founded by Arthur Foley (President/Founder) and is coordinated day-to-day by Brandon Rogers (Vice President). Our current officer team also includes Abby Brodsky (Co-Coordinator). We're a volunteer-run organization.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Is there a membership fee or dues?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">No. Attending our events is completely free. We accept voluntary donations if you'd like to support the club, but there are no required fees, dues, or memberships of any kind.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Does the club have social media?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes! Find us at Instagram: <a href="https://instagram.com/dmv_throwers" target="_blank" rel="noreferrer" style="color:var(--red);">@DMV_THROWERS</a>, Facebook: DMV Throwers, Email: <a href="mailto:contact@dmvthrowers.club" style="color:var(--red);">contact@dmvthrowers.club</a>, and Linktree: <a href="https://linktr.ee/dmvthrowers" target="_blank" rel="noreferrer" style="color:var(--red);">linktr.ee/dmvthrowers</a></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Is DMV Throwers a nonprofit?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Not currently. We operate as a community club. We are exploring nonprofit status as a future step, which would allow us to expand programming and apply for grants. The charter would be updated if and when that changes.</div>
+  </div>
+
+  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Meetup Logistics</div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>When and where do you meet?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">We hold monthly meetups at Arlington Central Library — Barbara M. Donnellan Auditorium / Bluemont Room, 1015 N Quincy St, Arlington, VA 22201. During warmer months we sometimes hold outdoor meetups at Quincy Park in Arlington, VA.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to register or RSVP?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">For special events we may request an RSVP to help with planning — if so, it will be noted in the event announcement. Registration links are provided for major events.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Is there parking?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes. Street parking is available on N Quincy St and surrounding streets. The library is about a 5-minute walk from the Virginia Square–GMU Metro station on the Orange and Silver lines.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>What time should I arrive?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Anytime between 1 and 4 PM works. You don't need to arrive right at 1 — people come and go throughout. If it's your first time, arriving a little earlier gives you more time to get settled and meet people.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>What if a meetup is cancelled?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Cancellations will be announced as early as possible on Instagram (@DMV_THROWERS) and our Facebook page. Always check social media close to the event date if you're unsure.</div>
+  </div>
+
+  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Skill Levels & What to Bring</div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to know how to yo-yo to come?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Not at all. Total beginners are just as welcome as experienced players. If you've never thrown a yo-yo before, we'll help you get started. There's no performance requirement — just come and have fun.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to bring my own yo-yo?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">No. We have loaner yo-yos available at every meetup. If you own one, bring it — but if you don't, that's completely fine.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>What yo-yo should I buy if I want to get one?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">That's a great question to ask at a meetup! Our members have a wide range of experience and are happy to give recommendations based on your budget and style. We'd rather give you in-person advice than a generic answer.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Is it just yo-yos, or other skill toys too?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">All skill toys are welcome. Kendama, diabolo, juggling, and other flow/skill toys are all fair game at our meetups. The club's focus is yo-yo but we're a welcoming space for the broader skill toy community.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>What should I wear or bring?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Wear comfortable clothes you can move in. Beyond that, just bring yourself — and your yo-yo if you have one. We'll handle the rest.</div>
+  </div>
+
+  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Kids & Families</div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Is the club family-friendly?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Absolutely. DMV Throwers is designed to be welcoming for families. We regularly have kids and parents attend together, and we make sure the environment is positive and inclusive for all ages.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Is there an age minimum?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">No official age minimum. We welcome all ages. Younger children should be accompanied by a parent or guardian. For formal officer roles, we do require members to be 18 or older.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Can my child attend without me?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Older teens are welcome to attend independently. For younger children, we recommend a parent or guardian be present, particularly for their first visit.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Are loaner yo-yos safe for kids?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes. Our loaner yo-yos are appropriate for a range of ages. If you have concerns about a specific yo-yo for a younger child, just ask an officer at the event and we'll point you to the right one.</div>
+  </div>
+
+  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Contests & VSYC-26</div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>What is VSYC-26?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">VSYC-26 is the Virginia State YoYo Contest 2026 — a competitive yo-yo event we are actively working to host in the DMV region. It would be a sanctioned state-level contest bringing competitive players from across Virginia and the surrounding region together. <a href="vsyc26.html" style="color:var(--red);font-weight:600;">Learn more →</a></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Do I have to be competitive to come to the club?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Not at all. The vast majority of our members come to socialize, learn tricks, and have fun — not to compete. Competition is one part of the broader community we're building, not a requirement.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Will there be a fee to enter VSYC-26?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Competitive contests typically involve a participant registration fee to cover event costs. There may also be a small spectator fee depending on the venue. Any fees will be clearly communicated well in advance and kept as low as possible. Regular monthly meetups will always remain free.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>How do I stay updated on VSYC-26?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Follow @DMV_THROWERS on Instagram and join our Facebook group. All announcements, venue updates, and registration info will be posted there first.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Does the club attend other contests?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Members individually attend regional and national yo-yo contests, and we support those efforts as a community. As the club grows we may organize group attendance at events like nationals or regionals.</div>
+  </div>
+
+  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Getting More Involved</div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>How do I become a member?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Just show up! There's no application or sign-up process. Anyone who attends a DMV Throwers event is part of the community. If you want to get more involved in running things, read on.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Can I volunteer to help at events?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes — and we'd love it. If you're a regular attendee and want to help with setup, greeting newcomers, running activities, or other tasks, just let Brandon know at a meetup or reach out at contact@dmvthrowers.club.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Are there open officer roles?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes. We currently have two open officer positions: Alternate Location Co-Coordinator — leads logistics for non-primary venues, and Moderator/Activity Coordinator — plans in-event activities and community programming. If you're interested in either role, reach out to Brandon at contact@dmvthrowers.club.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Can I suggest ideas for events or activities?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Absolutely. We're always open to ideas. Bring them up at a meetup, DM us on Instagram, or email contact@dmvthrowers.club. We can't promise everything will happen immediately, but we genuinely consider all suggestions.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span>Can my organization partner with DMV Throwers?</span><span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes. We're open to venue partnerships, co-promotions, sponsorships, and community collaborations. Reach out to Brandon at contact@dmvthrowers.club with your idea and we'll go from there.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="DMV Throwers" style="width:34px;height:34px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.8;"/>
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:white;">DMV THROWERS</div>
+          <div style="font-size:0.6rem;letter-spacing:0.16em;color:#D42B2B;font-weight:700;">YO-YO & SKILL TOY CLUB</div>
+        </div>
+      </div>
+      <div>
+        <a href="index.html#about" class="footer-link">About</a>
+        <a href="index.html#events" class="footer-link">Events</a>
+        <a href="index.html#gallery" class="footer-link">Gallery</a>
+        <a href="index.html#resources" class="footer-link">Resources</a>
+        <a href="#faq" class="footer-link">FAQ</a>
+        <a href="index.html#contact" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link" style="color:#C9A84C;font-weight:700;">VSYC-26</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 DMV Throwers. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const toggle = el.querySelector('.faq-toggle');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-toggle').forEach(t => t.textContent = '+');
+    if (!isOpen) { answer.classList.add('open'); toggle.textContent = '−'; }
+  }
+  const sections = ['faq'];
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-link[href="faq.html"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+</script>
+</body>
+</html>
