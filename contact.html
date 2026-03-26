@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
-  <meta name="description" content="DMV Throwers is the Washington DC/Maryland/Virginia yo-yo and skill toy club. Free meetups every 3rd Saturday at Arlington Central Library. All ages, all levels welcome."/>
-  <meta property="og:title" content="DMV Throwers · Yo-Yo & Skill Toy Club"/>
-  <meta property="og:description" content="Free yo-yo meetups every 3rd Saturday · Arlington Central Library · All ages welcome"/>
+  <title>Contact - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="Get in touch with DMV Throwers yo-yo club. Contact us for event information, membership, or general inquiries."/>
+  <meta property="og:title" content="Contact - DMV Throwers · Yo-Yo & Skill Toy Club"/>
+  <meta property="og:description" content="Contact DMV Throwers for yo-yo club information and events"/>
   <meta property="og:type" content="website"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -35,11 +35,10 @@
     .nav-brand-text-sub { font-size: 0.6rem; letter-spacing: 0.18em; color: var(--red); font-weight: 700; margin-top: 2px; }
     .nav-links { display: flex; gap: 24px; align-items: center; }
     .nav-link { cursor: pointer; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 600; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; color: var(--navy); text-decoration: none; }
-    .nav-link:hover { border-bottom-color: var(--red); color: var(--red); }
+    .nav-link:hover, .nav-link.active { border-bottom-color: var(--red); color: var(--red); }
     .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
     .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
     .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
-    .nav-donate:hover { background: #0f9d84 !important; border-bottom: none !important; }
     .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
     .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
@@ -47,21 +46,38 @@
     .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
     .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
     .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
-    #hero { background: var(--navy); position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; }
-    .hero-dots { position: absolute; inset: 0; opacity: 0.06; background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 32px 32px; }
-    .hero-inner { max-width: 1100px; margin: 0 auto; padding: 80px 24px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; width: 100%; }
-    .hero-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 18px; }
-    .hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(3rem, 8vw, 5.5rem); color: white; line-height: 0.95; margin-bottom: 10px; }
-    .hero-subtitle { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 22px; }
-    .hero-desc { font-size: 1.05rem; color: #c8d0e0; line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn { display: inline-block; padding: 14px 32px; font-weight: 700; letter-spacing: 0.1em; font-size: 0.82rem; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.1s; font-family: 'DM Sans', sans-serif; }
+    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-bg-white { background: white; }
+    .section-bg-navy { background: var(--navy); }
+    .section-bg-cream { background: var(--cream); }
+    .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--navy); margin-bottom: 8px; }
+    .section-title.light { color: white; }
+    .divider { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 32px; }
+    .contact-info { background: white; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .contact-info h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; color: var(--navy); margin-bottom: 20px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+    .contact-icon { font-size: 1.5rem; color: var(--red); flex-shrink: 0; }
+    .contact-text h4 { font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .contact-text p { color: var(--text-muted); line-height: 1.5; }
+    .contact-form { background: white; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    .form-input, .form-textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; transition: border-color 0.2s; }
+    .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--red); }
+    .form-textarea { resize: vertical; min-height: 120px; }
+    .btn { display: inline-block; padding: 14px 32px; font-weight: 700; letter-spacing: 0.1em; font-size: 0.82rem; text-decoration: none; cursor: pointer; border: none; border-radius: 4px; transition: background 0.2s, transform 0.1s; font-family: 'DM Sans', sans-serif; }
     .btn-red { background: var(--red); color: white; }
     .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
-    .btn-outline-white { background: transparent; border: 2px solid white; color: white; }
-    .btn-outline-white:hover { background: white; color: var(--navy); }
-    .hero-logo-wrap { position: relative; }
-    .hero-logo-wrap img { width: 240px; height: 240px; object-fit: contain; opacity: 0.9; filter: brightness(0) invert(1); }
+    .social-links { margin-top: 32px; }
+    .social-links h4 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 16px; }
+    .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .social-link { display: flex; align-items: center; gap: 12px; padding: 16px; background: var(--cream-mid); border-radius: 4px; text-decoration: none; color: var(--navy); transition: background 0.2s; }
+    .social-link:hover { background: var(--border); }
+    .social-icon { font-size: 1.5rem; }
+    .social-text h5 { font-weight: 600; margin-bottom: 2px; }
+    .social-text p { font-size: 0.85rem; color: var(--text-muted); }
     footer { background: var(--navy); padding: 40px 24px 24px; }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
     .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
@@ -73,8 +89,7 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; padding-bottom: 160px; }
-      .hero-logo-wrap { display: none; }
+      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-top { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 480px) {
@@ -105,7 +120,7 @@
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
-      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="contact.html" class="nav-link active">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noreferrer" class="nav-link nav-donate">☕ DONATE</a>
       <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
     </div>
@@ -125,21 +140,97 @@
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
-<section id="hero">
-  <div class="hero-dots"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-tag">EST. 2021 · DC / MD / VA</div>
-      <h1 class="hero-title">DMV<br/>THROWERS</h1>
-      <p class="hero-subtitle">YO-YO & SKILL TOY CLUB · DC · MD · VA</p>
-      <p class="hero-desc">The Mid-Atlantic's home for yo-yo enthusiasts, kendama players, and all skill toy fans. All ages, all levels, always free.</p>
-      <div class="hero-btns">
-        <a href="events.html" class="btn btn-red">VIEW UPCOMING EVENTS</a>
-        <a href="contact.html" class="btn btn-outline-white">JOIN THE CLUB</a>
+<section id="contact" class="section-bg-white">
+  <div class="section">
+    <div class="red-tag">GET IN TOUCH</div>
+    <h2 class="section-title">Contact Us</h2>
+    <div class="divider"></div>
+    <p style="color:var(--text-muted);margin-bottom:32px;font-size:0.95rem;">Have questions about our club, events, or yo-yo in general? We'd love to hear from you!</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-text">
+            <h4>Email</h4>
+            <p><a href="mailto:contact@dmvthrowers.club" style="color:var(--red);text-decoration:none;">contact@dmvthrowers.club</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <h4>Meeting Location</h4>
+            <p>Arlington Central Library<br>1015 N Quincy St<br>Arlington, VA 22201</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-text">
+            <h4>Meeting Times</h4>
+            <p>Every 3rd Saturday of the month<br>1:00 PM - 4:00 PM</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-text">
+            <h4>Online</h4>
+            <p><a href="https://drive.google.com/drive/folders/1EXAMPLE" target="_blank" rel="noreferrer" style="color:var(--red);text-decoration:none;">Google Drive</a> - Club resources<br><a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noreferrer" style="color:var(--red);text-decoration:none;">Ko-fi</a> - Support our club</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send us a Message</h3>
+        <form action="https://formspree.io/f/contact@dmvthrowers.club" method="POST">
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input class="form-input" type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" required></textarea>
+          </div>
+
+          <button class="btn btn-red" type="submit">Send Message</button>
+        </form>
       </div>
     </div>
-    <div class="hero-logo-wrap">
-      <img src="logo.png" alt="DMV Throwers Logo"/>
+
+    <div class="social-links">
+      <h4>Follow Us</h4>
+      <div class="social-grid">
+        <a href="https://drive.google.com/drive/folders/1EXAMPLE" target="_blank" rel="noreferrer" class="social-link">
+          <div class="social-icon">📁</div>
+          <div class="social-text">
+            <h5>Google Drive</h5>
+            <p>Club resources and files</p>
+          </div>
+        </a>
+
+        <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noreferrer" class="social-link">
+          <div class="social-icon">☕</div>
+          <div class="social-text">
+            <h5>Ko-fi</h5>
+            <p>Support our club</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>

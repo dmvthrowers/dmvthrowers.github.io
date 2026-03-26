@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
-  <meta name="description" content="DMV Throwers is the Washington DC/Maryland/Virginia yo-yo and skill toy club. Free meetups every 3rd Saturday at Arlington Central Library. All ages, all levels welcome."/>
-  <meta property="og:title" content="DMV Throwers · Yo-Yo & Skill Toy Club"/>
-  <meta property="og:description" content="Free yo-yo meetups every 3rd Saturday · Arlington Central Library · All ages welcome"/>
+  <title>Gallery - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="Photo gallery of DMV Throwers yo-yo club events and members. See our community in action at Arlington Central Library meetups."/>
+  <meta property="og:title" content="Gallery - DMV Throwers · Yo-Yo & Skill Toy Club"/>
+  <meta property="og:description" content="Community photos from DMV Throwers yo-yo club events and meetups"/>
   <meta property="og:type" content="website"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -35,11 +35,10 @@
     .nav-brand-text-sub { font-size: 0.6rem; letter-spacing: 0.18em; color: var(--red); font-weight: 700; margin-top: 2px; }
     .nav-links { display: flex; gap: 24px; align-items: center; }
     .nav-link { cursor: pointer; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 600; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; color: var(--navy); text-decoration: none; }
-    .nav-link:hover { border-bottom-color: var(--red); color: var(--red); }
+    .nav-link:hover, .nav-link.active { border-bottom-color: var(--red); color: var(--red); }
     .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
     .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
     .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
-    .nav-donate:hover { background: #0f9d84 !important; border-bottom: none !important; }
     .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
     .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
@@ -47,21 +46,21 @@
     .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
     .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
     .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
-    #hero { background: var(--navy); position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center; }
-    .hero-dots { position: absolute; inset: 0; opacity: 0.06; background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 32px 32px; }
-    .hero-inner { max-width: 1100px; margin: 0 auto; padding: 80px 24px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; width: 100%; }
-    .hero-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 18px; }
-    .hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(3rem, 8vw, 5.5rem); color: white; line-height: 0.95; margin-bottom: 10px; }
-    .hero-subtitle { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 22px; }
-    .hero-desc { font-size: 1.05rem; color: #c8d0e0; line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn { display: inline-block; padding: 14px 32px; font-weight: 700; letter-spacing: 0.1em; font-size: 0.82rem; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.1s; font-family: 'DM Sans', sans-serif; }
-    .btn-red { background: var(--red); color: white; }
-    .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
-    .btn-outline-white { background: transparent; border: 2px solid white; color: white; }
-    .btn-outline-white:hover { background: white; color: var(--navy); }
-    .hero-logo-wrap { position: relative; }
-    .hero-logo-wrap img { width: 240px; height: 240px; object-fit: contain; opacity: 0.9; filter: brightness(0) invert(1); }
+    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-bg-white { background: white; }
+    .section-bg-navy { background: var(--navy); }
+    .section-bg-cream { background: var(--cream); }
+    .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--navy); margin-bottom: 8px; }
+    .section-title.light { color: white; }
+    .divider { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 32px; }
+    .gallery-item { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .gallery-img { width: 100%; height: 200px; object-fit: cover; }
+    .gallery-caption { padding: 16px; }
+    .gallery-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 4px; }
+    .gallery-desc { font-size: 0.85rem; color: var(--text-muted); }
     footer { background: var(--navy); padding: 40px 24px 24px; }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
     .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
@@ -73,8 +72,7 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; padding-bottom: 160px; }
-      .hero-logo-wrap { display: none; }
+      .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
       .footer-top { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 480px) {
@@ -102,7 +100,7 @@
     <div class="nav-links">
       <a href="about.html" class="nav-link">ABOUT</a>
       <a href="events.html" class="nav-link">EVENTS</a>
-      <a href="gallery.html" class="nav-link">GALLERY</a>
+      <a href="gallery.html" class="nav-link active">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
@@ -125,21 +123,77 @@
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
-<section id="hero">
-  <div class="hero-dots"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-tag">EST. 2021 · DC / MD / VA</div>
-      <h1 class="hero-title">DMV<br/>THROWERS</h1>
-      <p class="hero-subtitle">YO-YO & SKILL TOY CLUB · DC · MD · VA</p>
-      <p class="hero-desc">The Mid-Atlantic's home for yo-yo enthusiasts, kendama players, and all skill toy fans. All ages, all levels, always free.</p>
-      <div class="hero-btns">
-        <a href="events.html" class="btn btn-red">VIEW UPCOMING EVENTS</a>
-        <a href="contact.html" class="btn btn-outline-white">JOIN THE CLUB</a>
+<section id="gallery" class="section-bg-white">
+  <div class="section">
+    <div class="red-tag">PHOTOS</div>
+    <h2 class="section-title">Gallery</h2>
+    <div class="divider"></div>
+    <p style="color:var(--text-muted);margin-bottom:32px;font-size:0.95rem;">Photos from our monthly meetups at Arlington Central Library and community events</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="DMV Throwers Club.png" alt="DMV Throwers Club" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Club</div>
+          <div class="gallery-desc">Our community logo and branding</div>
+        </div>
       </div>
-    </div>
-    <div class="hero-logo-wrap">
-      <img src="logo.png" alt="DMV Throwers Logo"/>
+      <div class="gallery-item">
+        <img src="DMV Throwers Logo.png" alt="DMV Throwers Logo" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Logo</div>
+          <div class="gallery-desc">Official club logo design</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="DMV Throwers Logo White.png" alt="DMV Throwers Logo White" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Logo White</div>
+          <div class="gallery-desc">White version for dark backgrounds</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="DMV Throwers Logo Black.png" alt="DMV Throwers Logo Black" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Logo Black</div>
+          <div class="gallery-desc">Black version for light backgrounds</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="DMV Throwers Logo Red.png" alt="DMV Throwers Logo Red" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Logo Red</div>
+          <div class="gallery-desc">Red accent version</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="DMV Throwers Logo Navy.png" alt="DMV Throwers Logo Navy" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Logo Navy</div>
+          <div class="gallery-desc">Navy blue version</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="DMV Throwers Logo Cream.png" alt="DMV Throwers Logo Cream" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Logo Cream</div>
+          <div class="gallery-desc">Cream background version</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="DMV Throwers Logo Transparent.png" alt="DMV Throwers Logo Transparent" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Logo Transparent</div>
+          <div class="gallery-desc">Transparent PNG version</div>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="DMV Throwers Logo Square.png" alt="DMV Throwers Logo Square" class="gallery-img">
+        <div class="gallery-caption">
+          <div class="gallery-title">DMV Throwers Logo Square</div>
+          <div class="gallery-desc">Square format logo</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
