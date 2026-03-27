@@ -22,7 +22,7 @@ We welcome yo-yo, kendama, diabolo, juggling, and all skill toys.
 📅 **Every 3rd Sunday · 1–4 PM**
 📍 **Arlington Central Library** · Barbara M. Donnellan Auditorium
 🗺️ 1015 N Quincy St, Arlington, VA 22201
-💵 **Free to attend · No Free to attend · No registration required · Loaner yo-yos available**
+💵 **Free to attend · No registration required · Loaner yo-yos available**
 
 ---
 
@@ -68,11 +68,6 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 
 ---
 
-*DMV Throwers · Est. 2021 · DC · MD · VA · @dmv_throwers*
-
-# dmvthrowers.github.io
-DMV throwers yoyo and skill toy club: the premier DC area skill and flow based events and activities club
-
 ## File Structure
 
 ```
@@ -82,54 +77,36 @@ DMV throwers yoyo and skill toy club: the premier DC area skill and flow based e
 ├── events.html             # Events page
 ├── gallery.html            # Gallery page
 ├── resources.html          # Resources page
-├── contact.html            # Contact page
 ├── faq.html                # FAQ page
+├── contact.html            # Contact page
 ├── vsyc26.html             # VSYC-26 contest page
-├── CNAME                   # GitHub Pages domain
+├── sitemap.xml             # Sitemap for search engines
+├── CNAME                   # GitHub Pages custom domain
 ├── README.md               # This file
-├── organize_files.ps1      # File organization script
 └── assets/
     ├── images/
-    │   ├── logo.png                    # Main logo
-    │   ├── DMV Throwers Kofi Banner.png # Donation banner
-    │   ├── IMG_4713.jpeg              # Miscellaneous image
-    │   ├── events/                    # Monthly event images
+    │   ├── logo.png                        # Main club logo
+    │   ├── events/                         # Monthly event flyers
     │   │   ├── DMV Throwers April 2026.png
     │   │   ├── DMV Throwers May 2026.png
-    │   │   └── ... (other monthly images)
-    │   ├── gallery/                   # Gallery images
-    │   │   ├── club*.PNG              # Club photos
-    │   │   ├── DMV Throwers Club.png
-    │   │   └── ... (logo variants)
-    │   └── logos/                     # Logo variants and state logos
-    │       ├── DMVT_Logo_*.jpeg/png   # Logo variants
-    │       ├── VAStateLogo_Final.*    # State logos
-    │       └── vastateyoyocontest.png
-    └── documents/                     # PDFs, docs, presentations
-        ├── DMV Throwers Charter v5.docx
-        ├── DMV Throwers Event Checklist.docx
-        ├── DMV Throwers FAQ.docx
-        ├── DMV Throwers Officer Roles.docx
-        ├── DMV Throwers Workshop Run Sheet.docx
-        ├── DMV Throwers Press Kit.pdf
-        ├── DMV Throwers Maintenance Guide 2.pptx
+    │   │   ├── DMV Throwers June 2026.png
+    │   │   ├── DMV Throwers July 2026.png
+    │   │   └── DMV Throwers August 2026.png
+    │   ├── gallery/                        # Club photo gallery
+    │   │   └── club*.PNG
+    │   └── logos/                          # Logo variants
+    │       ├── DMVT_Logo_*.jpeg/png
+    │       └── VAStateLogo_Final.*
+    └── documents/                          # PDFs and presentations
+        ├── DMV Throwers Workshop Run Sheet.pdf
         ├── DMV Throwers Trick Reference Guide.pptx
-        ├── VSYC26 Industry Pitch v4.pdf
-        ├── VSYC26 Local Pitch v4.pdf
-        ├── VSYC26 Sponsor Package v26g.pdf
+        ├── DMV Throwers Club Display Loop.pptx
+        ├── DMV Throwers Event Checklist.docx
+        ├── DMV Throwers Maintenance Guide 2.pptx
         ├── Yoyo Club slides to share.pdf
-        └── Yoyo Maintenence .pdf
+        └── VSYC26 Sponsor Package v26g.pdf
 ```
 
-## Setup
+---
 
-1. Clone the repository
-2. Run the organization script: `.\organize_files.ps1`
-3. The script will create the proper directory structure and move files
-4. Verify that all pages load correctly
-
-## Development
-
-- HTML pages are in the root directory
-- All assets (images, documents) are organized in the `/assets/` folder
-- Use relative paths like `assets/images/logo.png` in HTML files
+*DMV Throwers · Est. 2021 · DC · MD · VA · @dmv_throwers*

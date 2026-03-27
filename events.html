@@ -4,25 +4,16 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Events - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
-  <meta name="description" content="Upcoming events and meetups for DMV Throwers yo-yo club. Free monthly meetups at Arlington Central Library."/>
+  <meta name="description" content="Upcoming yo-yo meetups and events for DMV Throwers. Free monthly meetups every 3rd Sunday at Arlington Central Library in Arlington, VA. All ages welcome."/>
   <meta property="og:title" content="Events - DMV Throwers · Yo-Yo & Skill Toy Club"/>
-  <meta property="og:description" content="Free monthly yo-yo meetups every 3rd Sunday at Arlington Central Library"/>
+  <meta property="og:description" content="Free monthly yo-yo meetups every 3rd Sunday at Arlington Central Library · No registration required"/>
   <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://dmvthrowers.club/events.html"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --red: #D42B2B;
-      --red-dark: #b01f1f;
-      --navy: #1a2744;
-      --navy-deep: #0e1833;
-      --cream: #f5f0e8;
-      --cream-mid: #f0ebe0;
-      --border: #d4cebc;
-      --text-muted: #6a7a9a;
-      --text-body: #3a4a6a;
-    }
+    :root { --red: #D42B2B; --red-dark: #b01f1f; --navy: #1a2744; --navy-deep: #0e1833; --cream: #f5f0e8; --cream-mid: #f0ebe0; --border: #d4cebc; --text-muted: #6a7a9a; --text-body: #3a4a6a; }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); }
     #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
@@ -47,32 +38,24 @@
     .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
     .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
     .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
-    .section-bg-white { background: white; }
-    .section-bg-navy { background: var(--navy); }
-    .section-bg-cream { background: var(--cream); }
     .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 16px; }
     .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--navy); margin-bottom: 8px; }
-    .section-title.light { color: white; }
     .divider { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
     .btn { display: inline-block; padding: 14px 32px; font-weight: 700; letter-spacing: 0.1em; font-size: 0.82rem; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.1s; font-family: 'DM Sans', sans-serif; }
     .btn-red { background: var(--red); color: white; }
     .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
-    .event-card { background: white; border-left: 4px solid var(--navy); padding: 24px 28px; margin-bottom: 16px; transition: transform 0.15s, box-shadow 0.15s; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+    /* Fixed event card structure */
+    .event-card { background: white; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
     .event-card:hover { transform: translateX(4px); box-shadow: -4px 4px 0 var(--red); }
-    .event-card.special { border-left-color: var(--red); background: var(--navy); }
+    .event-card-image { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .event-card-body { padding: 20px 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
     .event-type { font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; color: var(--red); margin-bottom: 6px; }
-    .event-card.special .event-type { color: #ff9090; }
-    .event-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; color: var(--navy); }
-    .event-card.special .event-name { color: white; }
+    .event-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--navy); }
     .event-loc { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
-    .event-card.special .event-loc { color: #a0b0d0; }
-    .event-date { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--red); text-align: right; }
+    .event-date { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--red); text-align: right; white-space: nowrap; }
     .event-day { font-size: 0.8rem; color: var(--text-muted); text-align: right; }
-    .event-card.special .event-day { color: #a0b0d0; }
-    .badge-row { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .badge-row { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
     .badge { display: inline-flex; align-items: center; gap: 6px; background: var(--cream-mid); border: 1px solid var(--border); padding: 8px 16px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; }
-    .event-card-with-image { flex-direction: column; overflow: hidden; }
-    .event-card-image { width: 100%; height: 120px; object-fit: cover; margin: -24px -28px 16px -28px; }
     footer { background: var(--navy); padding: 40px 24px 24px; }
     .footer-inner { max-width: 1100px; margin: 0 auto; }
     .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
@@ -84,15 +67,11 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .event-card { flex-direction: column; align-items: flex-start; }
-      .event-date { text-align: left; margin-top: 8px; }
-      .event-day { text-align: left; }
+      .event-card-body { flex-direction: column; align-items: flex-start; }
+      .event-date, .event-day { text-align: left; }
       .footer-top { flex-direction: column; align-items: flex-start; }
     }
-    @media (max-width: 480px) {
-      .hero-btns { flex-direction: column; }
-      #top-bar { justify-content: center; text-align: center; }
-    }
+    @media (max-width: 480px) { #top-bar { justify-content: center; text-align: center; } }
   </style>
 </head>
 <body>
@@ -121,9 +100,7 @@
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noreferrer" class="nav-link nav-donate">☕ DONATE</a>
       <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
@@ -137,79 +114,91 @@
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
-<section id="events" class="section-bg-white">
+<section id="events" style="background:white;">
   <div class="section">
     <div class="red-tag">SCHEDULE</div>
     <h2 class="section-title">Upcoming Events</h2>
     <div class="divider"></div>
-    <p style="color:var(--text-muted);margin-bottom:32px;font-size:0.95rem;">Monthly meetups at Arlington Central Library, 1015 N Quincy St, Arlington VA · Sundays 1–4 PM · Free to attend · No registration required</p>
+    <p style="color:var(--text-muted);margin-bottom:32px;font-size:0.95rem;">
+      Free monthly meetups · Every 3rd Sunday · 1–4 PM · Arlington Central Library, 1015 N Quincy St, Arlington VA 22201 · No registration required · Loaner yo-yos available
+    </p>
 
-    <div class="event-card special event-card-with-image">
-      <img src="assets/images/events/DMV Throwers April 2026.png" alt="April 2026 Event" class="event-card-image">
-      <div>
-        <div class="event-type">★ REGISTERED MEETUP</div>
-        <div class="event-name">Arlington Central Library</div>
-        <div class="event-loc">1015 N Quincy St, Arlington VA · Auditorium</div>
-        <div style="margin-top:12px;">
+    <div class="event-card">
+      <img src="assets/images/events/DMV%20Throwers%20April%202026.png" alt="DMV Throwers April 2026 Monthly Meetup Flyer" class="event-card-image"/>
+      <div class="event-card-body">
+        <div>
+          <div class="event-type">● MONTHLY MEETUP</div>
+          <div class="event-name">Arlington Central Library</div>
+          <div class="event-loc">1015 N Quincy St, Arlington VA 22201 · Barbara M. Donnellan Auditorium</div>
+        </div>
+        <div>
           <div class="event-date">April 19</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;">RSVP →</a>
+          <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;display:inline-block;">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="event-card special event-card-with-image">
-      <img src="assets/images/events/DMV Throwers May 2026.png" alt="May 2026 Event" class="event-card-image">
-      <div>
-        <div class="event-type">★ REGISTERED MEETUP</div>
-        <div class="event-name">Arlington Central Library</div>
-        <div class="event-loc">1015 N Quincy St, Arlington VA · Auditorium</div>
-        <div style="margin-top:12px;">
+    <div class="event-card">
+      <img src="assets/images/events/DMV%20Throwers%20May%202026.png" alt="DMV Throwers May 2026 Monthly Meetup Flyer" class="event-card-image"/>
+      <div class="event-card-body">
+        <div>
+          <div class="event-type">● MONTHLY MEETUP</div>
+          <div class="event-name">Arlington Central Library</div>
+          <div class="event-loc">1015 N Quincy St, Arlington VA 22201 · Barbara M. Donnellan Auditorium</div>
+        </div>
+        <div>
           <div class="event-date">May 17</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <a href="https://arlingtonva.libcal.com/event/15919319" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;">RSVP →</a>
+          <a href="https://arlingtonva.libcal.com/event/15919319" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;display:inline-block;">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="event-card special event-card-with-image">
-      <img src="assets/images/events/DMV Throwers June 2026.png" alt="June 2026 Event" class="event-card-image">
-      <div>
-        <div class="event-type">★ REGISTERED MEETUP</div>
-        <div class="event-name">Arlington Central Library</div>
-        <div class="event-loc">1015 N Quincy St, Arlington VA · Auditorium</div>
-        <div style="margin-top:12px;">
+    <div class="event-card">
+      <img src="assets/images/events/DMV%20Throwers%20June%202026.png" alt="DMV Throwers June 2026 Monthly Meetup Flyer" class="event-card-image"/>
+      <div class="event-card-body">
+        <div>
+          <div class="event-type">● MONTHLY MEETUP</div>
+          <div class="event-name">Arlington Central Library</div>
+          <div class="event-loc">1015 N Quincy St, Arlington VA 22201 · Barbara M. Donnellan Auditorium</div>
+        </div>
+        <div>
           <div class="event-date">June 21</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <a href="https://arlingtonva.libcal.com/event/15919320" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;">RSVP →</a>
+          <a href="https://arlingtonva.libcal.com/event/15919320" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;display:inline-block;">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="event-card special event-card-with-image">
-      <img src="assets/images/events/DMV Throwers July 2026.png" alt="July 2026 Event" class="event-card-image">
-      <div>
-        <div class="event-type">★ REGISTERED MEETUP</div>
-        <div class="event-name">Arlington Central Library</div>
-        <div class="event-loc">1015 N Quincy St, Arlington VA · Auditorium</div>
-        <div style="margin-top:12px;">
+    <div class="event-card">
+      <img src="assets/images/events/DMV%20Throwers%20July%202026.png" alt="DMV Throwers July 2026 Monthly Meetup Flyer" class="event-card-image"/>
+      <div class="event-card-body">
+        <div>
+          <div class="event-type">● MONTHLY MEETUP</div>
+          <div class="event-name">Arlington Central Library</div>
+          <div class="event-loc">1015 N Quincy St, Arlington VA 22201 · Barbara M. Donnellan Auditorium</div>
+        </div>
+        <div>
           <div class="event-date">July 19</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <a href="https://arlingtonva.libcal.com/event/15919321" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;">RSVP →</a>
+          <a href="https://arlingtonva.libcal.com/event/15919321" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;display:inline-block;">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="event-card special event-card-with-image">
-      <img src="assets/images/events/DMV Throwers August 2026.png" alt="August 2026 Event" class="event-card-image">
-      <div>
-        <div class="event-type">★ REGISTERED MEETUP</div>
-        <div class="event-name">Arlington Central Library</div>
-        <div class="event-loc">1015 N Quincy St, Arlington VA · Auditorium</div>
-        <div style="margin-top:12px;">
+    <div class="event-card">
+      <img src="assets/images/events/DMV%20Throwers%20August%202026.png" alt="DMV Throwers August 2026 Monthly Meetup Flyer" class="event-card-image"/>
+      <div class="event-card-body">
+        <div>
+          <div class="event-type">● MONTHLY MEETUP</div>
+          <div class="event-name">Arlington Central Library</div>
+          <div class="event-loc">1015 N Quincy St, Arlington VA 22201 · Barbara M. Donnellan Auditorium</div>
+        </div>
+        <div>
           <div class="event-date">August 16</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <a href="https://arlingtonva.libcal.com/event/15919322" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;">RSVP →</a>
+          <a href="https://arlingtonva.libcal.com/event/15919322" target="_blank" rel="noreferrer" class="btn btn-red" style="margin-top:10px;padding:7px 18px;font-size:0.75rem;display:inline-block;">RSVP →</a>
         </div>
       </div>
     </div>
@@ -244,7 +233,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 DMV Throwers. All rights reserved.</div>
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · DC · MD · VA</div>
     </div>
   </div>
 </footer>

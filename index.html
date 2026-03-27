@@ -3,13 +3,45 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
-  <meta name="description" content="DMV Throwers is the Washington DC/Maryland/Virginia yo-yo and skill toy club. Free meetups every 3rd Sunday at Arlington Central Library. All ages, all levels welcome."/>
-  <meta property="og:title" content="DMV Throwers · Yo-Yo & Skill Toy Club"/>
-  <meta property="og:description" content="Free yo-yo meetups every 3rd Sunday · Arlington Central Library · All ages welcome"/>
+  <title>DMV Throwers · Yo-Yo & Skill Toy Club · Washington DC, Northern Virginia, Maryland</title>
+  <meta name="description" content="DMV Throwers is the Washington DC, Northern Virginia, and Maryland yo-yo and skill toy club. Free meetups every 3rd Sunday at Arlington Central Library. All ages and skill levels welcome."/>
+  <meta name="keywords" content="yo-yo club DC, yo-yo club Virginia, yo-yo club Maryland, DMV yo-yo, skill toy club Northern Virginia, kendama club DC, yo-yo Arlington Virginia, yoyo club Washington DC, DMV Throwers"/>
+  <meta property="og:title" content="DMV Throwers · Yo-Yo & Skill Toy Club · DC · VA · MD"/>
+  <meta property="og:description" content="Free yo-yo and skill toy meetups every 3rd Sunday in Arlington VA. All ages, all levels. Serving DC, Northern Virginia, and Maryland."/>
   <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <link rel="canonical" href="https://dmvthrowers.club/"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    "name": "DMV Throwers Yo-Yo & Skill Toy Club",
+    "url": "https://dmvthrowers.club",
+    "description": "Free monthly yo-yo and skill toy meetups in Arlington VA. All ages and skill levels welcome. Serving DC, Maryland, and Virginia since 2021.",
+    "foundingDate": "2021",
+    "email": "contact@dmvthrowers.club",
+    "telephone": "+18502841613",
+    "sameAs": ["https://instagram.com/dmv_throwers","https://linktr.ee/dmvthrowers"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1015 N Quincy St",
+      "addressLocality": "Arlington",
+      "addressRegion": "VA",
+      "postalCode": "22201",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Washington, DC"},
+      {"@type": "State", "name": "Virginia"},
+      {"@type": "State", "name": "Maryland"}
+    ],
+    "isAccessibleForFree": true
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -60,9 +92,8 @@
     .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
     .btn-outline-white { background: transparent; border: 2px solid white; color: white; }
     .btn-outline-white:hover { background: white; color: var(--navy); }
-    .hero-logo-wrap { position: relative; }
     .hero-logo-wrap img { width: 240px; height: 240px; object-fit: contain; opacity: 0.9; filter: brightness(0) invert(1); }
-    .vsyc-section { padding: 60px 24px; background: var(--cream); }
+    .vsyc-section { background: var(--cream); padding: 48px 24px; }
     .vsyc-banner { max-width: 1100px; margin: 0 auto; background: var(--navy); padding: 32px 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
     .vsyc-label { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; }
     .vsyc-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.6rem; color: white; }
@@ -78,8 +109,9 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; padding-bottom: 160px; }
+      .hero-inner { grid-template-columns: 1fr; }
       .hero-logo-wrap { display: none; }
+      .vsyc-banner { flex-direction: column; }
       .footer-top { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 480px) {
@@ -130,6 +162,7 @@
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
+<!-- HERO — clean, no nested sections inside -->
 <section id="hero">
   <div class="hero-dots"></div>
   <div class="hero-inner">
@@ -137,27 +170,29 @@
       <div class="hero-tag">EST. 2021 · DC / MD / VA</div>
       <h1 class="hero-title">DMV<br/>THROWERS</h1>
       <p class="hero-subtitle">YO-YO & SKILL TOY CLUB · DC · MD · VA</p>
-      <p class="hero-desc">The Mid-Atlantic's home for yo-yo enthusiasts, kendama players, and all skill toy fans. All ages, all levels, always free.</p>
+      <p class="hero-desc">The Mid-Atlantic's home for yo-yo enthusiasts, kendama players, and all skill toy fans in Washington DC, Northern Virginia, and Maryland. All ages, all levels, always free.</p>
       <div class="hero-btns">
         <a href="events.html" class="btn btn-red">VIEW UPCOMING EVENTS</a>
         <a href="contact.html" class="btn btn-outline-white">JOIN THE CLUB</a>
       </div>
-      <div class="vsyc-section" style="margin-top:24px;">
-        <div class="vsyc-banner">
-          <div>
-            <div class="vsyc-label">COMING SEPTEMBER 19, 2026</div>
-            <div class="vsyc-title">Virginia State YoYo Contest 2026</div>
-            <div class="vsyc-sub">VSYC-26 · Dulles Town Center · Sterling VA · 10 AM – 7 PM</div>
-          </div>
-          <a href="vsyc26.html" class="btn btn-red">LEARN MORE →</a>
-        </div>
-      </div>
     </div>
     <div class="hero-logo-wrap">
-      <img src="assets/images/logo.png" alt="DMV Throwers Logo"/>
+      <img src="assets/images/logo.png" alt="DMV Throwers Yo-Yo and Skill Toy Club DC Virginia Maryland"/>
     </div>
   </div>
 </section>
+
+<!-- VSYC BANNER — proper sibling section, outside hero -->
+<div class="vsyc-section">
+  <div class="vsyc-banner">
+    <div>
+      <div class="vsyc-label">COMING SEPTEMBER 19, 2026</div>
+      <div class="vsyc-title">Virginia State YoYo Contest 2026</div>
+      <div class="vsyc-sub">VSYC-26 · Dulles Town Center · Sterling VA · 10 AM – 7 PM · Free to spectate</div>
+    </div>
+    <a href="vsyc26.html" class="btn btn-red">LEARN MORE →</a>
+  </div>
+</div>
 
 <footer>
   <div class="footer-inner">
@@ -166,7 +201,7 @@
         <img src="assets/images/logo.png" alt="DMV Throwers" style="width:34px;height:34px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.8;"/>
         <div>
           <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:white;">DMV THROWERS</div>
-          <div style="font-size:0.6rem;letter-spacing:0.16em;color:#D42B2B;font-weight:700;">YO-YO & SKILL TOY CLUB</div>
+          <div style="font-size:0.6rem;letter-spacing:0.16em;color:#D42B2B;font-weight:700;">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
         </div>
       </div>
       <div>
@@ -180,7 +215,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2026 DMV Throwers. All rights reserved.</div>
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
     </div>
   </div>
 </footer>
