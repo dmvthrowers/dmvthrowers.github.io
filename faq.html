@@ -14,7 +14,9 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@dmv_throwers"/>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <meta name="theme-color" content="#1a2744"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,7 +32,8 @@
       --text-body: #3a4a6a;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
     #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
     #top-bar span { font-size: 0.72rem; color: white; letter-spacing: 0.14em; font-weight: 600; }
     #top-bar a { font-size: 0.72rem; color: white; letter-spacing: 0.12em; font-weight: 700; text-decoration: underline; white-space: nowrap; }
@@ -45,7 +48,7 @@
     .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
     .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
     .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; touch-action: manipulation; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
     .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
     .mobile-menu.open { display: flex; }
@@ -57,7 +60,7 @@
     .section-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.2rem; color: var(--navy); margin-bottom: 32px; line-height: 1.1; }
     .divider { width: 60px; height: 3px; background: var(--red); margin-bottom: 32px; }
     .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1rem; -webkit-user-select: none; user-select: none; }
+    .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1rem; -webkit-user-select: none; user-select: none; touch-action: manipulation; }
     .faq-q:hover { color: var(--red); }
     .faq-toggle { color: var(--red); font-size: 1.4rem; font-weight: 300; line-height: 1; }
     .faq-a { font-size: 0.92rem; line-height: 1.7; padding-bottom: 20px; color: var(--text-body); display: none; }
