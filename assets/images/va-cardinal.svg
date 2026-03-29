@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 120" aria-hidden="true">
+
+  <!-- === CARDINAL 1 – large, perched, facing right (left side) === -->
+  <!-- Perch branch -->
+  <path d="M 108,98 Q 185,92 268,96" stroke="#C9A84C" stroke-width="3.5" fill="none"/>
+  <!-- Body -->
+  <ellipse cx="200" cy="86" rx="27" ry="16" transform="rotate(-8 200 86)" fill="#C9A84C"/>
+  <!-- Wing shading -->
+  <ellipse cx="198" cy="84" rx="22" ry="11" transform="rotate(-8 198 84)" fill="#b08028"/>
+  <!-- Head -->
+  <circle cx="225" cy="74" r="15" fill="#C9A84C"/>
+  <!-- Crest – DISTINCTIVE pointed triangle -->
+  <polygon points="218,62 228,44 242,64"   fill="#C9A84C"/>
+  <!-- Beak -->
+  <polygon points="237,71 256,75 237,80"   fill="#C9A84C"/>
+  <!-- Tail (long, swept down-left) -->
+  <polygon points="172,90 148,116 183,96"  fill="#C9A84C"/>
+  <!-- Eye -->
+  <circle cx="229" cy="72" r="4"           fill="#0d1428"/>
+  <!-- Feet -->
+  <line x1="195" y1="100" x2="186" y2="106" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="205" y1="100" x2="205" y2="108" stroke="#C9A84C" stroke-width="2"/>
+  <line x1="205" y1="100" x2="214" y2="106" stroke="#C9A84C" stroke-width="2"/>
+
+  <!-- === CARDINAL 2 – smaller, in flight, facing left (right side) === -->
+  <!-- Body -->
+  <ellipse cx="1132" cy="54" rx="20" ry="12" fill="#C9A84C"/>
+  <!-- Head -->
+  <circle cx="1113" cy="43" r="13" fill="#C9A84C"/>
+  <!-- Crest -->
+  <polygon points="1106,33 1115,19 1128,35" fill="#C9A84C"/>
+  <!-- Beak (facing left) -->
+  <polygon points="1100,41 1085,44 1100,49" fill="#C9A84C"/>
+  <!-- Upper wing spread -->
+  <polygon points="1144,50 1175,32 1156,62" fill="#C9A84C"/>
+  <!-- Lower wing spread -->
+  <polygon points="1144,58 1172,76 1156,57" fill="#C9A84C"/>
+  <!-- Tail -->
+  <polygon points="1152,59 1173,74 1148,67" fill="#C9A84C"/>
+  <!-- Eye -->
+  <circle cx="1108" cy="42" r="3.5"         fill="#0d1428"/>
+
+  <!-- === MARIGOLD 1 – large, center-left ~x=450 === -->
+  <line x1="450" y1="102" x2="450" y2="78" stroke="#C9A84C" stroke-width="3"/>
+  <ellipse cx="438" cy="95" rx="11" ry="5" transform="rotate(-35 438 95)" fill="#C9A84C"/>
+  <ellipse cx="463" cy="91" rx="11" ry="5" transform="rotate(30 463 91)"  fill="#C9A84C"/>
+  <g transform="translate(450,72)">
+    <ellipse cx="0" cy="-15" rx="7" ry="13" fill="#C9A84C"/>
+    <g transform="rotate(45 0 0)"><ellipse  cx="0" cy="-15" rx="7" ry="13" fill="#C9A84C"/></g>
+    <g transform="rotate(90 0 0)"><ellipse  cx="0" cy="-15" rx="7" ry="13" fill="#C9A84C"/></g>
+    <g transform="rotate(135 0 0)"><ellipse cx="0" cy="-15" rx="7" ry="13" fill="#C9A84C"/></g>
+    <g transform="rotate(180 0 0)"><ellipse cx="0" cy="-15" rx="7" ry="13" fill="#C9A84C"/></g>
+    <g transform="rotate(225 0 0)"><ellipse cx="0" cy="-15" rx="7" ry="13" fill="#C9A84C"/></g>
+    <g transform="rotate(270 0 0)"><ellipse cx="0" cy="-15" rx="7" ry="13" fill="#C9A84C"/></g>
+    <g transform="rotate(315 0 0)"><ellipse cx="0" cy="-15" rx="7" ry="13" fill="#C9A84C"/></g>
+    <circle cx="0" cy="0" r="10" fill="#8a6020"/>
+  </g>
+
+  <!-- === MARIGOLD 2 – center ~x=700 === -->
+  <line x1="700" y1="108" x2="700" y2="86" stroke="#C9A84C" stroke-width="3"/>
+  <ellipse cx="689" cy="101" rx="9" ry="4" transform="rotate(-32 689 101)" fill="#C9A84C"/>
+  <ellipse cx="713" cy="97"  rx="9" ry="4" transform="rotate(28 713 97)"   fill="#C9A84C"/>
+  <g transform="translate(700,80)">
+    <ellipse cx="0" cy="-13" rx="6" ry="11" fill="#C9A84C"/>
+    <g transform="rotate(45 0 0)"><ellipse  cx="0" cy="-13" rx="6" ry="11" fill="#C9A84C"/></g>
+    <g transform="rotate(90 0 0)"><ellipse  cx="0" cy="-13" rx="6" ry="11" fill="#C9A84C"/></g>
+    <g transform="rotate(135 0 0)"><ellipse cx="0" cy="-13" rx="6" ry="11" fill="#C9A84C"/></g>
+    <g transform="rotate(180 0 0)"><ellipse cx="0" cy="-13" rx="6" ry="11" fill="#C9A84C"/></g>
+    <g transform="rotate(225 0 0)"><ellipse cx="0" cy="-13" rx="6" ry="11" fill="#C9A84C"/></g>
+    <g transform="rotate(270 0 0)"><ellipse cx="0" cy="-13" rx="6" ry="11" fill="#C9A84C"/></g>
+    <g transform="rotate(315 0 0)"><ellipse cx="0" cy="-13" rx="6" ry="11" fill="#C9A84C"/></g>
+    <circle cx="0" cy="0" r="9" fill="#8a6020"/>
+  </g>
+
+  <!-- === MARIGOLD 3 – right side ~x=1000 === -->
+  <line x1="1000" y1="110" x2="1000" y2="88" stroke="#C9A84C" stroke-width="2.5"/>
+  <ellipse cx="989" cy="103" rx="9" ry="4" transform="rotate(-36 989 103)" fill="#C9A84C"/>
+  <g transform="translate(1000,82)">
+    <ellipse cx="0" cy="-12" rx="6" ry="10" fill="#C9A84C"/>
+    <g transform="rotate(60 0 0)"><ellipse  cx="0" cy="-12" rx="6" ry="10" fill="#C9A84C"/></g>
+    <g transform="rotate(120 0 0)"><ellipse cx="0" cy="-12" rx="6" ry="10" fill="#C9A84C"/></g>
+    <g transform="rotate(180 0 0)"><ellipse cx="0" cy="-12" rx="6" ry="10" fill="#C9A84C"/></g>
+    <g transform="rotate(240 0 0)"><ellipse cx="0" cy="-12" rx="6" ry="10" fill="#C9A84C"/></g>
+    <g transform="rotate(300 0 0)"><ellipse cx="0" cy="-12" rx="6" ry="10" fill="#C9A84C"/></g>
+    <circle cx="0" cy="0" r="8" fill="#8a6020"/>
+  </g>
+
+  <!-- === MARIGOLD 4 – far right ~x=1350 === -->
+  <line x1="1350" y1="114" x2="1350" y2="95" stroke="#C9A84C" stroke-width="2"/>
+  <g transform="translate(1350,89)">
+    <ellipse cx="0" cy="-11" rx="5" ry="9" fill="#C9A84C"/>
+    <g transform="rotate(60 0 0)"><ellipse  cx="0" cy="-11" rx="5" ry="9" fill="#C9A84C"/></g>
+    <g transform="rotate(120 0 0)"><ellipse cx="0" cy="-11" rx="5" ry="9" fill="#C9A84C"/></g>
+    <g transform="rotate(180 0 0)"><ellipse cx="0" cy="-11" rx="5" ry="9" fill="#C9A84C"/></g>
+    <g transform="rotate(240 0 0)"><ellipse cx="0" cy="-11" rx="5" ry="9" fill="#C9A84C"/></g>
+    <g transform="rotate(300 0 0)"><ellipse cx="0" cy="-11" rx="5" ry="9" fill="#C9A84C"/></g>
+    <circle cx="0" cy="0" r="7" fill="#8a6020"/>
+  </g>
+
+  <!-- === Small flower buds === -->
+  <circle cx="320"  cy="108" r="7" fill="#C9A84C"/>
+  <line x1="320" y1="115" x2="320" y2="120" stroke="#C9A84C" stroke-width="2"/>
+  <circle cx="600"  cy="112" r="5" fill="#C9A84C"/>
+  <circle cx="870"  cy="110" r="5" fill="#C9A84C"/>
+  <circle cx="1200" cy="112" r="5" fill="#C9A84C"/>
+
+  <!-- === Scattered leaves === -->
+  <ellipse cx="382"  cy="110" rx="14" ry="5" transform="rotate(-25 382 110)"  fill="#C9A84C" opacity="0.65"/>
+  <ellipse cx="800"  cy="108" rx="12" ry="5" transform="rotate(20 800 108)"   fill="#C9A84C" opacity="0.65"/>
+  <ellipse cx="1258" cy="110" rx="13" ry="5" transform="rotate(-20 1258 110)" fill="#C9A84C" opacity="0.65"/>
+
+  <!-- === Grass blades === -->
+  <path d="M28,120  L34,106 L40,120"  fill="#C9A84C" opacity="0.75"/>
+  <path d="M48,120  L52,108 L58,120"  fill="#C9A84C" opacity="0.75"/>
+  <path d="M560,120 L564,110 L570,120" fill="#C9A84C" opacity="0.65"/>
+  <path d="M1282,120 L1286,108 L1292,120" fill="#C9A84C" opacity="0.65"/>
+  <path d="M1380,120 L1386,106 L1392,120" fill="#C9A84C" opacity="0.75"/>
+
+  <!-- === Rolling ground === -->
+  <path d="M0,114 C100,108 300,112 600,110 C800,108 1000,112 1400,114 L1400,120 L0,120 Z"
+        fill="#C9A84C" opacity="0.45"/>
+</svg>
