@@ -115,39 +115,7 @@
   </script>
   <link rel="stylesheet" href="assets/css/main.css"/>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --red: #D42B2B; --red-dark: #b01f1f; --navy: #1a2744; --navy-deep: #0e1833; --cream: #f5f0e8; --cream-mid: #f0ebe0; --border: #d4cebc; --text-muted: #6a7a9a; --text-body: #3a4a6a; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
-    #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-    #top-bar span { font-size: 0.72rem; color: white; letter-spacing: 0.14em; font-weight: 600; }
-    #top-bar a { font-size: 0.72rem; color: white; letter-spacing: 0.12em; font-weight: 700; text-decoration: underline; white-space: nowrap; }
-    nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .nav-brand { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
-    .nav-brand-text-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; line-height: 1; color: var(--navy); }
-    .nav-brand-text-sub { font-size: 0.6rem; letter-spacing: 0.18em; color: var(--red); font-weight: 700; margin-top: 2px; }
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-link { cursor: pointer; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 600; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; color: var(--navy); text-decoration: none; }
-    .nav-link:hover, .nav-link.active { border-bottom-color: var(--red); color: var(--red); }
-    .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
-    .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
-    .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; touch-action: manipulation; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
-    .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
-    .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
-    .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
-    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
-    .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 16px; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--navy); margin-bottom: 8px; }
-    .divider { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
-    .btn { display: inline-block; padding: 14px 32px; font-weight: 700; letter-spacing: 0.1em; font-size: 0.82rem; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.1s; font-family: 'DM Sans', sans-serif; touch-action: manipulation; }
-    .btn-red { background: var(--red); color: white; }
-    .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
     /* Fixed event card structure */
     .event-card { background: white; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
     .event-card:hover { transform: translateX(4px); box-shadow: -4px 4px 0 var(--red); }
@@ -180,8 +148,6 @@
     .event-btn-small { margin-top: 10px; padding: 7px 18px; font-size: 0.75rem; display: inline-block; }
     .event-btn-disabled { background: #9aa3b8; color: white; cursor: not-allowed; pointer-events: none; }
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
       .event-card-body { flex-direction: column; align-items: flex-start; }
       .event-date, .event-day { text-align: left; }
     }
@@ -190,7 +156,7 @@
 <body>
 
 <div id="top-bar">
-  <span>NEXT MEET: APRIL 19 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
+  <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
@@ -286,7 +252,7 @@
         </div>
         <div>
           <div class="event-date">May 2</div>
-          <div class="event-day">Saturday · 2-4 PM</div>
+          <div class="event-day">Saturday · 2–4 PM</div>
           <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
@@ -402,7 +368,7 @@
         </div>
         <div>
           <div class="event-date">September 19</div>
-          <div class="event-day">Saturday · 10 AM–7 PM</div>
+          <div class="event-day">Saturday · 10 AM – 7 PM</div>
           <a href="vsyc26.html" class="btn btn-red event-btn-small">DETAILS →</a>
         </div>
       </div>
@@ -417,7 +383,7 @@
         </div>
         <div>
           <div class="event-date">September 20</div>
-          <div class="event-day">Sunday · 1-4 PM</div>
+          <div class="event-day">Sunday · 1–4 PM</div>
           <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
@@ -432,7 +398,7 @@
         </div>
         <div>
           <div class="event-date">October 18</div>
-          <div class="event-day">Sunday · 1-4 PM</div>
+          <div class="event-day">Sunday · 1–4 PM</div>
           <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
@@ -447,7 +413,7 @@
         </div>
         <div>
           <div class="event-date">November 15</div>
-          <div class="event-day">Sunday · 1-4 PM</div>
+          <div class="event-day">Sunday · 1–4 PM</div>
           <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
@@ -476,7 +442,7 @@
         </div>
         <div>
           <div class="event-date">December 20</div>
-          <div class="event-day">Sunday · 1-4 PM</div>
+          <div class="event-day">Sunday · 1–4 PM</div>
           <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>

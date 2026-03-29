@@ -113,46 +113,7 @@
   <style>
     .section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 32px; }
     .divider { width: 60px; margin-bottom: 32px; }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --red: #D42B2B;
-      --red-dark: #b01f1f;
-      --navy: #1a2744;
-      --navy-deep: #0e1833;
-      --cream: #f5f0e8;
-      --cream-mid: #f0ebe0;
-      --border: #d4cebc;
-      --text-muted: #6a7a9a;
-      --text-body: #3a4a6a;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-    a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
-    #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-    #top-bar span { font-size: 0.72rem; color: white; letter-spacing: 0.14em; font-weight: 600; }
-    #top-bar a { font-size: 0.72rem; color: white; letter-spacing: 0.12em; font-weight: 700; text-decoration: underline; white-space: nowrap; }
-    nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .nav-brand { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
-    .nav-brand-text-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; line-height: 1; color: var(--navy); }
-    .nav-brand-text-sub { font-size: 0.6rem; letter-spacing: 0.18em; color: var(--red); font-weight: 700; margin-top: 2px; }
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-link { cursor: pointer; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 600; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; color: var(--navy); text-decoration: none; }
-    .nav-link:hover, .nav-link.active { border-bottom-color: var(--red); color: var(--red); }
-    .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
-    .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
-    .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; touch-action: manipulation; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
-    .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
-    .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
-    .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
-    .section { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
-    .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 18px; }
-    .section-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.2rem; color: var(--navy); margin-bottom: 32px; line-height: 1.1; }
-    .divider { width: 60px; height: 3px; background: var(--red); margin-bottom: 32px; }
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
     .faq-item { border-bottom: 1px solid var(--border); }
     .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1rem; -webkit-user-select: none; user-select: none; touch-action: manipulation; }
     .faq-q:hover { color: var(--red); }
@@ -163,16 +124,12 @@
     .faq-section-title { color: var(--navy); font-weight: 700; font-size: 1.1rem; margin-top: 28px; margin-bottom: 16px; }
     .red-link { color: var(--red); }
     .red-link-bold { color: var(--red); font-weight: 600; }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-    }
   </style>
 </head>
 <body>
 
 <div id="top-bar">
-  <span>NEXT MEET: APRIL 19 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
+  <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 

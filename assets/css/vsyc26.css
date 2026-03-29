@@ -70,7 +70,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .hero-meta-label { font-size: 0.6rem; letter-spacing: 0.2em; font-weight: 700; color: var(--gold); }
 .hero-meta-val { font-size: 0.95rem; font-weight: 700; color: var(--white); }
 .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; opacity: 0.15; }
+
 
 /* BUTTONS */
 .btn { display: inline-block; padding: 14px 32px; font-weight: 800; letter-spacing: 0.1em; font-size: 0.78rem; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; font-family: 'Montserrat', sans-serif; touch-action: manipulation; }
@@ -240,7 +240,7 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .countdown-title { font-size: 0.6rem; letter-spacing: 0.18em; font-weight: 800; color: var(--gold); margin-bottom: 12px; }
 
 /* UTILITY */
-.svg-style { width: 100%; display: block; height: 80px; }
+
 .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .p-style { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
 .p-style2 { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 28px; }
