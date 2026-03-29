@@ -1,7 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls \"c:\\\\Users\\\\91bro\\\\OneDrive\\\\Documents\\\\GitHub\\\\dmvthrowers.github.io\\\\assets\\\\css\"\" 2>/dev/null || echo \"Directory does not exist \")"
+      "Bash(ls \"c:\\\\Users\\\\91bro\\\\OneDrive\\\\Documents\\\\GitHub\\\\dmvthrowers.github.io\\\\assets\\\\css\"\" 2>/dev/null || echo \"Directory does not exist \")",
+      "Read(//c/Users/91bro/OneDrive/Documents/GitHub/**)",
+      "Bash(gh repo:*)",
+      "Bash(where gh:*)",
+      "Bash(git --version)",
+      "Bash(cmd.exe /c \"mkdir \"\"c:\\\\Users\\\\91bro\\\\OneDrive\\\\Documents\\\\GitHub\\\\dmvthrowers-wiki\"\"\")",
+      "Bash(cmd.exe /c \"dir \"\"c:\\\\Users\\\\91bro\\\\OneDrive\\\\Documents\\\\GitHub\"\"\")",
+      "Bash(cmd.exe /c \"dir c:\\\\Users\\\\91bro\\\\OneDrive\\\\Documents\\\\GitHub\"\")",
+      "Bash(powershell.exe -Command \"Get-ChildItem ''c:\\\\Users\\\\91bro\\\\OneDrive\\\\Documents\\\\GitHub''\")",
+      "Bash(powershell.exe -Command \"New-Item -ItemType Directory -Path ''c:\\\\Users\\\\91bro\\\\OneDrive\\\\Documents\\\\GitHub\\\\dmvthrowers-wiki''\")",
+      "Bash(mkdir -p /tmp/dmvthrowers-wiki)",
+      "Read(//tmp/**)",
+      "Bash(/tmp/dmvthrowers-wiki/Getting-Started.md:*)"
     ]
   }
 }
