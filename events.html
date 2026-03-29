@@ -167,10 +167,6 @@
     .event-card-holiday .event-date,
     .event-card-holiday .event-day { color: white; }
     .event-card-holiday .event-type { opacity: 0.95; }
-    .event-card-image { width: 100%; display: block; background: var(--cream-mid); }
-    @media (min-width: 769px) {
-      .event-card-image { height: 420px; object-fit: contain; object-position: center; }
-    }
     .event-card-body { padding: 20px 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
     .event-type { font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; color: var(--red); margin-bottom: 6px; }
     .event-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--navy); }
@@ -182,10 +178,10 @@
     .events-section-bg { background: white; }
     .events-desc { color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; }
     .event-btn-small { margin-top: 10px; padding: 7px 18px; font-size: 0.75rem; display: inline-block; }
+    .event-btn-disabled { background: #9aa3b8; color: white; cursor: not-allowed; pointer-events: none; }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .event-card-image { height: 160px; object-fit: cover; }
       .event-card-body { flex-direction: column; align-items: flex-start; }
       .event-date, .event-day { text-align: left; }
     }
@@ -252,7 +248,6 @@
     </p>
 
     <div class="event-card">
-      <img src="assets/images/events/event-april-2026.png" alt="DMV Throwers April 2026 Monthly Meetup Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">● MONTHLY MEETUP</div>
@@ -268,7 +263,6 @@
     </div>
 
     <div class="event-card">
-      <img src="assets/images/events/event-may-2026.png" alt="DMV Throwers May 2026 Monthly Meetup Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">● MONTHLY MEETUP</div>
@@ -293,6 +287,7 @@
         <div>
           <div class="event-date">May 2</div>
           <div class="event-day">Saturday · 2-4 PM</div>
+          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
     </div>
@@ -326,7 +321,6 @@
     </div>
 
     <div class="event-card">
-      <img src="assets/images/events/event-june-2026.png" alt="DMV Throwers June 2026 Monthly Meetup Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">● MONTHLY MEETUP</div>
@@ -356,7 +350,6 @@
     </div>
 
     <div class="event-card">
-      <img src="assets/images/events/event-july-2026.png" alt="DMV Throwers July 2026 Monthly Meetup Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">● MONTHLY MEETUP</div>
@@ -372,7 +365,6 @@
     </div>
 
     <div class="event-card">
-      <img src="assets/images/events/event-august-2026.png" alt="DMV Throwers August 2026 Monthly Meetup Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">● MONTHLY MEETUP</div>
@@ -402,7 +394,6 @@
     </div>
 
     <div class="event-card event-card-special">
-      <img src="assets/images/events/event-september-2026.png" alt="Virginia State Yo-Yo Contest 2026 Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">★ SPECIAL EVENT</div>
@@ -427,12 +418,12 @@
         <div>
           <div class="event-date">September 20</div>
           <div class="event-day">Sunday · 1-4 PM</div>
+          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
     </div>
 
     <div class="event-card">
-      <img src="assets/images/events/event-october-2026.png" alt="DMV Throwers October 2026 Monthly Meetup Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">● MONTHLY MEETUP</div>
@@ -442,12 +433,12 @@
         <div>
           <div class="event-date">October 18</div>
           <div class="event-day">Sunday · 1-4 PM</div>
+          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
     </div>
 
     <div class="event-card">
-      <img src="assets/images/events/event-november-2026.png" alt="DMV Throwers November 2026 Monthly Meetup Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">● MONTHLY MEETUP</div>
@@ -457,6 +448,7 @@
         <div>
           <div class="event-date">November 15</div>
           <div class="event-day">Sunday · 1-4 PM</div>
+          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
     </div>
@@ -476,7 +468,6 @@
     </div>
 
     <div class="event-card">
-      <img src="assets/images/events/event-december-2026.png" alt="DMV Throwers December 2026 Monthly Meetup Flyer" class="event-card-image" loading="lazy"/>
       <div class="event-card-body">
         <div>
           <div class="event-type">● MONTHLY MEETUP</div>
@@ -486,6 +477,7 @@
         <div>
           <div class="event-date">December 20</div>
           <div class="event-day">Sunday · 1-4 PM</div>
+          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
     </div>
@@ -514,6 +506,7 @@
         <div>
           <div class="event-date">Date TBD</div>
           <div class="event-day">Details coming soon</div>
+          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
     </div>
