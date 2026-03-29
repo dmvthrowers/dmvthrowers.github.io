@@ -58,7 +58,7 @@
         "price": "15",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://dmvthrowers.club/vsyc26.html#register"
+        "url": "https://dmvthrowers.club/vsyc26-register.html"
       }
     ],
     "isAccessibleForFree": true,
@@ -67,301 +67,20 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #1a2744;
-      --navy-deep: #0d1428;
-      --gold: #C9A84C;
-      --gold-light: #e8c97a;
-      --red: #C8102E;
-      --cream: #f5f0e8;
-      --cream-mid: #ede8dc;
-      --border: #2a3a5a;
-      --text-muted: #8090b8;
-      --text-body: #c8d0e0;
-      --white: #ffffff;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif; background: var(--navy-deep); color: var(--white); }
-
-    /* TOP BAR */
-    #top-bar { background: var(--gold); padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-    #top-bar span { font-size: 0.7rem; color: var(--navy-deep); letter-spacing: 0.16em; font-weight: 800; }
-    #top-bar a { font-size: 0.7rem; color: var(--navy-deep); font-weight: 800; text-decoration: none; letter-spacing: 0.1em; border-bottom: 1px solid var(--navy-deep); }
-
-    /* NAV */
-    nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .nav-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: var(--white); line-height: 1; }
-    .nav-brand-sub { font-size: 0.55rem; letter-spacing: 0.2em; color: var(--gold); font-weight: 700; margin-top: 2px; }
-    .nav-links { display: flex; gap: 24px; }
-    .nav-link { font-size: 0.68rem; letter-spacing: 0.12em; font-weight: 700; color: var(--text-muted); text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
-    .nav-link:hover, .nav-link.active { color: var(--gold); border-bottom-color: var(--gold); }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); }
-    .mobile-menu { display: none; flex-direction: column; background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 4px; }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.1em; font-weight: 700; color: var(--text-muted); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--border); }
-
-    /* HERO */
-    #hero { background: var(--navy); position: relative; overflow: hidden; min-height: 560px; display: flex; align-items: center; }
-    .hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(201,168,76,0.08) 1px, transparent 1px); background-size: 28px 28px; }
-    .hero-glow { position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%); }
-    .hero-inner { max-width: 1100px; margin: 0 auto; padding: 80px 24px 120px; position: relative; z-index: 1; width: 100%; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-    .hero-badge { background: var(--gold); color: var(--navy-deep); font-size: 0.65rem; letter-spacing: 0.2em; font-weight: 800; padding: 5px 14px; }
-    .hero-edition { font-size: 0.65rem; letter-spacing: 0.16em; font-weight: 700; color: var(--text-muted); }
-    .hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(2.8rem, 7vw, 5rem); color: var(--white); line-height: 0.95; margin-bottom: 12px; }
-    .hero-title span { color: var(--gold); }
-    .hero-year { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(4rem, 12vw, 8rem); color: transparent; -webkit-text-stroke: 2px rgba(201,168,76,0.3); line-height: 0.85; margin-bottom: 24px; display: block; }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
-    .hero-meta-item { display: flex; flex-direction: column; gap: 3px; }
-    .hero-meta-label { font-size: 0.6rem; letter-spacing: 0.2em; font-weight: 700; color: var(--gold); }
-    .hero-meta-val { font-size: 0.95rem; font-weight: 700; color: var(--white); }
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-    .hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; opacity: 0.15; }
-
-    /* BUTTONS */
-    .btn { display: inline-block; padding: 14px 32px; font-weight: 800; letter-spacing: 0.1em; font-size: 0.78rem; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; font-family: 'Montserrat', sans-serif; }
-    .btn-gold { background: var(--gold); color: var(--navy-deep); }
-    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
-    .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
-    .btn-outline:hover { background: var(--gold); color: var(--navy-deep); }
-    .btn-red { background: var(--red); color: white; }
-    .btn-red:hover { background: #a50d25; transform: translateY(-1px); }
-
-    /* SECTIONS */
-    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
-    .section-wrap { position: relative; }
-    .section-wrap.bg-navy { background: var(--navy); }
-    .section-wrap.bg-deep { background: var(--navy-deep); }
-    .section-wrap.bg-cream { background: var(--cream); }
-    .gold-tag { display: inline-block; background: var(--gold); color: var(--navy-deep); font-size: 0.62rem; letter-spacing: 0.2em; padding: 4px 12px; font-weight: 800; margin-bottom: 16px; }
-    .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.62rem; letter-spacing: 0.2em; padding: 4px 12px; font-weight: 800; margin-bottom: 16px; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 8px; }
-    .section-title.dark { color: var(--navy-deep); }
-    .divider-gold { width: 48px; height: 3px; background: var(--gold); margin: 16px 0 28px; }
-    .divider-red { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
-
-    /* QUICK FACTS */
-    .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: var(--border); margin-top: 48px; }
-    .fact-card { background: var(--navy); padding: 28px 24px; }
-    .fact-label { font-size: 0.6rem; letter-spacing: 0.2em; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
-    .fact-val { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--white); line-height: 1.2; }
-
-    /* DIVISIONS */
-    .divisions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-    .division-card { background: var(--navy); border: 1px solid var(--border); padding: 28px 24px; border-top: 3px solid var(--gold); transition: transform 0.15s; }
-    .division-card:hover { transform: translateY(-2px); }
-    .division-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.5rem; color: var(--gold); margin-bottom: 6px; }
-    .division-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
-    .division-badge { display: inline-block; background: var(--border); color: var(--text-muted); font-size: 0.62rem; letter-spacing: 0.12em; font-weight: 700; padding: 3px 10px; margin-top: 10px; }
-
-    /* SCHEDULE */
-    .schedule-item { display: flex; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
-    .schedule-time { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); min-width: 100px; }
-    .schedule-event { font-weight: 700; font-size: 0.95rem; color: var(--white); margin-bottom: 3px; }
-    .schedule-note { font-size: 0.8rem; color: var(--text-muted); }
-
-    /* SPONSOR TIERS */
-    .tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-    .tier-card { background: var(--navy); border: 1px solid var(--border); padding: 24px 20px; position: relative; transition: transform 0.15s; }
-    .tier-card:hover { transform: translateY(-2px); }
-    .tier-card.diamond { border-color: var(--gold); background: linear-gradient(135deg, var(--navy) 0%, #1f2e50 100%); }
-    .tier-card.platinum { border-color: #b0c0d8; }
-    .tier-name { font-size: 0.65rem; letter-spacing: 0.2em; font-weight: 800; color: var(--gold); margin-bottom: 6px; }
-    .tier-card.platinum .tier-name { color: #b0c0d8; }
-    .tier-card.gold-tier .tier-name { color: var(--gold); }
-    .tier-card.silver-tier .tier-name { color: #c0c8d8; }
-    .tier-card.bronze-tier .tier-name { color: #c8a87a; }
-    .tier-price { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.6rem; color: var(--white); margin-bottom: 4px; }
-    .tier-limit { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 16px; }
-    .tier-benefits { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .tier-benefits li { font-size: 0.78rem; color: var(--text-body); padding-left: 16px; position: relative; line-height: 1.4; }
-    .tier-benefits li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
-    .tier-card.platinum .tier-benefits li::before { color: #b0c0d8; }
-    .confirmed-badge { display: inline-block; background: var(--gold); color: var(--navy-deep); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em; padding: 3px 8px; margin-top: 12px; }
-
-    /* VENUE */
-    .venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-    .venue-detail-row { display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-start; }
-    .venue-label { font-size: 0.6rem; letter-spacing: 0.18em; font-weight: 800; color: var(--gold); min-width: 110px; padding-top: 2px; }
-    .venue-val { font-size: 0.9rem; color: var(--white); font-weight: 500; line-height: 1.5; }
-    .venue-rules { display: flex; flex-direction: column; gap: 12px; }
-    .venue-rule { background: var(--navy-deep); border-left: 3px solid var(--gold); padding: 14px 18px; }
-    .venue-rule-title { font-size: 0.65rem; letter-spacing: 0.14em; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
-    .venue-rule-body { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
-
-    /* RULESET */
-    .ruleset-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .rule-block { background: var(--navy); border: 1px solid var(--border); padding: 24px; }
-    .rule-block-title { font-size: 0.65rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 12px; }
-    .rule-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .rule-list li { font-size: 0.82rem; color: var(--text-body); padding-left: 16px; position: relative; line-height: 1.5; }
-    .rule-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
-
-    /* MUSIC UPLOAD */
-    .music-box { background: var(--navy); border: 1px solid var(--border); padding: 32px; border-left: 4px solid var(--gold); }
-    .music-step { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 20px; }
-    .music-step-num { width: 32px; height: 32px; background: var(--gold); color: var(--navy-deep); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.85rem; flex-shrink: 0; }
-    .music-step-text { font-size: 0.9rem; color: var(--text-body); line-height: 1.6; }
-    .music-step-text strong { color: var(--white); }
-    .music-step-last { margin-bottom: 0; }
-    .music-warning { color: var(--gold); font-weight: 700; }
-    .music-span { color: var(--text-muted); font-size: 0.82rem; }
-    .upload-section { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); }
-    .upload-note { margin-top: 12px; font-size: 0.78rem; color: var(--text-muted); }
-    .contact-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
-    .organized-title { margin-top: 32px; font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
-    .dates-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
-    .dates-container { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
-    .date-row { background: var(--navy); padding: 16px 20px; display: flex; justify-content: space-between; }
-    .date-label { font-size: 0.82rem; color: var(--text-body); }
-    .date-value { font-size: 0.82rem; color: var(--gold); font-weight: 700; }
-    .event-row { background: var(--navy); border: 1px solid var(--gold); padding: 16px 20px; display: flex; justify-content: space-between; }
-    .event-label { font-size: 0.9rem; color: var(--white); font-weight: 700; }
-    .event-value { font-size: 0.9rem; color: var(--white); font-weight: 700; }
-    .footer-flex { display: flex; align-items: center; gap: 12px; }
-    .footer-logo { width: 32px; height: 32px; object-fit: contain; opacity: 0.7; }
-    .footer-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 0.95rem; color: var(--white); }
-    .footer-subtitle { font-size: 0.58rem; letter-spacing: 0.18em; color: var(--gold); font-weight: 700; }
-
-    /* REGISTRATION */
-    .reg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .reg-box { background: var(--navy); border: 1px solid var(--border); padding: 28px; }
-    .reg-box-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--white); margin-bottom: 16px; }
-    .price-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
-    .price-row:last-child { border-bottom: none; }
-    .price-div { font-size: 0.85rem; font-weight: 600; color: var(--white); }
-    .price-val { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
-
-    /* FAQ */
-    .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.92rem; color: var(--white); -webkit-user-select: none; user-select: none; }
-    .faq-q:hover { color: var(--gold); }
-    .faq-toggle { color: var(--gold); font-size: 1.3rem; font-weight: 300; }
-    .faq-a { font-size: 0.85rem; line-height: 1.7; padding-bottom: 20px; color: var(--text-muted); display: none; }
-    .faq-a.open { display: block; }
-
-    /* CONTACT */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .contact-row { display: flex; gap: 16px; margin-bottom: 14px; align-items: baseline; }
-    .contact-label { font-size: 0.6rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); min-width: 100px; }
-    .contact-val { font-size: 0.92rem; color: var(--white); font-weight: 500; text-decoration: none; }
-    .contact-val:hover { color: var(--gold); }
-
-    /* FOOTER */
-    footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var(--border); }
-    .footer-inner { max-width: 1100px; margin: 0 auto; }
-    .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 24px; }
-    .footer-link { color: var(--text-muted); font-size: 0.75rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
-    .footer-link:hover { color: var(--gold); }
-    .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    .footer-copy { font-size: 0.72rem; color: #3a4a6a; }
-
-    /* COUNTDOWN */
-    .countdown-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 480px; }
-    .countdown-box { background: var(--navy); border: 1px solid var(--border); padding: 20px 12px; text-align: center; }
-    .countdown-num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.2rem; color: var(--gold); }
-    .countdown-label { font-size: 0.6rem; letter-spacing: 0.14em; font-weight: 700; color: var(--text-muted); margin-top: 4px; }
-
-    /* Additional classes for inline styles */
-    .footer-logo { width: 34px; height: 34px; object-fit: contain; }
-    .countdown-margin { margin-top: 32px; }
-    .countdown-title { font-size: 0.6rem; letter-spacing: 0.18em; font-weight: 800; color: var(--gold); margin-bottom: 12px; }
-    .svg-style { width: 100%; display: block; height: 80px; }
-    .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .p-style { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
-    .p-style2 { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 28px; }
-    .flex-gap { display: flex; gap: 10px; flex-wrap: wrap; }
-    .tag-style { background: var(--border); color: var(--text-muted); font-size: 0.68rem; letter-spacing: 0.1em; font-weight: 700; padding: 6px 14px; }
-    .facts-margin { margin-top: 0; }
-    .note-style { margin-top: 24px; background: var(--navy); border: 1px solid var(--border); padding: 20px 24px; border-left: 4px solid var(--gold); }
-    .note-span { font-size: 0.8rem; color: var(--text-muted); }
-    .strong-white { color: var(--white); }
-    .max-width { max-width: 700px; }
-    .schedule-note { margin-top: 20px; font-size: 0.78rem; color: var(--text-muted); }
-    .price-free { color: #6adb8a; }
-    .payment-box { margin-top: 16px; background: var(--navy); border: 1px solid var(--border); padding: 20px; border-left: 4px solid var(--red); }
-    .payment-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--red); margin-bottom: 6px; }
-    .payment-text { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
-    .payment-btns { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn-small { padding: 10px 20px; font-size: 0.72rem; }
-    .music-margin { margin-bottom: 0; }
-    .music-upload { margin-top: 20px; }
-    .upload-btn { width: 100%; text-align: center; display: block; font-size: 0.75rem; }
-    .reg-box { margin-top: 16px; background: var(--navy); border: 1px solid var(--border); padding: 20px; }
-    .reg-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
-    .reg-text { font-size: 0.82rem; color: var(--text-muted); }
-    .reg-link { color: var(--gold); }
-    .sponsor-p { font-size: 1rem; color: var(--text-body); max-width: 680px; line-height: 1.8; margin-bottom: 12px; }
-    .sponsor-p2 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 40px; }
-    .sponsor-margin { margin-top: 48px; }
-    .sponsor-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: var(--white); margin-bottom: 8px; }
-    .sponsor-text { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; }
-    .form-bg { background: var(--navy-deep); padding: 2px; border: 1px solid var(--border); }
-    .btns-flex { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
-    .btn-small2 { font-size: 0.75rem; padding: 10px 20px; }
-
-    /* Additional classes for remaining inline styles */
-    .sponsor-strong { color: var(--gold); }
-    .iframe-style { width: 100%; height: 400px; border: none; }
-    .venue-rules-title { font-size: 0.65rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
-    .rules-note { margin-top: 24px; background: var(--navy-deep); border: 1px solid var(--border); padding: 20px 24px; border-left: 4px solid var(--gold); }
-    .rules-p { font-size: 0.82rem; color: var(--text-muted); }
-    .rules-link { color: var(--gold); }
-    .section-max { max-width: 780px; }
-    .music-span { color: var(--text-muted); font-size: 0.82rem; }
-    .music-margin { margin-bottom: 0; }
-    .music-warning { color: var(--gold); font-weight: 700; }
-    .upload-section { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); }
-    .upload-p { margin-top: 12px; font-size: 0.78rem; color: var(--text-muted); }
-    .contact-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
-    .organized-title { margin-top: 32px; font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
-    .key-dates-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
-    .dates-container { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
-    .date-row { background: var(--navy); padding: 16px 20px; display: flex; justify-content: space-between; }
-    .date-text { font-size: 0.82rem; color: var(--text-body); }
-    .date-date { font-size: 0.82rem; color: var(--gold); }
-    .event-row { background: var(--navy); border: 1px solid var(--gold); padding: 16px 20px; display: flex; justify-content: space-between; }
-    .event-text { font-size: 0.9rem; color: var(--white); font-weight: 700; }
-    .event-date { font-size: 0.9rem; color: var(--gold); font-weight: 700; }
-    .footer-flex { display: flex; align-items: center; gap: 12px; }
-    .footer-logo-small { width: 32px; height: 32px; object-fit: contain; opacity: 0.7; }
-    .footer-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 0.95rem; color: var(--white); }
-    .footer-subtitle { font-size: 0.58rem; letter-spacing: 0.18em; color: var(--gold); font-weight: 700; }
-
-    .jotform-iframe { min-width: 100%; max-width: 100%; height: 539px; border: none; display: block; }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .venue-grid, .reg-grid, .contact-grid, .ruleset-grid { grid-template-columns: 1fr; }
-      .countdown-grid { grid-template-columns: repeat(4, 1fr); }
-      .hero-year { font-size: clamp(3rem, 18vw, 6rem); }
-    }
-    @media (max-width: 480px) {
-      .hero-btns { flex-direction: column; }
-      .countdown-grid { grid-template-columns: repeat(2, 1fr); }
-      #top-bar { justify-content: center; text-align: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/vsyc26.css"/>
 </head>
 <body>
 
 <!-- TOP BAR -->
 <div id="top-bar">
   <span>VSYC-26 · SEPTEMBER 19, 2026 · DULLES TOWN CENTER · STERLING VA</span>
-  <a href="#sponsors">BECOME A SPONSOR →</a>
+  <a href="vsyc26-sponsors.html">BECOME A SPONSOR →</a>
 </div>
 
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#hero" class="nav-brand">
+    <a href="vsyc26.html" class="nav-brand">
       <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
       <div>
         <div class="nav-brand-main">VSYC-26</div>
@@ -369,16 +88,15 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="#about" class="nav-link">ABOUT</a>
-      <a href="#divisions" class="nav-link">DIVISIONS</a>
-      <a href="#schedule" class="nav-link">SCHEDULE</a>
-      <a href="#register" class="nav-link">REGISTER</a>
-      <a href="#sponsors" class="nav-link">SPONSORS</a>
-      <a href="#venue" class="nav-link">VENUE</a>
-      <a href="#rules" class="nav-link">RULES</a>
-      <a href="#music" class="nav-link">MUSIC</a>
-      <a href="#faq" class="nav-link">FAQ</a>
-      <a href="#contact" class="nav-link">CONTACT</a>
+      <a href="index.html" class="nav-link nav-home">← HOME</a>
+      <a href="vsyc26.html" class="nav-link active">ABOUT</a>
+      <a href="vsyc26-divisions.html" class="nav-link">DIVISIONS</a>
+      <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
+      <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
+      <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
+      <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
+      <a href="vsyc26-rules.html" class="nav-link">RULES</a>
+      <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
     </div>
     <button class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
@@ -386,16 +104,15 @@
   </div>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#about">ABOUT</a>
-  <a href="#divisions">DIVISIONS</a>
-  <a href="#schedule">SCHEDULE</a>
-  <a href="#register">REGISTER</a>
-  <a href="#sponsors">SPONSORS</a>
-  <a href="#venue">VENUE</a>
-  <a href="#rules">RULES</a>
-  <a href="#music">MUSIC</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">CONTACT</a>
+  <a href="index.html" class="mobile-home">← HOME</a>
+  <a href="vsyc26.html">ABOUT</a>
+  <a href="vsyc26-divisions.html">DIVISIONS</a>
+  <a href="vsyc26-schedule.html">SCHEDULE</a>
+  <a href="vsyc26-register.html">REGISTER</a>
+  <a href="vsyc26-sponsors.html">SPONSORS</a>
+  <a href="vsyc26-venue.html">VENUE</a>
+  <a href="vsyc26-rules.html">RULES</a>
+  <a href="vsyc26-faq.html">FAQ</a>
 </div>
 
 <!-- HERO -->
@@ -428,9 +145,8 @@
       </div>
     </div>
     <div class="hero-btns">
-      <a href="index.html" class="btn btn-outline">← BACK TO HOME</a>
-      <a href="#register" class="btn btn-gold">COMPETITOR REGISTRATION</a>
-      <a href="#sponsors" class="btn btn-outline">BECOME A SPONSOR</a>
+      <a href="vsyc26-register.html" class="btn btn-gold">COMPETITOR REGISTRATION</a>
+      <a href="vsyc26-sponsors.html" class="btn btn-outline">BECOME A SPONSOR</a>
     </div>
     <div class="countdown-margin" id="countdown">
       <div class="countdown-title">DAYS UNTIL VSYC-26</div>
@@ -491,425 +207,6 @@
   </div>
 </div>
 
-<!-- DIVISIONS -->
-<div class="section-wrap bg-deep" id="divisions">
-  <div class="section">
-    <div class="gold-tag">COMPETITION</div>
-    <h2 class="section-title">Divisions</h2>
-    <div class="divider-gold"></div>
-    <div class="divisions-grid">
-      <div class="division-card">
-        <div class="division-name">1A</div>
-        <div class="division-desc">Single yo-yo on a string. The flagship division — technical, expressive, and the heart of competitive yo-yo. Open to all skill levels.</div>
-        <span class="division-badge">OPEN</span>
-      </div>
-      <div class="division-card">
-        <div class="division-name">X Division</div>
-        <div class="division-desc">Multi-style showcase covering 2A (two yo-yos), 3A (two yo-yos on strings), 4A (off-string), and 5A (counterweight). Pick your style.</div>
-        <span class="division-badge">2A · 3A · 4A · 5A</span>
-      </div>
-      <div class="division-card">
-        <div class="division-name">Beginner /<br/>Junior</div>
-        <div class="division-desc">For newer players and younger competitors. A welcoming entry point into contest competition — no experience required.</div>
-        <span class="division-badge">ALL AGES</span>
-      </div>
-      <div class="division-card">
-        <div class="division-name">Fixed Axle</div>
-        <div class="division-desc">Traditional no-bearing yo-yos only. Raw skill, classic style. One of the most crowd-pleasing divisions in modern competition.</div>
-        <span class="division-badge">TBD · STAY TUNED</span>
-      </div>
-    </div>
-    <div class="note-style">
-      <span class="note-span">★ <strong class="strong-white">Competing in multiple divisions?</strong> Registration is per division. Discounts may apply — check registration for details. Division format follows IYYF/AYYA freestyle guidelines unless otherwise noted.</span>
-    </div>
-  </div>
-</div>
-
-<!-- SCHEDULE -->
-<div class="section-wrap bg-navy" id="schedule">
-  <div class="section">
-    <div class="gold-tag">DAY OF EVENT</div>
-    <h2 class="section-title">Schedule</h2>
-    <div class="divider-gold"></div>
-    <div class="max-width">
-      <div class="schedule-item"><div class="schedule-time">Before 10 AM</div><div><div class="schedule-event">Setup & Load-In</div><div class="schedule-note">Sponsors, vendors, and staff arrive before mall opening. Rubber-wheeled hand trucks allowed.</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">10:00 AM</div><div><div class="schedule-event">Doors Open · Event Begins</div><div class="schedule-note">Registration desk open · Free to spectate · Maker Corner open</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">10:30 AM</div><div><div class="schedule-event">Opening Ceremony</div><div class="schedule-note">Welcome, sponsor acknowledgments, rules briefing</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">11:00 AM</div><div><div class="schedule-event">Competition Begins</div><div class="schedule-note">Divisions run in sequence — Beginner/Junior · Fixed Axle · X Division · 1A</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">~4:00 PM</div><div><div class="schedule-event">Finals / Judging Wrap</div><div class="schedule-note">Approximate — schedule subject to competitor count</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">~5:00 PM</div><div><div class="schedule-event">Awards Ceremony</div><div class="schedule-note">All divisions · Sponsor acknowledgments · Raffle</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">7:00 PM</div><div><div class="schedule-event">Event Closes · Teardown</div><div class="schedule-note">Everything out by 7 PM — venue rule</div></div></div>
-    </div>
-    <p class="schedule-note">★ Schedule is approximate and subject to change based on final competitor count. Confirmed schedule posted closer to event date.</p>
-  </div>
-</div>
-
-<!-- REGISTRATION -->
-<div class="section-wrap bg-deep" id="register">
-  <div class="section">
-    <div class="gold-tag">COMPETITOR REGISTRATION</div>
-    <h2 class="section-title">Register to Compete</h2>
-    <div class="divider-gold"></div>
-    <div class="reg-grid">
-      <div>
-        <div class="reg-box">
-          <div class="reg-box-title">Entry Fees</div>
-          <div class="price-row"><span class="price-div">1A</span><span class="price-val">$20</span></div>
-          <div class="price-row"><span class="price-div">X Division</span><span class="price-val">$20</span></div>
-          <div class="price-row"><span class="price-div">Beginner / Junior</span><span class="price-val">$15</span></div>
-          <div class="price-row"><span class="price-div">Fixed Axle</span><span class="price-val">$15</span></div>
-          <div class="price-row"><span class="price-div">Multiple Divisions</span><span class="price-val">$5 off each add'l</span></div>
-          <div class="price-row"><span class="price-div">Spectators</span><span class="price-val price-free">FREE</span></div>
-        </div>
-        <div class="payment-box">
-          <div class="payment-title">PAYMENT</div>
-          <p class="payment-text">PayPal · Venmo · Check · Bank transfer. Registration is only complete after payment clears.</p>
-          <div class="payment-btns">
-            <a href="https://www.paypal.biz/Dmvthrowers" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small">PAYPAL</a>
-            <a href="https://venmo.com/u/DMVThrow" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-small">VENMO</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="reg-box">
-          <div class="reg-box-title">Music Upload</div>
-          <div class="music-step">
-            <div class="music-step-num">1</div>
-            <div class="music-step-text">Name your file: <strong>DIVISION_LastName_FirstName.mp3</strong><br/>Example: 1A_Rogers_Brandon.mp3</div>
-          </div>
-          <div class="music-step">
-            <div class="music-step-num">2</div>
-            <div class="music-step-text">Upload via the Google Drive link below. <strong>Deadline: 1 week before event (Sept 12).</strong></div>
-          </div>
-          <div class="music-step music-margin">
-            <div class="music-step-num">3</div>
-            <div class="music-step-text"><strong>No upload = AUX cord or no music.</strong> No exceptions after deadline.</div>
-          </div>
-          <div class="music-upload">
-            <a href="mailto:vastateyoyocontest@gmail.com?subject=Music Upload - VSYC26" class="btn btn-gold upload-btn">EMAIL FOR UPLOAD LINK</a>
-          </div>
-        </div>
-        <div class="reg-box">
-          <div class="reg-title">REGISTRATION OPENS</div>
-          <p class="reg-text">Registration link coming soon. Email <a href="mailto:vastateyoyocontest@gmail.com" class="reg-link">vastateyoyocontest@gmail.com</a> to get notified first.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SPONSORS -->
-<div class="section-wrap bg-navy" id="sponsors">
-  <div class="section">
-    <div class="gold-tag">SPONSORSHIP</div>
-    <h2 class="section-title">Become a Sponsor</h2>
-    <div class="divider-gold"></div>
-    <p class="sponsor-p">No yo-yo or skill toy retailers at Dulles Town Center — your brand is the only one in the room, in front of competitors, families, and curious Saturday shoppers. Funding goal: <strong class="sponsor-strong">$3,500</strong>.</p>
-    <p class="sponsor-p2">★ Freshly Dirty confirmed as Platinum Sponsor — real community buy-in before we opened to the public.</p>
-
-    <div class="tiers-grid">
-      <div class="tier-card diamond">
-        <div class="tier-name">◆ DIAMOND</div>
-        <div class="tier-price">$2,000+</div>
-        <div class="tier-limit">MAX 1 SLOT · Cash only</div>
-        <ul class="tier-benefits">
-          <li>"VSYC-26 Presented by [Your Brand]"</li>
-          <li>Logo everywhere — all materials</li>
-          <li>12ft double-wide table (4 chairs)</li>
-          <li>MC callouts all day</li>
-          <li>3 free competitor registrations</li>
-          <li>YouTube livestream credit</li>
-          <li>Pre-event social spotlight</li>
-          <li>Social media thank-you post</li>
-          <li>Linktree listing</li>
-          <li>Certificate + post-event writeup</li>
-        </ul>
-      </div>
-      <div class="tier-card platinum">
-        <div class="tier-name">● PLATINUM</div>
-        <div class="tier-price">$500+</div>
-        <div class="tier-limit">MAX 2 SLOTS · Cash only</div>
-        <ul class="tier-benefits">
-          <li>XL logo — banner, flyers, socials</li>
-          <li>6ft table (2 chairs, power)</li>
-          <li>MC shoutout 3x (open/mid/awards)</li>
-          <li>2 free competitor registrations</li>
-          <li>YouTube livestream credit</li>
-          <li>Pre-event social spotlight</li>
-          <li>Social media thank-you post</li>
-          <li>Linktree listing</li>
-        </ul>
-        <span class="confirmed-badge">✓ 1 SLOT FILLED</span>
-      </div>
-      <div class="tier-card gold-tier">
-        <div class="tier-name">★ GOLD</div>
-        <div class="tier-price">$250+</div>
-        <div class="tier-limit">MAX 4 SLOTS</div>
-        <ul class="tier-benefits">
-          <li>Large logo — banner & flyer</li>
-          <li>6ft table (2 chairs, power)</li>
-          <li>MC shoutout 2x (open & awards)</li>
-          <li>Social media thank-you post</li>
-          <li>Linktree listing</li>
-        </ul>
-      </div>
-      <div class="tier-card silver-tier">
-        <div class="tier-name">◎ SILVER</div>
-        <div class="tier-price">$75+</div>
-        <div class="tier-limit">OPEN SLOTS</div>
-        <ul class="tier-benefits">
-          <li>Medium logo — banner & flyer</li>
-          <li>MC shoutout at opening</li>
-          <li>Social media thank-you post</li>
-          <li>Linktree listing</li>
-          <li>Add table for $75</li>
-        </ul>
-      </div>
-      <div class="tier-card bronze-tier">
-        <div class="tier-name">○ BRONZE</div>
-        <div class="tier-price">$50</div>
-        <div class="tier-limit">OPEN SLOTS</div>
-        <ul class="tier-benefits">
-          <li>Name on sponsor banner</li>
-          <li>Name in event program</li>
-          <li>MC shoutout at opening</li>
-          <li>Social media thank-you post</li>
-          <li>Linktree listing</li>
-          <li>Add table for $75</li>
-        </ul>
-      </div>
-      <div class="tier-card">
-        <div class="tier-name">♦ IN-KIND / LOCAL</div>
-        <div class="tier-price">$25+</div>
-        <div class="tier-limit">ANY FORM · OPEN</div>
-        <ul class="tier-benefits">
-          <li>Name on sponsor banner</li>
-          <li>Social media thank-you post</li>
-          <li>Linktree listing</li>
-          <li>Cash, product, gift cards, food — anything counts</li>
-          <li>Hobby clubs: yo-yo, juggling, kendama, flow arts welcome</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- JOTFORM SPONSOR INTEREST FORM -->
-    <div class="sponsor-margin">
-      <div class="gold-tag">SPONSOR INTEREST FORM</div>
-      <h3 class="sponsor-title">Ready to Get Involved?</h3>
-      <div class="divider-gold"></div>
-      <p class="sponsor-text">Fill out the form below and we'll reach out with an invoice. Diamond and Platinum spots fill first — don't wait.</p>
-      <div class="form-bg">
-        <iframe
-          id="JotFormIFrame-260815592180054"
-          title="VSYC26 Sponsor Interest Form"
-          onload="window.parent.scrollTo(0,0)"
-          allowtransparency="true"
-          allow="geolocation; microphone; camera; fullscreen; payment"
-          src="https://form.jotform.com/dmvthrowers/vsyc26-sponsor-interest-form"
-          frameborder="0"
-          class="jotform-iframe"
-          scrolling="no">
-        </iframe>
-      </div>
-    </div>
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-260815592180054']", "https://form.jotform.com/")</script>
-  </div>
-</div>
-
-<!-- VENUE -->
-<div class="section-wrap bg-deep" id="venue">
-  <div class="section">
-    <div class="gold-tag">VENUE</div>
-    <h2 class="section-title">Dulles Town Center</h2>
-    <div class="divider-gold"></div>
-    <div class="venue-grid">
-      <div>
-        <div class="venue-detail-row"><span class="venue-label">ADDRESS</span><span class="venue-val">21100 Dulles Town Circle<br/>Sterling, VA 20166</span></div>
-        <div class="venue-detail-row"><span class="venue-label">EVENT SPACE</span><span class="venue-val">Center Court, Lower Level — main atrium. Visible from every entrance on that level.</span></div>
-        <div class="venue-detail-row"><span class="venue-label">PARKING</span><span class="venue-val">Free at all mall entrances</span></div>
-        <div class="venue-detail-row"><span class="venue-label">WI-FI</span><span class="venue-val">Free — "Dulles Town Center Wi-Fi" or "Dulles_Town_Center"</span></div>
-        <div class="venue-detail-row"><span class="venue-label">FOOD</span><span class="venue-val">Food court on-site + multiple restaurants throughout mall</span></div>
-        <div class="venue-detail-row"><span class="venue-label">NEARBY HOTELS</span><span class="venue-val">Courtyard by Marriott Dulles (walking distance) · Candlewood Suites (~1 mi)</span></div>
-        <div class="btns-flex">
-          <a href="https://maps.google.com/?q=21100+Dulles+Town+Circle+Sterling+VA+20166" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small2">GET DIRECTIONS</a>
-          <a href="https://www.dullestowncenter.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-small2">MALL WEBSITE</a>
-        </div>
-      </div>
-      <div>
-        <div class="venue-rules-title">VENUE RULES FOR VENDORS & SPONSORS</div>
-        <div class="venue-rules">
-          <div class="venue-rule"><div class="venue-rule-title">SETUP / TEARDOWN</div><div class="venue-rule-body">Setup before 10 AM (before mall opens). Everything out by 7 PM. Hand trucks with rubber wheels only.</div></div>
-          <div class="venue-rule"><div class="venue-rule-title">FLOOR ITEMS</div><div class="venue-rule-body">Rubber mats or carpet pads under anything touching the mall floor. No tape on floor or fixtures.</div></div>
-          <div class="venue-rule"><div class="venue-rule-title">SIGNAGE</div><div class="venue-rule-body">All banners/signs need written DTC approval at least 2 weeks out. We handle the process — keep it professional.</div></div>
-          <div class="venue-rule"><div class="venue-rule-title">POWER</div><div class="venue-rule-body">Up to 500W per outlet. No exposed cords. Bring your own extension cord. No tablecloths provided.</div></div>
-          <div class="venue-rule"><div class="venue-rule-title">TABLE SLOTS</div><div class="venue-rule-body">10 tables max. Diamond/Platinum guaranteed. Gold included (limited). Silver/Bronze add for $75. Hobby clubs: $50.</div></div>
-          <div class="venue-rule"><div class="venue-rule-title">ADVANCE SHIPPING</div><div class="venue-rule-body">Ship product by September 12. Contact us for shipping address — we'll store and have it on-site.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- RULESET -->
-<div class="section-wrap bg-navy" id="rules">
-  <div class="section">
-    <div class="gold-tag">CONTEST RULES</div>
-    <h2 class="section-title">Contest Ruleset</h2>
-    <div class="divider-gold"></div>
-    <div class="ruleset-grid">
-      <div class="rule-block">
-        <div class="rule-block-title">FREESTYLE FORMAT</div>
-        <ul class="rule-list">
-          <li>Freestyles follow IYYF/AYYA guidelines unless otherwise noted</li>
-          <li>1A, X Division: 3-minute freestyle with music</li>
-          <li>Beginner/Junior: Shorter format — TBD based on registration</li>
-          <li>Fixed Axle: Format TBD — announcement coming soon</li>
-          <li>No profanity or offensive content in music</li>
-        </ul>
-      </div>
-      <div class="rule-block">
-        <div class="rule-block-title">EQUIPMENT</div>
-        <ul class="rule-list">
-          <li>Competitors must use division-legal yo-yos for their registered division</li>
-          <li>Fixed Axle: No bearing yo-yos — traditional axle only</li>
-          <li>String and accessories are competitor's responsibility</li>
-          <li>Inspections may occur before competition at judge's discretion</li>
-        </ul>
-      </div>
-      <div class="rule-block">
-        <div class="rule-block-title">MUSIC & PERFORMANCE</div>
-        <ul class="rule-list">
-          <li>Music files due by September 12 — no exceptions after deadline</li>
-          <li>File format: MP3, named DIVISION_Last_First.mp3</li>
-          <li>No live music — pre-recorded tracks only</li>
-          <li>Competitors must be ready when called — missing your slot forfeits your spot</li>
-        </ul>
-      </div>
-      <div class="rule-block">
-        <div class="rule-block-title">JUDGING & CONDUCT</div>
-        <ul class="rule-list">
-          <li>Judging follows standard competitive yo-yo scoring criteria</li>
-          <li>Judge decisions are final</li>
-          <li>Respectful conduct required — unsportsmanlike behavior may result in disqualification</li>
-          <li>Venue rules apply to all competitors, spectators, and staff</li>
-          <li>Organizers reserve the right to adjust format based on registration numbers</li>
-        </ul>
-      </div>
-    </div>
-    <div class="rules-note">
-      <p class="rules-p">★ Full detailed ruleset will be distributed to registered competitors closer to the event date. Questions? Email <a href="mailto:vastateyoyocontest@gmail.com" class="rules-link">vastateyoyocontest@gmail.com</a></p>
-    </div>
-  </div>
-</div>
-
-<!-- MUSIC UPLOAD -->
-<div class="section-wrap bg-deep" id="music">
-  <div class="section section-max">
-    <div class="gold-tag">MUSIC UPLOAD</div>
-    <h2 class="section-title">Submit Your Music</h2>
-    <div class="divider-gold"></div>
-    <div class="music-box">
-      <div class="music-step">
-        <div class="music-step-num">1</div>
-        <div class="music-step-text"><strong>Format your file name correctly:</strong><br/>DIVISION_LastName_FirstName.mp3<br/><span class="music-span">Examples: 1A_Rogers_Brandon.mp3 · XDiv_Smith_Alex.mp3 · Beginner_Lee_Jordan.mp3</span></div>
-      </div>
-      <div class="music-step">
-        <div class="music-step-num">2</div>
-        <div class="music-step-text"><strong>File requirements:</strong> MP3 format · No explicit/offensive content · Full track including any intro/outro you want</div>
-      </div>
-      <div class="music-step">
-        <div class="music-step-num">3</div>
-        <div class="music-step-text"><strong>Deadline: September 12, 2026</strong> — one week before the event. Upload link sent after registration confirmation.</div>
-      </div>
-      <div class="music-step music-step-last">
-        <div class="music-step-num">!</div>
-        <div class="music-step-text music-warning">No upload by deadline = AUX cord or no music. No exceptions.</div>
-      </div>
-      <div class="upload-section">
-        <a href="mailto:vastateyoyocontest@gmail.com?subject=Music Upload Request - VSYC26" class="btn btn-gold">REQUEST UPLOAD LINK</a>
-        <p class="upload-note">Upload link distributed after registration is confirmed and payment clears.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FAQ -->
-<div class="section-wrap bg-navy" id="faq">
-  <div class="section section-max">
-    <div class="gold-tag">FAQ</div>
-    <h2 class="section-title">Common Questions</h2>
-    <div class="divider-gold"></div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Is the event free to attend?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Yes — free to spectate. Competitor entry is $15–25 per division depending on division. No charge for spectators, families, or curious mall visitors.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>How do I register to compete?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Registration opens soon. Email vastateyoyocontest@gmail.com to get notified first. Registration is only complete after payment clears.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Can I compete in multiple divisions?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Yes. Registration is per division. A discount applies for each additional division — details in the registration form.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>What is the Maker Corner?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">A community showcase area for handmade skill toys, custom designs, and indie crafted work. Not a sponsor table — this is community space for makers. Contact us if you're interested in a spot.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Will there be a livestream?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Planned — pending funding. Diamond and Platinum sponsors receive YouTube livestream credit. Once funded, it's happening. Help us get there.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Where do I park?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Free parking at all mall entrances. Dulles Town Center has ample surface parking surrounding the entire mall. No fees, no validation needed.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>How do I become a sponsor?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Fill out the sponsor interest form above or email vastateyoyocontest@gmail.com. Diamond and Platinum spots are limited — first come, first served. You'll receive a PayPal invoice to lock your spot.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Who organizes VSYC-26?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">DMV Throwers Yo-Yo & Skill Toy Club — the DC/Maryland/Virginia yo-yo community club. Entirely volunteer-run. Every dollar goes straight to the event.</div>
-    </div>
-  </div>
-</div>
-
-<!-- CONTACT -->
-<div class="section-wrap bg-deep" id="contact">
-  <div class="section">
-    <div class="gold-tag">CONTACT</div>
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="divider-gold"></div>
-    <div class="contact-grid">
-      <div>
-        <div class="contact-title">CONTEST CONTACT</div>
-        <div class="contact-row"><span class="contact-label">EMAIL</span><a href="mailto:vastateyoyocontest@gmail.com" class="contact-val">vastateyoyocontest@gmail.com</a></div>
-        <div class="contact-row"><span class="contact-label">INSTAGRAM</span><a href="https://instagram.com/vastateyoyocontest" target="_blank" rel="noopener noreferrer" class="contact-val">@vastateyoyocontest</a></div>
-        <div class="contact-row"><span class="contact-label">PAYPAL</span><a href="https://www.paypal.biz/Dmvthrowers" target="_blank" rel="noopener noreferrer" class="contact-val">paypal.biz/Dmvthrowers</a></div>
-        <div class="contact-row"><span class="contact-label">VENMO</span><a href="https://venmo.com/u/DMVThrow" target="_blank" rel="noopener noreferrer" class="contact-val">venmo.com/u/DMVThrow</a></div>
-        <div class="organized-title">ORGANIZED BY</div>
-        <div class="contact-row"><span class="contact-label">CLUB</span><span class="contact-val">DMV Throwers Yo-Yo & Skill Toy Club</span></div>
-        <div class="contact-row"><span class="contact-label">CLUB EMAIL</span><a href="mailto:contact@dmvthrowers.club" class="contact-val">contact@dmvthrowers.club</a></div>
-        <div class="contact-row"><span class="contact-label">CLUB SITE</span><a href="https://dmvthrowers.club" target="_blank" rel="noopener noreferrer" class="contact-val">dmvthrowers.club</a></div>
-        <div class="contact-row"><span class="contact-label">INSTAGRAM</span><a href="https://instagram.com/dmv_throwers" target="_blank" rel="noopener noreferrer" class="contact-val">@dmv_throwers</a></div>
-      </div>
-      <div>
-        <div class="dates-title">KEY DATES</div>
-        <div class="dates-container">
-          <div class="date-row"><span class="date-label">Sponsor commitments open</span><span class="date-value">Now</span></div>
-          <div class="date-row"><span class="date-label">Commitment deadline</span><span class="date-value">Aug 1, 2026</span></div>
-          <div class="date-row"><span class="date-label">Logo & asset deadline</span><span class="date-value">Aug 15, 2026</span></div>
-          <div class="date-row"><span class="date-label">Music upload deadline</span><span class="date-value">Sept 12, 2026</span></div>
-          <div class="date-row"><span class="date-label">Advance shipping deadline</span><span class="date-value">Sept 12, 2026</span></div>
-          <div class="event-row"><span class="event-label">EVENT DAY</span><span class="event-value">Sept 19, 2026</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -922,12 +219,12 @@
         </div>
       </div>
       <div>
-        <a href="#about" class="footer-link">About</a>
-        <a href="#divisions" class="footer-link">Divisions</a>
-        <a href="#register" class="footer-link">Register</a>
-        <a href="#sponsors" class="footer-link">Sponsors</a>
-        <a href="#venue" class="footer-link">Venue</a>
-        <a href="#contact" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link">About</a>
+        <a href="vsyc26-divisions.html" class="footer-link">Divisions</a>
+        <a href="vsyc26-register.html" class="footer-link">Register</a>
+        <a href="vsyc26-sponsors.html" class="footer-link">Sponsors</a>
+        <a href="vsyc26-venue.html" class="footer-link">Venue</a>
+        <a href="vsyc26-faq.html" class="footer-link">Contact</a>
         <a href="index.html" class="footer-link">← Club Site</a>
       </div>
     </div>
@@ -946,16 +243,6 @@
   document.querySelectorAll('.mobile-menu a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
-
-  // FAQ
-  function toggleFaq(el) {
-    const answer = el.nextElementSibling;
-    const toggle = el.querySelector('.faq-toggle');
-    const isOpen = answer.classList.contains('open');
-    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
-    document.querySelectorAll('.faq-toggle').forEach(t => t.textContent = '+');
-    if (!isOpen) { answer.classList.add('open'); toggle.textContent = '−'; }
-  }
 
   // Countdown to September 19, 2026 10:00 AM EDT
   function updateCountdown() {
@@ -980,19 +267,6 @@
   }
   updateCountdown();
   setInterval(updateCountdown, 1000);
-
-  // Active nav
-  const sections = ['about','divisions','schedule','register','sponsors','venue','rules','music','faq','contact'];
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { threshold: 0.3 });
-  sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
 </script>
 </body>
 </html>
