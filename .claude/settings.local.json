@@ -13,7 +13,8 @@
       "Bash(powershell.exe -Command \"New-Item -ItemType Directory -Path ''c:\\\\Users\\\\91bro\\\\OneDrive\\\\Documents\\\\GitHub\\\\dmvthrowers-wiki''\")",
       "Bash(mkdir -p /tmp/dmvthrowers-wiki)",
       "Read(//tmp/**)",
-      "Bash(/tmp/dmvthrowers-wiki/Getting-Started.md:*)"
+      "Bash(/tmp/dmvthrowers-wiki/Getting-Started.md:*)",
+      "Bash(/tmp/dmvthrowers-wiki/Content-Editing-Guide.md:*)"
     ]
   }
 }
