@@ -1,7 +1,26 @@
-.claude/worktrees/
-.claude/settings.local.json
+# Claude AI local config
+.claude/
+
+# Visual Studio IDE artifacts
 .vs/
+
+# VS Code workspace settings (personal, not shared)
+.vscode/
+
+# SSL / secrets
 dmvthrowers.club-ssl-bundle/
 *.pem
 *.key
+
+# Local git mirror (no active purpose)
 repo-mirror/
+
+# Local dev/maintenance scripts (not part of the site)
+scripts/
+
+# GitHub Copilot dev tooling (not website content)
+agents/
+skills/
+
+# Temp folders
+.security-purge-temp/
