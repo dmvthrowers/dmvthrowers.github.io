@@ -27,7 +27,12 @@
       "Bash(gh auth:*)",
       "Bash(gh api:*)",
       "Bash(pip install:*)",
-      "Bash(python -c \":*)"
+      "Bash(python -c \":*)",
+      "Bash(cp \"C:/Users/91bro/AppData/Local/Temp/venue_imgs/event-space.jpg\" assets/images/venue/event-space.jpg)",
+      "Bash(cp \"C:/Users/91bro/AppData/Local/Temp/venue_imgs/floor-plan.jpg\" assets/images/venue/floor-plan.jpg)",
+      "Bash(cp \"C:/Users/91bro/AppData/Local/Temp/venue_imgs/exterior-2.jpg\" assets/images/venue/exterior.jpg)",
+      "Bash(cp \"C:/Users/91bro/AppData/Local/Temp/venue_imgs/upper-level-2.jpg\" assets/images/venue/upper-level.jpg)",
+      "Bash(cp \"C:/Users/91bro/AppData/Local/Temp/venue_imgs/interior-views-2.jpg\" assets/images/venue/interior-1.jpg)"
     ]
   }
 }

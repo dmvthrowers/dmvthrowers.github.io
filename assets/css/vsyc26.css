@@ -255,11 +255,21 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .section-max { max-width: 780px; }
 .jotform-iframe { min-width: 100%; max-width: 100%; height: 539px; border: none; display: block; }
 
+/* VENUE GALLERY */
+.venue-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.venue-gallery-item { position: relative; overflow: hidden; border: 1px solid var(--border); aspect-ratio: 4/3; }
+.venue-gallery-item.tall { grid-row: span 2; aspect-ratio: auto; }
+.venue-gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+.venue-gallery-item:hover img { transform: scale(1.05); }
+.venue-gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(13,20,40,0.9)); padding: 24px 12px 10px; font-size: 0.65rem; letter-spacing: 0.12em; font-weight: 700; color: var(--gold); }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .venue-grid, .reg-grid, .contact-grid, .ruleset-grid, .grid-2col { grid-template-columns: 1fr; }
+  .venue-gallery { grid-template-columns: 1fr 1fr; }
+  .venue-gallery-item.tall { grid-row: span 1; aspect-ratio: 4/3; }
   .countdown-grid { grid-template-columns: repeat(4, 1fr); }
   .hero-year { font-size: 3rem; font-size: clamp(3rem, 18vw, 6rem); }
 }
