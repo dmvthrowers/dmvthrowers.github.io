@@ -64,7 +64,15 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 | Resources | [dmvthrowers.club/resources.html](https://dmvthrowers.club/resources.html) |
 | FAQ | [dmvthrowers.club/faq.html](https://dmvthrowers.club/faq.html) |
 | Contact | [dmvthrowers.club/contact.html](https://dmvthrowers.club/contact.html) |
-| VSYC-26 | [dmvthrowers.club/vsyc26.html](https://dmvthrowers.club/vsyc26.html) |
+| **VSYC-26** | |
+| — About | [dmvthrowers.club/vsyc26.html](https://dmvthrowers.club/vsyc26.html) |
+| — Divisions | [dmvthrowers.club/vsyc26-divisions.html](https://dmvthrowers.club/vsyc26-divisions.html) |
+| — Schedule | [dmvthrowers.club/vsyc26-schedule.html](https://dmvthrowers.club/vsyc26-schedule.html) |
+| — Register | [dmvthrowers.club/vsyc26-register.html](https://dmvthrowers.club/vsyc26-register.html) |
+| — Sponsors | [dmvthrowers.club/vsyc26-sponsors.html](https://dmvthrowers.club/vsyc26-sponsors.html) |
+| — Venue | [dmvthrowers.club/vsyc26-venue.html](https://dmvthrowers.club/vsyc26-venue.html) |
+| — Rules | [dmvthrowers.club/vsyc26-rules.html](https://dmvthrowers.club/vsyc26-rules.html) |
+| — FAQ & Contact | [dmvthrowers.club/vsyc26-faq.html](https://dmvthrowers.club/vsyc26-faq.html) |
 
 ---
 
@@ -72,18 +80,28 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 
 ```
 / (root)
-├── index.html              # Homepage
-├── about.html              # About page
-├── events.html             # Events page
-├── gallery.html            # Gallery page
-├── resources.html          # Resources page
-├── faq.html                # FAQ page
-├── contact.html            # Contact page
-├── vsyc26.html             # VSYC-26 contest page
-├── sitemap.xml             # Sitemap for search engines
-├── CNAME                   # GitHub Pages custom domain
-├── README.md               # This file
+├── index.html                  # Homepage
+├── about.html                  # About page
+├── events.html                 # Events page
+├── gallery.html                # Gallery page
+├── resources.html              # Resources page
+├── faq.html                    # FAQ page
+├── contact.html                # Contact page
+├── vsyc26.html                 # VSYC-26 landing (hero + about)
+├── vsyc26-divisions.html       # VSYC-26 divisions
+├── vsyc26-schedule.html        # VSYC-26 schedule
+├── vsyc26-register.html        # VSYC-26 registration + music upload
+├── vsyc26-sponsors.html        # VSYC-26 sponsor tiers + JotForm
+├── vsyc26-venue.html           # VSYC-26 venue info
+├── vsyc26-rules.html           # VSYC-26 contest rules
+├── vsyc26-faq.html             # VSYC-26 FAQ + contact
+├── sitemap.xml                 # Sitemap for search engines
+├── robots.txt                  # Crawl directives
+├── CNAME                       # GitHub Pages custom domain
+├── README.md                   # This file
 └── assets/
+    ├── css/
+    │   └── vsyc26.css                      # Shared stylesheet for all VSYC-26 pages
     ├── images/
     │   ├── logo.png                        # Main club logo
     │   ├── events/                         # Monthly event flyers
