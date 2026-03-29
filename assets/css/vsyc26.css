@@ -295,7 +295,18 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
   .hero-year { font-size: 3rem; font-size: clamp(3rem, 18vw, 6rem); }
 }
 @media (max-width: 480px) {
+  #top-bar { justify-content: center; text-align: center; }
+  #top-bar span, #top-bar a { font-size: 0.62rem; letter-spacing: 0.1em; }
+  nav { padding: 0 14px; }
+  .nav-brand-main { font-size: 0.9rem; }
+  .nav-brand-sub { font-size: 0.5rem; letter-spacing: 0.14em; }
+  .section { padding: 64px 18px; }
+  .vsyc-page-hero { padding: 40px 18px 74px; }
+  .vsyc-page-hero-sub { letter-spacing: 0.12em; }
+  .hero-meta { gap: 14px; }
+  .hero-meta-val { font-size: 0.9rem; }
+  .btn { font-size: 0.73rem; padding: 12px 20px; }
+  .footer-copy { line-height: 1.5; }
   .hero-btns { flex-direction: column; }
   .countdown-grid { grid-template-columns: repeat(2, 1fr); }
-  #top-bar { justify-content: center; text-align: center; }
 }

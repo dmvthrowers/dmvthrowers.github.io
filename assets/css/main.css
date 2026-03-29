@@ -111,4 +111,14 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
 }
 @media (max-width: 480px) {
   #top-bar { justify-content: center; text-align: center; }
+  #top-bar span, #top-bar a { font-size: 0.66rem; letter-spacing: 0.1em; }
+  nav { padding: 0 14px; }
+  .nav-brand-text-main { font-size: 0.95rem; }
+  .nav-brand-text-sub { font-size: 0.52rem; letter-spacing: 0.12em; }
+  .section { padding: 64px 18px; }
+  .page-hero { padding: 40px 18px 72px; }
+  .page-hero-sub { letter-spacing: 0.14em; }
+  .btn { font-size: 0.76rem; padding: 12px 22px; }
+  .footer-link { margin: 0 6px 8px 0; display: inline-block; }
+  .footer-copy { font-size: 0.72rem; line-height: 1.5; }
 }
