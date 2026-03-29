@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; form-action 'self' https://formspree.io/f/mlgojooe;"/>
   <title>Contact - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
   <meta name="description" content="Get in touch with DMV Throwers yo-yo club. Contact us for event information, membership, or general inquiries."/>
   <meta property="og:title" content="Contact - DMV Throwers · Yo-Yo & Skill Toy Club"/>
@@ -131,6 +132,7 @@
     .contact-email-link { color: var(--red); text-decoration: none; }
     .contact-drive-link { color: var(--red); text-decoration: none; }
     .form-privacy-note { margin-top: 12px; font-size: 0.75rem; color: var(--text-muted); }
+    .honeypot-field { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
@@ -230,6 +232,7 @@
       <div class="contact-form">
         <h3>Send us a Message</h3>
         <form action="https://formspree.io/f/mlgojooe" method="POST">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot-field"/>
           <div class="form-group">
             <label class="form-label" for="name">Name</label>
             <input class="form-input" type="text" id="name" name="name" autocomplete="name" required>
