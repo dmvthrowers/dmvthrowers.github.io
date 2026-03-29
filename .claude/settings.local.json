@@ -24,7 +24,8 @@
       "Bash(powershell.exe -Command \"Test-Path ''C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe''\")",
       "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
       "Bash(gh --version)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(gh api:*)"
     ]
   }
 }
