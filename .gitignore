@@ -2,3 +2,6 @@
 .claude/settings.local.json
 .vs/
 dmvthrowers.club-ssl-bundle/
+*.pem
+*.key
+repo-mirror/

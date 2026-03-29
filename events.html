@@ -151,7 +151,10 @@
     /* Fixed event card structure */
     .event-card { background: white; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
     .event-card:hover { transform: translateX(4px); box-shadow: -4px 4px 0 var(--red); }
-    .event-card-image { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .event-card-image { width: 100%; display: block; background: var(--cream-mid); }
+    @media (min-width: 769px) {
+      .event-card-image { height: 420px; object-fit: contain; object-position: center; }
+    }
     .event-card-body { padding: 20px 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
     .event-type { font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; color: var(--red); margin-bottom: 6px; }
     .event-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--navy); }
@@ -166,6 +169,7 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
+      .event-card-image { height: 160px; object-fit: cover; }
       .event-card-body { flex-direction: column; align-items: flex-start; }
       .event-date, .event-day { text-align: left; }
     }
