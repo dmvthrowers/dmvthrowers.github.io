@@ -15,11 +15,56 @@
   <meta name="twitter:site" content="@dmv_throwers"/>
   <link rel="canonical" href="https://dmvthrowers.club/contact.html"/>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <meta name="theme-color" content="#1a2744"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/main.css"/>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #D42B2B;
+      --red-dark: #b01f1f;
+      --navy: #1a2744;
+      --navy-deep: #0e1833;
+      --cream: #f5f0e8;
+      --cream-mid: #f0ebe0;
+      --border: #d4cebc;
+      --text-muted: #6a7a9a;
+      --text-body: #3a4a6a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
+    #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    #top-bar span { font-size: 0.72rem; color: white; letter-spacing: 0.14em; font-weight: 600; }
+    #top-bar a { font-size: 0.72rem; color: white; letter-spacing: 0.12em; font-weight: 700; text-decoration: underline; white-space: nowrap; }
+    nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+    .nav-brand-text-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; line-height: 1; color: var(--navy); }
+    .nav-brand-text-sub { font-size: 0.6rem; letter-spacing: 0.18em; color: var(--red); font-weight: 700; margin-top: 2px; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-link { cursor: pointer; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 600; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; color: var(--navy); text-decoration: none; }
+    .nav-link:hover, .nav-link.active { border-bottom-color: var(--red); color: var(--red); }
+    .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
+    .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
+    .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; touch-action: manipulation; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
+    .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
+    .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
+    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-bg-white { background: white; }
+    .section-bg-navy { background: var(--navy); }
+    .section-bg-cream { background: var(--cream); }
+    .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--navy); margin-bottom: 8px; }
+    .section-title.light { color: white; }
+    .divider { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 32px; }
     .contact-info { background: white; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     .contact-info h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; color: var(--navy); margin-bottom: 20px; }
@@ -30,8 +75,8 @@
     .contact-form { background: white; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     .form-group { margin-bottom: 20px; }
     .form-label { display: block; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
-    .form-input, .form-textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; transition: border-color 0.2s; }
-    .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--red); }
+    .form-input, .form-textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 4px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; appearance: none; }
+    .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(212,43,43,0.18); }
     .form-textarea { resize: vertical; min-height: 120px; }
     .btn { border-radius: 4px; }
     .social-links { margin-top: 32px; }
@@ -144,17 +189,17 @@
         <form action="https://formspree.io/f/contact@dmvthrowers.club" method="POST">
           <div class="form-group">
             <label class="form-label" for="name">Name</label>
-            <input class="form-input" type="text" id="name" name="name" required>
+            <input class="form-input" type="text" id="name" name="name" autocomplete="name" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="email">Email</label>
-            <input class="form-input" type="email" id="email" name="email" required>
+            <input class="form-input" type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="subject">Subject</label>
-            <input class="form-input" type="text" id="subject" name="subject" required>
+            <input class="form-input" type="text" id="subject" name="subject" autocomplete="off" required>
           </div>
 
           <div class="form-group">

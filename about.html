@@ -15,20 +15,73 @@
   <meta name="twitter:site" content="@dmv_throwers"/>
   <link rel="canonical" href="https://dmvthrowers.club/about.html"/>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <meta name="theme-color" content="#1a2744"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/main.css"/>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #D42B2B;
+      --red-dark: #b01f1f;
+      --navy: #1a2744;
+      --navy-deep: #0e1833;
+      --cream: #f5f0e8;
+      --cream-mid: #f0ebe0;
+      --border: #d4cebc;
+      --text-muted: #6a7a9a;
+      --text-body: #3a4a6a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
+    #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    #top-bar span { font-size: 0.72rem; color: white; letter-spacing: 0.14em; font-weight: 600; }
+    #top-bar a { font-size: 0.72rem; color: white; letter-spacing: 0.12em; font-weight: 700; text-decoration: underline; white-space: nowrap; }
+    nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
+    .nav-brand-text-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; line-height: 1; color: var(--navy); }
+    .nav-brand-text-sub { font-size: 0.6rem; letter-spacing: 0.18em; color: var(--red); font-weight: 700; margin-top: 2px; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-link { cursor: pointer; letter-spacing: 0.12em; font-size: 0.72rem; font-weight: 600; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; color: var(--navy); text-decoration: none; }
+    .nav-link:hover, .nav-link.active { border-bottom-color: var(--red); color: var(--red); }
+    .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
+    .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
+    .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
+    .nav-donate:hover { background: #0f9d84 !important; border-bottom: none !important; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; touch-action: manipulation; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
+    .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
+    .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
     #hero { background: var(--navy); position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center; }
     .hero-dots { position: absolute; inset: 0; opacity: 0.06; background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 32px 32px; }
     .hero-inner { max-width: 1100px; margin: 0 auto; padding: 80px 24px 140px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; width: 100%; }
     .hero-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 18px; }
-    .hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(3rem, 8vw, 5.5rem); color: white; line-height: 0.95; margin-bottom: 10px; }
+    .hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 3rem; font-size: clamp(3rem, 8vw, 5.5rem); color: white; line-height: 0.95; margin-bottom: 10px; }
     .hero-subtitle { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 22px; }
     .hero-desc { font-size: 1.05rem; color: #c8d0e0; line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
     .hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; }
+    .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-bg-white { background: white; }
+    .section-bg-navy { background: var(--navy); }
+    .section-bg-cream { background: var(--cream); }
+    .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--navy); margin-bottom: 8px; }
+    .section-title.light { color: white; }
+    .divider { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
+    .btn { display: inline-block; padding: 14px 32px; font-weight: 700; letter-spacing: 0.1em; font-size: 0.82rem; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.1s; font-family: 'DM Sans', sans-serif; touch-action: manipulation; }
+    .btn-red { background: var(--red); color: white; }
+    .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
+    .btn-outline-red { background: transparent; border: 2px solid var(--red); color: var(--red); }
+    .btn-outline-red:hover { background: var(--red); color: white; }
+    .btn-outline-white { background: transparent; border: 2px solid white; color: white; }
+    .btn-outline-white:hover { background: white; color: var(--navy); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
     .about-body { font-size: 1.05rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
     .pill-wrap { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
