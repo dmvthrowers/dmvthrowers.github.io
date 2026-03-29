@@ -1,80 +1,54 @@
-# Contributing to <Your Yo‑Yo Club Name>
+# Contributing to DMV Throwers
 
-Thank you for your interest in helping improve our club’s website!  
-This project is community‑driven, and contributions of all sizes are welcome.
+Thank you for helping improve the DMV Throwers website.
+This project is community-driven, and contributions of all sizes are welcome.
 
----
+## Purpose
 
-## 🎯 Purpose
+Our goal is to keep the site accurate, accessible, and helpful for players, families, and organizers across DC, Maryland, and Virginia.
 
-This guide explains how to contribute effectively and respectfully. Our goal is to keep the website accurate, helpful, and welcoming for everyone in the yo‑yo community.
+## Ways to Help
 
----
+We welcome contributions such as:
 
-## 🤝 How You Can Contribute
-
-We appreciate contributions such as:
-
-- Updating event information (meetups, contests, workshops)
-- Improving clarity or accuracy in pages and documentation
-- Adding beginner resources or helpful guides
-- Fixing typos, formatting issues, or broken links
+- Updating meetup and contest details
+- Improving copy clarity and accessibility
+- Fixing broken links and formatting issues
+- Adding youth-safe learning resources
+- Improving performance, SEO, or mobile behavior
 - Submitting photos or media you have rights to share
-- Suggesting new features or improvements
 
-If you’re unsure whether something fits, feel free to open an issue.
+## Before You Start
 
----
+- Open an issue for significant changes so we can align first
+- Check existing issues and pull requests to avoid duplicate work
+- Follow the current structure and naming conventions in this repository
+- Keep changes focused and easy to review
 
-## 📝 Before You Start
+## Pull Request Checklist
 
-To keep things organized:
+1. Fork the repository and create a branch for your change.
+2. Make edits with clear, minimal diffs.
+3. Verify pages render correctly on desktop and mobile.
+4. Confirm links, dates, and contact details are accurate.
+5. Open a pull request with a short summary of what changed, why it changed, and screenshots for UI or content updates.
 
-- **Open an issue** for any significant change so we can discuss it first  
-- **Check existing issues** to avoid duplicating work  
-- **Follow the existing structure** of pages and folders  
-- **Be respectful** in all discussions — this is a community space
+## Content and Media Rules
 
----
+- Only submit media you created or have explicit permission to use
+- Include attribution where required
+- Do not upload personal or sensitive information
+- Avoid identifiable minors unless you have verified permission
 
-## 🔧 Submitting a Pull Request
+## Code of Conduct
 
-1. Fork the repository  
-2. Create a branch for your change  
-3. Make your edits  
-4. Submit a pull request with a clear description of:
-   - What you changed  
-   - Why you changed it  
-   - Screenshots if relevant  
+All participation in this project is governed by the Code of Conduct in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
-Maintainers may request small adjustments before merging.
+## Security
 
----
+For security issues, do not file a public issue.
+Follow the reporting guidance in [SECURITY.md](SECURITY.md).
 
-## 📸 Media Contributions
+## License
 
-If you contribute photos, graphics, or videos:
-
-- Only upload content you created or have permission to share  
-- Include attribution if required  
-- Avoid identifiable minors unless you have explicit permission
-
----
-
-## 📜 Code of Conduct
-
-All contributors must follow our Code of Conduct to maintain a positive, inclusive environment.  
-We’re a yo‑yo club — fun and respect go hand in hand.
-
----
-
-## 🔐 Licensing
-
-By contributing, you agree that your contributions will be released under this project’s license.  
-This ensures the website remains open and maintainable for the whole community.
-
----
-
-## 💬 Questions or Ideas
-
-Open an issue anytime. We love seeing new ideas, improvements, and community involvement.
+By contributing, you agree that your contributions are licensed under this repository's license.

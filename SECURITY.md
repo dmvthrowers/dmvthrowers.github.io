@@ -1,21 +1,37 @@
 # Security Policy
 
-## Supported Versions
+## Supported Scope
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+This repository hosts the public DMV Throwers website and contest pages.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Security support applies to:
+
+- The default branch and currently deployed site content
+- Website source files in this repository (HTML, CSS, JavaScript, images, and docs)
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Please do not open public issues for security reports.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Report vulnerabilities privately to:
+
+- [contact@dmvthrowers.club](mailto:contact@dmvthrowers.club)
+
+When possible, include:
+
+- A clear description of the issue and impact
+- Steps to reproduce
+- Affected page(s) and file(s)
+- Screenshots or proof-of-concept details
+
+## Response Expectations
+
+Best-effort targets:
+
+- Initial acknowledgment within 5 business days
+- Status update within 10 business days after acknowledgment
+
+## Disclosure Guidelines
+
+Please allow us reasonable time to investigate and remediate before public disclosure.
+After remediation, we may publish a brief advisory or changelog note when appropriate.

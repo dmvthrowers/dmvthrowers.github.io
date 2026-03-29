@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /repo-mirror/
+Disallow: /scripts/
+Disallow: /agents/
+Disallow: /skills/
+Disallow: /*.md
 
 Sitemap: https://dmvthrowers.club/sitemap.xml

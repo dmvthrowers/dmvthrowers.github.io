@@ -7,6 +7,8 @@
 🔗 **Linktree:** [linktr.ee/dmvthrowers](https://linktr.ee/dmvthrowers)
 ☕ **Support us:** [ko-fi.com/dmvthrowers](https://ko-fi.com/dmvthrowers)
 
+Last updated: 2026-03-29
+
 ---
 
 ## About the Club
@@ -34,7 +36,7 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 - 📍 **Dulles Town Center · Center Court · Sterling, VA**
 - 🕙 **10 AM – 7 PM**
 - 🎟 **Free to spectate · $15–25/division to compete**
-- 🏆 **Divisions:** 1A · X Division · Beginner/Junior · Fixed Axle (TBD)
+- 🏆 **Divisions:** 1A · X Division · Beginner/Junior · Fixed Axle
 
 **Contest site:** [dmvthrowers.club/vsyc26.html](https://dmvthrowers.club/vsyc26.html)
 **Sponsor inquiries:** <vastateyoyocontest@gmail.com>
@@ -66,7 +68,7 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 | Contact | [dmvthrowers.club/contact.html](https://dmvthrowers.club/contact.html) |
 | **VSYC-26** | |
 | — About | [dmvthrowers.club/vsyc26.html](https://dmvthrowers.club/vsyc26.html) |
-| — Divisions | [dmvthrowers.club/vsyc26-divisions.html](https://dmvthrowers.club/vsyc26-divisions.html) |
+| — Divisions | [dmvthrowers.club/vsyc26-register.html#divisions](https://dmvthrowers.club/vsyc26-register.html#divisions) |
 | — Schedule | [dmvthrowers.club/vsyc26-schedule.html](https://dmvthrowers.club/vsyc26-schedule.html) |
 | — Register | [dmvthrowers.club/vsyc26-register.html](https://dmvthrowers.club/vsyc26-register.html) |
 | — Sponsors | [dmvthrowers.club/vsyc26-sponsors.html](https://dmvthrowers.club/vsyc26-sponsors.html) |
@@ -88,7 +90,7 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 ├── faq.html                    # FAQ page
 ├── contact.html                # Contact page
 ├── vsyc26.html                 # VSYC-26 landing (hero + about)
-├── vsyc26-divisions.html       # VSYC-26 divisions
+├── vsyc26-divisions.html       # Redirect to registration divisions section
 ├── vsyc26-schedule.html        # VSYC-26 schedule
 ├── vsyc26-register.html        # VSYC-26 registration + music upload
 ├── vsyc26-sponsors.html        # VSYC-26 sponsor tiers + JotForm
@@ -104,25 +106,23 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
     │   └── vsyc26.css                      # Shared stylesheet for all VSYC-26 pages
     ├── images/
     │   ├── logo.png                        # Main club logo
-    │   ├── events/                         # Monthly event flyers
-    │   │   ├── DMV Throwers April 2026.png
-    │   │   ├── DMV Throwers May 2026.png
-    │   │   ├── DMV Throwers June 2026.png
-    │   │   ├── DMV Throwers July 2026.png
-    │   │   └── DMV Throwers August 2026.png
+    │   ├── dc-skyline.svg                  # Club page skyline silhouette
+    │   ├── va-cardinal.svg                 # VSYC page nature silhouette
+    │   ├── events/                         # Event graphics archive
     │   ├── gallery/                        # Club photo gallery
     │   │   └── club*.PNG
     │   └── logos/                          # Logo variants
     │       ├── DMVT_Logo_*.jpeg/png
     │       └── VAStateLogo_Final.*
     └── documents/                          # PDFs and presentations
-        ├── DMV Throwers Workshop Run Sheet.pdf
-        ├── DMV Throwers Trick Reference Guide.pptx
-        ├── DMV Throwers Club Display Loop.pptx
-        ├── DMV Throwers Event Checklist.docx
-        ├── DMV Throwers Maintenance Guide 2.pptx
-        ├── Yoyo Club slides to share.pdf
-        └── VSYC26 Sponsor Package v26g.pdf
+        ├── workshop-run-sheet.docx
+        ├── trick-reference-guide.pptx
+        ├── club-display-loop.pptx
+        ├── event-checklist.docx
+        ├── maintenance-guide.pptx
+        ├── DMV Throwers Charter v5.docx
+        ├── DMV Throwers Officer Roles.docx
+        └── DMV Throwers Press Kit.pdf
 ```
 
 ---
