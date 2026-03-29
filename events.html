@@ -117,7 +117,7 @@
   <style>
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     /* Fixed event card structure */
-    .event-card { background: #fffaf2; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
+    .event-card { background: #fffaf2; border: 1px solid #ece3d2; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
     .event-card:hover { transform: translateX(4px); box-shadow: -4px 4px 0 var(--red); }
     .event-card-special { background: #1f4f8a; border-left-color: #153b66; }
     .event-card-special:hover { box-shadow: -4px 4px 0 #153b66; }
@@ -138,8 +138,8 @@
     .event-card-body { padding: 20px 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
     .event-type { font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; color: var(--red); margin-bottom: 6px; }
     .event-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--navy); }
-    .event-loc { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
-    .event-date { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--red); text-align: right; white-space: nowrap; }
+    .event-loc { font-size: 0.88rem; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+    .event-date { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--red); text-align: right; white-space: nowrap; letter-spacing: 0.01em; }
     .event-day { font-size: 0.8rem; color: var(--text-muted); text-align: right; }
     .badge-row { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
     .badge { display: inline-flex; align-items: center; gap: 6px; background: var(--cream-mid); border: 1px solid var(--border); padding: 8px 16px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; }
@@ -150,6 +150,12 @@
     @media (max-width: 768px) {
       .event-card-body { flex-direction: column; align-items: flex-start; }
       .event-date, .event-day { text-align: left; }
+    }
+    @media (max-width: 480px) {
+      .event-card-body { padding: 18px 16px; }
+      .event-name { font-size: 1.15rem; }
+      .event-date { font-size: 1.05rem; }
+      .event-loc { font-size: 0.84rem; }
     }
   </style>
 </head>
