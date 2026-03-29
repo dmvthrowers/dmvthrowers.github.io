@@ -16,7 +16,15 @@
       "Bash(/tmp/dmvthrowers-wiki/Getting-Started.md:*)",
       "Bash(/tmp/dmvthrowers-wiki/Content-Editing-Guide.md:*)",
       "Bash(/tmp/dmvthrowers-wiki/Club-Information.md:*)",
-      "Bash(/tmp/dmvthrowers-wiki/VSYC-26.md:*)"
+      "Bash(/tmp/dmvthrowers-wiki/VSYC-26.md:*)",
+      "Bash(powershell.exe -Command \"Get-Command gh -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Read(//c/Program Files/GitHub CLI//**)",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "Read(//c/Users/91bro/OneDrive/Documents/GitHub/dmvthrowers.github.io/$LOCALAPPDATA/Programs/**)",
+      "Bash(powershell.exe -Command \"Test-Path ''C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe''\")",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
+      "Bash(gh --version)",
+      "Bash(gh auth:*)"
     ]
   }
 }
