@@ -129,6 +129,13 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .venue-rule { background: var(--navy-deep); border-left: 3px solid var(--gold); padding: 14px 18px; }
 .venue-rule-title { font-size: 0.65rem; letter-spacing: 0.14em; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
 .venue-rule-body { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+.venue-note { text-align: center; color: #ccc; margin-bottom: 2rem; }
+.venue-grid-single { grid-template-columns: 1fr !important; }
+.flex-center-wrap { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+.flex-item-340 { flex: 0 1 340px; }
+.flex-item-500 { flex: 0 1 500px; }
+.img-bordered { width: 100%; border: 1px solid var(--border); }
+.caption-small-gold { text-align: center; font-size: 0.65rem; color: var(--gold); letter-spacing: 0.12em; font-weight: 700; margin-top: 8px; }
 
 /* RULESET */
 .ruleset-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
