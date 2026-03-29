@@ -44,7 +44,7 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 ## Contact
 
 | | |
-|---|---|
+| --- | --- |
 | **Club Email** | <contact@dmvthrowers.club> |
 | **Contest Email** | <vastateyoyocontest@gmail.com> |
 | **Phone** | 850-284-1613 |
@@ -56,7 +56,7 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 ## Site Structure
 
 | Page | URL |
-|---|---|
+| --- | --- |
 | Home | [dmvthrowers.club](https://dmvthrowers.club) |
 | About | [dmvthrowers.club/about.html](https://dmvthrowers.club/about.html) |
 | Events | [dmvthrowers.club/events.html](https://dmvthrowers.club/events.html) |
@@ -78,7 +78,7 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 
 ## File Structure
 
-```
+```text
 / (root)
 ├── index.html                  # Homepage
 ├── about.html                  # About page
@@ -127,4 +127,4 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 
 ---
 
-*DMV Throwers · Est. 2021 · DC · MD · VA · @dmv_throwers*
+DMV Throwers · Est. 2021 · DC · MD · VA · @dmv_throwers

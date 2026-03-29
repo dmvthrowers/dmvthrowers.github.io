@@ -158,6 +158,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .price-row:last-child { border-bottom: none; }
 .price-div { font-size: 0.85rem; font-weight: 600; color: var(--white); }
 .price-val { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+.price-discount { font-size: 0.75rem; color: var(--text-muted); font-family: 'Montserrat', sans-serif; font-weight: 500; }
 .price-free { color: #6adb8a; }
 .payment-box { margin-top: 16px; background: var(--navy); border: 1px solid var(--border); padding: 20px; border-left: 4px solid var(--red); }
 .payment-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--red); margin-bottom: 6px; }
@@ -177,6 +178,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .faq-q:hover { color: var(--gold); }
 .faq-toggle { color: var(--gold); font-size: 1.3rem; font-weight: 300; }
 .faq-a { font-size: 0.85rem; line-height: 1.7; padding-bottom: 20px; color: var(--text-muted); display: none; }
+.faq-link-gold { color: var(--gold); }
 .faq-a.open { display: block; }
 
 /* CONTACT */
