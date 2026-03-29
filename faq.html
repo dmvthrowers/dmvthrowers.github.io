@@ -56,7 +56,7 @@
     .section-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.2rem; color: var(--navy); margin-bottom: 32px; line-height: 1.1; }
     .divider { width: 60px; height: 3px; background: var(--red); margin-bottom: 32px; }
     .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1rem; user-select: none; }
+    .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1rem; -webkit-user-select: none; user-select: none; }
     .faq-q:hover { color: var(--red); }
     .faq-toggle { color: var(--red); font-size: 1.4rem; font-weight: 300; line-height: 1; }
     .faq-a { font-size: 0.92rem; line-height: 1.7; padding-bottom: 20px; color: var(--text-body); display: none; }
@@ -69,6 +69,15 @@
     .footer-link:hover { color: var(--red); }
     .footer-bottom { border-top: 1px solid #2a3a5a; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     .footer-copy { font-size: 0.75rem; color: #4a5a7a; }
+    .nav-logo { width: 38px; height: 38px; object-fit: contain; }
+    .faq-intro { color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; }
+    .faq-section-title { color: var(--navy); font-weight: 700; font-size: 1.1rem; margin-top: 28px; margin-bottom: 16px; }
+    .red-link { color: var(--red); }
+    .red-link-bold { color: var(--red); font-weight: 600; }
+    .footer-logo { width: 34px; height: 34px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.8; }
+    .footer-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: white; }
+    .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.16em; color: #D42B2B; font-weight: 700; }
+    .footer-vsyc { color: #C9A84C; font-weight: 700; }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
@@ -89,7 +98,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers Logo" style="width:38px;height:38px;object-fit:contain;"/>
+      <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="nav-logo"/>
       <div>
         <div class="nav-brand-text-main">DMV THROWERS</div>
         <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
@@ -125,9 +134,9 @@
   <div class="red-tag">FAQ</div>
   <h2 class="section-title">Frequently Asked Questions</h2>
   <div class="divider"></div>
-  <p style="color:var(--text-muted);margin-bottom:32px;font-size:0.95rem;">Got a question? Chances are it's answered below. If not, reach us at <strong>contact@dmvthrowers.club</strong> or <strong>@DMV_THROWERS</strong> on Instagram.</p>
+  <p class="faq-intro">Got a question? Chances are it's answered below. If not, reach us at <strong>contact@dmvthrowers.club</strong> or <strong>@DMV_THROWERS</strong> on Instagram.</p>
 
-  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">General</div>
+  <div class="faq-section-title">General</div>
   
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)"><span>What is DMV Throwers?</span><span class="faq-toggle">+</span></div>
@@ -146,7 +155,7 @@
 
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)"><span>Does the club have social media?</span><span class="faq-toggle">+</span></div>
-    <div class="faq-a">Yes! Find us at Instagram: <a href="https://instagram.com/dmv_throwers" target="_blank" rel="noopener noreferrer" style="color:var(--red);">@DMV_THROWERS</a>, Facebook: DMV Throwers, Email: <a href="mailto:contact@dmvthrowers.club" style="color:var(--red);">contact@dmvthrowers.club</a>, and Linktree: <a href="https://linktr.ee/dmvthrowers" target="_blank" rel="noopener noreferrer" style="color:var(--red);">linktr.ee/dmvthrowers</a></div>
+    <div class="faq-a">Yes! Find us at Instagram: <a href="https://instagram.com/dmv_throwers" target="_blank" rel="noopener noreferrer" class="red-link">@DMV_THROWERS</a>, Facebook: DMV Throwers, Email: <a href="mailto:contact@dmvthrowers.club" class="red-link">contact@dmvthrowers.club</a>, and Linktree: <a href="https://linktr.ee/dmvthrowers" target="_blank" rel="noopener noreferrer" class="red-link">linktr.ee/dmvthrowers</a></div>
   </div>
 
   <div class="faq-item">
@@ -154,7 +163,7 @@
     <div class="faq-a">Not currently. We operate as a community club. We are exploring nonprofit status as a future step, which would allow us to expand programming and apply for grants. The charter would be updated if and when that changes.</div>
   </div>
 
-  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Meetup Logistics</div>
+  <div class="faq-section-title">Meetup Logistics</div>
 
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)"><span>When and where do you meet?</span><span class="faq-toggle">+</span></div>
@@ -181,7 +190,7 @@
     <div class="faq-a">Cancellations will be announced as early as possible on Instagram (@DMV_THROWERS) and our Facebook page. Always check social media close to the event date if you're unsure.</div>
   </div>
 
-  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Skill Levels & What to Bring</div>
+  <div class="faq-section-title">Skill Levels & What to Bring</div>
 
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to know how to yo-yo to come?</span><span class="faq-toggle">+</span></div>
@@ -208,7 +217,7 @@
     <div class="faq-a">Wear comfortable clothes you can move in. Beyond that, just bring yourself — and your yo-yo if you have one. We'll handle the rest.</div>
   </div>
 
-  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Kids & Families</div>
+  <div class="faq-section-title">Kids & Families</div>
 
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)"><span>Is the club family-friendly?</span><span class="faq-toggle">+</span></div>
@@ -230,11 +239,11 @@
     <div class="faq-a">Yes. Our loaner yo-yos are appropriate for a range of ages. If you have concerns about a specific yo-yo for a younger child, just ask an officer at the event and we'll point you to the right one.</div>
   </div>
 
-  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Contests & VSYC-26</div>
+  <div class="faq-section-title">Contests & VSYC-26</div>
 
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)"><span>What is VSYC-26?</span><span class="faq-toggle">+</span></div>
-    <div class="faq-a">VSYC-26 is the Virginia State YoYo Contest 2026 — a competitive yo-yo event we are actively working to host in the DMV region. It would be a sanctioned state-level contest bringing competitive players from across Virginia and the surrounding region together. <a href="vsyc26.html" style="color:var(--red);font-weight:600;">Learn more →</a></div>
+    <div class="faq-a">VSYC-26 is the Virginia State YoYo Contest 2026 — a competitive yo-yo event we are actively working to host in the DMV region. It would be a sanctioned state-level contest bringing competitive players from across Virginia and the surrounding region together. <a href="vsyc26.html" class="red-link-bold">Learn more →</a></div>
   </div>
 
   <div class="faq-item">
@@ -257,7 +266,7 @@
     <div class="faq-a">Members individually attend regional and national yo-yo contests, and we support those efforts as a community. As the club grows we may organize group attendance at events like nationals or regionals.</div>
   </div>
 
-  <div style="color:var(--navy);font-weight:700;font-size:1.1rem;margin-top:28px;margin-bottom:16px;">Getting More Involved</div>
+  <div class="faq-section-title">Getting More Involved</div>
 
   <div class="faq-item">
     <div class="faq-q" onclick="toggleFaq(this)"><span>How do I become a member?</span><span class="faq-toggle">+</span></div>
@@ -289,10 +298,10 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="DMV Throwers" style="width:34px;height:34px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.8;"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
         <div>
-          <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:white;">DMV THROWERS</div>
-          <div style="font-size:0.6rem;letter-spacing:0.16em;color:#D42B2B;font-weight:700;">YO-YO & SKILL TOY CLUB</div>
+          <div class="footer-brand-main">DMV THROWERS</div>
+          <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB</div>
         </div>
       </div>
       <div>
@@ -302,7 +311,7 @@
         <a href="index.html#resources" class="footer-link">Resources</a>
         <a href="#faq" class="footer-link">FAQ</a>
         <a href="index.html#contact" class="footer-link">Contact</a>
-        <a href="vsyc26.html" class="footer-link" style="color:#C9A84C;font-weight:700;">VSYC-26</a>
+        <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
       </div>
     </div>
     <div class="footer-bottom">

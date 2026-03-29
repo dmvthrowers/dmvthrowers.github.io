@@ -168,7 +168,7 @@
 
     /* FAQ */
     .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.92rem; color: var(--white); user-select: none; }
+    .faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.92rem; color: var(--white); -webkit-user-select: none; user-select: none; }
     .faq-q:hover { color: var(--gold); }
     .faq-toggle { color: var(--gold); font-size: 1.3rem; font-weight: 300; }
     .faq-a { font-size: 0.85rem; line-height: 1.7; padding-bottom: 20px; color: var(--text-muted); display: none; }
@@ -195,6 +195,44 @@
     .countdown-box { background: var(--navy); border: 1px solid var(--border); padding: 20px 12px; text-align: center; }
     .countdown-num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.2rem; color: var(--gold); }
     .countdown-label { font-size: 0.6rem; letter-spacing: 0.14em; font-weight: 700; color: var(--text-muted); margin-top: 4px; }
+
+    /* Additional classes for inline styles */
+    .footer-logo { width: 34px; height: 34px; object-fit: contain; }
+    .countdown-margin { margin-top: 32px; }
+    .countdown-title { font-size: 0.6rem; letter-spacing: 0.18em; font-weight: 800; color: var(--gold); margin-bottom: 12px; }
+    .svg-style { width: 100%; display: block; height: 80px; }
+    .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .p-style { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
+    .p-style2 { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 28px; }
+    .flex-gap { display: flex; gap: 10px; flex-wrap: wrap; }
+    .tag-style { background: var(--border); color: var(--text-muted); font-size: 0.68rem; letter-spacing: 0.1em; font-weight: 700; padding: 6px 14px; }
+    .facts-margin { margin-top: 0; }
+    .note-style { margin-top: 24px; background: var(--navy); border: 1px solid var(--border); padding: 20px 24px; border-left: 4px solid var(--gold); }
+    .note-span { font-size: 0.8rem; color: var(--text-muted); }
+    .strong-white { color: var(--white); }
+    .max-width { max-width: 700px; }
+    .schedule-note { margin-top: 20px; font-size: 0.78rem; color: var(--text-muted); }
+    .price-free { color: #6adb8a; }
+    .payment-box { margin-top: 16px; background: var(--navy); border: 1px solid var(--border); padding: 20px; border-left: 4px solid var(--red); }
+    .payment-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--red); margin-bottom: 6px; }
+    .payment-text { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+    .payment-btns { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-small { padding: 10px 20px; font-size: 0.72rem; }
+    .music-margin { margin-bottom: 0; }
+    .music-upload { margin-top: 20px; }
+    .upload-btn { width: 100%; text-align: center; display: block; font-size: 0.75rem; }
+    .reg-box { margin-top: 16px; background: var(--navy); border: 1px solid var(--border); padding: 20px; }
+    .reg-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+    .reg-text { font-size: 0.82rem; color: var(--text-muted); }
+    .reg-link { color: var(--gold); }
+    .sponsor-p { font-size: 1rem; color: var(--text-body); max-width: 680px; line-height: 1.8; margin-bottom: 12px; }
+    .sponsor-p2 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 40px; }
+    .sponsor-margin { margin-top: 48px; }
+    .sponsor-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: var(--white); margin-bottom: 8px; }
+    .sponsor-text { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; }
+    .form-bg { background: var(--navy-deep); padding: 2px; border: 1px solid var(--border); }
+    .btns-flex { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .btn-small2 { font-size: 0.75rem; padding: 10px 20px; }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -223,7 +261,7 @@
 <nav>
   <div class="nav-inner">
     <a href="#hero" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers" style="width:34px;height:34px;object-fit:contain;"/>
+      <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
       <div>
         <div class="nav-brand-main">VSYC-26</div>
         <div class="nav-brand-sub">VIRGINIA STATE YO-YO CONTEST</div>
@@ -293,8 +331,8 @@
       <a href="#register" class="btn btn-gold">COMPETITOR REGISTRATION</a>
       <a href="#sponsors" class="btn btn-outline">BECOME A SPONSOR</a>
     </div>
-    <div style="margin-top:32px;" id="countdown">
-      <div style="font-size:0.6rem;letter-spacing:0.18em;font-weight:800;color:var(--gold);margin-bottom:12px;">DAYS UNTIL VSYC-26</div>
+    <div class="countdown-margin" id="countdown">
+      <div class="countdown-title">DAYS UNTIL VSYC-26</div>
       <div class="countdown-grid">
         <div class="countdown-box"><div class="countdown-num" id="cd-days">--</div><div class="countdown-label">DAYS</div></div>
         <div class="countdown-box"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-label">HOURS</div></div>
@@ -304,7 +342,7 @@
     </div>
   </div>
   <div class="hero-skyline">
-    <svg viewBox="0 0 1200 80" preserveAspectRatio="none" style="width:100%;display:block;height:80px;">
+    <svg viewBox="0 0 1200 80" preserveAspectRatio="none" class="svg-style">
       <rect x="0" y="50" width="1200" height="30" fill="white"/>
       <rect x="70" y="25" width="12" height="25" fill="white"/><rect x="115" y="15" width="10" height="35" fill="white"/>
       <rect x="248" y="12" width="8" height="38" fill="white"/>
@@ -323,21 +361,21 @@
     <div class="gold-tag">ABOUT THE EVENT</div>
     <h2 class="section-title">Virginia's Yo-Yo Contest<br/>Comes to Northern VA</h2>
     <div class="divider-gold"></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+    <div class="grid-2col">
       <div>
-        <p style="font-size:1rem;line-height:1.8;color:var(--text-body);margin-bottom:20px;">The Virginia State Yo-Yo Contest has run every year since 2007. This year we're bringing it to Northern Virginia for the first time — Center Court at Dulles Town Center, Sunday crowds, and a community that genuinely loves what they do.</p>
-        <p style="font-size:1rem;line-height:1.8;color:var(--text-body);margin-bottom:28px;">Entirely volunteer-run. Every dollar goes straight to the event. Organized by DMV Throwers Yo-Yo & Skill Toy Club.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <span style="background:var(--border);color:var(--text-muted);font-size:0.68rem;letter-spacing:0.1em;font-weight:700;padding:6px 14px;">MULTI-DIVISION</span>
-          <span style="background:var(--border);color:var(--text-muted);font-size:0.68rem;letter-spacing:0.1em;font-weight:700;padding:6px 14px;">FREE TO SPECTATE</span>
-          <span style="background:var(--border);color:var(--text-muted);font-size:0.68rem;letter-spacing:0.1em;font-weight:700;padding:6px 14px;">INDOOR MALL</span>
-          <span style="background:var(--border);color:var(--text-muted);font-size:0.68rem;letter-spacing:0.1em;font-weight:700;padding:6px 14px;">FREE PARKING</span>
-          <span style="background:var(--border);color:var(--text-muted);font-size:0.68rem;letter-spacing:0.1em;font-weight:700;padding:6px 14px;">MAKER CORNER</span>
-          <span style="background:var(--border);color:var(--text-muted);font-size:0.68rem;letter-spacing:0.1em;font-weight:700;padding:6px 14px;">LIVESTREAM PLANNED</span>
+        <p class="p-style">The Virginia State Yo-Yo Contest has run every year since 2007. This year we're bringing it to Northern Virginia for the first time — Center Court at Dulles Town Center, Sunday crowds, and a community that genuinely loves what they do.</p>
+        <p class="p-style2">Entirely volunteer-run. Every dollar goes straight to the event. Organized by DMV Throwers Yo-Yo & Skill Toy Club.</p>
+        <div class="flex-gap">
+          <span class="tag-style">MULTI-DIVISION</span>
+          <span class="tag-style">FREE TO SPECTATE</span>
+          <span class="tag-style">INDOOR MALL</span>
+          <span class="tag-style">FREE PARKING</span>
+          <span class="tag-style">MAKER CORNER</span>
+          <span class="tag-style">LIVESTREAM PLANNED</span>
         </div>
       </div>
       <div>
-        <div class="facts-grid" style="margin-top:0;">
+        <div class="facts-grid facts-margin">
           <div class="fact-card"><div class="fact-label">DATE</div><div class="fact-val">Sept 19, 2026</div></div>
           <div class="fact-card"><div class="fact-label">HOURS</div><div class="fact-val">10 AM – 7 PM</div></div>
           <div class="fact-card"><div class="fact-label">VENUE</div><div class="fact-val">Dulles Town Center</div></div>
@@ -380,8 +418,8 @@
         <span class="division-badge">TBD · STAY TUNED</span>
       </div>
     </div>
-    <div style="margin-top:24px;background:var(--navy);border:1px solid var(--border);padding:20px 24px;border-left:4px solid var(--gold);">
-      <span style="font-size:0.8rem;color:var(--text-muted);">★ <strong style="color:var(--white);">Competing in multiple divisions?</strong> Registration is per division. Discounts may apply — check registration for details. Division format follows IYYF/AYYA freestyle guidelines unless otherwise noted.</span>
+    <div class="note-style">
+      <span class="note-span">★ <strong class="strong-white">Competing in multiple divisions?</strong> Registration is per division. Discounts may apply — check registration for details. Division format follows IYYF/AYYA freestyle guidelines unless otherwise noted.</span>
     </div>
   </div>
 </div>
@@ -392,7 +430,7 @@
     <div class="gold-tag">DAY OF EVENT</div>
     <h2 class="section-title">Schedule</h2>
     <div class="divider-gold"></div>
-    <div style="max-width:700px;">
+    <div class="max-width">
       <div class="schedule-item"><div class="schedule-time">Before 10 AM</div><div><div class="schedule-event">Setup & Load-In</div><div class="schedule-note">Sponsors, vendors, and staff arrive before mall opening. Rubber-wheeled hand trucks allowed.</div></div></div>
       <div class="schedule-item"><div class="schedule-time">10:00 AM</div><div><div class="schedule-event">Doors Open · Event Begins</div><div class="schedule-note">Registration desk open · Free to spectate · Maker Corner open</div></div></div>
       <div class="schedule-item"><div class="schedule-time">10:30 AM</div><div><div class="schedule-event">Opening Ceremony</div><div class="schedule-note">Welcome, sponsor acknowledgments, rules briefing</div></div></div>
@@ -401,7 +439,7 @@
       <div class="schedule-item"><div class="schedule-time">~5:00 PM</div><div><div class="schedule-event">Awards Ceremony</div><div class="schedule-note">All divisions · Sponsor acknowledgments · Raffle</div></div></div>
       <div class="schedule-item"><div class="schedule-time">7:00 PM</div><div><div class="schedule-event">Event Closes · Teardown</div><div class="schedule-note">Everything out by 7 PM — venue rule</div></div></div>
     </div>
-    <p style="margin-top:20px;font-size:0.78rem;color:var(--text-muted);">★ Schedule is approximate and subject to change based on final competitor count. Confirmed schedule posted closer to event date.</p>
+    <p class="schedule-note">★ Schedule is approximate and subject to change based on final competitor count. Confirmed schedule posted closer to event date.</p>
   </div>
 </div>
 
@@ -420,14 +458,14 @@
           <div class="price-row"><span class="price-div">Beginner / Junior</span><span class="price-val">$15</span></div>
           <div class="price-row"><span class="price-div">Fixed Axle</span><span class="price-val">$15</span></div>
           <div class="price-row"><span class="price-div">Multiple Divisions</span><span class="price-val">$5 off each add'l</span></div>
-          <div class="price-row"><span class="price-div">Spectators</span><span class="price-val" style="color:#6adb8a;">FREE</span></div>
+          <div class="price-row"><span class="price-div">Spectators</span><span class="price-val price-free">FREE</span></div>
         </div>
-        <div style="margin-top:16px;background:var(--navy);border:1px solid var(--border);padding:20px;border-left:4px solid var(--red);">
-          <div style="font-size:0.62rem;letter-spacing:0.16em;font-weight:800;color:var(--red);margin-bottom:6px;">PAYMENT</div>
-          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;">PayPal · Venmo · Check · Bank transfer. Registration is only complete after payment clears.</p>
-          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
-            <a href="https://www.paypal.biz/Dmvthrowers" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding:10px 20px;font-size:0.72rem;">PAYPAL</a>
-            <a href="https://venmo.com/u/DMVThrow" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:10px 20px;font-size:0.72rem;">VENMO</a>
+        <div class="payment-box">
+          <div class="payment-title">PAYMENT</div>
+          <p class="payment-text">PayPal · Venmo · Check · Bank transfer. Registration is only complete after payment clears.</p>
+          <div class="payment-btns">
+            <a href="https://www.paypal.biz/Dmvthrowers" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small">PAYPAL</a>
+            <a href="https://venmo.com/u/DMVThrow" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-small">VENMO</a>
           </div>
         </div>
       </div>
@@ -442,17 +480,17 @@
             <div class="music-step-num">2</div>
             <div class="music-step-text">Upload via the Google Drive link below. <strong>Deadline: 1 week before event (Sept 12).</strong></div>
           </div>
-          <div class="music-step" style="margin-bottom:0;">
+          <div class="music-step music-margin">
             <div class="music-step-num">3</div>
             <div class="music-step-text"><strong>No upload = AUX cord or no music.</strong> No exceptions after deadline.</div>
           </div>
-          <div style="margin-top:20px;">
-            <a href="mailto:vastateyoyocontest@gmail.com?subject=Music Upload - VSYC26" class="btn btn-gold" style="width:100%;text-align:center;display:block;font-size:0.75rem;">EMAIL FOR UPLOAD LINK</a>
+          <div class="music-upload">
+            <a href="mailto:vastateyoyocontest@gmail.com?subject=Music Upload - VSYC26" class="btn btn-gold upload-btn">EMAIL FOR UPLOAD LINK</a>
           </div>
         </div>
-        <div style="margin-top:16px;background:var(--navy);border:1px solid var(--border);padding:20px;">
-          <div style="font-size:0.62rem;letter-spacing:0.16em;font-weight:800;color:var(--gold);margin-bottom:8px;">REGISTRATION OPENS</div>
-          <p style="font-size:0.82rem;color:var(--text-muted);">Registration link coming soon. Email <a href="mailto:vastateyoyocontest@gmail.com" style="color:var(--gold);">vastateyoyocontest@gmail.com</a> to get notified first.</p>
+        <div class="reg-box">
+          <div class="reg-title">REGISTRATION OPENS</div>
+          <p class="reg-text">Registration link coming soon. Email <a href="mailto:vastateyoyocontest@gmail.com" class="reg-link">vastateyoyocontest@gmail.com</a> to get notified first.</p>
         </div>
       </div>
     </div>
@@ -465,8 +503,8 @@
     <div class="gold-tag">SPONSORSHIP</div>
     <h2 class="section-title">Become a Sponsor</h2>
     <div class="divider-gold"></div>
-    <p style="font-size:1rem;color:var(--text-body);max-width:680px;line-height:1.8;margin-bottom:12px;">No yo-yo or skill toy retailers at Dulles Town Center — your brand is the only one in the room, in front of competitors, families, and curious Sunday shoppers. Funding goal: <strong style="color:var(--gold);">$3,500</strong>.</p>
-    <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:40px;">★ Freshly Dirty confirmed as Platinum Sponsor — real community buy-in before we opened to the public.</p>
+    <p class="sponsor-p">No yo-yo or skill toy retailers at Dulles Town Center — your brand is the only one in the room, in front of competitors, families, and curious Sunday shoppers. Funding goal: <strong style="color:var(--gold);">$3,500</strong>.</p>
+    <p class="sponsor-p2">★ Freshly Dirty confirmed as Platinum Sponsor — real community buy-in before we opened to the public.</p>
 
     <div class="tiers-grid">
       <div class="tier-card diamond">
@@ -548,12 +586,12 @@
     </div>
 
     <!-- JOTFORM SPONSOR INTEREST FORM -->
-    <div style="margin-top:48px;">
+    <div class="sponsor-margin">
       <div class="gold-tag">SPONSOR INTEREST FORM</div>
-      <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.5rem;color:var(--white);margin-bottom:8px;">Ready to Get Involved?</h3>
+      <h3 class="sponsor-title">Ready to Get Involved?</h3>
       <div class="divider-gold"></div>
-      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:24px;">Fill out the form below and we'll reach out with an invoice. Diamond and Platinum spots fill first — don't wait.</p>
-      <div style="background:var(--navy-deep);padding:2px;border:1px solid var(--border);">
+      <p class="sponsor-text">Fill out the form below and we'll reach out with an invoice. Diamond and Platinum spots fill first — don't wait.</p>
+      <div class="form-bg">
         <iframe
           id="JotFormIFrame-260815592180054"
           title="VSYC26 Sponsor Interest Form"
@@ -586,9 +624,9 @@
         <div class="venue-detail-row"><span class="venue-label">WI-FI</span><span class="venue-val">Free — "Dulles Town Center Wi-Fi" or "Dulles_Town_Center"</span></div>
         <div class="venue-detail-row"><span class="venue-label">FOOD</span><span class="venue-val">Food court on-site + multiple restaurants throughout mall</span></div>
         <div class="venue-detail-row"><span class="venue-label">NEARBY HOTELS</span><span class="venue-val">Courtyard by Marriott Dulles (walking distance) · Candlewood Suites (~1 mi)</span></div>
-        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://maps.google.com/?q=21100+Dulles+Town+Circle+Sterling+VA+20166" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="font-size:0.75rem;padding:10px 20px;">GET DIRECTIONS</a>
-          <a href="https://www.dullestowncenter.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.75rem;padding:10px 20px;">MALL WEBSITE</a>
+        <div class="btns-flex">
+          <a href="https://maps.google.com/?q=21100+Dulles+Town+Circle+Sterling+VA+20166" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small2">GET DIRECTIONS</a>
+          <a href="https://www.dullestowncenter.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-small2">MALL WEBSITE</a>
         </div>
       </div>
       <div>
