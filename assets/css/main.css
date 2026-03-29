@@ -13,8 +13,17 @@
   --text-muted: #6a7a9a;
   --text-body: #3a4a6a;
 }
-html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); }
+html {
+  scroll-behavior: smooth;
+}
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); line-height: 1.6; text-rendering: optimizeLegibility; }
+img, svg, video, canvas { max-width: 100%; height: auto; }
+
+/* Better keyboard visibility and readability */
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 2px;
+}
 
 /* TOP BAR */
 #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }

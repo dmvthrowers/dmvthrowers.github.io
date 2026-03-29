@@ -13,9 +13,17 @@
   --text-body: #c8d0e0;
   --white: #ffffff;
 }
-html { scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; background: var(--navy-deep); color: var(--white); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html {
+  scroll-behavior: smooth;
+}
+body { font-family: 'Montserrat', sans-serif; background: var(--navy-deep); color: var(--white); line-height: 1.6; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+img, svg, video, canvas { max-width: 100%; height: auto; }
 a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
+
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
 
 /* TOP BAR */
 #top-bar { background: var(--gold); padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
