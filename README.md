@@ -37,7 +37,7 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 - 🏆 **Divisions:** 1A · X Division · Beginner/Junior · Fixed Axle (TBD)
 
 **Contest site:** [dmvthrowers.club/vsyc26.html](https://dmvthrowers.club/vsyc26.html)
-**Sponsor inquiries:** vastateyoyocontest@gmail.com
+**Sponsor inquiries:** <vastateyoyocontest@gmail.com>
 
 ---
 
@@ -45,8 +45,8 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 
 | | |
 |---|---|
-| **Club Email** | contact@dmvthrowers.club |
-| **Contest Email** | vastateyoyocontest@gmail.com |
+| **Club Email** | <contact@dmvthrowers.club> |
+| **Contest Email** | <vastateyoyocontest@gmail.com> |
 | **Phone** | 850-284-1613 |
 | **Instagram** | @dmv_throwers |
 | **Coordinator** | Brandon Rogers |
