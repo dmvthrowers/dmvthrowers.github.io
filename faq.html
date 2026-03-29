@@ -20,6 +20,7 @@
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Arlington, Virginia"/>
+  <link rel="canonical" href="https://dmvthrowers.club/faq.html"/>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
   <link rel="canonical" href="https://dmvthrowers.club/faq.html"/>
   <meta name="theme-color" content="#1a2744"/>
@@ -109,7 +110,10 @@
     }
   ]
   </script>
+  <link rel="stylesheet" href="assets/css/main.css"/>
   <style>
+    .section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 32px; }
+    .divider { width: 60px; margin-bottom: 32px; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --red: #D42B2B;
@@ -156,31 +160,10 @@
     .faq-toggle { color: var(--red); font-size: 1.4rem; font-weight: 300; line-height: 1; }
     .faq-a { font-size: 0.92rem; line-height: 1.7; padding-bottom: 20px; color: var(--text-body); display: none; }
     .faq-a.open { display: block; }
-    footer { background: var(--navy); padding: 40px 24px 24px; }
-    .footer-inner { max-width: 1100px; margin: 0 auto; }
-    .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
-    .footer-brand { display: flex; align-items: center; gap: 12px; }
-    .footer-link { color: #a0a8c0; font-size: 0.8rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
-    .footer-link:hover { color: var(--red); }
-    .footer-bottom { border-top: 1px solid #2a3a5a; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    .footer-copy { font-size: 0.75rem; color: #4a5a7a; }
-    .nav-logo { width: 38px; height: 38px; object-fit: contain; }
     .faq-intro { color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; }
     .faq-section-title { color: var(--navy); font-weight: 700; font-size: 1.1rem; margin-top: 28px; margin-bottom: 16px; }
     .red-link { color: var(--red); }
     .red-link-bold { color: var(--red); font-weight: 600; }
-    .footer-logo { width: 34px; height: 34px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.8; }
-    .footer-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: white; }
-    .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.16em; color: #D42B2B; font-weight: 700; }
-    .footer-vsyc { color: #C9A84C; font-weight: 700; }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .footer-top { flex-direction: column; align-items: flex-start; }
-    }
-    @media (max-width: 480px) {
-      .hamburger { display: flex; }
-    }
   </style>
 </head>
 <body>
@@ -393,7 +376,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
         <div>
           <div class="footer-brand-main">DMV THROWERS</div>
           <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB</div>
