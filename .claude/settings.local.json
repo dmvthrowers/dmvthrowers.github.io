@@ -14,7 +14,9 @@
       "Bash(mkdir -p /tmp/dmvthrowers-wiki)",
       "Read(//tmp/**)",
       "Bash(/tmp/dmvthrowers-wiki/Getting-Started.md:*)",
-      "Bash(/tmp/dmvthrowers-wiki/Content-Editing-Guide.md:*)"
+      "Bash(/tmp/dmvthrowers-wiki/Content-Editing-Guide.md:*)",
+      "Bash(/tmp/dmvthrowers-wiki/Club-Information.md:*)",
+      "Bash(/tmp/dmvthrowers-wiki/VSYC-26.md:*)"
     ]
   }
 }
