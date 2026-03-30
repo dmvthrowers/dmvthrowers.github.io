@@ -273,6 +273,13 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .schedule-note { margin-top: 20px; font-size: 0.78rem; color: var(--text-muted); }
 .sponsor-p { font-size: 1rem; color: var(--text-body); max-width: 680px; line-height: 1.8; margin-bottom: 12px; }
 .sponsor-p2 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 40px; }
+.active-sponsors { display: flex; flex-wrap: wrap; gap: 24px; margin: 32px 0; justify-content: center; }
+.active-sponsor-card { border-radius: 4px; padding: 36px 48px; text-align: center; min-width: 280px; flex: 1; max-width: 560px; }
+.active-sponsor-card.platinum-sponsor { background: linear-gradient(135deg, #1a2a45 0%, #0d1b30 100%); border: 2px solid #b0c0d8; }
+.active-sponsor-tier { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.2em; color: #b0c0d8; margin-bottom: 16px; }
+.active-sponsor-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.8rem; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
+.active-sponsor-tagline { font-size: 0.85rem; color: var(--text-muted); }
+.sponsor-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
 .sponsor-margin { margin-top: 48px; }
 .sponsor-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: var(--white); margin-bottom: 8px; }
 .sponsor-text { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; }

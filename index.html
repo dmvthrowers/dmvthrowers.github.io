@@ -61,15 +61,14 @@
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     #hero { background: var(--navy); position: relative; overflow: hidden; min-height: -webkit-fill-available; min-height: 100vh; display: flex; align-items: center; }
     .hero-dots { position: absolute; inset: 0; opacity: 0.06; background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 32px 32px; }
-    .hero-inner { max-width: 1100px; margin: 0 auto; padding: 80px 24px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; width: 100%; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; padding: 80px 24px 140px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; width: 100%; }
     .hero-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 18px; }
     .hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 3rem; font-size: clamp(3rem, 8vw, 5.5rem); color: white; line-height: 0.95; margin-bottom: 10px; }
     .hero-subtitle { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 22px; }
     .hero-desc { font-size: 1.05rem; color: #c8d0e0; line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
     .hero-logo-wrap img { width: 240px; height: 240px; object-fit: contain; opacity: 0.9; filter: brightness(0) invert(1); }
-
-    /* ABOUT */
+    .hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 100px; pointer-events: none; }
 
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
     .about-body { font-size: 1.05rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
@@ -79,16 +78,31 @@
     .stat-card { background: white; padding: 24px 20px; border-top: 3px solid var(--red); }
     .stat-num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.2rem; color: var(--navy); }
     .stat-label { font-size: 0.78rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
+
+    .doc-card { background: white; border-radius: 8px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: flex-start; gap: 20px; max-width: 520px; margin-top: 36px; }
+    .doc-card-icon { font-size: 2rem; flex-shrink: 0; }
+    .doc-card-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 6px; }
+    .doc-card-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.55; margin-bottom: 14px; }
+    .doc-link { display: inline-flex; align-items: center; gap: 6px; background: var(--navy); color: white; padding: 8px 16px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .doc-link:hover { background: var(--red); }
+
+    .team-teaser { margin-top: 48px; background: var(--navy); padding: 32px 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .team-teaser-label { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; }
+    .team-teaser-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.5rem; color: white; }
+    .team-teaser-sub { font-size: 0.9rem; color: #8090b8; margin-top: 6px; }
+
     .vsyc-section { background: var(--cream); padding: 0 24px 48px; }
     .vsyc-banner { max-width: 1100px; margin: 0 auto; background: var(--navy); padding: 32px 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
     .vsyc-label { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; }
     .vsyc-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.6rem; color: white; }
     .vsyc-sub { font-size: 0.9rem; color: #8090b8; margin-top: 6px; }
+
     @media (max-width: 768px) {
-      .hero-inner { grid-template-columns: 1fr; }
+      .hero-inner { grid-template-columns: 1fr; padding-bottom: 160px; }
       .hero-logo-wrap { display: none; }
       .about-grid { grid-template-columns: 1fr; }
       .vsyc-banner { flex-direction: column; }
+      .team-teaser { flex-direction: column; }
     }
   </style>
 </head>
@@ -109,7 +123,8 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="#about" class="nav-link active">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
       <a href="events.html" class="nav-link">EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
@@ -124,13 +139,14 @@
   </div>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-  <a href="about.html">ABOUT</a>
+  <a href="#about">ABOUT</a>
+  <a href="team.html">TEAM</a>
   <a href="events.html">EVENTS</a>
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
   <a href="faq.html">FAQ</a>
   <a href="contact.html">CONTACT</a>
-  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">DONATE</a>
+  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
@@ -185,6 +201,33 @@
   </div>
 </section>
 
+<!-- CLUB DOCUMENTS -->
+<section id="club-docs">
+  <div class="section">
+    <div class="red-tag">CLUB DOCUMENTS</div>
+    <h2 class="section-title">Governing Documents</h2>
+    <div class="divider"></div>
+
+    <div class="doc-card">
+      <div class="doc-card-icon">📄</div>
+      <div>
+        <div class="doc-card-title">Club Charter</div>
+        <div class="doc-card-desc">DMV Throwers Yo-Yo &amp; Skill Toy Club · Charter v5. Covers mission, membership, events, leadership structure, and governance.</div>
+        <a href="assets/documents/DMV Throwers Charter v5.docx" class="doc-link" target="_blank" rel="noopener noreferrer">📥 Download Charter (DOCX)</a>
+      </div>
+    </div>
+
+    <div class="team-teaser">
+      <div>
+        <div class="team-teaser-label">LEADERSHIP</div>
+        <div class="team-teaser-title">Meet the Team</div>
+        <div class="team-teaser-sub">Officers, bios, and the people who make DMV Throwers run</div>
+      </div>
+      <a href="team.html" class="btn btn-red">MEET THE TEAM →</a>
+    </div>
+  </div>
+</section>
+
 <!-- VSYC BANNER -->
 <div class="vsyc-section">
   <div class="vsyc-banner">
@@ -197,7 +240,6 @@
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -209,7 +251,8 @@
         </div>
       </div>
       <div>
-        <a href="about.html" class="footer-link">About</a>
+        <a href="index.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
         <a href="resources.html" class="footer-link">Resources</a>
