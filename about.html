@@ -90,11 +90,45 @@
     .about-desc { color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; }
 
     .hero-logo { width: 180px; height: 180px; object-fit: contain; opacity: 0.9; filter: brightness(0) invert(1); }
+
+    /* Charter */
+    .charter-article { margin-bottom: 36px; }
+    .charter-article-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--red); }
+    .charter-section-label { font-weight: 700; font-size: 0.85rem; color: var(--navy); margin: 14px 0 4px; letter-spacing: 0.04em; }
+    .charter-body { font-size: 0.93rem; line-height: 1.75; color: var(--text-body); margin-bottom: 8px; }
+    .charter-list { margin: 6px 0 10px 20px; padding: 0; }
+    .charter-list li { font-size: 0.92rem; line-height: 1.7; color: var(--text-body); margin-bottom: 3px; }
+    .charter-table { width: 100%; border-collapse: collapse; margin: 12px 0 4px; font-size: 0.88rem; }
+    .charter-table th { background: var(--navy); color: white; padding: 9px 14px; text-align: left; font-weight: 600; letter-spacing: 0.06em; font-size: 0.78rem; }
+    .charter-table td { padding: 9px 14px; border-bottom: 1px solid var(--border); color: var(--text-body); vertical-align: top; line-height: 1.6; }
+    .charter-table tr:last-child td { border-bottom: none; }
+    .charter-table tr:nth-child(even) td { background: #f8f5ef; }
+    .charter-tier-name { font-weight: 700; color: var(--navy); }
+
+    /* Officers */
+    .officer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .officer-card { background: var(--cream); border: 1px solid var(--border); border-top: 4px solid var(--navy); padding: 22px 24px; }
+    .officer-card-president { border-top-color: var(--red); }
+    .officer-role-tag { font-size: 0.63rem; letter-spacing: 0.18em; font-weight: 700; color: var(--red); margin-bottom: 5px; }
+    .officer-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; color: var(--navy); margin-bottom: 6px; }
+    .officer-status { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 2px 9px; display: inline-block; margin-bottom: 12px; }
+    .officer-status-active { background: #e6f4ec; color: #1e5b36; }
+    .officer-status-transitional { background: #fff8e1; color: #b45309; }
+    .officer-status-pending { background: #f0f0f0; color: #666; }
+    .officer-authority-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 3px; }
+    .officer-authority-text { font-size: 0.85rem; color: var(--text-body); line-height: 1.55; margin-bottom: 12px; }
+    .officer-resp-list { margin: 0 0 0 16px; padding: 0; }
+    .officer-resp-list li { font-size: 0.84rem; line-height: 1.65; color: var(--text-body); margin-bottom: 3px; }
+    .officer-note { font-size: 0.8rem; color: var(--text-muted); font-style: italic; margin-top: 10px; }
+    .officer-pending-note { background: #f8f5ef; border: 1px solid var(--border); padding: 14px 18px; font-size: 0.85rem; color: var(--text-muted); margin-top: 8px; }
+
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; padding-bottom: 160px; }
       .hero-logo-wrap { display: none; }
       .about-grid { grid-template-columns: 1fr; }
       .vsyc-banner { flex-direction: column; }
+      .officer-grid { grid-template-columns: 1fr; }
+      .charter-table { font-size: 0.82rem; }
     }
   </style>
 </head>
@@ -185,6 +219,216 @@
         <div class="stat-card"><div class="stat-num">All</div><div class="stat-label">AGES & SKILL LEVELS</div></div>
         <div class="stat-card"><div class="stat-num">2021</div><div class="stat-label">EST. DC · MD · VA</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="charter" class="section-bg-cream">
+  <div class="section">
+    <div class="red-tag">GOVERNING DOCUMENT</div>
+    <h2 class="section-title">Club Charter</h2>
+    <div class="divider"></div>
+    <p class="about-desc">DMV Throwers Yo-Yo &amp; Skill Toy Club · Charter v5 · DC · MD · VA</p>
+
+    <div class="charter-article">
+      <div class="charter-article-title">Article I — Name &amp; Identity</div>
+      <div class="charter-section-label">Section 1.1 — Official Name</div>
+      <p class="charter-body">The official name of this organization is <strong>DMV Throwers Yo-Yo &amp; Skill Toy Club</strong>, hereinafter referred to as "The YoYo Club" or "DMV Throwers."</p>
+      <div class="charter-section-label">Section 1.2 — Geographic Scope</div>
+      <p class="charter-body">The Club serves the greater Washington, DC metropolitan area, encompassing the District of Columbia, Maryland, and Virginia (DMV region).</p>
+      <div class="charter-section-label">Section 1.3 — Online Identity</div>
+      <p class="charter-body">The Club operates under the handle <strong>@DMV_THROWERS</strong> across social media platforms and may be contacted at Dmvthrowers@gmail.com. Additional information is available at linktr.ee/dmvthrowers.</p>
+    </div>
+
+    <div class="charter-article">
+      <div class="charter-article-title">Article II — Mission &amp; Purpose</div>
+      <div class="charter-section-label">Section 2.1 — Mission Statement</div>
+      <p class="charter-body">DMV Throwers exists to build and grow a welcoming community of yo-yo enthusiasts and skill toy players across the DMV region — connecting beginners, hobbyists, and advanced players of all ages.</p>
+      <ul class="charter-list">
+        <li>Organize regular public meetups where members and newcomers can practice, learn, and connect</li>
+        <li>Provide free, accessible events open to all ages and skill levels</li>
+        <li>Promote yo-yo, kendama, diabolo, juggling, and related skill toys as legitimate hobbies and competitive pursuits</li>
+        <li>Support skill development through informal coaching and trick-sharing at meetups</li>
+        <li>Foster a family-friendly, inclusive environment where all are welcome regardless of experience</li>
+        <li>Represent the DMV yo-yo community at regional and national events and competitions</li>
+      </ul>
+    </div>
+
+    <div class="charter-article">
+      <div class="charter-article-title">Article III — Membership</div>
+      <div class="charter-section-label">Section 3.1 — Open Membership</div>
+      <p class="charter-body">Membership is open to any person with an interest in yo-yo or skill toys, regardless of age, experience level, or background. There are no formal application requirements or fees.</p>
+      <div class="charter-section-label">Section 3.2 — Membership Tiers</div>
+      <table class="charter-table">
+        <thead><tr><th>Tier</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><span class="charter-tier-name">Community Member</span> (Default)</td><td>Anyone who attends a DMV Throwers event. No registration required. All are welcome.</td></tr>
+          <tr><td><span class="charter-tier-name">Active Member</span></td><td>A person who regularly participates in Club activities, contributes to planning or operations, or assists at events. Active members may weigh in on Club decisions.</td></tr>
+          <tr><td><span class="charter-tier-name">Leadership Member</span></td><td>An officer who holds a formal role within the Club (see Article V).</td></tr>
+        </tbody>
+      </table>
+      <div class="charter-section-label">Section 3.3 — No Dues Policy</div>
+      <p class="charter-body">Attendance at all DMV Throwers events is and shall remain free of charge. The Club does not charge membership dues. Voluntary donations are welcomed and appreciated, and will be used to support Club operations, supplies, and events. Donations are never required and confer no special status.</p>
+      <div class="charter-section-label">Section 3.4 — Code of Conduct</div>
+      <p class="charter-body">All members and attendees are expected to uphold the following:</p>
+      <ul class="charter-list">
+        <li>Treat all people with respect — members, newcomers, children, and families alike</li>
+        <li>Create a welcoming environment regardless of skill level, age, or background</li>
+        <li>Avoid disruptive, harassing, or unsafe behavior at any Club event or venue</li>
+        <li>Represent DMV Throwers positively in person and online</li>
+        <li>Follow the rules and policies of any venue hosting a Club event</li>
+        <li>Help newcomers feel included — share knowledge freely and encourage beginners</li>
+      </ul>
+      <p class="charter-body">Violations of the Code of Conduct may result in removal from an event or suspension from Club activities. The President may act on this unilaterally. The Vice President may act independently as well, subject to presidential veto. All other officers may act only with the concurrence of at least one additional officer, the President, or the Vice President.</p>
+    </div>
+
+    <div class="charter-article">
+      <div class="charter-article-title">Article IV — Meetings &amp; Events</div>
+      <div class="charter-section-label">Section 4.1 — Regular Monthly Meetup</div>
+      <p class="charter-body">The Club shall hold a regular monthly meetup on the <strong>3rd Sunday of each month from 1:00 PM to 4:00 PM</strong>. The primary indoor venue is the Arlington Central Library (Barbara M. Donnellan Auditorium / Bluemont Room), 1015 N Quincy St, Arlington, VA 22201, subject to availability.</p>
+      <div class="charter-section-label">Section 4.2 — Outdoor &amp; Alternative Events</div>
+      <p class="charter-body">The Club may organize outdoor meetups (e.g., Quincy Park, Arlington, VA) during favorable weather months, or use alternative venues as needed. Venue changes will be communicated through official channels at least one week in advance when possible.</p>
+      <div class="charter-section-label">Section 4.3 — Special Events</div>
+      <p class="charter-body">The Club may organize additional special meetups, themed sessions, collaborative events, or participation in external competitions and festivals. Special events may be authorized by the President or Vice President acting independently. Other officers may propose and organize special events with the approval of at least one additional officer, the President, or the Vice President.</p>
+      <div class="charter-section-label">Section 4.5 — Event Standards</div>
+      <p class="charter-body">All standard Club meetups shall be free to attend with no registration required (RSVP may be requested for planning), open to all ages and skill levels, family-friendly, and operated with loaner yo-yos available when feasible. Events involving competition or significant production costs may charge fees limited to covering event-specific expenses, with authorization by the President or Vice President.</p>
+      <div class="charter-section-label">Section 4.6 — Cancellations</div>
+      <p class="charter-body">Events may be cancelled or postponed due to venue unavailability, severe weather, or unforeseen circumstances. Cancellations will be announced on official social media channels as early as possible.</p>
+    </div>
+
+    <div class="charter-article">
+      <div class="charter-article-title">Article V — Leadership &amp; Officers</div>
+      <div class="charter-section-label">Section 5.1 — Officer Roles</div>
+      <table class="charter-table">
+        <thead><tr><th>Role</th><th>Primary Responsibilities</th></tr></thead>
+        <tbody>
+          <tr><td><span class="charter-tier-name">Founder / President</span></td><td>Holds full autonomous authority over all Club decisions, operations, and direction. May act unilaterally on any matter at any time. Final authority is never subject to override except by the Founder themselves.</td></tr>
+          <tr><td><span class="charter-tier-name">Coordinator / Vice President</span></td><td>Operates the Club with full authority in the President's absence or as delegated. May act independently on Club matters as they see fit. The President retains the right to veto any Vice President decision if deemed necessary.</td></tr>
+          <tr><td><span class="charter-tier-name">Co-Coordinator / Moderator</span></td><td>Assists with event coordination and community moderation. Supports active events and helps manage Club communications and member relations.</td></tr>
+          <tr><td><span class="charter-tier-name">Alt. Location Co-Coordinator</span></td><td>Coordinates logistics for secondary or alternate event locations. Serves as on-site lead when events are held outside the primary venue.</td></tr>
+          <tr><td><span class="charter-tier-name">Moderator / Activity Coordinator</span></td><td>Plans and facilitates in-event activities such as trick challenges, workshops, and themed sessions. Assists with community engagement.</td></tr>
+        </tbody>
+      </table>
+      <div class="charter-section-label">Section 5.3 — Authority &amp; Decision Making</div>
+      <p class="charter-body">The Club operates under a three-tier authority structure:</p>
+      <ul class="charter-list">
+        <li><strong>President / Founder:</strong> Full autonomous authority. May act unilaterally on any Club matter without approval from any other officer.</li>
+        <li><strong>Vice President / Coordinator:</strong> Full operational authority to run the Club as they see fit. The President may veto any Vice President decision if deemed necessary. No other officer may override the Vice President.</li>
+        <li><strong>All Other Officers:</strong> May act on Club matters only with the concurrence of at least one additional officer, the President, or the Vice President.</li>
+      </ul>
+    </div>
+
+    <div class="charter-article">
+      <div class="charter-article-title">Article VI — Communications &amp; Social Media</div>
+      <div class="charter-section-label">Section 6.1 — Official Channels</div>
+      <ul class="charter-list">
+        <li>Social Media: @DMV_THROWERS</li>
+        <li>Email: Dmvthrowers@gmail.com</li>
+        <li>Linktree: linktr.ee/dmvthrowers</li>
+      </ul>
+      <div class="charter-section-label">Section 6.3 — Photography &amp; Media</div>
+      <p class="charter-body">Photos and videos taken at Club events may be shared on official channels to promote the community. Members who do not wish to be photographed should inform an officer. Photos of minors shall not be shared without reasonable consent from a guardian.</p>
+    </div>
+
+    <div class="charter-article">
+      <div class="charter-article-title">Article VII — Amendments</div>
+      <p class="charter-body">This charter may be amended by the President acting alone, or by the Vice President acting independently (subject to presidential veto). Amendments proposed by other officers require the concurrence of at least one additional officer, the President, or the Vice President. All amendments should be documented in writing and communicated to the full officer team. The Club should review this charter annually, typically at the start of a new calendar year.</p>
+    </div>
+
+    <div class="charter-article" style="margin-bottom:0;">
+      <div class="charter-article-title">Article VIII — Dissolution</div>
+      <p class="charter-body">In the unlikely event of Club dissolution, all remaining Club assets — including materials, equipment, and any donated funds — shall be donated to another local yo-yo, skill toy, or hobby club in the DMV region; donated to a related nonprofit or community organization; or distributed to active members as determined at the time of dissolution. No assets shall be distributed for personal financial gain.</p>
+    </div>
+  </div>
+</section>
+
+<section id="officers">
+  <div class="section">
+    <div class="red-tag">LEADERSHIP</div>
+    <h2 class="section-title">Officer Roles</h2>
+    <div class="divider"></div>
+    <p class="about-desc">Active Roster · 2026</p>
+
+    <div class="officer-grid">
+
+      <div class="officer-card officer-card-president">
+        <div class="officer-role-tag">★ FOUNDER / PRESIDENT</div>
+        <div class="officer-name">Arthur Foley</div>
+        <span class="officer-status officer-status-active">ACTIVE</span>
+        <div class="officer-authority-label">AUTHORITY LEVEL</div>
+        <div class="officer-authority-text">Full autonomous authority. Acts unilaterally on any Club matter.</div>
+        <ul class="officer-resp-list">
+          <li>Sets overall Club vision, strategy, and direction</li>
+          <li>Final authority on all Club decisions — no override</li>
+          <li>Primary public representative for venues, media, and partners</li>
+          <li>Approves or vetoes any decision made by other officers</li>
+          <li>Authorizes special events, contest fees, charter amendments</li>
+        </ul>
+      </div>
+
+      <div class="officer-card">
+        <div class="officer-role-tag">● COORDINATOR / VICE PRESIDENT</div>
+        <div class="officer-name">Brandon Rogers</div>
+        <span class="officer-status officer-status-active">ACTIVE</span>
+        <div class="officer-authority-label">AUTHORITY LEVEL</div>
+        <div class="officer-authority-text">Full operational authority. President retains veto.</div>
+        <ul class="officer-resp-list">
+          <li>Runs day-to-day Club operations independently</li>
+          <li>Leads in President's absence with full standing</li>
+          <li>Manages event logistics, venue booking, and RSVP coordination</li>
+          <li>Oversees social media scheduling and communications</li>
+          <li>Coordinates officer team and volunteer assignments</li>
+        </ul>
+      </div>
+
+      <div class="officer-card">
+        <div class="officer-role-tag">● CO-COORDINATOR / MODERATOR</div>
+        <div class="officer-name">Abby Brodsky</div>
+        <span class="officer-status officer-status-transitional">ACTIVE — TRANSITIONAL</span>
+        <div class="officer-authority-label">AUTHORITY LEVEL</div>
+        <div class="officer-authority-text">Requires concurrence of one additional officer, President, or VP.</div>
+        <ul class="officer-resp-list">
+          <li>Tertiary coordinator — formally listed until role is backfilled</li>
+          <li>Assists with event coordination and day-of operations (supporting role)</li>
+          <li>Moderates Club community spaces (social media, groups)</li>
+          <li>Supports member relations and newcomer welcome</li>
+        </ul>
+        <div class="officer-note">Abby operates an independent club in Baltimore; all tasks shared with President or VP.</div>
+      </div>
+
+      <div class="officer-card">
+        <div class="officer-role-tag">● ALT. LOCATION CO-COORDINATOR</div>
+        <div class="officer-name">Liam</div>
+        <span class="officer-status officer-status-pending">PENDING</span>
+        <div class="officer-authority-label">AUTHORITY LEVEL</div>
+        <div class="officer-authority-text">Requires concurrence of one additional officer, President, or VP.</div>
+        <ul class="officer-resp-list">
+          <li>Coordinates logistics for secondary or alternate venues</li>
+          <li>Serves as on-site lead at non-primary-venue events</li>
+          <li>Communicates venue-specific requirements to the officer team</li>
+          <li>Supports event setup and breakdown at alternate locations</li>
+        </ul>
+        <div class="officer-note">Under 18 — role pending formal confirmation.</div>
+      </div>
+
+      <div class="officer-card">
+        <div class="officer-role-tag">● MODERATOR / ACTIVITY COORDINATOR</div>
+        <div class="officer-name">Ibrahim</div>
+        <span class="officer-status officer-status-pending">PENDING</span>
+        <div class="officer-authority-label">AUTHORITY LEVEL</div>
+        <div class="officer-authority-text">Requires concurrence of one additional officer, President, or VP.</div>
+        <ul class="officer-resp-list">
+          <li>Plans and facilitates in-event activities (trick battles, workshops, themed sessions)</li>
+          <li>Coordinates community engagement programming</li>
+          <li>Helps design event formats for special and contest events</li>
+          <li>Assists with social media content tied to activities</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="officer-pending-note" style="margin-top:24px;">
+      Pending roles (Liam, Ibrahim) are reserved and will be formalized when officers are confirmed. Secretary and Treasurer roles are not yet established — will be added if the Club pursues nonprofit status.
     </div>
   </div>
 </section>
