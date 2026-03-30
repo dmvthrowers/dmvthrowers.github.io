@@ -12,6 +12,8 @@
   --text-muted: #8090b8;
   --text-body: #c8d0e0;
   --white: #ffffff;
+  --caps-track: 0.12em;
+  --caps-track-tight: 0.1em;
 }
 html {
   scroll-behavior: smooth;
@@ -27,8 +29,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 
 /* TOP BAR */
 #top-bar { background: var(--gold); padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-#top-bar span { font-size: 0.7rem; color: var(--navy-deep); letter-spacing: 0.16em; font-weight: 800; }
-#top-bar a { font-size: 0.7rem; color: var(--navy-deep); font-weight: 800; text-decoration: none; letter-spacing: 0.1em; border-bottom: 1px solid var(--navy-deep); }
+#top-bar span { font-size: 0.7rem; color: var(--navy-deep); letter-spacing: var(--caps-track); font-weight: 800; }
+#top-bar a { font-size: 0.7rem; color: var(--navy-deep); font-weight: 800; text-decoration: none; letter-spacing: var(--caps-track-tight); border-bottom: 1px solid var(--navy-deep); }
 
 /* NAV */
 nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
@@ -37,7 +39,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .nav-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: var(--white); line-height: 1; }
 .nav-brand-sub { font-size: 0.55rem; letter-spacing: 0.2em; color: var(--gold); font-weight: 700; margin-top: 2px; }
 .nav-links { display: flex; gap: 24px; align-items: center; }
-.nav-link { font-size: 0.68rem; letter-spacing: 0.12em; font-weight: 700; color: var(--text-muted); text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; transition: all 0.2s; touch-action: manipulation; }
+.nav-link { font-size: 0.68rem; letter-spacing: 0.11em; font-weight: 700; color: var(--text-muted); text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; transition: all 0.2s; touch-action: manipulation; }
 .nav-link:hover, .nav-link.active { color: var(--gold); border-bottom-color: var(--gold); }
 .nav-home { background: var(--gold); color: var(--navy-deep) !important; padding: 6px 14px !important; font-size: 0.65rem !important; font-weight: 800 !important; letter-spacing: 0.1em; border-bottom: none !important; transition: background 0.2s !important; }
 .nav-home:hover { background: var(--gold-light) !important; border-bottom: none !important; }
@@ -81,7 +83,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 
 
 /* BUTTONS */
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 14px 32px; font-weight: 800; letter-spacing: 0.1em; font-size: 0.78rem; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; font-family: 'Montserrat', sans-serif; touch-action: manipulation; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 14px 32px; font-weight: 800; letter-spacing: 0.095em; font-size: 0.78rem; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; font-family: 'Montserrat', sans-serif; touch-action: manipulation; }
 .btn-gold { background: var(--gold); color: var(--navy-deep); }
 .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
 .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
@@ -101,6 +103,15 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .section-title.dark { color: var(--navy-deep); }
 .divider-gold { width: 48px; height: 3px; background: var(--gold); margin: 16px 0 28px; }
 .divider-red { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
+
+/* Shared section intro rhythm for long-form readability */
+.section-intro,
+.p-style,
+.p-style2,
+.sponsor-p {
+  max-width: 70ch;
+  line-height: 1.75;
+}
 
 /* QUICK FACTS */
 .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: var(--border); margin-top: 48px; }
@@ -297,7 +308,7 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 @media (max-width: 480px) {
   #top-bar { justify-content: center; text-align: center; padding: 8px 12px; gap: 8px; }
   #top-bar span { flex: 1 1 100%; }
-  #top-bar span, #top-bar a { font-size: 0.62rem; letter-spacing: 0.1em; }
+  #top-bar span, #top-bar a { font-size: 0.62rem; letter-spacing: 0.09em; }
   #top-bar a { padding: 6px 10px; border: 1px solid rgba(13,20,40,0.45); }
   nav { padding: 0 14px; }
   .nav-brand-main { font-size: 0.9rem; }
@@ -307,14 +318,30 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
   .vsyc-page-hero-sub { letter-spacing: 0.12em; }
   .hero-meta { gap: 14px; }
   .hero-meta-val { font-size: 0.9rem; }
-  .btn { font-size: 0.73rem; padding: 12px 20px; }
+  .btn { font-size: 0.73rem; padding: 12px 20px; letter-spacing: 0.08em; }
+  .division-card { padding: 22px 16px; }
+  .division-name { font-size: 1.3rem; }
+  .division-desc { font-size: 0.82rem; }
+  .reg-grid { gap: 24px; }
+  .reg-box, .payment-box { padding: 16px; }
+  .price-row { gap: 10px; align-items: flex-start; }
+  .price-div, .price-val { font-size: 0.95rem; }
+  .payment-btns { gap: 8px; }
+  .payment-btns .btn { width: 100%; }
+  .music-step { gap: 12px; margin-bottom: 14px; }
+  .music-step-num { width: 28px; height: 28px; font-size: 0.78rem; }
+  .music-step-text { font-size: 0.84rem; line-height: 1.5; }
+  .upload-btn { font-size: 0.72rem; }
+  .upload-note { font-size: 0.74rem; line-height: 1.5; }
   .footer-copy { line-height: 1.5; }
   .hero-btns { flex-direction: column; }
   .countdown-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 375px) {
-  #top-bar span, #top-bar a { letter-spacing: 0.08em; }
+  #top-bar span, #top-bar a { letter-spacing: 0.075em; }
+  .vsyc-page-hero-sub { font-size: 0.64rem; letter-spacing: 0.09em; line-height: 1.45; }
+  .footer-copy { font-size: 0.69rem; line-height: 1.55; }
 }
 
 @media (prefers-reduced-motion: reduce) {
