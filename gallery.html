@@ -40,6 +40,13 @@
     .gallery-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 4px; }
     .gallery-desc { font-size: 0.85rem; color: var(--text-muted); }
     .gallery-desc-p { color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; }
+    .gallery-more { margin-top: 48px; text-align: center; }
+    .gallery-more-box { background: var(--navy); color: white; padding: 32px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
+    .gallery-more-box h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; margin-bottom: 12px; }
+    .gallery-more-box p { color: var(--text-muted); margin-bottom: 24px; }
+    .gallery-more-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .gallery-more-link { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: white; padding: 12px 20px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
+    .gallery-more-link:hover { background: var(--red-dark); }
     @media (max-width: 768px) {
       .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
     }
@@ -158,17 +165,28 @@
         </div>
       </div>
       <div class="gallery-item">
+        <img src="assets/images/gallery/gallery-12.png" alt="Cascades Library Workshop" class="gallery-img" loading="lazy">
+        <div class="gallery-caption">
+          <div class="gallery-title">Cascades Library Workshop</div>
+          <div class="gallery-desc">Educational session at Cascades Library</div>
+        </div>
+      </div>
+      <div class="gallery-item">
         <img src="assets/images/gallery/gallery-10.png" alt="Quincy Park Meetup" class="gallery-img" loading="lazy">
         <div class="gallery-caption">
           <div class="gallery-title">Quincy Park Meetup</div>
           <div class="gallery-desc">Outdoor gathering and practice session</div>
         </div>
       </div>
-      <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-12.png" alt="Cascades Library Workshop" class="gallery-img" loading="lazy">
-        <div class="gallery-caption">
-          <div class="gallery-title">Cascades Library Workshop</div>
-          <div class="gallery-desc">Educational session at Cascades Library</div>
+    </div>
+
+    <div class="gallery-more">
+      <div class="gallery-more-box">
+        <h3>More Photos</h3>
+        <p>Follow us on social media for the latest photos and videos from every event</p>
+        <div class="gallery-more-links">
+          <a href="https://instagram.com/dmv_throwers" target="_blank" rel="noopener noreferrer" class="gallery-more-link">📸 Instagram</a>
+          <a href="https://www.facebook.com/share/g/1DbrxESDDc/" target="_blank" rel="noopener noreferrer" class="gallery-more-link">👥 Facebook</a>
         </div>
       </div>
     </div>
