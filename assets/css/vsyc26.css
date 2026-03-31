@@ -64,10 +64,10 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .vsyc-page-hero-sub { font-size: 0.7rem; letter-spacing: 0.16em; color: var(--text-muted); font-weight: 600; }
 
 /* HERO SKYLINE + NATURE DECORATION */
-.hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 110px; pointer-events: none; opacity: 1; }
-.hero-skyline img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; opacity: 0.22; display: block; }
-.page-hero-nature { position: absolute; bottom: 0; left: 0; right: 0; height: 100px; pointer-events: none; }
-.page-hero-nature img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; opacity: 0.22; display: block; }
+.hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 220px; pointer-events: none; opacity: 1; }
+.hero-skyline img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; opacity: 0.9; display: block; }
+.page-hero-nature { position: absolute; bottom: 0; left: 0; right: 0; height: 160px; pointer-events: none; }
+.page-hero-nature img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; opacity: 0.9; display: block; }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; }
 .hero-badge { background: var(--gold); color: var(--navy-deep); font-size: 0.65rem; letter-spacing: 0.2em; font-weight: 800; padding: 5px 14px; }
 .hero-edition { font-size: 0.65rem; letter-spacing: 0.16em; font-weight: 700; color: var(--text-muted); }
