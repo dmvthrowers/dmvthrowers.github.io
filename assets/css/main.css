@@ -34,7 +34,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 #top-bar a { font-size: 0.72rem; color: white; letter-spacing: var(--caps-track-tight); font-weight: 700; text-decoration: underline; white-space: nowrap; }
 
 /* NAV */
-nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
+nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; will-change: transform; }
 .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .nav-brand { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
 .nav-brand-text-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; line-height: 1; color: var(--navy); }
@@ -58,8 +58,8 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 
 /* SECTIONS */
 .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
-.section-bg-white { background: white; }
-.section-bg-navy { background: var(--navy); }
+.section-bg-white { background: white; content-visibility: auto; contain-intrinsic-size: auto 600px; }
+.section-bg-navy { background: var(--navy); content-visibility: auto; contain-intrinsic-size: auto 600px; }
 .section-bg-cream { background: var(--cream); }
 .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 16px; }
 .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--navy); margin-bottom: 8px; }

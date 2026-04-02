@@ -26,7 +26,9 @@
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Sterling, Virginia"/>
   <meta name="theme-color" content="#1a2744"/>
-  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"/>
   <link rel="canonical" href="https://dmvthrowers.club/vsyc26.html"/>
   <script type="application/ld+json">
   [
@@ -91,7 +93,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="preload" as="image" href="assets/images/vsyc-marigolds-hero.webp" type="image/webp" fetchpriority="high"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/vsyc26.css"/>
 </head>
 <body>
@@ -106,7 +109,7 @@
 <nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="vsyc26.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
+      <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" width="34" height="34"/>
       <div>
         <div class="nav-brand-main">VSYC-26</div>
         <div class="nav-brand-sub">VIRGINIA STATE YO-YO CONTEST</div>
@@ -182,7 +185,7 @@
     </div>
   </div>
   <div class="hero-skyline">
-    <img src="assets/images/vsyc-marigolds-hero.jpg" alt="" aria-hidden="true"/>
+    <picture><source srcset="assets/images/vsyc-marigolds-hero.webp" type="image/webp"/><img src="assets/images/vsyc-marigolds-hero.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1168" height="784"/></picture>
   </div>
 </section>
 
@@ -228,7 +231,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-flex">
-        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy" width="34" height="34"/>
         <div>
           <div class="footer-title">VIRGINIA STATE YO-YO CONTEST 2026</div>
           <div class="footer-subtitle">ORGANIZED BY DMV THROWERS · VSYC-26</div>
@@ -263,28 +266,30 @@
   // Countdown to September 19, 2026 10:00 AM EDT
   (function() {
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var elDays = document.getElementById('cd-days');
+    var elHours = document.getElementById('cd-hours');
+    var elMins = document.getElementById('cd-mins');
+    var elSecs = document.getElementById('cd-secs');
+    var eventTime = new Date('2026-09-19T10:00:00-04:00').getTime();
     function updateCountdown() {
-      var event = new Date('2026-09-19T10:00:00-04:00');
-      var now = new Date();
-      var diff = event - now;
+      var diff = eventTime - Date.now();
       if (diff <= 0) {
-        document.getElementById('cd-days').textContent = '0';
-        document.getElementById('cd-hours').textContent = '0';
-        document.getElementById('cd-mins').textContent = '0';
-        document.getElementById('cd-secs').textContent = '0';
+        elDays.textContent = '0';
+        elHours.textContent = '0';
+        elMins.textContent = '0';
+        elSecs.textContent = '0';
         return;
       }
-      var days = Math.floor(diff / (1000*60*60*24));
-      var hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-      var mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-      var secs = Math.floor((diff % (1000*60)) / 1000);
-      document.getElementById('cd-days').textContent = days;
-      document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-      document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
-      document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
+      var days = Math.floor(diff / 86400000);
+      var hours = Math.floor((diff % 86400000) / 3600000);
+      var mins = Math.floor((diff % 3600000) / 60000);
+      var secs = Math.floor((diff % 60000) / 1000);
+      elDays.textContent = days;
+      elHours.textContent = String(hours).padStart(2,'0');
+      elMins.textContent = String(mins).padStart(2,'0');
+      elSecs.textContent = String(secs).padStart(2,'0');
     }
     updateCountdown();
-    // Respect reduced-motion: update every 60s instead of every 1s
     setInterval(updateCountdown, reducedMotion ? 60000 : 1000);
   })();
 </script>

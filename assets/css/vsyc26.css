@@ -33,7 +33,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 #top-bar a { font-size: 0.7rem; color: var(--navy-deep); font-weight: 800; text-decoration: none; letter-spacing: var(--caps-track-tight); border-bottom: 1px solid var(--navy-deep); }
 
 /* NAV */
-nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
+nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; will-change: transform; }
 .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .nav-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: var(--white); line-height: 1; }
@@ -71,9 +71,9 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; }
 .hero-badge { background: var(--gold); color: var(--navy-deep); font-size: 0.65rem; letter-spacing: 0.2em; font-weight: 800; padding: 5px 14px; }
 .hero-edition { font-size: 0.65rem; letter-spacing: 0.16em; font-weight: 700; color: var(--text-muted); }
-.hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.8rem; font-size: clamp(2.8rem, 7vw, 5rem); color: var(--white); line-height: 0.95; margin-bottom: 12px; }
+.hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(2.8rem, 7vw, 5rem); color: var(--white); line-height: 0.95; margin-bottom: 12px; }
 .hero-title span { color: var(--gold); }
-.hero-year { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 4rem; font-size: clamp(4rem, 12vw, 8rem); color: rgba(201,168,76,0.3); line-height: 0.85; margin-bottom: 24px; display: block; }
+.hero-year { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(4rem, 12vw, 8rem); color: rgba(201,168,76,0.3); line-height: 0.85; margin-bottom: 24px; display: block; }
 @supports (-webkit-text-stroke: 1px) { .hero-year { color: transparent; -webkit-text-stroke: 2px rgba(201,168,76,0.3); } }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
 .hero-meta-item { display: flex; flex-direction: column; gap: 3px; }
@@ -93,13 +93,13 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 
 /* SECTIONS */
 .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
-.section-wrap { position: relative; }
+.section-wrap { position: relative; content-visibility: auto; contain-intrinsic-size: auto 600px; }
 .section-wrap.bg-navy { background: var(--navy); }
 .section-wrap.bg-deep { background: var(--navy-deep); }
 .section-wrap.bg-cream { background: var(--cream); }
 .gold-tag { display: inline-block; background: var(--gold); color: var(--navy-deep); font-size: 0.62rem; letter-spacing: 0.2em; padding: 4px 12px; font-weight: 800; margin-bottom: 16px; }
 .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.62rem; letter-spacing: 0.2em; padding: 4px 12px; font-weight: 800; margin-bottom: 16px; }
-.section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 8px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; line-height: 1.05; color: var(--white); margin-bottom: 8px; }
 .section-title.dark { color: var(--navy-deep); }
 .divider-gold { width: 48px; height: 3px; background: var(--gold); margin: 16px 0 28px; }
 .divider-red { width: 48px; height: 3px; background: var(--red); margin: 16px 0 28px; }
@@ -156,7 +156,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 .venue-detail-row { display: flex; gap: 16px; margin-bottom: 16px; align-items: flex-start; }
 .venue-label { font-size: 0.6rem; letter-spacing: 0.18em; font-weight: 800; color: var(--gold); min-width: 110px; padding-top: 2px; }
-.venue-val { font-size: 0.9rem; color: var(--white); font-weight: 500; line-height: 1.5; }
+.venue-val { font-size: 0.9rem; color: var(--white); font-weight: 400; line-height: 1.5; }
 .venue-rules { display: flex; flex-direction: column; gap: 12px; }
 .venue-rule { background: var(--navy-deep); border-left: 3px solid var(--gold); padding: 14px 18px; }
 .venue-rule-title { font-size: 0.65rem; letter-spacing: 0.14em; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
@@ -197,7 +197,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .price-row:last-child { border-bottom: none; }
 .price-div { font-size: 0.85rem; font-weight: 600; color: var(--white); }
 .price-val { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); }
-.price-discount { font-size: 0.75rem; color: var(--text-muted); font-family: 'Montserrat', sans-serif; font-weight: 500; }
+.price-discount { font-size: 0.75rem; color: var(--text-muted); font-family: 'Montserrat', sans-serif; font-weight: 400; }
 .price-free { color: #6adb8a; }
 .payment-box { margin-top: 16px; background: var(--navy); border: 1px solid var(--border); padding: 20px; border-left: 4px solid var(--red); }
 .payment-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--red); margin-bottom: 6px; }
@@ -224,7 +224,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .contact-row { display: flex; gap: 16px; margin-bottom: 14px; align-items: baseline; }
 .contact-label { font-size: 0.6rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); min-width: 100px; }
-.contact-val { font-size: 0.92rem; color: var(--white); font-weight: 500; text-decoration: none; }
+.contact-val { font-size: 0.92rem; color: var(--white); font-weight: 400; text-decoration: none; }
 .contact-val:hover { color: var(--gold); }
 .contact-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
 .organized-title { margin-top: 32px; font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
