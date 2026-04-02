@@ -25,6 +25,7 @@
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Sterling, Virginia"/>
+  <meta name="theme-color" content="#1a2744"/>
   <link rel="canonical" href="https://dmvthrowers.club/vsyc26-faq.html"/>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -115,7 +116,7 @@
 </div>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="vsyc26.html" class="nav-brand">
       <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
@@ -132,7 +133,7 @@
       <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
       <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
-      <a href="vsyc26-faq.html" class="nav-link active">FAQ</a>
+      <a href="vsyc26-faq.html" class="nav-link active" aria-current="page">FAQ</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -170,48 +171,48 @@
     <div class="divider-gold"></div>
 
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Is the event free to attend?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Yes — free to spectate. Competitor entry is $15–25 per division depending on division. No charge for spectators, families, or curious mall visitors.</div>
+      <button class="faq-q" aria-expanded="false"><span>Is the event free to attend?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-1">Yes — free to spectate. Competitor entry is $15–25 per division depending on division. No charge for spectators, families, or curious mall visitors.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>What time does the event run?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Doors open at 10 AM and the event runs until approximately 7 PM. Check the <a href="vsyc26-schedule.html" class="faq-link-gold">Schedule page</a> for the full timeline as it's finalized.</div>
+      <button class="faq-q" aria-expanded="false"><span>What time does the event run?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-2">Doors open at <time datetime="10:00">10 AM</time> and the event runs until approximately <time datetime="19:00">7 PM</time>. Check the <a href="vsyc26-schedule.html" class="faq-link-gold">Schedule page</a> for the full timeline as it's finalized.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>What divisions are offered?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Four divisions: <strong>1A</strong> — single yo-yo on a string, the flagship division ($25); <strong>X Division</strong> — multi-style covering 2A, 3A, 4A, or 5A, pick your style ($20); <strong>Sport / Beginner / Junior</strong> — welcoming entry-level division for all ages and skill levels ($15); <strong>Fixed Axle</strong> — traditional no-bearing yo-yos only, pricing TBD. See the <a href="vsyc26-register.html#divisions" class="faq-link-gold">Divisions page</a> for full descriptions.</div>
+      <button class="faq-q" aria-expanded="false"><span>What divisions are offered?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-3">Four divisions: <strong>1A</strong> — single yo-yo on a string, the flagship division ($25); <strong>X Division</strong> — multi-style covering 2A, 3A, 4A, or 5A, pick your style ($20); <strong>Sport / Beginner / Junior</strong> — welcoming entry-level division for all ages and skill levels ($15); <strong>Fixed Axle</strong> — traditional no-bearing yo-yos only, pricing TBD. See the <a href="vsyc26-register.html#divisions" class="faq-link-gold">Divisions page</a> for full descriptions.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>How do I register to compete?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Registration opens soon. Email vastateyoyocontest@gmail.com to get notified first. Registration is only complete after payment clears.</div>
+      <button class="faq-q" aria-expanded="false"><span>How do I register to compete?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-4">Registration opens soon. Email vastateyoyocontest@gmail.com to get notified first. Registration is only complete after payment clears.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to submit music?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Yes. Competitors must upload an MP3 by <strong>September 12, 2026</strong> — one week before the event. The upload link is sent after registration and payment are confirmed. File name format: DIVISION_LastName_FirstName.mp3 (e.g. 1A_Rogers_Brandon.mp3). No upload by the deadline means AUX cord or no music — no exceptions. Full details on the <a href="vsyc26-register.html" class="faq-link-gold">Register page</a>.</div>
+      <button class="faq-q" aria-expanded="false"><span>Do I need to submit music?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-5">Yes. Competitors must upload an MP3 by <strong><time datetime="2026-09-12">September 12, 2026</time></strong> — one week before the event. The upload link is sent after registration and payment are confirmed. File name format: DIVISION_LastName_FirstName.mp3 (e.g. 1A_Rogers_Brandon.mp3). No upload by the deadline means AUX cord or no music — no exceptions. Full details on the <a href="vsyc26-register.html" class="faq-link-gold">Register page</a>.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Can I compete in multiple divisions?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Yes. Registration is per division. Register for 1A + X Division together for $40 ($5 off the combined price).</div>
+      <button class="faq-q" aria-expanded="false"><span>Can I compete in multiple divisions?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-6">Yes. Registration is per division. Register for 1A + X Division together for $40 ($5 off the combined price).</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>What is the Maker Corner?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">A community showcase area for handmade skill toys, custom designs, and indie crafted work. Not a sponsor table — this is community space for makers. Contact us if you're interested in a spot.</div>
+      <button class="faq-q" aria-expanded="false"><span>What is the Maker Corner?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-7">A community showcase area for handmade skill toys, custom designs, and indie crafted work. Not a sponsor table — this is community space for makers. Contact us if you're interested in a spot.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Will there be a livestream?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Planned — pending funding. Diamond and Platinum sponsors receive YouTube livestream credit. Once funded, it's happening. Help us get there.</div>
+      <button class="faq-q" aria-expanded="false"><span>Will there be a livestream?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-8">Planned — pending funding. Diamond and Platinum sponsors receive YouTube livestream credit. Once funded, it's happening. Help us get there.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Where do I park?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Free parking at all mall entrances. Dulles Town Center has ample surface parking surrounding the entire mall. No fees, no validation needed.</div>
+      <button class="faq-q" aria-expanded="false"><span>Where do I park?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-9">Free parking at all mall entrances. Dulles Town Center has ample surface parking surrounding the entire mall. No fees, no validation needed.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>How do I become a sponsor?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">Fill out the <a href="vsyc26-sponsors.html" class="faq-link-gold">sponsor interest form</a> or email vastateyoyocontest@gmail.com. Diamond and Platinum spots are limited — first come, first served. You'll receive a PayPal invoice to lock your spot.</div>
+      <button class="faq-q" aria-expanded="false"><span>How do I become a sponsor?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-10">Fill out the <a href="vsyc26-sponsors.html" class="faq-link-gold">sponsor interest form</a> or email vastateyoyocontest@gmail.com. Diamond and Platinum spots are limited — first come, first served. You'll receive a PayPal invoice to lock your spot.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><span>Who organizes VSYC-26?</span><span class="faq-toggle">+</span></div>
-      <div class="faq-a">DMV Throwers Yo-Yo & Skill Toy Club — the DC/Maryland/Virginia yo-yo community club. Entirely volunteer-run. Every dollar goes straight to the event.</div>
+      <button class="faq-q" aria-expanded="false"><span>Who organizes VSYC-26?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-11">DMV Throwers Yo-Yo & Skill Toy Club — the DC/Maryland/Virginia yo-yo community club. Entirely volunteer-run. Every dollar goes straight to the event.</div>
     </div>
   </div>
 </div>
@@ -263,7 +264,7 @@
           <div class="footer-subtitle">ORGANIZED BY DMV THROWERS · VSYC-26</div>
         </div>
       </div>
-      <div>
+      <nav aria-label="Footer">
         <a href="vsyc26.html" class="footer-link">About</a>
         <a href="vsyc26-register.html" class="footer-link">Register</a>
         <a href="vsyc26-sponsors.html" class="footer-link">Sponsors</a>
@@ -271,7 +272,7 @@
         <a href="vsyc26-faq.html" class="footer-link">Contact</a>
         <a href="index.html" class="footer-link">← Club Site</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 Virginia State Yo-Yo Contest · Organized by DMV Throwers Yo-Yo & Skill Toy Club</span>
@@ -290,14 +291,22 @@
   });
 
   // FAQ accordion
-  function toggleFaq(el) {
-    const answer = el.nextElementSibling;
-    const toggle = el.querySelector('.faq-toggle');
-    const isOpen = answer.classList.contains('open');
-    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
-    document.querySelectorAll('.faq-toggle').forEach(t => t.textContent = '+');
-    if (!isOpen) { answer.classList.add('open'); toggle.textContent = '−'; }
+  function toggleFaq(btn) {
+    var answer = btn.nextElementSibling;
+    var toggle = btn.querySelector('.faq-toggle');
+    var isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
+    document.querySelectorAll('.faq-toggle').forEach(function(t) { t.textContent = '+'; });
+    document.querySelectorAll('.faq-q').forEach(function(q) { q.setAttribute('aria-expanded', 'false'); });
+    if (!isOpen) {
+      answer.classList.add('open');
+      toggle.textContent = '−';
+      btn.setAttribute('aria-expanded', 'true');
+    }
   }
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() { toggleFaq(this); });
+  });
 </script>
   <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>

@@ -7,7 +7,7 @@
 🔗 **Linktree:** [linktr.ee/dmvthrowers](https://linktr.ee/dmvthrowers)
 ☕ **Support us:** [ko-fi.com/dmvthrowers](https://ko-fi.com/dmvthrowers)
 
-Last updated: 2026-03-29
+Last updated: 2026-04-02
 
 ---
 
@@ -61,6 +61,7 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 | --- | --- |
 | Home | [dmvthrowers.club](https://dmvthrowers.club) |
 | About | [dmvthrowers.club/about.html](https://dmvthrowers.club/about.html) |
+| Team | [dmvthrowers.club/team.html](https://dmvthrowers.club/team.html) |
 | Events | [dmvthrowers.club/events.html](https://dmvthrowers.club/events.html) |
 | Gallery | [dmvthrowers.club/gallery.html](https://dmvthrowers.club/gallery.html) |
 | Resources | [dmvthrowers.club/resources.html](https://dmvthrowers.club/resources.html) |
@@ -84,11 +85,13 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 / (root)
 ├── index.html                  # Homepage
 ├── about.html                  # About page
+├── team.html                   # Team / officers page
 ├── events.html                 # Events page
 ├── gallery.html                # Gallery page
 ├── resources.html              # Resources page
 ├── faq.html                    # FAQ page
 ├── contact.html                # Contact page
+├── 404.html                    # Custom 404 error page
 ├── vsyc26.html                 # VSYC-26 landing (hero + about)
 ├── vsyc26-divisions.html       # Redirect to registration divisions section
 ├── vsyc26-schedule.html        # VSYC-26 schedule
@@ -103,7 +106,10 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 ├── README.md                   # This file
 └── assets/
     ├── css/
+    │   ├── main.css                        # Shared stylesheet for all main-site pages
     │   └── vsyc26.css                      # Shared stylesheet for all VSYC-26 pages
+    ├── js/
+    │   └── mobile-enhancements.js          # Touch/mobile interaction enhancements
     ├── images/
     │   ├── logo.png                        # Main club logo
     │   ├── dc-skyline.svg                  # Club page skyline silhouette

@@ -18,7 +18,7 @@
 html {
   scroll-behavior: smooth;
 }
-body { font-family: 'Montserrat', sans-serif; background: var(--navy-deep); color: var(--white); line-height: 1.6; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: 'Montserrat', system-ui, -apple-system, sans-serif; background: var(--navy-deep); color: var(--white); line-height: 1.6; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 img, svg, video, canvas { max-width: 100%; height: auto; }
 a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
 
@@ -213,7 +213,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 
 /* FAQ */
 .faq-item { border-bottom: 1px solid var(--border); }
-.faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.92rem; color: var(--white); -webkit-user-select: none; user-select: none; touch-action: manipulation; }
+.faq-q { cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 0.92rem; color: var(--white); -webkit-user-select: none; user-select: none; touch-action: manipulation; background: none; border: none; width: 100%; text-align: left; font-family: inherit; }
 .faq-q:hover { color: var(--gold); }
 .faq-toggle { color: var(--gold); font-size: 1.3rem; font-weight: 300; }
 .faq-a { font-size: 0.85rem; line-height: 1.7; padding-bottom: 20px; color: var(--text-muted); display: none; }
@@ -358,4 +358,18 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+@media print {
+  #top-bar, nav, .mobile-menu, .hero-skyline, .page-hero-nature,
+  .hero-pattern, .hero-glow, .mobile-quick-actions, .skip-link,
+  .hamburger { display: none !important; }
+  body { background: #fff; color: #000; }
+  .section-wrap.bg-navy, .section-wrap.bg-deep { background: #fff; }
+  .section-title, .fact-val, .hero-title, .vsyc-page-hero-title { color: #000; }
+  .gold-tag, .red-tag { background: #000; color: #fff; }
+  .hero-meta-val, .p-style, .p-style2, .sponsor-p { color: #333; }
+  footer { background: #fff; border-top: 1px solid #ccc; }
+  .footer-title, .footer-copy { color: #333; }
+  a { color: #000; text-decoration: underline; }
 }

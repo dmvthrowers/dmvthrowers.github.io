@@ -25,6 +25,7 @@
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Sterling, Virginia"/>
+  <meta name="theme-color" content="#1a2744"/>
   <link rel="icon" type="image/png" href="assets/images/logo.png"/>
   <link rel="canonical" href="https://dmvthrowers.club/vsyc26.html"/>
   <script type="application/ld+json">
@@ -102,7 +103,7 @@
 </div>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="vsyc26.html" class="nav-brand">
       <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
@@ -113,7 +114,7 @@
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-link nav-home">← HOME</a>
-      <a href="vsyc26.html" class="nav-link active">ABOUT</a>
+      <a href="vsyc26.html" class="nav-link active" aria-current="page">ABOUT</a>
       <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
       <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
       <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
@@ -147,15 +148,15 @@
       <span class="hero-edition">VIRGINIA TRADITION SINCE 2007</span>
     </div>
     <h1 class="hero-title">VIRGINIA STATE<br/><span>YO-YO CONTEST</span></h1>
-    <span class="hero-year">2026</span>
+    <span class="hero-year" aria-hidden="true">2026</span>
     <div class="hero-meta">
       <div class="hero-meta-item">
         <span class="hero-meta-label">DATE</span>
-        <span class="hero-meta-val">Saturday, September 19</span>
+        <span class="hero-meta-val"><time datetime="2026-09-19">Saturday, September 19</time></span>
       </div>
       <div class="hero-meta-item">
         <span class="hero-meta-label">TIME</span>
-        <span class="hero-meta-val">10 AM – 7 PM</span>
+        <span class="hero-meta-val"><time datetime="10:00">10 AM</time> – <time datetime="19:00">7 PM</time></span>
       </div>
       <div class="hero-meta-item">
         <span class="hero-meta-label">VENUE</span>
@@ -206,8 +207,8 @@
       </div>
       <div>
         <div class="facts-grid facts-margin">
-          <div class="fact-card"><div class="fact-label">DATE</div><div class="fact-val">Sept 19, 2026</div></div>
-          <div class="fact-card"><div class="fact-label">HOURS</div><div class="fact-val">10 AM – 7 PM</div></div>
+          <div class="fact-card"><div class="fact-label">DATE</div><div class="fact-val"><time datetime="2026-09-19">Sept 19, 2026</time></div></div>
+          <div class="fact-card"><div class="fact-label">HOURS</div><div class="fact-val"><time datetime="10:00">10 AM</time> – <time datetime="19:00">7 PM</time></div></div>
           <div class="fact-card"><div class="fact-label">VENUE</div><div class="fact-val">Dulles Town Center</div></div>
           <div class="fact-card"><div class="fact-label">EDITION</div><div class="fact-val">16th Annual</div></div>
           <div class="fact-card"><div class="fact-label">ATTENDANCE</div><div class="fact-val">Est. 100–200</div></div>
@@ -233,7 +234,7 @@
           <div class="footer-subtitle">ORGANIZED BY DMV THROWERS · VSYC-26</div>
         </div>
       </div>
-      <div>
+      <nav aria-label="Footer">
         <a href="vsyc26.html" class="footer-link">About</a>
         <a href="vsyc26-register.html" class="footer-link">Register</a>
         <a href="vsyc26-sponsors.html" class="footer-link">Sponsors</a>
@@ -241,7 +242,7 @@
         <a href="vsyc26-faq.html" class="footer-link">Contact</a>
         <a href="index.html" class="footer-link">← Club Site</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 Virginia State Yo-Yo Contest · Organized by DMV Throwers Yo-Yo & Skill Toy Club</span>
@@ -260,28 +261,32 @@
   });
 
   // Countdown to September 19, 2026 10:00 AM EDT
-  function updateCountdown() {
-    const event = new Date('2026-09-19T10:00:00-04:00');
-    const now = new Date();
-    const diff = event - now;
-    if (diff <= 0) {
-      document.getElementById('cd-days').textContent = '0';
-      document.getElementById('cd-hours').textContent = '0';
-      document.getElementById('cd-mins').textContent = '0';
-      document.getElementById('cd-secs').textContent = '0';
-      return;
+  (function() {
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function updateCountdown() {
+      var event = new Date('2026-09-19T10:00:00-04:00');
+      var now = new Date();
+      var diff = event - now;
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '0';
+        document.getElementById('cd-hours').textContent = '0';
+        document.getElementById('cd-mins').textContent = '0';
+        document.getElementById('cd-secs').textContent = '0';
+        return;
+      }
+      var days = Math.floor(diff / (1000*60*60*24));
+      var hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      var mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+      var secs = Math.floor((diff % (1000*60)) / 1000);
+      document.getElementById('cd-days').textContent = days;
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
     }
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const secs = Math.floor((diff % (1000*60)) / 1000);
-    document.getElementById('cd-days').textContent = days;
-    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-    document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
-    document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+    updateCountdown();
+    // Respect reduced-motion: update every 60s instead of every 1s
+    setInterval(updateCountdown, reducedMotion ? 60000 : 1000);
+  })();
 </script>
   <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>

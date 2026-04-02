@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
-Disallow: /repo-mirror/
+Disallow: /.github/
+Disallow: /.claude/
+Disallow: /.vs/
+Disallow: /.vscode/
 Disallow: /scripts/
 Disallow: /agents/
 Disallow: /skills/
