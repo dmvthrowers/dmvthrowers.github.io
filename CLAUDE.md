@@ -49,7 +49,7 @@ One shared JS file (`assets/js/mobile-enhancements.js`) is loaded on every page 
 
 Every content page repeats the same outer skeleton:
 
-```
+```html
 <head>
   charset / viewport / author / <base href="/">
   CSP meta / title / description / OG + Twitter
@@ -110,7 +110,7 @@ Every content page repeats the same outer skeleton:
 
 Any static file server from the repo root works. The `<base href="/">` means root-relative paths only resolve correctly when served from the root.
 
-```
+```sh
 python -m http.server 8000
 # or
 npx serve .
