@@ -74,12 +74,14 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div id="top-bar">
   <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
-<nav aria-label="Main navigation">
+<nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
       <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
@@ -114,7 +116,7 @@
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
-<main>
+<main id="main-content" role="main">
 
 <div class="page-hero">
   <div class="page-hero-inner">
@@ -138,7 +140,7 @@
 
       <!-- Arthur Foley — Founder / President -->
       <div class="team-card team-card-president">
-        <div class="team-card-photo-placeholder">
+        <div class="team-card-photo-placeholder" aria-hidden="true">
           <div class="team-card-photo-placeholder-icon">🪀</div>
         </div>
         <div class="team-card-body">
@@ -155,7 +157,7 @@
 
       <!-- Brandon Rogers — Coordinator / Vice President -->
       <div class="team-card team-card-officer">
-        <div class="team-card-photo-placeholder">
+        <div class="team-card-photo-placeholder" aria-hidden="true">
           <div class="team-card-photo-placeholder-icon">🪀</div>
         </div>
         <div class="team-card-body">
@@ -172,7 +174,7 @@
 
       <!-- Abby Brodsky — Co-Coordinator / Moderator -->
       <div class="team-card team-card-officer">
-        <div class="team-card-photo-placeholder">
+        <div class="team-card-photo-placeholder" aria-hidden="true">
           <div class="team-card-photo-placeholder-icon">🪀</div>
         </div>
         <div class="team-card-body">
@@ -189,7 +191,7 @@
 
       <!-- Liam — Alt. Location Co-Coordinator -->
       <div class="team-card team-card-officer">
-        <div class="team-card-photo-placeholder">
+        <div class="team-card-photo-placeholder" aria-hidden="true">
           <div class="team-card-photo-placeholder-icon">🪀</div>
         </div>
         <div class="team-card-body">
@@ -206,7 +208,7 @@
 
       <!-- Ibrahim — Moderator / Activity Coordinator -->
       <div class="team-card team-card-officer">
-        <div class="team-card-photo-placeholder">
+        <div class="team-card-photo-placeholder" aria-hidden="true">
           <div class="team-card-photo-placeholder-icon">🪀</div>
         </div>
         <div class="team-card-body">
@@ -227,12 +229,19 @@
 
 </main>
 
-<footer>
+<!-- Footer. Canonical structure lives in about.html; keep in sync when editing. -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
           <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
         </div>
       </div>
       <nav aria-label="Footer">
-        <a href="index.html" class="footer-link">About</a>
+        <a href="about.html" class="footer-link">About</a>
         <a href="team.html" class="footer-link">Team</a>
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
