@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<!--
+  vsyc26-sponsors.html — Sponsorship tiers and current-sponsor list for VSYC-26.
+  Sections: top bar · contest nav · mobile menu · page hero · current sponsors · tiers · inquiry form · footer.
+  Funding goal: $3,500. Tiers: Diamond, Platinum, Gold, Silver, Bronze, In-Kind.
+  Sponsor inquiry form is an external JotForm embed (CSP allows cdn.jotfor.ms and form.jotform.com).
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com;"/>
   <title>Sponsors · VSYC-26 · Virginia State Yo-Yo Contest 2026</title>
@@ -39,13 +46,15 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: contest date banner + sponsor shortcut. -->
 <div id="top-bar">
   <span>VSYC-26 · SEPTEMBER 19, 2026 · DULLES TOWN CENTER · STERLING VA</span>
   <a href="vsyc26-sponsors.html">BECOME A SPONSOR →</a>
 </div>
 
-<!-- NAV -->
+<!-- Contest sub-site nav. aria-current="page" marks the active tab. -->
 <nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="vsyc26.html" class="nav-brand">
@@ -70,6 +79,7 @@
     </button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html" class="mobile-home">← HOME</a>
   <a href="vsyc26.html">ABOUT</a>
@@ -81,7 +91,7 @@
   <a href="vsyc26-faq.html">FAQ</a>
 </div>
 
-<main>
+<main id="main-content" role="main">
 <div class="vsyc-page-hero">
   <div class="vsyc-page-hero-inner">
     <span class="gold-tag">VSYC-26</span>
@@ -229,7 +239,7 @@
 
 </main>
 
-<!-- FOOTER -->
+<!-- Footer. Contest sub-site uses its own footer structure (not about.html's). -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -260,6 +270,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -268,6 +279,7 @@
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
 </script>
+  <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
   <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

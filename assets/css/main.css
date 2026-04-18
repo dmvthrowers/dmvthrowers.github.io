@@ -1,4 +1,33 @@
-/* Accessibility: Skip to main content link */
+/* ============================================================
+   DMV Throwers — shared stylesheet for the main club site.
+
+   Used by: every *.html at repo root EXCEPT the vsyc26-*.html contest
+   sub-site (which uses assets/css/vsyc26.css).
+
+   Layout philosophy: shared components + brand variables live here;
+   per-page layout tweaks live in each page's inline <style> block.
+   Don't migrate page-specific styles here unless they're reused.
+
+   Brand palette: --red (accent), --navy (primary), --cream (canvas),
+   --border (hairline divider). Use the variables, not raw hex.
+
+   Section order below (top → bottom):
+     1. Skip link + utilities extracted from inline styles
+     2. Reset + variables
+     3. Top bar
+     4. Nav + hamburger + mobile menu
+     5. Sections & headings
+     6. Buttons
+     7. Images
+     8. Footer
+     9. Hero decorations + page hero
+    10. Responsive breakpoints (768 / 480 / 375)
+    11. Reduced motion
+    12. Print
+============================================================ */
+
+/* ===== 1. Skip link + utilities ===== */
+/* Accessibility: Skip to main content link. Hidden off-screen until focused (keyboard). */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -50,9 +79,8 @@
 .text-red {
   color: var(--red) !important;
 }
-/* DMV Throwers — Shared stylesheet for all main site pages */
 
-/* RESET + VARIABLES */
+/* ===== 2. Reset + variables ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   --red: #D42B2B;
@@ -64,6 +92,7 @@
   --border: #d4cebc;
   --text-muted: #6a7a9a;
   --text-body: #3a4a6a;
+  /* Letter-spacing tokens for uppercase labels (SECTION TAGS, nav links). Keep pairs in lockstep. */
   --caps-track: 0.12em;
   --caps-track-tight: 0.1em;
 }
@@ -74,18 +103,20 @@ body { font-family: 'DM Sans', system-ui, -apple-system, sans-serif; background:
 img, svg, video, canvas { max-width: 100%; height: auto; }
 a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
 
-/* Better keyboard visibility and readability */
+/* Better keyboard visibility and readability.
+   :focus-visible only fires for keyboard focus (not mouse click), so mouse users don't see the outline ring. */
 a:focus-visible, button:focus-visible, .btn:focus-visible {
   outline: 3px solid var(--red);
   outline-offset: 2px;
 }
 
-/* TOP BAR */
+/* ===== 3. Top bar ===== */
 #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 #top-bar span { font-size: 0.72rem; color: white; letter-spacing: var(--caps-track); font-weight: 600; }
 #top-bar a { font-size: 0.72rem; color: white; letter-spacing: var(--caps-track-tight); font-weight: 700; text-decoration: underline; white-space: nowrap; }
 
-/* NAV */
+/* ===== 4. Nav + hamburger + mobile menu ===== */
+/* nav is sticky at top:0; the .nav-link.active state mirrors aria-current="page" set per page. */
 nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; will-change: transform; }
 .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .nav-brand { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
@@ -99,7 +130,7 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
 .nav-donate:hover { background: #0f9d84 !important; border-bottom: none !important; }
 
-/* HAMBURGER / MOBILE MENU */
+/* Hamburger + mobile menu. .open class is toggled by the inline script on each page. */
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
 .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
@@ -108,7 +139,7 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
 .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
 
-/* SECTIONS */
+/* ===== 5. Sections & headings ===== */
 .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
 .section-bg-white { background: white; content-visibility: auto; contain-intrinsic-size: auto 600px; }
 .section-bg-navy { background: var(--navy); content-visibility: auto; contain-intrinsic-size: auto 600px; }
@@ -130,7 +161,8 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
   overflow-wrap: break-word;
 }
 
-/* BUTTONS */
+/* ===== 6. Buttons ===== */
+/* min-height: 44px is the WCAG tap target minimum — keep it. */
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 14px 32px; font-weight: 700; letter-spacing: 0.095em; font-size: 0.82rem; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.1s; font-family: 'DM Sans', sans-serif; touch-action: manipulation; }
 .btn-red { background: var(--red); color: white; }
 .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
@@ -139,11 +171,14 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 .btn-outline-white { background: transparent; border: 2px solid white; color: white; }
 .btn-outline-white:hover { background: white; color: var(--navy); }
 
-/* IMAGES */
+/* ===== 7. Images ===== */
 .header-logo, .nav-logo { width: 38px; height: 38px; object-fit: contain; }
+/* brightness(0) invert(1) turns the dark-on-transparent logo white for the navy footer. */
 .footer-logo { width: 34px; height: 34px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.8; }
 
-/* FOOTER */
+/* ===== 8. Footer =====
+   Canonical structure lives in about.html. Older pages used .footer-title/.footer-subtitle;
+   canonical uses .footer-brand-main/.footer-brand-sub — both names are supported below. */
 footer { background: var(--navy); padding: 40px 24px 24px; }
 .footer-inner { max-width: 1100px; margin: 0 auto; }
 .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
@@ -157,11 +192,12 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
 .footer-subtitle, .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.16em; color: #D42B2B; font-weight: 700; }
 .footer-vsyc, .footer-vsyc-link { color: #C9A84C; font-weight: 700; }
 
-/* HERO SKYLINE DECORATION (full-screen #hero pages) */
+/* ===== 9. Hero decorations + page hero ===== */
+/* Full-screen hero skyline (index.html). Decorative only — <img alt="" aria-hidden="true">. */
 .hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; pointer-events: none; }
 .hero-skyline img { width: 100%; height: 100%; opacity: 0.18; display: block; }
 
-/* PAGE HERO (compact header for sub-pages) */
+/* Compact page hero used on secondary pages (about, team, events, etc.). */
 .page-hero { background: var(--navy); position: relative; overflow: hidden; padding: 48px 24px 80px; }
 .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 32px 32px; }
 .page-hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
@@ -170,7 +206,10 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
 .page-hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 70px; pointer-events: none; }
 .page-hero-skyline img { width: 100%; height: 100%; opacity: 0.15; display: block; }
 
-/* RESPONSIVE */
+/* ===== 10. Responsive breakpoints =====
+   768px: tablet — nav collapses to hamburger, footer stacks.
+   480px: small phone — top bar recenters, nav/section padding shrinks.
+   375px: iPhone SE / small — further tighten letter-spacing on tiny text. */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -198,6 +237,7 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
   .footer-copy { font-size: 0.69rem; line-height: 1.55; }
 }
 
+/* ===== 11. Reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -207,6 +247,8 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
   }
 }
 
+/* ===== 12. Print =====
+   Strip nav/top bar/skip link so printed pages are just content + a monochrome footer. */
 @media print {
   #top-bar, nav, .mobile-menu, .hero-skyline, .page-hero-skyline,
   .hero-dots, .mobile-quick-actions, .skip-link,

@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<!--
+  vsyc26.html — Contest landing/hub page for the Virginia State Yo-Yo Contest 2026.
+  Sections: top bar · contest nav · mobile menu · hero + countdown · about · footer.
+  Part of the VSYC-26 sub-site (vsyc26-*.html), which uses its own stylesheet (assets/css/vsyc26.css).
+  Event JSON-LD here is consumed by search engines for rich-event listings — keep dates/venue in sync with site copy.
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Virginia State Yo-Yo Contest 2026 · VSYC-26</title>
@@ -98,13 +105,15 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: contest date banner + sponsor shortcut. -->
 <div id="top-bar">
   <span>VSYC-26 · SEPTEMBER 19, 2026 · DULLES TOWN CENTER · STERLING VA</span>
   <a href="vsyc26-sponsors.html">SPONSOR VSYC-26 →</a>
 </div>
 
-<!-- NAV -->
+<!-- Contest sub-site nav. aria-current="page" marks the active tab. -->
 <nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="vsyc26.html" class="nav-brand">
@@ -129,6 +138,7 @@
     </button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html" class="mobile-home">← HOME</a>
   <a href="vsyc26.html">ABOUT</a>
@@ -140,7 +150,8 @@
   <a href="vsyc26-faq.html">FAQ</a>
 </div>
 
-<main>
+<main id="main-content" role="main">
+<!-- Hero: headline + date/time/venue facts + countdown timer. Countdown JS lives inline at bottom of page. -->
 <section id="hero">
   <div class="hero-pattern"></div>
   <div class="hero-glow"></div>
@@ -225,7 +236,7 @@
 
 </main>
 
-<!-- FOOTER -->
+<!-- Footer. Contest sub-site uses its own footer structure (not about.html's). -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -256,6 +267,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger toggle + countdown timer. Kept on vsyc26.html; not extracted to a shared file. -->
 <script>
   // Mobile menu
   document.getElementById('hamburger').addEventListener('click', function() {
@@ -295,6 +307,7 @@
     setInterval(updateCountdown, reducedMotion ? 60000 : 1000);
   })();
 </script>
+  <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
   <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

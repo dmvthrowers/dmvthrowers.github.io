@@ -1,6 +1,25 @@
+/*
+  mobile-enhancements.js — shared progressive-enhancement layer for every page.
+
+  Loaded with `defer` so HTML parses first; initMobileEnhancements() then runs
+  on DOMContentLoaded (or immediately if the document is already past that).
+
+  Responsibilities, in order of run:
+    1. Inject mobile-only CSS (skip link, fixed mobile-menu position, quick-action FAB styles).
+    2. Build floating "TOP" + "MENU" quick-action buttons for narrow viewports.
+    3. Wire hamburger + mobile-menu + quick-menu so their state stays in sync
+       (aria-expanded, body scroll lock, outside-click / Escape closes).
+    4. Call ensureSkipLink() (no-op if the page already has a static skip link).
+    5. Call normalizeExternalLinks() to force rel="noopener noreferrer" on target=_blank.
+    6. Call optimizeImages() to set decoding=async + loading=lazy on non-hero images.
+
+  Idempotency: the style block has id="mobile-enhancements-style" and initialization
+  bails if it's already present. Safe to include on every page without double-binding.
+*/
 (function () {
   'use strict';
 
+  // Honors OS-level "reduce motion" preference for programmatic scrolls/animations.
   function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
@@ -9,6 +28,8 @@
     window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
   }
 
+  // Injects a "Skip to content" link as the first body element if the page doesn't already
+  // have one (id="skip-to-content"). No-op on pages that ship a static skip link inline.
   function ensureSkipLink() {
     if (document.getElementById('skip-to-content')) {
       return;
@@ -41,6 +62,8 @@
     });
   }
 
+  // Safety net for a[target="_blank"]: appends "noopener noreferrer" to any link missing them.
+  // HTML authors already add these manually; this catches accidental omissions.
   function normalizeExternalLinks() {
     var links = document.querySelectorAll('a[target="_blank"]');
     links.forEach(function (link) {
@@ -56,6 +79,8 @@
     });
   }
 
+  // Adds decoding="async" + loading="lazy" to images that don't already set them.
+  // Hero images are excluded from lazy-loading so LCP isn't delayed.
   function optimizeImages() {
     var images = document.querySelectorAll('img');
     images.forEach(function (img) {
@@ -70,6 +95,9 @@
     });
   }
 
+  // Main entry point. Builds the mobile UX layer (styles + quick-action FAB + listeners),
+  // then kicks off the non-mobile-specific helpers. Guarded by the style-tag id check
+  // so running twice is a no-op.
   function initMobileEnhancements() {
     if (document.getElementById('mobile-enhancements-style')) {
       return;
@@ -123,6 +151,8 @@
       return window.matchMedia('(max-width: 768px)').matches;
     }
 
+    // Single source of truth for menu state across the hamburger, the FAB menu button,
+    // and body's scroll-lock class. Called on toggle, scroll, resize, outside-click, Escape.
     function syncMenuState() {
       var menu = document.getElementById('mobile-menu');
       var hamburger = document.getElementById('hamburger');
@@ -135,6 +165,8 @@
       menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     }
 
+    // Shows the floating "TOP" button after the user has scrolled past ~one viewport
+    // on narrow screens. Hidden on desktop where a floating button would be noise.
     function toggleTopVisibility() {
       if (!isMobileView()) {
         topButton.classList.remove('visible');
@@ -227,6 +259,8 @@
     syncMenuState();
   }
 
+  // Defer attribute means the script runs after HTML parse; if for any reason the document
+  // is still loading (older browsers, sync injection), wait for DOMContentLoaded.
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initMobileEnhancements);
   } else {

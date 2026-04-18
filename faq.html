@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<!--
+  faq.html — Frequently asked questions (accordion-style).
+  Sections: top bar · main nav · page hero · FAQ accordion (grouped: General /
+  Meetup Logistics / Skill Levels / Kids & Families / Contests / Getting Involved) · footer.
+  Mirror of the on-page Q&A also lives in the JSON-LD FAQPage schema — update both when editing.
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>FAQ - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
@@ -142,11 +149,13 @@
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- Top bar: next meetup date + RSVP shortcut. Update the date text each month. -->
 <div id="top-bar">
   <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
 <nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
@@ -172,6 +181,7 @@
     </button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html">ABOUT</a>
   <a href="team.html">TEAM</a>
@@ -186,6 +196,7 @@
 
 <main id="main-content" role="main">
 
+<!-- Page hero: compact banner used on secondary pages. -->
 <div class="page-hero">
   <div class="page-hero-inner">
     <span class="red-tag">DMV THROWERS</span>
@@ -197,6 +208,8 @@
   </div>
 </div>
 
+<!-- FAQ accordion. Grouped by .faq-section-title; each .faq-item is one question.
+     toggleFaq() (below) enforces only one open at a time; aria-expanded mirrors state. -->
 <section id="faq" class="section">
   <div class="red-tag">FAQ</div>
   <h2 class="section-title">Frequently Asked Questions</h2>
@@ -333,12 +346,19 @@
 
 </main>
 
+<!-- Footer. Canonical structure lives in about.html; keep in sync when editing. -->
 <footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
           <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
         </div>
       </div>
       <nav aria-label="Footer">
-        <a href="index.html" class="footer-link">About</a>
+        <a href="about.html" class="footer-link">About</a>
         <a href="team.html" class="footer-link">Team</a>
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
@@ -348,7 +368,7 @@
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
-        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
       </nav>
     </div>
     <div class="footer-bottom">
@@ -357,6 +377,8 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle + FAQ accordion. Kept inline because the accordion
+     is specific to this page; shared UX polish comes from mobile-enhancements.js below. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -364,6 +386,7 @@
   document.querySelectorAll('.mobile-menu a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
+  // Accordion: close all FAQs, then open the clicked one (unless it was already open).
   function toggleFaq(btn) {
     var answer = btn.nextElementSibling;
     var toggle = btn.querySelector('.faq-toggle');
@@ -380,6 +403,7 @@
   document.querySelectorAll('.faq-q').forEach(function(btn) {
     btn.addEventListener('click', function() { toggleFaq(this); });
   });
+  // IntersectionObserver keeps the FAQ nav link visually active while the section is on screen.
   const sections = ['faq'];
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -392,6 +416,7 @@
   }, { threshold: 0.4 });
   sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
 </script>
-  <script src="assets/js/mobile-enhancements.js" defer></script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<!--
+  events.html — Upcoming events listing.
+  Sections: top bar · main nav · page hero · monthly meetups · special events · holidays · footer.
+  Event cards are hand-maintained; sort chronologically ascending. Update the JSON-LD Event
+  entries at the top of <head> alongside any new cards so search engines see them too.
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Events - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
@@ -30,6 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + one Event entry per scheduled meetup. Not rendered. -->
   <script type="application/ld+json">
   [
     {
@@ -206,11 +214,13 @@
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- Top bar: next meetup date + RSVP shortcut. Update the date text each month. -->
 <div id="top-bar">
   <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
 <nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
@@ -234,6 +244,7 @@
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html">ABOUT</a>
   <a href="team.html">TEAM</a>
@@ -246,6 +257,9 @@
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
 <div class="page-hero">
   <div class="page-hero-inner">
     <span class="red-tag">DMV THROWERS</span>
@@ -257,6 +271,7 @@
   </div>
 </div>
 
+<!-- Event cards: sort chronologically (oldest first). Event type shown by .event-type label. -->
 <section id="events" class="events-section-bg">
   <div class="section">
     <div class="red-tag">SCHEDULE</div>
@@ -570,6 +585,9 @@
   </div>
 </section>
 
+</main>
+
+<!-- Footer. Canonical structure lives in about.html; keep in sync when editing. -->
 <footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
@@ -600,6 +618,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -608,6 +627,7 @@
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
 </script>
-  <script src="assets/js/mobile-enhancements.js" defer></script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

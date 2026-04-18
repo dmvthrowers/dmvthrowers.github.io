@@ -1,9 +1,18 @@
 <!DOCTYPE html>
+<!--
+  contact.html — Contact info, Formspree-backed message form, and social links.
+  Sections: top bar · main nav · page hero · contact info + form grid · social-follow grid · footer.
+  Form submits to Formspree endpoint f/mlgojooe. The CSP on this page narrows form-action
+  to that specific endpoint (stricter than other pages which allow the formspree.io domain).
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <!-- base href="/" makes every relative URL resolve from the site root. -->
   <base href="/"/>
+  <!-- CSP: form-action is locked to the specific Formspree endpoint used below. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; form-action 'self' https://formspree.io/f/mlgojooe;"/>
   <title>Contact - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
   <meta name="description" content="Get in touch with DMV Throwers yo-yo club. Contact us for event information, membership, or general inquiries."/>
@@ -32,6 +41,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + ContactPage. Not rendered; consumed by search engines. -->
   <script type="application/ld+json">
   [
     {
@@ -105,11 +115,13 @@
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- Top bar: next meetup date + RSVP shortcut. Update the date text each month. -->
 <div id="top-bar">
   <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
 <nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
@@ -135,6 +147,7 @@
     </button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html">ABOUT</a>
   <a href="team.html">TEAM</a>
@@ -149,6 +162,7 @@
 
 <main id="main-content" role="main">
 
+<!-- Page hero: compact banner used on secondary pages. -->
 <div class="page-hero">
   <div class="page-hero-inner">
     <span class="red-tag">DMV THROWERS</span>
@@ -207,6 +221,7 @@
       <div class="contact-form">
         <h3>Send us a Message</h3>
         <form action="https://formspree.io/f/mlgojooe" method="POST">
+          <!-- Honeypot: hidden from users; bots fill it and Formspree filters those submissions. -->
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot-field"/>
           <div class="form-group">
             <label class="form-label" for="name">Name</label>
@@ -307,6 +322,7 @@
 
 </main>
 
+<!-- Footer. Canonical structure lives in about.html; keep in sync when editing. -->
 <footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
@@ -337,6 +353,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -345,6 +362,7 @@
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
 </script>
-  <script src="assets/js/mobile-enhancements.js" defer></script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>
