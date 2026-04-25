@@ -9,7 +9,7 @@
   --cream: #f5f0e8;
   --cream-mid: #ede8dc;
   --border: #2a3a5a;
-  --text-muted: #8090b8;
+  --text-muted: #fff;
   --text-body: #c8d0e0;
   --white: #ffffff;
   --caps-track: 0.12em;
@@ -245,7 +245,7 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .footer-logo { width: 34px; height: 34px; object-fit: contain; }
 .footer-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 0.95rem; color: var(--white); }
 .footer-subtitle { font-size: 0.58rem; letter-spacing: 0.18em; color: var(--gold); font-weight: 700; }
-.footer-link { color: var(--text-muted); font-size: 0.75rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
+.footer-link { color: var(--white); font-size: 0.75rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
 .footer-link:hover { color: var(--gold); }
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .footer-copy { font-size: 0.72rem; color: #3a4a6a; }
@@ -264,7 +264,7 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .p-style { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
 .p-style2 { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 28px; }
 .flex-gap { display: flex; gap: 10px; flex-wrap: wrap; }
-.tag-style { background: var(--border); color: var(--text-muted); font-size: 0.68rem; letter-spacing: 0.1em; font-weight: 700; padding: 6px 14px; }
+.tag-style { background: var(--border); color: #1a2744; font-size: 0.68rem; letter-spacing: 0.1em; font-weight: 700; padding: 6px 14px; }
 .facts-margin { margin-top: 0; }
 .note-style { margin-top: 24px; background: var(--navy); border: 1px solid var(--border); padding: 20px 24px; border-left: 4px solid var(--gold); }
 .note-span { font-size: 0.8rem; color: var(--text-muted); }

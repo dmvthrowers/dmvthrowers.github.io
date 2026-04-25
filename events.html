@@ -36,7 +36,6 @@
   <link rel="canonical" href="https://dmvthrowers.club/events.html"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <!-- JSON-LD: BreadcrumbList + one Event entry per scheduled meetup. Not rendered. -->
   <script type="application/ld+json">
   [
@@ -160,7 +159,9 @@
     }
   ]
   </script>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="assets/css/main.css" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="assets/css/main.css"/></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     /* Fixed event card structure */

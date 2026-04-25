@@ -96,7 +96,7 @@
   --caps-track: 0.12em;
   --caps-track-tight: 0.1em;
   --footer-link: #22325a; /* Stronger footer link color */
-  --footer-copy: #1a2744; /* Stronger footer copy color */
+  --footer-copy: #fff; /* White for max contrast in footer */
   --footer-brand-sub: #8a0000; /* Deeper red for subtext */
   --vsyc-label: #a00000; /* Deeper red for VSYC label */
   --team-label: #0a1a3a; /* Darker for team label */

@@ -168,15 +168,17 @@
     // Shows the floating "TOP" button after the user has scrolled past ~one viewport
     // on narrow screens. Hidden on desktop where a floating button would be noise.
     function toggleTopVisibility() {
-      if (!isMobileView()) {
-        topButton.classList.remove('visible');
-        return;
-      }
-      if (window.scrollY > 320) {
-        topButton.classList.add('visible');
-      } else {
-        topButton.classList.remove('visible');
-      }
+      window.requestAnimationFrame(function () {
+        if (!isMobileView()) {
+          topButton.classList.remove('visible');
+          return;
+        }
+        if (window.scrollY > 320) {
+          topButton.classList.add('visible');
+        } else {
+          topButton.classList.remove('visible');
+        }
+      });
     }
 
     topButton.addEventListener('click', function () {
