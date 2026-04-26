@@ -27,6 +27,10 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   outline-offset: 2px;
 }
 
+/* SKIP LINK */
+.skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.skip-link:focus { position: fixed; top: 0; left: 0; width: auto; height: auto; overflow: visible; background: var(--gold); color: var(--navy-deep); padding: 12px 20px; font-weight: 800; font-size: 0.85rem; z-index: 9999; text-decoration: none; }
+
 /* TOP BAR */
 #top-bar { background: var(--gold); padding: 8px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 #top-bar span { font-size: 0.7rem; color: var(--navy-deep); letter-spacing: var(--caps-track); font-weight: 800; }
@@ -131,7 +135,6 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .schedule-item { display: flex; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
 .schedule-time { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: var(--gold); min-width: 100px; }
 .schedule-event { font-weight: 700; font-size: 0.95rem; color: var(--white); margin-bottom: 3px; }
-.schedule-note { font-size: 0.8rem; color: var(--text-muted); }
 
 /* SPONSOR TIERS */
 .tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
@@ -264,13 +267,17 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .p-style { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
 .p-style2 { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 28px; }
 .flex-gap { display: flex; gap: 10px; flex-wrap: wrap; }
-.tag-style { background: var(--border); color: #1a2744; font-size: 0.68rem; letter-spacing: 0.1em; font-weight: 700; padding: 6px 14px; }
+.tag-style { background: var(--border); color: var(--white); font-size: 0.68rem; letter-spacing: 0.1em; font-weight: 700; padding: 6px 14px; }
 .facts-margin { margin-top: 0; }
 .note-style { margin-top: 24px; background: var(--navy); border: 1px solid var(--border); padding: 20px 24px; border-left: 4px solid var(--gold); }
 .note-span { font-size: 0.8rem; color: var(--text-muted); }
 .strong-white { color: var(--white); }
 .max-width { max-width: 700px; }
-.schedule-note { margin-top: 20px; font-size: 0.78rem; color: var(--text-muted); }
+.schedule-note { font-size: 0.78rem; color: var(--text-muted); }
+p.schedule-note { margin-top: 16px; }
+.text-gold { color: var(--gold); }
+.payment-note { margin-top: 12px; }
+.sponsor-img { max-width: 240px; height: auto; display: block; margin: 0 auto 16px; }
 .sponsor-p { font-size: 1rem; color: var(--text-body); max-width: 680px; line-height: 1.8; margin-bottom: 12px; }
 .sponsor-p2 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 40px; }
 .active-sponsors { display: flex; flex-wrap: wrap; gap: 24px; margin: 32px 0; justify-content: center; }
