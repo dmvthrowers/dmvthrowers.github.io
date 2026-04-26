@@ -220,7 +220,7 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
    Defined here so index.html can rely solely on main.css. */
 
 /* Two-column about layout */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; padding: 3rem 0; }
 .about-body { font-size: 1.05rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
 
 /* Skill-toy badge pills */
@@ -230,7 +230,7 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
 /* 2×2 stats grid */
 .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .stat-card { background: white; padding: 24px 20px; border-top: 3px solid var(--red); }
-.stat-num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.2rem; color: var(--navy); }
+.stat-num { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 2.5rem; color: var(--navy); line-height: 1; margin-bottom: 0.25rem; }
 .stat-label { font-size: 0.78rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
 
 /* Club document download card */
