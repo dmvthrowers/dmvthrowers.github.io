@@ -114,6 +114,7 @@
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
     .hero-logo-wrap img { width: 180px; height: 180px; object-fit: contain; opacity: 0.9; filter: brightness(0) invert(1); }
     .hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; pointer-events: none; }
+    .hero-skyline img { display: block; width: 100%; height: 80px; }
     /* Responsive tweaks */
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; padding-bottom: 160px; }
@@ -199,10 +200,7 @@
     </div>
   </div>
   <div class="hero-skyline">
-    <picture>
-      <source srcset="assets/images/dc-skyline.webp" type="image/webp" width="1400" height="100"/>
-      <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" width="1400" height="100"/>
-    </picture>
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
   </div>
 </section>
 
