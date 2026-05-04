@@ -1,4 +1,4 @@
-name: base
+name: dmvthrowers
 channels:
   - defaults
 dependencies:
