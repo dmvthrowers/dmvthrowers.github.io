@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<!--
+  404.html — Custom "page not found" response.
+  Served by GitHub Pages for any unknown URL under dmvthrowers.club.
+  Links back to the main sections so users can recover quickly.
+  noindex,follow so search engines don't index the error page but still crawl links.
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Page Not Found | DMV Throwers</title>
@@ -20,8 +27,9 @@
   <meta name="twitter:description" content="Return to DMV Throwers home, events, resources, and Virginia State Yo-Yo Contest pages."/>
   <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
   <meta name="twitter:image:alt" content="DMV Throwers logo"/>
-  <link rel="icon" type="image/png" href="/assets/images/logo.png"/>
-  <link rel="canonical" href="https://dmvthrowers.club/404.html"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon-48.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png"/>
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -117,7 +125,8 @@
   </style>
 </head>
 <body>
-  <main>
+  <!-- Main content: centered error card with brand lockup and recovery links. -->
+  <main id="main-content" role="main">
     <section class="error-card" aria-labelledby="error-title">
       <div class="brand-lockup">
         <img src="/assets/images/logo.png" alt="DMV Throwers logo"/>
@@ -138,6 +147,18 @@
       <p class="quick-links">Need help? Visit <a href="/contact.html">Contact</a> or <a href="/faq.html">FAQ</a>.</p>
     </section>
   </main>
+  <!-- Fallback nav: minimal landmark for assistive tech and search crawlers on the error page. -->
+  <nav aria-label="Main navigation" role="navigation">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/events.html">Events</a></li>
+      <li><a href="/resources.html">Resources</a></li>
+      <li><a href="/vsyc26.html">VSYC-26 Details</a></li>
+        <li><a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">Map</a></li>
+    </ul>
+  </nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
   <script src="/assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

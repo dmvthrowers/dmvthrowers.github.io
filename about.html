@@ -1,9 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<!--
+  about.html — About-the-club page. Also the canonical template for the shared footer;
+  if you need to rebuild a broken footer elsewhere, copy this one.
+  Sections: top bar · main nav · hero · about + stats grid · footer.
+-->
 <html lang="en">
 <head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <!-- base href="/" makes every relative URL resolve from the site root. -->
   <base href="/"/>
+  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
+       formspree for the contact form, Google Fonts for typography). -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>About - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
   <meta name="description" content="Learn about DMV Throwers, the Washington DC/Maryland/Virginia yo-yo and skill toy club. Free meetups every 3rd Sunday at Arlington Central Library."/>
@@ -26,10 +36,14 @@
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Arlington, Virginia"/>
   <link rel="canonical" href="https://dmvthrowers.club/about.html"/>
-  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + Organization. Not rendered; consumed by search engines. -->
   <script type="application/ld+json">
   [
     {
@@ -76,7 +90,7 @@
     .hero-subtitle { font-size: 0.78rem; letter-spacing: 0.22em; color: var(--red); font-weight: 700; margin-bottom: 22px; }
     .hero-desc { font-size: 1.05rem; color: #c8d0e0; line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-    .hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 100px; pointer-events: none; }
+    .hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; pointer-events: none; }
 
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
     .about-body { font-size: 1.05rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
@@ -104,22 +118,30 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: next meetup date + RSVP shortcut. Update the date text each month. -->
 <div id="top-bar">
   <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
-<nav>
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo"/>
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
       <div>
         <div class="nav-brand-text-main">DMV THROWERS</div>
         <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
       </div>
     </a>
     <div class="nav-links">
-      <a href="about.html" class="nav-link active">ABOUT</a>
+      <a href="about.html" class="nav-link active" aria-current="page">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
       <a href="events.html" class="nav-link">EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
@@ -127,23 +149,30 @@
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
       <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="about.html">ABOUT</a>
+  <a href="team.html">TEAM</a>
   <a href="events.html">EVENTS</a>
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
   <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">MAP</a>
   <a href="contact.html">CONTACT</a>
   <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
+<main id="main-content" role="main">
+
+<!-- Hero: tall banner with title, tagline, CTA buttons, and decorative skyline/dots background. -->
 <section id="hero">
   <div class="hero-dots"></div>
   <div class="hero-inner">
@@ -158,14 +187,18 @@
       </div>
     </div>
     <div class="hero-logo-wrap">
-      <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="hero-logo"/>
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="180" height="180"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="hero-logo" width="180" height="180"/>
+      </picture>
     </div>
   </div>
   <div class="hero-skyline">
-    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true"/>
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" width="1400" height="100"/>
   </div>
 </section>
 
+<!-- About: club description, pills (skill toys covered), and stats grid. -->
 <section id="about" class="section-bg-cream">
   <div class="section">
     <div class="red-tag">ABOUT US</div>
@@ -193,26 +226,35 @@
   </div>
 </section>
 
-<footer>
+</main>
+
+<!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
         <div>
           <div class="footer-brand-main">DMV THROWERS</div>
           <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
         </div>
       </div>
-      <div>
+      <nav aria-label="Footer">
         <a href="about.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
         <a href="resources.html" class="footer-link">Resources</a>
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
@@ -220,6 +262,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -228,6 +271,7 @@
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
 </script>
-  <script src="assets/js/mobile-enhancements.js" defer></script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

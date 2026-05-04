@@ -1,8 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<!--
+  events.html — Upcoming events listing.
+  Sections: top bar · main nav · page hero · monthly meetups · special events · holidays · footer.
+  Event cards are hand-maintained; sort chronologically ascending. Update the JSON-LD Event
+  entries at the top of <head> alongside any new cards so search engines see them too.
+-->
 <html lang="en">
 <head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Events - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
@@ -25,11 +33,14 @@
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Arlington, Virginia"/>
-  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
   <link rel="canonical" href="https://dmvthrowers.club/events.html"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + one Event entry per scheduled meetup. Not rendered. -->
   <script type="application/ld+json">
   [
     {
@@ -115,9 +126,46 @@
       "url": "https://dmvthrowers.club/events.html",
       "isAccessibleForFree": true
     }
+    ,
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "LibraryFest",
+      "startDate": "2026-07-18T10:00:00-04:00",
+      "endDate": "2026-07-18T19:00:00-04:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Arlington Central Library",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1015 N Quincy St",
+          "addressLocality": "Arlington",
+          "addressRegion": "VA",
+          "postalCode": "22201",
+          "addressCountry": "US"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Arlington Public Library",
+        "url": "https://arlingtonva.us/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "url": "https://arlingtonva.libcal.com/event/16446960",
+      "isAccessibleForFree": true
+    }
   ]
   </script>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="assets/css/main.css" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="assets/css/main.css"/></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     /* Fixed event card structure */
@@ -169,15 +217,22 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: next meetup date + RSVP shortcut. Update the date text each month. -->
 <div id="top-bar">
-  <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
+  <span>NEXT MEET: MAY 17, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
-<nav>
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo"/>
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
       <div>
         <div class="nav-brand-text-main">DMV THROWERS</div>
         <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
@@ -186,17 +241,19 @@
     <div class="nav-links">
       <a href="index.html" class="nav-link">ABOUT</a>
       <a href="team.html" class="nav-link">TEAM</a>
-      <a href="events.html" class="nav-link active">EVENTS</a>
+      <a href="events.html" class="nav-link active" aria-current="page">EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
       <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html">ABOUT</a>
   <a href="team.html">TEAM</a>
@@ -204,11 +261,15 @@
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
   <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">MAP</a>
   <a href="contact.html">CONTACT</a>
   <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
 <div class="page-hero">
   <div class="page-hero-inner">
     <span class="red-tag">DMV THROWERS</span>
@@ -216,10 +277,11 @@
     <p class="page-hero-sub">DC · MD · VA</p>
   </div>
   <div class="page-hero-skyline">
-    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true"/>
+          <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
   </div>
 </div>
 
+<!-- Event cards: sort chronologically (oldest first). Event type shown by .event-type label. -->
 <section id="events" class="events-section-bg">
   <div class="section">
     <div class="red-tag">SCHEDULE</div>
@@ -229,17 +291,20 @@
       Free monthly meetups every 3rd Sunday, 1–4 PM, at Arlington Central Library. No registration required, and loaner yo-yos are available.
     </p>
 
-    <div class="event-card">
+    <!-- Chronologically sorted event cards start here -->
+    <div class="event-card event-card-special">
       <div class="event-card-body">
+
         <div>
-          <div class="event-type">● MONTHLY MEETUP</div>
-          <div class="event-name">Arlington Central Library</div>
-          <div class="event-loc">1015 N Quincy St, Arlington VA 22201 · Barbara M. Donnellan Auditorium</div>
+          <div class="event-type">★ SPECIAL EVENT WORKSHOP</div>
+          <div class="event-name">Cascades Library Yo-Yo Workshop</div>
+          <div class="event-loc">21030 Whitfield Pl, Potomac Falls, VA 20165</div>
         </div>
         <div>
-          <div class="event-date">April 19</div>
-          <div class="event-day">Sunday · 1–4 PM</div>
-          <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer" class="btn btn-red event-btn-small">RSVP →</a>
+          <div class="event-date">May 23rd</div>
+          <div class="event-date">Rescheduled</div>
+          <div class="event-day">Saturday · 2–4 PM</div>
+          <a href="https://loudoun.libnet.info/event/15900522" target="_blank" rel="noopener noreferrer" class="btn btn-red event-btn-small">REGISTER →</a>
         </div>
       </div>
     </div>
@@ -255,21 +320,6 @@
           <div class="event-date">May 17</div>
           <div class="event-day">Sunday · 1–4 PM</div>
           <a href="https://arlingtonva.libcal.com/event/15919319" target="_blank" rel="noopener noreferrer" class="btn btn-red event-btn-small">RSVP →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="event-card event-card-special">
-      <div class="event-card-body">
-        <div>
-          <div class="event-type">★ SPECIAL EVENT WORKSHOP</div>
-          <div class="event-name">Cascades Library Yo-Yo Workshop</div>
-          <div class="event-loc">21030 Whitfield Pl, Potomac Falls, VA 20165</div>
-        </div>
-        <div>
-          <div class="event-date">May 2</div>
-          <div class="event-day">Saturday · 2–4 PM</div>
-          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
     </div>
@@ -325,8 +375,8 @@
           <div class="event-loc">1050 N Fayette St, Alexandria, VA 22314</div>
         </div>
         <div>
-          <div class="event-date">June TBD</div>
-          <div class="event-day">Date in June TBD</div>
+          <div class="event-date">June 28th</div>
+          <div class="event-day">Saturday, June 28, 1–3pm</div>
           <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
         </div>
       </div>
@@ -342,6 +392,21 @@
         <div>
           <div class="event-date">July 4</div>
           <div class="event-day">Saturday</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-card event-card-special">
+      <div class="event-card-body">
+        <div>
+          <div class="event-type">★ SPECIAL EVENT</div>
+          <div class="event-name">LibraryFest</div>
+          <div class="event-loc">Arlington Central Library<br>1015 N Quincy St, Arlington VA 22201</div>
+        </div>
+        <div>
+          <div class="event-date">July 18</div>
+          <div class="event-day">Saturday · 10:00am – 7:00pm</div>
+          <a href="https://arlingtonva.libcal.com/event/16446960" target="_blank" rel="noopener noreferrer" class="btn btn-red event-btn-small">REGISTER →</a>
         </div>
       </div>
     </div>
@@ -502,18 +567,25 @@
   </div>
 </section>
 
-<footer>
+</main>
+
+
+<!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="footer-logo" loading="lazy" width="38" height="38"/>
+        </picture>
         <div>
           <div class="footer-brand-main">DMV THROWERS</div>
           <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
         </div>
       </div>
-      <div>
-        <a href="index.html" class="footer-link">About</a>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
         <a href="team.html" class="footer-link">Team</a>
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
@@ -521,8 +593,10 @@
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
@@ -530,6 +604,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -538,6 +613,7 @@
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
 </script>
-  <script src="assets/js/mobile-enhancements.js" defer></script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+<!--
+  vsyc26.html — Contest landing/hub page for the Virginia State Yo-Yo Contest 2026.
+  Sections: top bar · contest nav · mobile menu · hero + countdown · about · footer.
+  Part of the VSYC-26 sub-site (vsyc26-*.html), which uses its own stylesheet (assets/css/vsyc26.css).
+  Event JSON-LD here is consumed by search engines for rich-event listings — keep dates/venue in sync with site copy.
+-->
 <html lang="en">
 <head>
+    <link rel="manifest" href="assets/images/vsyc26-site.webmanifest"/>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Virginia State Yo-Yo Contest 2026 · VSYC-26</title>
@@ -11,21 +19,25 @@
   <meta property="og:description" content="September 19, 2026 · Dulles Town Center · Sterling VA · Free to spectate"/>
   <meta property="og:type" content="event"/>
   <meta property="og:url" content="https://dmvthrowers.club/vsyc26.html"/>
-  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
-  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
+  <meta property="og:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:site_name" content="DMV Throwers"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@dmv_throwers"/>
   <meta name="twitter:title" content="VSYC-26 · Virginia State Yo-Yo Contest 2026"/>
   <meta name="twitter:description" content="September 19, 2026 · Dulles Town Center · Sterling VA · Free to spectate"/>
-  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
-  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
+  <meta name="twitter:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:locale" content="en_US"/>
   <meta name="keywords" content="Virginia State Yo-Yo Contest 2026, VSYC-26, yo-yo contest Virginia, yo-yo competition Dulles Town Center, DMV Throwers contest, yoyo contest Sterling VA"/>
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Sterling, Virginia"/>
-  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/vsyc26-va-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/vsyc26-va-logo-32.png"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/vsyc26-va-logo-48.png"/>
+  <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
   <link rel="canonical" href="https://dmvthrowers.club/vsyc26.html"/>
   <script type="application/ld+json">
   [
@@ -58,7 +70,7 @@
         "addressCountry": "US"
       }
     },
-    "image": "https://dmvthrowers.club/assets/images/logo.png",
+    "image": "https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png",
     "organizer": {
       "@type": "Organization",
       "name": "DMV Throwers Yo-Yo & Skill Toy Club",
@@ -90,22 +102,25 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="preload" as="image" href="assets/images/vsyc-marigolds-hero.webp" type="image/webp"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/vsyc26.css"/>
 </head>
 <body>
 
-<!-- TOP BAR -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: contest date banner + sponsor shortcut. -->
 <div id="top-bar">
   <span>VSYC-26 · SEPTEMBER 19, 2026 · DULLES TOWN CENTER · STERLING VA</span>
   <a href="vsyc26-sponsors.html">SPONSOR VSYC-26 →</a>
 </div>
 
-<!-- NAV -->
-<nav>
+<!-- Contest sub-site nav. aria-current="page" marks the active tab. -->
+<nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="vsyc26.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
+      <img src="assets/images/vsyc26-va-logo-192.png" alt="VA State Yo-Yo Competition logo" class="footer-logo" width="34" height="34"/>
       <div>
         <div class="nav-brand-main">VSYC-26</div>
         <div class="nav-brand-sub">VIRGINIA STATE YO-YO CONTEST</div>
@@ -113,7 +128,7 @@
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-link nav-home">← HOME</a>
-      <a href="vsyc26.html" class="nav-link active">ABOUT</a>
+      <a href="vsyc26.html" class="nav-link active" aria-current="page">ABOUT</a>
       <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
       <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
       <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
@@ -121,11 +136,12 @@
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
       <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html" class="mobile-home">← HOME</a>
   <a href="vsyc26.html">ABOUT</a>
@@ -137,7 +153,8 @@
   <a href="vsyc26-faq.html">FAQ</a>
 </div>
 
-<!-- HERO -->
+<main id="main-content" role="main">
+<!-- Hero: headline + date/time/venue facts + countdown timer. Countdown JS lives inline at bottom of page. -->
 <section id="hero">
   <div class="hero-pattern"></div>
   <div class="hero-glow"></div>
@@ -147,15 +164,15 @@
       <span class="hero-edition">VIRGINIA TRADITION SINCE 2007</span>
     </div>
     <h1 class="hero-title">VIRGINIA STATE<br/><span>YO-YO CONTEST</span></h1>
-    <span class="hero-year">2026</span>
+    <span class="hero-year" aria-hidden="true">2026</span>
     <div class="hero-meta">
       <div class="hero-meta-item">
         <span class="hero-meta-label">DATE</span>
-        <span class="hero-meta-val">Saturday, September 19</span>
+        <span class="hero-meta-val"><time datetime="2026-09-19">Saturday, September 19</time></span>
       </div>
       <div class="hero-meta-item">
         <span class="hero-meta-label">TIME</span>
-        <span class="hero-meta-val">10 AM – 7 PM</span>
+        <span class="hero-meta-val"><time datetime="10:00">10 AM</time> – <time datetime="19:00">7 PM</time></span>
       </div>
       <div class="hero-meta-item">
         <span class="hero-meta-label">VENUE</span>
@@ -181,7 +198,7 @@
     </div>
   </div>
   <div class="hero-skyline">
-    <img src="assets/images/va-cardinal.svg" alt="" aria-hidden="true"/>
+    <picture><source srcset="assets/images/vsyc-marigolds-hero.webp" type="image/webp"/><img src="assets/images/vsyc-marigolds-hero.jpg" alt="" aria-hidden="true" decoding="async" width="1168" height="784"/></picture>
   </div>
 </section>
 
@@ -206,8 +223,8 @@
       </div>
       <div>
         <div class="facts-grid facts-margin">
-          <div class="fact-card"><div class="fact-label">DATE</div><div class="fact-val">Sept 19, 2026</div></div>
-          <div class="fact-card"><div class="fact-label">HOURS</div><div class="fact-val">10 AM – 7 PM</div></div>
+          <div class="fact-card"><div class="fact-label">DATE</div><div class="fact-val"><time datetime="2026-09-19">Sept 19, 2026</time></div></div>
+          <div class="fact-card"><div class="fact-label">HOURS</div><div class="fact-val"><time datetime="10:00">10 AM</time> – <time datetime="19:00">7 PM</time></div></div>
           <div class="fact-card"><div class="fact-label">VENUE</div><div class="fact-val">Dulles Town Center</div></div>
           <div class="fact-card"><div class="fact-label">EDITION</div><div class="fact-val">16th Annual</div></div>
           <div class="fact-card"><div class="fact-label">ATTENDANCE</div><div class="fact-val">Est. 100–200</div></div>
@@ -220,26 +237,31 @@
   </div>
 </div>
 
-<!-- FOOTER -->
+</main>
+
+<!-- Footer. Contest sub-site uses its own footer structure (not about.html's). -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-flex">
-        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <img src="assets/images/vsyc26-va-logo-192.png" alt="VA State Yo-Yo Competition logo" class="footer-logo" loading="lazy" width="34" height="34"/>
         <div>
           <div class="footer-title">VIRGINIA STATE YO-YO CONTEST 2026</div>
           <div class="footer-subtitle">ORGANIZED BY DMV THROWERS · VSYC-26</div>
         </div>
       </div>
-      <div>
+      <nav aria-label="Footer">
         <a href="vsyc26.html" class="footer-link">About</a>
         <a href="vsyc26-register.html" class="footer-link">Register</a>
         <a href="vsyc26-sponsors.html" class="footer-link">Sponsors</a>
         <a href="vsyc26-venue.html" class="footer-link">Venue</a>
         <a href="vsyc26-faq.html" class="footer-link">Contact</a>
+        <a href="vsyc26-terms.html" class="footer-link">Terms</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="index.html" class="footer-link">← Club Site</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 Virginia State Yo-Yo Contest · Organized by DMV Throwers Yo-Yo & Skill Toy Club</span>
@@ -248,6 +270,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger toggle + countdown timer. Kept on vsyc26.html; not extracted to a shared file. -->
 <script>
   // Mobile menu
   document.getElementById('hamburger').addEventListener('click', function() {
@@ -258,29 +281,36 @@
   });
 
   // Countdown to September 19, 2026 10:00 AM EDT
-  function updateCountdown() {
-    const event = new Date('2026-09-19T10:00:00-04:00');
-    const now = new Date();
-    const diff = event - now;
-    if (diff <= 0) {
-      document.getElementById('cd-days').textContent = '0';
-      document.getElementById('cd-hours').textContent = '0';
-      document.getElementById('cd-mins').textContent = '0';
-      document.getElementById('cd-secs').textContent = '0';
-      return;
+  (function() {
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var elDays = document.getElementById('cd-days');
+    var elHours = document.getElementById('cd-hours');
+    var elMins = document.getElementById('cd-mins');
+    var elSecs = document.getElementById('cd-secs');
+    var eventTime = new Date('2026-09-19T10:00:00-04:00').getTime();
+    function updateCountdown() {
+      var diff = eventTime - Date.now();
+      if (diff <= 0) {
+        elDays.textContent = '0';
+        elHours.textContent = '0';
+        elMins.textContent = '0';
+        elSecs.textContent = '0';
+        return;
+      }
+      var days = Math.floor(diff / 86400000);
+      var hours = Math.floor((diff % 86400000) / 3600000);
+      var mins = Math.floor((diff % 3600000) / 60000);
+      var secs = Math.floor((diff % 60000) / 1000);
+      elDays.textContent = days;
+      elHours.textContent = String(hours).padStart(2,'0');
+      elMins.textContent = String(mins).padStart(2,'0');
+      elSecs.textContent = String(secs).padStart(2,'0');
     }
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const secs = Math.floor((diff % (1000*60)) / 1000);
-    document.getElementById('cd-days').textContent = days;
-    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-    document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
-    document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+    updateCountdown();
+    setInterval(updateCountdown, reducedMotion ? 60000 : 1000);
+  })();
 </script>
+  <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
   <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

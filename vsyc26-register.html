@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+<!--
+  vsyc26-register.html — Competitor registration page for the Virginia State Yo-Yo Contest 2026.
+  Sections: top bar · contest nav · mobile menu · page hero · divisions · registration form · footer.
+  Registration is handled by an external JotForm embed (CSP allows cdn.jotfor.ms and form.jotform.com).
+  Division fees: 1A $25, X Division $20, Sport/Beginner/Junior $15 — update the divisions section and the Event JSON-LD on vsyc26.html if they change.
+-->
 <html lang="en">
 <head>
+    <link rel="manifest" href="assets/images/vsyc26-site.webmanifest"/>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Register · VSYC-26 · Virginia State Yo-Yo Contest 2026</title>
@@ -11,43 +19,50 @@
   <meta property="og:description" content="Competitor registration and music upload — September 19, 2026 · Dulles Town Center"/>
   <meta property="og:type" content="event"/>
   <meta property="og:url" content="https://dmvthrowers.club/vsyc26-register.html"/>
-  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
-  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
+  <meta property="og:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:site_name" content="DMV Throwers"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@dmv_throwers"/>
   <meta name="twitter:title" content="Register · VSYC-26"/>
   <meta name="twitter:description" content="Competitor registration and music upload — September 19, 2026 · Dulles Town Center"/>
-  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
-  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
+  <meta name="twitter:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:locale" content="en_US"/>
   <meta name="keywords" content="VSYC-26 register, yo-yo contest registration 2026, Virginia State Yo-Yo Contest signup, VSYC-26 competitor registration"/>
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Sterling, Virginia"/>
   <link rel="canonical" href="https://dmvthrowers.club/vsyc26-register.html"/>
-  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/vsyc26-va-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/vsyc26-va-logo-32.png"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/vsyc26-va-logo-48.png"/>
+  <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/vsyc26.css"/>
+  <link rel="stylesheet" href="assets/css/vsyc26.css" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css"/></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Register","item":"https://dmvthrowers.club/vsyc26-register.html"}]}
   </script>
 </head>
 <body>
 
-<!-- TOP BAR -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: contest date banner + sponsor shortcut. -->
 <div id="top-bar">
   <span>VSYC-26 · SEPTEMBER 19, 2026 · DULLES TOWN CENTER · STERLING VA</span>
   <a href="vsyc26-sponsors.html">BECOME A SPONSOR →</a>
 </div>
 
-<!-- NAV -->
-<nav>
+<!-- Contest sub-site nav. aria-current="page" marks the active tab. -->
+<nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="vsyc26.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo"/>
+      <img src="assets/images/vsyc26-va-logo-192.png" alt="VA State Yo-Yo Competition logo" class="footer-logo" width="34" height="34"/>
       <div>
         <div class="nav-brand-main">VSYC-26</div>
         <div class="nav-brand-sub">VIRGINIA STATE YO-YO CONTEST</div>
@@ -57,17 +72,18 @@
       <a href="index.html" class="nav-link nav-home">← HOME</a>
       <a href="vsyc26.html" class="nav-link">ABOUT</a>
       <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
-      <a href="vsyc26-register.html" class="nav-link active">REGISTER</a>
+      <a href="vsyc26-register.html" class="nav-link active" aria-current="page">REGISTER</a>
       <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
       <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
       <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html" class="mobile-home">← HOME</a>
   <a href="vsyc26.html">ABOUT</a>
@@ -79,7 +95,7 @@
   <a href="vsyc26-faq.html">FAQ</a>
 </div>
 
-<!-- PAGE HERO -->
+<main id="main-content" role="main">
 <div class="vsyc-page-hero">
   <div class="vsyc-page-hero-inner">
     <span class="gold-tag">VSYC-26</span>
@@ -87,7 +103,7 @@
     <p class="vsyc-page-hero-sub">Virginia State Yo-Yo Contest · September 19, 2026 · Sterling, VA</p>
   </div>
   <div class="page-hero-nature">
-    <img src="assets/images/va-cardinal.svg" alt="" aria-hidden="true"/>
+    <picture><source srcset="assets/images/vsyc-marigolds-hero.webp" type="image/webp"/><img src="assets/images/vsyc-marigolds-hero.jpg" alt="" aria-hidden="true" width="1168" height="784"/></picture>
   </div>
 </div>
 
@@ -149,6 +165,7 @@
             <a href="https://www.paypal.biz/Dmvthrowers" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small">PAYPAL</a>
             <a href="https://venmo.com/u/DMVThrow" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-small">VENMO</a>
           </div>
+          <p class="payment-text payment-note">Registration fees are non-refundable once payment clears, except in documented medical emergencies or event cancellation. <a href="vsyc26-terms.html#refund" class="text-gold">Full refund &amp; terms policy →</a></p>
         </div>
       </div>
       <div>
@@ -184,26 +201,31 @@
   </div>
 </div>
 
-<!-- FOOTER -->
+</main>
+
+<!-- Footer. Contest sub-site uses its own footer structure (not about.html's). -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-flex">
-        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <img src="assets/images/vsyc26-va-logo-192.png" alt="VA State Yo-Yo Competition logo" class="footer-logo" loading="lazy" width="34" height="34"/>
         <div>
           <div class="footer-title">VIRGINIA STATE YO-YO CONTEST 2026</div>
           <div class="footer-subtitle">ORGANIZED BY DMV THROWERS · VSYC-26</div>
         </div>
       </div>
-      <div>
+      <nav aria-label="Footer">
         <a href="vsyc26.html" class="footer-link">About</a>
         <a href="vsyc26-register.html" class="footer-link">Register</a>
         <a href="vsyc26-sponsors.html" class="footer-link">Sponsors</a>
         <a href="vsyc26-venue.html" class="footer-link">Venue</a>
         <a href="vsyc26-faq.html" class="footer-link">Contact</a>
+        <a href="vsyc26-terms.html" class="footer-link">Terms</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="index.html" class="footer-link">← Club Site</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 Virginia State Yo-Yo Contest · Organized by DMV Throwers Yo-Yo & Skill Toy Club</span>
@@ -212,6 +234,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', function() {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -220,6 +243,7 @@
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
 </script>
+  <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
   <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

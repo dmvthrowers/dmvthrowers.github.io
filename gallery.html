@@ -1,8 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<!--
+  gallery.html — Photo gallery of past meetups and events.
+  Sections: top bar · main nav · page hero · photo grid · social-follow CTA · footer.
+  Each gallery item uses <picture> with a WebP source and PNG fallback; add new photos
+  by copying a .gallery-item block. Keep width/height on the <img> to prevent layout shift.
+-->
 <html lang="en">
 <head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Gallery - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
@@ -26,10 +34,13 @@
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Arlington, Virginia"/>
   <link rel="canonical" href="https://dmvthrowers.club/gallery.html"/>
-  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"Gallery","item":"https://dmvthrowers.club/gallery.html"}]}
   </script>
@@ -47,7 +58,7 @@
     .gallery-more { margin-top: 48px; text-align: center; }
     .gallery-more-box { background: var(--navy); color: white; padding: 32px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
     .gallery-more-box h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; margin-bottom: 12px; }
-    .gallery-more-box p { color: var(--text-muted); margin-bottom: 24px; }
+    .gallery-more-box p { color: rgba(255,255,255,0.7); margin-bottom: 24px; }
     .gallery-more-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .gallery-more-link { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: white; padding: 12px 20px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
     .gallery-more-link:hover { background: var(--red-dark); }
@@ -58,15 +69,22 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: next meetup date + RSVP shortcut. Update the date text each month. -->
 <div id="top-bar">
-  <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
+  <span>NEXT MEET: MAY 17, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
-<nav>
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo"/>
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
       <div>
         <div class="nav-brand-text-main">DMV THROWERS</div>
         <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
@@ -76,18 +94,20 @@
       <a href="index.html" class="nav-link">ABOUT</a>
       <a href="team.html" class="nav-link">TEAM</a>
       <a href="events.html" class="nav-link">EVENTS</a>
-      <a href="gallery.html" class="nav-link active">GALLERY</a>
+      <a href="gallery.html" class="nav-link active" aria-current="page">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
       <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html">ABOUT</a>
   <a href="team.html">TEAM</a>
@@ -95,11 +115,15 @@
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
   <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">MAP</a>
   <a href="contact.html">CONTACT</a>
   <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
 <div class="page-hero">
   <div class="page-hero-inner">
     <span class="red-tag">DMV THROWERS</span>
@@ -107,7 +131,7 @@
     <p class="page-hero-sub">DC · MD · VA</p>
   </div>
   <div class="page-hero-skyline">
-    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true"/>
+          <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
   </div>
 </div>
 
@@ -117,66 +141,69 @@
     <h2 class="section-title">Gallery</h2>
     <div class="divider"></div>
     <p class="gallery-desc-p">Photos from our monthly meetups at Arlington Central Library and community events</p>
+    <p class="gallery-desc-p gallery-desc-note">Photos taken at DMV Throwers events may feature attendees. By attending our events you acknowledge that photos may be shared publicly. If you'd like a photo removed, contact us at <a href="mailto:contact@dmvthrowers.club" class="text-red">contact@dmvthrowers.club</a>. See our <a href="privacy.html" class="text-red">Privacy Policy</a> for full details.</p>
 
+    <!-- Photo grid. Each item: <picture> WebP source (served if supported) + PNG <img> fallback.
+         Always set width/height on the <img> to reserve layout space and avoid CLS. -->
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-01.png" alt="Club Throwing" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-01.webp" type="image/webp"/><img src="assets/images/gallery/gallery-01.png" alt="Club Throwing" class="gallery-img" loading="lazy" width="799" height="552"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">Club Throwing</div>
           <div class="gallery-desc">Members practicing at Arlington Central Library</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-03.png" alt="Trick Practice" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-03.webp" type="image/webp"/><img src="assets/images/gallery/gallery-03.png" alt="Trick Practice" class="gallery-img" loading="lazy" width="780" height="462"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">Trick Practice</div>
           <div class="gallery-desc">Focused practice sessions for new throws</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-04.png" alt="Group Jam" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-04.webp" type="image/webp"/><img src="assets/images/gallery/gallery-04.png" alt="Group Jam" class="gallery-img" loading="lazy" width="791" height="645"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">Group Jam</div>
           <div class="gallery-desc">Community jam sessions every month</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-05.png" alt="First Library Meetup" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-05.webp" type="image/webp"/><img src="assets/images/gallery/gallery-05.png" alt="First Library Meetup" class="gallery-img" loading="lazy" width="839" height="357"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">First Library Meetup</div>
           <div class="gallery-desc">Initial gathering at Arlington Central Library</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-06.png" alt="First Meetup" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-06.webp" type="image/webp"/><img src="assets/images/gallery/gallery-06.png" alt="First Meetup" class="gallery-img" loading="lazy" width="857" height="438"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">First Meetup</div>
           <div class="gallery-desc">Initial gathering of club members</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-07.png" alt="Spin Top Demo" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-07.webp" type="image/webp"/><img src="assets/images/gallery/gallery-07.png" alt="Spin Top Demo" class="gallery-img" loading="lazy" width="580" height="510"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">Spin Top Demo</div>
           <div class="gallery-desc">Dick Stohr demonstrating spin top techniques</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-09.png" alt="Library Joining Event" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-09.webp" type="image/webp"/><img src="assets/images/gallery/gallery-09.png" alt="Library Joining Event" class="gallery-img" loading="lazy" width="814" height="303"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">Library Joining Event</div>
           <div class="gallery-desc">Library community event</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-12.png" alt="Cascades Library Workshop" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-12.webp" type="image/webp"/><img src="assets/images/gallery/gallery-12.png" alt="Cascades Library Workshop" class="gallery-img" loading="lazy" width="502" height="308"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">Cascades Library Workshop</div>
           <div class="gallery-desc">Educational session at Cascades Library</div>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/gallery/gallery-10.png" alt="Quincy Park Meetup" class="gallery-img" loading="lazy">
+        <picture><source srcset="assets/images/gallery/gallery-10.webp" type="image/webp"/><img src="assets/images/gallery/gallery-10.png" alt="Quincy Park Meetup" class="gallery-img" loading="lazy" width="793" height="336"></picture>
         <div class="gallery-caption">
           <div class="gallery-title">Quincy Park Meetup</div>
           <div class="gallery-desc">Outdoor gathering and practice session</div>
@@ -189,26 +216,32 @@
         <h3>More Photos</h3>
         <p>Follow us on social media for the latest photos and videos from every event</p>
         <div class="gallery-more-links">
-          <a href="https://instagram.com/dmv_throwers" target="_blank" rel="noopener noreferrer" class="gallery-more-link">📸 Instagram</a>
-          <a href="https://www.facebook.com/share/g/1DbrxESDDc/" target="_blank" rel="noopener noreferrer" class="gallery-more-link">👥 Facebook</a>
+          <a href="https://instagram.com/dmv_throwers" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in new tab)" class="gallery-more-link">Instagram</a>
+          <a href="https://www.facebook.com/share/g/1DbrxESDDc/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in new tab)" class="gallery-more-link">Facebook</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer>
+</main>
+
+<!-- Footer. Canonical structure lives in about.html; keep in sync when editing. -->
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="footer-logo" loading="lazy" width="38" height="38"/>
+        </picture>
         <div>
           <div class="footer-brand-main">DMV THROWERS</div>
           <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
         </div>
       </div>
-      <div>
-        <a href="index.html" class="footer-link">About</a>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
         <a href="team.html" class="footer-link">Team</a>
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
@@ -216,8 +249,10 @@
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
@@ -225,6 +260,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -233,6 +269,7 @@
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
 </script>
-  <script src="assets/js/mobile-enhancements.js" defer></script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

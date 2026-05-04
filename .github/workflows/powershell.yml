@@ -1,0 +1,85 @@
+name: PowerShell
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  schedule:
+    - cron: "27 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build:
+    name: Analyze PowerShell scripts
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+
+      - name: Run PSScriptAnalyzer and create SARIF
+        shell: pwsh
+        run: |
+          $resultsPath = Join-Path $PWD "powershell-results.sarif"
+          $results = Invoke-ScriptAnalyzer -Path . -Recurse
+
+          $rules = $results | Select-Object -ExpandProperty RuleName -Unique | ForEach-Object {
+            @{ id = $_; name = $_; shortDescription = @{ text = $_ }; helpUri = "https://learn.microsoft.com/powershell/utility-modules/psscriptanalyzer/rules/$_" }
+          }
+
+          $ruleIndex = @{}
+          $i = 0
+          $rules | ForEach-Object { $ruleIndex[$_.id] = $i; $i++ }
+
+          $sarifResults = $results | ForEach-Object {
+            $severity = switch ($_.Severity) {
+              'Error'       { 'error' }
+              'Warning'     { 'warning' }
+              'Information' { 'note' }
+              default       { 'note' }
+            }
+            $relPath = $_.ScriptPath.Replace($PWD.Path, '').TrimStart('/\').Replace('\','/')
+            @{
+              ruleId    = $_.RuleName
+              ruleIndex = $ruleIndex[$_.RuleName]
+              level     = $severity
+              message   = @{ text = $_.Message }
+              locations = @(@{
+                physicalLocation = @{
+                  artifactLocation = @{ uri = $relPath; uriBaseId = '%SRCROOT%' }
+                  region = @{ startLine = $_.Line; startColumn = $_.Column }
+                }
+              })
+            }
+          }
+
+          $sarif = @{
+            '$schema' = 'https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json'
+            version   = '2.1.0'
+            runs      = @(@{
+              tool    = @{ driver = @{ name = 'PSScriptAnalyzer'; rules = @($rules) } }
+              results = @($sarifResults)
+            })
+          }
+
+          $sarif | ConvertTo-Json -Depth 20 | Set-Content $resultsPath -Encoding UTF8
+
+      - name: Upload SARIF to code scanning
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: powershell-results.sarif
+          category: "/workflow:powershell"

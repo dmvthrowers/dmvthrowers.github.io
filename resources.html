@@ -1,8 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<!--
+  resources.html — Downloadable club resources (charter, guides, press kit).
+  Sections: top bar · main nav · page hero · resource grid · support CTA · footer.
+  Each resource card links to a file in assets/documents/. Add new resources by
+  dropping a file into that folder and copying an existing .resource-card block.
+-->
 <html lang="en">
 <head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Resources - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
@@ -25,11 +33,15 @@
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Arlington, Virginia"/>
-  <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
   <link rel="canonical" href="https://dmvthrowers.club/resources.html"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + ItemList of downloadable resources. Not rendered. -->
   <script type="application/ld+json">
   [
     {
@@ -75,7 +87,7 @@
     .support-section { margin-top: 48px; text-align: center; }
     .support-box { background: var(--navy); color: white; padding: 32px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
     .support-h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; margin-bottom: 16px; }
-    .support-p { margin-bottom: 20px; color: var(--text-muted); }
+    .support-p { margin-bottom: 20px; color: rgba(255,255,255,0.7); }
     .support-link { display: inline-block; background: var(--red); color: white; padding: 12px 24px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
     .support-link:hover { background: var(--red-dark); }
     @media (max-width: 768px) {
@@ -100,15 +112,19 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: next meetup date + RSVP shortcut. Update the date text each month. -->
 <div id="top-bar">
   <span>NEXT MEET: APRIL 19, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
   <a href="https://arlingtonva.libcal.com/event/15203836" target="_blank" rel="noopener noreferrer">RSVP →</a>
 </div>
 
-<nav>
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo"/>
+      <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
       <div>
         <div class="nav-brand-text-main">DMV THROWERS</div>
         <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
@@ -119,15 +135,17 @@
       <a href="team.html" class="nav-link">TEAM</a>
       <a href="events.html" class="nav-link">EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
-      <a href="resources.html" class="nav-link active">RESOURCES</a>
+      <a href="resources.html" class="nav-link active" aria-current="page">RESOURCES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
       <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html">ABOUT</a>
   <a href="team.html">TEAM</a>
@@ -135,11 +153,15 @@
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
   <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">MAP</a>
   <a href="contact.html">CONTACT</a>
   <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
 </div>
 
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
 <div class="page-hero">
   <div class="page-hero-inner">
     <span class="red-tag">DMV THROWERS</span>
@@ -147,10 +169,11 @@
     <p class="page-hero-sub">DC · MD · VA</p>
   </div>
   <div class="page-hero-skyline">
-    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true"/>
+          <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
   </div>
 </div>
 
+<!-- Resource grid: one .resource-card per downloadable asset. Files live in assets/documents/. -->
 <section id="resources" class="resources-section-bg">
   <div class="section">
     <div class="red-tag">DOWNLOADS</div>
@@ -242,7 +265,10 @@
   </div>
 </section>
 
-<footer>
+</main>
+
+<!-- Footer. Canonical structure lives in about.html; keep in sync when editing. -->
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
@@ -252,8 +278,8 @@
           <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
         </div>
       </div>
-      <div>
-        <a href="index.html" class="footer-link">About</a>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
         <a href="team.html" class="footer-link">Team</a>
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
@@ -261,8 +287,10 @@
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
@@ -270,6 +298,7 @@
   </div>
 </footer>
 
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('open');
@@ -278,6 +307,7 @@
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
 </script>
-  <script src="assets/js/mobile-enhancements.js" defer></script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>

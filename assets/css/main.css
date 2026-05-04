@@ -1,40 +1,128 @@
-/* DMV Throwers — Shared stylesheet for all main site pages */
+/* ============================================================
+   DMV Throwers — shared stylesheet for the main club site.
 
-/* RESET + VARIABLES */
+   Used by: every *.html at repo root EXCEPT the vsyc26-*.html contest
+   sub-site (which uses assets/css/vsyc26.css).
+
+   Layout philosophy: shared components + brand variables live here;
+   per-page layout tweaks live in each page's inline <style> block.
+   Don't migrate page-specific styles here unless they're reused.
+
+   Brand palette: --red (accent), --navy (primary), --cream (canvas),
+   --border (hairline divider). Use the variables, not raw hex.
+
+   Section order below (top → bottom):
+     1. Skip link + utilities extracted from inline styles
+     2. Reset + variables
+     3. Top bar
+     4. Nav + hamburger + mobile menu
+     5. Sections & headings
+     6. Buttons
+     7. Images
+     8. Footer
+     9. Hero decorations + page hero
+    10. Responsive breakpoints (768 / 480 / 375)
+    11. Reduced motion
+    12. Print
+============================================================ */
+
+/* ===== 1. Skip link + utilities ===== */
+/* Accessibility: Skip to main content link. Hidden off-screen until focused (keyboard). */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 1000;
+  background: var(--red);
+  color: white;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: left 0.2s;
+}
+.skip-link:focus, .skip-link:active {
+  left: 24px;
+  top: 0;
+  width: auto;
+  height: auto;
+  outline: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+/* Payment note style moved from inline */
+.payment-note {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: #102040;
+}
+.text-gold {
+  color: #e0b000 !important; /* More contrast for gold */
+}
+/* Sponsor image style moved from inline */
+.sponsor-img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 16px;
+}
+/* Gallery note style moved from inline */
+.gallery-desc-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: -8px;
+}
+.text-red {
+  color: var(--red) !important;
+}
+
+/* ===== 2. Reset + variables ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --red: #D42B2B;
-  --red-dark: #b01f1f;
-  --navy: #1a2744;
-  --navy-deep: #0e1833;
-  --cream: #f5f0e8;
-  --cream-mid: #f0ebe0;
-  --border: #d4cebc;
-  --text-muted: #6a7a9a;
-  --text-body: #3a4a6a;
+  --red: #B80000; /* More contrast, deeper red */
+  --red-dark: #7a0000;
+  --navy: #102040; /* Darker navy for better contrast */
+  --navy-deep: #08122a;
+  --cream: #fffdfa; /* Slightly lighter for more contrast */
+  --cream-mid: #f7f3ec;
+  --border: #b0a890;
+  --text-muted: #4a5a7a; /* Darker muted text for better contrast */
+  --text-body: #1a2744; /* Use navy for body text for max contrast */
+  /* Letter-spacing tokens for uppercase labels (SECTION TAGS, nav links). Keep pairs in lockstep. */
   --caps-track: 0.12em;
   --caps-track-tight: 0.1em;
+  --footer-link: #8fa8d8; /* Light muted blue — readable on navy #102040 (≈5.5:1 contrast) */
+  --footer-copy: #fff; /* White for max contrast in footer */
+  --footer-brand-sub: #8a0000; /* Deeper red for subtext */
+  --vsyc-label: #a00000; /* Deeper red for VSYC label */
+  --team-label: #0a1a3a; /* Darker for team label */
 }
 html {
   scroll-behavior: smooth;
 }
-body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); line-height: 1.6; text-rendering: optimizeLegibility; }
+body { font-family: 'DM Sans', system-ui, -apple-system, sans-serif; background: var(--cream); color: var(--navy); line-height: 1.6; text-rendering: optimizeLegibility; }
 img, svg, video, canvas { max-width: 100%; height: auto; }
 a, button, [role="button"] { -webkit-tap-highlight-color: transparent; }
 
-/* Better keyboard visibility and readability */
+/* Better keyboard visibility and readability.
+   :focus-visible only fires for keyboard focus (not mouse click), so mouse users don't see the outline ring. */
 a:focus-visible, button:focus-visible, .btn:focus-visible {
   outline: 3px solid var(--red);
   outline-offset: 2px;
 }
 
-/* TOP BAR */
+/* ===== 3. Top bar ===== */
 #top-bar { background: var(--red); padding: 9px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 #top-bar span { font-size: 0.72rem; color: white; letter-spacing: var(--caps-track); font-weight: 600; }
 #top-bar a { font-size: 0.72rem; color: white; letter-spacing: var(--caps-track-tight); font-weight: 700; text-decoration: underline; white-space: nowrap; }
 
-/* NAV */
-nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; }
+/* ===== 4. Nav + hamburger + mobile menu ===== */
+/* nav is sticky at top:0; the .nav-link.active state mirrors aria-current="page" set per page. */
+nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 200; will-change: transform; }
 .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .nav-brand { display: flex; align-items: center; gap: 12px; cursor: pointer; text-decoration: none; }
 .nav-brand-text-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; line-height: 1; color: var(--navy); }
@@ -47,7 +135,7 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
 .nav-donate:hover { background: #0f9d84 !important; border-bottom: none !important; }
 
-/* HAMBURGER / MOBILE MENU */
+/* Hamburger + mobile menu. .open class is toggled by the inline script on each page. */
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
 .mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
@@ -56,10 +144,10 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
 .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
 
-/* SECTIONS */
+/* ===== 5. Sections & headings ===== */
 .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
-.section-bg-white { background: white; }
-.section-bg-navy { background: var(--navy); }
+.section-bg-white { background: white; content-visibility: auto; contain-intrinsic-size: auto 600px; }
+.section-bg-navy { background: var(--navy); content-visibility: auto; contain-intrinsic-size: auto 600px; }
 .section-bg-cream { background: var(--cream); }
 .red-tag { display: inline-block; background: var(--red); color: white; font-size: 0.65rem; letter-spacing: 0.18em; padding: 4px 12px; font-weight: 700; margin-bottom: 16px; }
 .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.05; color: var(--navy); margin-bottom: 8px; }
@@ -78,7 +166,8 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
   overflow-wrap: break-word;
 }
 
-/* BUTTONS */
+/* ===== 6. Buttons ===== */
+/* min-height: 44px is the WCAG tap target minimum — keep it. */
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 14px 32px; font-weight: 700; letter-spacing: 0.095em; font-size: 0.82rem; text-decoration: none; cursor: pointer; border: none; transition: background 0.2s, transform 0.1s; font-family: 'DM Sans', sans-serif; touch-action: manipulation; }
 .btn-red { background: var(--red); color: white; }
 .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
@@ -87,42 +176,95 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 .btn-outline-white { background: transparent; border: 2px solid white; color: white; }
 .btn-outline-white:hover { background: white; color: var(--navy); }
 
-/* IMAGES */
+/* ===== 7. Images ===== */
 .header-logo, .nav-logo { width: 38px; height: 38px; object-fit: contain; }
+/* brightness(0) invert(1) turns the dark-on-transparent logo white for the navy footer. */
 .footer-logo { width: 34px; height: 34px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.8; }
 
-/* FOOTER */
+/* ===== 8. Footer =====
+   Canonical structure lives in about.html. Older pages used .footer-title/.footer-subtitle;
+   canonical uses .footer-brand-main/.footer-brand-sub — both names are supported below. */
 footer { background: var(--navy); padding: 40px 24px 24px; }
 .footer-inner { max-width: 1100px; margin: 0 auto; }
 .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
 .footer-brand { display: flex; align-items: center; gap: 12px; }
-.footer-link { color: #a0a8c0; font-size: 0.8rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
+.footer-link { color: var(--footer-link); font-size: 0.8rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
 .footer-link:hover { color: var(--red); }
 .footer-bottom { border-top: 1px solid #2a3a5a; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-.footer-copy { font-size: 0.75rem; color: #4a5a7a; }
+.footer-copy { font-size: 0.75rem; color: var(--footer-copy); }
 /* footer brand text — two naming conventions used across pages */
 .footer-title, .footer-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: white; }
-.footer-subtitle, .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.16em; color: #D42B2B; font-weight: 700; }
+.footer-subtitle, .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.16em; color: var(--footer-brand-sub); font-weight: 700; }
+.vsyc-label { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; }
+.team-teaser-label { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--team-label); font-weight: 700; margin-bottom: 4px; }
+/* .vsyc-banner: layout declared here; bg + color shared with about.html's inline override */
+.vsyc-banner { background: var(--navy); color: white; padding: 32px 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
 .footer-vsyc, .footer-vsyc-link { color: #C9A84C; font-weight: 700; }
 
-/* HERO SKYLINE DECORATION (full-screen #hero pages) */
-.hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 100px; pointer-events: none; }
-.hero-skyline img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; opacity: 0.12; display: block; }
+/* ===== 9. Hero decorations + page hero ===== */
+/* Full-screen hero skyline (index.html). Decorative only — <img alt="" aria-hidden="true">. */
+.hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 80px; pointer-events: none; }
+.hero-skyline img { width: 100%; height: 100%; opacity: 0.18; display: block; }
 
-/* PAGE HERO (compact header for sub-pages) */
+/* Compact page hero used on secondary pages (about, team, events, etc.). */
 .page-hero { background: var(--navy); position: relative; overflow: hidden; padding: 48px 24px 80px; }
 .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 32px 32px; }
 .page-hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
 .page-hero-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(2.2rem, 5vw, 3.5rem); color: white; line-height: 1.05; margin: 10px 0 8px; }
 .page-hero-sub { font-size: 0.75rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.55); font-weight: 600; }
-.page-hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 90px; pointer-events: none; }
-.page-hero-skyline img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; opacity: 0.13; display: block; }
+.page-hero-skyline { position: absolute; bottom: 0; left: 0; right: 0; height: 70px; pointer-events: none; }
+.page-hero-skyline img { width: 100%; height: 100%; opacity: 0.15; display: block; }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ===== 13. Index page shared components =====
+   Classes used on index.html; mirrored in about.html's inline <style>.
+   Defined here so index.html can rely solely on main.css. */
+
+/* Two-column about layout */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; padding: 3rem 0; }
+.about-body { font-size: 1.05rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
+
+/* Skill-toy badge pills */
+.pill-wrap { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.pill { display: inline-block; background: var(--navy); color: white; font-size: 0.72rem; letter-spacing: 0.1em; padding: 5px 14px; font-weight: 600; }
+
+/* 2×2 stats grid */
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat-card { background: white; padding: 24px 20px; border-top: 3px solid var(--red); }
+.stat-num { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 2.5rem; color: var(--navy); line-height: 1; margin-bottom: 0.25rem; }
+.stat-label { font-size: 0.78rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
+
+/* Club document download card */
+.doc-card { display: flex; gap: 20px; align-items: flex-start; background: white; border: 1px solid var(--border); border-left: 4px solid var(--navy); padding: 24px; margin-bottom: 24px; }
+.doc-card-icon { font-size: 2rem; flex-shrink: 0; }
+.doc-card-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 6px; }
+.doc-card-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
+.doc-link { display: inline-flex; align-items: center; gap: 6px; background: var(--navy); color: white; padding: 8px 16px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+.doc-link:hover { background: var(--red); }
+
+/* Team teaser CTA block — light background, navy accent border */
+.team-teaser { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; background: white; border: 1px solid var(--border); border-left: 4px solid var(--navy); padding: 28px 32px; margin-top: 24px; }
+.team-teaser-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; color: var(--navy); margin-bottom: 6px; }
+.team-teaser-sub { font-size: 0.9rem; color: var(--text-muted); margin-top: 4px; }
+
+/* VSYC-26 callout wrapper on index.html — constrains .vsyc-banner to site max-width */
+.vsyc-section { padding: 0 24px 80px; max-width: 1100px; margin: 0 auto; }
+.vsyc-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.6rem; color: white; }
+.vsyc-sub { font-size: 0.9rem; color: #8090b8; margin-top: 6px; }
+
+/* ===== 10. Responsive breakpoints =====
+   1024px: laptop — nav collapses to hamburger (10 links overflow at smaller widths).
+   768px:  tablet — footer stacks.
+   480px:  small phone — top bar recenters, nav/section padding shrinks.
+   375px:  iPhone SE / small — further tighten letter-spacing on tiny text. */
+@media (max-width: 1024px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
+}
+@media (max-width: 768px) {
   .footer-top { flex-direction: column; align-items: flex-start; }
+  .about-grid { grid-template-columns: 1fr; }
+  .team-teaser { flex-direction: column; align-items: flex-start; }
+  .vsyc-banner { flex-direction: column; }
 }
 @media (max-width: 480px) {
   #top-bar { justify-content: center; text-align: center; padding: 8px 12px; gap: 8px; }
@@ -146,6 +288,7 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
   .footer-copy { font-size: 0.69rem; line-height: 1.55; }
 }
 
+/* ===== 11. Reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -153,4 +296,19 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ===== 12. Print =====
+   Strip nav/top bar/skip link so printed pages are just content + a monochrome footer. */
+@media print {
+  #top-bar, nav, .mobile-menu, .hero-skyline, .page-hero-skyline,
+  .hero-dots, .mobile-quick-actions, .skip-link,
+  .hamburger { display: none !important; }
+  body { background: #fff; color: #000; }
+  .section-bg-navy { background: #fff; }
+  .section-title { color: #000; }
+  .red-tag { background: #000; color: #fff; }
+  footer { background: #fff; border-top: 1px solid #ccc; }
+  .footer-title, .footer-brand-main, .footer-copy { color: #333; }
+  a { color: #000; text-decoration: underline; }
 }
