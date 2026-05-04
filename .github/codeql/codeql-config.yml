@@ -1,0 +1,14 @@
+name: dmvthrowers-js-scope
+
+# Limit JS/TS analysis to maintainable source code and skip HTML-embedded
+# structured data blocks (JSON-LD) that can trigger parser warnings.
+paths:
+  - assets/js
+  - scripts
+
+paths-ignore:
+  - '**/*.min.js'
+  - '**/vendor/**'
+  - '**/dist/**'
+  - '**/build/**'
+  - '**/coverage/**'
