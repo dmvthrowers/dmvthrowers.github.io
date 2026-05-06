@@ -1,0 +1,92 @@
+# .pre-commit-config.yaml — dmvthrowers.github.io
+#
+# Prevents accidental CNAME edits and flags brand violations before commit.
+#
+# Installation (one-time per machine):
+#   pip install pre-commit
+#   cd dmvthrowers.github.io
+#   pre-commit install
+#
+# Run manually against all files:
+#   pre-commit run --all-files
+
+repos:
+
+  # ── Built-in file guards ────────────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+        exclude: "^assets/"
+      - id: trailing-whitespace
+        exclude: "^assets/"
+      - id: no-commit-to-branch
+        args: ["--branch", "main"]
+        stages: [pre-push]
+
+  # ── CNAME guard — never allow edits to CNAME ───────────────────────────────
+  - repo: local
+    hooks:
+      - id: protect-cname
+        name: "Protect CNAME (must stay dmvthrowers.club)"
+        language: system
+        entry: bash -c 'if git diff --cached --name-only | grep -q "^CNAME$"; then echo "ERROR: CNAME is protected. It must remain dmvthrowers.club."; exit 1; fi'
+        pass_filenames: false
+        always_run: true
+
+  # ── Brand color guard — flag off-brand reds ────────────────────────────────
+  - repo: local
+    hooks:
+      - id: no-off-brand-red
+        name: "Flag off-brand red (#D42B2B or #d42b2b)"
+        language: pygrep
+        entry: '#[Dd]42[Bb]2[Bb]'
+        types: [text]
+        files: '\.(css|html|ts|tsx|js|jsx)$'
+        exclude: "^node_modules/"
+
+  # ── border-radius guard — brand requires 0 everywhere ──────────────────────
+  - repo: local
+    hooks:
+      - id: no-border-radius
+        name: "Flag non-zero border-radius (brand rule: border-radius: 0)"
+        language: pygrep
+        # Matches border-radius with any value that is not 0 or 0px or 0rem
+        entry: 'border-radius\s*:\s*(?!0(?:px|rem|em|%|vw|vh)?\s*[;,{])'
+        types: [text]
+        files: '\.(css|html)$'
+        exclude: "^node_modules/"
+
+  # ── box-shadow guard ────────────────────────────────────────────────────────
+  - repo: local
+    hooks:
+      - id: no-box-shadow
+        name: "Flag box-shadow (brand rule: no shadows)"
+        language: pygrep
+        entry: 'box-shadow\s*:'
+        types: [text]
+        files: '\.(css|html)$'
+        exclude: "^node_modules/"
+
+  # ── External font guard (no new Google Fonts or CDN fonts) ─────────────────
+  - repo: local
+    hooks:
+      - id: no-external-fonts
+        name: "Flag new external font URLs (fonts.googleapis.com / fonts.gstatic.com)"
+        language: pygrep
+        entry: 'fonts\.googleapis\.com|fonts\.gstatic\.com'
+        types: [text]
+        files: '\.(html|css)$'
+        exclude: "^node_modules/"
+
+  # ── Tracking script guard ───────────────────────────────────────────────────
+  - repo: local
+    hooks:
+      - id: no-tracking-scripts
+        name: "Flag common tracking/analytics scripts"
+        language: pygrep
+        entry: 'google-analytics\.com|googletagmanager\.com|clarity\.ms|hotjar\.com|segment\.com|mixpanel\.com'
+        types: [text]
+        files: '\.(html|js)$'
+        exclude: "^node_modules/"
