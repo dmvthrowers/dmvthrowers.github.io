@@ -19,7 +19,6 @@ import json
 import re
 from datetime import date, timedelta
 from pathlib import Path
-import xml.etree.ElementTree as ET
 
 
 MONTH_NAMES = [
@@ -123,17 +122,31 @@ def _parse_card_date(card_body: str, today: date) -> date | None:
     except (ValueError, IndexError):
         return None
 
-    # Cards omit the year, so we infer it. Assume today.year first; if that
-    # date is more than ~6 months in the past it's almost certainly a future
-    # card for next year (e.g. a January 2027 card encountered in November
-    # 2026 would otherwise be misread as January 2026 and deleted prematurely).
-    # A legitimately past card is at most ~1 month old (the just-finished
-    # meetup), so the 180-day threshold is a safe boundary.
+    # Cards omit the year; infer it from proximity to today.
+    # Two year-boundary cases need correction:
+    #
+    #   delta < -180  (>6 months in the past with today.year)
+    #     → probably a future card for next year.
+    #       e.g. a January 2027 card added in November 2026 reads as Jan 2026.
+    #       Threshold: 180 days comfortably clears the ~1-month "just-past" zone.
+    #
+    #   delta > 330  (>11 months in the future with today.year)
+    #     → probably a stale card from last year.
+    #       e.g. a December 2026 card still in the file in January 2027 reads
+    #       as December 2027. Threshold: 330 avoids false positives for
+    #       legitimately scheduled meetups 6–10 months out (e.g. a November
+    #       card encountered in May is only ~193 days away).
     try:
         candidate = date(today.year, month_num, day)
     except ValueError:
         return None
-    if (today - candidate).days > 180:
+    delta = (candidate - today).days
+    if delta > 330:
+        try:
+            candidate = date(today.year - 1, month_num, day)
+        except ValueError:
+            return None
+    elif delta < -180:
         try:
             candidate = date(today.year + 1, month_num, day)
         except ValueError:
@@ -244,29 +257,50 @@ def remove_past_meetup_jsonld(events_path: Path, today: date | None = None, dry_
 # sitemap.xml — bump lastmod for index/events URLs
 # ---------------------------------------------------------------------------
 
+# Pages whose lastmod should be refreshed after a meetup update.
+# Use exact URL strings to avoid false matches (e.g. "index" in a path).
+_SITEMAP_TARGETS = (
+    "https://dmvthrowers.club/",          # homepage — trailing slash, no "index"
+    "https://dmvthrowers.club/events.html",
+)
+
+# Matches a <loc>TARGET</loc> block followed (anywhere in the same <url>
+# element) by a <lastmod>YYYY-MM-DD</lastmod> to be replaced.
+# We do a text-level substitution to preserve the file's formatting,
+# comments, and XML declaration exactly — ET.write() would rewrite all of
+# that and add namespace prefixes on a first run.
+def _make_lastmod_re(url: str) -> re.Pattern[str]:
+    return re.compile(
+        r"(<loc>" + re.escape(url) + r"</loc>(?:(?!</url>).)*?<lastmod>)"
+        r"\d{4}-\d{2}-\d{2}"
+        r"(</lastmod>)",
+        re.DOTALL,
+    )
+
+
 def update_sitemap(sitemap_path: Path, dry_run: bool = False) -> bool:
+    """
+    Update <lastmod> for the homepage and events page in sitemap.xml.
+    Uses text-level substitution so the file's formatting and XML
+    declaration are preserved unchanged.
+    Only call this when index.html or events.html actually changed.
+    """
     if not sitemap_path.exists():
         return False
     try:
-        tree = ET.parse(sitemap_path)
-        root = tree.getroot()
-        ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+        text = sitemap_path.read_text(encoding="utf-8")
         today_str = date.today().isoformat()
-        for url in root.findall("sm:url", ns):
-            loc = url.find("sm:loc", ns)
-            if loc is None:
-                continue
-            if any(tok in loc.text for tok in ("index", "events")):
-                lastmod = url.find("sm:lastmod", ns)
-                if lastmod is None:
-                    lastmod = ET.SubElement(
-                        url,
-                        "{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod",
-                    )
-                lastmod.text = today_str
+        new_text = text
+        for target_url in _SITEMAP_TARGETS:
+            new_text = _make_lastmod_re(target_url).sub(
+                r"\g<1>" + today_str + r"\2", new_text
+            )
+        if new_text == text:
+            print("  [=] sitemap.xml: lastmod already current")
+            return False
         if not dry_run:
-            tree.write(str(sitemap_path), encoding="unicode", xml_declaration=False)
-        print(f"  [ok] sitemap.xml: lastmod updated to {today_str}")
+            sitemap_path.write_text(new_text, encoding="utf-8")
+        print(f"  [ok] sitemap.xml: lastmod -> {today_str}")
         return True
     except Exception as exc:
         print(f"  [!] sitemap.xml update skipped: {exc}")
@@ -306,22 +340,30 @@ def main() -> None:
     index_html = repo / "index.html"
     events_html = repo / "events.html"
 
+    site_changed = False
+
     print("\nindex.html:")
     if index_html.exists():
-        update_topbar(index_html, next_date, args.dry_run)
+        site_changed |= update_topbar(index_html, next_date, args.dry_run)
     else:
         print("  [!] file not found")
 
     print("\nevents.html:")
     if events_html.exists():
-        update_topbar(events_html, next_date, args.dry_run)
-        remove_past_meetup_cards(events_html, today, args.dry_run)
-        remove_past_meetup_jsonld(events_html, today, args.dry_run)
+        site_changed |= update_topbar(events_html, next_date, args.dry_run)
+        site_changed |= remove_past_meetup_cards(events_html, today, args.dry_run)
+        site_changed |= remove_past_meetup_jsonld(events_html, today, args.dry_run)
     else:
         print("  [!] file not found")
 
+    # Only bump sitemap lastmod when index.html or events.html actually changed.
+    # Updating it unconditionally would cause a commit every Monday even when
+    # the meetup banner and cards were already current.
     print("\nsitemap.xml:")
-    update_sitemap(repo / "sitemap.xml", args.dry_run)
+    if site_changed:
+        update_sitemap(repo / "sitemap.xml", args.dry_run)
+    else:
+        print("  [=] skipped (no page content changed)")
 
     print("\nUpcoming meetups:")
     for d in dates[:6]:
