@@ -15,8 +15,7 @@ dmvthrowers.club-ssl-bundle/
 # Local git mirror (no active purpose)
 repo-mirror/
 
-# Local dev/maintenance scripts (not part of the site)
-scripts/
+# scripts/ is tracked; add individual exclusions below for local-only files
 
 # GitHub Copilot dev tooling (not website content)
 agents/
