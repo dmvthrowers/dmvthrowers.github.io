@@ -1,0 +1,49 @@
+name: Update Monthly Meetup Dates
+
+on:
+  # Runs every Monday at 12:00 UTC (8 AM ET).
+  # The 3rd Sunday meetup fires this on the following Monday — the script
+  # removes the just-passed meetup card and advances the NEXT MEET banner.
+  # On weeks that aren't post-meetup the script makes no changes, so no
+  # commit is created (see the "check for changes" step below).
+  schedule:
+    - cron: "0 12 * * 1"
+
+  # Allow a manual one-click run from the Actions tab at any time.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-meetup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run meetup update script
+        run: python scripts/update_meetup.py --repo .
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> "$GITHUB_OUTPUT" \
+            || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push updated files
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html events.html sitemap.xml
+          git commit -m "chore: update meetup dates for $(date +'%B %Y')"
+          git push
