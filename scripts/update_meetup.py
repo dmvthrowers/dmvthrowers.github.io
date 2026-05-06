@@ -120,12 +120,25 @@ def _parse_card_date(card_body: str, today: date) -> date | None:
     try:
         month_num = MONTH_NAMES.index(parts[0]) + 1
         day = int(parts[1])
-        # Cards don't carry a year; assume current year.
-        # If that date would already be many months behind, it might be next year —
-        # but since we remove past cards, only "recently past" dates matter.
-        return date(today.year, month_num, day)
     except (ValueError, IndexError):
         return None
+
+    # Cards omit the year, so we infer it. Assume today.year first; if that
+    # date is more than ~6 months in the past it's almost certainly a future
+    # card for next year (e.g. a January 2027 card encountered in November
+    # 2026 would otherwise be misread as January 2026 and deleted prematurely).
+    # A legitimately past card is at most ~1 month old (the just-finished
+    # meetup), so the 180-day threshold is a safe boundary.
+    try:
+        candidate = date(today.year, month_num, day)
+    except ValueError:
+        return None
+    if (today - candidate).days > 180:
+        try:
+            candidate = date(today.year + 1, month_num, day)
+        except ValueError:
+            return None
+    return candidate
 
 
 def remove_past_meetup_cards(events_path: Path, today: date | None = None, dry_run: bool = False) -> bool:
