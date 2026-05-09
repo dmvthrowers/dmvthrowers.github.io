@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="v26-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2744" stop-opacity="1"/>
+      <stop offset="46%" stop-color="#1a2744" stop-opacity="0.68"/>
+      <stop offset="76%" stop-color="#1a2744" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1a2744" stop-opacity="0"/>
+    </linearGradient>
+
+    <!--
+      Marigold flower symbol: 12 outer petals + 12 inner petals + centre discs.
+      Origin (0,0) is the flower centre. overflow="visible" lets petals extend
+      outside the symbol's default clipping box.
+    -->
+    <symbol id="mg" overflow="visible">
+      <!-- Outer petals @ 30° each, deep amber-gold -->
+      <g fill="#b87c1a">
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(30)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(60)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(90)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(120)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(150)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(180)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(210)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(240)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(270)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(300)"/>
+        <path d="M0,0 C-13,-5 -13,-58 0,-73 C13,-58 13,-5 0,0" transform="rotate(330)"/>
+      </g>
+      <!-- Inner petals @ 30°, offset 15°, brighter gold -->
+      <g fill="#d89c28">
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(15)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(45)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(75)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(105)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(135)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(165)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(195)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(225)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(255)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(285)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(315)"/>
+        <path d="M0,0 C-10,-4 -10,-44 0,-56 C10,-44 10,-4 0,0" transform="rotate(345)"/>
+      </g>
+      <!-- Centre discs -->
+      <circle r="12" fill="#3e2000"/>
+      <circle r="7"  fill="#5c3400"/>
+    </symbol>
+  </defs>
+
+  <!-- ── Background row: dimmer, smaller flowers behind main row ── -->
+  <g opacity="0.40">
+    <line x1="160"  y1="202" x2="160"  y2="278" stroke="#3a4a18" stroke-width="2"/>
+    <use href="#mg" transform="translate(160,202)  scale(0.50)"/>
+    <line x1="448"  y1="208" x2="448"  y2="278" stroke="#3a4a18" stroke-width="2"/>
+    <use href="#mg" transform="translate(448,208)  scale(0.54)"/>
+    <line x1="774"  y1="200" x2="774"  y2="278" stroke="#3a4a18" stroke-width="2"/>
+    <use href="#mg" transform="translate(774,200)  scale(0.57)"/>
+    <line x1="1062" y1="205" x2="1062" y2="278" stroke="#3a4a18" stroke-width="2"/>
+    <use href="#mg" transform="translate(1062,205) scale(0.51)"/>
+    <line x1="1342" y1="202" x2="1342" y2="275" stroke="#3a4a18" stroke-width="2"/>
+    <use href="#mg" transform="translate(1342,202) scale(0.55)"/>
+  </g>
+
+  <!-- ── Main stems ── -->
+  <g stroke="#4a5c22" stroke-width="3" opacity="0.55">
+    <line x1="88"   y1="190" x2="88"   y2="278"/>
+    <line x1="228"  y1="170" x2="228"  y2="278"/>
+    <line x1="385"  y1="182" x2="385"  y2="278"/>
+    <line x1="534"  y1="156" x2="534"  y2="278"/>
+    <line x1="688"  y1="168" x2="688"  y2="278"/>
+    <line x1="840"  y1="149" x2="840"  y2="278"/>
+    <line x1="998"  y1="161" x2="998"  y2="278"/>
+    <line x1="1142" y1="178" x2="1142" y2="278"/>
+    <line x1="1290" y1="160" x2="1290" y2="278"/>
+    <line x1="1408" y1="185" x2="1408" y2="274"/>
+  </g>
+
+  <!-- ── Foliage (upper wave) ── -->
+  <path d="M0,280 L1440,280 L1440,237
+    C1312,225 1164,232 1033,229
+    C902,226 772,234 642,231
+    C512,228 382,236 252,234
+    C147,232 66,238 0,242 Z"
+    fill="#253618" opacity="0.70"/>
+  <!-- ── Foliage (lower, denser) ── -->
+  <path d="M0,280 L1440,280 L1440,258
+    C1234,250 1042,254 856,257
+    C670,260 472,255 280,259
+    C176,261 86,259 0,263 Z"
+    fill="#182510" opacity="0.82"/>
+
+  <!-- ── Main flowers (front row) ── -->
+  <use href="#mg" transform="translate(88,190)   scale(0.72)"/>
+  <use href="#mg" transform="translate(228,170)  scale(0.88)"/>
+  <use href="#mg" transform="translate(385,182)  scale(0.68)"/>
+  <use href="#mg" transform="translate(534,156)  scale(1.02)"/>
+  <use href="#mg" transform="translate(688,168)  scale(0.82)"/>
+  <use href="#mg" transform="translate(840,149)  scale(1.08)"/>
+  <use href="#mg" transform="translate(998,161)  scale(0.90)"/>
+  <use href="#mg" transform="translate(1142,178) scale(0.75)"/>
+  <use href="#mg" transform="translate(1290,160) scale(0.95)"/>
+  <use href="#mg" transform="translate(1408,185) scale(0.65)"/>
+
+  <!-- ── Gradient overlay: navy bleeds in from top ── -->
+  <rect width="1440" height="280" fill="url(#v26-fade)"/>
+</svg>
