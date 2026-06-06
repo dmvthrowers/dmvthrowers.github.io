@@ -120,6 +120,55 @@
       .hero-inner { grid-template-columns: 1fr; padding-bottom: 160px; }
       .hero-logo-wrap { display: none; }
     }
+    /* ===== Partner spotlight card ===== */
+    .partner-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 28px;
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--red);
+      padding: 32px 36px;
+    }
+    .partner-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .partner-desc {
+      font-size: 0.98rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      max-width: 54ch;
+      margin-bottom: 18px;
+    }
+    .partner-code-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .partner-code-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+    .partner-code {
+      background: var(--navy);
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      padding: 6px 18px;
+    }
+    @media (max-width: 768px) {
+      .partner-card { flex-direction: column; align-items: flex-start; padding: 24px 20px; }
+    }
   </style>
   <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
@@ -257,6 +306,26 @@
         <div class="team-teaser-sub">Officers, bios, and the people who make DMV Throwers run</div>
       </div>
       <a href="team.html" class="btn btn-red">MEET THE TEAM →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER SPOTLIGHT -->
+<section id="partners" class="section-bg-white">
+  <div class="section">
+    <div class="red-tag">PARTNER</div>
+    <h2 class="section-title">Shop & Support the Club</h2>
+    <div class="divider"></div>
+    <div class="partner-card">
+      <div>
+        <div class="partner-name">YoYo Sam</div>
+        <p class="partner-desc">Shop YoYo Sam and support DMV Throwers at the same time. Use code <strong>DMVTHROWS</strong> at checkout for <strong>10% off any order</strong> — and a portion of every sale goes directly back to the club.</p>
+        <div class="partner-code-wrap">
+          <span class="partner-code-label">DISCOUNT CODE</span>
+          <span class="partner-code">DMVTHROWS</span>
+        </div>
+      </div>
+      <a href="https://endlss.io/sl/yoyosam/dmvthrows" class="btn btn-red" target="_blank" rel="noopener noreferrer">SHOP YOYO SAM →</a>
     </div>
   </div>
 </section>
