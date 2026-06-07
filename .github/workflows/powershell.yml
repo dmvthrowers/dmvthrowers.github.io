@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Install PSScriptAnalyzer
         shell: pwsh
@@ -79,7 +79,7 @@ jobs:
           $sarif | ConvertTo-Json -Depth 20 | Set-Content $resultsPath -Encoding UTF8
 
       - name: Upload SARIF to code scanning
-        uses: github/codeql-action/upload-sarif@v4
+        uses: github/codeql-action/upload-sarif@8aad20d150bbac5944a9f9d289da16a4b0d87c1e # v4
         with:
           sarif_file: powershell-results.sarif
           category: "/workflow:powershell"
