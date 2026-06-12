@@ -236,7 +236,8 @@
         </iframe>
       </div>
     </div>
-    <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js" integrity="sha384-x2DrvPKRGsjMKEYpyNoiBUo8yj6c30siFE8BpOlpnzJ17oMgH0RJVYkvPJ3pQHBm" crossorigin="anonymous"></script>
+    <!-- No integrity hash: /latest/ is a moving target and a pinned hash silently blocks the script when JotForm updates it. -->
+    <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js" crossorigin="anonymous"></script>
     <script>window.jotformEmbedHandler("iframe[id='jotform-iframe-260815592180054']", "https://form.jotform.com/")</script>
   </div>
 </div>
