@@ -251,7 +251,7 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .footer-link { color: var(--white); font-size: 0.75rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
 .footer-link:hover { color: var(--gold); }
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-.footer-copy { font-size: 0.72rem; color: #3a4a6a; }
+.footer-copy { font-size: 0.72rem; color: #8b9bbf; }
 
 /* COUNTDOWN */
 .countdown-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 480px; }
