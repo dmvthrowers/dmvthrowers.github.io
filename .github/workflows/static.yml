@@ -36,11 +36,29 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v6
+      - name: Stage site files
+        # Publish only website content — keep repo docs, agent configs,
+        # editor settings, and print masters out of the public deploy.
+        run: |
+          mkdir -p /tmp/site
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.vscode/' \
+            --exclude='agents/' \
+            --exclude='skills/' \
+            --exclude='scripts/' \
+            --exclude='*.md' \
+            --exclude='*.ps' \
+            --exclude='.gitignore' \
+            --exclude='.pre-commit-config.yaml' \
+            --exclude='environment.yml' \
+            --exclude='LICENSE' \
+            ./ /tmp/site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          # Upload entire repository
-          path: '.'
+          path: '/tmp/site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
