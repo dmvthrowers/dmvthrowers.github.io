@@ -155,6 +155,14 @@
       },
       {
         "@type": "Question",
+        "name": "Where should I stay overnight?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We've secured a room block at the Courtyard by Marriott Dulles Town Center — walking distance from the venue — for $125/night. Book by August 29, 2026 to guarantee the rate. See the Venue page for the reservation link and full details."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "How do I become a sponsor?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -203,6 +211,14 @@
       <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
       <a href="vsyc26-faq.html" class="nav-link active" aria-current="page">FAQ</a>
+      <div class="nav-more" id="nav-more">
+        <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
+        <div class="nav-more-menu" id="nav-more-menu" role="menu">
+          <a href="https://register.dmvthrowers.club/directory" role="menuitem">Directory</a>
+          <a href="https://register.dmvthrowers.club/results" role="menuitem">Results</a>
+          <a href="https://register.dmvthrowers.club/player" role="menuitem">Music Upload</a>
+        </div>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -219,6 +235,10 @@
   <a href="vsyc26-venue.html">VENUE</a>
   <a href="vsyc26-rules.html">RULES</a>
   <a href="vsyc26-faq.html">FAQ</a>
+  <div class="mobile-more-label">More</div>
+  <a href="https://register.dmvthrowers.club/directory">Directory</a>
+  <a href="https://register.dmvthrowers.club/results">Results</a>
+  <a href="https://register.dmvthrowers.club/player">Music Upload</a>
 </div>
 
 <main id="main-content" role="main">
@@ -279,6 +299,10 @@
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false"><span>Where do I park?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
       <div class="faq-a" id="faq-9">Free parking at all mall entrances. Dulles Town Center has ample surface parking surrounding the entire mall. No fees, no validation needed.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false"><span>Where should I stay overnight?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-stay">We've secured a room block at the <strong>Courtyard by Marriott Dulles Town Center</strong> — walking distance from the venue — for <strong>$125/night</strong>. Book by <time datetime="2026-08-29">August 29, 2026</time> to guarantee the rate. See the <a href="vsyc26-venue.html#accommodations" class="faq-link-gold">Venue page</a> for the reservation link and full details.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false"><span>How do I become a sponsor?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
@@ -368,6 +392,26 @@
   document.querySelectorAll('.mobile-menu a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
+
+  // "More" dropdown (desktop) — Directory/Results/Music Upload
+  var moreWrap = document.getElementById('nav-more');
+  var moreBtn = document.getElementById('nav-more-btn');
+  var moreMenu = document.getElementById('nav-more-menu');
+  if (moreWrap && moreBtn && moreMenu) {
+    moreBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = moreMenu.classList.toggle('open');
+      moreWrap.classList.toggle('open', isOpen);
+      moreBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e) {
+      if (!moreWrap.contains(e.target)) {
+        moreMenu.classList.remove('open');
+        moreWrap.classList.remove('open');
+        moreBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
   // FAQ accordion
   function toggleFaq(btn) {

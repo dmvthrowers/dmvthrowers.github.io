@@ -77,6 +77,14 @@
       <a href="vsyc26-venue.html" class="nav-link active" aria-current="page">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
       <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
+      <div class="nav-more" id="nav-more">
+        <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
+        <div class="nav-more-menu" id="nav-more-menu" role="menu">
+          <a href="https://register.dmvthrowers.club/directory" role="menuitem">Directory</a>
+          <a href="https://register.dmvthrowers.club/results" role="menuitem">Results</a>
+          <a href="https://register.dmvthrowers.club/player" role="menuitem">Music Upload</a>
+        </div>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -93,6 +101,10 @@
   <a href="vsyc26-venue.html">VENUE</a>
   <a href="vsyc26-rules.html">RULES</a>
   <a href="vsyc26-faq.html">FAQ</a>
+  <div class="mobile-more-label">More</div>
+  <a href="https://register.dmvthrowers.club/directory">Directory</a>
+  <a href="https://register.dmvthrowers.club/results">Results</a>
+  <a href="https://register.dmvthrowers.club/player">Music Upload</a>
 </div>
 
 <main id="main-content" role="main">
@@ -121,7 +133,7 @@
         <div class="venue-detail-row"><span class="venue-label">PARKING</span><span class="venue-val">Free at all mall entrances</span></div>
         <div class="venue-detail-row"><span class="venue-label">WI-FI</span><span class="venue-val">Free — "Dulles Town Center Wi-Fi" or "Dulles_Town_Center"</span></div>
         <div class="venue-detail-row"><span class="venue-label">FOOD</span><span class="venue-val">Food court on-site + multiple restaurants throughout the mall (100+ stores)</span></div>
-        <div class="venue-detail-row"><span class="venue-label">NEARBY HOTELS</span><span class="venue-val">Courtyard by Marriott Dulles Town Center (3-star, walking distance, restaurant on-site, airport shuttle) · Candlewood Suites Washington Dulles Sterling (budget-friendly, ~1 mi, kitchenettes)</span></div>
+        <div class="venue-detail-row"><span class="venue-label">NEARBY HOTELS</span><span class="venue-val">Courtyard by Marriott Dulles Town Center (3-star, walking distance, restaurant on-site, airport shuttle) — <a href="#accommodations" class="rules-link">our room block & rate below</a> · Candlewood Suites Washington Dulles Sterling (budget-friendly, ~1 mi, kitchenettes)</span></div>
         <div class="btns-flex">
           <a href="https://maps.google.com/?q=21100+Dulles+Town+Circle+Sterling+VA+20166" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small2">GET DIRECTIONS</a>
           <a href="https://www.dullestowncenter.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-small2">MALL WEBSITE</a>
@@ -174,6 +186,31 @@
       <div class="venue-gallery-item">
         <picture><source srcset="assets/images/venue/aerial.webp" type="image/webp"/><img src="assets/images/venue/aerial.jpg" alt="Aerial view of Dulles Town Center property" loading="lazy" width="1429" height="803"/></picture>
         <div class="venue-gallery-caption">AERIAL VIEW</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACCOMMODATIONS -->
+<div class="section-wrap" id="accommodations">
+  <div class="section">
+    <div class="gold-tag">ACCOMMODATIONS</div>
+    <h2 class="section-title">Where to Stay</h2>
+    <div class="divider-gold"></div>
+    <div class="venue-grid">
+      <div>
+        <div class="venue-detail-row"><span class="venue-label">HOTEL</span><span class="venue-val">Courtyard by Marriott Dulles Town Center</span></div>
+        <div class="venue-detail-row"><span class="venue-label">GROUP RATE</span><span class="venue-val">$125/night — DMV Throwers Room Block</span></div>
+        <div class="venue-detail-row"><span class="venue-label">BLOCK DATES</span><span class="venue-val">Check-in Saturday, September 19, 2026 · Check-out Sunday, September 20, 2026</span></div>
+        <div class="venue-detail-row"><span class="venue-label">BOOK BY</span><span class="venue-val">Saturday, August 29, 2026 — the block releases after this date, so reserve early</span></div>
+        <div class="venue-detail-row"><span class="venue-label">DISTANCE</span><span class="venue-val">Walking distance to Dulles Town Center · restaurant on-site · airport shuttle available</span></div>
+        <div class="btns-flex">
+          <a href="https://app.marriott.com/reslink?id=1778945004677&amp;key=GRP&amp;app=resvlink" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small2">BOOK YOUR ROOM</a>
+        </div>
+      </div>
+      <div class="venue-gallery-item">
+        <picture><source srcset="assets/images/venue/hotel/iadtc-guestroom.webp" type="image/webp"/><img src="assets/images/venue/hotel/iadtc-guestroom.jpg" alt="Guest room at Courtyard by Marriott Dulles Town Center" loading="lazy" width="512" height="288"/></picture>
+        <div class="venue-gallery-caption">GUEST ROOM — COURTYARD BY MARRIOTT</div>
       </div>
     </div>
   </div>
@@ -286,6 +323,26 @@
   document.querySelectorAll('.mobile-menu a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
+
+  // "More" dropdown (desktop) — Directory/Results/Music Upload
+  var moreWrap = document.getElementById('nav-more');
+  var moreBtn = document.getElementById('nav-more-btn');
+  var moreMenu = document.getElementById('nav-more-menu');
+  if (moreWrap && moreBtn && moreMenu) {
+    moreBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = moreMenu.classList.toggle('open');
+      moreWrap.classList.toggle('open', isOpen);
+      moreBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e) {
+      if (!moreWrap.contains(e.target)) {
+        moreMenu.classList.remove('open');
+        moreWrap.classList.remove('open');
+        moreBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 </script>
   <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
   <script src="assets/js/mobile-enhancements.js" defer></script>
