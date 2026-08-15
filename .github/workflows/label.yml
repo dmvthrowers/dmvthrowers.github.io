@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Create labels if missing
-      uses: actions/github-script@v9
+      uses: actions/github-script@373c709c69115d41ff229c7e5df9f8788daa9553 # v9
       with:
         script: |
           const labels = [
@@ -35,7 +35,7 @@ jobs:
             }
           }
 
-    - uses: actions/labeler@v6
+    - uses: actions/labeler@b8dd2d9be0f68b860e7dae5dae7d772984eacd6d # v6
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         sync-labels: false
