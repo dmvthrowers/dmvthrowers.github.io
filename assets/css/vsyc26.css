@@ -47,6 +47,18 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .nav-link:hover, .nav-link.active { color: var(--gold); border-bottom-color: var(--gold); }
 .nav-home { background: var(--gold); color: var(--navy-deep) !important; padding: 6px 14px !important; font-size: 0.65rem !important; font-weight: 800 !important; letter-spacing: 0.1em; border-bottom: none !important; transition: background 0.2s !important; }
 .nav-home:hover { background: var(--gold-light) !important; border-bottom: none !important; }
+/* "More" dropdown — houses app-only links (Directory/Results/Music Upload) so the
+   top-level nav doesn't grow past its current 8 items. Mirrors the register.dmvthrowers.club
+   app's own More dropdown pattern. */
+.nav-more { position: relative; }
+.nav-more-btn { background: none; border: none; font: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
+.nav-more-caret { display: inline-block; font-size: 0.6em; transition: transform 0.2s; }
+.nav-more.open .nav-more-caret { transform: rotate(180deg); }
+.nav-more-menu { display: none; position: absolute; top: 100%; right: 0; margin-top: 10px; min-width: 170px; background: var(--navy-deep); border: 1px solid var(--border); flex-direction: column; padding: 4px 0; z-index: 50; }
+.nav-more-menu.open { display: flex; }
+.nav-more-menu a { padding: 10px 16px; font-size: 0.68rem; letter-spacing: 0.11em; font-weight: 700; color: var(--text-muted); text-decoration: none; opacity: 0.75; }
+.nav-more-menu a:hover { color: var(--gold); opacity: 1; }
+.mobile-more-label { font-size: 0.62rem; letter-spacing: 0.15em; font-weight: 700; color: var(--text-body); opacity: 0.6; text-transform: uppercase; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; touch-action: manipulation; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); }
 .mobile-menu { display: none; flex-direction: column; background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 4px; }
@@ -251,7 +263,7 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .footer-link { color: var(--white); font-size: 0.75rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
 .footer-link:hover { color: var(--gold); }
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-.footer-copy { font-size: 0.72rem; color: #3a4a6a; }
+.footer-copy { font-size: 0.72rem; color: #8b9bbf; }
 
 /* COUNTDOWN */
 .countdown-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 480px; }

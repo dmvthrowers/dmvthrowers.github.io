@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Schedule · VSYC-26 · Virginia State Yo-Yo Contest 2026</title>
   <meta name="description" content="VSYC-26 day-of schedule: doors at 10 AM, competition from 11 AM, awards at 5 PM. September 19, 2026 at Dulles Town Center."/>
   <meta property="og:title" content="Schedule · VSYC-26"/>
@@ -40,8 +40,8 @@
   <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="assets/css/vsyc26.css" media="print" onload="this.media='all'"/>
-  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css"/></noscript>
+  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707"/></noscript>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Schedule","item":"https://dmvthrowers.club/vsyc26-schedule.html"}]}
@@ -68,7 +68,7 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link nav-home">← HOME</a>
+      <a href="index.html" class="nav-link nav-home">← DMV THROWERS</a>
       <a href="vsyc26.html" class="nav-link">ABOUT</a>
       <a href="vsyc26-schedule.html" class="nav-link active" aria-current="page">SCHEDULE</a>
       <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
@@ -76,6 +76,14 @@
       <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
       <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
+      <div class="nav-more" id="nav-more">
+        <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
+        <div class="nav-more-menu" id="nav-more-menu" role="menu">
+          <a href="https://register.dmvthrowers.club/directory" role="menuitem">Directory</a>
+          <a href="https://register.dmvthrowers.club/results" role="menuitem">Results</a>
+          <a href="https://register.dmvthrowers.club/player" role="menuitem">Music Upload</a>
+        </div>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -84,7 +92,7 @@
 </nav>
 <!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="index.html" class="mobile-home">← HOME</a>
+  <a href="index.html" class="mobile-home">← DMV THROWERS</a>
   <a href="vsyc26.html">ABOUT</a>
   <a href="vsyc26-schedule.html">SCHEDULE</a>
   <a href="vsyc26-register.html">REGISTER</a>
@@ -92,6 +100,10 @@
   <a href="vsyc26-venue.html">VENUE</a>
   <a href="vsyc26-rules.html">RULES</a>
   <a href="vsyc26-faq.html">FAQ</a>
+  <div class="mobile-more-label">More</div>
+  <a href="https://register.dmvthrowers.club/directory">Directory</a>
+  <a href="https://register.dmvthrowers.club/results">Results</a>
+  <a href="https://register.dmvthrowers.club/player">Music Upload</a>
 </div>
 
 <main id="main-content" role="main">
@@ -116,7 +128,7 @@
       <div class="schedule-item"><div class="schedule-time">Before 10 AM</div><div><div class="schedule-event">Setup & Load-In</div><div class="schedule-note">Sponsors, vendors, and staff arrive before mall opening. Rubber-wheeled hand trucks allowed.</div></div></div>
       <div class="schedule-item"><div class="schedule-time">10:00 AM</div><div><div class="schedule-event">Doors Open · Event Begins</div><div class="schedule-note">Registration desk open · Free to spectate · Maker Corner open</div></div></div>
       <div class="schedule-item"><div class="schedule-time">10:30 AM</div><div><div class="schedule-event">Opening Ceremony</div><div class="schedule-note">Welcome, sponsor acknowledgments, rules briefing</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">11:00 AM</div><div><div class="schedule-event">Competition Begins</div><div class="schedule-note">Divisions run in sequence — Beginner/Junior · Fixed Axle · X Division · 1A</div></div></div>
+      <div class="schedule-item"><div class="schedule-time">11:00 AM</div><div><div class="schedule-event">Competition Begins</div><div class="schedule-note">Divisions run in sequence — Beginner/Junior · X Division · 1A</div></div></div>
       <div class="schedule-item"><div class="schedule-time">~4:00 PM</div><div><div class="schedule-event">Finals / Judging Wrap</div><div class="schedule-note">Approximate — schedule subject to competitor count</div></div></div>
       <div class="schedule-item"><div class="schedule-time">~5:00 PM</div><div><div class="schedule-event">Awards Ceremony</div><div class="schedule-note">All divisions · Sponsor acknowledgments · Raffle</div></div></div>
       <div class="schedule-item"><div class="schedule-time">7:00 PM</div><div><div class="schedule-event">Event Closes · Teardown</div><div class="schedule-note">Everything out by 7 PM — venue rule</div></div></div>
@@ -166,6 +178,26 @@
   document.querySelectorAll('.mobile-menu a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
+
+  // "More" dropdown (desktop) — Directory/Results/Music Upload
+  var moreWrap = document.getElementById('nav-more');
+  var moreBtn = document.getElementById('nav-more-btn');
+  var moreMenu = document.getElementById('nav-more-menu');
+  if (moreWrap && moreBtn && moreMenu) {
+    moreBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = moreMenu.classList.toggle('open');
+      moreWrap.classList.toggle('open', isOpen);
+      moreBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e) {
+      if (!moreWrap.contains(e.target)) {
+        moreMenu.classList.remove('open');
+        moreWrap.classList.remove('open');
+        moreBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 </script>
   <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
   <script src="assets/js/mobile-enhancements.js" defer></script>

@@ -29,9 +29,9 @@
   }
 
   // Injects a "Skip to content" link as the first body element if the page doesn't already
-  // have one (id="skip-to-content"). No-op on pages that ship a static skip link inline.
+  // have one. Static pages ship theirs as class="skip-link" (no id), so check both.
   function ensureSkipLink() {
-    if (document.getElementById('skip-to-content')) {
+    if (document.getElementById('skip-to-content') || document.querySelector('.skip-link')) {
       return;
     }
 

@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>FAQ & Contact · VSYC-26 · Virginia State Yo-Yo Contest 2026</title>
   <meta name="description" content="VSYC-26 frequently asked questions and contact info. Email vastateyoyocontest@gmail.com. Organized by DMV Throwers."/>
   <meta property="og:title" content="FAQ & Contact · VSYC-26"/>
@@ -40,83 +40,147 @@
   <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="assets/css/vsyc26.css" media="print" onload="this.media='all'"/>
-  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css"/></noscript>
+  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707"/></noscript>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
-        {"@type": "ListItem", "position": 2, "name": "VSYC-26", "item": "https://dmvthrowers.club/vsyc26.html"},
-        {"@type": "ListItem", "position": 3, "name": "FAQ & Contact", "item": "https://dmvthrowers.club/vsyc26-faq.html"}
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is the event free to attend?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Yes — free to spectate. Competitor entry is $15–25 per division depending on division. No charge for spectators, families, or curious mall visitors."}
-        },
-        {
-          "@type": "Question",
-          "name": "What time does the event run?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Doors open at 10 AM and the event runs until approximately 7 PM. Check the Schedule page at dmvthrowers.club/vsyc26-schedule.html for the full timeline."}
-        },
-        {
-          "@type": "Question",
-          "name": "What divisions are offered?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Four divisions: 1A (single yo-yo, $25), X Division covering 2A/3A/4A/5A ($20), Sport/Beginner/Junior for all ages and skill levels ($15), and Fixed Axle traditional no-bearing yo-yos (pricing TBD)."}
-        },
-        {
-          "@type": "Question",
-          "name": "How do I register to compete?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Registration opens soon. Email vastateyoyocontest@gmail.com to get notified first. Registration is only complete after payment clears."}
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to submit music?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Competitors must upload an MP3 by September 12, 2026. The upload link is sent after registration and payment are confirmed. File name format: DIVISION_LastName_FirstName.mp3. No upload by the deadline means AUX cord or no music — no exceptions."}
-        },
-        {
-          "@type": "Question",
-          "name": "Can I compete in multiple divisions?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Registration is per division. Register for 1A + X Division together for $40 ($5 off the combined price)."}
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Maker Corner?",
-          "acceptedAnswer": {"@type": "Answer", "text": "A community showcase area for handmade skill toys, custom designs, and indie crafted work. Not a sponsor table — this is community space for makers. Contact us if you're interested in a spot."}
-        },
-        {
-          "@type": "Question",
-          "name": "Will there be a livestream?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Planned — pending funding. Diamond and Platinum sponsors receive YouTube livestream credit. Once funded, it's happening."}
-        },
-        {
-          "@type": "Question",
-          "name": "Where do I park?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Free parking at all mall entrances. Dulles Town Center has ample surface parking surrounding the entire mall. No fees, no validation needed."}
-        },
-        {
-          "@type": "Question",
-          "name": "How do I become a sponsor?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Fill out the sponsor interest form at dmvthrowers.club/vsyc26-sponsors.html or email vastateyoyocontest@gmail.com. Diamond and Platinum spots are limited — first come, first served."}
-        },
-        {
-          "@type": "Question",
-          "name": "Who organizes VSYC-26?",
-          "acceptedAnswer": {"@type": "Answer", "text": "DMV Throwers Yo-Yo & Skill Toy Club — the DC/Maryland/Virginia yo-yo community club. Entirely volunteer-run. Every dollar goes straight to the event."}
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dmvthrowers.club/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "VSYC-26",
+        "item": "https://dmvthrowers.club/vsyc26.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "FAQ & Contact",
+        "item": "https://dmvthrowers.club/vsyc26-faq.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is the event free to attend?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — free to spectate. Competitor entry is $15–25 per division depending on division. No charge for spectators, families, or curious mall visitors."
         }
-      ]
-    }
-  ]
-  </script>
+      },
+      {
+        "@type": "Question",
+        "name": "What time does the event run?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Doors open at 10 AM and the event runs until approximately 7 PM. Check the Schedule page for the full timeline as it's finalized."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What divisions are offered?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Three divisions: 1A — single yo-yo on a string, the flagship division ($25); X Division — multi-style covering 2A, 3A, 4A, or 5A, pick your style ($20). X styles: 2A looping, 3A two-handed string, 4A offstring, 5A freehand; Sport / Beginner / Junior — welcoming entry-level division for all ages and skill levels ($15). See the Divisions page for full descriptions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I register to compete?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online registration is open at register.dmvthrowers.club through September 12, 2026. Registration is completed in the portal using secure Stripe checkout. Day-of alternatives may be available at the registration desk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to submit music?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Competitors must upload an MP3 by September 12, 2026 — one week before the event. Music upload is handled in the registration app after Stripe payment is completed. File name format: DIVISION_LastName_FirstName.mp3 (e.g. 1A_Rogers_Brandon.mp3). No upload by the deadline means AUX cord or no music — no exceptions. Full details on the Register page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I compete in multiple divisions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Registration is per division. Register for 1A + X Division together for $40 ($5 off the combined price)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the refund policy for competitor registration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Registration fees are non-refundable once payment clears, except in cases of documented medical emergency, duplicate payment error, or division cancellation by the organizers. If the full event is cancelled, all fees are refunded within 30 days. See the full Refund & Cancellation Policy →"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Maker Corner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A community showcase area for handmade skill toys, custom designs, and indie crafted work. Not a sponsor table — this is community space for makers. Contact us if you're interested in a spot."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will there be a livestream?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Planned — pending funding. Diamond and Platinum sponsors receive YouTube livestream credit. Once funded, it's happening. Help us get there."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do I park?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free parking at all mall entrances. Dulles Town Center has ample surface parking surrounding the entire mall. No fees, no validation needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where should I stay overnight?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We've secured a room block at the Courtyard by Marriott Dulles Town Center — walking distance from the venue — for $125/night. Book by August 29, 2026 to guarantee the rate. See the Venue page for the reservation link and full details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I become a sponsor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fill out the sponsor interest form or email vastateyoyocontest@gmail.com. Diamond and Platinum spots are limited — first come, first served. You'll receive a PayPal invoice to lock your spot."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who organizes VSYC-26?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DMV Throwers Yo-Yo & Skill Toy Club — the DC/Maryland/Virginia yo-yo community club. Entirely volunteer-run. Every dollar goes straight to the event."
+        }
+      }
+    ]
+  }
+]
+</script>
 </head>
 <body>
 
@@ -139,7 +203,7 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link nav-home">← HOME</a>
+      <a href="index.html" class="nav-link nav-home">← DMV THROWERS</a>
       <a href="vsyc26.html" class="nav-link">ABOUT</a>
       <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
       <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
@@ -147,6 +211,14 @@
       <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
       <a href="vsyc26-faq.html" class="nav-link active" aria-current="page">FAQ</a>
+      <div class="nav-more" id="nav-more">
+        <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
+        <div class="nav-more-menu" id="nav-more-menu" role="menu">
+          <a href="https://register.dmvthrowers.club/directory" role="menuitem">Directory</a>
+          <a href="https://register.dmvthrowers.club/results" role="menuitem">Results</a>
+          <a href="https://register.dmvthrowers.club/player" role="menuitem">Music Upload</a>
+        </div>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -155,7 +227,7 @@
 </nav>
 <!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="index.html" class="mobile-home">← HOME</a>
+  <a href="index.html" class="mobile-home">← DMV THROWERS</a>
   <a href="vsyc26.html">ABOUT</a>
   <a href="vsyc26-schedule.html">SCHEDULE</a>
   <a href="vsyc26-register.html">REGISTER</a>
@@ -163,6 +235,10 @@
   <a href="vsyc26-venue.html">VENUE</a>
   <a href="vsyc26-rules.html">RULES</a>
   <a href="vsyc26-faq.html">FAQ</a>
+  <div class="mobile-more-label">More</div>
+  <a href="https://register.dmvthrowers.club/directory">Directory</a>
+  <a href="https://register.dmvthrowers.club/results">Results</a>
+  <a href="https://register.dmvthrowers.club/player">Music Upload</a>
 </div>
 
 <main id="main-content" role="main">
@@ -194,15 +270,15 @@
     </div>
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false"><span>What divisions are offered?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-      <div class="faq-a" id="faq-3">Four divisions: <strong>1A</strong> — single yo-yo on a string, the flagship division ($25); <strong>X Division</strong> — multi-style covering 2A, 3A, 4A, or 5A, pick your style ($20); <strong>Sport / Beginner / Junior</strong> — welcoming entry-level division for all ages and skill levels ($15); <strong>Fixed Axle</strong> — traditional no-bearing yo-yos only, pricing TBD. See the <a href="vsyc26-register.html#divisions" class="faq-link-gold">Divisions page</a> for full descriptions.</div>
+      <div class="faq-a" id="faq-3">Three divisions: <strong>1A</strong> — single yo-yo on a string, the flagship division ($25); <strong>X Division</strong> — multi-style covering 2A, 3A, 4A, or 5A, pick your style ($20). X styles: 2A = looping, 3A = two-handed string, 4A = offstring, 5A = freehand; <strong>Sport / Beginner / Junior</strong> — welcoming entry-level division for all ages and skill levels ($15). See the <a href="vsyc26-register.html#divisions" class="faq-link-gold">Divisions page</a> for full descriptions.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false"><span>How do I register to compete?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-      <div class="faq-a" id="faq-4">Registration opens soon. Email vastateyoyocontest@gmail.com to get notified first. Registration is only complete after payment clears.</div>
+      <div class="faq-a" id="faq-4">Online registration is open at <a href="https://register.dmvthrowers.club" target="_blank" rel="noopener noreferrer" class="faq-link-gold">register.dmvthrowers.club</a> through September 12, 2026. Registration is completed in the portal using secure Stripe checkout. Day-of alternatives may be available at the registration desk.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false"><span>Do I need to submit music?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-      <div class="faq-a" id="faq-5">Yes. Competitors must upload an MP3 by <strong><time datetime="2026-09-12">September 12, 2026</time></strong> — one week before the event. The upload link is sent after registration and payment are confirmed. File name format: DIVISION_LastName_FirstName.mp3 (e.g. 1A_Rogers_Brandon.mp3). No upload by the deadline means AUX cord or no music — no exceptions. Full details on the <a href="vsyc26-register.html" class="faq-link-gold">Register page</a>.</div>
+      <div class="faq-a" id="faq-5">Yes. Competitors must upload an MP3 by <strong><time datetime="2026-09-12">September 12, 2026</time></strong> — one week before the event. Music upload is handled in the registration app after Stripe payment is completed. File name format: DIVISION_LastName_FirstName.mp3 (e.g. 1A_Rogers_Brandon.mp3). No upload by the deadline means AUX cord or no music — no exceptions. Full details on the <a href="vsyc26-register.html" class="faq-link-gold">Register page</a>.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false"><span>Can I compete in multiple divisions?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
@@ -223,6 +299,10 @@
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false"><span>Where do I park?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
       <div class="faq-a" id="faq-9">Free parking at all mall entrances. Dulles Town Center has ample surface parking surrounding the entire mall. No fees, no validation needed.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false"><span>Where should I stay overnight?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq-stay">We've secured a room block at the <strong>Courtyard by Marriott Dulles Town Center</strong> — walking distance from the venue — for <strong>$125/night</strong>. Book by <time datetime="2026-08-29">August 29, 2026</time> to guarantee the rate. See the <a href="vsyc26-venue.html#accommodations" class="faq-link-gold">Venue page</a> for the reservation link and full details.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" aria-expanded="false"><span>How do I become a sponsor?</span><span class="faq-toggle" aria-hidden="true">+</span></button>
@@ -246,8 +326,8 @@
         <div class="contact-title">CONTEST CONTACT</div>
         <div class="contact-row"><span class="contact-label">EMAIL</span><a href="mailto:vastateyoyocontest@gmail.com" class="contact-val">vastateyoyocontest@gmail.com</a></div>
         <div class="contact-row"><span class="contact-label">INSTAGRAM</span><a href="https://instagram.com/vastateyoyocontest" target="_blank" rel="noopener noreferrer" class="contact-val">@vastateyoyocontest</a></div>
-        <div class="contact-row"><span class="contact-label">PAYPAL</span><a href="https://www.paypal.biz/Dmvthrowers" target="_blank" rel="noopener noreferrer" class="contact-val">paypal.biz/Dmvthrowers</a></div>
-        <div class="contact-row"><span class="contact-label">VENMO</span><a href="https://venmo.com/u/DMVThrow" target="_blank" rel="noopener noreferrer" class="contact-val">venmo.com/u/DMVThrow</a></div>
+        <div class="contact-row"><span class="contact-label">DONATE (PAYPAL)</span><a href="https://www.paypal.com/paypalme/Dmvthrowers" target="_blank" rel="noopener noreferrer" class="contact-val">paypal.me/Dmvthrowers</a></div>
+        <div class="contact-row"><span class="contact-label">DONATE (VENMO)</span><a href="https://venmo.com/u/DMVThrow" target="_blank" rel="noopener noreferrer" class="contact-val">venmo.com/u/DMVThrow</a></div>
         <div class="organized-title">ORGANIZED BY</div>
         <div class="contact-row"><span class="contact-label">CLUB</span><span class="contact-val">DMV Throwers Yo-Yo & Skill Toy Club</span></div>
         <div class="contact-row"><span class="contact-label">CLUB EMAIL</span><a href="mailto:contact@dmvthrowers.club" class="contact-val">contact@dmvthrowers.club</a></div>
@@ -262,6 +342,7 @@
           <div class="date-row"><span class="date-label">Logo & asset deadline</span><span class="date-value">Aug 15, 2026</span></div>
           <div class="date-row"><span class="date-label">Music upload deadline</span><span class="date-value">Sept 12, 2026</span></div>
           <div class="date-row"><span class="date-label">Advance shipping deadline</span><span class="date-value">Sept 12, 2026</span></div>
+          <div class="date-row"><span class="date-label">Registration closes</span><span class="date-value">Sept 12, 2026</span></div>
           <div class="event-row"><span class="event-label">EVENT DAY</span><span class="event-value">Sept 19, 2026</span></div>
         </div>
       </div>
@@ -311,6 +392,26 @@
   document.querySelectorAll('.mobile-menu a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
+
+  // "More" dropdown (desktop) — Directory/Results/Music Upload
+  var moreWrap = document.getElementById('nav-more');
+  var moreBtn = document.getElementById('nav-more-btn');
+  var moreMenu = document.getElementById('nav-more-menu');
+  if (moreWrap && moreBtn && moreMenu) {
+    moreBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = moreMenu.classList.toggle('open');
+      moreWrap.classList.toggle('open', isOpen);
+      moreBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e) {
+      if (!moreWrap.contains(e.target)) {
+        moreMenu.classList.remove('open');
+        moreWrap.classList.remove('open');
+        moreBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
   // FAQ accordion
   function toggleFaq(btn) {

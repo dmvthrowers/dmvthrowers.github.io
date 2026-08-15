@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Virginia State Yo-Yo Contest 2026 · VSYC-26</title>
   <meta name="description" content="Virginia State Yo-Yo Contest 2026 — September 19, 2026 · Dulles Town Center · Center Court · Sterling VA. 16th Annual. Organized by DMV Throwers."/>
   <meta property="og:title" content="VSYC-26 · Virginia State Yo-Yo Contest 2026"/>
@@ -53,7 +53,7 @@
     "@context": "https://schema.org",
     "@type": "Event",
     "name": "Virginia State Yo-Yo Contest 2026 (VSYC-26)",
-    "description": "16th Annual Virginia State Yo-Yo Contest. Multi-division competitive contest featuring 1A, X Division, Beginner/Junior, and Fixed Axle. Free to spectate.",
+    "description": "16th Annual Virginia State Yo-Yo Contest. Multi-division competitive contest featuring 1A, X Division, and Beginner/Junior. Free to spectate.",
     "startDate": "2026-09-19T10:00:00-04:00",
     "endDate": "2026-09-19T19:00:00-04:00",
     "eventStatus": "https://schema.org/EventScheduled",
@@ -103,7 +103,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/vsyc26.css"/>
+  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707"/>
 </head>
 <body>
 
@@ -112,7 +112,7 @@
 <!-- Top bar: contest date banner + sponsor shortcut. -->
 <div id="top-bar">
   <span>VSYC-26 · SEPTEMBER 19, 2026 · DULLES TOWN CENTER · STERLING VA</span>
-  <a href="vsyc26-sponsors.html">SPONSOR VSYC-26 →</a>
+  <a href="vsyc26-sponsors.html">BECOME A SPONSOR →</a>
 </div>
 
 <!-- Contest sub-site nav. aria-current="page" marks the active tab. -->
@@ -126,7 +126,7 @@
       </div>
     </a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link nav-home">← HOME</a>
+      <a href="index.html" class="nav-link nav-home">← DMV THROWERS</a>
       <a href="vsyc26.html" class="nav-link active" aria-current="page">ABOUT</a>
       <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
       <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
@@ -134,6 +134,14 @@
       <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
       <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
+      <div class="nav-more" id="nav-more">
+        <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
+        <div class="nav-more-menu" id="nav-more-menu" role="menu">
+          <a href="https://register.dmvthrowers.club/directory" role="menuitem">Directory</a>
+          <a href="https://register.dmvthrowers.club/results" role="menuitem">Results</a>
+          <a href="https://register.dmvthrowers.club/player" role="menuitem">Music Upload</a>
+        </div>
+      </div>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -142,7 +150,7 @@
 </nav>
 <!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="index.html" class="mobile-home">← HOME</a>
+  <a href="index.html" class="mobile-home">← DMV THROWERS</a>
   <a href="vsyc26.html">ABOUT</a>
   <a href="vsyc26-schedule.html">SCHEDULE</a>
   <a href="vsyc26-register.html">REGISTER</a>
@@ -150,6 +158,10 @@
   <a href="vsyc26-venue.html">VENUE</a>
   <a href="vsyc26-rules.html">RULES</a>
   <a href="vsyc26-faq.html">FAQ</a>
+  <div class="mobile-more-label">More</div>
+  <a href="https://register.dmvthrowers.club/directory">Directory</a>
+  <a href="https://register.dmvthrowers.club/results">Results</a>
+  <a href="https://register.dmvthrowers.club/player">Music Upload</a>
 </div>
 
 <main id="main-content" role="main">
@@ -209,7 +221,7 @@
     <div class="divider-gold"></div>
     <div class="grid-2col">
       <div>
-        <p class="p-style">The Virginia State Yo-Yo Contest has run every year since 2007. This year we're bringing it to Northern Virginia for the first time — Center Court at Dulles Town Center, Saturday crowds, and a community that genuinely loves what they do.</p>
+        <p class="p-style">The Virginia State Yo-Yo Contest has been a Virginia tradition since 2007. This year we're bringing it to Northern Virginia for the first time — Center Court at Dulles Town Center, Saturday crowds, and a community that genuinely loves what they do.</p>
         <p class="p-style2">Entirely volunteer-run. Every dollar goes straight to the event. Organized by DMV Throwers Yo-Yo & Skill Toy Club.</p>
         <div class="flex-gap">
           <span class="tag-style">MULTI-DIVISION</span>
@@ -278,6 +290,26 @@
   document.querySelectorAll('.mobile-menu a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
   });
+
+  // "More" dropdown (desktop) — Directory/Results/Music Upload
+  var moreWrap = document.getElementById('nav-more');
+  var moreBtn = document.getElementById('nav-more-btn');
+  var moreMenu = document.getElementById('nav-more-menu');
+  if (moreWrap && moreBtn && moreMenu) {
+    moreBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = moreMenu.classList.toggle('open');
+      moreWrap.classList.toggle('open', isOpen);
+      moreBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e) {
+      if (!moreWrap.contains(e.target)) {
+        moreMenu.classList.remove('open');
+        moreWrap.classList.remove('open');
+        moreBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
   // Countdown to September 19, 2026 10:00 AM EDT
   (function() {
