@@ -263,6 +263,8 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .footer-logo { width: 34px; height: 34px; object-fit: contain; }
 .footer-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 0.95rem; color: var(--white); }
 .footer-subtitle { font-size: 0.58rem; letter-spacing: 0.18em; color: var(--gold); font-weight: 700; }
+.footer-presented { font-size: 0.55rem; letter-spacing: 0.18em; color: var(--text-muted); font-weight: 700; margin-top: 3px; }
+.footer-presented span { color: var(--gold); font-weight: 800; }
 .footer-link { color: var(--white); font-size: 0.75rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
 .footer-link:hover { color: var(--gold); }
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
