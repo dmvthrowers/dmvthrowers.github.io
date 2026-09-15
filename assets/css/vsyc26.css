@@ -167,6 +167,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .tier-card.platinum .tier-benefits li::before { color: #b0c0d8; }
 .hero-presented { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; color: var(--text-muted); margin: 18px 0 16px; }
 .hero-presented span { color: var(--gold); font-weight: 800; }
+.hero-presented-note { font-size: 0.72rem; letter-spacing: 0.06em; color: var(--text-muted); margin: -10px 0 16px; }
 .confirmed-badge { display: inline-block; background: var(--gold); color: var(--navy-deep); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em; padding: 3px 8px; margin-top: 12px; }
 
 /* VENUE */
