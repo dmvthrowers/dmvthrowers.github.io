@@ -281,6 +281,10 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 /* UTILITY */
 
 .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+/* Stella Duellum guest-event block: poster beside the ruleset cards. */
+.battles-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 32px; align-items: start; margin-top: 24px; }
+.battles-art img { width: 100%; height: auto; display: block; border: 1px solid var(--border); }
+.battles-stack { display: flex; flex-direction: column; gap: 24px; }
 .p-style { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 20px; }
 .p-style2 { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 28px; }
 .flex-gap { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -342,7 +346,7 @@ p.schedule-note { margin-top: 16px; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .venue-grid, .reg-grid, .contact-grid, .ruleset-grid, .grid-2col { grid-template-columns: 1fr; }
+  .venue-grid, .reg-grid, .contact-grid, .ruleset-grid, .grid-2col, .battles-grid { grid-template-columns: 1fr; }
   .venue-gallery { grid-template-columns: 1fr 1fr; }
   .venue-gallery-item.tall { grid-row: span 1; aspect-ratio: 4/3; }
   .countdown-grid { grid-template-columns: repeat(4, 1fr); }
