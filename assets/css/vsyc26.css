@@ -165,6 +165,9 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .tier-benefits li { font-size: 0.78rem; color: var(--text-body); padding-left: 16px; position: relative; line-height: 1.4; }
 .tier-benefits li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
 .tier-card.platinum .tier-benefits li::before { color: #b0c0d8; }
+.hero-presented { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; color: var(--text-muted); margin: 18px 0 16px; }
+.hero-presented span { color: var(--gold); font-weight: 800; }
+.hero-presented-note { font-size: 0.72rem; letter-spacing: 0.06em; color: var(--text-muted); margin: -10px 0 16px; }
 .confirmed-badge { display: inline-block; background: var(--gold); color: var(--navy-deep); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em; padding: 3px 8px; margin-top: 12px; }
 
 /* VENUE */
@@ -293,11 +296,23 @@ p.schedule-note { margin-top: 16px; }
 .sponsor-p { font-size: 1rem; color: var(--text-body); max-width: 680px; line-height: 1.8; margin-bottom: 12px; }
 .sponsor-p2 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 40px; }
 .active-sponsors { display: flex; flex-wrap: wrap; gap: 24px; margin: 32px 0; justify-content: center; }
-.active-sponsor-card { border-radius: 4px; padding: 36px 48px; text-align: center; min-width: 280px; flex: 1; max-width: 560px; }
+.active-sponsor-card { padding: 36px 48px; text-align: center; min-width: 280px; flex: 1; max-width: 560px; }
 .active-sponsor-card.platinum-sponsor { background: linear-gradient(135deg, #1a2a45 0%, #0d1b30 100%); border: 2px solid #b0c0d8; }
+.active-sponsor-card.presenting-sponsor { background: linear-gradient(135deg, #1f2e50 0%, #0d1b30 100%); border: 2px solid var(--gold); }
+.active-sponsor-card.presenting-sponsor .active-sponsor-tier { color: var(--gold); }
 .active-sponsor-tier { font-size: 0.65rem; font-weight: 800; letter-spacing: 0.2em; color: #b0c0d8; margin-bottom: 16px; }
 .active-sponsor-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.8rem; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
 .active-sponsor-tagline { font-size: 0.85rem; color: var(--text-muted); }
+.sponsor-activation { list-style: none; margin: 14px 0 0; padding: 0; font-size: 0.8rem; color: var(--text-muted); }
+.sponsor-activation li { padding: 3px 0; }
+.supporting-sponsors { max-width: 760px; margin: 8px auto 0; }
+.supporting-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px; padding: 14px 0; border-top: 1px solid var(--border); }
+.supporting-tier { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.18em; color: var(--text-muted); min-width: 160px; }
+.supporting-tier.tier-gold-label { color: var(--gold); }
+.supporting-tier.tier-silver-label { color: #c0c8d8; }
+.supporting-names { font-size: 0.95rem; color: var(--white); font-weight: 600; flex: 1; }
+@media (max-width: 600px) { .supporting-tier { min-width: 0; } }
+.sponsor-activation li::before { content: "\2022"; color: var(--gold); font-weight: 800; margin-right: 8px; }
 .sponsor-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
 .sponsor-margin { margin-top: 48px; }
 .sponsor-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: var(--white); margin-bottom: 8px; }

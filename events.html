@@ -69,7 +69,7 @@
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     /* Fixed event card structure */
     .event-card { background: #fffaf2; border: 1px solid #ece3d2; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
-    .event-card:hover { transform: translateX(4px); box-shadow: -4px 4px 0 var(--red); }
+    .event-card:not(.event-card-cancelled):hover { transform: translateX(4px); box-shadow: -4px 4px 0 var(--red); }
     .event-card-special { background: #1f4f8a; border-left-color: #153b66; }
     .event-card-special:hover { box-shadow: -4px 4px 0 #153b66; }
     .event-card-special .event-type,
@@ -86,6 +86,12 @@
     .event-card-holiday .event-date,
     .event-card-holiday .event-day { color: white; }
     .event-card-holiday .event-type { opacity: 0.95; }
+    .event-card-cancelled { background: #f2f0ec; border-left-color: #9aa3b8; }
+    .event-card-cancelled .event-type { color: var(--red); }
+    .event-card-cancelled .event-name { color: #6b7280; }
+    .event-card-cancelled .event-date { color: #6b7280; text-decoration: line-through; }
+    .event-card-cancelled .event-day { color: #6b7280; }
+    .event-card-cancelled .event-loc { color: #4b5563; }
     .event-card-body { padding: 20px 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
     .event-type { font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; color: var(--red); margin-bottom: 6px; }
     .event-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--navy); }
@@ -118,10 +124,10 @@
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- Top bar: next meetup date + RSVP shortcut. Update the date text each month. -->
+<!-- Top bar: headline event + shortcut. Update the text each month. -->
 <div id="top-bar">
-  <span>NEXT MEET: SEPTEMBER 20, 2026 · ARLINGTON CENTRAL LIBRARY · ARLINGTON VA</span>
-  <a href="https://arlingtonva.libcal.com/event/15919322" target="_blank" rel="noopener noreferrer">RSVP →</a>
+  <span>VSYC-26 · VIRGINIA STATE YO-YO CONTEST · SATURDAY, SEPTEMBER 19, 2026 · DULLES TOWN CENTER</span>
+  <a href="vsyc26.html">CONTEST DETAILS →</a>
 </div>
 
 <!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
@@ -228,17 +234,17 @@
       </div>
     </div>
 
-    <div class="event-card">
+    <div class="event-card event-card-cancelled">
       <div class="event-card-body">
         <div>
-          <div class="event-type">● MONTHLY MEETUP</div>
+          <div class="event-type">✕ CANCELLED</div>
           <div class="event-name">Arlington Central Library</div>
-          <div class="event-loc">1015 N Quincy St, Arlington VA 22201 · Barbara M. Donnellan Auditorium</div>
+          <div class="event-loc">No September meetup — we're all at the Virginia State Yo-Yo Contest the day before. See you at Dulles Town Center on Saturday the 19th.</div>
         </div>
         <div>
           <div class="event-date">September 20</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
+          <a href="vsyc26.html" class="btn btn-red event-btn-small">VSYC-26 DETAILS →</a>
         </div>
       </div>
     </div>
