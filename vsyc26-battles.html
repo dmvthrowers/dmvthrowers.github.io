@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
-  vsyc26-battles.html — Stella Duellum yo-yo battles, a guest event run by Prismatic Stars.
-  Sections: top bar · contest nav · mobile menu · page hero · format · how to enter · footer.
-  Sign-up and ruleset belong to Prismatic Stars — route battle questions to their inbox, not the contest inbox.
+  vsyc26-battles.html — Stella Duellum, a guest event hosted by Anneurismz for Prismatic Stars.
+  Sections: top bar · contest nav · mobile menu · page hero · format · how to enter · video · footer.
+  Sign-up and ruleset belong to Prismatic Stars — route questions to their inbox, not the contest inbox.
 -->
 <html lang="en">
 <head>
@@ -11,11 +11,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Stella Duellum · VSYC-26 · Brought to You by Goodles</title>
-  <meta name="description" content="Stella Duellum yo-yo battles at VSYC-26 — one-minute routines, random music, crowd vote. Run by Prismatic Stars, starting 12:00 PM Saturday September 19, 2026."/>
+  <meta name="description" content="Stella Duellum at VSYC-26 — one-minute routines, random music, crowd vote. Hosted by Anneurismz for Prismatic Stars, starting 12:00 PM Saturday September 19, 2026."/>
   <meta property="og:title" content="Stella Duellum · VSYC-26 · Brought to You by Goodles"/>
-  <meta property="og:description" content="Stella Duellum — head-to-head yo-yo battles by Prismatic Stars"/>
+  <meta property="og:description" content="Stella Duellum — hosted by Anneurismz for Prismatic Stars"/>
   <meta property="og:type" content="event"/>
   <meta property="og:url" content="https://dmvthrowers.club/vsyc26-battles.html"/>
   <meta property="og:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
@@ -24,11 +24,11 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@dmv_throwers"/>
   <meta name="twitter:title" content="Stella Duellum · VSYC-26 · Brought to You by Goodles"/>
-  <meta name="twitter:description" content="Stella Duellum — head-to-head yo-yo battles by Prismatic Stars"/>
+  <meta name="twitter:description" content="Stella Duellum — hosted by Anneurismz for Prismatic Stars"/>
   <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
   <meta name="twitter:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:locale" content="en_US"/>
-  <meta name="keywords" content="Stella Duellum, yo-yo battles, Prismatic Stars, VSYC-26 battles, yo-yo battle bracket Virginia"/>
+  <meta name="keywords" content="Stella Duellum, Prismatic Stars, Anneurismz, VSYC-26, yo-yo Virginia"/>
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Sterling, Virginia"/>
@@ -46,6 +46,11 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Stella Duellum","item":"https://dmvthrowers.club/vsyc26-battles.html"}]}
   </script>
+  <style>
+    .battles-video { margin-top: 24px; }
+    .video-embed { position: relative; width: 100%; aspect-ratio: 16/9; border: 1px solid var(--border); margin-top: 12px; }
+    .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  </style>
 </head>
 <body>
 
@@ -75,7 +80,7 @@
       <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
       <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
-      <a href="vsyc26-battles.html" class="nav-link active" aria-current="page">BATTLES</a>
+      <a href="vsyc26-battles.html" class="nav-link active" aria-current="page">STELLA DUELLUM</a>
       <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
       <div class="nav-more" id="nav-more">
         <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
@@ -100,7 +105,7 @@
   <a href="vsyc26-sponsors.html">SPONSORS</a>
   <a href="vsyc26-venue.html">VENUE</a>
   <a href="vsyc26-rules.html">RULES</a>
-  <a href="vsyc26-battles.html" aria-current="page">BATTLES</a>
+  <a href="vsyc26-battles.html" aria-current="page">STELLA DUELLUM</a>
   <a href="vsyc26-faq.html">FAQ</a>
   <div class="mobile-more-label">More</div>
   <a href="https://register.dmvthrowers.club/directory">Directory</a>
@@ -124,9 +129,9 @@
 <div class="section-wrap bg-deep" id="battles">
   <div class="section">
     <div class="gold-tag">GUEST EVENT</div>
-    <h2 class="section-title">Stella Duellum · Yo-Yo Battles</h2>
+    <h2 class="section-title">Stella Duellum · Prismatic Stars</h2>
     <div class="divider-gold"></div>
-    <p class="sponsor-p">Stella Duellum returns to VA States. It is a head-to-head battle bracket run by Prismatic Stars, with its own sign-up and its own rules, running alongside our divisions. Battles start at 12:00 PM.</p>
+    <p class="sponsor-p">Stella Duellum returns to VA States. Hosted by Anneurismz for Prismatic Stars, it has its own sign-up and its own rules, running alongside our divisions. It starts at 12:00 PM.</p>
     <div class="battles-grid">
       <div class="battles-art">
         <picture>
@@ -136,7 +141,7 @@
       </div>
       <div class="battles-stack">
         <div class="rule-block">
-          <div class="rule-block-title">HOW BATTLES WORK</div>
+          <div class="rule-block-title">HOW STELLA DUELLUM WORKS</div>
           <ul class="rule-list">
             <li>One-minute routines, head to head</li>
             <li>Music is random — you hear it when the crowd does</li>
@@ -149,16 +154,22 @@
           <div class="rule-block-title">HOW TO ENTER</div>
           <ul class="rule-list">
             <li>Sign-up is run by Prismatic Stars on Challonge, separately from VSYC-26 registration</li>
-            <li>Questions about battles go to <a href="mailto:Prismatic.stars.art@gmail.com" class="rules-link">Prismatic.stars.art@gmail.com</a> — not to our contest inbox</li>
+            <li>Questions go to <a href="mailto:Prismatic.stars.art@gmail.com" class="rules-link">Prismatic.stars.art@gmail.com</a> — not to our contest inbox</li>
           </ul>
           <div class="btns-flex">
-            <a href="https://challonge.com/tournaments/signup/YU8zgIVcyZ#/signup/i17x7lxcxk9" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small2">SIGN UP FOR BATTLES →</a>
+            <a href="https://challonge.com/tournaments/signup/YU8zgIVcyZ#/signup/i17x7lxcxk9" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small2">SIGN UP FOR STELLA DUELLUM →</a>
           </div>
         </div>
       </div>
     </div>
+    <div class="rule-block battles-video">
+      <div class="rule-block-title">SEE IT IN ACTION</div>
+      <div class="video-embed">
+        <iframe src="https://www.youtube-nocookie.com/embed/5eZHt6h0AqU" title="Stella Duellum highlights" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
     <div class="rules-note">
-      <p class="rules-p">★ Stella Duellum is organized, judged, and run by Prismatic Stars. It sits alongside the contest rather than inside it, so battle results do not affect placements in our divisions. Free to watch, same as everything else at VSYC-26.</p>
+      <p class="rules-p">★ Stella Duellum is organized, judged, and run by Prismatic Stars, hosted by Anneurismz. It sits alongside the contest rather than inside it, so its results do not affect placements in our divisions. Free to watch, same as everything else at VSYC-26.</p>
     </div>
   </div>
 </div>
@@ -182,7 +193,7 @@
         <a href="vsyc26-register.html" class="footer-link">Register</a>
         <a href="vsyc26-sponsors.html" class="footer-link">Sponsors</a>
         <a href="vsyc26-venue.html" class="footer-link">Venue</a>
-        <a href="vsyc26-battles.html" class="footer-link">Battles</a>
+        <a href="vsyc26-battles.html" class="footer-link">Stella Duellum</a>
         <a href="vsyc26-faq.html" class="footer-link">Contact</a>
         <a href="vsyc26-terms.html" class="footer-link">Terms</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
