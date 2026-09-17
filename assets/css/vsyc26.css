@@ -312,13 +312,30 @@ p.schedule-note { margin-top: 16px; }
 .sponsor-activation { list-style: none; margin: 14px 0 0; padding: 0; font-size: 0.8rem; color: var(--text-muted); }
 .sponsor-activation li { padding: 3px 0; }
 .supporting-sponsors { max-width: 760px; margin: 8px auto 0; }
+
+/* ===== Sponsor strip (vsyc26.html landing) ===== */
+.sponsor-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px 32px; max-width: 880px; margin: 24px auto 0; }
+.strip-logo { height: 34px; width: auto; max-width: 150px; object-fit: contain; display: block; }
+.strip-logo-lead { height: 54px; max-width: 230px; }
+/* Dark-ink marks need a light plate to read against the navy band. */
+.strip-logo-plate { background: var(--white); padding: 5px 8px; }
+.sponsor-strip-rest { text-align: center; max-width: 720px; margin: 26px auto 0; }
+.sponsor-strip-cta { justify-content: center; margin-top: 26px; }
+@media (max-width: 600px) { .sponsor-strip { gap: 16px 22px; } .strip-logo { height: 28px; } .strip-logo-lead { height: 42px; } }
+
+/* Partners are not sponsors: same row rhythm, set apart from the tier list above. */
+.partners { max-width: 760px; margin: 40px auto 0; }
 .supporting-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px; padding: 14px 0; border-top: 1px solid var(--border); }
 .supporting-tier { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.18em; color: var(--text-muted); min-width: 160px; }
 .supporting-tier.tier-gold-label { color: var(--gold); }
 .supporting-tier.tier-silver-label { color: #c0c8d8; }
 .supporting-names { font-size: 0.95rem; color: var(--white); font-weight: 600; flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; }
 .supporting-chip { display: inline-flex; align-items: center; gap: 8px; }
-.supporting-logo { height: 22px; width: auto; display: block; }
+/* Keep each chip's text as one flex item so long labels wrap as prose, not as split columns. */
+.supporting-chip-label { min-width: 0; }
+.supporting-logo { height: 30px; width: auto; max-width: 150px; object-fit: contain; display: block; }
+/* Dark-ink sponsor marks need a light plate to read against the navy band. */
+.supporting-logo-plate { background: var(--white); padding: 4px 6px; }
 .supporting-names a { color: inherit; text-decoration: none; }
 .supporting-names a:hover { text-decoration: underline; }
 @media (max-width: 600px) { .supporting-tier { min-width: 0; } }
