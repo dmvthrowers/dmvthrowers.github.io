@@ -318,7 +318,11 @@ p.schedule-note { margin-top: 16px; }
 .supporting-tier.tier-silver-label { color: #c0c8d8; }
 .supporting-names { font-size: 0.95rem; color: var(--white); font-weight: 600; flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; }
 .supporting-chip { display: inline-flex; align-items: center; gap: 8px; }
-.supporting-logo { height: 22px; width: auto; display: block; }
+/* Keep each chip's text as one flex item so long labels wrap as prose, not as split columns. */
+.supporting-chip-label { min-width: 0; }
+.supporting-logo { height: 30px; width: auto; max-width: 150px; object-fit: contain; display: block; }
+/* Dark-ink sponsor marks need a light plate to read against the navy band. */
+.supporting-logo--plate { background: var(--white); padding: 4px 6px; }
 .supporting-names a { color: inherit; text-decoration: none; }
 .supporting-names a:hover { text-decoration: underline; }
 @media (max-width: 600px) { .supporting-tier { min-width: 0; } }
