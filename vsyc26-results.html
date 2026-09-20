@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--
-  vsyc26-merch.html — official VSYC-26 merch: buttons, shirts (cash/card, day-of only) plus pronoun pins at a separate booth.
-  Sections: top bar · contest nav · mobile menu · page hero · merch gallery · vendors · footer.
-  Merch is cash/card at the table on September 19 only. No online store, no preorders, no shipping.
+  vsyc26-results.html — VSYC-26 podium + Virginia State Champion highlights.
+  Links out to the full live leaderboard at register.dmvthrowers.club/results for
+  complete standings; this page is the announcement/highlight recap, not the source of truth.
+  Part of the VSYC-26 sub-site; shares assets/css/vsyc26.css and contest nav with vsyc26.html.
 -->
 <html lang="en">
 <head>
@@ -11,28 +12,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
-  <title>Merch · VSYC-26 · Brought to You by Goodles</title>
-  <meta name="description" content="VSYC-26 merch — buttons and shirts, cash/card at the merch table September 19, 2026. Pronoun pins available at a separate booth. Day-of only, no online store."/>
-  <meta property="og:title" content="Merch · VSYC-26 · Brought to You by Goodles"/>
-  <meta property="og:description" content="Buttons and shirts at the merch table, pronoun pins at a separate booth — September 19"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <title>Results · VSYC-26 · Brought to You by Goodles</title>
+  <meta name="description" content="VSYC-26 final results: division champions and Virginia State Champions for X Division, 1A, and Sport/Beginner/Junior. September 19, 2026 at Dulles Town Center."/>
+  <meta property="og:title" content="Results · VSYC-26 · Brought to You by Goodles"/>
+  <meta property="og:description" content="Division champions and Virginia State Champions from VSYC-26 — September 19, 2026 · Dulles Town Center"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://dmvthrowers.club/vsyc26-merch.html"/>
-  <meta property="og:image" content="https://dmvthrowers.club/assets/images/merch/shirt-back-print.jpg"/>
-  <meta property="og:image:alt" content="VA State Yo-Yo Contest shirt print"/>
+  <meta property="og:url" content="https://dmvthrowers.club/vsyc26-results.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
+  <meta property="og:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:site_name" content="DMV Throwers"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@dmv_throwers"/>
-  <meta name="twitter:title" content="Merch · VSYC-26 · Brought to You by Goodles"/>
-  <meta name="twitter:description" content="Buttons and shirts at the merch table, pronoun pins at a separate booth — September 19"/>
-  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/merch/shirt-back-print.jpg"/>
-  <meta name="twitter:image:alt" content="VA State Yo-Yo Contest shirt print"/>
+  <meta name="twitter:title" content="Results · VSYC-26 · Brought to You by Goodles"/>
+  <meta name="twitter:description" content="Division champions and Virginia State Champions from VSYC-26"/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
+  <meta name="twitter:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:locale" content="en_US"/>
-  <meta name="keywords" content="VSYC-26 merch, VA State Yo-Yo Contest shirt, yo-yo contest button, pronoun pins, contest vendors"/>
+  <meta name="keywords" content="VSYC-26 results, yo-yo contest results 2026, Virginia state yo-yo champion, VSYC-26 podium"/>
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Sterling, Virginia"/>
-  <link rel="canonical" href="https://dmvthrowers.club/vsyc26-merch.html"/>
+  <link rel="canonical" href="https://dmvthrowers.club/vsyc26-results.html"/>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/vsyc26-va-logo-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/vsyc26-va-logo-32.png"/>
@@ -40,25 +41,12 @@
   <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707" media="print" onload="this.media='all'"/>
-  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707"/></noscript>
+  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20260920" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260920"/></noscript>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Merch","item":"https://dmvthrowers.club/vsyc26-merch.html"}]}
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Results","item":"https://dmvthrowers.club/vsyc26-results.html"}]}
   </script>
-  <style>
-    .merch-note { background: rgba(201,168,76,0.09); border: 1px solid var(--border); padding: 16px 20px; margin: 20px 0 0; font-weight: 600; }
-    .merch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 28px; }
-    .merch-card { border: 1px solid var(--border); }
-    .merch-card img { width: 100%; height: auto; display: block; aspect-ratio: 800/1062; object-fit: cover; }
-    .merch-card-label { padding: 12px 14px; }
-    .merch-card-name { font-weight: 800; color: var(--white); font-size: 0.95rem; }
-    .merch-card-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
-    .vendor-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding: 14px 0; border-top: 1px solid var(--border); }
-    .vendor-tier { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.16em; color: var(--text-muted); min-width: 130px; }
-    .vendor-names { font-size: 0.95rem; color: var(--white); font-weight: 600; flex: 1; min-width: 0; }
-    @media (max-width: 600px) { .vendor-tier { min-width: 0; } }
-  </style>
 </head>
 <body>
 
@@ -83,7 +71,7 @@
     <div class="nav-links">
       <a href="index.html" class="nav-link nav-home">← DMV THROWERS</a>
       <a href="vsyc26.html" class="nav-link">ABOUT</a>
-      <a href="vsyc26-results.html" class="nav-link">RESULTS</a>
+      <a href="vsyc26-results.html" class="nav-link active" aria-current="page">RESULTS</a>
       <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
       <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
       <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
@@ -95,7 +83,7 @@
         <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
         <div class="nav-more-menu" id="nav-more-menu" role="menu">
           <a href="vsyc26-twirly-tour.html" role="menuitem">Twirly Tour</a>
-          <a href="vsyc26-merch.html" role="menuitem" aria-current="page">Merch</a>
+          <a href="vsyc26-merch.html" role="menuitem">Merch</a>
           <a href="https://register.dmvthrowers.club/directory" role="menuitem">Directory</a>
           <a href="https://register.dmvthrowers.club/results" role="menuitem">Full Leaderboard</a>
           <a href="https://register.dmvthrowers.club/player" role="menuitem">Music Upload</a>
@@ -121,103 +109,133 @@
   <a href="vsyc26-faq.html">FAQ</a>
   <div class="mobile-more-label">More</div>
   <a href="vsyc26-twirly-tour.html">Twirly Tour</a>
-  <a href="vsyc26-merch.html" aria-current="page">Merch</a>
+  <a href="vsyc26-merch.html">Merch</a>
   <a href="https://register.dmvthrowers.club/directory">Directory</a>
   <a href="https://register.dmvthrowers.club/results">Full Leaderboard</a>
   <a href="https://register.dmvthrowers.club/player">Music Upload</a>
 </div>
 
 <main id="main-content" role="main">
-
 <div class="vsyc-page-hero">
   <div class="vsyc-page-hero-inner">
-    <span class="gold-tag">VSYC-26</span>
-    <h1 class="vsyc-page-hero-title">Merch</h1>
-    <p class="vsyc-page-hero-sub">Virginia State Yo-Yo Contest brought to you by Goodles &middot; September 19, 2026 &middot; Sterling, VA</p>
+    <span class="gold-tag">VSYC-26 · SEPTEMBER 19, 2026</span>
+    <h1 class="vsyc-page-hero-title">Results</h1>
+    <p class="vsyc-page-hero-sub">Congratulations to every competitor who threw at Dulles Town Center. Here are the division champions and Virginia State Champions.</p>
+  </div>
+  <div class="page-hero-nature">
+    <img src="assets/images/vsyc-marigolds-hero.svg" alt="" aria-hidden="true" width="1440" height="220"/>
   </div>
 </div>
 
-<div class="section-wrap bg-deep" id="merch">
+<!-- OUT-OF-STATE STAT -->
+<div class="section-wrap">
   <div class="section">
-    <div class="gold-tag">SHOP</div>
-    <h2 class="section-title">Buy Day-Of at the Contest</h2>
+    <div class="note-style">
+      <span class="note-span">🗺️ <strong class="strong-white">All 9 podium spots across the three divisions went to competitors from outside Virginia.</strong> This contest drew serious talent from across the country — and Virginia still put up a fight. Each division's top Virginia finisher is called out below as that division's <strong class="strong-white">VA State Champion</strong>.</span>
+    </div>
+  </div>
+</div>
+
+<!-- X DIVISION -->
+<div class="section-wrap bg-navy">
+  <div class="section">
+    <div class="gold-tag">X DIVISION</div>
+    <h2 class="section-title">Podium</h2>
     <div class="divider-gold"></div>
-    <p class="sponsor-p">Buttons and shirts &mdash; entirely volunteer-run, every dollar goes straight to the event. Proceeds go toward running future Mid-Atlantic yo-yo contests.</p>
-    <div class="merch-note">Cash and card accepted at the merch table, September 19 only. No online store, no preorders, no shipping.</div>
-
-    <div class="merch-grid">
-      <div class="merch-card">
-        <picture>
-          <source srcset="assets/images/merch/va-state-button.webp" type="image/webp"/>
-          <img src="assets/images/merch/va-state-button.jpg" alt="VA State Yo-Yo Competition enamel-style button, blue and red on cream" width="800" height="1062" loading="lazy"/>
-        </picture>
-        <div class="merch-card-label">
-          <div class="merch-card-name">VA State Button</div>
-          <div class="merch-card-desc">Enamel-style pin</div>
-        </div>
+    <div class="divisions-grid">
+      <div class="division-card">
+        <div class="division-name">🥇 Chandler Steele</div>
+        <div class="division-desc">Xenia, OH</div>
+        <span class="division-badge">91.00 PTS</span>
       </div>
-      <div class="merch-card">
-        <picture>
-          <source srcset="assets/images/merch/shirt-front-logo.webp" type="image/webp"/>
-          <img src="assets/images/merch/shirt-front-logo.jpg" alt="Black t-shirt with a small embroidered VA State Yo-Yo Contest logo on the chest" width="800" height="1062" loading="lazy"/>
-        </picture>
-        <div class="merch-card-label">
-          <div class="merch-card-name">VA State Tee</div>
-          <div class="merch-card-desc">Embroidered chest logo</div>
-        </div>
+      <div class="division-card">
+        <div class="division-name">🥈 Drew Buscemi</div>
+        <div class="division-desc">Long Island, NY</div>
+        <span class="division-badge">59.93 PTS</span>
       </div>
-      <div class="merch-card">
-        <picture>
-          <source srcset="assets/images/merch/shirt-back-print.webp" type="image/webp"/>
-          <img src="assets/images/merch/shirt-back-print.jpg" alt="Black t-shirt with a large screen-printed design of a skeletal hand throwing a yo-yo, VA State Yo-Yo Contest" width="800" height="1062" loading="lazy"/>
-        </picture>
-        <div class="merch-card-label">
-          <div class="merch-card-name">Contest Art Tee</div>
-          <div class="merch-card-desc">Full-back screen print</div>
-        </div>
+      <div class="division-card">
+        <div class="division-name">🥉 Richard Pigkaso</div>
+        <div class="division-desc">Bronx, NY</div>
+        <span class="division-badge">52.64 PTS</span>
       </div>
     </div>
-
-    <div class="merch-card" style="max-width:260px;margin-top:28px">
-      <picture>
-        <source srcset="assets/images/merch/pronoun-pin-she-her.webp" type="image/webp"/>
-        <img src="assets/images/merch/pronoun-pin-she-her.jpg" alt="Pronoun pin reading SHE HER with a yo-yo design, one of a set" width="800" height="1062" loading="lazy"/>
-      </picture>
-      <div class="merch-card-label">
-        <div class="merch-card-name">Pronoun Pins</div>
-        <div class="merch-card-desc">She/her shown &mdash; available at a booth on the day, separate from the merch table</div>
-      </div>
+    <div class="note-style">
+      <span class="note-span">🇺🇸 <strong class="strong-white">VA State Champion — Alex Curfman</strong> · Henrico, VA · 40.77 pts · 4th overall</span>
     </div>
+  </div>
+</div>
 
-    <p class="sponsor-p" style="margin-top:28px">Also selling contest merch on the day: <a href="vsyc26-sponsors.html" class="rules-link">Bmore YoYo Club</a> at their booth.</p>
-
-    <div class="sponsor-divider"></div>
-
-    <div class="gold-tag">VENDORS</div>
-    <h2 class="section-title">Who&rsquo;s Tabling</h2>
+<!-- 1A DIVISION -->
+<div class="section-wrap">
+  <div class="section">
+    <div class="gold-tag">1A — SINGLE STRING</div>
+    <h2 class="section-title">Podium</h2>
     <div class="divider-gold"></div>
-    <p class="sponsor-p">Gold-tier sponsors and above have a table on the floor Center Court. Stop by and say hi.</p>
-
-    <div class="tour-stops">
-      <div class="vendor-row">
-        <div class="vendor-tier">&#9670; PRESENTING</div>
-        <div class="vendor-names">Goodles &mdash; sampling cart, stickers, temporary tattoos, Twirl for a Prize</div>
+    <div class="divisions-grid">
+      <div class="division-card">
+        <div class="division-name">🥇 Ryan Kim</div>
+        <div class="division-desc">Rosedale, MD</div>
+        <span class="division-badge">95.50 PTS</span>
       </div>
-      <div class="vendor-row">
-        <div class="vendor-tier">&#9679; PLATINUM</div>
-        <div class="vendor-names">Freshly Dirty</div>
+      <div class="division-card">
+        <div class="division-name">🥈 Connor Sheahan</div>
+        <div class="division-desc">Boulder, CO</div>
+        <span class="division-badge">84.71 PTS</span>
       </div>
-      <div class="vendor-row">
-        <div class="vendor-tier">&#9733; GOLD</div>
-        <div class="vendor-names">YoYoSam.com &middot; Recess &amp; Jake Bullock (shared booth) &middot; Slow &amp; Steady Bikes and Goods &middot; Unparalleled</div>
-      </div>
-      <div class="vendor-row">
-        <div class="vendor-tier">&#9670; PARTNER</div>
-        <div class="vendor-names">Bmore YoYo Club &mdash; selling contest merch at their booth</div>
+      <div class="division-card">
+        <div class="division-name">🥉 Colin Beckford</div>
+        <div class="division-desc">Cleveland, OH</div>
+        <span class="division-badge">79.56 PTS</span>
       </div>
     </div>
+    <div class="note-style">
+      <span class="note-span">🇺🇸 <strong class="strong-white">VA State Champion — Bryant Baus</strong> · Virginia Beach, VA · 48.48 pts · 13th overall</span>
+    </div>
+  </div>
+</div>
 
-    <p class="sponsor-p" style="margin-top:28px">Full sponsor list and tiers: <a href="vsyc26-sponsors.html" class="rules-link">see all sponsors</a>.</p>
+<!-- SPORT / BEGINNER / JUNIOR -->
+<div class="section-wrap bg-navy">
+  <div class="section">
+    <div class="gold-tag">SPORT / BEGINNER / JUNIOR</div>
+    <h2 class="section-title">Podium</h2>
+    <div class="divider-gold"></div>
+    <div class="divisions-grid">
+      <div class="division-card">
+        <div class="division-name">🥇 Steen Harty</div>
+        <div class="division-desc">Monticello, GA</div>
+        <span class="division-badge">74.03 PTS</span>
+      </div>
+      <div class="division-card">
+        <div class="division-name">🥈 Larkin McCrary</div>
+        <div class="division-desc">Kernersville, NC</div>
+        <span class="division-badge">71.62 PTS</span>
+      </div>
+      <div class="division-card">
+        <div class="division-name">🥉 Joshua Russell</div>
+        <div class="division-desc">Mooresville, NC</div>
+        <span class="division-badge">59.52 PTS</span>
+      </div>
+    </div>
+    <div class="note-style">
+      <span class="note-span">🇺🇸 <strong class="strong-white">VA State Champion — Christian Eustace</strong> · Fredericksburg, VA · 54.91 pts · 5th overall</span>
+    </div>
+  </div>
+</div>
+
+<!-- FULL LEADERBOARD + THANKS -->
+<div class="section-wrap">
+  <div class="section">
+    <div class="gold-tag">EVERYONE WHO THREW</div>
+    <h2 class="section-title">Full Standings</h2>
+    <div class="divider-gold"></div>
+    <div class="max-width">
+      <p>Want to see the complete ranked standings for every competitor in every division? The full live leaderboard is up now.</p>
+      <p><a href="https://register.dmvthrowers.club/results" target="_blank" rel="noopener noreferrer" class="rules-link">See the full leaderboard →</a></p>
+    </div>
+    <div class="note-style">
+      <span class="note-span">★ Thank you to <strong class="strong-white">Goodles</strong> for presenting VSYC-26, our judges and volunteers who made the day run, and Dulles Town Center for hosting. Thank you to every competitor who came out — see you at the next one.</span>
+    </div>
   </div>
 </div>
 
