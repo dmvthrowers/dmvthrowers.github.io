@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com https://challonge.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Stella Duellum · VSYC-26 · Brought to You by Goodles</title>
   <meta name="description" content="Stella Duellum at VSYC-26 — one-minute routines, random music, crowd vote. Hosted by Anneurismz for Prismatic Stars, starting 12:00 PM Saturday September 19, 2026."/>
   <meta property="og:title" content="Stella Duellum · VSYC-26 · Brought to You by Goodles"/>
@@ -50,6 +50,8 @@
     .battles-video { margin-top: 24px; }
     .video-embed { position: relative; width: 100%; aspect-ratio: 16/9; border: 1px solid var(--border); margin-top: 12px; }
     .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+    .bracket-embed { width: 100%; height: 520px; border: 1px solid var(--border); margin-top: 16px; overflow: auto; -webkit-overflow-scrolling: touch; }
+    .bracket-embed iframe { width: 100%; height: 100%; border: none; }
   </style>
 </head>
 <body>
@@ -177,6 +179,38 @@
     <div class="rules-note">
       <p class="rules-p">★ Stella Duellum is organized, judged, and run by <a href="https://www.prismaticstars.com/" target="_blank" rel="noopener noreferrer" class="rules-link">Prismatic Stars</a>, hosted by <a href="https://www.twitch.tv/Anneurismz" target="_blank" rel="noopener noreferrer" class="rules-link">Anneurismz</a>. It sits alongside the contest rather than inside it, so its results do not affect placements in our divisions. Free to watch, same as everything else at VSYC-26.</p>
     </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="section-wrap bg-navy">
+  <div class="section">
+    <div class="gold-tag">18-PLAYER BRACKET</div>
+    <h2 class="section-title">Battle Results</h2>
+    <div class="divider-gold"></div>
+    <div class="active-sponsors">
+      <div class="active-sponsor-card presenting-sponsor">
+        <div class="active-sponsor-tier">🥇 CHAMPION</div>
+        <div class="active-sponsor-name">Ari K.</div>
+        <div class="active-sponsor-tagline">Undefeated through the full single-elimination bracket</div>
+      </div>
+    </div>
+    <div class="divisions-grid">
+      <div class="division-card">
+        <div class="division-name">🥈 Connor M.</div>
+        <div class="division-desc">Runner-up — fell in the final</div>
+      </div>
+      <div class="division-card">
+        <div class="division-name">🥉 Will Murphy &amp; Theo Munoz</div>
+        <div class="division-desc">Co-3rd — both fell in the semifinals</div>
+      </div>
+    </div>
+    <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 12px;">Ari and Connor are shown as first name + last initial, per our privacy policy for competitors who haven&rsquo;t opted into public name listing.</p>
+    <div class="rule-block-title" style="margin-top: 28px;">FULL BRACKET</div>
+    <div class="bracket-embed">
+      <iframe src="https://challonge.com/StellaDuellum26/module" title="Stella Duellum 2026 full bracket on Challonge" loading="lazy"></iframe>
+    </div>
+    <p class="rules-p" style="margin-top: 12px;"><a href="https://challonge.com/StellaDuellum26" target="_blank" rel="noopener noreferrer" class="rules-link">Open the bracket on Challonge →</a></p>
   </div>
 </div>
 
