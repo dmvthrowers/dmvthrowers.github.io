@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--
-  vsyc26-schedule.html — Day-of schedule for the Virginia State Yo-Yo Contest 2026.
-  Sections: top bar · contest nav · mobile menu · page hero · schedule block · footer.
-  Part of the VSYC-26 sub-site; shares assets/css/vsyc26.css and contest nav with vsyc26.html.
+  vsyc26-dueling-stars.html — Stella Duellum, a guest event hosted by Anneurismz for Prismatic Stars.
+  We refer to this guest event as "Dueling Stars" in our own copy — do not reintroduce "battle"/"battles" wording here.
+  Sections: top bar · contest nav · mobile menu · page hero · format · how to enter · video · results · footer.
+  Sign-up and ruleset belong to Prismatic Stars — route questions to their inbox, not the contest inbox.
 -->
 <html lang="en">
 <head>
@@ -11,28 +12,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
-  <title>Schedule · VSYC-26 · Brought to You by Goodles</title>
-  <meta name="description" content="VSYC-26 day-of schedule: doors and kick off at 10 AM, divisions from 10:30 AM, closing ceremony at 5 PM. September 19, 2026 at Dulles Town Center."/>
-  <meta property="og:title" content="Schedule · VSYC-26 · Brought to You by Goodles"/>
-  <meta property="og:description" content="Full day-of schedule — September 19, 2026 · Dulles Town Center"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com https://challonge.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <title>Stella Duellum · Dueling Stars · VSYC-26 · Brought to You by Goodles</title>
+  <meta name="description" content="Stella Duellum — our Dueling Stars guest event at VSYC-26 — one-minute routines, random music, crowd vote. Hosted by Anneurismz for Prismatic Stars, starting 12:00 PM Saturday September 19, 2026."/>
+  <meta property="og:title" content="Stella Duellum · Dueling Stars · VSYC-26 · Brought to You by Goodles"/>
+  <meta property="og:description" content="Stella Duellum — hosted by Anneurismz for Prismatic Stars"/>
   <meta property="og:type" content="event"/>
-  <meta property="og:url" content="https://dmvthrowers.club/vsyc26-schedule.html"/>
+  <meta property="og:url" content="https://dmvthrowers.club/vsyc26-dueling-stars.html"/>
   <meta property="og:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
   <meta property="og:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:site_name" content="DMV Throwers"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@dmv_throwers"/>
-  <meta name="twitter:title" content="Schedule · VSYC-26 · Brought to You by Goodles"/>
-  <meta name="twitter:description" content="Full day-of schedule — September 19, 2026 · Dulles Town Center"/>
+  <meta name="twitter:title" content="Stella Duellum · Dueling Stars · VSYC-26 · Brought to You by Goodles"/>
+  <meta name="twitter:description" content="Stella Duellum — hosted by Anneurismz for Prismatic Stars"/>
   <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
   <meta name="twitter:image:alt" content="VA State Yo-Yo Competition logo"/>
   <meta property="og:locale" content="en_US"/>
-  <meta name="keywords" content="VSYC-26 schedule, yo-yo contest schedule 2026, Virginia yo-yo contest day schedule, VSYC-26 timetable"/>
+  <meta name="keywords" content="Stella Duellum, Dueling Stars, Prismatic Stars, Anneurismz, VSYC-26, yo-yo Virginia"/>
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
   <meta name="geo.placename" content="Sterling, Virginia"/>
-  <link rel="canonical" href="https://dmvthrowers.club/vsyc26-schedule.html"/>
+  <link rel="canonical" href="https://dmvthrowers.club/vsyc26-dueling-stars.html"/>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/vsyc26-va-logo-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/vsyc26-va-logo-32.png"/>
@@ -44,8 +45,15 @@
   <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707"/></noscript>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Schedule","item":"https://dmvthrowers.club/vsyc26-schedule.html"}]}
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Stella Duellum","item":"https://dmvthrowers.club/vsyc26-dueling-stars.html"}]}
   </script>
+  <style>
+    .dueling-video { margin-top: 24px; }
+    .video-embed { position: relative; width: 100%; aspect-ratio: 16/9; border: 1px solid var(--border); margin-top: 12px; }
+    .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+    .bracket-embed { width: 100%; height: 520px; border: 1px solid var(--border); margin-top: 16px; overflow: auto; -webkit-overflow-scrolling: touch; }
+    .bracket-embed iframe { width: 100%; height: 100%; border: none; }
+  </style>
 </head>
 <body>
 
@@ -71,12 +79,12 @@
       <a href="index.html" class="nav-link nav-home">← DMV THROWERS</a>
       <a href="vsyc26.html" class="nav-link">ABOUT</a>
       <a href="vsyc26-results.html" class="nav-link">RESULTS</a>
-      <a href="vsyc26-schedule.html" class="nav-link active" aria-current="page">SCHEDULE</a>
+      <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
       <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
       <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
       <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
       <a href="vsyc26-rules.html" class="nav-link">RULES</a>
-      <a href="vsyc26-dueling-stars.html" class="nav-link">STELLA DUELLUM</a>
+      <a href="vsyc26-dueling-stars.html" class="nav-link active" aria-current="page">STELLA DUELLUM</a>
       <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
       <div class="nav-more" id="nav-more">
         <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
@@ -104,7 +112,7 @@
   <a href="vsyc26-sponsors.html">SPONSORS</a>
   <a href="vsyc26-venue.html">VENUE</a>
   <a href="vsyc26-rules.html">RULES</a>
-  <a href="vsyc26-dueling-stars.html">STELLA DUELLUM</a>
+  <a href="vsyc26-dueling-stars.html" aria-current="page">STELLA DUELLUM</a>
   <a href="vsyc26-faq.html">FAQ</a>
   <div class="mobile-more-label">More</div>
   <a href="vsyc26-twirly-tour.html">Twirly Tour</a>
@@ -118,36 +126,92 @@
 <div class="vsyc-page-hero">
   <div class="vsyc-page-hero-inner">
     <span class="gold-tag">VSYC-26</span>
-    <h1 class="vsyc-page-hero-title">Schedule</h1>
-    <p class="vsyc-page-hero-sub">Virginia State Yo-Yo Contest brought to you by Goodles · September 19, 2026 · Sterling, VA</p>
+    <h1 class="vsyc-page-hero-title">Stella Duellum</h1>
+    <p class="vsyc-page-hero-sub">Our Dueling Stars guest event · September 19, 2026 · Sterling, VA</p>
   </div>
   <div class="page-hero-nature">
     <img src="assets/images/vsyc-marigolds-hero.svg" alt="" aria-hidden="true" width="1440" height="220"/>
   </div>
 </div>
 
-<!-- SCHEDULE -->
+<!-- RULESET -->
+<div class="section-wrap bg-deep" id="dueling-stars">
+  <div class="section">
+    <div class="gold-tag">GUEST EVENT · DUELING STARS</div>
+    <h2 class="section-title">Stella Duellum · Prismatic Stars</h2>
+    <div class="divider-gold"></div>
+    <p class="sponsor-p">Stella Duellum returns to VA States. Hosted by <a href="https://www.twitch.tv/Anneurismz" target="_blank" rel="noopener noreferrer" class="rules-link">Anneurismz</a> for <a href="https://www.prismaticstars.com/" target="_blank" rel="noopener noreferrer" class="rules-link">Prismatic Stars</a>, it has its own sign-up and its own rules, running alongside our divisions. It starts at 12:00 PM.</p>
+    <div class="dueling-grid">
+      <div class="dueling-art">
+        <picture>
+          <source srcset="assets/images/vsyc26-stella-duellum.webp" type="image/webp"/>
+          <img src="assets/images/vsyc26-stella-duellum.jpg" alt="Stella Duellum returns to the VA State Yo-Yo Competition on September 19th, presented by Prismatic Stars." width="760" height="940" loading="lazy"/>
+        </picture>
+      </div>
+      <div class="dueling-stack">
+        <div class="rule-block">
+          <div class="rule-block-title">HOW STELLA DUELLUM WORKS</div>
+          <ul class="rule-list">
+            <li>One-minute routines, head to head</li>
+            <li>Music is random — you hear it when the crowd does</li>
+            <li>Wait off stage until your turn is called</li>
+            <li>You cannot repeat the same routine twice. Repeating a routine is an instant disqualification.</li>
+            <li>The winner of each round is decided by a live chat poll on the <a href="https://youtube.com/@yoyocontestcentral" target="_blank" rel="noopener noreferrer" class="rules-link">YoYo Contest Central</a> YouTube stream</li>
+          </ul>
+        </div>
+        <div class="rule-block">
+          <div class="rule-block-title">HOW TO ENTER</div>
+          <ul class="rule-list">
+            <li>Sign-up is run by <a href="https://www.prismaticstars.com/" target="_blank" rel="noopener noreferrer" class="rules-link">Prismatic Stars</a> on Challonge, separately from VSYC-26 registration</li>
+            <li>Questions go to <a href="mailto:Prismatic.stars.art@gmail.com" class="rules-link">Prismatic.stars.art@gmail.com</a> — not to our contest inbox</li>
+          </ul>
+          <div class="btns-flex">
+            <a href="https://challonge.com/tournaments/signup/YU8zgIVcyZ#/signup/i17x7lxcxk9" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-small2">SIGN UP FOR STELLA DUELLUM →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rule-block dueling-video">
+      <div class="rule-block-title">SEE IT IN ACTION</div>
+      <div class="video-embed">
+        <iframe src="https://www.youtube-nocookie.com/embed/5eZHt6h0AqU" title="Stella Duellum highlights" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="rules-note">
+      <p class="rules-p">★ Stella Duellum is organized, judged, and run by <a href="https://www.prismaticstars.com/" target="_blank" rel="noopener noreferrer" class="rules-link">Prismatic Stars</a>, hosted by <a href="https://www.twitch.tv/Anneurismz" target="_blank" rel="noopener noreferrer" class="rules-link">Anneurismz</a>. It sits alongside the contest rather than inside it, so its results do not affect placements in our divisions. Free to watch, same as everything else at VSYC-26.</p>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
 <div class="section-wrap bg-navy">
   <div class="section">
-    <div class="gold-tag">DAY OF EVENT</div>
-    <h2 class="section-title">Schedule</h2>
+    <div class="gold-tag">18-PLAYER BRACKET</div>
+    <h2 class="section-title">Dueling Stars Results</h2>
     <div class="divider-gold"></div>
-    <div class="max-width">
-      <div class="schedule-item"><div class="schedule-time">9:00 AM</div><div><div class="schedule-event">Setup &amp; Load-In</div><div class="schedule-note">Sponsors, vendors, and staff arrive before the mall opens. Rubber-wheeled hand trucks only.</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">10:00 AM</div><div><div class="schedule-event">Doors Open · Kick Off</div><div class="schedule-note">Registration desk open · Free to spectate · Welcome, sponsor acknowledgments, and rules briefing — emceed by Brian Melford</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">10:30 AM</div><div><div class="schedule-event">Sport / Beginner / Junior Division</div><div class="schedule-note">Our entry-level division — all ages, all levels</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">12:00 PM</div><div><div class="schedule-event">Stella Duellum · Prismatic Stars</div><div class="schedule-note">Hosted by <a href="https://www.twitch.tv/Anneurismz" target="_blank" rel="noopener noreferrer" class="rules-link">Anneurismz</a> for <a href="https://www.prismaticstars.com/" target="_blank" rel="noopener noreferrer" class="rules-link">Prismatic Stars</a> — one-minute routines, random music, crowd vote. Separate sign-up. <a href="vsyc26-dueling-stars.html" class="rules-link">Rules and sign-up →</a></div></div></div>
-      <div class="schedule-item"><div class="schedule-time">1:00 PM</div><div><div class="schedule-event">Pro Division (1A)</div><div class="schedule-note">The flagship division — single yo-yo on a string</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">3:00 PM</div><div><div class="schedule-event">X Division</div><div class="schedule-note">2A · 3A · 4A · 5A — multi-style division</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">5:00 PM</div><div><div class="schedule-event">Closing Ceremony</div><div class="schedule-note">Awards for all divisions · Sponsor acknowledgments · Raffle</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">6:00 PM</div><div><div class="schedule-event">Wrap Up &amp; Breakdown</div><div class="schedule-note">Teardown and load-out begins</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">7:00 PM</div><div><div class="schedule-event">Event Ends</div><div class="schedule-note">Everything out by 7 PM — venue rule</div></div></div>
-      <div class="schedule-item"><div class="schedule-time">7:30 PM</div><div><div class="schedule-event">After Party</div><div class="schedule-note">Come meet us after the contest at <a href="https://maps.app.goo.gl/h34qLPnjaCY27AHNA" target="_blank" rel="noopener noreferrer" class="rules-link">Lost Rhino Brewing Co.</a> — Ashburn, VA</div></div></div>
+    <div class="active-sponsors">
+      <div class="active-sponsor-card presenting-sponsor">
+        <div class="active-sponsor-tier">🥇 CHAMPION</div>
+        <div class="active-sponsor-name">Ari K.</div>
+        <div class="active-sponsor-tagline">Undefeated through the full single-elimination bracket</div>
+      </div>
     </div>
-    <p class="schedule-note">★ Times are subject to change day of, based on final competitor count. Check the registration desk on event day for the confirmed running order.</p>
-    <div class="note-style">
-      <span class="note-span">★ <strong class="strong-white">Can't make it in person?</strong> The day-of livestream and contest video recordings will be posted on the <a href="https://youtube.com/@yoyocontestcentral" target="_blank" rel="noopener noreferrer" class="rules-link">YoYo Contest Central</a> YouTube channel.</span>
+    <div class="divisions-grid">
+      <div class="division-card">
+        <div class="division-name">🥈 Connor M.</div>
+        <div class="division-desc">Runner-up — fell in the final</div>
+      </div>
+      <div class="division-card">
+        <div class="division-name">🥉 Will Murphy &amp; Theo Munoz</div>
+        <div class="division-desc">Co-3rd — both fell in the semifinals</div>
+      </div>
     </div>
+    <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 12px;">Ari and Connor are shown as first name + last initial, per our privacy policy for competitors who haven&rsquo;t opted into public name listing.</p>
+    <div class="rule-block-title" style="margin-top: 28px;">FULL BRACKET</div>
+    <div class="bracket-embed">
+      <iframe src="https://challonge.com/StellaDuellum26/module" title="Stella Duellum 2026 full bracket on Challonge" loading="lazy"></iframe>
+    </div>
+    <p class="rules-p" style="margin-top: 12px;"><a href="https://challonge.com/StellaDuellum26" target="_blank" rel="noopener noreferrer" class="rules-link">Open the bracket on Challonge →</a></p>
   </div>
 </div>
 
