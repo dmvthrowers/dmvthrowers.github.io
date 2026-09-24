@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   vsyc26.html — Contest landing/hub page for the Virginia State Yo-Yo Contest 2026.
-  Sections: top bar · contest nav · mobile menu · hero + countdown · about · footer.
+  Sections: top bar · contest nav · mobile menu · hero + wrap stats · about · footer.
   Part of the VSYC-26 sub-site (vsyc26-*.html), which uses its own stylesheet (assets/css/vsyc26.css).
   Event JSON-LD here is consumed by search engines for rich-event listings — keep dates/venue in sync with site copy.
 -->
@@ -115,8 +115,8 @@
 
 <!-- Top bar: contest date banner + sponsor shortcut. -->
 <div id="top-bar">
-  <span>VSYC-26 · BROUGHT TO YOU BY GOODLES · SEPTEMBER 19, 2026 · DULLES TOWN CENTER</span>
-  <a href="vsyc26-sponsors.html">BECOME A SPONSOR →</a>
+  <span>VSYC-26 · THANK YOU FOR AN AMAZING CONTEST · RESULTS ARE IN</span>
+  <a href="vsyc26-results.html">SEE RESULTS →</a>
 </div>
 
 <!-- Contest sub-site nav. aria-current="page" marks the active tab. -->
@@ -177,7 +177,7 @@
 </div>
 
 <main id="main-content" role="main">
-<!-- Hero: headline + date/time/venue facts + countdown timer. Countdown JS lives inline at bottom of page. -->
+<!-- Hero: headline + date/time/venue facts + post-event wrap stats (was the countdown). -->
 <section id="hero">
   <div class="hero-pattern"></div>
   <div class="hero-glow"></div>
@@ -189,7 +189,7 @@
     <h1 class="hero-title">VIRGINIA STATE<br/><span>YO-YO CONTEST</span></h1>
     <span class="hero-year" aria-hidden="true">2026</span>
     <div class="hero-presented">BROUGHT TO YOU BY <span>GOODLES</span></div>
-    <div class="hero-presented-note">Free shirt + Twirly Mac postcards at the Goodles booth</div>
+    <div class="hero-presented-note">Thank you, Goodles, for the giveaway booth, shirts and Twirly Mac</div>
     <div class="hero-meta">
       <div class="hero-meta-item">
         <span class="hero-meta-label">DATE</span>
@@ -212,13 +212,13 @@
       <a href="https://register.dmvthrowers.club/feedback?src=direct" class="btn btn-gold">TAKE THE SPECTATOR SURVEY</a>
       <a href="vsyc26-results.html" class="btn btn-outline">SEE THE RESULTS</a>
     </div>
-    <div class="countdown-margin" id="countdown">
-      <div class="countdown-title">DAYS UNTIL VSYC-26</div>
+    <div class="countdown-margin" id="wrap">
+      <div class="countdown-title">THAT'S A WRAP · THANK YOU</div>
       <div class="countdown-grid">
-        <div class="countdown-box"><div class="countdown-num" id="cd-days">--</div><div class="countdown-label">DAYS</div></div>
-        <div class="countdown-box"><div class="countdown-num" id="cd-hours">--</div><div class="countdown-label">HOURS</div></div>
-        <div class="countdown-box"><div class="countdown-num" id="cd-mins">--</div><div class="countdown-label">MINS</div></div>
-        <div class="countdown-box"><div class="countdown-num" id="cd-secs">--</div><div class="countdown-label">SECS</div></div>
+        <div class="countdown-box"><div class="countdown-num">50</div><div class="countdown-label">COMPETITORS</div></div>
+        <div class="countdown-box"><div class="countdown-num">14</div><div class="countdown-label">STATES</div></div>
+        <div class="countdown-box"><div class="countdown-num">13</div><div class="countdown-label">CLUBS</div></div>
+        <div class="countdown-box"><div class="countdown-num">20</div><div class="countdown-label">VOLUNTEERS</div></div>
       </div>
     </div>
   </div>
@@ -338,7 +338,7 @@
   </div>
 </footer>
 
-<!-- Inline hamburger toggle + countdown timer. Kept on vsyc26.html; not extracted to a shared file. -->
+<!-- Inline hamburger toggle + "More" dropdown. Kept on vsyc26.html; not extracted to a shared file. -->
 <script>
   // Mobile menu
   document.getElementById('hamburger').addEventListener('click', function() {
@@ -367,36 +367,6 @@
       }
     });
   }
-
-  // Countdown to September 19, 2026 10:00 AM EDT
-  (function() {
-    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var elDays = document.getElementById('cd-days');
-    var elHours = document.getElementById('cd-hours');
-    var elMins = document.getElementById('cd-mins');
-    var elSecs = document.getElementById('cd-secs');
-    var eventTime = new Date('2026-09-19T10:00:00-04:00').getTime();
-    function updateCountdown() {
-      var diff = eventTime - Date.now();
-      if (diff <= 0) {
-        elDays.textContent = '0';
-        elHours.textContent = '0';
-        elMins.textContent = '0';
-        elSecs.textContent = '0';
-        return;
-      }
-      var days = Math.floor(diff / 86400000);
-      var hours = Math.floor((diff % 86400000) / 3600000);
-      var mins = Math.floor((diff % 3600000) / 60000);
-      var secs = Math.floor((diff % 60000) / 1000);
-      elDays.textContent = days;
-      elHours.textContent = String(hours).padStart(2,'0');
-      elMins.textContent = String(mins).padStart(2,'0');
-      elSecs.textContent = String(secs).padStart(2,'0');
-    }
-    updateCountdown();
-    setInterval(updateCountdown, reducedMotion ? 60000 : 1000);
-  })();
 </script>
   <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
   <script src="assets/js/mobile-enhancements.js" defer></script>
