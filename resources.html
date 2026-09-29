@@ -91,7 +91,7 @@
     .resources-desc { color: var(--text-muted); margin-bottom: 8px; font-size: 0.95rem; }
     .links-block { margin-top: 64px; scroll-margin-top: 80px; }
     .link-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 32px; }
-    .link-group { border: 1px solid var(--border); border-top: 4px solid var(--red); padding: 20px 24px; background: var(--cream); }
+    .link-group { scroll-margin-top: 80px; border: 1px solid var(--border); border-top: 4px solid var(--red); padding: 20px 24px; background: var(--cream); }
     .link-group-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 12px; }
     .link-list { list-style: none; margin: 0; padding: 0; }
     .link-list li { padding: 10px 0; border-top: 1px solid var(--cream-mid); line-height: 1.45; }
@@ -306,7 +306,7 @@
 
       <div class="link-groups">
 
-        <div class="link-group">
+        <div class="link-group" id="learn">
           <h3 class="link-group-title">Learn Tricks</h3>
           <ul class="link-list">
             <li><a href="https://yoyotricks.com/yoyo-tricks/" target="_blank" rel="noopener noreferrer">YoYoTricks.com Trick Library</a><span>Free video lessons from your first throw to master level. Kendama too.</span></li>
@@ -319,7 +319,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="kendama">
           <h3 class="link-group-title">Kendama &amp; Skill Toys</h3>
           <ul class="link-list">
             <li><a href="https://yoyotricks.com/tag/kendama-first-50-tricks/" target="_blank" rel="noopener noreferrer">LearnKendama First 50</a><span>The first 50 kendama tricks every player should know, on video.</span></li>
@@ -328,7 +328,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="care">
           <h3 class="link-group-title">Care &amp; Setup</h3>
           <ul class="link-list">
             <li><a href="https://yoyoexpert.com/pages/411-maintenance-cleaning-a-bearing" target="_blank" rel="noopener noreferrer">Cleaning a Bearing</a><span>YoYoExpert's step-by-step video for a quiet, spinning bearing.</span></li>
@@ -337,7 +337,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="apps">
           <h3 class="link-group-title">Apps &amp; Tools</h3>
           <ul class="link-list">
             <li><a href="https://apps.apple.com/us/app/level-up-yoyo-and-skill-toys/id414905488" target="_blank" rel="noopener noreferrer">Level Up! (iOS)</a> · <a href="https://play.google.com/store/apps/details?id=com.archaicsoftware.yotricks" target="_blank" rel="noopener noreferrer">Android</a><span>YoYoTricks.com's free app. Stream tutorials and track the tricks you've landed.</span></li>
@@ -349,7 +349,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="community">
           <h3 class="link-group-title">Community</h3>
           <ul class="link-list">
             <li><a href="https://forums.yoyoexpert.com/" target="_blank" rel="noopener noreferrer">YoYoExpert Forums</a><span>The longest-running active yo-yo forum. Ask questions, share tricks.</span></li>
@@ -361,7 +361,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="clubs">
           <h3 class="link-group-title">Sister Clubs &amp; Local Groups</h3>
           <ul class="link-list">
             <li><a href="https://forums.yoyoexpert.com/t/dmv-throwers-yoyo-club-dc-virginia-maryland/387964" target="_blank" rel="noopener noreferrer">DMV Throwers on YoYoExpert</a><span>Our club thread. Meetup recaps, visitors, and news.</span></li>
@@ -378,7 +378,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="podcasts">
           <h3 class="link-group-title">Podcasts &amp; Video</h3>
           <ul class="link-list">
             <li><a href="https://podcasts.apple.com/us/podcast/yoyo-player/id1676139656" target="_blank" rel="noopener noreferrer">YoYo Player</a><span>Steve Brown and Mark McBride, the creators of 5A and 3A, tell the story of the modern yo-yo boom.</span></li>
@@ -394,7 +394,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="contests">
           <h3 class="link-group-title">Contests &amp; Events</h3>
           <ul class="link-list">
             <li><a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">YoYo Archive Events</a><span>Worldwide calendar of contests and meetups.</span></li>
@@ -406,7 +406,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="history">
           <h3 class="link-group-title">History</h3>
           <ul class="link-list">
             <li><a href="https://nationalyoyo.org/" target="_blank" rel="noopener noreferrer">National Yo-Yo Museum</a><span>The world's largest public yo-yo display. Free to visit in Chico, CA.</span></li>
@@ -436,7 +436,7 @@
           </ul>
         </div>
 
-        <div class="link-group">
+        <div class="link-group" id="wayback">
           <h3 class="link-group-title">From the Wayback Machine</h3>
           <ul class="link-list">
             <li><a href="https://web.archive.org/web/20000301064250/http://fiendmagazine.com/" target="_blank" rel="noopener noreferrer">Fiend Magazine (2000)</a><span>The first full-color yo-yo magazine. Only four issues. Hear the story on YoYo Player.</span></li>
