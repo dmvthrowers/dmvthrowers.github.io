@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<!--
+  yoyo-gear.html — Yo-yo gear and maintenance: bearings, string, response pads and silicone,
+  lube, mods and spacers, cleaning and polishing, plus beginner gear and DIY low-cost options,
+  with numbered citations. Built by a script from about.html's skeleton. Linked from
+  resources.html and yoyo-science.html; not in the main nav.
+-->
+<html lang="en">
+<head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <!-- base href="/" makes every relative URL resolve from the site root. -->
+  <base href="/"/>
+  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
+       formspree for the contact form, Google Fonts for typography). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <title>Yo-Yo Gear &amp; Maintenance - DMV Throwers · Yo-Yo &amp; Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="A cited guide to yo-yo gear and maintenance: bearing sizes and shapes, string types, response pads and flowable silicone, lube, mods, cleaning, and polishing, with low-cost DIY options."/>
+  <meta property="og:title" content="Yo-Yo Gear &amp; Maintenance - DMV Throwers"/>
+  <meta property="og:description" content="Bearings, string, pads, silicone, lube, mods, and polishing. Dedicated products and cheap DIY options, every fact cited."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/yoyo-gear.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="Yo-Yo Gear &amp; Maintenance - DMV Throwers"/>
+  <meta name="twitter:description" content="Bearings, string, pads, silicone, lube, mods, and polishing. Dedicated products and cheap DIY options, every fact cited."/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="keywords" content="yo-yo maintenance, yo-yo bearing size, clean yo-yo bearing, yo-yo string, 19mm response pads, flowable silicone yo-yo, yo-yo lube, yo-yo shims, polish yo-yo"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <meta name="geo.placename" content="Arlington, Virginia"/>
+  <link rel="canonical" href="https://dmvthrowers.club/yoyo-gear.html"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + Article. Not rendered; consumed by search engines. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
+        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://dmvthrowers.club/resources.html"},
+        {"@type": "ListItem", "position": 3, "name": "Yo-Yo Gear & Maintenance", "item": "https://dmvthrowers.club/yoyo-gear.html"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Yo-Yo Gear & Maintenance: Bearings, String, Response, Lube, Mods, and Polishing",
+      "publisher": {"@type": "Organization", "name": "DMV Throwers", "url": "https://dmvthrowers.club/"},
+      "datePublished": "2026-09-29",
+      "url": "https://dmvthrowers.club/yoyo-gear.html"
+    }
+  ]
+  </script>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
+    .sci-wrap { max-width: 860px; margin: 0 auto; }
+    .sci-intro { color: var(--text-muted); font-size: 1rem; line-height: 1.65; margin-bottom: 12px; }
+    .sci-toc { margin: 16px 0 8px; padding: 16px 20px 16px 40px; border: 1px solid var(--border); border-left: 4px solid var(--red); background: var(--cream); columns: 2; column-gap: 24px; }
+    .sci-toc li { padding: 3px 0; break-inside: avoid; }
+    .sci-toc a { color: var(--navy); font-weight: 700; }
+    .sci-sec { margin-top: 48px; scroll-margin-top: 80px; }
+    .sci-kicker { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); }
+    .sci-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.8rem; color: var(--navy); line-height: 1.2; margin: 6px 0 14px; }
+    .sci-sec h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin: 24px 0 8px; }
+    .sci-sec p, .sci-list li, .sci-steps li { line-height: 1.7; color: var(--text-body); }
+    .sci-sec p { margin-bottom: 12px; }
+    .sci-wrap a:not(.btn) { color: var(--navy); font-weight: 700; }
+    .sci-list, .sci-steps { padding-left: 20px; margin: 8px 0 14px; }
+    .sci-list li, .sci-steps li { padding: 3px 0; }
+    .cite { font-size: 0.72em; line-height: 0; margin-left: 1px; white-space: nowrap; }
+    .sci-wrap .cite a { color: var(--red); font-weight: 700; text-decoration: none; }
+    .std-box { padding: 18px 22px; background: var(--navy); color: var(--cream); }
+    .std-box ul { margin: 6px 0 0; padding-left: 18px; }
+    .std-box li { padding: 4px 0; line-height: 1.6; color: var(--cream); }
+    .std-box strong { color: var(--cream); }
+    .std-box .cite a { color: var(--cream) !important; text-decoration: underline; }
+    .std-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--cream); opacity: 0.85; }
+    .mini-tl { list-style: none; margin: 8px 0 6px; padding: 0 0 0 14px; border-left: 3px solid var(--navy); }
+    .mini-tl li { padding: 4px 0; line-height: 1.55; color: var(--text-body); }
+    .mini-tl span { display: inline-block; min-width: 92px; font-weight: 700; color: var(--red); }
+    .table-scroll { overflow-x: auto; margin: 12px 0 16px; }
+    .sci-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .sci-table caption { text-align: left; font-weight: 700; color: var(--navy); padding-bottom: 6px; }
+    .sci-table th, .sci-table td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; line-height: 1.5; }
+    .sci-table th { background: var(--navy); color: var(--cream); font-size: 0.78rem; letter-spacing: var(--caps-track); text-transform: uppercase; }
+    .sci-table tbody tr:nth-child(odd) td { background: var(--cream); }
+    .try-box { margin: 16px 0; padding: 14px 18px; border: 2px dashed var(--red); background: var(--cream); }
+    .try-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 4px; }
+    .sci-note { font-size: 0.92rem; color: var(--text-muted); font-style: italic; }
+    .ref-list { padding-left: 24px; font-size: 0.86rem; line-height: 1.6; }
+    .ref-list li { padding: 4px 0; color: var(--text-body); overflow-wrap: anywhere; scroll-margin-top: 90px; }
+    .ref-list li:target { background: var(--cream); outline: 2px solid var(--red); }
+    .sci-credit { margin-top: 32px; padding: 16px 20px; border: 1px solid var(--border); background: var(--cream); font-size: 0.9rem; color: var(--text-muted); }
+    @media (max-width: 760px) {
+      .sci-toc { columns: 1; }
+      .sci-title { font-size: 1.45rem; }
+      .mini-tl span { display: block; min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: headline event + shortcut. Update the text each month. -->
+<div id="top-bar">
+  <span>VSYC-26 RESULTS ARE IN · THANK YOU FOR AN AMAZING CONTEST AT DULLES TOWN CENTER</span>
+  <a href="vsyc26-results.html">SEE RESULTS →</a>
+</div>
+
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
+      <div>
+        <div class="nav-brand-text-main">DMV THROWERS</div>
+        <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
+      <a href="events.html" class="nav-link">CLUB EVENTS</a>
+      <a href="gallery.html" class="nav-link">GALLERY</a>
+      <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
+      <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
+        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">ABOUT</a>
+  <a href="team.html">TEAM</a>
+  <a href="events.html">CLUB EVENTS</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="resources.html">RESOURCES</a>
+  <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">MAP</a>
+    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
+  <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="red-tag">YO-YO GEAR</span>
+    <h1 class="page-hero-title">Gear &amp; Maintenance</h1>
+    <p class="page-hero-sub">Bearings · String · Pads · Silicone · Lube · Mods · Polish</p>
+  </div>
+  <div class="page-hero-skyline">
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
+  </div>
+</div>
+
+<!-- Every fact carries a numbered citation linking to the References list at the bottom.
+     Built by build_gear.py; edit the script, not this file, for content changes. -->
+<section id="gear" class="section-bg-white">
+  <div class="section">
+    <div class="sci-wrap">
+      <p class="sci-intro">Keep your yo-yo playing like new. This page covers the parts inside a yo-yo, how they changed over time, what most players use today, and how to maintain them, with both dedicated yo-yo products and low-cost DIY options. Every fact links to a numbered source, including YoYoExpert forum threads, the YoYo Wiki, and our own <a href="assets/documents/maintenance-guide.pptx">Maintenance Guide</a>.</p>
+      <p class="sci-note">Stuck? Bring your yo-yo to a <a href="events.html">meetup</a>. We keep spare strings, response pads, and lube on hand.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
+      <ol class="sci-toc">
+        <li><a href="yoyo-gear.html#standard">Today&rsquo;s Standard Setup</a></li>
+        <li><a href="yoyo-gear.html#basics">Beginner Gear Basics</a></li>
+        <li><a href="yoyo-gear.html#bearings">Bearings</a></li>
+        <li><a href="yoyo-gear.html#cleaning">Cleaning a Bearing</a></li>
+        <li><a href="yoyo-gear.html#lube">Lube</a></li>
+        <li><a href="yoyo-gear.html#response">Response Pads and Silicone</a></li>
+        <li><a href="yoyo-gear.html#string">String</a></li>
+        <li><a href="yoyo-gear.html#mods">Mods, Spacers, and Shims</a></li>
+        <li><a href="yoyo-gear.html#polish">Cleaning, Polishing, and Dings</a></li>
+        <li><a href="yoyo-gear.html#troubleshooting">Quick Troubleshooting</a></li>
+        <li><a href="yoyo-gear.html#references">References</a></li>
+      </ol>
+
+      <article id="standard" class="sci-sec">
+        <div class="std-box">
+          <div class="std-label">Today&rsquo;s Standard Setup</div>
+          <ul>
+            <li><strong>Bearing:</strong> C size (&frac14;&Prime; &times; &frac12;&Prime; &times; &#8540;&Prime;), the main size for competition yo-yos. Centering (concave) designs like the KonKave keep the string in the middle of the bearing.<sup class="cite"><a href="yoyo-gear.html#ref-21" aria-label="Source 21">[21]</a><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a><a href="yoyo-gear.html#ref-46" aria-label="Source 46">[46]</a></sup></li>
+            <li><strong>Response:</strong> 19mm &ldquo;Slim&rdquo; silicone pads, the most common size, about 1&ndash;1.1mm thick, or flowable silicone in the groove.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a><a href="yoyo-gear.html#ref-44" aria-label="Source 44">[44]</a><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a></sup></li>
+            <li><strong>String:</strong> 100% polyester, now preferred over cotton. Neon yellow and white are the most popular colors.<sup class="cite"><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a><a href="yoyo-gear.html#ref-53" aria-label="Source 53">[53]</a><a href="yoyo-gear.html#ref-34" aria-label="Source 34">[34]</a></sup></li>
+            <li><strong>Lube:</strong> optional. A drop of thin lube keeps a bearing quiet and protected; it does not clean it.<sup class="cite"><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a><a href="yoyo-gear.html#ref-50" aria-label="Source 50">[50]</a></sup></li>
+          </ul>
+        </div>
+      </article>
+
+      <article id="basics" class="sci-sec">
+        <div class="sci-kicker">Part 1</div>
+        <h2 class="sci-title">Beginner Gear Basics</h2>
+        <h3>Responsive vs. unresponsive</h3>
+        <p>A <strong>responsive</strong> yo-yo comes back with a tug. An <strong>unresponsive</strong> yo-yo has a wider gap and low-friction pads, so it only comes back when you <em>bind</em>, wrapping extra string into the gap.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a></sup> Many starter yo-yos can be set up either way and grow with you. The YoYo Wiki&rsquo;s beginner guide recommends starting with 1A (one-handed string tricks), buying a 10-pack of string, and keeping a spare set of response pads.<sup class="cite"><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a></sup></p>
+        <h3>Shapes</h3>
+        <ul class="sci-list">
+          <li><strong>Imperial (classic):</strong> narrow with a thin gap. Old-school tricks and looping.<sup class="cite"><a href="yoyo-gear.html#ref-17" aria-label="Source 17">[17]</a><a href="yoyo-gear.html#ref-15" aria-label="Source 15">[15]</a></sup></li>
+          <li><strong>Modified:</strong> narrow and rounded; the most popular shape for two-handed looping (2A).<sup class="cite"><a href="yoyo-gear.html#ref-15" aria-label="Source 15">[15]</a></sup></li>
+          <li><strong>Butterfly:</strong> a very wide gap for string tricks; usually loops poorly.<sup class="cite"><a href="yoyo-gear.html#ref-15" aria-label="Source 15">[15]</a></sup></li>
+          <li><strong>Wing:</strong> evenly distributed weight for speed and stability.<sup class="cite"><a href="yoyo-gear.html#ref-17" aria-label="Source 17">[17]</a></sup></li>
+          <li><strong>H-shape:</strong> weight pushed to the rims for stability and spin.<sup class="cite"><a href="yoyo-gear.html#ref-17" aria-label="Source 17">[17]</a><a href="yoyo-gear.html#ref-15" aria-label="Source 15">[15]</a></sup></li>
+          <li>Wall details like straight or stepped walls keep the string from rubbing and slowing the yo-yo.<sup class="cite"><a href="yoyo-gear.html#ref-18" aria-label="Source 18">[18]</a></sup> See our <a href="yoyo-science.html#design">Yo-Yo Science</a> page for the physics.</li>
+        </ul>
+        <h3>String length and the slipknot</h3>
+        <p>A good starting length reaches from the floor to your belly button.<sup class="cite"><a href="yoyo-gear.html#ref-19" aria-label="Source 19">[19]</a></sup> Tie a slipknot at the end and wear it between the first and second knuckle of your middle finger. Always wear the slipknot before you throw.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
+        <h3>Materials</h3>
+        <p>Plastic is cheap and tough; aluminum is denser and smoother; bimetal yo-yos add steel or brass rims for more spin.<sup class="cite"><a href="yoyo-gear.html#ref-16" aria-label="Source 16">[16]</a></sup></p>
+      </article>
+
+      <article id="bearings" class="sci-sec">
+        <div class="sci-kicker">Part 2</div>
+        <h2 class="sci-title">Bearings</h2>
+        <p>A ball bearing has an outer race, an inner race, and balls between them, usually eight, held in place by a cage. Thin shields and C-clips keep out dirt; many players remove the shields for easier cleaning.<sup class="cite"><a href="yoyo-gear.html#ref-4" aria-label="Source 4">[4]</a><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></p>
+        <h3>History</h3>
+        <ul class="mini-tl"><li><span>1959</span> Jack Sauer puts a ball bearing in a &ldquo;yo-yo doll,&rdquo; the first known ball-bearing axle.</li><li><span>1965</span> Milton Isaacson puts a ball bearing in a typical yo-yo.</li><li><span>1984</span> SKF makes novelty ball-bearing yo-yos.</li><li><span>1990</span> Tom Kuhn releases the SB-2, the first all-metal ball-bearing yo-yo.</li><li><span>1991</span> Yomega releases the Raider.</li><li><span>1997</span> Playmaxx&rsquo;s ProYo Turbo Bumble Bee is the first bearing yo-yo with a replaceable response system.</li><li><span>1999</span> Duncan&rsquo;s first ball-bearing yo-yos, the Hardcore series.</li><li><span>2003</span> Dif-e-Yo introduces the KonKave centering bearing.</li><li><span>2005</span> YoYoFactory&rsquo;s G5 ships with bearing-based hubstacks.</li></ul>
+        <p class="sci-note">Timeline from the YoYo Wiki.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></p>
+        <h3>Sizes</h3>
+        <div class="table-scroll">
+        <table class="sci-table">
+          <caption>Common bearing sizes (inner &times; outer diameter &times; width)<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a><a href="yoyo-gear.html#ref-21" aria-label="Source 21">[21]</a><a href="yoyo-gear.html#ref-48" aria-label="Source 48">[48]</a></sup></caption>
+          <thead><tr><th scope="col">Size</th><th scope="col">Dimensions</th><th scope="col">Where you&rsquo;ll find it</th></tr></thead>
+          <tbody>
+            <tr><td>C</td><td>.250 &times; .500 &times; .187 in (6.35 &times; 12.7 &times; 4.76 mm)</td><td>Most modern competition yo-yos; the most popular size</td></tr>
+            <tr><td>A</td><td>5 &times; 10 &times; 4 mm</td><td>Many Duncan and small-bearing yo-yos; common in looping</td></tr>
+            <tr><td>D</td><td>5 &times; 11 &times; 5 mm</td><td>Some HSpin, SPYY, and older designs</td></tr>
+            <tr><td>K</td><td>4 &times; 8 &times; 3 mm</td><td>Very small yo-yos such as the Mighty Flea and Duncan Hornet</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <h3>Shapes and types</h3>
+        <ul class="sci-list">
+          <li><strong>Flat:</strong> the basic stainless steel 8-ball bearing.<sup class="cite"><a href="yoyo-gear.html#ref-48" aria-label="Source 48">[48]</a></sup></li>
+          <li><strong>Centering (concave):</strong> the KonKave (2003) has a curved outer race that keeps the string centered and away from the response. Others followed: YoYoFactory&rsquo;s Center Trac (flat with flared edges), V-shaped designs, YoYoRecreation&rsquo;s DS, grooved bearings, and the stepped CLYW &times; iYoYo Pixel.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a><a href="yoyo-gear.html#ref-46" aria-label="Source 46">[46]</a></sup></li>
+          <li><strong>10-ball:</strong> ten balls instead of eight for a smoother, quieter spin, with a break-in period. One Drop ships them standard.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a><a href="yoyo-gear.html#ref-47" aria-label="Source 47">[47]</a></sup></li>
+          <li><strong>Ceramic:</strong> silicon nitride balls in a steel race; pricier and more sensitive to shock.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
+          <li><strong>Sealed and lubed:</strong> One Drop&rsquo;s Greasebucket is silicone-sealed and packed with lube for a consistently responsive, no-maintenance feel.<sup class="cite"><a href="yoyo-gear.html#ref-49" aria-label="Source 49">[49]</a></sup></li>
+        </ul>
+        <p>ABEC ratings describe manufacturing tolerances, but most players find they make no difference in yo-yo play.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup> New bearings usually need <strong>breaking in</strong> with a few long sleepers.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup> Bearing removal tools make swapping easier without scratching the bearing.<sup class="cite"><a href="yoyo-gear.html#ref-58" aria-label="Source 58">[58]</a></sup></p>
+      </article>
+
+      <article id="cleaning" class="sci-sec">
+        <div class="sci-kicker">Part 3</div>
+        <h2 class="sci-title">Cleaning a Bearing</h2>
+        <p>Clean a bearing when it gets noisy, gritty, or too responsive. New bearings are often lubricated to prevent rust, which can make them responsive until cleaned.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
+        <div class="try-box">
+          <div class="try-label">Safety First: Adults Handle Solvents</div>
+          <p>Most cleaning solvents are highly flammable and give off fumes. Wear eye protection, work in a well-ventilated space away from flames, and have an adult handle them.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a><a href="yoyo-gear.html#ref-24" aria-label="Source 24">[24]</a></sup></p>
+        </div>
+        <ol class="sci-steps">
+          <li>Remove the bearing, then pop off the shields with a pin at the C-clip. Many players leave shields off afterward.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li>Soak it in solvent in a glass jar, swirling or turning it with a toothpick.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li>Blow it dry with compressed air, or spin it on a pencil as it dries, so no residue stays behind.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li>Add a drop of lube if you want it quieter or more responsive (see below).<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+        </ol>
+        <h3>Which solvent?</h3>
+        <ul class="sci-list">
+          <li><strong>Mineral spirits (paint thinner)</strong> and <strong>lighter fluid</strong> are common choices; many players use lighter fluid, which is gentler on plastics than acetone.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a><a href="yoyo-gear.html#ref-25" aria-label="Source 25">[25]</a></sup></li>
+          <li><strong>Acetone</strong> is a strong solvent, but it can damage plastics and paint, and the YoYo Wiki warns it can promote rust.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a><a href="yoyo-gear.html#ref-25" aria-label="Source 25">[25]</a></sup></li>
+          <li><strong>Avoid</strong> rubbing alcohol and water, which can rust a bearing.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a><a href="yoyo-gear.html#ref-27" aria-label="Source 27">[27]</a></sup></li>
+          <li><strong>Lower-fume option:</strong> some players use citrus (orange) degreasers, as skateboarders do, though others worry about residue.<sup class="cite"><a href="yoyo-gear.html#ref-24" aria-label="Source 24">[24]</a></sup></li>
+        </ul>
+        <p class="sci-note">Step-by-step guides with photos: YoYoExpert and How To Yo-yo.<sup class="cite"><a href="yoyo-gear.html#ref-22" aria-label="Source 22">[22]</a><a href="yoyo-gear.html#ref-23" aria-label="Source 23">[23]</a></sup></p>
+      </article>
+
+      <article id="lube" class="sci-sec">
+        <div class="sci-kicker">Part 4</div>
+        <h2 class="sci-title">Lube</h2>
+        <p>Lube does <strong>not</strong> clean a bearing. It keeps it quiet and protected, and it is optional.<sup class="cite"><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a></sup> A dry bearing is the least responsive but noisier, wears faster, and can rust.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
+        <ul class="sci-list">
+          <li><strong>Thick lube</strong> makes a yo-yo more responsive, good for beginners and looping.<sup class="cite"><a href="yoyo-gear.html#ref-51" aria-label="Source 51">[51]</a><a href="yoyo-gear.html#ref-52" aria-label="Source 52">[52]</a></sup></li>
+          <li><strong>Thin lube</strong> maintains an unresponsive bearing and extends its life. Use one drop.<sup class="cite"><a href="yoyo-gear.html#ref-50" aria-label="Source 50">[50]</a><a href="yoyo-gear.html#ref-52" aria-label="Source 52">[52]</a></sup></li>
+        </ul>
+        <h3>History</h3>
+        <p>Players once used 3-in-1 oil for a responsive yo-yo and trumpet valve oil for an unresponsive one. Dedicated yo-yo lubes followed from brands like YoYoJam.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
+        <h3>Dedicated products</h3>
+        <p><a href="https://shop.yoyoexpert.com/products/yoyojam-lube" target="_blank" rel="noopener noreferrer">YoYoJam Thick and Thin Lube</a><sup class="cite"><a href="yoyo-gear.html#ref-51" aria-label="Source 51">[51]</a></sup>, <a href="https://shop.yoyoexpert.com/products/one-drop-v4m-lube" target="_blank" rel="noopener noreferrer">One Drop V4M</a> (thin)<sup class="cite"><a href="yoyo-gear.html#ref-50" aria-label="Source 50">[50]</a></sup>, and <a href="https://shop.yoyoexpert.com/products/yyf-performance-oil" target="_blank" rel="noopener noreferrer">YoYoFactory Performance Oil</a> (Long Spin or Loop/Response).<sup class="cite"><a href="yoyo-gear.html#ref-52" aria-label="Source 52">[52]</a></sup></p>
+        <h3>Low-cost DIY options</h3>
+        <ul class="sci-list">
+          <li><strong>Sewing machine oil</strong> works as a thin lube; players report it performs as well as yo-yo lube.<sup class="cite"><a href="yoyo-gear.html#ref-26" aria-label="Source 26">[26]</a><a href="yoyo-gear.html#ref-27" aria-label="Source 27">[27]</a></sup></li>
+          <li><strong>Skateboard bearing lube</strong> has a similar thickness to thin yo-yo lube and costs less per ounce.<sup class="cite"><a href="yoyo-gear.html#ref-27" aria-label="Source 27">[27]</a></sup></li>
+          <li><strong>Trumpet valve oil</strong> comes in many thicknesses, but it can damage plastic.<sup class="cite"><a href="yoyo-gear.html#ref-27" aria-label="Source 27">[27]</a><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li><strong>In a pinch, for more response:</strong> our guide suggests a thin smear of lip balm without water in the ingredients, or one tiny drop of light cooking oil. Use sparingly.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="response" class="sci-sec">
+        <div class="sci-kicker">Part 5</div>
+        <h2 class="sci-title">Response Pads and Silicone</h2>
+        <p>The response system grabs the string so the yo-yo can wind back up. When pads wear out or fall out, the yo-yo slips and won&rsquo;t return cleanly.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
+        <h3>History</h3>
+        <ul class="mini-tl"><li><span>Fixed axle</span> Friction from the axle itself winds the string.</li><li><span>c. 1950</span> A Duncan employee proposes the raised starburst around the axle.</li><li><span>Playmaxx</span> Reverse starbursts (grooves), then rubber Brake Pads that look like cork. Brake Pads became the basis of modern replaceable pads.</li><li><span>Late 1990s</span> Friction stickers (patented in Britain in 1984) catch on with the rise of aluminum yo-yos.</li><li><span>YoYoJam</span> Rubber O-rings in a groove around the axle, often shaved flush.</li><li><span>Silicone</span> Flowable silicone and silicone pads take over for unresponsive play.</li></ul>
+        <p class="sci-note">Timeline from the YoYo Wiki.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup> O-rings faded because black rings left string dirty and grew less reliable as gaps widened; silicone was more consistent.<sup class="cite"><a href="yoyo-gear.html#ref-32" aria-label="Source 32">[32]</a></sup></p>
+        <h3>Pad sizes</h3>
+        <ul class="sci-list">
+          <li><strong>19mm &ldquo;Large Slim&rdquo;</strong> silicone pads are the most common size today. Central Bearing Company makes them with YoYoFactory; other brands, including Duncan, make compatible 19mm pads.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a><a href="yoyo-gear.html#ref-43" aria-label="Source 43">[43]</a><a href="yoyo-gear.html#ref-45" aria-label="Source 45">[45]</a></sup></li>
+          <li>Standard 19mm pads are about 1&ndash;1.1mm thick; One Drop&rsquo;s are thinner, about 0.7&ndash;0.8mm.<sup class="cite"><a href="yoyo-gear.html#ref-44" aria-label="Source 44">[44]</a></sup></li>
+          <li>Other sizes include small pads for A-size bearing yo-yos, 21mm &ldquo;Large Broad,&rdquo; and the older .555 size.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a><a href="yoyo-gear.html#ref-33" aria-label="Source 33">[33]</a></sup></li>
+        </ul>
+        <h3>Replacing pads</h3>
+        <ol class="sci-steps">
+          <li>Unscrew the yo-yo and find the response groove around the bearing seat.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></li>
+          <li>Clean the groove with a cotton swab to remove debris and old adhesive.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></li>
+          <li>Press in a new pad, sticky side down, so it sits flush.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></li>
+        </ol>
+        <h3>DIY: flowable silicone</h3>
+        <p>Flowable silicone is a windshield and glass sealant sold at auto parts and hardware stores. YoYoExpert sells a Permatex tube for yo-yos.<sup class="cite"><a href="yoyo-gear.html#ref-42" aria-label="Source 42">[42]</a></sup></p>
+        <ol class="sci-steps">
+          <li>Fill the response groove with flowable silicone and smooth it out.<sup class="cite"><a href="yoyo-gear.html#ref-42" aria-label="Source 42">[42]</a></sup></li>
+          <li>Wipe off the excess carefully.<sup class="cite"><a href="yoyo-gear.html#ref-42" aria-label="Source 42">[42]</a><a href="yoyo-gear.html#ref-30" aria-label="Source 30">[30]</a></sup></li>
+          <li>Let it cure about 12&ndash;24 hours, longer when humid, before playing.<sup class="cite"><a href="yoyo-gear.html#ref-42" aria-label="Source 42">[42]</a><a href="yoyo-gear.html#ref-31" aria-label="Source 31">[31]</a></sup></li>
+        </ol>
+        <ul class="sci-list">
+          <li><strong>Clear flowable vs. red RTV:</strong> players find clear flowable easier and less messy. Red high-temperature RTV is stickier, harder to apply, and has a strong vinegar smell.<sup class="cite"><a href="yoyo-gear.html#ref-29" aria-label="Source 29">[29]</a><a href="yoyo-gear.html#ref-30" aria-label="Source 30">[30]</a></sup></li>
+          <li><strong>Less response:</strong> some players prefer Permatex Ultra Grey for a very unresponsive bind.<sup class="cite"><a href="yoyo-gear.html#ref-31" aria-label="Source 31">[31]</a></sup></li>
+          <li><strong>Save the tube:</strong> push a screw into the nozzle before it dries, then pull it out next time.<sup class="cite"><a href="yoyo-gear.html#ref-29" aria-label="Source 29">[29]</a></sup></li>
+          <li><strong>Other options:</strong> some players have used bathroom silicone caulk successfully.<sup class="cite"><a href="yoyo-gear.html#ref-28" aria-label="Source 28">[28]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="string" class="sci-sec">
+        <div class="sci-kicker">Part 6</div>
+        <h2 class="sci-title">String</h2>
+        <h3>Materials and history</h3>
+        <ul class="sci-list">
+          <li><strong>Cotton:</strong> the traditional material, still best for beginners and responsive play.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-gear.html#ref-54" aria-label="Source 54">[54]</a></sup> Classic manufacturers long used cotton string.<sup class="cite"><a href="yoyo-gear.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
+          <li><strong>Slick / 50-50:</strong> cotton blended with polyester or nylon; more durable.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li><strong>100% polyester:</strong> the choice of professionals today for smooth, unresponsive play.<sup class="cite"><a href="yoyo-gear.html#ref-53" aria-label="Source 53">[53]</a><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a></sup></li>
+          <li><strong>Nylon and rayon:</strong> soft, springy synthetics; rayon is very durable.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-gear.html#ref-36" aria-label="Source 36">[36]</a></sup></li>
+        </ul>
+        <p><strong>Thickness:</strong> string is described by its strand count. Type 8 (4&times;2) is the common standard; types 6 (3&times;2) and 9 (3&times;3) are favored for unresponsive play.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup> Kitty String and others also sell &ldquo;fat&rdquo; string.<sup class="cite"><a href="yoyo-gear.html#ref-55" aria-label="Source 55">[55]</a></sup></p>
+        <p><strong>Colors:</strong> neon yellow and white are the most popular because they are easy to see; lime green is a close second. Twisted colorways help you see string tension.<sup class="cite"><a href="yoyo-gear.html#ref-34" aria-label="Source 34">[34]</a><a href="yoyo-gear.html#ref-35" aria-label="Source 35">[35]</a><a href="yoyo-gear.html#ref-53" aria-label="Source 53">[53]</a></sup></p>
+        <h3>Care</h3>
+        <ul class="sci-list">
+          <li>Replace string when it frays, gets dirty or stiff, or has a tight knot near the bearing.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li>Store yo-yos with the string unwound to keep it springy.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li>If the string twists up when slack, fix the tension: throw a UFO across your body to loosen or the other way to tighten.<sup class="cite"><a href="yoyo-gear.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+        </ul>
+        <h3>DIY: make your own string</h3>
+        <p>String makers twist thread with a drill on a simple rig. The YoYoExpert mega-thread&rsquo;s basic recipe:<sup class="cite"><a href="yoyo-gear.html#ref-36" aria-label="Source 36">[36]</a></sup></p>
+        <ol class="sci-steps">
+          <li>Set two anchors 12 feet apart and wrap thread between them 6&ndash;8 times. More wraps make a thicker string.</li>
+          <li>Hook the thread to a drill and spin it, letting it shorten about 10&ndash;15% (&ldquo;reduction&rdquo;) while keeping it taut.</li>
+          <li>Double it over a center anchor placed at half the reduced length, still taut, and let it twist together. Reverse the drill to relieve torsion.</li>
+          <li>Cut, knot, and tie it to length on your yo-yo.</li>
+        </ol>
+        <ul class="sci-list">
+          <li><strong>Spun polyester:</strong> cheap, soft, many neon colors; wears out fairly fast.<sup class="cite"><a href="yoyo-gear.html#ref-36" aria-label="Source 36">[36]</a></sup></li>
+          <li><strong>Trilobal polyester:</strong> lasts a very long time and whips well, but feels coarse.<sup class="cite"><a href="yoyo-gear.html#ref-36" aria-label="Source 36">[36]</a></sup></li>
+          <li><strong>Textured nylon:</strong> very soft and springy; weaker for whips and slacks.<sup class="cite"><a href="yoyo-gear.html#ref-36" aria-label="Source 36">[36]</a></sup></li>
+          <li><strong>Even colors:</strong> pre-twist each color before spinning them together.<sup class="cite"><a href="yoyo-gear.html#ref-37" aria-label="Source 37">[37]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="mods" class="sci-sec">
+        <div class="sci-kicker">Part 7</div>
+        <h2 class="sci-title">Mods, Spacers, and Shims</h2>
+        <p>Players have long modified stock yo-yos, and many mods became standard features later, like recessed response.<sup class="cite"><a href="yoyo-gear.html#ref-9" aria-label="Source 9">[9]</a></sup></p>
+        <ul class="sci-list">
+          <li><strong>Recessing:</strong> cutting a pocket so pads sit flush and don&rsquo;t rub the string.<sup class="cite"><a href="yoyo-gear.html#ref-9" aria-label="Source 9">[9]</a><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a></sup></li>
+          <li><strong>Siliconing:</strong> filling an O-ring groove or recess with silicone.<sup class="cite"><a href="yoyo-gear.html#ref-9" aria-label="Source 9">[9]</a></sup></li>
+          <li><strong>Bearing swaps:</strong> for example, adding a KonKave bearing.<sup class="cite"><a href="yoyo-gear.html#ref-9" aria-label="Source 9">[9]</a></sup></li>
+          <li><strong>Shims:</strong> thin rings on each side of the bearing that widen the gap for less response. Cardboard or plastic shims are recommended because metal ones can get stuck.<sup class="cite"><a href="yoyo-gear.html#ref-10" aria-label="Source 10">[10]</a></sup> 3D-printed shims are fragile, so don&rsquo;t overtighten.<sup class="cite"><a href="yoyo-gear.html#ref-57" aria-label="Source 57">[57]</a></sup></li>
+          <li><strong>Spacers:</strong> pieces that seat the bearing on the axle; swapping widths changes the gap.<sup class="cite"><a href="yoyo-gear.html#ref-11" aria-label="Source 11">[11]</a></sup> Duncan&rsquo;s Mod Spacers (2012) let players change a yo-yo&rsquo;s response and body shape.<sup class="cite"><a href="yoyo-gear.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Sanding:</strong> for a smoother &ldquo;grind&rdquo; surface; see below.<sup class="cite"><a href="yoyo-gear.html#ref-9" aria-label="Source 9">[9]</a><a href="yoyo-gear.html#ref-13" aria-label="Source 13">[13]</a></sup></li>
+        </ul>
+        <p class="sci-note">Want to go further? See <a href="yoyo-science.html#diy">3D printing your own yo-yo</a>.</p>
+      </article>
+
+      <article id="polish" class="sci-sec">
+        <div class="sci-kicker">Part 8</div>
+        <h2 class="sci-title">Cleaning, Polishing, and Dings</h2>
+        <h3>Cleaning the body</h3>
+        <p>Remove the axle and bearing, then wipe the yo-yo with a soft cloth, a drop of mild dish soap, and warm water. Rinse with a damp cloth and let it air dry.<sup class="cite"><a href="yoyo-gear.html#ref-38" aria-label="Source 38">[38]</a></sup> Monkeyfinger Buff brightens anodized finishes and leaves a slick surface for grinds.<sup class="cite"><a href="yoyo-gear.html#ref-56" aria-label="Source 56">[56]</a><a href="yoyo-gear.html#ref-38" aria-label="Source 38">[38]</a></sup></p>
+        <h3>Know the damage</h3>
+        <p>A <strong>ding</strong> is a dent you can feel, from hitting something hard. <strong>Pinpricks</strong> are tiny dings, often in clusters. A <strong>scuff</strong> is surface marking that usually doesn&rsquo;t break the anodizing.<sup class="cite"><a href="yoyo-gear.html#ref-41" aria-label="Source 41">[41]</a></sup></p>
+        <h3>Smoothing dings</h3>
+        <ul class="sci-list">
+          <li>You can smooth a ding, but you can&rsquo;t restore anodized color without removing the finish.<sup class="cite"><a href="yoyo-gear.html#ref-39" aria-label="Source 39">[39]</a></sup></li>
+          <li>Players knock down sharp edges with a small file, even a nail file, then smooth with fine sandpaper.<sup class="cite"><a href="yoyo-gear.html#ref-39" aria-label="Source 39">[39]</a></sup></li>
+          <li>To fully strip and polish a metal yo-yo, one guide spins it on a drill and works through sandpaper from about 80 to 250 grit, then 0000 steel wool, scratch remover, and metal polish.<sup class="cite"><a href="yoyo-gear.html#ref-40" aria-label="Source 40">[40]</a></sup></li>
+          <li>Sanding at low speed on a drill gives a satin &ldquo;grind&rdquo; finish; lower grits leave fine lines.<sup class="cite"><a href="yoyo-gear.html#ref-13" aria-label="Source 13">[13]</a></sup></li>
+          <li>Or keep the war scars. Plenty of players do.<sup class="cite"><a href="yoyo-gear.html#ref-39" aria-label="Source 39">[39]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="troubleshooting" class="sci-sec">
+        <div class="sci-kicker">Part 9</div>
+        <h2 class="sci-title">Quick Troubleshooting</h2>
+        <div class="table-scroll">
+        <table class="sci-table">
+          <caption>From our Maintenance Guide<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></caption>
+          <thead><tr><th scope="col">Problem</th><th scope="col">Likely cause</th><th scope="col">Fix</th></tr></thead>
+          <tbody>
+            <tr><td>Slips or won&rsquo;t return</td><td>Response pad worn or fell out</td><td>Clean the groove and replace the pad</td></tr>
+            <tr><td>Slips or won&rsquo;t return</td><td>Bearing needs lube</td><td>Add thick yo-yo lube</td></tr>
+            <tr><td>Won&rsquo;t sleep</td><td>String installed wrong, or a knot at the axle</td><td>Re-install or replace the string</td></tr>
+            <tr><td>Won&rsquo;t screw together</td><td>Stripped axle from over-tightening</td><td>Try a longer axle; tighten only until snug</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Work through it in order: pads, then bearing lube, then string. Most problems fall into one of those three.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup> Download the full <a href="assets/documents/maintenance-guide.pptx">DMV Throwers Maintenance Guide</a>.</p>
+      </article>
+
+      <section id="references" class="sci-sec" aria-labelledby="references-title">
+        <h2 class="sci-title" id="references-title">References</h2>
+        <p class="sci-note">Product links are to YoYoExpert product pages for descriptions and specs; many brands and shops carry the same items. Forum posts are player experience, not lab tests.</p>
+        <ol class="ref-list">
+          <li id="ref-1">DMV Throwers. <cite>Yo-Yo Maintenance Guide</cite> (slides). <a href="assets/documents/maintenance-guide.pptx">assets/documents/maintenance-guide.pptx</a></li>
+          <li id="ref-2">YoYo Wiki. &ldquo;Ball Bearings.&rdquo; <a href="https://yoyo.fandom.com/wiki/Ball_Bearings" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Ball_Bearings</a></li>
+          <li id="ref-3">YoYo Wiki. &ldquo;Cleaning a Bearing.&rdquo; <a href="https://yoyo.fandom.com/wiki/Cleaning_a_Bearing" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Cleaning_a_Bearing</a></li>
+          <li id="ref-4">YoYo Wiki. &ldquo;Bearing anatomy.&rdquo; <a href="https://yoyo.fandom.com/wiki/Bearing_anatomy" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Bearing_anatomy</a></li>
+          <li id="ref-5">YoYo Wiki. &ldquo;String.&rdquo; <a href="https://yoyo.fandom.com/wiki/String" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/String</a></li>
+          <li id="ref-6">YoYo Wiki. &ldquo;String Tension.&rdquo; <a href="https://yoyo.fandom.com/wiki/String_Tension" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/String_Tension</a></li>
+          <li id="ref-7">YoYo Wiki. &ldquo;Response System.&rdquo; <a href="https://yoyo.fandom.com/wiki/Response_System" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Response_System</a></li>
+          <li id="ref-8">YoYo Wiki. &ldquo;Friction Stickers.&rdquo; <a href="https://yoyo.fandom.com/wiki/Friction_Stickers" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Friction_Stickers</a></li>
+          <li id="ref-9">YoYo Wiki. &ldquo;Yo-yo Modifications.&rdquo; <a href="https://yoyo.fandom.com/wiki/Yo-yo_Modifications" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Yo-yo_Modifications</a></li>
+          <li id="ref-10">YoYo Wiki. &ldquo;Shims.&rdquo; <a href="https://yoyo.fandom.com/wiki/Shims" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Shims</a></li>
+          <li id="ref-11">YoYo Wiki. &ldquo;Spacers.&rdquo; <a href="https://yoyo.fandom.com/wiki/Spacers" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Spacers</a></li>
+          <li id="ref-12">YoYo Wiki. &ldquo;Duncan Mod Spacers.&rdquo; <a href="https://yoyo.fandom.com/wiki/Duncan_Mod_Spacers" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Duncan_Mod_Spacers</a></li>
+          <li id="ref-13">YoYo Wiki. &ldquo;Sanding.&rdquo; <a href="https://yoyo.fandom.com/wiki/Sanding" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Sanding</a></li>
+          <li id="ref-14">YoYo Wiki. &ldquo;Beginners Section.&rdquo; <a href="https://yoyo.fandom.com/wiki/Beginners_Section" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Beginners_Section</a></li>
+          <li id="ref-15">YoYo Wiki. &ldquo;Shapes.&rdquo; <a href="https://yoyo.fandom.com/wiki/Shapes" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Shapes</a></li>
+          <li id="ref-16">YoYo Wiki. &ldquo;Yo-yo Materials.&rdquo; <a href="https://yoyo.fandom.com/wiki/Yo-yo_Materials" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Yo-yo_Materials</a></li>
+          <li id="ref-17">Skill Addicts. &ldquo;Yoyo Shapes.&rdquo; <a href="https://skilladdicts.com/yoyo-shapes/" target="_blank" rel="noopener noreferrer">skilladdicts.com/yoyo-shapes/</a></li>
+          <li id="ref-18">Yo-Yo Store Rewind. &ldquo;Shape.&rdquo; YoYo Info Base. <a href="https://yoyorewind.com/en/yo-yo-knowledge/extra-knowledge/shape/" target="_blank" rel="noopener noreferrer">yoyorewind.com/en/yo-yo-knowledge/extra-knowledge/shape/</a></li>
+          <li id="ref-19">Science Buddies. &ldquo;How Long Will My Sleepy Yo-yo Sleep?&rdquo; <a href="https://www.sciencebuddies.org/science-fair-projects/project-ideas/Phys_p069/physics/yo-yo-sleep" target="_blank" rel="noopener noreferrer">www.sciencebuddies.org/science-fair-projects/project-ideas/Phys_p069/p&hellip;</a></li>
+          <li id="ref-20">&ldquo;Yo-yo.&rdquo; <cite>How Products Are Made</cite>, Vol. 3 (Gale), via madehow.com. <a href="https://www.madehow.com/Volume-3/Yo-yo.html" target="_blank" rel="noopener noreferrer">www.madehow.com/Volume-3/Yo-yo.html</a></li>
+          <li id="ref-21">YoYoExpert Forums. &ldquo;Common Yoyo Bearing Sizes&rdquo; (2014). <a href="https://forums.yoyoexpert.com/t/common-yoyo-bearing-sizes/66653" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/common-yoyo-bearing-sizes/66653</a></li>
+          <li id="ref-22">YoYoExpert. &ldquo;Maintenance: Cleaning a Bearing.&rdquo; <a href="https://yoyoexpert.com/pages/411-maintenance-cleaning-a-bearing" target="_blank" rel="noopener noreferrer">yoyoexpert.com/pages/411-maintenance-cleaning-a-bearing</a></li>
+          <li id="ref-23">How To Yo-yo. &ldquo;Yo-Yo Maintenance.&rdquo; <a href="https://www.howtoyoyo.com/yo-yo-maintenance/" target="_blank" rel="noopener noreferrer">www.howtoyoyo.com/yo-yo-maintenance/</a></li>
+          <li id="ref-24">YoYoExpert Forums. &ldquo;Cleaning bearings and why most yoyo players do it wrong&rdquo; (2014). <a href="https://forums.yoyoexpert.com/t/cleaning-bearings-and-why-most-yoyo-players-do-it-wrong/65738" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/cleaning-bearings-and-why-most-yoyo-players-do&hellip;</a></li>
+          <li id="ref-25">YoYoExpert Forums. &ldquo;Can we use zippo lighter fluid to clean the bearing?&rdquo; (2022). <a href="https://forums.yoyoexpert.com/t/can-we-use-zippo-lighter-fluid-to-clean-the-bearing-is-zippo-lighter-fluid-different-from-normal-lighter-fluid/366930" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/can-we-use-zippo-lighter-fluid-to-clean-the-be&hellip;</a></li>
+          <li id="ref-26">YoYoExpert Forums. &ldquo;Sewing machine oil&rdquo; (2018). <a href="https://forums.yoyoexpert.com/t/sewing-machine-oil/296869" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/sewing-machine-oil/296869</a></li>
+          <li id="ref-27">YoYoExpert Forums. &ldquo;alternates for yoyo lube&rdquo; (2013). <a href="https://forums.yoyoexpert.com/t/alternates-for-yoyo-lube/49032" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/alternates-for-yoyo-lube/49032</a></li>
+          <li id="ref-28">YoYoExpert Forums. &ldquo;Substitutes for flowable silicone&rdquo; (2019). <a href="https://forums.yoyoexpert.com/t/substitutes-for-flowable-silicone/309150" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/substitutes-for-flowable-silicone/309150</a></li>
+          <li id="ref-29">YoYoExpert Forums. &ldquo;Which is better? Flowable silicone or RTV red silicone?&rdquo; (2020). <a href="https://forums.yoyoexpert.com/t/which-is-better-flowable-silicone-or-rtv-red-silicone/318442" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/which-is-better-flowable-silicone-or-rtv-red-s&hellip;</a></li>
+          <li id="ref-30">YoYoExpert Forums. &ldquo;RTV or Flowable silicone?&rdquo; (2018). <a href="https://forums.yoyoexpert.com/t/rtv-or-flowable-silicone/294422" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/rtv-or-flowable-silicone/294422</a></li>
+          <li id="ref-31">YoYoExpert Forums. &ldquo;Permatex 22074 Ultra Grey for very unresponsive return system&rdquo; (2023). <a href="https://forums.yoyoexpert.com/t/permatex-22074-ultra-grey-for-very-unresponsive-return-system/374904" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/permatex-22074-ultra-grey-for-very-unresponsiv&hellip;</a></li>
+          <li id="ref-32">YoYoExpert Forums. &ldquo;Why were O rings for response abandoned?&rdquo; (2024). <a href="https://forums.yoyoexpert.com/t/why-were-o-rings-for-response-abandoned/415190" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/why-were-o-rings-for-response-abandoned/415190</a></li>
+          <li id="ref-33">YoYoExpert Forums. &ldquo;Response Pad Sizing Guide&rdquo; (2013). <a href="https://forums.yoyoexpert.com/t/response-pad-sizing-guide/59071" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/response-pad-sizing-guide/59071</a></li>
+          <li id="ref-34">YoYoExpert Forums. &ldquo;DIY String making revelations&rdquo; (2021). <a href="https://forums.yoyoexpert.com/t/diy-string-making-revelations/345591" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/diy-string-making-revelations/345591</a></li>
+          <li id="ref-35">YoYoExpert Forums. &ldquo;You&rsquo;re only allowed one string brand and color for the rest of your life&rdquo; (2013). <a href="https://forums.yoyoexpert.com/t/youre-only-allowed-one-string-brand-and-color-for-the-rest-of-your-life/60897" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/youre-only-allowed-one-string-brand-and-color-&hellip;</a></li>
+          <li id="ref-36">smileypants707. &ldquo;String making introduction mega-thread.&rdquo; YoYoExpert Forums (2018). <a href="https://forums.yoyoexpert.com/t/string-making-introduction-mega-thread-new-to-this-craft-start-here/291099" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/string-making-introduction-mega-thread-new-to-&hellip;</a></li>
+          <li id="ref-37">YoYoExpert Forums. &ldquo;String Making&rdquo; (2019). <a href="https://forums.yoyoexpert.com/t/string-making/310882" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/string-making/310882</a></li>
+          <li id="ref-38">YoYoExpert Forums. &ldquo;How to clean and polish my Yoyos&rdquo; (2018). <a href="https://forums.yoyoexpert.com/t/how-to-clean-and-polish-my-yoyos/289234" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/how-to-clean-and-polish-my-yoyos/289234</a></li>
+          <li id="ref-39">YoYoExpert Forums. &ldquo;One Drop Repairs? Best way to sand out scratches and scuffs?&rdquo; (2016). <a href="https://forums.yoyoexpert.com/t/one-drop-repairs-best-way-to-sand-out-scratches-and-scuffs/79510" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/one-drop-repairs-best-way-to-sand-out-scratche&hellip;</a></li>
+          <li id="ref-40">dingo54. &ldquo;How To Strip and Polish a Metal YoYo.&rdquo; YoYoExpert Forums (2013). <a href="https://forums.yoyoexpert.com/t/how-to-strip-and-polish-a-metal-yoyo/51228" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/how-to-strip-and-polish-a-metal-yoyo/51228</a></li>
+          <li id="ref-41">LinksLegionaire. &ldquo;Yoyo Damage Terminology (with pictures!).&rdquo; YoYoExpert Forums (2013). <a href="https://forums.yoyoexpert.com/t/yoyo-damage-terminology-with-pictures/52813" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/yoyo-damage-terminology-with-pictures/52813</a></li>
+          <li id="ref-42">YoYoExpert. &ldquo;Flowable Silicone&rdquo; (Permatex). <a href="https://shop.yoyoexpert.com/products/flowable-yoyo-silicone" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/flowable-yoyo-silicone</a></li>
+          <li id="ref-43">YoYoExpert. &ldquo;YoYoFactory Response Pads&rdquo; (CBC Slim Pad, 19mm OD). <a href="https://shop.yoyoexpert.com/products/yoyofactory-yoyo-response" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/yoyofactory-yoyo-response</a></li>
+          <li id="ref-44">YoYoExpert. &ldquo;One Drop Flow Groove Pads.&rdquo; <a href="https://shop.yoyoexpert.com/products/one-drop-4-pack-flow-groove-pads" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/one-drop-4-pack-flow-groove-pads</a></li>
+          <li id="ref-45">YoYoExpert. &ldquo;Duncan Response&rdquo; (SG stickers). <a href="https://shop.yoyoexpert.com/products/duncan-silicone-groove-sg-yoyo-stickers" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/duncan-silicone-groove-sg-yoyo-stickers</a></li>
+          <li id="ref-46">YoYoExpert. &ldquo;Dif-E-Yo KonKave Bearing.&rdquo; <a href="https://shop.yoyoexpert.com/products/konkave-yoyo-bearing" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/konkave-yoyo-bearing</a></li>
+          <li id="ref-47">YoYoExpert. &ldquo;One Drop 10 Ball Bearing.&rdquo; <a href="https://shop.yoyoexpert.com/products/one-drop-10-ball-yoyo-bearing" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/one-drop-10-ball-yoyo-bearing</a></li>
+          <li id="ref-48">YoYoExpert. &ldquo;YoYoExpert Bearing.&rdquo; <a href="https://shop.yoyoexpert.com/products/yoyoexpert-yoyo-bearing" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/yoyoexpert-yoyo-bearing</a></li>
+          <li id="ref-49">YoYoExpert. &ldquo;Greasebucket&rdquo; (One Drop). <a href="https://shop.yoyoexpert.com/products/greasebucket-yoyo-bearing-by-onedrop" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/greasebucket-yoyo-bearing-by-onedrop</a></li>
+          <li id="ref-50">YoYoExpert. &ldquo;One Drop V4M Lube.&rdquo; <a href="https://shop.yoyoexpert.com/products/one-drop-v4m-lube" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/one-drop-v4m-lube</a></li>
+          <li id="ref-51">YoYoExpert. &ldquo;YoYoJam Lube&rdquo; (thick and thin). <a href="https://shop.yoyoexpert.com/products/yoyojam-lube" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/yoyojam-lube</a></li>
+          <li id="ref-52">YoYoExpert. &ldquo;YoYo Performance Oil &amp; Lubricant&rdquo; (YoYoFactory). <a href="https://shop.yoyoexpert.com/products/yyf-performance-oil" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/yyf-performance-oil</a></li>
+          <li id="ref-53">YoYoExpert. &ldquo;100% Polyester YoYoExpert String.&rdquo; <a href="https://shop.yoyoexpert.com/products/5-pack-100-polyester-yoyoexpert-string" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/5-pack-100-polyester-yoyoexpert-string</a></li>
+          <li id="ref-54">YoYoExpert. &ldquo;100% Cotton YoYoExpert String.&rdquo; <a href="https://shop.yoyoexpert.com/products/5-pack-100-cotton-yoyoexpert-string" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/5-pack-100-cotton-yoyoexpert-string</a></li>
+          <li id="ref-55">YoYoExpert. &ldquo;Kitty String First Class.&rdquo; <a href="https://shop.yoyoexpert.com/products/kitty-string-first-class-10-pack" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/kitty-string-first-class-10-pack</a></li>
+          <li id="ref-56">YoYoExpert. &ldquo;Monkeyfinger Buff.&rdquo; <a href="https://shop.yoyoexpert.com/products/monkeyfinger-buff" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/monkeyfinger-buff</a></li>
+          <li id="ref-57">YoYoExpert. &ldquo;3D Printed Shims&rdquo; (YJYoYo). <a href="https://shop.yoyoexpert.com/products/3d-printed-shims-by-yjyoyo" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/3d-printed-shims-by-yjyoyo</a></li>
+          <li id="ref-58">YoYoExpert. &ldquo;YoYoFriends Bearing and Light Removal Tool.&rdquo; <a href="https://shop.yoyoexpert.com/products/yoyofriends-bearing-and-light-removal-tool" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/yoyofriends-bearing-and-light-removal-too&hellip;</a></li>
+        </ol>
+        <div class="sci-credit">Know a better tip or source? Email <a href="mailto:contact@dmvthrowers.club" class="text-red">contact@dmvthrowers.club</a>.</div>
+      </section>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
+          <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
+        <a href="events.html" class="footer-link">Events</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="resources.html" class="footer-link">Resources</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+</script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>
