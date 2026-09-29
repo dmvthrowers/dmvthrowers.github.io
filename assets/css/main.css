@@ -96,7 +96,7 @@
   --caps-track-tight: 0.1em;
   --footer-link: #8fa8d8; /* Light muted blue — readable on navy #102040 (≈5.5:1 contrast) */
   --footer-copy: #fff; /* White for max contrast in footer */
-  --footer-brand-sub: #8a0000; /* Deeper red for subtext */
+  --footer-brand-sub: #C9A84C; /* Gold subtext: about 7:1 on navy (the old deep red was about 1.5:1) */
   --vsyc-label: #a00000; /* Deeper red for VSYC label */
   --team-label: #0a1a3a; /* Darker for team label */
 }
