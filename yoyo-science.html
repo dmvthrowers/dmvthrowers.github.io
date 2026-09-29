@@ -107,6 +107,11 @@
     .ref-list { padding-left: 24px; font-size: 0.86rem; line-height: 1.6; }
     .ref-list li { padding: 4px 0; color: var(--text-body); overflow-wrap: anywhere; scroll-margin-top: 90px; }
     .ref-list li:target { background: var(--cream); outline: 2px solid var(--red); }
+    .era-dc { margin: 12px 0; padding: 12px 16px; background: var(--navy); color: var(--cream); font-size: 0.95rem; line-height: 1.6; }
+    .era-dc-label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--cream); opacity: 0.85; margin-bottom: 2px; }
+    .era-dc .cite a { color: var(--cream) !important; text-decoration: underline; }
+    .try-box { margin: 20px 0; padding: 14px 18px; border: 2px dashed var(--red); background: var(--cream); }
+    .try-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 4px; }
     .sci-credit { margin-top: 32px; padding: 16px 20px; border: 1px solid var(--border); background: var(--cream); font-size: 0.9rem; color: var(--text-muted); }
     @media (max-width: 760px) {
       .path-grid { grid-template-columns: 1fr; }
@@ -202,9 +207,12 @@
         <li><a href="yoyo-science.html#design">Design Principles</a></li>
         <li><a href="yoyo-science.html#making">How Yo-Yos Are Made</a></li>
         <li><a href="yoyo-science.html#patents">Patents and Trademarks</a></li>
+        <li><a href="yoyo-science.html#research">Research Papers and Lab Experiments</a></li>
+        <li><a href="yoyo-science.html#space">Yo-Yos in Space Engineering</a></li>
         <li><a href="yoyo-science.html#diy">Make Your Own</a></li>
         <li><a href="yoyo-science.html#print-local">Where to Print in DC and NoVA</a></li>
         <li><a href="yoyo-science.html#classroom">For Classrooms and Reports</a></li>
+        <li><a href="yoyo-science.html#explore">Explore Related Topics</a></li>
         <li><a href="yoyo-science.html#references">References</a></li>
       </ol>
 
@@ -251,6 +259,21 @@
           <li>Ball bearings cut friction. A cheap fixed-axle yo-yo spins 10 to 20 seconds; a good bearing yo-yo can spin 1 to 4 minutes.<sup class="cite"><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
           <li>Some yo-yos use a <strong>centrifugal clutch</strong>: spring-loaded weights clamp the axle when the yo-yo spins slowly, then fly outward when it spins fast, letting it sleep, and clamp again to bring it back.<sup class="cite"><a href="yoyo-science.html#ref-4" aria-label="Source 4">[4]</a><a href="yoyo-science.html#ref-22" aria-label="Source 22">[22]</a></sup></li>
         </ul>
+
+        <h3>How a yo-yo climbs back up</h3>
+        <p>The return is not really about the tug. It is the split second of slack right after it. During that moment the string wraps around the axle two or three times until it wedges between the halves. From then on, the yo-yo&rsquo;s spin turns into motion up the string. That is why a yo-yo spinning too slowly will not come back.<sup class="cite"><a href="yoyo-science.html#ref-51" aria-label="Source 51">[51]</a></sup></p>
+        <p>Something has to grab the string during that slack moment. On a fixed axle, the axle itself does it. Plastic yo-yos add a <strong>starburst</strong>, a raised star shape around the axle, first proposed by a Duncan employee around 1950. Later designs cut grooves into the walls (reverse starbursts) or use rubber or silicone pads.<sup class="cite"><a href="yoyo-science.html#ref-51" aria-label="Source 51">[51]</a></sup> On unresponsive yo-yos, you wrap extra string into the gap yourself. That is a <strong>bind</strong>.<sup class="cite"><a href="yoyo-science.html#ref-51" aria-label="Source 51">[51]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
+
+        <h3>Rim weight: it&rsquo;s the distance from the axle</h3>
+        <p>What raises the moment of inertia is mass far from the <em>axle</em>, not mass far from the gap. A wide yo-yo does not automatically spin longer.<sup class="cite"><a href="yoyo-science.html#ref-57" aria-label="Source 57">[57]</a></sup> Compare two yo-yos that are the same except for rim weight: the more rim-weighted one starts at a lower spin rate but spins longer.<sup class="cite"><a href="yoyo-science.html#ref-58" aria-label="Source 58">[58]</a></sup> Weight near the hub does the opposite: it makes speed changes easier, which helps looping.<sup class="cite"><a href="yoyo-science.html#ref-52" aria-label="Source 52">[52]</a><a href="yoyo-science.html#ref-53" aria-label="Source 53">[53]</a></sup></p>
+
+        <h3>Radius of gyration</h3>
+        <p>Engineers often describe how mass is spread with the <strong>radius of gyration</strong>: the distance from the axis where all the mass could sit and give the same moment of inertia.<sup class="cite"><a href="yoyo-science.html#ref-81" aria-label="Source 81">[81]</a></sup> Engineer Don Watson, who helped develop Tom Kuhn&rsquo;s early ball-bearing yo-yos, wrote five <cite>Yo-Yo Physics</cite> pamphlets covering string friction, wobble, and a &ldquo;yo-yo constant&rdquo; linking spin speed to radius of gyration. They are free to read online.<sup class="cite"><a href="yoyo-science.html#ref-55" aria-label="Source 55">[55]</a><a href="yoyo-science.html#ref-56" aria-label="Source 56">[56]</a></sup></p>
+
+        <div class="try-box">
+          <div class="try-label">Try This: The Spool Puzzle</div>
+          <p>Set a yo-yo or big spool on a table with the string coming off the <em>bottom</em> of the axle. Pull the string gently and level with the table. Does it roll toward you or away? Most people guess wrong. Physics teacher Paul Hewitt explains why torque, not just force, decides.<sup class="cite"><a href="yoyo-science.html#ref-65" aria-label="Source 65">[65]</a></sup> Physicist Julius Sumner Miller&rsquo;s classic TV lesson on rolling things includes a yo-yo.<sup class="cite"><a href="yoyo-science.html#ref-60" aria-label="Source 60">[60]</a></sup></p>
+        </div>
         <p class="sci-note">Go deeper: rolling-motion derivations in the free LibreTexts university physics text.<sup class="cite"><a href="yoyo-science.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
       </article>
 
@@ -293,6 +316,8 @@
           </tbody>
         </table>
         </div>
+        <h3>String</h3>
+        <p>Yo-yo string is one long strand, looped around the axle and twisted back up to the finger. Cotton is traditional. Cotton-blend and synthetic strings such as rayon and nylon last longer and feel smoother, and string thickness changes how a yo-yo plays too.<sup class="cite"><a href="yoyo-science.html#ref-54" aria-label="Source 54">[54]</a><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></p>
       </article>
 
       <article id="making" class="sci-sec">
@@ -339,8 +364,30 @@
         <p>Pedro Flores trademarked the name &ldquo;yo-yo,&rdquo; and Donald F. Duncan bought both his company and the name.<sup class="cite"><a href="yoyo-science.html#ref-9" aria-label="Source 9">[9]</a></sup> Duncan defended the trademark hard, forcing rivals to sell &ldquo;return tops&rdquo; and &ldquo;Filipino twirlers.&rdquo;<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup> Then Duncan sued rival Royal Tops. In 1965 a federal appeals court ruled that &ldquo;yo-yo&rdquo; had become part of everyday speech, so Duncan could not own it.<sup class="cite"><a href="yoyo-science.html#ref-26" aria-label="Source 26">[26]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup> <em>How Products Are Made</em> puts it simply: yo-yo was the name of the toy, like kite or baseball.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup> When a brand name becomes the everyday word for a product, lawyers call it a <strong>generic trademark</strong>.<sup class="cite"><a href="yoyo-science.html#ref-27" aria-label="Source 27">[27]</a></sup> In Canada, &ldquo;Yo-yo&rdquo; was registered as a trademark in 1932 and still is one.<sup class="cite"><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
       </article>
 
-      <article id="diy" class="sci-sec">
+      <article id="research" class="sci-sec">
         <div class="sci-kicker">Part 6</div>
+        <h2 class="sci-title">Research Papers and Lab Experiments</h2>
+        <p>Physicists and physics teachers use the yo-yo to study rotation. These papers and demos are good starting points for a report or science fair project.</p>
+        <ul class="sci-list">
+          <li><strong>Measure a yo-yo with a smartphone.</strong> Salinas and colleagues tied a smartphone to a homemade yo-yo, measured its spin with the phone&rsquo;s gyroscope, checked it with video, and compared the results to theory. The paper was published in <cite>The Physics Teacher</cite> and is free on arXiv.<sup class="cite"><a href="yoyo-science.html#ref-61" aria-label="Source 61">[61]</a></sup> The free phyphox app reads your phone&rsquo;s sensors for experiments like this.<sup class="cite"><a href="yoyo-science.html#ref-78" aria-label="Source 78">[78]</a></sup></li>
+          <li><strong>3D print a moment-of-inertia lab.</strong> Hazlett and Aragoneses built a 3D-printed wheel whose moment of inertia can change while its mass stays the same, to explore torque and rotational energy.<sup class="cite"><a href="yoyo-science.html#ref-62" aria-label="Source 62">[62]</a></sup></li>
+          <li><strong>Phones as physics labs.</strong> A guide to published experiments using the sensors in phones and tablets, from mechanics to astronomy.<sup class="cite"><a href="yoyo-science.html#ref-63" aria-label="Source 63">[63]</a></sup> Another classroom study used phone gyroscopes to model rotation.<sup class="cite"><a href="yoyo-science.html#ref-64" aria-label="Source 64">[64]</a></sup></li>
+          <li><strong>Lecture demonstrations.</strong> UC Santa Barbara&rsquo;s yo-yo-down-an-incline demo includes full worked equations.<sup class="cite"><a href="yoyo-science.html#ref-2" aria-label="Source 2">[2]</a></sup> Harvard&rsquo;s lecture demonstration program has a yo-yo demo too.<sup class="cite"><a href="yoyo-science.html#ref-66" aria-label="Source 66">[66]</a></sup></li>
+          <li><strong>A real data study, and what it teaches.</strong> One player ran a hypothesis test on whether bearing shape changes spin time. Other players pointed out that throws varied from about 40 to 100 seconds and the sample was small, so the result was hard to trust. That is a great lesson in experimental design: control your variables and repeat your trials.<sup class="cite"><a href="yoyo-science.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="space" class="sci-sec">
+        <div class="sci-kicker">Part 7</div>
+        <h2 class="sci-title">Yo-Yos in Space Engineering</h2>
+        <p>Some rockets spin a satellite to keep it steady while an engine fires. Afterward, the spacecraft needs to slow down. Engineers use a <strong>yo-yo de-spin</strong>: two cables with weights wrapped around the spacecraft. When released, the weights swing outward and carry away angular momentum, slowing the spin.<sup class="cite"><a href="yoyo-science.html#ref-68" aria-label="Source 68">[68]</a><a href="yoyo-science.html#ref-70" aria-label="Source 70">[70]</a></sup></p>
+        <p>NASA&rsquo;s Dawn spacecraft used about 3 kilograms of weights on 12-meter cables to cut its spin from 46 RPM to 3 RPM in the opposite direction. Small weights have a big effect because they are far from the spin axis. The mechanism was invented at Caltech&rsquo;s Jet Propulsion Laboratory.<sup class="cite"><a href="yoyo-science.html#ref-68" aria-label="Source 68">[68]</a></sup> The Institute of Physics has a teaching page on yo-yo satellites.<sup class="cite"><a href="yoyo-science.html#ref-67" aria-label="Source 67">[67]</a></sup></p>
+        <div class="era-dc"><span class="era-dc-label">DC Connection</span> J. V. Fedor&rsquo;s 1961 NASA technical note, &ldquo;Theory and Design Curves for a Yo-Yo De-Spin Mechanism for Satellites,&rdquo; came from NASA&rsquo;s Goddard Space Flight Center in Greenbelt, Maryland. It is free to read online.<sup class="cite"><a href="yoyo-science.html#ref-69" aria-label="Source 69">[69]</a></sup></div>
+        <p class="sci-note">A yo-yo also flew on Space Shuttle Discovery in 1985. See <a href="yoyo-history.html#space">The Story of the Yo-Yo</a>.</p>
+      </article>
+
+      <article id="diy" class="sci-sec">
+        <div class="sci-kicker">Part 8</div>
         <h2 class="sci-title">Make Your Own</h2>
         <p>You can 3D print a working yo-yo. Pick the path that fits your time and tools. Always check each model&rsquo;s license before you share or sell a print.</p>
         <div class="path-grid">
@@ -384,7 +431,7 @@
       </article>
 
       <article id="print-local" class="sci-sec">
-        <div class="sci-kicker">Part 7</div>
+        <div class="sci-kicker">Part 9</div>
         <h2 class="sci-title">Where to Print in DC and NoVA</h2>
         <p>These public spaces can print your file or teach you to print it. Policies change, so check the link or call before you go.</p>
         <div class="table-scroll">
@@ -405,7 +452,7 @@
       </article>
 
       <article id="classroom" class="sci-sec">
-        <div class="sci-kicker">Part 8</div>
+        <div class="sci-kicker">Part 10</div>
         <h2 class="sci-title">For Classrooms and Reports</h2>
         <h3>Try an experiment</h3>
         <p>Science Buddies has a free, step-by-step project that tests how string length changes sleep time, using three yo-yos, a stopwatch, and a scatter plot. It suggests follow-ups too, like testing a yo-yo with a centrifugal clutch.<sup class="cite"><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
@@ -417,10 +464,54 @@
           <li>How did the 1965 court case change who could use the word &ldquo;yo-yo&rdquo;?</li>
           <li>Read one patent in the table. What problem was the inventor solving?</li>
           <li>Design and print a yo-yo. Change one variable, like rim weight or gap, and measure sleep time.</li>
+          <li>Predict which way the spool puzzle rolls, then test it. Explain the result with torque.</li>
+          <li>How do weights on cables slow a spinning satellite? Connect it to angular momentum.</li>
+          <li>Read the bearing-shape data study. How would you design a fairer experiment?</li>
         </ul>
+        <h3>Bring the science to your school</h3>
+        <p>&ldquo;Science of Spin&rdquo; school assemblies, developed by 1992 World Yo-Yo Champion Dale Oliver, teach friction, gravity, potential and kinetic energy, and distribution of mass with spinning toys, then run hands-on yo-yo clinics.<sup class="cite"><a href="yoyo-science.html#ref-85" aria-label="Source 85">[85]</a></sup> Locally, Springfield, VA performer Dick Stohr has taught the Spintastics Science of Spin program in schools and libraries.<sup class="cite"><a href="yoyo-science.html#ref-86" aria-label="Source 86">[86]</a></sup> DMV Throwers also visits schools and libraries. <a href="contact.html">Contact us</a> to plan a demo.</p>
+
         <h3>How to cite this page</h3>
         <p class="cite-box"><strong>MLA:</strong> &ldquo;Yo-Yo Science &amp; DIY.&rdquo; <cite>DMV Throwers</cite>, dmvthrowers.club/yoyo-science.html. Accessed [date].<br><strong>APA:</strong> DMV Throwers. (2026). <cite>Yo-yo science &amp; DIY</cite>. https://dmvthrowers.club/yoyo-science.html</p>
         <p class="sci-note">For a stronger report, cite the original sources below too. For history, see <a href="yoyo-history.html">The Story of the Yo-Yo</a> and <a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a>.</p>
+      </article>
+
+      <article id="explore" class="sci-sec">
+        <div class="sci-kicker">Part 11</div>
+        <h2 class="sci-title">Explore Related Topics</h2>
+        <p>Want to go further? These free resources cover the big ideas behind the yo-yo.</p>
+        <div class="path-grid">
+          <div class="path-card">
+            <h3>Learn the concepts</h3>
+            <ul class="sci-list">
+              <li><a href="https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy" target="_blank" rel="noopener noreferrer">Moment of inertia and rotational energy</a><sup class="cite"><a href="yoyo-science.html#ref-71" aria-label="Source 71">[71]</a></sup></li>
+              <li><a href="https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion" target="_blank" rel="noopener noreferrer">Rolling motion</a><sup class="cite"><a href="yoyo-science.html#ref-72" aria-label="Source 72">[72]</a></sup></li>
+              <li><a href="https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum" target="_blank" rel="noopener noreferrer">Angular momentum</a><sup class="cite"><a href="yoyo-science.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
+              <li><a href="https://openstax.org/books/university-physics-volume-1/pages/11-3-conservation-of-angular-momentum" target="_blank" rel="noopener noreferrer">Conservation of angular momentum</a><sup class="cite"><a href="yoyo-science.html#ref-74" aria-label="Source 74">[74]</a></sup></li>
+              <li><a href="https://www.khanacademy.org/science/high-school-physics/torque-and-angular-momentum" target="_blank" rel="noopener noreferrer">Khan Academy: torque and angular momentum</a><sup class="cite"><a href="yoyo-science.html#ref-75" aria-label="Source 75">[75]</a></sup></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>Play with simulations</h3>
+            <ul class="sci-list">
+              <li><a href="https://phet.colorado.edu/en/simulations/torque" target="_blank" rel="noopener noreferrer">PhET Torque</a>: torque, moment of inertia, and angular momentum.<sup class="cite"><a href="yoyo-science.html#ref-76" aria-label="Source 76">[76]</a></sup></li>
+              <li><a href="https://phet.colorado.edu/en/simulations/energy-skate-park-basics" target="_blank" rel="noopener noreferrer">PhET Energy Skate Park</a>: watch potential and kinetic energy trade places.<sup class="cite"><a href="yoyo-science.html#ref-77" aria-label="Source 77">[77]</a></sup></li>
+              <li><a href="https://phyphox.org/" target="_blank" rel="noopener noreferrer">phyphox</a>: turn a phone into a lab sensor.<sup class="cite"><a href="yoyo-science.html#ref-78" aria-label="Source 78">[78]</a></sup></li>
+              <li><a href="https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/engineering-design-process-steps" target="_blank" rel="noopener noreferrer">The engineering design process</a>, for planning your own yo-yo design.<sup class="cite"><a href="yoyo-science.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>Look up key terms</h3>
+            <ul class="sci-list">
+              <li><a href="https://en.wikipedia.org/wiki/Angular_momentum" target="_blank" rel="noopener noreferrer">Angular momentum</a><sup class="cite"><a href="yoyo-science.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Moment_of_inertia" target="_blank" rel="noopener noreferrer">Moment of inertia</a><sup class="cite"><a href="yoyo-science.html#ref-7" aria-label="Source 7">[7]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Gyroscope" target="_blank" rel="noopener noreferrer">Gyroscope</a> and <a href="https://en.wikipedia.org/wiki/Precession" target="_blank" rel="noopener noreferrer">precession</a><sup class="cite"><a href="yoyo-science.html#ref-79" aria-label="Source 79">[79]</a><a href="yoyo-science.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Rolling" target="_blank" rel="noopener noreferrer">Rolling</a> and <a href="https://en.wikipedia.org/wiki/Radius_of_gyration" target="_blank" rel="noopener noreferrer">radius of gyration</a><sup class="cite"><a href="yoyo-science.html#ref-82" aria-label="Source 82">[82]</a><a href="yoyo-science.html#ref-81" aria-label="Source 81">[81]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Conservation_of_energy" target="_blank" rel="noopener noreferrer">Conservation of energy</a><sup class="cite"><a href="yoyo-science.html#ref-83" aria-label="Source 83">[83]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Spin_stabilization" target="_blank" rel="noopener noreferrer">Spin stabilization</a><sup class="cite"><a href="yoyo-science.html#ref-70" aria-label="Source 70">[70]</a></sup></li>
+            </ul>
+          </div>
+        </div>
       </article>
 
       <section id="references" class="sci-sec" aria-labelledby="references-title">
@@ -476,6 +567,42 @@
           <li id="ref-48">Prince William Public Libraries. &ldquo;Makerspace.&rdquo; <a href="https://www.pwcva.gov/department/library/makerspace" target="_blank" rel="noopener noreferrer">www.pwcva.gov/department/library/makerspace</a></li>
           <li id="ref-49">Nova Labs makerspace, Fairfax, VA. <a href="https://nova-labs.org/" target="_blank" rel="noopener noreferrer">nova-labs.org/</a></li>
           <li id="ref-50">HacDC, The Capital Hackerspace, Washington, DC. <a href="https://www.hacdc.org/" target="_blank" rel="noopener noreferrer">www.hacdc.org/</a></li>
+          <li id="ref-51">YoYo Wiki. &ldquo;Response System.&rdquo; <a href="https://yoyo.fandom.com/wiki/Response_System" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Response_System</a></li>
+          <li id="ref-52">YoYo Wiki. &ldquo;Halves.&rdquo; <a href="https://yoyo.fandom.com/wiki/Halves" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Halves</a></li>
+          <li id="ref-53">YoYo Wiki. &ldquo;Weight Rings.&rdquo; <a href="https://yoyo.fandom.com/wiki/Weight_Rings" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Weight_Rings</a></li>
+          <li id="ref-54">YoYo Wiki. &ldquo;String.&rdquo; <a href="https://yoyo.fandom.com/wiki/String" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/String</a></li>
+          <li id="ref-55">YoYo Wiki. &ldquo;Don Watson.&rdquo; <a href="https://yoyo.fandom.com/wiki/Don_Watson" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Don_Watson</a></li>
+          <li id="ref-56">Watson, Donald W. (&ldquo;Captain Yo&rdquo;). <cite>Yo-Yo Physics</cite>, Vols. 1&ndash;5. Pencil Point Press. Internet Archive. <a href="https://archive.org/details/Don_Watson_YoYo_Physics1-5" target="_blank" rel="noopener noreferrer">archive.org/details/Don_Watson_YoYo_Physics1-5</a></li>
+          <li id="ref-57">Philip. &ldquo;The physics behind spin times, speediness, and float.&rdquo; YoYoExpert Forums (2023). <a href="https://forums.yoyoexpert.com/t/the-physics-behind-spin-times-speediness-and-float/368826" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/the-physics-behind-spin-times-speediness-and-f&hellip;</a></li>
+          <li id="ref-58">YoYoExpert Forums. &ldquo;Rim weight physics&rdquo; (2024). <a href="https://forums.yoyoexpert.com/t/rim-weight-physics/405429" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/rim-weight-physics/405429</a></li>
+          <li id="ref-59">Hudakjoe. &ldquo;Statistical Analysis of Impact of Bearing Shape on Spin Times.&rdquo; YoYoExpert Forums (2016). <a href="https://forums.yoyoexpert.com/t/statistical-analysis-of-impact-of-bearing-shape-on-spin-times/78996" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/statistical-analysis-of-impact-of-bearing-shap&hellip;</a></li>
+          <li id="ref-60">Miller, Julius Sumner. &ldquo;Lesson 12 &ndash; The Strange Behavior of Rolling Things.&rdquo; YouTube. <a href="https://www.youtube.com/watch?v=9e9ysnJA9qA" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=9e9ysnJA9qA</a></li>
+          <li id="ref-61">Salinas, I., Monteiro, M., Marti, A. C., and Monsoriu, J. A. &ldquo;Dynamics of a yoyo using a smartphone gyroscope sensor.&rdquo; arXiv:1903.01343; published in <cite>The Physics Teacher</cite> 58(8), 2020. <a href="https://arxiv.org/abs/1903.01343" target="_blank" rel="noopener noreferrer">arxiv.org/abs/1903.01343</a></li>
+          <li id="ref-62">Hazlett, E., and Aragoneses, A. &ldquo;A 3D printed wheel with constant mass and variable moment of inertia for lab and demonstration.&rdquo; arXiv:1707.00032 (2017). <a href="https://arxiv.org/abs/1707.00032" target="_blank" rel="noopener noreferrer">arxiv.org/abs/1707.00032</a></li>
+          <li id="ref-63">Monteiro, M., and Marti, A. C. &ldquo;Mobile Devices and Sensors for Physics Teaching.&rdquo; arXiv:2206.12062 (2022). <a href="https://arxiv.org/abs/2206.12062" target="_blank" rel="noopener noreferrer">arxiv.org/abs/2206.12062</a></li>
+          <li id="ref-64">P&ouml;rn, R., and Brask&eacute;n, M. &ldquo;Interactive modeling activities in the classroom&mdash;rotational motion and smartphone gyroscopes.&rdquo; <cite>Physics Education</cite> 51(6), 2016. <a href="https://iopscience.iop.org/article/10.1088/0031-9120/51/6/065021" target="_blank" rel="noopener noreferrer">iopscience.iop.org/article/10.1088/0031-9120/51/6/065021</a></li>
+          <li id="ref-65">Hewitt, Paul G. &ldquo;The Pulled Spool&mdash;Which Way Does It Roll?&rdquo; <cite>The Science Teacher</cite>, NSTA (2020). <a href="https://www.nsta.org/science-teacher/science-teacher-aprilmay-2020/pulled-spool-which-way-does-it-roll" target="_blank" rel="noopener noreferrer">www.nsta.org/science-teacher/science-teacher-aprilmay-2020/pulled-spoo&hellip;</a></li>
+          <li id="ref-66">Harvard Natural Sciences Lecture Demonstrations. &ldquo;Yo-yo.&rdquo; <a href="https://sciencedemonstrations.fas.harvard.edu/presentations/yo-yo" target="_blank" rel="noopener noreferrer">sciencedemonstrations.fas.harvard.edu/presentations/yo-yo</a></li>
+          <li id="ref-67">Institute of Physics, IOPSpark. &ldquo;Yo-yo satellites.&rdquo; <a href="https://spark.iop.org/yo-yo-satellites" target="_blank" rel="noopener noreferrer">spark.iop.org/yo-yo-satellites</a></li>
+          <li id="ref-68">&ldquo;Yo-yo de-spin.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Yo-yo_de-spin" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Yo-yo_de-spin</a></li>
+          <li id="ref-69">Fedor, J. V. &ldquo;Theory and Design Curves for a Yo-Yo De-Spin Mechanism for Satellites.&rdquo; NASA Technical Note D-708, Goddard Space Flight Center (1961). Internet Archive (DTIC). <a href="https://archive.org/details/DTIC_AD0260758" target="_blank" rel="noopener noreferrer">archive.org/details/DTIC_AD0260758</a></li>
+          <li id="ref-70">&ldquo;Spin stabilization.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Spin_stabilization" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Spin_stabilization</a></li>
+          <li id="ref-71">OpenStax. <cite>University Physics Volume 1</cite>, 10.4 &ldquo;Moment of Inertia and Rotational Kinetic Energy.&rdquo; <a href="https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy" target="_blank" rel="noopener noreferrer">openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-in&hellip;</a></li>
+          <li id="ref-72">OpenStax. <cite>University Physics Volume 1</cite>, 11.1 &ldquo;Rolling Motion.&rdquo; <a href="https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion" target="_blank" rel="noopener noreferrer">openstax.org/books/university-physics-volume-1/pages/11-1-rolling-moti&hellip;</a></li>
+          <li id="ref-73">OpenStax. <cite>University Physics Volume 1</cite>, 11.2 &ldquo;Angular Momentum.&rdquo; <a href="https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum" target="_blank" rel="noopener noreferrer">openstax.org/books/university-physics-volume-1/pages/11-2-angular-mome&hellip;</a></li>
+          <li id="ref-74">OpenStax. <cite>University Physics Volume 1</cite>, 11.3 &ldquo;Conservation of Angular Momentum.&rdquo; <a href="https://openstax.org/books/university-physics-volume-1/pages/11-3-conservation-of-angular-momentum" target="_blank" rel="noopener noreferrer">openstax.org/books/university-physics-volume-1/pages/11-3-conservation&hellip;</a></li>
+          <li id="ref-75">Khan Academy. &ldquo;Torque and angular momentum&rdquo; (high school physics). <a href="https://www.khanacademy.org/science/high-school-physics/torque-and-angular-momentum" target="_blank" rel="noopener noreferrer">www.khanacademy.org/science/high-school-physics/torque-and-angular-mom&hellip;</a></li>
+          <li id="ref-76">PhET Interactive Simulations, University of Colorado Boulder. &ldquo;Torque.&rdquo; <a href="https://phet.colorado.edu/en/simulations/torque" target="_blank" rel="noopener noreferrer">phet.colorado.edu/en/simulations/torque</a></li>
+          <li id="ref-77">PhET Interactive Simulations. &ldquo;Energy Skate Park: Basics.&rdquo; <a href="https://phet.colorado.edu/en/simulations/energy-skate-park-basics" target="_blank" rel="noopener noreferrer">phet.colorado.edu/en/simulations/energy-skate-park-basics</a></li>
+          <li id="ref-78">phyphox: Physical Phone Experiments (free app, RWTH Aachen University). <a href="https://phyphox.org/" target="_blank" rel="noopener noreferrer">phyphox.org/</a></li>
+          <li id="ref-79">&ldquo;Gyroscope.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Gyroscope" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Gyroscope</a></li>
+          <li id="ref-80">&ldquo;Precession.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Precession" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Precession</a></li>
+          <li id="ref-81">&ldquo;Radius of gyration.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Radius_of_gyration" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Radius_of_gyration</a></li>
+          <li id="ref-82">&ldquo;Rolling.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Rolling" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Rolling</a></li>
+          <li id="ref-83">&ldquo;Conservation of energy.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Conservation_of_energy" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Conservation_of_energy</a></li>
+          <li id="ref-84">Science Buddies. &ldquo;The Engineering Design Process.&rdquo; <a href="https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/engineering-design-process-steps" target="_blank" rel="noopener noreferrer">www.sciencebuddies.org/science-fair-projects/engineering-design-proces&hellip;</a></li>
+          <li id="ref-85">Science of Spin. School assembly program details. <a href="https://www.scienceofspin.com/science-of-spin-details.html" target="_blank" rel="noopener noreferrer">www.scienceofspin.com/science-of-spin-details.html</a></li>
+          <li id="ref-86">YoYo Wiki. &ldquo;Dick Stohr.&rdquo; <a href="https://yoyo.fandom.com/wiki/Dick_Stohr" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Dick_Stohr</a></li>
         </ol>
         <div class="sci-credit">Spot an error or know a better source? Email <a href="mailto:contact@dmvthrowers.club" class="text-red">contact@dmvthrowers.club</a>.</div>
       </section>
