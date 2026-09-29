@@ -14,7 +14,7 @@
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Resources - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
-  <meta name="description" content="Free resources for yo-yo players in DC, Virginia, and Maryland. Download workshop run sheets, trick guides, and maintenance guides from DMV Throwers."/>
+  <meta name="description" content="Free resources for yo-yo players in DC, Virginia, and Maryland. Download workshop run sheets, trick guides, and maintenance guides, plus curated links to trick tutorials, apps, forums, and yo-yo history."/>
   <meta property="og:title" content="Resources - DMV Throwers · Yo-Yo & Skill Toy Club"/>
   <meta property="og:description" content="Free downloadable resources for yo-yo players and skill toy enthusiasts"/>
   <meta property="og:type" content="website"/>
@@ -86,8 +86,20 @@
     .resource-desc { color: var(--text-muted); margin-bottom: 20px; line-height: 1.5; }
     .resource-link { display: inline-flex; align-items: center; gap: 6px; background: var(--navy); color: white; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
     .resource-link:hover { background: var(--red); }
+    .resource-link + .resource-link { margin-top: 8px; }
     .resources-section-bg { background: white; }
     .resources-desc { color: var(--text-muted); margin-bottom: 8px; font-size: 0.95rem; }
+    .links-block { margin-top: 64px; scroll-margin-top: 80px; }
+    .link-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 32px; }
+    .link-group { border: 1px solid var(--border); border-top: 4px solid var(--red); padding: 20px 24px; background: var(--cream); }
+    .link-group-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 12px; }
+    .link-list { list-style: none; margin: 0; padding: 0; }
+    .link-list li { padding: 10px 0; border-top: 1px solid var(--cream-mid); line-height: 1.45; }
+    .link-list li:first-child { border-top: 0; padding-top: 0; }
+    .link-list a { color: var(--navy); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+    .link-list a:hover, .link-list a:focus-visible { color: var(--red); }
+    .link-list span { display: block; color: var(--text-muted); font-size: 0.9rem; margin-top: 2px; }
+    .link-list span a { font-weight: 600; }
     .support-section { margin-top: 48px; text-align: center; }
     .support-box { background: var(--navy); color: white; padding: 32px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
     .support-h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; margin-bottom: 16px; }
@@ -95,7 +107,8 @@
     .support-link { display: inline-block; background: var(--red); color: white; padding: 12px 24px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
     .support-link:hover { background: var(--red-dark); }
     @media (max-width: 768px) {
-      .resource-grid { grid-template-columns: 1fr; }
+      .resource-grid, .link-groups { grid-template-columns: 1fr; }
+      .link-group { padding: 18px 16px; }
       .resource-card { padding: 20px; }
       .resource-title { font-size: 1.2rem; }
     }
@@ -185,7 +198,7 @@
     <div class="red-tag">DOWNLOADS</div>
     <h2 class="section-title">Resources</h2>
     <div class="divider"></div>
-    <p class="resources-desc">Guides, downloads, and trusted links for new and returning yo-yo players.</p>
+    <p class="resources-desc">Guides, downloads, and trusted links for new and returning yo-yo players. Looking for tutorials, apps, and history? <a href="resources.html#links">Jump to Yo-Yo Links</a>.</p>
 
     <div class="resource-grid">
 
@@ -276,10 +289,82 @@
       <div class="resource-card">
         <div class="resource-icon">📱</div>
         <div class="resource-title">YoYo Pro Clicker App</div>
-        <div class="resource-desc">Free iOS app for tracking freestyle deductions in real time — handy for couch judges helping score contests like VSYC-26. Built by fellow thrower Joseph (<a href="https://instagram.com/jo.vo.007" target="_blank" rel="noopener noreferrer" aria-label="Joseph's Instagram (opens in new tab)">@jo.vo.007</a>).</div>
+        <div class="resource-desc">Free app for iOS and Android that tracks freestyle deductions in real time — handy for couch judges helping score contests like VSYC-26. Built by fellow thrower Joseph (<a href="https://instagram.com/jo.vo.007" target="_blank" rel="noopener noreferrer" aria-label="Joseph's Instagram (opens in new tab)">@jo.vo.007</a>).</div>
         <a href="https://apps.apple.com/us/app/yoyo-pro-clicker/id6757318886" class="resource-link" target="_blank" rel="noopener noreferrer">📱 Get on the App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=co.median.android.pwwrrbd" class="resource-link" target="_blank" rel="noopener noreferrer">📱 Get on Google Play</a>
       </div>
 
+    </div>
+
+    <!-- Curated yo-yo links: learning and information over sales. Brand sites only when
+         they host free tutorials or forums. Wayback links point at dated snapshots. -->
+    <div id="links" class="links-block">
+      <div class="red-tag">LEARN &amp; EXPLORE</div>
+      <h2 class="section-title">Yo-Yo Links</h2>
+      <div class="divider"></div>
+      <p class="resources-desc">Trick tutorials, apps, forums, contest records, and history. Hand-picked for learning, not shopping.</p>
+
+      <div class="link-groups">
+
+        <div class="link-group">
+          <h3 class="link-group-title">Learn Tricks</h3>
+          <ul class="link-list">
+            <li><a href="https://yoyotricks.com/yoyo-tricks/" target="_blank" rel="noopener noreferrer">YoYoTricks.com Trick Library</a><span>Free video lessons from your first throw to master level. Kendama too.</span></li>
+            <li><a href="https://skilladdicts.com/" target="_blank" rel="noopener noreferrer">Skill Addicts</a><span>1,000+ tutorials across 1A–5A. Earn points as you land tricks.</span></li>
+            <li><a href="https://yoyoexpert.com/pages/learn-yoyo-tricks" target="_blank" rel="noopener noreferrer">YoYoExpert Learn</a><span>Step-by-step trick guides for every style, beginner to expert.</span></li>
+            <li><a href="https://duncantoys.com/pages/tutorial-videos" target="_blank" rel="noopener noreferrer">Duncan Tutorial Videos</a><span>Classic tricks from one of the oldest names in yo-yo.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h3 class="link-group-title">Apps &amp; Tools</h3>
+          <ul class="link-list">
+            <li><a href="https://apps.apple.com/us/app/level-up-yoyo-and-skill-toys/id414905488" target="_blank" rel="noopener noreferrer">Level Up! (iOS)</a> · <a href="https://play.google.com/store/apps/details?id=com.archaicsoftware.yotricks" target="_blank" rel="noopener noreferrer">Android</a><span>YoYoTricks.com's free app. Stream tutorials and track the tricks you've landed.</span></li>
+            <li><a href="https://apps.apple.com/us/app/skill-addicts-play-learn/id6447176925" target="_blank" rel="noopener noreferrer">Skill Addicts (iOS)</a> · <a href="https://play.google.com/store/apps/details?id=com.skilladdicts.app" target="_blank" rel="noopener noreferrer">Android</a><span>Gamified trick learning in your pocket.</span></li>
+            <li><a href="https://apps.apple.com/us/app/yoyo-pro-clicker/id6757318886" target="_blank" rel="noopener noreferrer">YoYo Pro Clicker (iOS)</a> · <a href="https://play.google.com/store/apps/details?id=co.median.android.pwwrrbd" target="_blank" rel="noopener noreferrer">Android</a><span>Count freestyle deductions like a contest judge.</span></li>
+            <li><a href="https://test.daveronica.com/" target="_blank" rel="noopener noreferrer">Yoyo Collection</a><span>Catalog your throws: specs, condition, value, and trade status.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h3 class="link-group-title">Community</h3>
+          <ul class="link-list">
+            <li><a href="https://forums.yoyoexpert.com/" target="_blank" rel="noopener noreferrer">YoYoExpert Forums</a><span>The longest-running active yo-yo forum. Ask questions, share tricks.</span></li>
+            <li><a href="https://www.reddit.com/r/Throwers/" target="_blank" rel="noopener noreferrer">r/Throwers</a><span>Reddit's yo-yo community for clips, help, and news.</span></li>
+            <li><a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">YoYo Map</a><span>Find throwers near you. City-level only.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h3 class="link-group-title">Contests &amp; Events</h3>
+          <ul class="link-list">
+            <li><a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">YoYo Archive Events</a><span>Worldwide calendar of contests and meetups.</span></li>
+            <li><a href="https://iyyf.org/" target="_blank" rel="noopener noreferrer">International Yo-Yo Federation</a><span>Runs the World Yo-Yo Contest. Past rulesets live on <a href="https://www.iyyf.org/rules" target="_blank" rel="noopener noreferrer">their rules page</a>.</span></li>
+            <li><a href="https://www.worldyoyocontest.com/results_db/" target="_blank" rel="noopener noreferrer">World Contest Results Database</a><span>Searchable results from decades of world contests.</span></li>
+            <li><a href="https://nationalyoyo.org/contest-results/" target="_blank" rel="noopener noreferrer">U.S. National Results</a><span>Contest history from the National Yo-Yo Museum in Chico, CA.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h3 class="link-group-title">History</h3>
+          <ul class="link-list">
+            <li><a href="https://nationalyoyo.org/" target="_blank" rel="noopener noreferrer">National Yo-Yo Museum</a><span>The world's largest public yo-yo display. Free to visit in Chico, CA.</span></li>
+            <li><a href="https://yo-yos.net/luckys-history-of-the-yo-yo/" target="_blank" rel="noopener noreferrer">Doc Lucky's History of the Yo-Yo</a><span>From ancient Greece to the modern contest scene.</span></li>
+            <li><a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-Yo on Wikipedia</a><span>A solid overview of the toy, its booms, and its players.</span></li>
+            <li><a href="https://yoyo.fandom.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">YoYo Wiki</a><span>Fan-built wiki of players, companies, contests, and tricks.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group">
+          <h3 class="link-group-title">From the Wayback Machine</h3>
+          <ul class="link-list">
+            <li><a href="https://web.archive.org/web/20060116045403/http://www.yoyonation.com/" target="_blank" rel="noopener noreferrer">YoYoNation (2006)</a><span>Once the busiest yo-yo forum on the web. Founded in New York in 2005.</span></li>
+            <li><a href="https://web.archive.org/web/20100209061015/http://www.rethinkyoyo.com/" target="_blank" rel="noopener noreferrer">RethinkYoYo (2010)</a><span>A new trick tutorial every week during the late-2000s tutorial boom.</span></li>
+            <li><a href="https://web.archive.org/web/20081016035606/http://www.yoyoskills.com/" target="_blank" rel="noopener noreferrer">YoYoSkills (2008)</a><span>Chris Allen's tutorial and skill toy network.</span></li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
     <div class="support-section">
