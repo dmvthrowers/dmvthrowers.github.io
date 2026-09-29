@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--
+  yoyo-collecting.html — Yo-yo collecting: what collectors collect, vintage brands (Cheerio,
+  Russell/Coca-Cola, Duncan), modern limited runs, condition and value, BST trading, storage,
+  and museums, with numbered citations. Uses about.html's skeleton. Linked from
+  resources.html and the footer Guides row; not in the main nav.
+-->
+<html lang="en">
+<head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <!-- base href="/" makes every relative URL resolve from the site root. -->
+  <base href="/"/>
+  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
+       formspree for the contact form, Google Fonts for typography). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <title>Collecting Yo-Yos - DMV Throwers · Yo-Yo &amp; Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="A cited guide to yo-yo collecting: vintage brands like Cheerio and Russell Coca-Cola yo-yos, modern limited runs and prototypes, condition and value, safe trading, storage, and museums."/>
+  <meta property="og:title" content="Collecting Yo-Yos - DMV Throwers"/>
+  <meta property="og:description" content="Vintage brands, limited runs, condition and value, trading safely, and yo-yo museums. Every fact cited."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/yoyo-collecting.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="Collecting Yo-Yos - DMV Throwers"/>
+  <meta name="twitter:description" content="Vintage brands, limited runs, condition and value, trading safely, and yo-yo museums. Every fact cited."/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="keywords" content="yo-yo collecting, bandalorist, vintage yo-yos, Cheerio yo-yo, Coca-Cola Russell yo-yo, yo-yo value, yo-yo appraisal, yo-yo museum"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <meta name="geo.placename" content="Arlington, Virginia"/>
+  <link rel="canonical" href="https://dmvthrowers.club/yoyo-collecting.html"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + Article. Not rendered; consumed by search engines. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
+        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://dmvthrowers.club/resources.html"},
+        {"@type": "ListItem", "position": 3, "name": "Collecting Yo-Yos", "item": "https://dmvthrowers.club/yoyo-collecting.html"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Collecting Yo-Yos: Vintage Brands, Limited Runs, Condition, Trading, and Museums",
+      "publisher": {"@type": "Organization", "name": "DMV Throwers", "url": "https://dmvthrowers.club/"},
+      "datePublished": "2026-09-29",
+      "url": "https://dmvthrowers.club/yoyo-collecting.html"
+    }
+  ]
+  </script>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
+    .sci-wrap { max-width: 860px; margin: 0 auto; }
+    .sci-intro { color: var(--text-muted); font-size: 1rem; line-height: 1.65; margin-bottom: 12px; }
+    .sci-toc { margin: 16px 0 8px; padding: 16px 20px 16px 40px; border: 1px solid var(--border); border-left: 4px solid var(--red); background: var(--cream); columns: 2; column-gap: 24px; }
+    .sci-toc li { padding: 3px 0; break-inside: avoid; }
+    .sci-toc a { color: var(--navy); font-weight: 700; }
+    .sci-sec { margin-top: 48px; scroll-margin-top: 80px; }
+    .sci-kicker { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); }
+    .sci-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.8rem; color: var(--navy); line-height: 1.2; margin: 6px 0 14px; }
+    .sci-sec h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin: 24px 0 8px; }
+    .sci-sec p, .sci-list li, .sci-steps li { line-height: 1.7; color: var(--text-body); }
+    .sci-sec p { margin-bottom: 12px; }
+    .sci-wrap a:not(.btn) { color: var(--navy); font-weight: 700; }
+    .sci-list, .sci-steps { padding-left: 20px; margin: 8px 0 14px; }
+    .sci-list li, .sci-steps li { padding: 3px 0; }
+    .cite { font-size: 0.72em; line-height: 0; margin-left: 1px; white-space: nowrap; }
+    .sci-wrap .cite a { color: var(--red); font-weight: 700; text-decoration: none; }
+    .std-box { padding: 18px 22px; background: var(--navy); color: var(--cream); }
+    .std-box ul { margin: 6px 0 0; padding-left: 18px; }
+    .std-box li { padding: 4px 0; line-height: 1.6; color: var(--cream); }
+    .std-box strong { color: var(--cream); }
+    .std-box .cite a { color: var(--cream) !important; text-decoration: underline; }
+    .std-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--cream); opacity: 0.85; }
+    .mini-tl { list-style: none; margin: 8px 0 6px; padding: 0 0 0 14px; border-left: 3px solid var(--navy); }
+    .mini-tl li { padding: 4px 0; line-height: 1.55; color: var(--text-body); }
+    .mini-tl span { display: inline-block; min-width: 92px; font-weight: 700; color: var(--red); }
+    .table-scroll { overflow-x: auto; margin: 12px 0 16px; }
+    .sci-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .sci-table caption { text-align: left; font-weight: 700; color: var(--navy); padding-bottom: 6px; }
+    .sci-table th, .sci-table td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; line-height: 1.5; }
+    .sci-table th { background: var(--navy); color: var(--cream); font-size: 0.78rem; letter-spacing: var(--caps-track); text-transform: uppercase; }
+    .sci-table tbody tr:nth-child(odd) td { background: var(--cream); }
+    .try-box { margin: 16px 0; padding: 14px 18px; border: 2px dashed var(--red); background: var(--cream); }
+    .try-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 4px; }
+    .sci-note { font-size: 0.92rem; color: var(--text-muted); font-style: italic; }
+    .ref-list { padding-left: 24px; font-size: 0.86rem; line-height: 1.6; }
+    .ref-list li { padding: 4px 0; color: var(--text-body); overflow-wrap: anywhere; scroll-margin-top: 90px; }
+    .ref-list li:target { background: var(--cream); outline: 2px solid var(--red); }
+    .sci-credit { margin-top: 32px; padding: 16px 20px; border: 1px solid var(--border); background: var(--cream); font-size: 0.9rem; color: var(--text-muted); }
+    @media (max-width: 600px) {
+      .stack-table thead { display: none; }
+      .stack-table caption { display: block; width: 100%; }
+      .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
+      .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
+      .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
+    }
+    @media (max-width: 760px) {
+      .sci-toc { columns: 1; }
+      .sci-title { font-size: 1.45rem; }
+      .mini-tl span { display: block; min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: headline event + shortcut. Update the text each month. -->
+<div id="top-bar">
+  <span>VSYC-26 RESULTS ARE IN · THANK YOU FOR AN AMAZING CONTEST AT DULLES TOWN CENTER</span>
+  <a href="vsyc26-results.html">SEE RESULTS →</a>
+</div>
+
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
+      <div>
+        <div class="nav-brand-text-main">DMV THROWERS</div>
+        <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
+      <a href="events.html" class="nav-link">CLUB EVENTS</a>
+      <a href="gallery.html" class="nav-link">GALLERY</a>
+      <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
+      <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link">MAP</a>
+        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">ABOUT</a>
+  <a href="team.html">TEAM</a>
+  <a href="events.html">CLUB EVENTS</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="resources.html">RESOURCES</a>
+  <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/">MAP</a>
+    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
+  <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="red-tag">YO-YO COLLECTING</span>
+    <h1 class="page-hero-title">Collecting Yo-Yos</h1>
+    <p class="page-hero-sub">Vintage · Limited Runs · Condition · Trading · Museums</p>
+  </div>
+  <div class="page-hero-skyline">
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
+  </div>
+</div>
+
+<section id="collecting" class="section-bg-white">
+  <div class="section">
+    <div class="sci-wrap">
+      <p class="sci-intro">Plenty of players end up with a shelf of yo-yos, and some go all in: vintage wood, soda promotions, one-of-23 colorways, prototypes. This guide covers what people collect, the brands and eras that matter, how condition drives value, how to trade safely, and where to see the great collections. Every fact links to a numbered source.</p>
+      <p class="sci-note">For finishes, B-grades, and fakes, see <a href="yoyo-gear.html#culture">Lingo, Finishes, and Collecting</a> on the Gear page. For the big-picture timeline, see <a href="yoyo-history.html">The Story of the Yo-Yo</a>.</p>
+      <ol class="sci-toc">
+        <li><a href="yoyo-collecting.html#what">What Collectors Collect</a></li>
+        <li><a href="yoyo-collecting.html#vintage">Vintage Brands and Eras</a></li>
+        <li><a href="yoyo-collecting.html#modern">Modern Collecting</a></li>
+        <li><a href="yoyo-collecting.html#condition">Condition and Value</a></li>
+        <li><a href="yoyo-collecting.html#bst">Buying, Selling, and Trading</a></li>
+        <li><a href="yoyo-collecting.html#storage">Storage and Display</a></li>
+        <li><a href="yoyo-collecting.html#museums">Museums, Archives, and People</a></li>
+        <li><a href="yoyo-collecting.html#references">References</a></li>
+      </ol>
+
+      <article id="what" class="sci-sec">
+        <div class="sci-kicker">Part 1</div>
+        <h2 class="sci-title">What Collectors Collect</h2>
+        <p>A yo-yo collector is a <strong>bandalorist</strong>, a word coined by Doc &ldquo;Lucky&rdquo; Meisenheimer from &ldquo;bandalore,&rdquo; the name for yo-yos in the 19th and early 20th centuries before 1928.<sup class="cite"><a href="yoyo-collecting.html#ref-1" aria-label="Source 1">[1]</a><a href="yoyo-collecting.html#ref-2" aria-label="Source 2">[2]</a></sup></p>
+        <ul class="sci-list">
+          <li><strong>Vintage yo-yos</strong> from makers like Flores, Duncan, Royal, and Cheerio.<sup class="cite"><a href="yoyo-collecting.html#ref-3" aria-label="Source 3">[3]</a><a href="yoyo-collecting.html#ref-4" aria-label="Source 4">[4]</a></sup></li>
+          <li><strong>Promotional yo-yos</strong>, especially Coca-Cola. Coke yo-yos are the most cross-collected yo-yos apart from World&rsquo;s Fair pieces, sought by both yo-yo and Coca-Cola collectors.<sup class="cite"><a href="yoyo-collecting.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+          <li><strong>Memorabilia:</strong> contest patches and packaged string. Original Cheerio competition patches and strings command high prices from some niche collectors.<sup class="cite"><a href="yoyo-collecting.html#ref-4" aria-label="Source 4">[4]</a></sup></li>
+          <li><strong>Modern metal and plastic:</strong> limited colorways, small runs, prototypes, and signature models.<sup class="cite"><a href="yoyo-collecting.html#ref-11" aria-label="Source 11">[11]</a><a href="yoyo-collecting.html#ref-12" aria-label="Source 12">[12]</a><a href="yoyo-collecting.html#ref-15" aria-label="Source 15">[15]</a></sup></li>
+        </ul>
+        <p>The standard reference is Lucky&rsquo;s <cite>Collectors Guide to 20th Century Yo-Yos: History and Values</cite>, with almost 2,000 entries, color plates of more than 1,000 items, a grading section, and a value index. A plain burgundy hardcover &ldquo;championship&rdquo; edition goes to contest division winners.<sup class="cite"><a href="yoyo-collecting.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
+      </article>
+
+      <article id="vintage" class="sci-sec">
+        <div class="sci-kicker">Part 2</div>
+        <h2 class="sci-title">Vintage Brands and Eras</h2>
+        <h3>Cheerio (Canada)</h3>
+        <ul class="sci-list">
+          <li>Owned by Wilf Schlee, Cheerio was one of the largest yo-yo makers of the 1930s and 1940s. Its demonstrators, including Harvey Lowe, toured Canada and parts of Europe.<sup class="cite"><a href="yoyo-collecting.html#ref-4" aria-label="Source 4">[4]</a></sup></li>
+          <li>After Cheerio entered the U.S. in the early 1940s, &ldquo;Cheerio&rdquo; nearly replaced &ldquo;yo-yo&rdquo; among kids; award patches read &ldquo;Cheerio Champion&rdquo; with no mention of yo-yos.<sup class="cite"><a href="yoyo-collecting.html#ref-4" aria-label="Source 4">[4]</a></sup></li>
+          <li>Duncan bought the U.S. operation in 1954. In Canada, Cheerio outsourced its Rainbow and Big Chief models to Sweden&rsquo;s Elfverson from 1958 to 1964, and a 1964 Canadian court case found &ldquo;yo-yo&rdquo; had lost its trademark distinctiveness, echoing the U.S. ruling.<sup class="cite"><a href="yoyo-collecting.html#ref-4" aria-label="Source 4">[4]</a></sup></li>
+          <li>Well-preserved Cheerios fetch very high prices today.<sup class="cite"><a href="yoyo-collecting.html#ref-4" aria-label="Source 4">[4]</a></sup></li>
+        </ul>
+        <h3>Russell and Coca-Cola</h3>
+        <ul class="sci-list">
+          <li>Jack Russell, a Duncan demonstrator, began tying Duncan yo-yos to Coca-Cola promotions in Atlanta in 1947; those yo-yos were stamped &ldquo;Coca-Cola&rdquo; on the back.<sup class="cite"><a href="yoyo-collecting.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li>In the late 1950s he formed Duncan Russell and Ives (D.R.I.) with Donald F. Duncan Sr. and Tom Ives as Duncan&rsquo;s international promotions arm. When Duncan stopped financing it, Russell bought the company and its promotional molds.<sup class="cite"><a href="yoyo-collecting.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li>Russell demonstrators took the Coca-Cola yo-yo craze to 95 countries, peaking in the 1980s, with models for Coke&rsquo;s other drinks too. Hundreds of Coke-sponsored models exist, including Fanta, Sprite, and Fresca versions.<sup class="cite"><a href="yoyo-collecting.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-collecting.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+          <li>Russell also made commemoratives for U.S. Nationals and Worlds, Olympics-tied Coke yo-yos, and a yearly company Christmas yo-yo. It still made promotional yo-yos as late as 2023.<sup class="cite"><a href="yoyo-collecting.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+        </ul>
+        <h3>Duncan</h3>
+        <ul class="sci-list">
+          <li>&ldquo;Duncan Professionals&rdquo; were the demonstrators behind most Duncan promotions. Several later founded rival companies, including Russell, SuperYo, and Spintastics.<sup class="cite"><a href="yoyo-collecting.html#ref-7" aria-label="Source 7">[7]</a></sup></li>
+          <li>Small wooden Duncans stamped &ldquo;REG. U.S. PAT&rdquo; turn up in family toolboxes. Forum members guessed anywhere from the 1930s to the 1950s for one such find, and noted these little Duncans are common.<sup class="cite"><a href="yoyo-collecting.html#ref-10" aria-label="Source 10">[10]</a></sup></li>
+          <li><strong>Check for replicas:</strong> Duncan made many replica runs of classic models that aren&rsquo;t worth much. Look for dating on the package.<sup class="cite"><a href="yoyo-collecting.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="modern" class="sci-sec">
+        <div class="sci-kicker">Part 3</div>
+        <h2 class="sci-title">Modern Collecting</h2>
+        <ul class="sci-list">
+          <li><strong>Limited runs:</strong> popular releases sell out fast. CLYW staggered its 2015 Yeti release in batches of 200 because demand far outstripped supply.<sup class="cite"><a href="yoyo-collecting.html#ref-11" aria-label="Source 11">[11]</a></sup> Some colorways are tiny: a CLYW Gnarwhal &ldquo;Rockabilly&rdquo; run was listed as just 23 pieces.<sup class="cite"><a href="yoyo-collecting.html#ref-12" aria-label="Source 12">[12]</a></sup> Players debate whether artificially small runs serve players or only collectors.<sup class="cite"><a href="yoyo-collecting.html#ref-13" aria-label="Source 13">[13]</a></sup></li>
+          <li><strong>Prototypes:</strong> pre-production pieces are prized. Tom Kuhn&rsquo;s Turbo-Yo, the prototype for the 1990 SB-2, was made in a run of only 39.<sup class="cite"><a href="yoyo-collecting.html#ref-14" aria-label="Source 14">[14]</a></sup> Forum collectors call a rare prototype &ldquo;the crown jewel&rdquo; of a collection.<sup class="cite"><a href="yoyo-collecting.html#ref-15" aria-label="Source 15">[15]</a></sup></li>
+          <li><strong>Swappable parts:</strong> One Drop Side Effects come in many shapes and metals, from spikes and domes to Lego pegs, and have been made for licensed yo-yos from other brands.<sup class="cite"><a href="yoyo-collecting.html#ref-17" aria-label="Source 17">[17]</a></sup></li>
+          <li><strong>Pack-ins:</strong> some makers include collectibles you can&rsquo;t buy, like Throw-Yo&rsquo;s &ldquo;Throw Coins,&rdquo; random pack-ins with larger string and counterweight orders.<sup class="cite"><a href="yoyo-collecting.html#ref-16" aria-label="Source 16">[16]</a></sup></li>
+          <li><strong>Plating and rare metals:</strong> nickel, copper, silver, gold, and rare rhodium plating, plus titanium, magnesium, and bimetals, make some models more collectible. See the <a href="yoyo-science.html#design">Science page</a> for materials.<sup class="cite"><a href="yoyo-collecting.html#ref-31" aria-label="Source 31">[31]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="condition" class="sci-sec">
+        <div class="sci-kicker">Part 4</div>
+        <h2 class="sci-title">Condition and Value</h2>
+        <ul class="sci-list">
+          <li><strong>Mint matters most to collectors.</strong> Collectors pay the highest prices, and they want the best condition possible. Once a yo-yo isn&rsquo;t mint, it has largely lost the collector market, and a 1-of-10 colorway may sell for about the same as a 1-of-500.<sup class="cite"><a href="yoyo-collecting.html#ref-18" aria-label="Source 18">[18]</a></sup></li>
+          <li><strong>Why buyers insist on mint:</strong> a mint yo-yo proves nothing abusive happened to it. With marks, a buyer can&rsquo;t tell a small drop from real damage, so they assume the worst.<sup class="cite"><a href="yoyo-collecting.html#ref-18" aria-label="Source 18">[18]</a></sup></li>
+          <li><strong>Re-anodized isn&rsquo;t quite mint.</strong> Forum members disagree on whether a stripped and re-anodized yo-yo counts as mint; the consensus is to disclose any custom anodizing when you sell.<sup class="cite"><a href="yoyo-collecting.html#ref-19" aria-label="Source 19">[19]</a></sup></li>
+          <li><strong>Getting a value:</strong> post clear photos in the YoYoExpert appraisal threads, where experienced collectors weigh in.<sup class="cite"><a href="yoyo-collecting.html#ref-9" aria-label="Source 9">[9]</a><a href="yoyo-collecting.html#ref-8" aria-label="Source 8">[8]</a></sup> For vintage pieces, Lucky&rsquo;s guide includes a grading section and a value index.<sup class="cite"><a href="yoyo-collecting.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li><strong>Playing vs. collecting:</strong> many players prefer a yo-yo with a few scratches they don&rsquo;t have to baby. That&rsquo;s a valid choice; just know it affects resale.<sup class="cite"><a href="yoyo-collecting.html#ref-18" aria-label="Source 18">[18]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="bst" class="sci-sec">
+        <div class="sci-kicker">Part 5</div>
+        <h2 class="sci-title">Buying, Selling, and Trading</h2>
+        <p>Most modern trading happens on buy/sell/trade (BST) boards. YoYoExpert&rsquo;s official BST rules are a good model for any marketplace:<sup class="cite"><a href="yoyo-collecting.html#ref-20" aria-label="Source 20">[20]</a></sup></p>
+        <ul class="sci-list">
+          <li>Always include photos of what you are selling, taken by you, showing any damage or flaws.<sup class="cite"><a href="yoyo-collecting.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
+          <li>List the make, model, and colorway, and describe any damage or vibe honestly.<sup class="cite"><a href="yoyo-collecting.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
+          <li>Pay with PayPal Goods &amp; Services for buyer protection. Friends &amp; Family payments have no protection from PayPal or the forum if a trade goes bad.<sup class="cite"><a href="yoyo-collecting.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
+          <li>Never post your mailing address or phone number publicly; send it by private message.<sup class="cite"><a href="yoyo-collecting.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
+          <li>You need to reach a basic trust level, by reading and taking part in the forum, before you can open a BST topic.<sup class="cite"><a href="yoyo-collecting.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
+        </ul>
+        <ul class="sci-list">
+          <li><strong>Etiquette:</strong> longtime traders complain about flaking, lowballing, misleading listings, and shipping yo-yos in plain envelopes. They also note that kids sometimes back out after a parent says no, so check with a parent before you agree to a trade.<sup class="cite"><a href="yoyo-collecting.html#ref-21" aria-label="Source 21">[21]</a></sup></li>
+          <li><strong>Watch for B-grades sold as new</strong> and for counterfeits, especially of popular YoYoRecreation models. See <a href="yoyo-gear.html#culture">Fakes and B-grades</a>.<sup class="cite"><a href="yoyo-collecting.html#ref-22" aria-label="Source 22">[22]</a><a href="yoyo-collecting.html#ref-23" aria-label="Source 23">[23]</a></sup></li>
+          <li><strong>Kids:</strong> DMV Throwers is family-friendly. Trade in person at a <a href="events.html">meetup</a> with a parent or guardian when you can.</li>
+        </ul>
+      </article>
+
+      <article id="storage" class="sci-sec">
+        <div class="sci-kicker">Part 6</div>
+        <h2 class="sci-title">Storage and Display</h2>
+        <ul class="sci-list">
+          <li><strong>Display:</strong> collectors use wall racks, shelves, and cases; forum megathreads are full of ideas, including custom-built racks for yo-yos and spin tops.<sup class="cite"><a href="yoyo-collecting.html#ref-24" aria-label="Source 24">[24]</a><a href="yoyo-collecting.html#ref-25" aria-label="Source 25">[25]</a></sup></li>
+          <li><strong>Unwind the string:</strong> storing a yo-yo wound tight makes the string lose its elasticity; store it unwound.<sup class="cite"><a href="yoyo-collecting.html#ref-27" aria-label="Source 27">[27]</a></sup></li>
+          <li><strong>Protect bearings:</strong> don&rsquo;t store yo-yos with string attached for long periods; string absorbs moisture and raises the risk of rust. Keep bearings away from magnets.<sup class="cite"><a href="yoyo-collecting.html#ref-28" aria-label="Source 28">[28]</a></sup></li>
+          <li><strong>Keep solvents away from plastic:</strong> polycarbonate can craze, yellow, and turn brittle when exposed to solvents.<sup class="cite"><a href="yoyo-collecting.html#ref-31" aria-label="Source 31">[31]</a></sup></li>
+          <li><strong>Cases:</strong> see <a href="yoyo-gear.html#cases">Cases and Holders</a> on the Gear page, including DIY options.</li>
+          <li><strong>Collections change:</strong> many players eventually thin a big collection down to a handful of favorites they actually throw.<sup class="cite"><a href="yoyo-collecting.html#ref-26" aria-label="Source 26">[26]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="museums" class="sci-sec">
+        <div class="sci-kicker">Part 7</div>
+        <h2 class="sci-title">Museums, Archives, and People</h2>
+        <ul class="sci-list">
+          <li><strong>US National Yo-Yo Museum</strong> (Chico, California): on the premises of the Bird In Hand shop, with yo-yos from the 1920s to modern bearing yo-yos, the Duncan family collection, and Tom Kuhn&rsquo;s Big-Yo, the world&rsquo;s largest working wooden yo-yo. It claims to be the largest public yo-yo display in the world, with free admission and tours.<sup class="cite"><a href="yoyo-collecting.html#ref-30" aria-label="Source 30">[30]</a></sup></li>
+          <li><strong>Museum of Yo-Yo History</strong> (online): started by David Hall, with pieces from his collection and other curators, including many prototypes and information not found elsewhere. It went offline from October 2008 to October 2009, then returned after the community urged him to bring it back.<sup class="cite"><a href="yoyo-collecting.html#ref-29" aria-label="Source 29">[29]</a></sup> <a href="https://www.yoyomuseum.com/" target="_blank" rel="noopener noreferrer">yoyomuseum.com</a></li>
+          <li><strong>Doc &ldquo;Lucky&rdquo; Meisenheimer:</strong> Guinness record holder for the largest yo-yo collection, founding AYYA board member, chair of its history and collecting committee and world-record committee, and since 2020 director of the National Yo-Yo Hall of Fame. He hosts a monthly live YouTube show, &ldquo;Doc Lucky&rsquo;s Yo-Yo Talk,&rdquo; on history and collecting, and created the &ldquo;Doc Lucky&rsquo;s Duos&rdquo; contest division.<sup class="cite"><a href="yoyo-collecting.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
+          <li>More links, including the YoYo Archive, are on our <a href="resources.html#links">Resources page</a>.</li>
+        </ul>
+      </article>
+
+      <section id="references" class="sci-sec" aria-labelledby="references-title">
+        <h2 class="sci-title" id="references-title">References</h2>
+        <p class="sci-note">Forum posts are collectors&rsquo; and players&rsquo; experience, not price guides. Values change; ask before you buy or sell.</p>
+        <ol class="ref-list">
+          <li id="ref-1">YoYo Wiki. &ldquo;Bandalorist.&rdquo; <a href="https://yoyo.fandom.com/wiki/Bandalorist" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Bandalorist</a></li>
+          <li id="ref-2">YoYo Wiki. &ldquo;Lucky Meisenheimer.&rdquo; <a href="https://yoyo.fandom.com/wiki/Lucky_Meisenheimer" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Lucky_Meisenheimer</a></li>
+          <li id="ref-3">YoYo Wiki. &ldquo;Lucky&rsquo;s Collectors Guide to 20th Century Yo-Yos.&rdquo; <a href="https://yoyo.fandom.com/wiki/Lucky%27s_Collectors_Guide_to_20th_Century_Yo-Yos" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Lucky%27s_Collectors_Guide_to_20th_Century_Yo-Yos</a></li>
+          <li id="ref-4">YoYo Wiki. &ldquo;Cheerio.&rdquo; <a href="https://yoyo.fandom.com/wiki/Cheerio" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Cheerio</a></li>
+          <li id="ref-5">YoYo Wiki. &ldquo;Russell.&rdquo; <a href="https://yoyo.fandom.com/wiki/Russell" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Russell</a></li>
+          <li id="ref-6">YoYo Wiki. &ldquo;Coca-Cola.&rdquo; <a href="https://yoyo.fandom.com/wiki/Coca-Cola" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Coca-Cola</a></li>
+          <li id="ref-7">YoYo Wiki. &ldquo;Duncan.&rdquo; <a href="https://yoyo.fandom.com/wiki/Duncan" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Duncan</a></li>
+          <li id="ref-8">YoYoExpert Forums. &ldquo;Yoyo Appraisal Thread II&rdquo; (2022&ndash;). <a href="https://forums.yoyoexpert.com/t/367534" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/367534</a></li>
+          <li id="ref-9">YoYoExpert Forums. &ldquo;Yoyo Appraisal Thread&rdquo; (2013&ndash;). <a href="https://forums.yoyoexpert.com/t/58217" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/58217</a></li>
+          <li id="ref-10">YoYoExpert Forums. &ldquo;What is this old Duncan?&rdquo; (2017). <a href="https://forums.yoyoexpert.com/t/85046" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/85046</a></li>
+          <li id="ref-11">YoYoExpert Forums. &ldquo;CLYW Yeti Release Discussion Thread&rdquo; (2015). <a href="https://forums.yoyoexpert.com/t/75815" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/75815</a></li>
+          <li id="ref-12">YoYoExpert Forums. &ldquo;Rare CLYW Gnarwhal Rockabilly&rdquo; (2025). <a href="https://forums.yoyoexpert.com/t/431352" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/431352</a></li>
+          <li id="ref-13">YoYoExpert Forums. &ldquo;Question for companies&rdquo; (2025). <a href="https://forums.yoyoexpert.com/t/427207" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/427207</a></li>
+          <li id="ref-14">YoYo Wiki. &ldquo;Tom Kuhn Silver Bullet 2.&rdquo; <a href="https://yoyo.fandom.com/wiki/Tom_Kuhn_Silver_Bullet_2" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Tom_Kuhn_Silver_Bullet_2</a></li>
+          <li id="ref-15">YoYoExpert Forums. &ldquo;What&rsquo;s your rarest yoyo?&rdquo; (2013). <a href="https://forums.yoyoexpert.com/t/56990" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/56990</a></li>
+          <li id="ref-16">YoYoExpert Forums. &ldquo;Yoyo Boomers Club&rdquo; (2023&ndash;). <a href="https://forums.yoyoexpert.com/t/381535" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/381535</a></li>
+          <li id="ref-17">YoYo Wiki. &ldquo;One Drop Side Effects.&rdquo; <a href="https://yoyo.fandom.com/wiki/One_Drop_Side_Effects" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/One_Drop_Side_Effects</a></li>
+          <li id="ref-18">YoYoExpert Forums. &ldquo;Too much value on mint?&rdquo; (2013). <a href="https://forums.yoyoexpert.com/t/51448" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/51448</a></li>
+          <li id="ref-19">YoYoExpert Forums. &ldquo;Mint question&rdquo; (2013). <a href="https://forums.yoyoexpert.com/t/52004" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/52004</a></li>
+          <li id="ref-20">YoYoExpert Forums. &ldquo;Buy / Sell / Trade Category: Official Rules.&rdquo; <a href="https://forums.yoyoexpert.com/t/19" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/19</a></li>
+          <li id="ref-21">YoYoExpert Forums. &ldquo;BST Etiquette&rdquo; (2014). <a href="https://forums.yoyoexpert.com/t/65279" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/65279</a></li>
+          <li id="ref-22">YoYoExpert Forums. &ldquo;Should manufacturers find a way to distinguish B-grade throws?&rdquo; (2019). <a href="https://forums.yoyoexpert.com/t/304343" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/304343</a></li>
+          <li id="ref-23">YoYoExpert Forums. &ldquo;How to tell a real YYR Sleipnir&rdquo; (2014). <a href="https://forums.yoyoexpert.com/t/65617" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/65617</a></li>
+          <li id="ref-24">YoYoExpert Forums. &ldquo;Where do you keep your yoyo collection?&rdquo; (2019&ndash;). <a href="https://forums.yoyoexpert.com/t/307661" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/307661</a></li>
+          <li id="ref-25">YoYoExpert Forums. &ldquo;Yoyo display and storage rack&rdquo; (2020). <a href="https://forums.yoyoexpert.com/t/318314" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/318314</a></li>
+          <li id="ref-26">YoYoExpert Forums. &ldquo;Anyone reduced a huge collection down to a handful of favorites?&rdquo; (2022). <a href="https://forums.yoyoexpert.com/t/356348" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/356348</a></li>
+          <li id="ref-27">YoYo Wiki. &ldquo;String.&rdquo; <a href="https://yoyo.fandom.com/wiki/String" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/String</a></li>
+          <li id="ref-28">YoYo Wiki. &ldquo;Ball Bearings.&rdquo; <a href="https://yoyo.fandom.com/wiki/Ball_Bearings" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Ball_Bearings</a></li>
+          <li id="ref-29">YoYo Wiki. &ldquo;Museum of Yo-Yo History.&rdquo; <a href="https://yoyo.fandom.com/wiki/Museum_of_Yo-Yo_History" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Museum_of_Yo-Yo_History</a></li>
+          <li id="ref-30">YoYo Wiki. &ldquo;US National Yo-Yo Museum.&rdquo; <a href="https://yoyo.fandom.com/wiki/US_National_Yo-Yo_Museum" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/US_National_Yo-Yo_Museum</a></li>
+          <li id="ref-31">YoYo Wiki. &ldquo;Yo-yo Materials.&rdquo; <a href="https://yoyo.fandom.com/wiki/Yo-yo_Materials" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Yo-yo_Materials</a></li>
+        </ol>
+        <div class="sci-credit">Have a collection story or a correction? Email <a href="mailto:contact@dmvthrowers.club" class="text-red">contact@dmvthrowers.club</a>.</div>
+      </section>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
+          <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
+        <a href="events.html" class="footer-link">Events</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="resources.html" class="footer-link">Resources</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+      </nav>
+    </div>
+    <nav aria-label="Guides" class="footer-guides">
+      <span class="footer-guides-label">GUIDES</span>
+      <a href="learn-yoyo.html" class="footer-link">How to Yo-Yo</a>
+      <a href="yoyo-gear.html" class="footer-link">Gear &amp; Maintenance</a>
+      <a href="yoyo-history.html" class="footer-link">Yo-Yo History</a>
+      <a href="filipino-yoyo-history.html" class="footer-link">Filipino Yo-Yo History</a>
+      <a href="yoyo-science.html" class="footer-link">Yo-Yo Science</a>
+      <a href="yoyo-collecting.html" class="footer-link">Collecting Yo-Yos</a>
+      <a href="https://map.dmvthrowers.club/" class="footer-link">Player Map</a>
+    </nav>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+</script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>
