@@ -60,6 +60,111 @@
         "item": "https://dmvthrowers.club/events.html"
       }
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "DMV Throwers Monthly Meetup (October 2026)",
+    "description": "Free monthly yo-yo and skill toy meetup. All ages, all levels. Loaner yo-yos available.",
+    "startDate": "2026-10-18T13:00:00-04:00",
+    "endDate": "2026-10-18T16:00:00-04:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Arlington Central Library",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1015 N Quincy St",
+        "addressLocality": "Arlington",
+        "addressRegion": "VA",
+        "postalCode": "22201",
+        "addressCountry": "US"
+      }
+    },
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://dmvthrowers.club/events.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "DMV Throwers",
+      "url": "https://dmvthrowers.club/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "DMV Throwers Monthly Meetup (November 2026)",
+    "description": "Free monthly yo-yo and skill toy meetup. All ages, all levels. Loaner yo-yos available.",
+    "startDate": "2026-11-15T13:00:00-05:00",
+    "endDate": "2026-11-15T16:00:00-05:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Arlington Central Library",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1015 N Quincy St",
+        "addressLocality": "Arlington",
+        "addressRegion": "VA",
+        "postalCode": "22201",
+        "addressCountry": "US"
+      }
+    },
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://dmvthrowers.club/events.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "DMV Throwers",
+      "url": "https://dmvthrowers.club/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "DMV Throwers Monthly Meetup (December 2026)",
+    "description": "Free monthly yo-yo and skill toy meetup. All ages, all levels. Loaner yo-yos available.",
+    "startDate": "2026-12-20T13:00:00-05:00",
+    "endDate": "2026-12-20T16:00:00-05:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Arlington Central Library",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1015 N Quincy St",
+        "addressLocality": "Arlington",
+        "addressRegion": "VA",
+        "postalCode": "22201",
+        "addressCountry": "US"
+      }
+    },
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://dmvthrowers.club/events.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "DMV Throwers",
+      "url": "https://dmvthrowers.club/"
+    }
   }
 ]
 </script>
@@ -68,10 +173,10 @@
   <style>
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     /* Fixed event card structure */
-    .event-card { background: #fffaf2; border: 1px solid #ece3d2; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
-    .event-card:not(.event-card-cancelled):hover { transform: translateX(4px); box-shadow: -4px 4px 0 var(--red); }
+    .event-card { background: #fffaf2; border: 1px solid #ece3d2; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; }
+    .event-card-next { border-left-color: var(--red); border-left-width: 6px; }
+    .event-card-next .event-type { color: var(--red); }
     .event-card-special { background: #1f4f8a; border-left-color: #153b66; }
-    .event-card-special:hover { box-shadow: -4px 4px 0 #153b66; }
     .event-card-special .event-type,
     .event-card-special .event-name,
     .event-card-special .event-loc,
@@ -80,7 +185,6 @@
     .event-card-special .event-type { opacity: 0.92; }
     .event-card-special .event-loc a { color: white; text-decoration: underline; }
     .event-card-holiday { background: #2f7d4c; border-left-color: #1e5b36; }
-    .event-card-holiday:hover { box-shadow: -4px 4px 0 #1e5b36; }
     .event-card-holiday .event-type,
     .event-card-holiday .event-name,
     .event-card-holiday .event-loc,
@@ -104,7 +208,8 @@
     .events-section-bg { background: white; }
     .events-desc { color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; }
     .event-btn-small { margin-top: 10px; padding: 7px 18px; font-size: 0.75rem; display: inline-block; }
-    .event-btn-disabled { background: #9aa3b8; color: white; cursor: not-allowed; pointer-events: none; }
+    .event-note { margin-top: 10px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; color: var(--navy); }
+    .events-recent { background: var(--cream); }
     @media (max-width: 768px) {
       .event-card-body { flex-direction: column; align-items: flex-start; }
       .event-date, .event-day { text-align: left; }
@@ -128,8 +233,8 @@
 
 <!-- Top bar: headline event + shortcut. Update the text each month. -->
 <div id="top-bar">
-  <span>VSYC-26 RESULTS ARE IN · THANK YOU FOR AN AMAZING CONTEST AT DULLES TOWN CENTER</span>
-  <a href="vsyc26-results.html">SEE RESULTS →</a>
+  <span>NEXT MEET: SUNDAY, OCTOBER 18 · 1–4 PM · ARLINGTON CENTRAL LIBRARY</span>
+  <a href="events.html">SEE EVENTS →</a>
 </div>
 
 <!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
@@ -192,7 +297,7 @@
   </div>
 </div>
 
-<!-- Event cards: sort chronologically (oldest first). Event type shown by .event-type label. -->
+<!-- Upcoming: future dates only, oldest first. Keep JSON-LD Event entries in sync. Past cards move to #recent or are removed. -->
 <section id="events" class="events-section-bg">
   <div class="section">
     <div class="red-tag">SCHEDULE</div>
@@ -203,69 +308,18 @@
     </p>
 
     <!-- Chronologically sorted event cards start here -->
-
-
-
-
-
-
-    <div class="event-card event-card-holiday">
+    <div class="event-card event-card-next">
       <div class="event-card-body">
         <div>
-          <div class="event-type">● NATIONAL HOLIDAY</div>
-          <div class="event-name">Labor Day</div>
-          <div class="event-loc">Federal holiday. No regular meetup. Enjoy the holiday weekend!</div>
-        </div>
-        <div>
-          <div class="event-date">September 7</div>
-          <div class="event-day">Monday</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="event-card event-card-special">
-      <div class="event-card-body">
-        <div>
-          <div class="event-type">★ SPECIAL EVENT</div>
-          <div class="event-name">Virginia State Yo-Yo Contest 2026</div>
-          <div class="event-loc"><a href="https://www.dullestowncenter.com" class="inherit-link" target="_blank" rel="noopener noreferrer">Dulles Town Center</a> · 21100 Dulles Town Circle, Sterling VA 20166</div>
-          <div class="event-loc">Every run is on YouTube. <a href="https://www.youtube.com/watch?v=HR3JGZqPU1A&amp;list=PLTe9veZWEAjw" target="_blank" rel="noopener noreferrer">Watch the winners playlist →</a></div>
-          <div class="event-loc">Contest photos are up. <a href="https://photos.app.goo.gl/tSxb2QX8mzap5dYY7" target="_blank" rel="noopener noreferrer">Browse the photo album →</a></div>
-        </div>
-        <div>
-          <div class="event-date">September 19</div>
-          <div class="event-day">Saturday · 10 AM – 7 PM</div>
-          <a href="vsyc26.html" class="btn btn-red event-btn-small">DETAILS →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="event-card event-card-cancelled">
-      <div class="event-card-body">
-        <div>
-          <div class="event-type">✕ CANCELLED</div>
-          <div class="event-name">Arlington Central Library</div>
-          <div class="event-loc">No September meetup. We're all at the Virginia State Yo-Yo Contest the day before. See you at Dulles Town Center on Saturday the 19th.</div>
-        </div>
-        <div>
-          <div class="event-date">September 20</div>
-          <div class="event-day">Sunday · 1–4 PM</div>
-          <a href="vsyc26.html" class="btn btn-red event-btn-small">VSYC-26 DETAILS →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="event-card">
-      <div class="event-card-body">
-        <div>
-          <div class="event-type">● MONTHLY MEETUP</div>
+          <div class="event-type">● NEXT MEETUP</div>
           <div class="event-name">Arlington Central Library</div>
           <div class="event-loc">1015 N Quincy St, Arlington VA 22201 · Barbara M. Donnellan Auditorium</div>
+          <div class="event-loc">First time? Just show up. We have loaners, and someone will teach you your first throw.</div>
         </div>
         <div>
           <div class="event-date">October 18</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
+          <div class="event-note">DROP IN · NO RSVP NEEDED</div>
         </div>
       </div>
     </div>
@@ -280,7 +334,7 @@
         <div>
           <div class="event-date">November 15</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
+          <div class="event-note">DROP IN · NO RSVP NEEDED</div>
         </div>
       </div>
     </div>
@@ -309,7 +363,7 @@
         <div>
           <div class="event-date">December 20</div>
           <div class="event-day">Sunday · 1–4 PM</div>
-          <span class="btn event-btn-small event-btn-disabled" aria-disabled="true">RSVP COMING SOON</span>
+          <div class="event-note">DROP IN · NO RSVP NEEDED</div>
         </div>
       </div>
     </div>
@@ -333,6 +387,33 @@
       <span class="badge">ALL SKILL LEVELS</span>
       <span class="badge">FAMILY FRIENDLY</span>
       <span class="badge">DC · MD · VA</span>
+    </div>
+  </div>
+</section>
+
+<!-- Recent: past highlights, newest first. Move cards here once their date passes. -->
+<section id="recent" class="events-recent">
+  <div class="section">
+    <div class="red-tag">RECENT</div>
+    <h2 class="section-title">Recently Wrapped</h2>
+    <div class="divider"></div>
+    <p class="events-desc">Thank you to every competitor, judge, volunteer, and family who came out to Dulles Town Center. Browse the results, runs, and photos below.</p>
+
+    <div class="event-card event-card-special">
+      <div class="event-card-body">
+        <div>
+          <div class="event-type">★ CONTEST RECAP</div>
+          <div class="event-name">Virginia State Yo-Yo Contest 2026</div>
+          <div class="event-loc"><a href="https://www.dullestowncenter.com" class="inherit-link" target="_blank" rel="noopener noreferrer">Dulles Town Center</a> · 21100 Dulles Town Circle, Sterling VA 20166</div>
+          <div class="event-loc">Every run is on YouTube. <a href="https://www.youtube.com/watch?v=HR3JGZqPU1A&amp;list=PLTe9veZWEAjw" target="_blank" rel="noopener noreferrer">Watch the winners playlist →</a></div>
+          <div class="event-loc">Contest photos are up. <a href="https://photos.app.goo.gl/tSxb2QX8mzap5dYY7" target="_blank" rel="noopener noreferrer">Browse the photo album →</a></div>
+        </div>
+        <div>
+          <div class="event-date">September 19</div>
+          <div class="event-day">Saturday</div>
+          <a href="vsyc26-results.html" class="btn btn-red event-btn-small">SEE RESULTS →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
