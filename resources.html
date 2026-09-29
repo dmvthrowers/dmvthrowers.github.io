@@ -14,7 +14,7 @@
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Resources - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
-  <meta name="description" content="Free resources for yo-yo players in DC, Virginia, and Maryland. Download workshop run sheets, trick guides, and maintenance guides from DMV Throwers."/>
+  <meta name="description" content="Free resources for yo-yo players in DC, Virginia, and Maryland. Download workshop run sheets, trick guides, and maintenance guides, plus curated links to trick tutorials, apps, forums, and yo-yo history."/>
   <meta property="og:title" content="Resources - DMV Throwers · Yo-Yo & Skill Toy Club"/>
   <meta property="og:description" content="Free downloadable resources for yo-yo players and skill toy enthusiasts"/>
   <meta property="og:type" content="website"/>
@@ -86,8 +86,22 @@
     .resource-desc { color: var(--text-muted); margin-bottom: 20px; line-height: 1.5; }
     .resource-link { display: inline-flex; align-items: center; gap: 6px; background: var(--navy); color: white; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
     .resource-link:hover { background: var(--red); }
+    .resource-link + .resource-link { margin-top: 8px; }
     .resources-section-bg { background: white; }
     .resources-desc { color: var(--text-muted); margin-bottom: 8px; font-size: 0.95rem; }
+    .links-block { margin-top: 64px; scroll-margin-top: 80px; }
+    .link-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 32px; }
+    .link-list .link-subhead { font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); padding-top: 10px; }
+    .link-list .link-note { font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
+    .link-group { scroll-margin-top: 80px; border: 1px solid var(--border); border-top: 4px solid var(--red); padding: 20px 24px; background: var(--cream); }
+    .link-group-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 12px; }
+    .link-list { list-style: none; margin: 0; padding: 0; }
+    .link-list li { padding: 10px 0; border-top: 1px solid var(--cream-mid); line-height: 1.45; }
+    .link-list li:first-child { border-top: 0; padding-top: 0; }
+    .link-list a { color: var(--navy); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+    .link-list a:hover, .link-list a:focus-visible { color: var(--red); }
+    .link-list span { display: block; color: var(--text-muted); font-size: 0.9rem; margin-top: 2px; }
+    .link-list span a { font-weight: 600; }
     .support-section { margin-top: 48px; text-align: center; }
     .support-box { background: var(--navy); color: white; padding: 32px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
     .support-h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; margin-bottom: 16px; }
@@ -95,7 +109,8 @@
     .support-link { display: inline-block; background: var(--red); color: white; padding: 12px 24px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
     .support-link:hover { background: var(--red-dark); }
     @media (max-width: 768px) {
-      .resource-grid { grid-template-columns: 1fr; }
+      .resource-grid, .link-groups { grid-template-columns: 1fr; }
+      .link-group { padding: 18px 16px; }
       .resource-card { padding: 20px; }
       .resource-title { font-size: 1.2rem; }
     }
@@ -128,7 +143,10 @@
 <nav aria-label="Main navigation" role="navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">
-      <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
       <div>
         <div class="nav-brand-text-main">DMV THROWERS</div>
         <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
@@ -147,7 +165,9 @@
         <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
         <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 <!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
@@ -185,7 +205,7 @@
     <div class="red-tag">DOWNLOADS</div>
     <h2 class="section-title">Resources</h2>
     <div class="divider"></div>
-    <p class="resources-desc">Guides, downloads, and trusted links for new and returning yo-yo players.</p>
+    <p class="resources-desc">Guides, downloads, and trusted links for new and returning yo-yo players. Looking for tutorials, apps, and history? <a href="resources.html#links">Jump to Yo-Yo Links</a>.</p>
 
     <div class="resource-grid">
 
@@ -276,10 +296,225 @@
       <div class="resource-card">
         <div class="resource-icon">📱</div>
         <div class="resource-title">YoYo Pro Clicker App</div>
-        <div class="resource-desc">Free iOS app for tracking freestyle deductions in real time — handy for couch judges helping score contests like VSYC-26. Built by fellow thrower Joseph (<a href="https://instagram.com/jo.vo.007" target="_blank" rel="noopener noreferrer" aria-label="Joseph's Instagram (opens in new tab)">@jo.vo.007</a>).</div>
+        <div class="resource-desc">Free app for iOS and Android that tracks freestyle deductions in real time — handy for couch judges helping score contests like VSYC-26. Built by fellow thrower Joseph (<a href="https://instagram.com/jo.vo.007" target="_blank" rel="noopener noreferrer" aria-label="Joseph's Instagram (opens in new tab)">@jo.vo.007</a>).</div>
         <a href="https://apps.apple.com/us/app/yoyo-pro-clicker/id6757318886" class="resource-link" target="_blank" rel="noopener noreferrer">📱 Get on the App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=co.median.android.pwwrrbd" class="resource-link" target="_blank" rel="noopener noreferrer">📱 Get on Google Play</a>
       </div>
 
+    </div>
+
+    <!-- Curated yo-yo links: learning and information over sales. Brand sites only when
+         they host free tutorials or forums. Wayback links point at dated snapshots. -->
+    <div id="links" class="links-block">
+      <div class="red-tag">LEARN &amp; EXPLORE</div>
+      <h2 class="section-title">Yo-Yo Links</h2>
+      <div class="divider"></div>
+      <p class="resources-desc">Trick tutorials, apps, forums, podcasts, contest records, and history. Hand-picked for learning, not shopping.</p>
+
+      <div class="link-groups">
+
+        <div class="link-group" id="learn">
+          <h3 class="link-group-title">Learn Tricks</h3>
+          <ul class="link-list">
+            <li><a href="learn-yoyo.html">How to Yo-Yo</a><span>Our how-to and history guide: string, wind, throw, fix string tension, a first-100 trick list with free tutorials, trick clubs to keep learning, and how tricks evolved.</span></li>
+            <li><a href="https://yoyotricks.com/yoyo-tricks/" target="_blank" rel="noopener noreferrer">YoYoTricks.com Trick Library</a><span>Free video lessons from your first throw to master level. Kendama too.</span></li>
+            <li><a href="https://skilladdicts.com/" target="_blank" rel="noopener noreferrer">Skill Addicts</a><span>1,000+ tutorials across 1A–5A. Earn points as you land tricks.</span></li>
+            <li><a href="https://yoyoexpert.com/pages/learn-yoyo-tricks" target="_blank" rel="noopener noreferrer">YoYoExpert Learn</a><span>Step-by-step trick guides for every style, beginner to expert.</span></li>
+            <li><a href="https://duncantoys.com/pages/tutorial-videos" target="_blank" rel="noopener noreferrer">Duncan Tutorial Videos</a><span>Classic tricks from one of the oldest names in yo-yo.</span></li>
+            <li><a href="https://www.yoyosam.com/pages/beginner-yo-yo-tutorial" target="_blank" rel="noopener noreferrer">YoYoSam Beginner Tutorial</a><span>String, wind, throw, and your first tricks. From our club partner.</span></li>
+            <li><a href="https://www.classicyoyotricks.com/" target="_blank" rel="noopener noreferrer">Classic Yoyo Tricks</a><span>The basics you'll see at most contests, with a video for each.</span></li>
+            <li><a href="https://trick.yoyorewind.com/" target="_blank" rel="noopener noreferrer">Yo-Yo Trick Database</a><span>Tricks sorted by level and style, with a write-up for each. Japanese and English.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="kendama">
+          <h3 class="link-group-title">Kendama &amp; Skill Toys</h3>
+          <ul class="link-list">
+            <li><a href="https://yoyotricks.com/tag/kendama-first-50-tricks/" target="_blank" rel="noopener noreferrer">LearnKendama First 50</a><span>The first 50 kendama tricks every player should know, on video.</span></li>
+            <li><a href="https://kendamausa.com/kendama-tricks-and-tutorials/" target="_blank" rel="noopener noreferrer">Kendama USA Tutorials</a><span>One-on-one style lessons from top players.</span></li>
+            <li><a href="https://app.skilladdicts.com/tree/kendama" target="_blank" rel="noopener noreferrer">Skill Addicts Kendama Tree</a><span>67+ kendama tricks mapped from beginner to pro.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="care">
+          <h3 class="link-group-title">Care &amp; Setup</h3>
+          <ul class="link-list">
+            <li><a href="yoyo-gear.html">Yo-Yo Gear &amp; Maintenance</a><span>Styles of play from 0A to 5A and related skill toys, axles and response systems, wood yo-yo care, bearings, string, pads, lube, counterweights, knot picks, cases, and DIY accessories. All sourced.</span></li>
+            <li><a href="yoyo-science.html#diy">3D Print Your Own Yo-Yo</a><span>Free models, parts lists, builder tips, and DC and NoVA makerspaces that print for you.</span></li>
+            <li><a href="https://yoyoexpert.com/pages/411-maintenance-cleaning-a-bearing" target="_blank" rel="noopener noreferrer">Cleaning a Bearing</a><span>YoYoExpert's step-by-step video for a quiet, spinning bearing.</span></li>
+            <li><a href="https://www.howtoyoyo.com/yo-yo-maintenance/" target="_blank" rel="noopener noreferrer">How To Yo-yo: Maintenance</a><span>Strings, response, and bearings. Written by players, not a store.</span></li>
+            <li><a href="assets/documents/maintenance-guide.pptx" target="_blank" rel="noopener noreferrer">DMV Throwers Maintenance Guide</a><span>Our own slide guide to cleaning, setup, and repair.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="apps">
+          <h3 class="link-group-title">Apps &amp; Tools</h3>
+          <ul class="link-list">
+            <li><a href="https://apps.apple.com/us/app/level-up-yoyo-and-skill-toys/id414905488" target="_blank" rel="noopener noreferrer">Level Up! (iOS)</a> · <a href="https://play.google.com/store/apps/details?id=com.archaicsoftware.yotricks" target="_blank" rel="noopener noreferrer">Android</a><span>YoYoTricks.com's free app. Stream tutorials and track the tricks you've landed.</span></li>
+            <li><a href="https://apps.apple.com/us/app/skill-addicts-play-learn/id6447176925" target="_blank" rel="noopener noreferrer">Skill Addicts (iOS)</a> · <a href="https://play.google.com/store/apps/details?id=com.skilladdicts.app" target="_blank" rel="noopener noreferrer">Android</a><span>Gamified trick learning in your pocket.</span></li>
+            <li><a href="https://apps.apple.com/us/app/yoyo-pro-clicker/id6757318886" target="_blank" rel="noopener noreferrer">YoYo Pro Clicker (iOS)</a> · <a href="https://play.google.com/store/apps/details?id=co.median.android.pwwrrbd" target="_blank" rel="noopener noreferrer">Android</a><span>Count freestyle deductions like a contest judge.</span></li>
+            <li><a href="https://apps.apple.com/us/app/throwlog/id6758835651" target="_blank" rel="noopener noreferrer">ThrowLog (iPad)</a><span>Log attempts, track streaks, and get told what to learn next. No account, data stays on your device.</span></li>
+            <li><a href="https://compete.yoyocontest.com/shadow-judging" target="_blank" rel="noopener noreferrer">NYYL Shadow Judging</a><span>Score live contest routines alongside the official panel, then compare your numbers. Free account required.</span></li>
+            <li><a href="https://test.daveronica.com/" target="_blank" rel="noopener noreferrer">Yoyo Collection</a><span>Catalog your throws: specs, condition, value, and trade status.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="community">
+          <h3 class="link-group-title">Community</h3>
+          <ul class="link-list">
+            <li><a href="https://forums.yoyoexpert.com/" target="_blank" rel="noopener noreferrer">YoYoExpert Forums</a><span>The longest-running active yo-yo forum. Ask questions, share tricks.</span></li>
+            <li><a href="https://www.reddit.com/r/Throwers/" target="_blank" rel="noopener noreferrer">r/Throwers</a><span>Reddit's yo-yo community for clips, help, and news.</span></li>
+            <li><a href="https://discord.com/invite/VephpAv" target="_blank" rel="noopener noreferrer">r/Throwers Discord</a><span>Nearly 3,000 throwers chatting tricks, gear, and contests in real time.</span></li>
+            <li><a href="https://www.theyoyolist.com/" target="_blank" rel="noopener noreferrer">The Yo-Yo List</a><span>Find players and registered clubs near you. Only your chosen contact method is shared.</span></li>
+            <li><a href="https://yoyonews.com/" target="_blank" rel="noopener noreferrer">YoYoNews</a><span>News on contests, releases, and skill toys, run by National YoYo Masters. Club map too.</span></li>
+            <li><a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">YoYo Map</a><span>Find throwers near you. City-level only.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="clubs">
+          <h3 class="link-group-title">Sister Clubs &amp; Local Groups</h3>
+          <ul class="link-list">
+            <li><a href="https://forums.yoyoexpert.com/t/dmv-throwers-yoyo-club-dc-virginia-maryland/387964" target="_blank" rel="noopener noreferrer">DMV Throwers on YoYoExpert</a><span>Our club thread. Meetup recaps, visitors, and news.</span></li>
+            <li><a href="https://www.instagram.com/bmoreyoyoclub/" target="_blank" rel="noopener noreferrer">Bmore YoYo Club</a><span>Our Baltimore sister club. First Saturdays at Creative Alliance.</span></li>
+            <li><a href="https://www.instagram.com/dckenclub/" target="_blank" rel="noopener noreferrer">DC Kendama Club</a><span>Kendama meetups Tuesdays in Sterling, VA.</span></li>
+            <li><a href="https://www.instagram.com/7citiesthrowers/" target="_blank" rel="noopener noreferrer">Seven Cities YoYo Club</a><span>Hampton Roads throwers, hosted by <a href="https://www.slowsteadybikesandgoods.com/" target="_blank" rel="noopener noreferrer">Slow &amp; Steady Bikes and Goods</a>.</span></li>
+            <li><a href="https://www.instagram.com/swvathrowers/" target="_blank" rel="noopener noreferrer">SWVA Throwers</a><span>Our sister club in Southwest Virginia.</span></li>
+            <li><a href="https://www.jugglingedge.com/club.php?ClubID=1891" target="_blank" rel="noopener noreferrer">Sunday Circus</a><span>Jugglers in Meridian Hill Park, DC, on warm Sunday afternoons. Free.</span></li>
+            <li><a href="https://www.jugglingedge.com/club.php?ClubID=1750" target="_blank" rel="noopener noreferrer">Fairfax Jugglers</a><span>Meeting in Annandale since 1989. Free lessons, all year.</span></li>
+            <li><a href="https://www.jugglingedge.com/club.php?ClubID=1870" target="_blank" rel="noopener noreferrer">Ashburn Juggling Society</a><span>Weekly library meetups in Loudoun. Beginners welcome.</span></li>
+            <li><a href="https://www.jugglingedge.com/club.php?ClubID=1465" target="_blank" rel="noopener noreferrer">UMD Juggling Club</a><span>College Park, open to students and non-students. Props provided.</span></li>
+            <li><a href="https://www.jugglingedge.com/club.php?ClubID=1389" target="_blank" rel="noopener noreferrer">Baltimore Jugglers Association</a><span>Meets in Columbia, MD. Check their Discord for dates.</span></li>
+            <li><a href="https://freshlydirty.com/pages/the-family" target="_blank" rel="noopener noreferrer">Freshly Dirty</a><span>Indie yo-yo brand with a DC-area designer who has brought prototypes to our meets.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="podcasts">
+          <h3 class="link-group-title">Podcasts &amp; Video</h3>
+          <ul class="link-list">
+            <li><a href="https://podcasts.apple.com/us/podcast/yoyo-player/id1676139656" target="_blank" rel="noopener noreferrer">YoYo Player</a><span>Steve Brown and Mark McBride, the creators of 5A and 3A, tell the story of the modern yo-yo boom.</span></li>
+            <li><a href="https://podcasts.apple.com/us/podcast/kill-your-yoyo/id1598830146" target="_blank" rel="noopener noreferrer">Kill Your Yoyo</a><span>Ross Levine talks performance, improv, and yo-yo theory with top players.</span></li>
+            <li><a href="https://podcasts.apple.com/us/podcast/the-yoyo-podcast/id1486094818" target="_blank" rel="noopener noreferrer">The Yoyo Podcast</a><span>Interviews with competitors and industry insiders.</span></li>
+            <li><a href="https://creators.spotify.com/pod/profile/rejection-therapy/" target="_blank" rel="noopener noreferrer">Rejection Therapy</a><span>Chris and JD on contests, judging, and yo-yo reviews.</span></li>
+            <li><a href="https://yoyomagicdotfun.podbean.com/" target="_blank" rel="noopener noreferrer">Yeet the Yo</a><span>Player stories plus the physics of spin. Great for younger throwers.</span></li>
+            <li><a href="https://www.youtube.com/@yoyocontestcentral" target="_blank" rel="noopener noreferrer">YoYo Contest Central</a><span>60 fps contest footage, sorted by division. Slow it down and study the tricks.</span></li>
+            <li><a href="https://www.youtube.com/@InternationalYoYoFederation" target="_blank" rel="noopener noreferrer">IYYF on YouTube</a><span>Official World Yo-Yo Contest footage, organized by year and division.</span></li>
+            <li><a href="https://www.youtube.com/@docluckysyoyotalk7826" target="_blank" rel="noopener noreferrer">Doc Lucky's YoYo Talk</a><span>History, collecting, and world records from the Guinness record holder for largest yo-yo collection.</span></li>
+            <li><a href="https://www.youtube.com/@g2jake" target="_blank" rel="noopener noreferrer">Jacob Gross (G2 Jake)</a><span>Trick tutorials from the owner of G Squared YoYos.</span></li>
+            <li><a href="https://www.youtube.com/playlist?list=PL6GeRzsoWVTWO_Cv6rw-4gbiVUfOu_h3d" target="_blank" rel="noopener noreferrer">The Goods</a><span>A video series from Recess YoYos and World Champion Tyler Severance.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="contests">
+          <h3 class="link-group-title">Contests &amp; Events</h3>
+          <ul class="link-list">
+            <li><a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">YoYo Archive Events</a><span>Worldwide calendar of contests and meetups.</span></li>
+            <li><a href="https://iyyf.org/" target="_blank" rel="noopener noreferrer">International Yo-Yo Federation</a><span>Runs the World Yo-Yo Contest. Past rulesets live on <a href="https://www.iyyf.org/rules" target="_blank" rel="noopener noreferrer">their rules page</a>.</span></li>
+            <li><a href="https://nyyl.org/" target="_blank" rel="noopener noreferrer">National Yo-Yo League</a><span>Runs U.S. regional contests and Nationals. Judge certification and help for new organizers. Divisions, clicker scoring, and judging criteria are in the <a href="https://yoyocontest.com/freestyle-rules-for-nyyl-events/" target="_blank" rel="noopener noreferrer">NYYL freestyle rules</a>.</span></li>
+            <li><a href="https://compete.yoyocontest.com/compete/contests" target="_blank" rel="noopener noreferrer">NYYL Contest Calendar</a><span>Upcoming U.S. state, regional, and national contests. Sign up on <a href="https://compete.yoyocontest.com/" target="_blank" rel="noopener noreferrer">NYYL Compete</a> to register and track your results.</span></li>
+            <li><a href="https://www.worldyoyocontest.com/results_db/" target="_blank" rel="noopener noreferrer">World Contest Results Database</a><span>Searchable results from decades of world contests.</span></li>
+            <li><a href="https://nationalyoyo.org/contest-results/" target="_blank" rel="noopener noreferrer">U.S. National Results</a><span>Contest history from the National Yo-Yo Museum in Chico, CA.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="science">
+          <h3 class="link-group-title">Learn the Science</h3>
+          <ul class="link-list">
+            <li><a href="yoyo-science.html">Yo-Yo Science &amp; DIY</a><span>Our cited guide to yo-yo physics, design, patents, and manufacturing, with student report ideas.</span></li>
+            <li><a href="https://www.sciencebuddies.org/science-fair-projects/project-ideas/Phys_p069/physics/yo-yo-sleep" target="_blank" rel="noopener noreferrer">Science Buddies: Sleepy Yo-yo</a><span>A step-by-step science fair project on string length and sleep time.</span></li>
+            <li><a href="https://www.scouting.org/cub-scout-adventures/yo-yo/" target="_blank" rel="noopener noreferrer">Scouting America Yo-Yo Adventure</a><span>Cub Scout adventure with yo-yo safety, a pendulum experiment, and basic tricks.</span></li>
+            <li><a href="yoyo-science.html#experiments">Easy Yo-Yo Experiments</a><span>Seven simple classroom activities to try before a yo-yo demo.</span></li>
+            <li><a href="https://phet.colorado.edu/en/simulations/torque" target="_blank" rel="noopener noreferrer">PhET Torque Simulation</a><span>Free University of Colorado sim for torque, moment of inertia, and angular momentum.</span></li>
+            <li><a href="https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum" target="_blank" rel="noopener noreferrer">OpenStax: Angular Momentum</a><span>A free, peer-reviewed physics textbook chapter.</span></li>
+            <li><a href="https://www.khanacademy.org/science/high-school-physics/torque-and-angular-momentum" target="_blank" rel="noopener noreferrer">Khan Academy: Torque and Angular Momentum</a><span>Free high school lessons, videos, and practice.</span></li>
+            <li><a href="https://arxiv.org/abs/1903.01343" target="_blank" rel="noopener noreferrer">Yo-Yo Physics with a Smartphone</a><span>A free research paper measuring a yo-yo&rsquo;s spin with a phone gyroscope.</span></li>
+            <li><a href="https://archive.org/details/Don_Watson_YoYo_Physics1-5" target="_blank" rel="noopener noreferrer">Don Watson&rsquo;s Yo-Yo Physics</a><span>Five free pamphlets by Hall of Fame engineer &ldquo;Captain Yo.&rdquo;</span></li>
+            <li><a href="https://en.wikipedia.org/wiki/Yo-yo_de-spin" target="_blank" rel="noopener noreferrer">Yo-Yo De-Spin</a><span>How spacecraft use weighted cables, like a yo-yo, to slow their spin.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="books">
+          <h3 class="link-group-title">Books to Find</h3>
+          <ul class="link-list">
+            <li class="link-note">Look for these at your library or bookstore. Many yo-yo books are self-published by players, so libraries may not carry them; ask your librarian about a purchase request.</li>
+            <li class="link-subhead">History &amp; Collecting</li>
+            <li><a href="https://www.leeandlow.com/books/pedros-yo-yos" target="_blank" rel="noopener noreferrer"><cite>Pedro&rsquo;s Yo-Yos</cite></a><span>Rob Pe&ntilde;as, illustrated by Carl Angel. Lee &amp; Low Books, 2024. A picture-book biography of Pedro Flores for young readers.</span></li>
+            <li><a href="https://openlibrary.org/works/OL6807525W" target="_blank" rel="noopener noreferrer"><cite>World on a String</cite></a><span>Helane Zeiger, 1979. A history of the yo-yo.</span></li>
+            <li><a href="https://openlibrary.org/works/OL1001176W" target="_blank" rel="noopener noreferrer"><cite>Lucky&rsquo;s Collectors Guide to 20th Century Yo-Yos</cite></a><span>Lucky J. Meisenheimer, 1999. History and values of classic yo-yos, by the director of the National Yo-Yo Hall of Fame.</span></li>
+            <li class="link-subhead">Community &amp; Self-Published</li>
+            <li><a href="https://www.amazon.com/dp/1999188780" target="_blank" rel="noopener noreferrer"><cite>The People of Yoyo: Who We Are and Where to Find Us</cite></a><span>J. D. &ldquo;Mr. YoyoThrower&rdquo; McKay, 2020. Interviews and stories from players about community, creativity, and yo-yo as a mental health tool.</span></li>
+            <li><a href="https://www.amazon.com/dp/1777200717" target="_blank" rel="noopener noreferrer"><cite>Yoyo and Skill Toy Coloring Book</cite></a><span>J. D. McKay, 2022. Coloring pages with short notes on yo-yos, kendama, spin tops, and other skill toys.</span></li>
+            <li><a href="https://www.amazon.com/dp/1999188748" target="_blank" rel="noopener noreferrer"><cite>How to Run a Boutique Yoyo Business</cite></a><span>J. D. McKay, 2019. Starting a small yo-yo company, from design and machine shops to marketing.</span></li>
+            <li><a href="https://www.amazon.com/dp/B084WLX3LZ" target="_blank" rel="noopener noreferrer"><cite>YoYo 2020: An Illustrated Guide to Yoyoing</cite></a><span>Keisuke Saito, 2020. History, yo-yo structure, tricks, and yo-yoing as therapy.</span></li>
+            <li><a href="https://shop.yoyoexpert.com/products/the-yonomicon-book-by-mark-mcbride" target="_blank" rel="noopener noreferrer"><cite>The Yonomicon</cite>, second edition</a><span>Mark McBride, 2025. The science, theory, and history of yo-yo play; expands the 1998 original.</span></li>
+            <li><a href="https://www.amazon.com/dp/B0DM1QNB6G" target="_blank" rel="noopener noreferrer"><cite>Yoyo Tricks for Kids</cite></a><span>Jasper Todd, 2024. Thirty tricks with step-by-step illustrations, announced on the YoYoExpert forums.</span></li>
+            <li><a href="https://pixelpiratestudio.com/yin-the-master-of-yo/" target="_blank" rel="noopener noreferrer"><cite>Yin the Master of Yo!</cite></a><span>Pixel Pirate Studio, 2011. A self-published picture book by a yo-yo-playing animator.</span></li>
+            <li class="link-subhead">Free to Read &amp; Print</li>
+            <li><a href="https://yoyoarchive.org/media-archive/yoyo-archive-zines" target="_blank" rel="noopener noreferrer">Yoyo Archive Zines</a><span>Free print-and-fold zines from the Yoyo Archive on the basics, strings, and more.</span></li>
+            <li><a href="https://archive.org/details/Don_Watson_YoYo_Physics1-5" target="_blank" rel="noopener noreferrer"><cite>Yo-Yo Physics</cite>, Vols. 1&ndash;5</a><span>Don Watson (&ldquo;Captain Yo&rdquo;). The science of yo-yos, free to read online.</span></li>
+            <li class="link-subhead">Tricks &amp; How-To</li>
+            <li><a href="https://openlibrary.org/works/OL3023973W" target="_blank" rel="noopener noreferrer"><cite>The Klutz Yo-Yo Book</cite></a><span>John Cassidy, 1987. A beginner trick book.</span></li>
+            <li><a href="https://openlibrary.org/works/OL15834661W" target="_blank" rel="noopener noreferrer"><cite>Awesome Yo-Yo Tricks</cite></a><span>Shar Levine and Bob Bowden, 2000. Yo-yo history plus simple to advanced tricks.</span></li>
+            <li><a href="https://openlibrary.org/works/OL16063991W" target="_blank" rel="noopener noreferrer"><cite>Yo-Yo Tricks</cite></a><span>Cynthia Fitterer Klingel, 2002. History and step-by-step tricks for young readers.</span></li>
+            <li><a href="https://openlibrary.org/works/OL3365073W" target="_blank" rel="noopener noreferrer"><cite>Amazing Yo-Yo Tricks</cite></a><span>Stuart Crump, 2000. By a National Yo-Yo Hall of Fame member.</span></li>
+            <li><a href="https://openlibrary.org/works/OL648165W" target="_blank" rel="noopener noreferrer"><cite>Advanced Yo-Yo Tricks</cite></a><span>Bruce Weber, 1999. Diagrams for more than twenty advanced tricks.</span></li>
+            <li><a href="https://openlibrary.org/works/OL8820438W" target="_blank" rel="noopener noreferrer"><cite>Yo-Yo World Trick Book</cite></a><span>Harry Baier, 2000.</span></li>
+            <li><a href="https://openlibrary.org/works/OL8745414W" target="_blank" rel="noopener noreferrer"><cite>The Yonomicon</cite>, first edition</a><span>Mark McBride, 1998. A book on yo-yo theory that describes a system for writing down tricks.</span></li>
+            <li class="link-subhead">Stories</li>
+            <li><a href="https://openlibrary.org/works/OL15095W" target="_blank" rel="noopener noreferrer"><cite>The Giant Yo-Yo Mystery</cite></a><span>Gertrude Chandler Warner, 2006. A Boxcar Children mystery about building the world&rsquo;s largest yo-yo.</span></li>
+            <li><a href="https://openlibrary.org/works/OL15287942W" target="_blank" rel="noopener noreferrer"><cite>Yo-Yo Man</cite></a><span>Daniel Pinkwater, 2006. A third grader sets his sights on a yo-yo tournament.</span></li>
+            <li><a href="https://karenkrossing.com/books/the-yo-yo-prophet/" target="_blank" rel="noopener noreferrer"><cite>The Yo-Yo Prophet</cite></a><span>Karen Krossing, Orca Book Publishers, 2011. A teen novel about a street-performing yo-yoer (grades 8&ndash;12).</span></li>
+            <li><a href="https://yoyo.fandom.com/wiki/Books" target="_blank" rel="noopener noreferrer">More yo-yo books</a><span>The YoYo Wiki keeps a longer list, including books that mention yo-yos.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="history">
+          <h3 class="link-group-title">History</h3>
+          <ul class="link-list">
+            <li><a href="yoyo-history.html">The Story of the Yo-Yo</a><span>Our sourced timeline, from ancient Greece to today&rsquo;s world contests, with the DC-area chapters marked.</span></li>
+            <li><a href="yoyo-science.html">Yo-Yo Science &amp; DIY</a><span>How yo-yos work: physics, design, patents, and manufacturing, plus free 3D-printable designs and local makerspaces. Every fact cited.</span></li>
+            <li><a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a><span>Robert Reyes&rsquo;s exhibit on Pedro Flores, the Duncan demonstrators, Joe Radovan, and Tommy Reyes.</span></li>
+            <li><a href="https://nationalyoyo.org/" target="_blank" rel="noopener noreferrer">National Yo-Yo Museum</a><span>The world's largest public yo-yo display. Free to visit in Chico, CA.</span></li>
+            <li><a href="https://yo-yos.net/luckys-history-of-the-yo-yo/" target="_blank" rel="noopener noreferrer">Doc Lucky's History of the Yo-Yo</a><span>From ancient Greece to the modern contest scene.</span></li>
+            <li><a href="https://americanhistory.si.edu/explore/stories/throwing-ourselves-yo-yo-heritage-month" target="_blank" rel="noopener noreferrer">Smithsonian: Yo-Yo Heritage</a><span>The National Museum of American History, right here in DC, holds the Duncan company archives.</span></li>
+            <li><a href="https://sova.si.edu/record/nmah.ac.0807" target="_blank" rel="noopener noreferrer">Duncan Family Yo-Yo Collection</a><span>The Duncan family's yo-yo collection, preserved in the archives of the National Museum of American History in DC. It includes 35 photographs of Tommy Reyes, donated by his son Robert in 2017.</span></li>
+            <li><a href="https://sova.si.edu/record/nmah.ac.0855" target="_blank" rel="noopener noreferrer">Bob Rule Papers</a><span>Smithsonian archive of a Hall of Fame yo-yo and top demonstrator, including a file on Filipino demonstrator Gus Somera.</span></li>
+            <li><a href="https://www.youtube.com/watch?v=Knld4wSkLLA" target="_blank" rel="noopener noreferrer">The Legacy of Tommy Reyes</a><span>Filipino American Duncan champion of 1932 who later did yo-yo spots on DC and Baltimore kids' TV, including Bozo with Willard Scott. National Yo-Yo Hall of Fame. <a href="filipino-yoyo-history.html">Read the exhibit</a>.</span></li>
+            <li><a href="https://www.washingtonpost.com/local/social-issues/pulling-strings-a-yo-yo-master-shows-off-a-lifetime-of-tricks/2015/12/12/85c3e91e-a11c-11e5-a3c5-c77f2cc5a43c_story.html" target="_blank" rel="noopener noreferrer">Dick Stohr, "That Yo-Yo Guy"</a><span>Springfield, VA performer, six-time world record setter, and longtime contest judge. He played the National Theatre in DC in 2003. Profiled in The Washington Post. More on the <a href="https://yoyo.fandom.com/wiki/Dick_Stohr" target="_blank" rel="noopener noreferrer">YoYo Wiki</a>.</span></li>
+            <li><a href="https://yoyotricks.com/yoyo-tricks/ann-connolly-collection/" target="_blank" rel="noopener noreferrer">Ann Connolly (Bunake)</a><span>DC-raised and one of the best-known women in yo-yo since the early 2000s. World Contest finalist. Learn her tricks on YoYoTricks.com.</span></li>
+            <li><a href="https://www.youtube.com/watch?v=_sKJod9oEV4" target="_blank" rel="noopener noreferrer">Tom Connolly</a><span>Ann's dad, spin top standout, and collector with a massive collection. Watch him at the 2012 World Spin Top Competition.</span></li>
+            <li><a href="https://yoyo.fandom.com/wiki/US_State_Contest_Virginia" target="_blank" rel="noopener noreferrer">Virginia State Contest History</a><span>VA States first ran on January 21, 2006. The first results include Ann and Tom Connolly. <a href="vsyc26.html">VSYC-26</a> carries it forward.</span></li>
+            <li><a href="https://yoyo.fandom.com/wiki/Jonathan_Robinson" target="_blank" rel="noopener noreferrer">Jonathan Robinson (JonRob)</a><span>5A player from Lynchburg, VA, and 2007 Trick Innovator of the Year at U.S. Nationals.</span></li>
+            <li><a href="https://yoyo.fandom.com/wiki/Mikhail_Tulabut" target="_blank" rel="noopener noreferrer">Mikhail Tulabut</a><span>Virginia string-trick innovator, Team YoYoJam member, and co-founder of Southeast Virginia Skillz Club (2005).</span></li>
+            <li><a href="https://www.guinnessworldrecords.com/world-records/largest-simultaneous-yo-yo" target="_blank" rel="noopener noreferrer">World Record at Fort A.P. Hill</a><span>The Guinness record for most people yo-yoing at once: 2,036 people at the 2010 National Scout Jamboree in Caroline County, VA.</span></li>
+            <li><a href="https://forums.yoyoexpert.com/t/capital-yoyo-club-dc-md-northernva-nova-throwers-may-updated/36852" target="_blank" rel="noopener noreferrer">Capital YoYo Club</a><span>An earlier DC, MD, and NoVA club. Its forum thread is a snapshot of local yo-yo history. The <a href="https://yoyo.fandom.com/wiki/Northern_Virginia_yoyo_club" target="_blank" rel="noopener noreferrer">YoYo Wiki</a> notes many of its members now throw with DMV Throwers.</span></li>
+            <li><a href="https://en.wikipedia.org/wiki/Pedro_Flores_(inventor)" target="_blank" rel="noopener noreferrer">Pedro Flores</a><span>The Filipino American maker who brought the yo-yo to the U.S. in the 1920s.</span></li>
+            <li><a href="https://www.positivelyfilipino.com/magazine/pedro-and-the-yo-yo-man-and-myth" target="_blank" rel="noopener noreferrer">Pedro and the Yo-Yo: Man and Myth</a><span>Positively Filipino on Flores and the Filipino demonstrators who carried the 1930s craze.</span></li>
+            <li><a href="https://www.positivelyfilipino.com/magazine/the-yoyo-a-story-of-downs-and-ups" target="_blank" rel="noopener noreferrer">The Yoyo: A Story of Downs and Ups</a><span>Positively Filipino profile of Fred Urian, one of the Filipino demonstrators the Flores brothers trained in Chicago in 1932.</span></li>
+            <li><a href="https://www.yoyomuseum.com/museum_view.php?action=profiles&amp;subaction=company&amp;company=royal" target="_blank" rel="noopener noreferrer">Royal Tops and the Word &ldquo;Yo-Yo&rdquo;</a><span>Filipino demonstrators Joe Radovan and Ruben Delagana founded Royal, which won the 1965 case that made &ldquo;yo-yo&rdquo; a common word.</span></li>
+            <li><a href="https://en.wikipedia.org/wiki/Donald_F._Duncan_Sr." target="_blank" rel="noopener noreferrer">Donald F. Duncan Sr.</a><span>The businessman who bought Flores's company and sent demonstrator teams across the country. National Yo-Yo Day, June 6, is his birthday.</span></li>
+            <li><a href="https://duncantoys.com/blogs/blog/a-rich-history-of-a-simple-toy-called-the-yo-yo" target="_blank" rel="noopener noreferrer">Duncan: A Rich History of a Simple Toy</a><span>Duncan&rsquo;s own history of the yo-yo, from ancient Greece to the Hearst newspaper contests and traveling demonstrators.</span></li>
+            <li><a href="https://engines.egr.uh.edu/episode/2796" target="_blank" rel="noopener noreferrer">The Engines of Our Ingenuity: The Yo-Yo</a><span>A short University of Houston radio essay on Flores, Duncan, and who deserves credit for the yo-yo.</span></li>
+            <li><a href="https://www.youtube.com/watch?v=jU8fu_8brK0" target="_blank" rel="noopener noreferrer">Yo-Yo Man (1978)</a><span>Duncan's documentary featuring demonstrator Nemo Concepcion, one of the Filipino pros from the 1930s boom.</span></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLHolJUv4gOeNOmu1DAQNNlQ3JBhxDsENX" target="_blank" rel="noopener noreferrer">National Yo-Yo Hall of Fame Videos</a><span>Doc Lucky's profiles of Hall of Fame members and nominees.</span></li>
+            <li><a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-Yo on Wikipedia</a><span>A solid overview of the toy, its booms, and its players.</span></li>
+            <li><a href="https://yoyo.fandom.com/wiki/Main_Page" target="_blank" rel="noopener noreferrer">YoYo Wiki</a><span>Fan-built wiki of players, companies, contests, and tricks.</span></li>
+          </ul>
+        </div>
+
+        <div class="link-group" id="wayback">
+          <h3 class="link-group-title">From the Wayback Machine</h3>
+          <ul class="link-list">
+            <li><a href="https://web.archive.org/web/20000301064250/http://fiendmagazine.com/" target="_blank" rel="noopener noreferrer">Fiend Magazine (2000)</a><span>The first full-color yo-yo magazine. Only four issues. Hear the story on YoYo Player.</span></li>
+            <li><a href="https://web.archive.org/web/20060116045403/http://www.yoyonation.com/" target="_blank" rel="noopener noreferrer">YoYoNation (2006)</a><span>Once the busiest yo-yo forum on the web. Founded in New York in 2005.</span></li>
+            <li><a href="https://web.archive.org/web/20100209061015/http://www.rethinkyoyo.com/" target="_blank" rel="noopener noreferrer">RethinkYoYo (2010)</a><span>A new trick tutorial every week during the late-2000s tutorial boom.</span></li>
+            <li><a href="https://web.archive.org/web/20071013141340/http://yoyoexpert.com/" target="_blank" rel="noopener noreferrer">YoYoExpert (2007)</a><span>An early look at one of the longest-running learn-and-forum sites.</span></li>
+            <li><a href="https://web.archive.org/web/20081016035606/http://www.yoyoskills.com/" target="_blank" rel="noopener noreferrer">YoYoSkills (2008)</a><span>Chris Allen's tutorial and skill toy network.</span></li>
+            <li><a href="https://web.archive.org/web/20080120172822/http://www.nationalyoyo.org:80/museum/pedroflores.htm" target="_blank" rel="noopener noreferrer">National Yo-Yo Museum: Pedro Flores (2008)</a><span>The museum's original Pedro Flores exhibit page.</span></li>
+            <li><a href="https://web.archive.org/web/20031012011247/http://www.yo-yo.com:80/history/" target="_blank" rel="noopener noreferrer">Duncan Company History (2003)</a><span>Duncan's own telling of the Flores purchase, the demonstrators, and the contests.</span></li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
     <div class="support-section">
@@ -299,7 +534,10 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="DMV Throwers" class="footer-logo" loading="lazy"/>
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
         <div>
           <div class="footer-brand-main">DMV THROWERS</div>
           <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
@@ -316,7 +554,7 @@
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
-        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
       </nav>
     </div>
     <div class="footer-bottom">

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--
+  yoyo-history.html — Sourced timeline of the yo-yo from ancient Greece to today, with
+  DC-area connections called out. Built by a script from about.html's skeleton.
+  Linked from resources.html, filipino-yoyo-history.html and about/index; not in the main nav.
+  Sections: top bar · main nav · page hero · era timeline · styles · sources · footer.
+-->
+<html lang="en">
+<head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <!-- base href="/" makes every relative URL resolve from the site root. -->
+  <base href="/"/>
+  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
+       formspree for the contact form, Google Fonts for typography). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <title>The Story of the Yo-Yo - DMV Throwers · Yo-Yo &amp; Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="A sourced timeline of the yo-yo, from ancient Greek vase paintings to Pedro Flores, Duncan, the space shuttle, and today's world contests, with DC-area connections."/>
+  <meta property="og:title" content="The Story of the Yo-Yo - DMV Throwers"/>
+  <meta property="og:description" content="From ancient Greece to today's world contests, with DC-area connections. Every entry cited."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/yoyo-history.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="The Story of the Yo-Yo - DMV Throwers"/>
+  <meta name="twitter:description" content="From ancient Greece to today's world contests, with DC-area connections. Every entry cited."/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="keywords" content="yo-yo history, history of the yo-yo, yo-yo timeline, Pedro Flores, Duncan yo-yo, bandalore, yo-yo in space, World Yo-Yo Contest, Washington DC yo-yo"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <meta name="geo.placename" content="Arlington, Virginia"/>
+  <link rel="canonical" href="https://dmvthrowers.club/yoyo-history.html"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + Article. Not rendered; consumed by search engines. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
+        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://dmvthrowers.club/resources.html"},
+        {"@type": "ListItem", "position": 3, "name": "The Story of the Yo-Yo", "item": "https://dmvthrowers.club/yoyo-history.html"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Story of the Yo-Yo: Ancient Greece to Today",
+      "publisher": {"@type": "Organization", "name": "DMV Throwers", "url": "https://dmvthrowers.club/"},
+      "datePublished": "2026-09-29",
+      "url": "https://dmvthrowers.club/yoyo-history.html"
+    }
+  ]
+  </script>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
+    .timeline-wrap { max-width: 820px; margin: 0 auto; }
+    .timeline-intro { color: var(--text-muted); font-size: 1rem; line-height: 1.65; margin-bottom: 20px; }
+    .timeline-toc { list-style: none; margin: 0 0 40px; padding: 16px 20px; border: 1px solid var(--border); border-left: 4px solid var(--red); background: var(--cream); columns: 2; column-gap: 24px; }
+    .timeline-toc li { padding: 3px 0; break-inside: avoid; }
+    .timeline-toc a { color: var(--navy); font-weight: 700; font-size: 0.92rem; }
+    .timeline-toc span { color: var(--red); font-size: 0.78rem; letter-spacing: var(--caps-track); margin-right: 4px; }
+    .timeline { list-style: none; margin: 0; padding: 0; border-left: 4px solid var(--navy); }
+    .era { display: grid; grid-template-columns: 140px 1fr; gap: 20px; padding: 0 0 36px 20px; position: relative; scroll-margin-top: 80px; }
+    .era::before { content: ""; position: absolute; left: -12px; top: 4px; width: 16px; height: 16px; background: var(--red); border: 2px solid var(--cream); }
+    .era-year { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.15rem; color: var(--red); line-height: 1.3; }
+    .era-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.45rem; color: var(--navy); line-height: 1.25; margin: 0 0 10px; }
+    .era-body p { line-height: 1.7; margin-bottom: 10px; color: var(--text-body); }
+    .era-body a, .styles-box a { color: var(--navy); font-weight: 700; }
+    .era-dc { margin: 12px 0; padding: 12px 16px; background: var(--navy); color: var(--cream); font-size: 0.95rem; line-height: 1.6; }
+    .era-dc a { color: var(--cream); text-decoration: underline; }
+    .era-dc-label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--cream); opacity: 0.8; margin-bottom: 2px; }
+    .era-sources { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; overflow-wrap: anywhere; }
+    .era-sources span { font-weight: 700; text-transform: uppercase; letter-spacing: var(--caps-track); font-size: 0.72rem; color: var(--navy); }
+    .styles-box { margin-top: 24px; padding: 20px 24px; border: 1px solid var(--border); border-top: 4px solid var(--red); background: var(--cream); scroll-margin-top: 80px; }
+    .styles-box ul { margin: 8px 0 12px; padding-left: 18px; line-height: 1.7; }
+    .timeline-credit { margin-top: 40px; padding: 16px 20px; border: 1px solid var(--border); background: var(--cream); font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+    @media (max-width: 600px) {
+      .timeline-toc { columns: 1; }
+      .era { grid-template-columns: 1fr; gap: 4px; padding-left: 16px; }
+      .era-title { font-size: 1.25rem; }
+      .styles-box { padding: 18px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: headline event + shortcut. Update the text each month. -->
+<div id="top-bar">
+  <span>VSYC-26 RESULTS ARE IN · THANK YOU FOR AN AMAZING CONTEST AT DULLES TOWN CENTER</span>
+  <a href="vsyc26-results.html">SEE RESULTS →</a>
+</div>
+
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
+      <div>
+        <div class="nav-brand-text-main">DMV THROWERS</div>
+        <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
+      <a href="events.html" class="nav-link">CLUB EVENTS</a>
+      <a href="gallery.html" class="nav-link">GALLERY</a>
+      <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
+      <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
+        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">ABOUT</a>
+  <a href="team.html">TEAM</a>
+  <a href="events.html">CLUB EVENTS</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="resources.html">RESOURCES</a>
+  <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">MAP</a>
+    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
+  <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="red-tag">YO-YO HISTORY</span>
+    <h1 class="page-hero-title">The Story of the Yo-Yo</h1>
+    <p class="page-hero-sub">Ancient Greece · Pedro Flores · Duncan · Space · Today</p>
+  </div>
+  <div class="page-hero-skyline">
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
+  </div>
+</div>
+
+<!-- Era timeline. Each era lists its sources; DC Connection boxes flag local chapters. -->
+<section id="timeline" class="section-bg-white">
+  <div class="section">
+    <div class="timeline-wrap">
+      <div class="section-label">HISTORY</div>
+      <h2 class="section-title">From Clay Discs to World Contests</h2>
+      <div class="divider"></div>
+      <p class="timeline-intro">The yo-yo has been around for about 2,500 years. Here is how it got from ancient Greece to your pocket, with the DC-area chapters marked along the way. Every entry lists its sources, so you can dig deeper.</p>
+      <ol class="timeline-toc">
+        <li><a href="yoyo-history.html#ancient"><span>c. 500 BC</span> Ancient Roots</a></li>
+        <li><a href="yoyo-history.html#bandalore"><span>1700s</span> Around the World as the Bandalore</a></li>
+        <li><a href="yoyo-history.html#name"><span>The Name</span> A Word from the Philippines</a></li>
+        <li><a href="yoyo-history.html#patent"><span>1866</span> American Patents</a></li>
+        <li><a href="yoyo-history.html#flores"><span>1928</span> Pedro Flores Makes the Yo-Yo Sleep</a></li>
+        <li><a href="yoyo-history.html#duncan"><span>1929 &ndash; 1932</span> Duncan and the First Craze</a></li>
+        <li><a href="yoyo-history.html#worlds1932"><span>1932</span> The First World Contest</a></li>
+        <li><a href="yoyo-history.html#postwar"><span>1946 &ndash; 1960s</span> Factories, TV, and Tricks on Screen</a></li>
+        <li><a href="yoyo-history.html#generic"><span>1965 &ndash; 1968</span> &ldquo;Yo-Yo&rdquo; Becomes Everyone&rsquo;s Word</a></li>
+        <li><a href="yoyo-history.html#bearings"><span>1970s &ndash; 1990</span> Better Axles, Longer Spins</a></li>
+        <li><a href="yoyo-history.html#space"><span>1985</span> Yo-Yos in Space</a></li>
+        <li><a href="yoyo-history.html#boom"><span>1990s</span> The Big Boom</a></li>
+        <li><a href="yoyo-history.html#modern"><span>2000s</span> The Modern Era</a></li>
+        <li><a href="yoyo-history.html#global"><span>2013 &ndash; Today</span> A Global Sport</a></li>
+        <li><a href="yoyo-history.html#today"><span>Today</span> Where the Yo-Yo Is Now</a></li>
+      </ol>
+
+      <ol class="timeline">
+      <li id="ancient" class="era">
+        <div class="era-year">c. 500 BC</div>
+        <div class="era-body">
+          <h2 class="era-title">Ancient Roots</h2>
+          <p>The yo-yo is one of the oldest toys on record. Ancient Greek vase paintings show people playing with them, and surviving examples from the period are made of bronze and terracotta. The most common material was likely wood, which did not last.</p>
+          <p>One Attic drinking cup, a kylix now in Berlin&rsquo;s Antikensammlung, shows a boy playing with a yo-yo. Nobody knows what the Greeks called it.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a> &middot; <a href="https://engines.egr.uh.edu/episode/2796" target="_blank" rel="noopener noreferrer">The Engines of Our Ingenuity: The Yo-Yo</a> &middot; <a href="https://duncantoys.com/blogs/blog/a-rich-history-of-a-simple-toy-called-the-yo-yo" target="_blank" rel="noopener noreferrer">Duncan: A Rich History of a Simple Toy</a></p>
+        </div>
+      </li>
+      <li id="bandalore" class="era">
+        <div class="era-year">1700s</div>
+        <div class="era-body">
+          <h2 class="era-title">Around the World as the Bandalore</h2>
+          <p>A Mughal painting from northern India, around 1770, shows a woman with a string toy similar to the modern yo-yo.</p>
+          <p>By the end of the 1700s the toy was popular in England, where people called it a <em>bandalore</em> or <em>bandylore</em>. A 1791 illustration shows a woman playing one. The French knew it as the <em>joujou de Normandie</em>.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a> &middot; <a href="https://yoyo.fandom.com/wiki/History_of_the_Yo-yo" target="_blank" rel="noopener noreferrer">YoYo Wiki: History of the Yo-yo</a></p>
+        </div>
+      </li>
+      <li id="name" class="era">
+        <div class="era-year">The Name</div>
+        <div class="era-body">
+          <h2 class="era-title">A Word from the Philippines</h2>
+          <p>The word <em>yo-yo</em> most likely comes from the Ilocano word <em>y&oacute;yo</em>, or a related word from the Philippines. The Strong National Museum of Play translates it as &ldquo;come come.&rdquo; Filipino children played with the toy for generations before it reached America.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a> &middot; <a href="https://www.museumofplay.org/toys/duncan-yo-yo/" target="_blank" rel="noopener noreferrer">The Strong: Duncan Yo-Yo</a></p>
+        </div>
+      </li>
+      <li id="patent" class="era">
+        <div class="era-year">1866</div>
+        <div class="era-body">
+          <h2 class="era-title">American Patents</h2>
+          <p>U.S. patents for yo-yo-like toys date to the 1860s. An 1866 patent by James L. Haven and Charles Hettrick described a new way to build one around a central rivet. In America the toy was still called a whirligig or bandalore.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://yoyo.fandom.com/wiki/History_of_the_Yo-yo" target="_blank" rel="noopener noreferrer">YoYo Wiki: History of the Yo-yo</a> &middot; <a href="https://engines.egr.uh.edu/episode/2796" target="_blank" rel="noopener noreferrer">The Engines of Our Ingenuity: The Yo-Yo</a></p>
+        </div>
+      </li>
+      <li id="flores" class="era">
+        <div class="era-year">1928</div>
+        <div class="era-body">
+          <h2 class="era-title">Pedro Flores Makes the Yo-Yo Sleep</h2>
+          <p>Pedro Flores, a Filipino immigrant, opened the Yo-yo Manufacturing Company in Santa Barbara, California, in 1928. It started with a dozen handmade toys. By November 1929 he ran two more factories in Los Angeles and Hollywood, with 600 workers turning out 300,000 yo-yos a day.</p>
+          <p>His key change was the string. Flores used one continuous loop around the axle instead of tying it tight. That let the yo-yo spin freely at the end of the string, or &ldquo;sleep,&rdquo; the move nearly every trick is built on.</p>
+          <div class="era-dc"><span class="era-dc-label">DC Connection</span> Read the full story, from exhibit banners by Robert Reyes, on our <a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a> page.</div>
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Pedro_Flores_(inventor)" target="_blank" rel="noopener noreferrer">Pedro Flores (Wikipedia)</a> &middot; <a href="https://www.positivelyfilipino.com/magazine/pedro-and-the-yo-yo-man-and-myth" target="_blank" rel="noopener noreferrer">Pedro and the Yo-Yo: Man and Myth</a> &middot; <a href="https://engines.egr.uh.edu/episode/2796" target="_blank" rel="noopener noreferrer">The Engines of Our Ingenuity: The Yo-Yo</a> &middot; <a href="filipino-yoyo-history.html">Our Filipino Yo-Yo History page</a></p>
+        </div>
+      </li>
+      <li id="duncan" class="era">
+        <div class="era-year">1929 &ndash; 1932</div>
+        <div class="era-body">
+          <h2 class="era-title">Duncan and the First Craze</h2>
+          <p>Businessman Donald F. Duncan saw Flores&rsquo;s yo-yos and bought the company, taking over the Flores name by 1932. Duncan partnered with newspaper owner William Randolph Hearst: kids entered yo-yo contests by selling newspaper subscriptions. Duncan says the Chicago paper alone sold 50,000 new subscriptions in six weeks.</p>
+          <p>Duncan then sent teams of demonstrators, many of them Filipino, from city to city and schoolyard to schoolyard to teach tricks and run contests.</p>
+          <div class="era-dc"><span class="era-dc-label">DC Connection</span> The Smithsonian&rsquo;s National Museum of American History, right here in DC, holds the Duncan Family Yo-Yo Collection. It includes 35 photographs of demonstrator Tommy Reyes, donated by his son Robert in 2017.</div>
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Donald_F._Duncan_Sr." target="_blank" rel="noopener noreferrer">Donald F. Duncan Sr. (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/Duncan_Toys_Company" target="_blank" rel="noopener noreferrer">Duncan Toys Company (Wikipedia)</a> &middot; <a href="https://duncantoys.com/blogs/blog/a-rich-history-of-a-simple-toy-called-the-yo-yo" target="_blank" rel="noopener noreferrer">Duncan: A Rich History of a Simple Toy</a> &middot; <a href="https://oprfmuseum.org/people/donald-duncan" target="_blank" rel="noopener noreferrer">Oak Park River Forest Museum: Donald Duncan</a> &middot; <a href="https://sova.si.edu/record/nmah.ac.0807" target="_blank" rel="noopener noreferrer">Smithsonian: Duncan Family Yo-Yo Collection</a></p>
+        </div>
+      </li>
+      <li id="worlds1932" class="era">
+        <div class="era-year">1932</div>
+        <div class="era-body">
+          <h2 class="era-title">The First World Contest</h2>
+          <p>The first World Yo-Yo Contest was held in London in 1932. Harvey Lowe, a 13-year-old from Victoria, British Columbia, won it at the Empire Theatre. He went on to master more than 2,000 tricks.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Harvey_Lowe" target="_blank" rel="noopener noreferrer">Harvey Lowe (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/World_Yo-Yo_Contest" target="_blank" rel="noopener noreferrer">World Yo-Yo Contest (Wikipedia)</a></p>
+        </div>
+      </li>
+      <li id="postwar" class="era">
+        <div class="era-year">1946 &ndash; 1960s</div>
+        <div class="era-body">
+          <h2 class="era-title">Factories, TV, and Tricks on Screen</h2>
+          <p>In 1946 Duncan opened a yo-yo factory in Luck, Wisconsin. Sales dipped after World War II, so in 1962 Duncan launched a comeback with television ads and the slogan &ldquo;If it isn&rsquo;t a Duncan, it isn&rsquo;t a yo-yo.&rdquo;</p>
+          <p>On TV, Tom Smothers created his &ldquo;Yo-Yo Man&rdquo; character, and Harvey Lowe appeared on <em>The Smothers Brothers Comedy Hour</em> as his guru.</p>
+          <div class="era-dc"><span class="era-dc-label">DC Connection</span> Duncan champion Tommy Reyes did yo-yo spots on Washington and Baltimore kids&rsquo; TV, including <em>Bozo</em> with Willard Scott, who played Bozo on WRC-TV in DC from 1959 to 1962.</div>
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a> &middot; <a href="https://www.museumofplay.org/toys/duncan-yo-yo/" target="_blank" rel="noopener noreferrer">The Strong: Duncan Yo-Yo</a> &middot; <a href="https://en.wikipedia.org/wiki/Harvey_Lowe" target="_blank" rel="noopener noreferrer">Harvey Lowe (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/Willard_Scott" target="_blank" rel="noopener noreferrer">Willard Scott (Wikipedia)</a> &middot; <a href="filipino-yoyo-history.html">Our Filipino Yo-Yo History page</a></p>
+        </div>
+      </li>
+      <li id="generic" class="era">
+        <div class="era-year">1965 &ndash; 1968</div>
+        <div class="era-body">
+          <h2 class="era-title">&ldquo;Yo-Yo&rdquo; Becomes Everyone&rsquo;s Word</h2>
+          <p>Duncan sued Royal Tops, a company started by former Duncan demonstrator Joe Radovan, over the word &ldquo;yo-yo.&rdquo; In 1965 a federal appeals court ruled the word had become part of common speech, so Duncan no longer owned it.</p>
+          <p>Legal costs and other pressures led the Duncan family to sell the company name in 1968 to Flambeau, which had made Duncan&rsquo;s plastic yo-yos since 1955.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://law.justia.com/cases/federal/appellate-courts/F2/343/655/109434/" target="_blank" rel="noopener noreferrer">Duncan v. Royal Tops (7th Cir. 1965)</a> &middot; <a href="https://www.yoyomuseum.com/museum_view.php?action=profiles&amp;subaction=company&amp;company=royal" target="_blank" rel="noopener noreferrer">Museum of Yo-Yo History: Royal</a> &middot; <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/Duncan_Toys_Company" target="_blank" rel="noopener noreferrer">Duncan Toys Company (Wikipedia)</a></p>
+        </div>
+      </li>
+      <li id="bearings" class="era">
+        <div class="era-year">1970s &ndash; 1990</div>
+        <div class="era-body">
+          <h2 class="era-title">Better Axles, Longer Spins</h2>
+          <p>Dentist Tom Kuhn, missing the wooden yo-yos of his youth, built the &ldquo;No-Jive&rdquo; yo-yo in the 1970s. Swedish bearing maker SKF made novelty ball-bearing yo-yos in 1984. In 1990 Kuhn introduced the SB-2, with an aluminum transaxle, the first successful ball-bearing yo-yo.</p>
+          <p>Bearings cut friction dramatically. A cheap fixed-axle yo-yo spins 10 to 20 seconds; a good bearing yo-yo can spin for minutes.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Tom_Kuhn" target="_blank" rel="noopener noreferrer">Tom Kuhn (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a></p>
+        </div>
+      </li>
+      <li id="space" class="era">
+        <div class="era-year">1985</div>
+        <div class="era-body">
+          <h2 class="era-title">Yo-Yos in Space</h2>
+          <p>In April 1985 the crew of Space Shuttle Discovery, mission STS-51D, flew a small collection of toys, including a yo-yo, a Slinky, a paddle ball, and a toy car. They filmed the toys in weightlessness as a physics lesson for students.</p>
+          <div class="era-dc"><span class="era-dc-label">DC Connection</span> The Smithsonian&rsquo;s National Air and Space Museum, on the National Mall, tells the Toys in Space story.</div>
+          <p class="era-sources"><span>Sources:</span> <a href="https://artsandculture.google.com/story/toys-in-space-smithsonian-national-air-and-space-museum/cgXxkg5p2YrIKA?hl=en" target="_blank" rel="noopener noreferrer">Smithsonian National Air and Space Museum: Toys in Space</a> &middot; <a href="https://www.nasa.gov/mission/sts-51d/" target="_blank" rel="noopener noreferrer">NASA: STS-51D</a> &middot; <a href="https://duncantoys.com/blogs/blog/a-rich-history-of-a-simple-toy-called-the-yo-yo" target="_blank" rel="noopener noreferrer">Duncan: A Rich History of a Simple Toy</a></p>
+        </div>
+      </li>
+      <li id="boom" class="era">
+        <div class="era-year">1990s</div>
+        <div class="era-body">
+          <h2 class="era-title">The Big Boom</h2>
+          <p>Dale Oliver restarted the World Yo-Yo Contest as an annual event in 1992, at the International Jugglers&rsquo; Association convention in Montreal. It moved to Hawaii in 1999 and to Orlando in 2000.</p>
+          <p>A worldwide yo-yo boom peaked in the late 1990s. In 1999 the Duncan yo-yo was inducted into the National Toy Hall of Fame, and Steve Brown debuted freehand (5A) play, with the string tied to a counterweight instead of a finger.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/World_Yo-Yo_Contest" target="_blank" rel="noopener noreferrer">World Yo-Yo Contest (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/National_Toy_Hall_of_Fame" target="_blank" rel="noopener noreferrer">National Toy Hall of Fame (Wikipedia)</a> &middot; <a href="https://www.museumofplay.org/toys/duncan-yo-yo/" target="_blank" rel="noopener noreferrer">The Strong: Duncan Yo-Yo</a> &middot; <a href="https://en.wikipedia.org/wiki/Steve_Brown_(yo-yo_player)" target="_blank" rel="noopener noreferrer">Steve Brown (Wikipedia)</a></p>
+        </div>
+      </li>
+      <li id="modern" class="era">
+        <div class="era-year">2000s</div>
+        <div class="era-body">
+          <h2 class="era-title">The Modern Era</h2>
+          <p>After the boom came what players call the modern era. Wider gaps, silicone response pads, and the bind trick made unresponsive yo-yos possible. With the yo-yo no longer coming back on a tug, players invented a huge new vocabulary of string tricks.</p>
+          <p>The National Yo-Yo Hall of Fame began in 2003, inducting Pedro Flores, Donald F. Duncan Sr., and Barney Akers.</p>
+          <div class="era-dc"><span class="era-dc-label">DC Connection</span> Springfield, VA performer Dick Stohr, &ldquo;That Yo-Yo Guy,&rdquo; played the National Theatre in DC in 2003. The Virginia State Yo-Yo Contest was first held on January 21, 2006. In 2010, 2,036 people set the Guinness record for most people yo-yoing at once at the National Scout Jamboree at Fort A.P. Hill, VA.</div>
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a> &middot; <a href="https://yoyo.fandom.com/wiki/National_Yo-Yo_Hall_of_Fame" target="_blank" rel="noopener noreferrer">YoYo Wiki: National Yo-Yo Hall of Fame</a> &middot; <a href="https://yoyo.fandom.com/wiki/Dick_Stohr" target="_blank" rel="noopener noreferrer">YoYo Wiki: Dick Stohr</a> &middot; <a href="https://yoyo.fandom.com/wiki/US_State_Contest_Virginia" target="_blank" rel="noopener noreferrer">YoYo Wiki: US State Contest Virginia</a> &middot; <a href="https://www.guinnessworldrecords.com/world-records/largest-simultaneous-yo-yo" target="_blank" rel="noopener noreferrer">Guinness World Records</a></p>
+        </div>
+      </li>
+      <li id="global" class="era">
+        <div class="era-year">2013 &ndash; Today</div>
+        <div class="era-body">
+          <h2 class="era-title">A Global Sport</h2>
+          <p>In 2013 the International Yo-Yo Federation (IYYF) formed to run the World Yo-Yo Contest, which now rotates between the Americas, Europe, and Asia. After online contests in 2021 and 2022, Worlds returned in Osaka in 2023, then Cleveland in 2024, Prague in 2025, and Himeji, Japan in 2026.</p>
+          <p>In the U.S., the National Yo-Yo League runs contests across nine regions. Maryland and Virginia sit in the Mid-Atlantic region. The Hall of Fame restarted in 2020 under Doc Lucky Meisenheimer, and in 2025 it inducted Filipino Duncan champion Tommy Reyes.</p>
+          
+          <p class="era-sources"><span>Sources:</span> <a href="https://www.iyyf.org/" target="_blank" rel="noopener noreferrer">International Yo-Yo Federation</a> &middot; <a href="https://www.worldyoyocontest.com/" target="_blank" rel="noopener noreferrer">World Yo-Yo Contest</a> &middot; <a href="https://en.wikipedia.org/wiki/World_Yo-Yo_Contest" target="_blank" rel="noopener noreferrer">World Yo-Yo Contest (Wikipedia)</a> &middot; <a href="https://nyyl.org/" target="_blank" rel="noopener noreferrer">National Yo-Yo League</a> &middot; <a href="https://yoyo.fandom.com/wiki/US_National_Yo-Yo_League" target="_blank" rel="noopener noreferrer">YoYo Wiki: National Yo-Yo League</a> &middot; <a href="https://dazzlingdave.com/aboutdave/nationalmaster.html" target="_blank" rel="noopener noreferrer">National Yo-Yo Hall of Fame roster</a></p>
+        </div>
+      </li>
+      <li id="today" class="era">
+        <div class="era-year">Today</div>
+        <div class="era-body">
+          <h2 class="era-title">Where the Yo-Yo Is Now</h2>
+          <p>Players learn from free video tutorials and trick apps, and share tricks on Instagram with the #trickcircle hashtag, on YouTube, and on TikTok. Duncan, still based in Middlefield, Ohio, became an independent company again in 2024. National Yo-Yo Day is June 6, Donald Duncan&rsquo;s birthday.</p>
+          <div class="era-dc"><span class="era-dc-label">DC Connection</span> DMV Throwers meets free every month in Arlington, and the Virginia State Yo-Yo Contest came to Dulles Town Center in 2026. Pick up a loaner and start your own chapter of the story.</div>
+          <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/Duncan_Toys_Company" target="_blank" rel="noopener noreferrer">Duncan Toys Company (Wikipedia)</a> &middot; <a href="https://en.wikipedia.org/wiki/Donald_F._Duncan_Sr." target="_blank" rel="noopener noreferrer">Donald F. Duncan Sr. (Wikipedia)</a></p>
+        </div>
+      </li>
+      </ol>
+
+      <div class="styles-box" id="styles">
+        <h2 class="era-title">The Styles of Play</h2>
+        <p>Contests group tricks into divisions by style:</p>
+        <ul>
+          <li><strong>1A</strong> String tricks. One unresponsive yo-yo. The most popular style.</li>
+          <li><strong>2A</strong> Looping. Two responsive yo-yos looping around the hands.</li>
+          <li><strong>3A</strong> Two-handed string tricks. Two unresponsive yo-yos at once.</li>
+          <li><strong>4A</strong> Off-string. The yo-yo is not attached to the string and is thrown into the air.</li>
+          <li><strong>5A</strong> Freehand. The string ends in a counterweight instead of a finger loop.</li>
+          <li><strong>0A</strong> Modern responsive. One responsive yo-yo with stalls and skateboard-style tricks.</li>
+        </ul>
+        <p class="era-sources"><span>Sources:</span> <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">Yo-yo (Wikipedia)</a></p>
+        <p>How each style came to be, what 0A means today, and the gear each one uses: <a href="yoyo-gear.html#styles">Styles of Play and Their Gear</a>.</p>
+      </div>
+
+      <div class="timeline-credit">Got a correction, a source, or a local story to add? Email <a href="mailto:contact@dmvthrowers.club" class="text-red">contact@dmvthrowers.club</a>. Want to go deeper? See our <a href="filipino-yoyo-history.html" class="text-red">Filipino Yo-Yo History</a> page, learn how yo-yos work on <a href="yoyo-science.html" class="text-red">Yo-Yo Science &amp; DIY</a>, and see the <a href="resources.html#history" class="text-red">history links</a> on our Resources page.</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
+          <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
+        <a href="events.html" class="footer-link">Events</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="resources.html" class="footer-link">Resources</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+</script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>

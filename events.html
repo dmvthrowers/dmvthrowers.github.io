@@ -119,6 +119,7 @@
       .badge { font-size: 0.72rem; letter-spacing: 0.06em; padding: 7px 12px; }
       .event-btn-small { width: 100%; justify-content: center; }
     }
+      .inherit-link { color: inherit; text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -157,7 +158,9 @@
         <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
         <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 <!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
@@ -196,7 +199,7 @@
     <h2 class="section-title">Upcoming Events</h2>
     <div class="divider"></div>
     <p class="events-desc">
-      Free monthly meetups every 3rd Sunday, 1–4 PM, at Arlington Central Library. No registration required, and loaner yo-yos are available.
+      Free monthly meetups every 3rd Sunday, 1–4 PM, at <a href="https://library.arlingtonva.us/locations/central-library/" class="text-red" target="_blank" rel="noopener noreferrer">Arlington Central Library</a>. No registration required, and loaner yo-yos are available. Want more throwing between meetups? Visit our <a href="resources.html#clubs" class="text-red">sister clubs</a> or find a contest on the <a href="https://compete.yoyocontest.com/compete/contests" class="text-red" target="_blank" rel="noopener noreferrer">NYYL contest calendar</a>.
     </p>
 
     <!-- Chronologically sorted event cards start here -->
@@ -225,7 +228,7 @@
         <div>
           <div class="event-type">★ SPECIAL EVENT</div>
           <div class="event-name">Virginia State Yo-Yo Contest 2026</div>
-          <div class="event-loc">Dulles Town Center · 21100 Dulles Town Circle, Sterling VA 20166</div>
+          <div class="event-loc"><a href="https://www.dullestowncenter.com" class="inherit-link" target="_blank" rel="noopener noreferrer">Dulles Town Center</a> · 21100 Dulles Town Circle, Sterling VA 20166</div>
           <div class="event-loc">Every run is on YouTube. <a href="https://www.youtube.com/watch?v=HR3JGZqPU1A&amp;list=PLTe9veZWEAjw" target="_blank" rel="noopener noreferrer">Watch the winners playlist →</a></div>
           <div class="event-loc">Contest photos are up. <a href="https://photos.app.goo.gl/tSxb2QX8mzap5dYY7" target="_blank" rel="noopener noreferrer">Browse the photo album →</a></div>
         </div>
@@ -343,8 +346,8 @@
     <div class="footer-top">
       <div class="footer-brand">
         <picture>
-          <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
-          <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="footer-logo" loading="lazy" width="38" height="38"/>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
         </picture>
         <div>
           <div class="footer-brand-main">DMV THROWERS</div>
@@ -362,7 +365,7 @@
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
-        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
       </nav>
     </div>
     <div class="footer-bottom">

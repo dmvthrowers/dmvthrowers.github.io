@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!--
+  yoyo-science.html — The science, engineering, patents, manufacturing and DIY 3D printing of
+  the yo-yo, with numbered citations and local DC/NoVA makerspaces. Built by a script from
+  about.html's skeleton. Linked from resources.html and yoyo-history.html; not in the main nav.
+  Sections: top bar · main nav · page hero · anatomy · physics · design · manufacturing ·
+  patents & trademarks · make your own · local makerspaces · classroom · references · footer.
+-->
+<html lang="en">
+<head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <!-- base href="/" makes every relative URL resolve from the site root. -->
+  <base href="/"/>
+  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
+       formspree for the contact form, Google Fonts for typography). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <title>Yo-Yo Science &amp; DIY - DMV Throwers · Yo-Yo &amp; Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="How yo-yos work: the physics, math, design, patents, and manufacturing of the yo-yo, plus free 3D-printable designs and DC and Northern Virginia makerspaces where you can print your own. Every fact cited."/>
+  <meta property="og:title" content="Yo-Yo Science &amp; DIY - DMV Throwers"/>
+  <meta property="og:description" content="The physics, design, patents and manufacturing of the yo-yo, and how to 3D print your own at a local makerspace. Every fact cited."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/yoyo-science.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="Yo-Yo Science &amp; DIY - DMV Throwers"/>
+  <meta name="twitter:description" content="The physics, design, patents and manufacturing of the yo-yo, and how to 3D print your own at a local makerspace. Every fact cited."/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="keywords" content="yo-yo physics, how yo-yos work, moment of inertia, yo-yo design, yo-yo patents, how yo-yos are made, 3D printed yo-yo, DIY yo-yo, makerspace Arlington, makerspace DC"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <meta name="geo.placename" content="Arlington, Virginia"/>
+  <link rel="canonical" href="https://dmvthrowers.club/yoyo-science.html"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + Article. Not rendered; consumed by search engines. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
+        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://dmvthrowers.club/resources.html"},
+        {"@type": "ListItem", "position": 3, "name": "Yo-Yo Science & DIY", "item": "https://dmvthrowers.club/yoyo-science.html"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Yo-Yo Science & DIY: Physics, Design, Patents, Manufacturing, and 3D Printing",
+      "publisher": {"@type": "Organization", "name": "DMV Throwers", "url": "https://dmvthrowers.club/"},
+      "datePublished": "2026-09-29",
+      "url": "https://dmvthrowers.club/yoyo-science.html"
+    }
+  ]
+  </script>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
+    .sci-wrap { max-width: 860px; margin: 0 auto; }
+    .sci-intro { color: var(--text-muted); font-size: 1rem; line-height: 1.65; margin-bottom: 16px; }
+    .quick-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+    .quick-links .btn-outline { border: 2px solid var(--navy); color: var(--navy); background: transparent; }
+    .sci-toc { margin: 0 0 8px; padding: 16px 20px 16px 40px; border: 1px solid var(--border); border-left: 4px solid var(--red); background: var(--cream); columns: 2; column-gap: 24px; }
+    .sci-toc li { padding: 3px 0; break-inside: avoid; }
+    .sci-toc a { color: var(--navy); font-weight: 700; }
+    .sci-sec { margin-top: 52px; scroll-margin-top: 80px; }
+    .sci-kicker { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); }
+    .sci-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.8rem; color: var(--navy); line-height: 1.2; margin: 6px 0 14px; }
+    .sci-sec h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin: 24px 0 8px; }
+    .sci-sec p, .sci-list li, .sci-steps li { line-height: 1.7; color: var(--text-body); }
+    .sci-sec p { margin-bottom: 12px; }
+    .sci-sec a:not(.btn) { color: var(--navy); font-weight: 700; }
+    .sci-list, .sci-steps { padding-left: 20px; margin: 8px 0 14px; }
+    .sci-list li, .sci-steps li { padding: 3px 0; }
+    .cite { font-size: 0.72em; line-height: 0; margin-left: 1px; white-space: nowrap; }
+    .sci-sec .cite a { color: var(--red); font-weight: 700; text-decoration: none; }
+    .eq-box { margin: 16px 0; padding: 16px 20px; background: var(--navy); color: var(--cream); }
+    .eq-box .eq { font-family: 'DM Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin: 4px 0; letter-spacing: 0.02em; }
+    .eq-box .eq-key, .eq-box .eq-src { font-size: 0.85rem; color: var(--cream); opacity: 0.85; margin: 8px 0 0; }
+    .eq-box var { font-style: italic; }
+    .eq-box .cite a { color: var(--cream) !important; text-decoration: underline; }
+    .table-scroll { overflow-x: auto; margin: 12px 0 16px; }
+    .sci-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .sci-table caption { text-align: left; font-weight: 700; color: var(--navy); padding-bottom: 6px; }
+    .sci-table th, .sci-table td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; line-height: 1.5; }
+    .sci-table th { background: var(--navy); color: var(--cream); font-size: 0.78rem; letter-spacing: var(--caps-track); text-transform: uppercase; }
+    .sci-table tbody tr:nth-child(odd) td { background: var(--cream); }
+    .path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+    .path-card { border: 1px solid var(--border); border-top: 4px solid var(--red); padding: 16px 18px; background: var(--cream); }
+    .path-card h3 { margin-top: 0; }
+    .sci-note { font-size: 0.92rem; color: var(--text-muted); font-style: italic; }
+    .cite-box { padding: 14px 18px; border-left: 4px solid var(--navy); background: var(--cream); font-size: 0.92rem; overflow-wrap: anywhere; }
+    .ref-list { padding-left: 24px; font-size: 0.86rem; line-height: 1.6; }
+    .ref-list li { padding: 4px 0; color: var(--text-body); overflow-wrap: anywhere; scroll-margin-top: 90px; }
+    .ref-list li:target { background: var(--cream); outline: 2px solid var(--red); }
+    .era-dc { margin: 12px 0; padding: 12px 16px; background: var(--navy); color: var(--cream); font-size: 0.95rem; line-height: 1.6; }
+    .era-dc-label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--cream); opacity: 0.85; margin-bottom: 2px; }
+    .era-dc .cite a { color: var(--cream) !important; text-decoration: underline; }
+    .try-box { margin: 20px 0; padding: 14px 18px; border: 2px dashed var(--red); background: var(--cream); }
+    .try-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 4px; }
+    .exp-list { padding-left: 22px; margin: 12px 0; }
+    .exp-list > li { padding: 4px 0 10px; }
+    .exp-list h3 { margin: 8px 0 4px; }
+    .sci-credit { margin-top: 32px; padding: 16px 20px; border: 1px solid var(--border); background: var(--cream); font-size: 0.9rem; color: var(--text-muted); }
+    @media (max-width: 760px) {
+      .path-grid { grid-template-columns: 1fr; }
+      .sci-toc { columns: 1; }
+      .sci-title { font-size: 1.45rem; }
+      .eq-box .eq { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: headline event + shortcut. Update the text each month. -->
+<div id="top-bar">
+  <span>VSYC-26 RESULTS ARE IN · THANK YOU FOR AN AMAZING CONTEST AT DULLES TOWN CENTER</span>
+  <a href="vsyc26-results.html">SEE RESULTS →</a>
+</div>
+
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
+      <div>
+        <div class="nav-brand-text-main">DMV THROWERS</div>
+        <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
+      <a href="events.html" class="nav-link">CLUB EVENTS</a>
+      <a href="gallery.html" class="nav-link">GALLERY</a>
+      <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
+      <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
+        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">ABOUT</a>
+  <a href="team.html">TEAM</a>
+  <a href="events.html">CLUB EVENTS</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="resources.html">RESOURCES</a>
+  <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">MAP</a>
+    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
+  <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="red-tag">YO-YO SCIENCE</span>
+    <h1 class="page-hero-title">Yo-Yo Science &amp; DIY</h1>
+    <p class="page-hero-sub">Physics · Design · Patents · Manufacturing · 3D Printing</p>
+  </div>
+  <div class="page-hero-skyline">
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
+  </div>
+</div>
+
+<!-- Every fact carries a numbered citation linking to the References list at the bottom. -->
+<section id="science" class="section-bg-white">
+  <div class="section">
+    <div class="sci-wrap">
+      <p class="sci-intro">A yo-yo is a string, an axle, and two discs. It is also a working lesson in energy, rotation, friction, materials, and manufacturing. This page walks through how yo-yos work, how they are designed and made, and how you can print your own at a library near you. Every fact links to a numbered source, so students can check it and cite it.</p>
+      <div class="quick-links">
+        <a href="yoyo-science.html#diy" class="btn btn-red">MAKE YOUR OWN &rarr;</a>
+        <a href="yoyo-science.html#print-local" class="btn btn-outline">WHERE TO PRINT &rarr;</a>
+        <a href="yoyo-science.html#classroom" class="btn btn-outline">FOR CLASSROOMS &rarr;</a>
+      </div>
+      <ol class="sci-toc">
+        <li><a href="yoyo-science.html#anatomy">Anatomy of a Yo-Yo</a></li>
+        <li><a href="yoyo-science.html#physics">The Physics and Math</a></li>
+        <li><a href="yoyo-science.html#design">Design Principles</a></li>
+        <li><a href="yoyo-science.html#making">How Yo-Yos Are Made</a></li>
+        <li><a href="yoyo-science.html#patents">Patents and Trademarks</a></li>
+        <li><a href="yoyo-science.html#research">Research Papers and Lab Experiments</a></li>
+        <li><a href="yoyo-science.html#space">Yo-Yos in Space Engineering</a></li>
+        <li><a href="yoyo-science.html#diy">Make Your Own</a></li>
+        <li><a href="yoyo-science.html#print-local">Where to Print in DC and NoVA</a></li>
+        <li><a href="yoyo-science.html#experiments">Easy Experiments to Try</a></li>
+        <li><a href="yoyo-science.html#classroom">For Classrooms and Reports</a></li>
+        <li><a href="yoyo-science.html#explore">Explore Related Topics</a></li>
+        <li><a href="yoyo-science.html#references">References</a></li>
+      </ol>
+
+      <article id="anatomy" class="sci-sec">
+        <div class="sci-kicker">Part 1</div>
+        <h2 class="sci-title">Anatomy of a Yo-Yo</h2>
+        <p>Every yo-yo has the same core parts: two <strong>halves</strong> (discs), an <strong>axle</strong> that joins them, a <strong>gap</strong> between them where the string rides, and the <strong>string</strong>.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
+        <ul class="sci-list">
+          <li><strong>The slip string.</strong> Before Pedro Flores, strings were tied to the axle, so a yo-yo could only go up and down. Flores looped a twisted string around the axle instead, which lets the yo-yo spin freely at the bottom, or &ldquo;sleep.&rdquo;<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+          <li><strong>The axle.</strong> Old yo-yos were carved from one block of wood, axle included. Wood gives good friction but the string eventually cuts it, so most modern axles are aluminum or steel.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li><strong>The bearing.</strong> Ball bearings arrived in yo-yos in the early 1990s to cut friction while the yo-yo sleeps. A bearing has an outer race, an inner race, and balls that roll between them.<sup class="cite"><a href="yoyo-science.html#ref-13" aria-label="Source 13">[13]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+          <li><strong>The response system.</strong> Pads or other friction surfaces in the gap let the string grab so the yo-yo comes back. On modern yo-yos you &ldquo;bind&rdquo; to return it.<sup class="cite"><a href="yoyo-science.html#ref-17" aria-label="Source 17">[17]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+        </ul>
+        <p>A classic plastic yo-yo is about 1&frac34; ounces (49 g) and about 2&#8541; inches (6.67 cm) across. Manufacturers usually differ by only a sixteenth of an inch or a sixteenth of an ounce.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></p>
+      </article>
+
+      <article id="physics" class="sci-sec">
+        <div class="sci-kicker">Part 2</div>
+        <h2 class="sci-title">The Physics and Math</h2>
+        <h3>Energy: falling turns into spinning</h3>
+        <p>A yo-yo in your hand has two kinds of stored (potential) energy: the potential to fall, and, because the string is wound on the axle, the potential to spin. When you throw it, that stored energy becomes kinetic energy, the energy of motion.<sup class="cite"><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a></sup> A spinning yo-yo actually carries two kinds of kinetic energy at once: moving up or down, and spinning.<sup class="cite"><a href="yoyo-science.html#ref-4" aria-label="Source 4">[4]</a></sup></p>
+        <div class="eq-box" role="group" aria-label="Yo-yo energy equations">
+          <p class="eq">M g h = &frac12; M v<sup>2</sup> + &frac12; I &omega;<sup>2</sup></p>
+          <p class="eq">v = &omega; r</p>
+          <p class="eq">v<sup>2</sup> = 2 g h / (1 + I / M r<sup>2</sup>)</p>
+          <p class="eq-key"><var>M</var> mass &middot; <var>g</var> gravity &middot; <var>h</var> drop height &middot; <var>v</var> speed &middot; <var>I</var> moment of inertia &middot; <var>&omega;</var> spin rate &middot; <var>r</var> axle radius</p>
+          <p class="eq-src">Equations from UC Santa Barbara&rsquo;s physics lecture demonstration.<sup class="cite"><a href="yoyo-science.html#ref-2" aria-label="Source 2">[2]</a></sup></p>
+        </div>
+        <p>Read the last line this way: the bigger the moment of inertia <var>I</var> is compared with <var>M r</var><sup>2</sup>, the slower the yo-yo drops, and the more of its energy goes into spin instead of speed. Because the string unwinds from a thin axle, <var>r</var> is small, so a yo-yo falls far more slowly than a dropped ball.<sup class="cite"><a href="yoyo-science.html#ref-2" aria-label="Source 2">[2]</a><a href="yoyo-science.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
+        <p>The numbers are striking. In UCSB&rsquo;s demonstration, a large brass yo-yo rolling down a ramp on its thin spindle had about 0.04 joules of energy in forward motion but about 2.94 joules in rotation.<sup class="cite"><a href="yoyo-science.html#ref-2" aria-label="Source 2">[2]</a></sup></p>
+
+        <h3>Moment of inertia and rim weight</h3>
+        <p>Moment of inertia measures how hard it is to change an object&rsquo;s spin. For a uniform disc it is <var>I</var> = &frac12; <var>M R</var><sup>2</sup>, where <var>R</var> is the disc&rsquo;s radius.<sup class="cite"><a href="yoyo-science.html#ref-2" aria-label="Source 2">[2]</a><a href="yoyo-science.html#ref-7" aria-label="Source 7">[7]</a></sup> Moving mass outward raises it. That is why a bicycle wheel spins long and steady, and why yo-yo makers push weight to the outer edge, or rim.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup> More rim weight helps a yo-yo keep its spin and resist tipping over (precession).<sup class="cite"><a href="yoyo-science.html#ref-11" aria-label="Source 11">[11]</a></sup></p>
+
+        <h3>Angular momentum and sleeping</h3>
+        <p>As the string unwinds, it puts torque on the axle, building angular momentum. At the bottom, the yo-yo cannot fall farther, but it keeps spinning because its angular momentum stays constant. That is the &ldquo;sleep.&rdquo; A spinning yo-yo resists changes to its axis, which is called gyroscopic stability.<sup class="cite"><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a><a href="yoyo-science.html#ref-8" aria-label="Source 8">[8]</a></sup></p>
+        <p>Friction is what finally stops it. It comes from the string rubbing the inside walls and the axle.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a></sup> A tug adds energy back: pulling the string makes it grab the axle and wind up again, which is why you can keep a yo-yo going as long as you keep tugging.<sup class="cite"><a href="yoyo-science.html#ref-4" aria-label="Source 4">[4]</a><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
+
+        <h3>Friction trade-offs</h3>
+        <ul class="sci-list">
+          <li>A thinner axle means less friction and longer spins, but too thin and the yo-yo will not come back.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li>A wider gap means less string rubbing and longer spins, but some rubbing is what makes a classic yo-yo spin and return. Thicker or thinner string acts like a narrower or wider gap.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li>String twist keeps the loop from letting go, but too much twist grabs the axle and stops the sleep.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
+          <li>Ball bearings cut friction. A cheap fixed-axle yo-yo spins 10 to 20 seconds; a good bearing yo-yo can spin 1 to 4 minutes.<sup class="cite"><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+          <li>Some yo-yos use a <strong>centrifugal clutch</strong>: spring-loaded weights clamp the axle when the yo-yo spins slowly, then fly outward when it spins fast, letting it sleep, and clamp again to bring it back.<sup class="cite"><a href="yoyo-science.html#ref-4" aria-label="Source 4">[4]</a><a href="yoyo-science.html#ref-22" aria-label="Source 22">[22]</a></sup></li>
+        </ul>
+
+        <h3>How a yo-yo climbs back up</h3>
+        <p>The return is not really about the tug. It is the split second of slack right after it. During that moment the string wraps around the axle two or three times until it wedges between the halves. From then on, the yo-yo&rsquo;s spin turns into motion up the string. That is why a yo-yo spinning too slowly will not come back.<sup class="cite"><a href="yoyo-science.html#ref-51" aria-label="Source 51">[51]</a></sup></p>
+        <p>Something has to grab the string during that slack moment. On a fixed axle, the axle itself does it. Plastic yo-yos add a <strong>starburst</strong>, a raised star shape around the axle, first proposed by a Duncan employee around 1950. Later designs cut grooves into the walls (reverse starbursts) or use rubber or silicone pads.<sup class="cite"><a href="yoyo-science.html#ref-51" aria-label="Source 51">[51]</a></sup> On unresponsive yo-yos, you wrap extra string into the gap yourself. That is a <strong>bind</strong>.<sup class="cite"><a href="yoyo-science.html#ref-51" aria-label="Source 51">[51]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
+
+        <h3>Rim weight: it&rsquo;s the distance from the axle</h3>
+        <p>What raises the moment of inertia is mass far from the <em>axle</em>, not mass far from the gap. A wide yo-yo does not automatically spin longer.<sup class="cite"><a href="yoyo-science.html#ref-57" aria-label="Source 57">[57]</a></sup> Compare two yo-yos that are the same except for rim weight: the more rim-weighted one starts at a lower spin rate but spins longer.<sup class="cite"><a href="yoyo-science.html#ref-58" aria-label="Source 58">[58]</a></sup> Weight near the hub does the opposite: it makes speed changes easier, which helps looping.<sup class="cite"><a href="yoyo-science.html#ref-52" aria-label="Source 52">[52]</a><a href="yoyo-science.html#ref-53" aria-label="Source 53">[53]</a></sup></p>
+
+        <h3>Radius of gyration</h3>
+        <p>Engineers often describe how mass is spread with the <strong>radius of gyration</strong>: the distance from the axis where all the mass could sit and give the same moment of inertia.<sup class="cite"><a href="yoyo-science.html#ref-81" aria-label="Source 81">[81]</a></sup> Engineer Don Watson, who helped develop Tom Kuhn&rsquo;s early ball-bearing yo-yos, wrote five <cite>Yo-Yo Physics</cite> pamphlets covering string friction, wobble, and a &ldquo;yo-yo constant&rdquo; linking spin speed to radius of gyration. They are free to read online.<sup class="cite"><a href="yoyo-science.html#ref-55" aria-label="Source 55">[55]</a><a href="yoyo-science.html#ref-56" aria-label="Source 56">[56]</a></sup></p>
+
+        <div class="try-box">
+          <div class="try-label">Try This: The Spool Puzzle</div>
+          <p>Set a yo-yo or big spool on a table with the string coming off the <em>bottom</em> of the axle. Pull the string gently and level with the table. Does it roll toward you or away? Most people guess wrong. Physics teacher Paul Hewitt explains why torque, not just force, decides.<sup class="cite"><a href="yoyo-science.html#ref-65" aria-label="Source 65">[65]</a></sup> Physicist Julius Sumner Miller&rsquo;s classic TV lesson on rolling things includes a yo-yo.<sup class="cite"><a href="yoyo-science.html#ref-60" aria-label="Source 60">[60]</a></sup></p>
+        </div>
+        <p class="sci-note">Go deeper: rolling-motion derivations in the free LibreTexts university physics text.<sup class="cite"><a href="yoyo-science.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
+      </article>
+
+      <article id="design" class="sci-sec">
+        <div class="sci-kicker">Part 3</div>
+        <h2 class="sci-title">Design Principles</h2>
+        <p>Designing a yo-yo means trading off spin time, stability, return, and feel.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup> These are the main choices.</p>
+        <h3>Shape</h3>
+        <ul class="sci-list">
+          <li><strong>Imperial (classic):</strong> narrow, with a thin string gap. Used today for old-school and looping tricks.<sup class="cite"><a href="yoyo-science.html#ref-15" aria-label="Source 15">[15]</a><a href="yoyo-science.html#ref-10" aria-label="Source 10">[10]</a></sup></li>
+          <li><strong>Modified:</strong> narrow and rounded; the most popular shape for two-handed looping (2A).<sup class="cite"><a href="yoyo-science.html#ref-10" aria-label="Source 10">[10]</a></sup></li>
+          <li><strong>Butterfly:</strong> a very wide gap for string tricks, but it usually loops poorly. Favored for 1A, 3A, 4A and 5A.<sup class="cite"><a href="yoyo-science.html#ref-10" aria-label="Source 10">[10]</a></sup></li>
+          <li><strong>H-shape:</strong> mass concentrated at the rims so the profile looks like an H. It has more rim weight than other shapes and is very stable.<sup class="cite"><a href="yoyo-science.html#ref-10" aria-label="Source 10">[10]</a><a href="yoyo-science.html#ref-11" aria-label="Source 11">[11]</a><a href="yoyo-science.html#ref-15" aria-label="Source 15">[15]</a></sup></li>
+          <li>Rim and wall details matter too. Straight or stepped walls keep the string from rubbing the yo-yo and losing spin.<sup class="cite"><a href="yoyo-science.html#ref-16" aria-label="Source 16">[16]</a></sup></li>
+        </ul>
+        <h3>Bearings</h3>
+        <div class="table-scroll">
+        <table class="sci-table">
+          <caption>Common yo-yo bearing sizes (inner diameter &times; outer diameter &times; width)<sup class="cite"><a href="yoyo-science.html#ref-14" aria-label="Source 14">[14]</a></sup></caption>
+          <thead><tr><th scope="col">Size</th><th scope="col">Dimensions</th><th scope="col">Notes</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>5 &times; 10 &times; 4 mm</td><td>Smaller bearing, used in many Duncan and other yo-yos</td></tr>
+            <tr><td>C</td><td>&frac14;&Prime; &times; &frac12;&Prime; &times; &#8540;&Prime; (.250 &times; .500 &times; .187 in)</td><td>The main size for competition yo-yos, and the usual choice for DIY builds</td></tr>
+            <tr><td>D</td><td>5 &times; 11 &times; 5 mm</td><td>Some older SPYY and HSpin yo-yos</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Thick lubricant in a bearing makes a yo-yo more responsive for looping. A clean or thinly lubricated &ldquo;dry&rdquo; bearing is less responsive for string tricks.<sup class="cite"><a href="yoyo-science.html#ref-13" aria-label="Source 13">[13]</a></sup></p>
+        <h3>Materials</h3>
+        <div class="table-scroll">
+        <table class="sci-table">
+          <caption>Yo-yo body materials and trade-offs<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></caption>
+          <thead><tr><th scope="col">Material</th><th scope="col">Strengths</th><th scope="col">Drawbacks</th></tr></thead>
+          <tbody>
+            <tr><td>Wood (usually maple)</td><td>Easy to turn on a lathe; maple has even density</td><td>Density can vary, causing wobble; too light for modern shapes</td></tr>
+            <tr><td>Plastic (polycarbonate, ABS, Delrin/POM)</td><td>Cheap; molds into almost any shape; takes color</td><td>Molding can leave sharp edges or trapped bubbles</td></tr>
+            <tr><td>Aluminum (6061, 7075)</td><td>Denser than plastic; smooth; anodizes in many colors; 7075 resists dings</td><td>Costs more; dings and scratches; can &ldquo;ring&rdquo;</td></tr>
+            <tr><td>Titanium</td><td>Strong and scratch-resistant; allows more rim weight</td><td>Much more expensive and harder to machine</td></tr>
+            <tr><td>Bimetal (aluminum body, steel or brass rims)</td><td>Puts dense metal at the rim for more spin</td><td>More parts and cost</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <h3>String</h3>
+        <p>Yo-yo string is one long strand, looped around the axle and twisted back up to the finger. Cotton is traditional. Cotton-blend and synthetic strings such as rayon and nylon last longer and feel smoother, and string thickness changes how a yo-yo plays too.<sup class="cite"><a href="yoyo-science.html#ref-54" aria-label="Source 54">[54]</a><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></p>
+      </article>
+
+      <article id="making" class="sci-sec">
+        <div class="sci-kicker">Part 4</div>
+        <h2 class="sci-title">How Yo-Yos Are Made</h2>
+        <h3>Hand-carved to factory-turned wood</h3>
+        <p>Pedro Flores began by hand-carving yo-yos in California in the 1920s.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup> Early American yo-yos were carved from solid maple. Lumber was kiln-dried so it would not warp, cut to size, and shaped on a lathe against a master pattern, then stained or painted and lacquered.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></p>
+        <p>In 1946 Duncan opened a factory in Luck, Wisconsin.<sup class="cite"><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup> From 1946 to 1965 Luck was the &ldquo;Yo-Yo Capital of the World,&rdquo; with nearly every family in town turning local hard maple into yo-yos.<sup class="cite"><a href="yoyo-science.html#ref-18" aria-label="Source 18">[18]</a></sup></p>
+        <h3>Mass production in plastic</h3>
+        <p>Flambeau made Duncan&rsquo;s plastic yo-yos from 1955 and bought the Duncan name in 1968.<sup class="cite"><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup> The injection-molding line works like this:<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></p>
+        <ol class="sci-steps">
+          <li>Plastic pellets feed into a heated barrel, where a screw pushes them forward as heater bands melt them evenly.</li>
+          <li>The melted plastic is pushed into a mold holding several discs and shells at once. The mold holds it about 17 seconds while water-cooled tubes chill it.</li>
+          <li>A separate machine cuts metal rod into axles.</li>
+          <li>Workers snap each disc and shell together while still warm to form a half.</li>
+          <li>A hot stamper presses the logo onto each half.</li>
+          <li>Workers set an axle between two halves, and an air press locks them together with a metal plate that sets the exact gap.</li>
+          <li>String is measured, looped on the axle, cut, tied, twisted, and wound on.</li>
+          <li>Yo-yos are shrink-wrapped onto skin cards for store racks.</li>
+        </ol>
+        <h3>Modern metal yo-yos: CNC lathes</h3>
+        <p>Metal yo-yos are cut from bar stock on computer-controlled (CNC) lathes. In Tormach&rsquo;s published aluminum yo-yo project, the parts are designed in Fusion 360 CAD/CAM and cut from 2.5-inch 6061 aluminum round in two setups: turning the outside, drilling and tapping an M4 hole for the axle, boring out the inside, and grooving the final profile. Response pads, a bearing, and the threaded axle finish the build.<sup class="cite"><a href="yoyo-science.html#ref-17" aria-label="Source 17">[17]</a></sup> Aluminum yo-yos are then finished by anodizing, blasting, polishing, or plating.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></p>
+      </article>
+
+      <article id="patents" class="sci-sec">
+        <div class="sci-kicker">Part 5</div>
+        <h2 class="sci-title">Patents and Trademarks</h2>
+        <p>A <strong>patent</strong> protects an invention: how something works. A <strong>trademark</strong> protects a name or brand. The yo-yo has a famous story about both. Patents are public, so anyone can read them free on Google Patents.</p>
+        <div class="table-scroll">
+        <table class="sci-table">
+          <caption>Selected U.S. yo-yo patents</caption>
+          <thead><tr><th scope="col">Patent</th><th scope="col">What it covers</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://patents.google.com/patent/US59745A/en" target="_blank" rel="noopener noreferrer">US 59,745</a> (1866)</td><td>James L. Haven and Charles Hettrick of Cincinnati: an improved &ldquo;bandelore&rdquo; of two metal discs. Guinness lists it as the earliest known yo-yo patent.<sup class="cite"><a href="yoyo-science.html#ref-19" aria-label="Source 19">[19]</a><a href="yoyo-science.html#ref-20" aria-label="Source 20">[20]</a></sup></td></tr>
+            <tr><td><a href="https://patents.google.com/patent/US4207701A/en" target="_blank" rel="noopener noreferrer">US 4,207,701</a> (1980)</td><td>Tom Kuhn&rsquo;s take-apart yo-yo with reversible halves: assemble it as a looper or a butterfly, adjust the gap, and replace the wooden axle.<sup class="cite"><a href="yoyo-science.html#ref-21" aria-label="Source 21">[21]</a></sup></td></tr>
+            <tr><td><a href="https://patents.google.com/patent/US4332102A/en" target="_blank" rel="noopener noreferrer">US 4,332,102</a> (1982)</td><td>&ldquo;Superior performance yo-yo&rdquo; with a centrifugal clutch.<sup class="cite"><a href="yoyo-science.html#ref-22" aria-label="Source 22">[22]</a></sup></td></tr>
+            <tr><td><a href="https://patents.google.com/patent/US5100361A/en" target="_blank" rel="noopener noreferrer">US 5,100,361</a></td><td>Tom Kuhn&rsquo;s low-friction bearing axle for longer spins, with string tension controlling when the yo-yo grabs and returns.<sup class="cite"><a href="yoyo-science.html#ref-23" aria-label="Source 23">[23]</a></sup></td></tr>
+            <tr><td><a href="https://patents.google.com/patent/US6331132B1/en" target="_blank" rel="noopener noreferrer">US 6,331,132</a> (2001)</td><td>A yo-yo with improved string tension control and an adjustable mechanism.<sup class="cite"><a href="yoyo-science.html#ref-24" aria-label="Source 24">[24]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></td></tr>
+            <tr><td><a href="https://patents.google.com/patent/US6371824B1/en" target="_blank" rel="noopener noreferrer">US 6,371,824</a></td><td>Steve Brown&rsquo;s freehand (5A) yo-yo, with the string tied to a counterweight instead of a finger, assigned to Duncan&rsquo;s parent Flambeau.<sup class="cite"><a href="yoyo-science.html#ref-25" aria-label="Source 25">[25]</a></sup></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <h3>How &ldquo;yo-yo&rdquo; lost its trademark</h3>
+        <p>Pedro Flores trademarked the name &ldquo;yo-yo,&rdquo; and Donald F. Duncan bought both his company and the name.<sup class="cite"><a href="yoyo-science.html#ref-9" aria-label="Source 9">[9]</a></sup> Duncan defended the trademark hard, forcing rivals to sell &ldquo;return tops&rdquo; and &ldquo;Filipino twirlers.&rdquo;<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup> Then Duncan sued rival Royal Tops. In 1965 a federal appeals court ruled that &ldquo;yo-yo&rdquo; had become part of everyday speech, so Duncan could not own it.<sup class="cite"><a href="yoyo-science.html#ref-26" aria-label="Source 26">[26]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup> <em>How Products Are Made</em> puts it simply: yo-yo was the name of the toy, like kite or baseball.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup> When a brand name becomes the everyday word for a product, lawyers call it a <strong>generic trademark</strong>.<sup class="cite"><a href="yoyo-science.html#ref-27" aria-label="Source 27">[27]</a></sup> In Canada, &ldquo;Yo-yo&rdquo; was registered as a trademark in 1932 and still is one.<sup class="cite"><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
+      </article>
+
+      <article id="research" class="sci-sec">
+        <div class="sci-kicker">Part 6</div>
+        <h2 class="sci-title">Research Papers and Lab Experiments</h2>
+        <p>Physicists and physics teachers use the yo-yo to study rotation. These papers and demos are good starting points for a report or science fair project.</p>
+        <ul class="sci-list">
+          <li><strong>Measure a yo-yo with a smartphone.</strong> Salinas and colleagues tied a smartphone to a homemade yo-yo, measured its spin with the phone&rsquo;s gyroscope, checked it with video, and compared the results to theory. The paper was published in <cite>The Physics Teacher</cite> and is free on arXiv.<sup class="cite"><a href="yoyo-science.html#ref-61" aria-label="Source 61">[61]</a></sup> The free phyphox app reads your phone&rsquo;s sensors for experiments like this.<sup class="cite"><a href="yoyo-science.html#ref-78" aria-label="Source 78">[78]</a></sup></li>
+          <li><strong>3D print a moment-of-inertia lab.</strong> Hazlett and Aragoneses built a 3D-printed wheel whose moment of inertia can change while its mass stays the same, to explore torque and rotational energy.<sup class="cite"><a href="yoyo-science.html#ref-62" aria-label="Source 62">[62]</a></sup></li>
+          <li><strong>Phones as physics labs.</strong> A guide to published experiments using the sensors in phones and tablets, from mechanics to astronomy.<sup class="cite"><a href="yoyo-science.html#ref-63" aria-label="Source 63">[63]</a></sup> Another classroom study used phone gyroscopes to model rotation.<sup class="cite"><a href="yoyo-science.html#ref-64" aria-label="Source 64">[64]</a></sup></li>
+          <li><strong>Lecture demonstrations.</strong> UC Santa Barbara&rsquo;s yo-yo-down-an-incline demo includes full worked equations.<sup class="cite"><a href="yoyo-science.html#ref-2" aria-label="Source 2">[2]</a></sup> Harvard&rsquo;s lecture demonstration program has a yo-yo demo too.<sup class="cite"><a href="yoyo-science.html#ref-66" aria-label="Source 66">[66]</a></sup></li>
+          <li><strong>A real data study, and what it teaches.</strong> One player ran a hypothesis test on whether bearing shape changes spin time. Other players pointed out that throws varied from about 40 to 100 seconds and the sample was small, so the result was hard to trust. That is a great lesson in experimental design: control your variables and repeat your trials.<sup class="cite"><a href="yoyo-science.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="space" class="sci-sec">
+        <div class="sci-kicker">Part 7</div>
+        <h2 class="sci-title">Yo-Yos in Space Engineering</h2>
+        <p>Some rockets spin a satellite to keep it steady while an engine fires. Afterward, the spacecraft needs to slow down. Engineers use a <strong>yo-yo de-spin</strong>: two cables with weights wrapped around the spacecraft. When released, the weights swing outward and carry away angular momentum, slowing the spin.<sup class="cite"><a href="yoyo-science.html#ref-68" aria-label="Source 68">[68]</a><a href="yoyo-science.html#ref-70" aria-label="Source 70">[70]</a></sup></p>
+        <p>NASA&rsquo;s Dawn spacecraft used about 3 kilograms of weights on 12-meter cables to cut its spin from 46 RPM to 3 RPM in the opposite direction. Small weights have a big effect because they are far from the spin axis. The mechanism was invented at Caltech&rsquo;s Jet Propulsion Laboratory.<sup class="cite"><a href="yoyo-science.html#ref-68" aria-label="Source 68">[68]</a></sup> The Institute of Physics has a teaching page on yo-yo satellites.<sup class="cite"><a href="yoyo-science.html#ref-67" aria-label="Source 67">[67]</a></sup></p>
+        <div class="era-dc"><span class="era-dc-label">DC Connection</span> J. V. Fedor&rsquo;s 1961 NASA technical note, &ldquo;Theory and Design Curves for a Yo-Yo De-Spin Mechanism for Satellites,&rdquo; came from NASA&rsquo;s Goddard Space Flight Center in Greenbelt, Maryland. It is free to read online.<sup class="cite"><a href="yoyo-science.html#ref-69" aria-label="Source 69">[69]</a></sup></div>
+        <p class="sci-note">A yo-yo also flew on Space Shuttle Discovery in 1985. See <a href="yoyo-history.html#space">The Story of the Yo-Yo</a>.</p>
+      </article>
+
+      <article id="diy" class="sci-sec">
+        <div class="sci-kicker">Part 8</div>
+        <h2 class="sci-title">Make Your Own</h2>
+        <p>You can 3D print a working yo-yo. Pick the path that fits your time and tools. Always check each model&rsquo;s license before you share or sell a print.</p>
+        <p class="sci-note">Once it spins, keep it spinning: our <a href="yoyo-gear.html">Gear &amp; Maintenance</a> page covers bearings, string, response pads, and lube.</p>
+        <div class="path-grid">
+          <div class="path-card">
+            <h3>Quick and cheap</h3>
+            <p>Print two halves and join them with a bolt. No bearing needed.</p>
+            <ul class="sci-list">
+              <li><a href="https://www.printables.com/model/134188-easy-to-print-fully-working-yoyo" target="_blank" rel="noopener noreferrer">Easy to print fully working YoYo</a>: PLA or PETG, joined with an M4 &times; 20 mm bolt and nut.<sup class="cite"><a href="yoyo-science.html#ref-29" aria-label="Source 29">[29]</a></sup></li>
+              <li><a href="https://www.printables.com/model/633063-diy-3d-printed-fixed-axle-yo-yo-for-kids-with-cust" target="_blank" rel="noopener noreferrer">Fixed-axle yo-yo for kids with customizable weight</a>.<sup class="cite"><a href="yoyo-science.html#ref-30" aria-label="Source 30">[30]</a></sup></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>Real bearing yo-yo</h3>
+            <p>Add a C-size bearing for long spins and binds.</p>
+            <ul class="sci-list">
+              <li><a href="https://www.printables.com/model/729744-bearing-yoyo-yo-yo" target="_blank" rel="noopener noreferrer">bearing yoyo</a>: a weighted design for a C-size bearing.<sup class="cite"><a href="yoyo-science.html#ref-31" aria-label="Source 31">[31]</a></sup></li>
+              <li><strong>Fluid Print Dynamics</strong>, started in 2014 by designer Jeffrey Pang: free-to-download models built around a brass spacer kit. The spacers fit C-size bearings and 19 mm response pads, and the kit includes a 20 mm axle and two acorn nuts. It is aimed at school projects and hobbyists.<sup class="cite"><a href="yoyo-science.html#ref-35" aria-label="Source 35">[35]</a></sup></li>
+              <li>The YoYoMaker kit sells the metal &ldquo;axis&rdquo; parts for 3D printed yo-yos.<sup class="cite"><a href="yoyo-science.html#ref-39" aria-label="Source 39">[39]</a></sup></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>Design your own</h3>
+            <p>Change the shape, see how the moment of inertia changes, and test it.</p>
+            <ul class="sci-list">
+              <li><a href="https://www.thingiverse.com/thing:37771" target="_blank" rel="noopener noreferrer">Parametric Yo-Yo</a> (OpenSCAD): builds imperial or butterfly halves, with optional cutouts and voids to vary the moment of inertia.<sup class="cite"><a href="yoyo-science.html#ref-32" aria-label="Source 32">[32]</a></sup></li>
+              <li>Free design tools: <a href="https://www.tinkercad.com/" target="_blank" rel="noopener noreferrer">Tinkercad</a> in the browser, or <a href="https://openscad.org/" target="_blank" rel="noopener noreferrer">OpenSCAD</a> for code-based models.<sup class="cite"><a href="yoyo-science.html#ref-40" aria-label="Source 40">[40]</a><a href="yoyo-science.html#ref-41" aria-label="Source 41">[41]</a></sup></li>
+            </ul>
+          </div>
+        </div>
+        <p>Browse more models on <a href="https://www.printables.com/tag/yoyo" target="_blank" rel="noopener noreferrer">Printables</a>, <a href="https://www.thingiverse.com/tag:yoyo" target="_blank" rel="noopener noreferrer">Thingiverse</a>, and <a href="https://makerworld.com/en/more-models/yoyo-3d-print-model-download" target="_blank" rel="noopener noreferrer">MakerWorld</a>.<sup class="cite"><a href="yoyo-science.html#ref-28" aria-label="Source 28">[28]</a><a href="yoyo-science.html#ref-33" aria-label="Source 33">[33]</a><a href="yoyo-science.html#ref-34" aria-label="Source 34">[34]</a></sup></p>
+        <h3>Tips from builders</h3>
+        <ul class="sci-list">
+          <li>Print at 100% infill, or close to it, for weight.<sup class="cite"><a href="yoyo-science.html#ref-36" aria-label="Source 36">[36]</a></sup></li>
+          <li>You can print the bearing seat into the body instead of adding metal seats. Join halves with a bolt system; a screw threaded straight into plastic may strip.<sup class="cite"><a href="yoyo-science.html#ref-36" aria-label="Source 36">[36]</a></sup></li>
+          <li>Builders advise a nut-and-bolt axle over metal-style axle systems on plastic yo-yos.<sup class="cite"><a href="yoyo-science.html#ref-37" aria-label="Source 37">[37]</a></sup></li>
+          <li>For more rim weight, one builder designed hollow sections and pressed steel rings into the rims.<sup class="cite"><a href="yoyo-science.html#ref-37" aria-label="Source 37">[37]</a></sup></li>
+          <li>Centering everything is the hard part, especially in simple tools like Tinkercad, so compare notes with other builders.<sup class="cite"><a href="yoyo-science.html#ref-38" aria-label="Source 38">[38]</a></sup></li>
+          <li>The CNC build above lists the same parts you&rsquo;ll need for a bearing yo-yo: response pads, a bearing, a threaded axle, and string.<sup class="cite"><a href="yoyo-science.html#ref-17" aria-label="Source 17">[17]</a></sup></li>
+        </ul>
+        <p class="sci-note">Bring your printed yo-yo to a <a href="events.html">DMV Throwers meetup</a> to test it and get tips. Our Arlington meetups are in the same library as The Shop makerspace.</p>
+      </article>
+
+      <article id="print-local" class="sci-sec">
+        <div class="sci-kicker">Part 9</div>
+        <h2 class="sci-title">Where to Print in DC and NoVA</h2>
+        <p>These public spaces can print your file or teach you to print it. Policies change, so check the link or call before you go.</p>
+        <div class="table-scroll">
+        <table class="sci-table">
+          <caption>DC and Northern Virginia makerspaces with 3D printing</caption>
+          <thead><tr><th scope="col">Where</th><th scope="col">How it works</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://library.arlingtonva.us/for-makers-and-crafters/the-shop/" target="_blank" rel="noopener noreferrer">The Shop, Arlington Central Library</a><br>1015 N Quincy St, Arlington</td><td>Staff print your submitted design in PLA ($0.05 per gram) or resin ($0.15 per mL), one active print per person. Free classes, and Open Lab drop-ins for makers 9 and up. Same building as our meetups.<sup class="cite"><a href="yoyo-science.html#ref-42" aria-label="Source 42">[42]</a><a href="yoyo-science.html#ref-43" aria-label="Source 43">[43]</a></sup></td></tr>
+            <tr><td><a href="https://www.dclibrary.org/using-the-library/maker-space-and-machinery-fabrication-lab" target="_blank" rel="noopener noreferrer">Fabrication Lab, DC Public Library</a><br>The Labs, A-Level, MLK Jr. Memorial Library, 901 G St NW</td><td>Take the 3D printer intro class, then reserve time on the Fab Lab&rsquo;s printers.<sup class="cite"><a href="yoyo-science.html#ref-44" aria-label="Source 44">[44]</a><a href="yoyo-science.html#ref-45" aria-label="Source 45">[45]</a></sup></td></tr>
+            <tr><td><a href="https://research.fairfaxcounty.gov/c.php?g=1106963&amp;p=8070798" target="_blank" rel="noopener noreferrer">Maker Lab @ Herndon, Fairfax County Public Library</a></td><td>Ages 12 and up during drop-in hours. Only library staff run the 3D printer.<sup class="cite"><a href="yoyo-science.html#ref-46" aria-label="Source 46">[46]</a></sup></td></tr>
+            <tr><td><a href="https://library.loudoun.gov/makerspace" target="_blank" rel="noopener noreferrer">Loudoun County Public Library makerspaces</a></td><td>Four free makerspaces; no library card needed. Submit a 3D print request; staff estimate the cost and print it at 10 cents per gram.<sup class="cite"><a href="yoyo-science.html#ref-47" aria-label="Source 47">[47]</a></sup></td></tr>
+            <tr><td><a href="https://www.pwcva.gov/department/library/makerspace" target="_blank" rel="noopener noreferrer">Bull Run Makerspace, Prince William Public Libraries</a></td><td>3D printing service at Bull Run Library; equipment by appointment.<sup class="cite"><a href="yoyo-science.html#ref-48" aria-label="Source 48">[48]</a></sup></td></tr>
+            <tr><td><a href="https://nova-labs.org/" target="_blank" rel="noopener noreferrer">Nova Labs</a><br>3850 Jermantown Rd, Fairfax</td><td>Community makerspace with classes and memberships, including 24/7 key access.<sup class="cite"><a href="yoyo-science.html#ref-49" aria-label="Source 49">[49]</a></sup></td></tr>
+            <tr><td><a href="https://www.hacdc.org/" target="_blank" rel="noopener noreferrer">HacDC</a><br>Washington, DC</td><td>Member-supported hackerspace founded in 2008; open to anyone during events or when a member is present.<sup class="cite"><a href="yoyo-science.html#ref-50" aria-label="Source 50">[50]</a></sup></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </article>
+
+      <article id="experiments" class="sci-sec">
+        <div class="sci-kicker">Part 10</div>
+        <h2 class="sci-title">Easy Experiments to Try</h2>
+        <p>Simple, low-cost activities a class can do in the days before a yo-yo demo. All you need is a yo-yo, some string, and a clear space.</p>
+        <div class="try-box">
+          <div class="try-label">Safety First</div>
+          <p>Throw only in an open area with no hazards or people nearby, and make sure the string is the right length for each student.<sup class="cite"><a href="yoyo-science.html#ref-88" aria-label="Source 88">[88]</a></sup> Science Buddies suggests a string that reaches from the ground to your belly button, and keeping yo-yos away from breakable things.<sup class="cite"><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
+        </div>
+        <ol class="exp-list">
+          <li><h3>The yo-yo pendulum</h3>
+            <p>Hold the string about a foot above the yo-yo and gently swing it side to side. The time for one full swing, left to right and back, is called the <strong>period</strong>. Now hold the string farther from the yo-yo, then closer. What changes? This is the pendulum experiment in the Scouts&rsquo; official Yo-Yo Adventure.<sup class="cite"><a href="yoyo-science.html#ref-88" aria-label="Source 88">[88]</a><a href="yoyo-science.html#ref-87" aria-label="Source 87">[87]</a></sup></p>
+            <p><em>Go further:</em> The American Physical Society&rsquo;s &ldquo;Swinging Yo-Yo&rdquo; activity has students design their own test. Change the yo-yo&rsquo;s mass with play dough, or change the string length, then collect data and graph it.<sup class="cite"><a href="yoyo-science.html#ref-89" aria-label="Source 89">[89]</a></sup> TeachEngineering has a pendulum activity for older students.<sup class="cite"><a href="yoyo-science.html#ref-91" aria-label="Source 91">[91]</a></sup></p></li>
+          <li><h3>How long can it sleep?</h3>
+            <p>Time how long a yo-yo sleeps with three different string lengths, three throws each, and plot the results on a scatter plot. This is Science Buddies&rsquo; step-by-step project.<sup class="cite"><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a></sup></p></li>
+          <li><h3>Ball vs. yo-yo drop race</h3>
+            <p>Drop a ball and let a yo-yo unwind from the same height. Which reaches the bottom first? Some of the yo-yo&rsquo;s energy goes into spinning, so less goes into falling.<sup class="cite"><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a><a href="yoyo-science.html#ref-2" aria-label="Source 2">[2]</a></sup></p></li>
+          <li><h3>The spool puzzle</h3>
+            <p>Pull a yo-yo&rsquo;s string along a table from the bottom of the axle and predict which way it rolls. The answer comes down to torque.<sup class="cite"><a href="yoyo-science.html#ref-65" aria-label="Source 65">[65]</a></sup></p></li>
+          <li><h3>Spin like a skater</h3>
+            <p>TeachEngineering&rsquo;s middle school lesson uses figure skaters and spinning objects to show how moving mass in or out changes spin, the same idea as rim weight.<sup class="cite"><a href="yoyo-science.html#ref-90" aria-label="Source 90">[90]</a></sup></p></li>
+          <li><h3>Measure spin with a phone</h3>
+            <p>For older students: the free phyphox app reads a phone&rsquo;s gyroscope, the same approach researchers used to measure a yo-yo&rsquo;s spin.<sup class="cite"><a href="yoyo-science.html#ref-78" aria-label="Source 78">[78]</a><a href="yoyo-science.html#ref-61" aria-label="Source 61">[61]</a></sup></p></li>
+          <li><h3>Predict a yo-yo in space</h3>
+            <p>Before you look it up, have students predict how a yo-yo would act without gravity. Then read the Air and Space Museum&rsquo;s story of the toys that flew on Space Shuttle Discovery in 1985.<sup class="cite"><a href="yoyo-science.html#ref-100" aria-label="Source 100">[100]</a></sup></p></li>
+        </ol>
+      </article>
+
+      <article id="classroom" class="sci-sec">
+        <div class="sci-kicker">Part 11</div>
+        <h2 class="sci-title">For Classrooms and Reports</h2>
+        <h3>Try an experiment</h3>
+        <p>Science Buddies has a free, step-by-step project that tests how string length changes sleep time, using three yo-yos, a stopwatch, and a scatter plot. It suggests follow-ups too, like testing a yo-yo with a centrifugal clutch.<sup class="cite"><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
+        <h3>Report and discussion starters</h3>
+        <ul class="sci-list">
+          <li>Why does moving weight to the rim make a yo-yo spin longer? Use <var>I</var> = &frac12; <var>M R</var><sup>2</sup> and the energy equation above.</li>
+          <li>Where does a yo-yo&rsquo;s energy go? Compare its translational and rotational kinetic energy.</li>
+          <li>Compare wood, plastic, and aluminum yo-yos. Which would you choose, and why?</li>
+          <li>How did the 1965 court case change who could use the word &ldquo;yo-yo&rdquo;?</li>
+          <li>Read one patent in the table. What problem was the inventor solving?</li>
+          <li>Design and print a yo-yo. Change one variable, like rim weight or gap, and measure sleep time.</li>
+          <li>Predict which way the spool puzzle rolls, then test it. Explain the result with torque.</li>
+          <li>How do weights on cables slow a spinning satellite? Connect it to angular momentum.</li>
+          <li>Read the bearing-shape data study. How would you design a fairer experiment?</li>
+        </ul>
+        <h3>Bring the science to your school</h3>
+        <p>&ldquo;Science of Spin&rdquo; school assemblies, developed by 1992 World Yo-Yo Champion Dale Oliver, teach friction, gravity, potential and kinetic energy, and distribution of mass with spinning toys, then run hands-on yo-yo clinics.<sup class="cite"><a href="yoyo-science.html#ref-85" aria-label="Source 85">[85]</a></sup> Locally, Springfield, VA performer Dick Stohr has taught the Spintastics Science of Spin program in schools and libraries.<sup class="cite"><a href="yoyo-science.html#ref-86" aria-label="Source 86">[86]</a></sup> DMV Throwers also visits schools and libraries. <a href="contact.html">Contact us</a> to plan a demo.</p>
+
+        <h3>Across the curriculum</h3>
+        <ul class="sci-list">
+          <li><strong>Social studies:</strong> the modern yo-yo came to America with Filipino immigrants. October is Filipino American History Month, a good time to read our <a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a> page.<sup class="cite"><a href="yoyo-science.html#ref-94" aria-label="Source 94">[94]</a></sup></li>
+          <li><strong>History:</strong> trace the toy from ancient Greece to today on <a href="yoyo-history.html">The Story of the Yo-Yo</a>. National Yo-Yo Day is June 6, Donald Duncan&rsquo;s birthday.<sup class="cite"><a href="yoyo-science.html#ref-98" aria-label="Source 98">[98]</a></sup></li>
+          <li><strong>Math and data:</strong> average repeated trials, make scatter plots, and discuss what makes an experiment fair.<sup class="cite"><a href="yoyo-science.html#ref-1" aria-label="Source 1">[1]</a><a href="yoyo-science.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>PE and coordination:</strong> yo-yo skills build eye-hand coordination, one of the Scouts&rsquo; stated takeaways.<sup class="cite"><a href="yoyo-science.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
+          <li><strong>Engineering and art:</strong> design and 3D print a yo-yo using the engineering design process.<sup class="cite"><a href="yoyo-science.html#ref-84" aria-label="Source 84">[84]</a></sup> See <a href="yoyo-science.html#diy">Make Your Own</a>.</li>
+          <li><strong>Reading:</strong> find yo-yo history, trick, and story books on our <a href="resources.html#books">Books to Find</a> list.</li>
+        </ul>
+        <h3>Programs and field trips</h3>
+        <ul class="sci-list">
+          <li><strong>Scouting America&rsquo;s Yo-Yo Adventure</strong> covers yo-yo safety, stringing, the pendulum experiment, and basic tricks.<sup class="cite"><a href="yoyo-science.html#ref-87" aria-label="Source 87">[87]</a><a href="yoyo-science.html#ref-88" aria-label="Source 88">[88]</a></sup> Duncan helped create it and also runs a school program with a science class activity on gravity, friction, rotational inertia, and energy transfer.<sup class="cite"><a href="yoyo-science.html#ref-92" aria-label="Source 92">[92]</a><a href="yoyo-science.html#ref-93" aria-label="Source 93">[93]</a></sup></li>
+          <li><strong>In DC:</strong> the Smithsonian&rsquo;s National Air and Space Museum.<sup class="cite"><a href="yoyo-science.html#ref-95" aria-label="Source 95">[95]</a></sup> The National Museum of American History holds the Duncan Family Yo-Yo Collection archives.<sup class="cite"><a href="yoyo-science.html#ref-99" aria-label="Source 99">[99]</a></sup></li>
+          <li><strong>Farther away:</strong> The Strong National Museum of Play in Rochester, NY, home of the National Toy Hall of Fame, and the National Yo-Yo Museum in Chico, CA.<sup class="cite"><a href="yoyo-science.html#ref-96" aria-label="Source 96">[96]</a><a href="yoyo-science.html#ref-97" aria-label="Source 97">[97]</a></sup></li>
+        </ul>
+
+        <h3>How to cite this page</h3>
+        <p class="cite-box"><strong>MLA:</strong> &ldquo;Yo-Yo Science &amp; DIY.&rdquo; <cite>DMV Throwers</cite>, dmvthrowers.club/yoyo-science.html. Accessed [date].<br><strong>APA:</strong> DMV Throwers. (2026). <cite>Yo-yo science &amp; DIY</cite>. https://dmvthrowers.club/yoyo-science.html</p>
+        <p class="sci-note">For a stronger report, cite the original sources below too. For history, see <a href="yoyo-history.html">The Story of the Yo-Yo</a> and <a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a>.</p>
+      </article>
+
+      <article id="explore" class="sci-sec">
+        <div class="sci-kicker">Part 12</div>
+        <h2 class="sci-title">Explore Related Topics</h2>
+        <p>Want to go further? These free resources cover the big ideas behind the yo-yo.</p>
+        <div class="path-grid">
+          <div class="path-card">
+            <h3>Learn the concepts</h3>
+            <ul class="sci-list">
+              <li><a href="https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy" target="_blank" rel="noopener noreferrer">Moment of inertia and rotational energy</a><sup class="cite"><a href="yoyo-science.html#ref-71" aria-label="Source 71">[71]</a></sup></li>
+              <li><a href="https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion" target="_blank" rel="noopener noreferrer">Rolling motion</a><sup class="cite"><a href="yoyo-science.html#ref-72" aria-label="Source 72">[72]</a></sup></li>
+              <li><a href="https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum" target="_blank" rel="noopener noreferrer">Angular momentum</a><sup class="cite"><a href="yoyo-science.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
+              <li><a href="https://openstax.org/books/university-physics-volume-1/pages/11-3-conservation-of-angular-momentum" target="_blank" rel="noopener noreferrer">Conservation of angular momentum</a><sup class="cite"><a href="yoyo-science.html#ref-74" aria-label="Source 74">[74]</a></sup></li>
+              <li><a href="https://www.khanacademy.org/science/high-school-physics/torque-and-angular-momentum" target="_blank" rel="noopener noreferrer">Khan Academy: torque and angular momentum</a><sup class="cite"><a href="yoyo-science.html#ref-75" aria-label="Source 75">[75]</a></sup></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>Play with simulations</h3>
+            <ul class="sci-list">
+              <li><a href="https://phet.colorado.edu/en/simulations/torque" target="_blank" rel="noopener noreferrer">PhET Torque</a>: torque, moment of inertia, and angular momentum.<sup class="cite"><a href="yoyo-science.html#ref-76" aria-label="Source 76">[76]</a></sup></li>
+              <li><a href="https://phet.colorado.edu/en/simulations/energy-skate-park-basics" target="_blank" rel="noopener noreferrer">PhET Energy Skate Park</a>: watch potential and kinetic energy trade places.<sup class="cite"><a href="yoyo-science.html#ref-77" aria-label="Source 77">[77]</a></sup></li>
+              <li><a href="https://phyphox.org/" target="_blank" rel="noopener noreferrer">phyphox</a>: turn a phone into a lab sensor.<sup class="cite"><a href="yoyo-science.html#ref-78" aria-label="Source 78">[78]</a></sup></li>
+              <li><a href="https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/engineering-design-process-steps" target="_blank" rel="noopener noreferrer">The engineering design process</a>, for planning your own yo-yo design.<sup class="cite"><a href="yoyo-science.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>Look up key terms</h3>
+            <ul class="sci-list">
+              <li><a href="https://en.wikipedia.org/wiki/Angular_momentum" target="_blank" rel="noopener noreferrer">Angular momentum</a><sup class="cite"><a href="yoyo-science.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Moment_of_inertia" target="_blank" rel="noopener noreferrer">Moment of inertia</a><sup class="cite"><a href="yoyo-science.html#ref-7" aria-label="Source 7">[7]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Gyroscope" target="_blank" rel="noopener noreferrer">Gyroscope</a> and <a href="https://en.wikipedia.org/wiki/Precession" target="_blank" rel="noopener noreferrer">precession</a><sup class="cite"><a href="yoyo-science.html#ref-79" aria-label="Source 79">[79]</a><a href="yoyo-science.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Rolling" target="_blank" rel="noopener noreferrer">Rolling</a> and <a href="https://en.wikipedia.org/wiki/Radius_of_gyration" target="_blank" rel="noopener noreferrer">radius of gyration</a><sup class="cite"><a href="yoyo-science.html#ref-82" aria-label="Source 82">[82]</a><a href="yoyo-science.html#ref-81" aria-label="Source 81">[81]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Conservation_of_energy" target="_blank" rel="noopener noreferrer">Conservation of energy</a><sup class="cite"><a href="yoyo-science.html#ref-83" aria-label="Source 83">[83]</a></sup></li>
+              <li><a href="https://en.wikipedia.org/wiki/Spin_stabilization" target="_blank" rel="noopener noreferrer">Spin stabilization</a><sup class="cite"><a href="yoyo-science.html#ref-70" aria-label="Source 70">[70]</a></sup></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <section id="references" class="sci-sec" aria-labelledby="references-title">
+        <h2 class="sci-title" id="references-title">References</h2>
+        <ol class="ref-list">
+          <li id="ref-1">Science Buddies. &ldquo;How Long Will My Sleepy Yo-yo Sleep?&rdquo; Physics science fair project. <a href="https://www.sciencebuddies.org/science-fair-projects/project-ideas/Phys_p069/physics/yo-yo-sleep" target="_blank" rel="noopener noreferrer">www.sciencebuddies.org/science-fair-projects/project-ideas/Phys_p069/p&hellip;</a></li>
+          <li id="ref-2">UC Santa Barbara Physics Lecture Demonstrations. &ldquo;28.36 &ndash; Yo-yo down incline.&rdquo; <a href="https://web.physics.ucsb.edu/~lecturedemonstrations/Composer/Pages/28.36.html" target="_blank" rel="noopener noreferrer">web.physics.ucsb.edu/~lecturedemonstrations/Composer/Pages/28.36.html</a></li>
+          <li id="ref-3">LibreTexts Physics. &ldquo;11.2: Rolling Motion.&rdquo; University physics textbook chapter. <a href="https://phys.libretexts.org/Workbench/PH_245_Textbook_V2/11:__Angular_Momentum/11.02:_Rolling_Motion" target="_blank" rel="noopener noreferrer">phys.libretexts.org/Workbench/PH_245_Textbook_V2/11:__Angular_Momentum&hellip;</a></li>
+          <li id="ref-4">Woodford, Chris. &ldquo;How do yo-yos work?&rdquo; Explain That Stuff. <a href="https://www.explainthatstuff.com/yoyos.html" target="_blank" rel="noopener noreferrer">www.explainthatstuff.com/yoyos.html</a></li>
+          <li id="ref-5">&ldquo;Yo-yo.&rdquo; <cite>How Products Are Made</cite>, Volume 3. The Gale Group, via madehow.com. <a href="https://www.madehow.com/Volume-3/Yo-yo.html" target="_blank" rel="noopener noreferrer">www.madehow.com/Volume-3/Yo-yo.html</a></li>
+          <li id="ref-6">&ldquo;Yo-yo.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Yo-yo" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Yo-yo</a></li>
+          <li id="ref-7">&ldquo;Moment of inertia.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Moment_of_inertia" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Moment_of_inertia</a></li>
+          <li id="ref-8">&ldquo;Angular momentum.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Angular_momentum" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Angular_momentum</a></li>
+          <li id="ref-9">The Strong National Museum of Play. &ldquo;Out of this World: A Brief History of the Yo-Yo.&rdquo; <a href="https://www.museumofplay.org/blog/out-of-this-world-a-brief-history-of-the-yo-yo/" target="_blank" rel="noopener noreferrer">www.museumofplay.org/blog/out-of-this-world-a-brief-history-of-the-yo-&hellip;</a></li>
+          <li id="ref-10">YoYo Wiki. &ldquo;Shapes.&rdquo; <a href="https://yoyo.fandom.com/wiki/Shapes" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Shapes</a></li>
+          <li id="ref-11">YoYo Wiki. &ldquo;Rim Weight.&rdquo; <a href="https://yoyo.fandom.com/wiki/Rim_Weight" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Rim_Weight</a></li>
+          <li id="ref-12">YoYo Wiki. &ldquo;Yo-yo Materials.&rdquo; <a href="https://yoyo.fandom.com/wiki/Yo-yo_Materials" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Yo-yo_Materials</a></li>
+          <li id="ref-13">YoYo Wiki. &ldquo;Ball Bearings.&rdquo; <a href="https://yoyo.fandom.com/wiki/Ball_Bearings" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Ball_Bearings</a></li>
+          <li id="ref-14">YoYoExpert Forums. &ldquo;Common Yoyo Bearing Sizes&rdquo; (2014). <a href="https://forums.yoyoexpert.com/t/common-yoyo-bearing-sizes/66653" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/common-yoyo-bearing-sizes/66653</a></li>
+          <li id="ref-15">Skill Addicts. &ldquo;Yoyo Shapes.&rdquo; <a href="https://skilladdicts.com/yoyo-shapes/" target="_blank" rel="noopener noreferrer">skilladdicts.com/yoyo-shapes/</a></li>
+          <li id="ref-16">Yo-Yo Store Rewind. &ldquo;Shape.&rdquo; YoYo Info Base. <a href="https://yoyorewind.com/en/yo-yo-knowledge/extra-knowledge/shape/" target="_blank" rel="noopener noreferrer">yoyorewind.com/en/yo-yo-knowledge/extra-knowledge/shape/</a></li>
+          <li id="ref-17">Tormach. &ldquo;Aluminum Yo-Yo CNC Project.&rdquo; <a href="https://tormach.com/aluminum-yo-yo" target="_blank" rel="noopener noreferrer">tormach.com/aluminum-yo-yo</a></li>
+          <li id="ref-18">Village of Luck, Wisconsin. History of Luck. <a href="https://luckwisconsin.com/?DE=DF4F6484-2D85-4931-ACBF-C58D156E0B47&amp;SEC=23AC97F8-B9D0-4B81-88AF-8F2FBCC32262&amp;Type=B_BASIC" target="_blank" rel="noopener noreferrer">luckwisconsin.com/?DE=DF4F6484-2D85-4931-ACBF-C58D156E0B47&SEC=23AC97F&hellip;</a></li>
+          <li id="ref-19">U.S. Patent 59,745. Haven, James L., and Charles Hettrick. Bandelore toy (1866). Google Patents. <a href="https://patents.google.com/patent/US59745A/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US59745A/en</a></li>
+          <li id="ref-20">Guinness World Records. &ldquo;Earliest patent for a yo-yo.&rdquo; <a href="https://www.guinnessworldrecords.com/world-records/429341-earliest-patent-for-a-yo-yo" target="_blank" rel="noopener noreferrer">www.guinnessworldrecords.com/world-records/429341-earliest-patent-for-&hellip;</a></li>
+          <li id="ref-21">U.S. Patent 4,207,701. Kuhn, Thomas R. Dismantlable tethered top with reversible halves. Google Patents. <a href="https://patents.google.com/patent/US4207701A/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US4207701A/en</a></li>
+          <li id="ref-22">U.S. Patent 4,332,102. &ldquo;Superior performance yo-yo&rdquo; (centrifugal clutch). Google Patents. <a href="https://patents.google.com/patent/US4332102A/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US4332102A/en</a></li>
+          <li id="ref-23">U.S. Patent 5,100,361. Kuhn, Thomas R. &ldquo;Tethered aerial top.&rdquo; Google Patents. <a href="https://patents.google.com/patent/US5100361A/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US5100361A/en</a></li>
+          <li id="ref-24">U.S. Patent 6,331,132. &ldquo;Yo-yo having improved tether tension control and adjustable mechanism.&rdquo; Google Patents. <a href="https://patents.google.com/patent/US6331132B1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US6331132B1/en</a></li>
+          <li id="ref-25">U.S. Patent 6,371,824. Brown, Stephen D. (assignor to Flambeau Products Corp.). &ldquo;Yo-yo and method for using a yo-yo.&rdquo; Google Patents. <a href="https://patents.google.com/patent/US6371824B1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US6371824B1/en</a></li>
+          <li id="ref-26"><cite>Donald F. Duncan, Inc. v. Royal Tops Manufacturing Co.</cite>, 343 F.2d 655 (7th Cir. 1965). Justia. <a href="https://law.justia.com/cases/federal/appellate-courts/F2/343/655/109434/" target="_blank" rel="noopener noreferrer">law.justia.com/cases/federal/appellate-courts/F2/343/655/109434/</a></li>
+          <li id="ref-27">&ldquo;Generic trademark.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Generic_trademark" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Generic_trademark</a></li>
+          <li id="ref-28">Printables. Models tagged &ldquo;yoyo.&rdquo; <a href="https://www.printables.com/tag/yoyo" target="_blank" rel="noopener noreferrer">www.printables.com/tag/yoyo</a></li>
+          <li id="ref-29">Printables. &ldquo;Easy to print fully working YoYo.&rdquo; <a href="https://www.printables.com/model/134188-easy-to-print-fully-working-yoyo" target="_blank" rel="noopener noreferrer">www.printables.com/model/134188-easy-to-print-fully-working-yoyo</a></li>
+          <li id="ref-30">Printables. &ldquo;DIY 3D-Printed Fixed Axle Yo-Yo for Kids with Customizable Weight.&rdquo; <a href="https://www.printables.com/model/633063-diy-3d-printed-fixed-axle-yo-yo-for-kids-with-cust" target="_blank" rel="noopener noreferrer">www.printables.com/model/633063-diy-3d-printed-fixed-axle-yo-yo-for-ki&hellip;</a></li>
+          <li id="ref-31">Printables. &ldquo;bearing yoyo (yo-yo).&rdquo; <a href="https://www.printables.com/model/729744-bearing-yoyo-yo-yo" target="_blank" rel="noopener noreferrer">www.printables.com/model/729744-bearing-yoyo-yo-yo</a></li>
+          <li id="ref-32">MtDon. &ldquo;Parametric Yo-Yo&rdquo; (OpenSCAD). Thingiverse. <a href="https://www.thingiverse.com/thing:37771" target="_blank" rel="noopener noreferrer">www.thingiverse.com/thing:37771</a></li>
+          <li id="ref-33">Thingiverse. Things tagged &ldquo;yoyo.&rdquo; <a href="https://www.thingiverse.com/tag:yoyo" target="_blank" rel="noopener noreferrer">www.thingiverse.com/tag:yoyo</a></li>
+          <li id="ref-34">MakerWorld. Yo-yo 3D print models. <a href="https://makerworld.com/en/more-models/yoyo-3d-print-model-download" target="_blank" rel="noopener noreferrer">makerworld.com/en/more-models/yoyo-3d-print-model-download</a></li>
+          <li id="ref-35">YoYoExpert. &ldquo;Fluid Print Dynamics 3D printing Spacer Kits!&rdquo; (2021). <a href="https://forums.yoyoexpert.com/t/fluid-print-dynamics-3d-printing-spacer-kits/333078" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/fluid-print-dynamics-3d-printing-spacer-kits/3&hellip;</a></li>
+          <li id="ref-36">YoYoExpert Forums. &ldquo;Tips On 3D Printing a Yo-yo?&rdquo; (2024). <a href="https://forums.yoyoexpert.com/t/tips-on-3d-printing-a-yo-yo/391630" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/tips-on-3d-printing-a-yo-yo/391630</a></li>
+          <li id="ref-37">YoYoExpert Forums. &ldquo;3D printed yoyo design&rdquo; (2016). <a href="https://forums.yoyoexpert.com/t/3d-printed-yoyo-design/79420" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/3d-printed-yoyo-design/79420</a></li>
+          <li id="ref-38">YoYoExpert Forums. &ldquo;Show us your 3d printed yoyos!&rdquo; <a href="https://forums.yoyoexpert.com/t/show-us-your-3d-printed-yoyos/371438" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/show-us-your-3d-printed-yoyos/371438</a></li>
+          <li id="ref-39">Yo-Yo Store Rewind. &ldquo;YoYoMaker 3D Printed Yoyo Axis Parts.&rdquo; <a href="https://en.yoyostorerewind.com/products/yoyomaker-making-kit" target="_blank" rel="noopener noreferrer">en.yoyostorerewind.com/products/yoyomaker-making-kit</a></li>
+          <li id="ref-40">Tinkercad (free browser-based 3D design). <a href="https://www.tinkercad.com/" target="_blank" rel="noopener noreferrer">www.tinkercad.com/</a></li>
+          <li id="ref-41">OpenSCAD (free script-based 3D CAD). <a href="https://openscad.org/" target="_blank" rel="noopener noreferrer">openscad.org/</a></li>
+          <li id="ref-42">Arlington Public Library. &ldquo;The Shop.&rdquo; <a href="https://library.arlingtonva.us/for-makers-and-crafters/the-shop/" target="_blank" rel="noopener noreferrer">library.arlingtonva.us/for-makers-and-crafters/the-shop/</a></li>
+          <li id="ref-43">Arlington Public Library. &ldquo;3D Design and Printing&rdquo; (The Shop policies). <a href="https://library.arlingtonva.libguides.com/theshop/3DPrinting" target="_blank" rel="noopener noreferrer">library.arlingtonva.libguides.com/theshop/3DPrinting</a></li>
+          <li id="ref-44">DC Public Library. &ldquo;Maker Space and Machinery (Fabrication Lab).&rdquo; <a href="https://www.dclibrary.org/using-the-library/maker-space-and-machinery-fabrication-lab" target="_blank" rel="noopener noreferrer">www.dclibrary.org/using-the-library/maker-space-and-machinery-fabricat&hellip;</a></li>
+          <li id="ref-45">DC Public Library. &ldquo;The Labs&rdquo; at Martin Luther King Jr. Memorial Library. <a href="https://www.dclibrary.org/plan-visit/martin-luther-king-jr-memorial-library/labs" target="_blank" rel="noopener noreferrer">www.dclibrary.org/plan-visit/martin-luther-king-jr-memorial-library/la&hellip;</a></li>
+          <li id="ref-46">Fairfax County Public Library. &ldquo;Maker Labs @ FCPL.&rdquo; <a href="https://research.fairfaxcounty.gov/c.php?g=1106963&amp;p=8070798" target="_blank" rel="noopener noreferrer">research.fairfaxcounty.gov/c.php?g=1106963&p=8070798</a></li>
+          <li id="ref-47">Loudoun County Public Library. &ldquo;Makerspace.&rdquo; <a href="https://library.loudoun.gov/makerspace" target="_blank" rel="noopener noreferrer">library.loudoun.gov/makerspace</a></li>
+          <li id="ref-48">Prince William Public Libraries. &ldquo;Makerspace.&rdquo; <a href="https://www.pwcva.gov/department/library/makerspace" target="_blank" rel="noopener noreferrer">www.pwcva.gov/department/library/makerspace</a></li>
+          <li id="ref-49">Nova Labs makerspace, Fairfax, VA. <a href="https://nova-labs.org/" target="_blank" rel="noopener noreferrer">nova-labs.org/</a></li>
+          <li id="ref-50">HacDC, The Capital Hackerspace, Washington, DC. <a href="https://www.hacdc.org/" target="_blank" rel="noopener noreferrer">www.hacdc.org/</a></li>
+          <li id="ref-51">YoYo Wiki. &ldquo;Response System.&rdquo; <a href="https://yoyo.fandom.com/wiki/Response_System" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Response_System</a></li>
+          <li id="ref-52">YoYo Wiki. &ldquo;Halves.&rdquo; <a href="https://yoyo.fandom.com/wiki/Halves" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Halves</a></li>
+          <li id="ref-53">YoYo Wiki. &ldquo;Weight Rings.&rdquo; <a href="https://yoyo.fandom.com/wiki/Weight_Rings" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Weight_Rings</a></li>
+          <li id="ref-54">YoYo Wiki. &ldquo;String.&rdquo; <a href="https://yoyo.fandom.com/wiki/String" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/String</a></li>
+          <li id="ref-55">YoYo Wiki. &ldquo;Don Watson.&rdquo; <a href="https://yoyo.fandom.com/wiki/Don_Watson" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Don_Watson</a></li>
+          <li id="ref-56">Watson, Donald W. (&ldquo;Captain Yo&rdquo;). <cite>Yo-Yo Physics</cite>, Vols. 1&ndash;5. Pencil Point Press. Internet Archive. <a href="https://archive.org/details/Don_Watson_YoYo_Physics1-5" target="_blank" rel="noopener noreferrer">archive.org/details/Don_Watson_YoYo_Physics1-5</a></li>
+          <li id="ref-57">Philip. &ldquo;The physics behind spin times, speediness, and float.&rdquo; YoYoExpert Forums (2023). <a href="https://forums.yoyoexpert.com/t/the-physics-behind-spin-times-speediness-and-float/368826" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/the-physics-behind-spin-times-speediness-and-f&hellip;</a></li>
+          <li id="ref-58">YoYoExpert Forums. &ldquo;Rim weight physics&rdquo; (2024). <a href="https://forums.yoyoexpert.com/t/rim-weight-physics/405429" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/rim-weight-physics/405429</a></li>
+          <li id="ref-59">Hudakjoe. &ldquo;Statistical Analysis of Impact of Bearing Shape on Spin Times.&rdquo; YoYoExpert Forums (2016). <a href="https://forums.yoyoexpert.com/t/statistical-analysis-of-impact-of-bearing-shape-on-spin-times/78996" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/statistical-analysis-of-impact-of-bearing-shap&hellip;</a></li>
+          <li id="ref-60">Miller, Julius Sumner. &ldquo;Lesson 12 &ndash; The Strange Behavior of Rolling Things.&rdquo; YouTube. <a href="https://www.youtube.com/watch?v=9e9ysnJA9qA" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=9e9ysnJA9qA</a></li>
+          <li id="ref-61">Salinas, I., Monteiro, M., Marti, A. C., and Monsoriu, J. A. &ldquo;Dynamics of a yoyo using a smartphone gyroscope sensor.&rdquo; arXiv:1903.01343; published in <cite>The Physics Teacher</cite> 58(8), 2020. <a href="https://arxiv.org/abs/1903.01343" target="_blank" rel="noopener noreferrer">arxiv.org/abs/1903.01343</a></li>
+          <li id="ref-62">Hazlett, E., and Aragoneses, A. &ldquo;A 3D printed wheel with constant mass and variable moment of inertia for lab and demonstration.&rdquo; arXiv:1707.00032 (2017). <a href="https://arxiv.org/abs/1707.00032" target="_blank" rel="noopener noreferrer">arxiv.org/abs/1707.00032</a></li>
+          <li id="ref-63">Monteiro, M., and Marti, A. C. &ldquo;Mobile Devices and Sensors for Physics Teaching.&rdquo; arXiv:2206.12062 (2022). <a href="https://arxiv.org/abs/2206.12062" target="_blank" rel="noopener noreferrer">arxiv.org/abs/2206.12062</a></li>
+          <li id="ref-64">P&ouml;rn, R., and Brask&eacute;n, M. &ldquo;Interactive modeling activities in the classroom&mdash;rotational motion and smartphone gyroscopes.&rdquo; <cite>Physics Education</cite> 51(6), 2016. <a href="https://iopscience.iop.org/article/10.1088/0031-9120/51/6/065021" target="_blank" rel="noopener noreferrer">iopscience.iop.org/article/10.1088/0031-9120/51/6/065021</a></li>
+          <li id="ref-65">Hewitt, Paul G. &ldquo;The Pulled Spool&mdash;Which Way Does It Roll?&rdquo; <cite>The Science Teacher</cite>, NSTA (2020). <a href="https://www.nsta.org/science-teacher/science-teacher-aprilmay-2020/pulled-spool-which-way-does-it-roll" target="_blank" rel="noopener noreferrer">www.nsta.org/science-teacher/science-teacher-aprilmay-2020/pulled-spoo&hellip;</a></li>
+          <li id="ref-66">Harvard Natural Sciences Lecture Demonstrations. &ldquo;Yo-yo.&rdquo; <a href="https://sciencedemonstrations.fas.harvard.edu/presentations/yo-yo" target="_blank" rel="noopener noreferrer">sciencedemonstrations.fas.harvard.edu/presentations/yo-yo</a></li>
+          <li id="ref-67">Institute of Physics, IOPSpark. &ldquo;Yo-yo satellites.&rdquo; <a href="https://spark.iop.org/yo-yo-satellites" target="_blank" rel="noopener noreferrer">spark.iop.org/yo-yo-satellites</a></li>
+          <li id="ref-68">&ldquo;Yo-yo de-spin.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Yo-yo_de-spin" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Yo-yo_de-spin</a></li>
+          <li id="ref-69">Fedor, J. V. &ldquo;Theory and Design Curves for a Yo-Yo De-Spin Mechanism for Satellites.&rdquo; NASA Technical Note D-708, Goddard Space Flight Center (1961). Internet Archive (DTIC). <a href="https://archive.org/details/DTIC_AD0260758" target="_blank" rel="noopener noreferrer">archive.org/details/DTIC_AD0260758</a></li>
+          <li id="ref-70">&ldquo;Spin stabilization.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Spin_stabilization" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Spin_stabilization</a></li>
+          <li id="ref-71">OpenStax. <cite>University Physics Volume 1</cite>, 10.4 &ldquo;Moment of Inertia and Rotational Kinetic Energy.&rdquo; <a href="https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy" target="_blank" rel="noopener noreferrer">openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-in&hellip;</a></li>
+          <li id="ref-72">OpenStax. <cite>University Physics Volume 1</cite>, 11.1 &ldquo;Rolling Motion.&rdquo; <a href="https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion" target="_blank" rel="noopener noreferrer">openstax.org/books/university-physics-volume-1/pages/11-1-rolling-moti&hellip;</a></li>
+          <li id="ref-73">OpenStax. <cite>University Physics Volume 1</cite>, 11.2 &ldquo;Angular Momentum.&rdquo; <a href="https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum" target="_blank" rel="noopener noreferrer">openstax.org/books/university-physics-volume-1/pages/11-2-angular-mome&hellip;</a></li>
+          <li id="ref-74">OpenStax. <cite>University Physics Volume 1</cite>, 11.3 &ldquo;Conservation of Angular Momentum.&rdquo; <a href="https://openstax.org/books/university-physics-volume-1/pages/11-3-conservation-of-angular-momentum" target="_blank" rel="noopener noreferrer">openstax.org/books/university-physics-volume-1/pages/11-3-conservation&hellip;</a></li>
+          <li id="ref-75">Khan Academy. &ldquo;Torque and angular momentum&rdquo; (high school physics). <a href="https://www.khanacademy.org/science/high-school-physics/torque-and-angular-momentum" target="_blank" rel="noopener noreferrer">www.khanacademy.org/science/high-school-physics/torque-and-angular-mom&hellip;</a></li>
+          <li id="ref-76">PhET Interactive Simulations, University of Colorado Boulder. &ldquo;Torque.&rdquo; <a href="https://phet.colorado.edu/en/simulations/torque" target="_blank" rel="noopener noreferrer">phet.colorado.edu/en/simulations/torque</a></li>
+          <li id="ref-77">PhET Interactive Simulations. &ldquo;Energy Skate Park: Basics.&rdquo; <a href="https://phet.colorado.edu/en/simulations/energy-skate-park-basics" target="_blank" rel="noopener noreferrer">phet.colorado.edu/en/simulations/energy-skate-park-basics</a></li>
+          <li id="ref-78">phyphox: Physical Phone Experiments (free app, RWTH Aachen University). <a href="https://phyphox.org/" target="_blank" rel="noopener noreferrer">phyphox.org/</a></li>
+          <li id="ref-79">&ldquo;Gyroscope.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Gyroscope" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Gyroscope</a></li>
+          <li id="ref-80">&ldquo;Precession.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Precession" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Precession</a></li>
+          <li id="ref-81">&ldquo;Radius of gyration.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Radius_of_gyration" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Radius_of_gyration</a></li>
+          <li id="ref-82">&ldquo;Rolling.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Rolling" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Rolling</a></li>
+          <li id="ref-83">&ldquo;Conservation of energy.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Conservation_of_energy" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Conservation_of_energy</a></li>
+          <li id="ref-84">Science Buddies. &ldquo;The Engineering Design Process.&rdquo; <a href="https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/engineering-design-process-steps" target="_blank" rel="noopener noreferrer">www.sciencebuddies.org/science-fair-projects/engineering-design-proces&hellip;</a></li>
+          <li id="ref-85">Science of Spin. School assembly program details. <a href="https://www.scienceofspin.com/science-of-spin-details.html" target="_blank" rel="noopener noreferrer">www.scienceofspin.com/science-of-spin-details.html</a></li>
+          <li id="ref-86">YoYo Wiki. &ldquo;Dick Stohr.&rdquo; <a href="https://yoyo.fandom.com/wiki/Dick_Stohr" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Dick_Stohr</a></li>
+          <li id="ref-87">Scouting America. &ldquo;Yo-yo&rdquo; Cub Scout Adventure. <a href="https://www.scouting.org/cub-scout-adventures/yo-yo/" target="_blank" rel="noopener noreferrer">www.scouting.org/cub-scout-adventures/yo-yo/</a></li>
+          <li id="ref-88">Scouting America. &ldquo;Webelos Yo-Yo Adventure&rdquo; den meeting plan (PDF). <a href="https://www.scouting.org/wp-content/uploads/2019/05/510-77419-Webelos-Yo-Yo-Den-Meeting-Plan_WEB.pdf" target="_blank" rel="noopener noreferrer">www.scouting.org/wp-content/uploads/2019/05/510-77419-Webelos-Yo-Yo-De&hellip;</a></li>
+          <li id="ref-89">American Physical Society. &ldquo;Swinging Yo-Yo&rdquo; activity (2011), listed by Lawrence Hall of Science&rsquo;s howtosmile.org. <a href="https://www.howtosmile.org/resource/swinging-yo-yo" target="_blank" rel="noopener noreferrer">www.howtosmile.org/resource/swinging-yo-yo</a></li>
+          <li id="ref-90">TeachEngineering. &ldquo;Ring around the Rosie&rdquo; lesson on angular momentum (grades 6&ndash;8). <a href="https://www.teachengineering.org/lessons/view/cub_mechanics_lesson08" target="_blank" rel="noopener noreferrer">www.teachengineering.org/lessons/view/cub_mechanics_lesson08</a></li>
+          <li id="ref-91">TeachEngineering. &ldquo;Swinging Pendulum&rdquo; activity. <a href="https://www.teachengineering.org/activities/cub_energy_lesson03_activity2" target="_blank" rel="noopener noreferrer">www.teachengineering.org/activities/cub_energy_lesson03_activity2</a></li>
+          <li id="ref-92">Duncan Toys. School and Scout programs. <a href="https://programs.yo-yo.com/" target="_blank" rel="noopener noreferrer">programs.yo-yo.com/</a></li>
+          <li id="ref-93">Duncan Toys. &ldquo;Schools&rdquo; program. <a href="https://programs.yo-yo.com/schools/" target="_blank" rel="noopener noreferrer">programs.yo-yo.com/schools/</a></li>
+          <li id="ref-94">&ldquo;Filipino American History Month.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Filipino_American_History_Month" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Filipino_American_History_Month</a></li>
+          <li id="ref-95">Smithsonian&rsquo;s National Air and Space Museum. <a href="https://airandspace.si.edu/" target="_blank" rel="noopener noreferrer">airandspace.si.edu/</a></li>
+          <li id="ref-96">The Strong National Museum of Play, Rochester, NY. <a href="https://www.museumofplay.org/" target="_blank" rel="noopener noreferrer">www.museumofplay.org/</a></li>
+          <li id="ref-97">National Yo-Yo Museum, Chico, CA. <a href="https://nationalyoyo.org/" target="_blank" rel="noopener noreferrer">nationalyoyo.org/</a></li>
+          <li id="ref-98">&ldquo;Donald F. Duncan Sr.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Donald_F._Duncan_Sr." target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Donald_F._Duncan_Sr.</a></li>
+          <li id="ref-99">Smithsonian National Museum of American History Archives Center. &ldquo;Duncan Family Yo-yo Collection&rdquo; (SOVA). <a href="https://sova.si.edu/record/nmah.ac.0807" target="_blank" rel="noopener noreferrer">sova.si.edu/record/nmah.ac.0807</a></li>
+          <li id="ref-100">Smithsonian&rsquo;s National Air and Space Museum. &ldquo;Toys in Space&rdquo; (Google Arts &amp; Culture). <a href="https://artsandculture.google.com/story/toys-in-space-smithsonian-national-air-and-space-museum/cgXxkg5p2YrIKA?hl=en" target="_blank" rel="noopener noreferrer">artsandculture.google.com/story/toys-in-space-smithsonian-national-air&hellip;</a></li>
+        </ol>
+        <div class="sci-credit">Spot an error or know a better source? Email <a href="mailto:contact@dmvthrowers.club" class="text-red">contact@dmvthrowers.club</a>.</div>
+      </section>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
+          <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
+        <a href="events.html" class="footer-link">Events</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="resources.html" class="footer-link">Resources</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+</script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>
