@@ -79,12 +79,11 @@
   <style>
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 32px; }
-    .resource-card { background: white; border-radius: 8px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
-    .resource-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-    .resource-icon { font-size: 2rem; margin-bottom: 16px; }
+    .resource-card { background: white; padding: 24px; border: 1px solid var(--border); border-top: 4px solid var(--navy); transition: border-color 0.2s; }
+    .resource-card:hover { border-top-color: var(--red); }
     .resource-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
     .resource-desc { color: var(--text-muted); margin-bottom: 20px; line-height: 1.5; }
-    .resource-link { display: inline-flex; align-items: center; gap: 6px; background: var(--navy); color: white; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
+    .resource-link { display: inline-flex; align-items: center; gap: 6px; background: var(--navy); color: white; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
     .resource-link:hover { background: var(--red); }
     .resource-link + .resource-link { margin-top: 8px; }
     .resources-section-bg { background: white; }
@@ -103,10 +102,10 @@
     .link-list span { display: block; color: var(--text-muted); font-size: 0.9rem; margin-top: 2px; }
     .link-list span a { font-weight: 600; }
     .support-section { margin-top: 48px; text-align: center; }
-    .support-box { background: var(--navy); color: white; padding: 32px; border-radius: 8px; max-width: 600px; margin: 0 auto; }
+    .support-box { background: var(--navy); color: white; padding: 32px; max-width: 600px; margin: 0 auto; }
     .support-h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; margin-bottom: 16px; }
     .support-p { margin-bottom: 20px; color: rgba(255,255,255,0.7); }
-    .support-link { display: inline-block; background: var(--red); color: white; padding: 12px 24px; font-weight: 700; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
+    .support-link { display: inline-block; background: var(--red); color: white; padding: 12px 24px; font-weight: 700; text-decoration: none; transition: background 0.2s; }
     .support-link:hover { background: var(--red-dark); }
     @media (max-width: 768px) {
       .resource-grid, .link-groups { grid-template-columns: 1fr; }
@@ -118,7 +117,6 @@
       .resource-grid { gap: 16px; margin-top: 24px; }
       .resources-desc { font-size: 0.88rem; line-height: 1.65; }
       .resource-card { padding: 18px 16px; }
-      .resource-icon { font-size: 1.7rem; margin-bottom: 12px; }
       .resource-title { font-size: 1.08rem; margin-bottom: 7px; }
       .resource-desc { font-size: 0.86rem; margin-bottom: 14px; line-height: 1.55; }
       .resource-link { width: 100%; justify-content: center; font-size: 0.8rem; padding: 10px 12px; }
@@ -162,8 +160,8 @@
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
       <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
-        <a href="https://map.dmvthrowers.club/" class="nav-link" target="_blank" rel="noopener noreferrer">MAP</a>
-        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link">MAP</a>
+        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -178,8 +176,8 @@
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
   <a href="faq.html">FAQ</a>
-    <a href="https://map.dmvthrowers.club/" target="_blank" rel="noopener noreferrer">MAP</a>
-    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">EVENTS ↗</a>
+    <a href="https://map.dmvthrowers.club/">MAP</a>
+    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
   <a href="contact.html">CONTACT</a>
   <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
   <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
@@ -210,95 +208,82 @@
     <div class="resource-grid">
 
       <div class="resource-card">
-        <div class="resource-icon">📋</div>
         <div class="resource-title">Workshop Run Sheet</div>
         <div class="resource-desc">Workshop lesson plan with warm-ups, core tricks, and beginner-to-intermediate progressions.</div>
-        <a href="assets/documents/workshop-run-sheet.docx" class="resource-link" target="_blank" rel="noopener noreferrer">📄 View DOCX</a>
+        <a href="assets/documents/workshop-run-sheet.docx" class="resource-link" target="_blank" rel="noopener noreferrer">View DOCX</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">🎯</div>
         <div class="resource-title">Beginner Trick Guide</div>
         <div class="resource-desc">Step-by-step fundamentals for new players learning core throws and mounts.</div>
-        <a href="assets/documents/trick-reference-guide.pptx" class="resource-link" target="_blank" rel="noopener noreferrer">📄 View PPTX</a>
+        <a href="assets/documents/trick-reference-guide.pptx" class="resource-link" target="_blank" rel="noopener noreferrer">View PPTX</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">📺</div>
         <div class="resource-title">Club Display Loop</div>
         <div class="resource-desc">Slide deck used at club events and public displays for quick club intro loops.</div>
-        <a href="assets/documents/club-display-loop.pptx" class="resource-link" target="_blank" rel="noopener noreferrer">📄 View PPTX</a>
+        <a href="assets/documents/club-display-loop.pptx" class="resource-link" target="_blank" rel="noopener noreferrer">View PPTX</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">🎪</div>
         <div class="resource-title">Event Planning Kit</div>
         <div class="resource-desc">Templates and checklists for planning meetups, demos, and contests in the DMV.</div>
-        <a href="assets/documents/event-checklist.docx" class="resource-link" target="_blank" rel="noopener noreferrer">📄 View DOCX</a>
+        <a href="assets/documents/event-checklist.docx" class="resource-link" target="_blank" rel="noopener noreferrer">View DOCX</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">🛠️</div>
         <div class="resource-title">Maintenance Guide</div>
         <div class="resource-desc">Cleaning, setup, and repair basics to keep your throws performing well.</div>
-        <a href="assets/documents/maintenance-guide.pptx" class="resource-link" target="_blank" rel="noopener noreferrer">📄 View PPTX</a>
+        <a href="assets/documents/maintenance-guide.pptx" class="resource-link" target="_blank" rel="noopener noreferrer">View PPTX</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">📜</div>
         <div class="resource-title">Club Charter</div>
         <div class="resource-desc">The official DMV Throwers club charter outlining our mission, structure, and governing guidelines.</div>
-        <a href="assets/documents/DMV%20Throwers%20Charter%20v5.docx" class="resource-link" target="_blank" rel="noopener noreferrer">📄 View DOCX</a>
+        <a href="assets/documents/DMV%20Throwers%20Charter%20v5.docx" class="resource-link" target="_blank" rel="noopener noreferrer">View DOCX</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">🏅</div>
         <div class="resource-title">Officer Roles</div>
         <div class="resource-desc">Officer position overview covering responsibilities, expectations, and how to join club leadership.</div>
-        <a href="assets/documents/DMV%20Throwers%20Officer%20Roles.docx" class="resource-link" target="_blank" rel="noopener noreferrer">📄 View DOCX</a>
+        <a href="assets/documents/DMV%20Throwers%20Officer%20Roles.docx" class="resource-link" target="_blank" rel="noopener noreferrer">View DOCX</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">📰</div>
         <div class="resource-title">Press Kit</div>
         <div class="resource-desc">Club info, branding assets, and media-ready materials for organizers and journalists.</div>
-        <a href="assets/documents/DMV%20Throwers%20Press%20Kit.pdf" class="resource-link" target="_blank" rel="noopener noreferrer">📥 View PDF</a>
+        <a href="assets/documents/DMV%20Throwers%20Press%20Kit.pdf" class="resource-link" target="_blank" rel="noopener noreferrer">View PDF</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">🌲</div>
         <div class="resource-title">Scouts Yo-Yo Adventure</div>
         <div class="resource-desc">Official Scouting America Cub Scout Yo-Yo Adventure requirements and guide for youth progression.</div>
-        <a href="https://www.scouting.org/cub-scout-adventures/yo-yo/" class="resource-link" target="_blank" rel="noopener noreferrer">🔗 Open Scout Adventure</a>
+        <a href="https://www.scouting.org/cub-scout-adventures/yo-yo/" class="resource-link" target="_blank" rel="noopener noreferrer">Open Scout Adventure</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">🪀</div>
         <div class="resource-title">Beginner Yo-Yos at YoYoSam</div>
-        <div class="resource-desc">Starter yo-yos for new players. Use club code <strong>DMVTHROWS</strong> for 10% off — and a portion of every sale goes back to the club.</div>
-        <a href="https://endlss.io/sl/yoyosam/dmvthrows" class="resource-link" target="_blank" rel="noopener noreferrer">🛒 Shop Beginner Yo-Yos</a>
+        <div class="resource-desc">Starter yo-yos for new players. Use club code <strong>DMVTHROWS</strong> for 10% off, and a portion of every sale goes back to the club.</div>
+        <a href="https://endlss.io/sl/yoyosam/dmvthrows" class="resource-link" target="_blank" rel="noopener noreferrer">Shop Beginner Yo-Yos</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">🏛️</div>
         <div class="resource-title">YoYo Museum</div>
-        <div class="resource-desc">A comprehensive archive of yo-yo history, vintage models, manufacturers, and collector lore. Great starting point for players curious about the roots of the hobby.</div>
-        <a href="https://www.yoyomuseum.com/" class="resource-link" target="_blank" rel="noopener noreferrer">🔗 Visit YoYo Museum</a>
+        <div class="resource-desc">An archive of yo-yo history, vintage models, manufacturers, and collector lore. Great starting point for players curious about the roots of the hobby.</div>
+        <a href="https://www.yoyomuseum.com/" class="resource-link" target="_blank" rel="noopener noreferrer">Visit YoYo Museum</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">📚</div>
         <div class="resource-title">YoYo Archive</div>
         <div class="resource-desc">Community-maintained database of yo-yo releases, competition results, and historical records. Also home to the YoYo Archive event calendar used across the community.</div>
-        <a href="https://yoyoarchive.org/" class="resource-link" target="_blank" rel="noopener noreferrer">🔗 Visit YoYo Archive</a>
+        <a href="https://yoyoarchive.org/" class="resource-link" target="_blank" rel="noopener noreferrer">Visit YoYo Archive</a>
       </div>
 
       <div class="resource-card">
-        <div class="resource-icon">📱</div>
         <div class="resource-title">YoYo Pro Clicker App</div>
-        <div class="resource-desc">Free app for iOS and Android that tracks freestyle deductions in real time — handy for couch judges helping score contests like VSYC-26. Built by fellow thrower Joseph (<a href="https://instagram.com/jo.vo.007" target="_blank" rel="noopener noreferrer" aria-label="Joseph's Instagram (opens in new tab)">@jo.vo.007</a>).</div>
-        <a href="https://apps.apple.com/us/app/yoyo-pro-clicker/id6757318886" class="resource-link" target="_blank" rel="noopener noreferrer">📱 Get on the App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=co.median.android.pwwrrbd" class="resource-link" target="_blank" rel="noopener noreferrer">📱 Get on Google Play</a>
+        <div class="resource-desc">Free app for iOS and Android that tracks freestyle deductions in real time. Handy for couch judges helping score contests like VSYC-26. Built by fellow thrower Joseph (<a href="https://instagram.com/jo.vo.007" target="_blank" rel="noopener noreferrer" aria-label="Joseph's Instagram (opens in new tab)">@jo.vo.007</a>).</div>
+        <a href="https://apps.apple.com/us/app/yoyo-pro-clicker/id6757318886" class="resource-link" target="_blank" rel="noopener noreferrer">Get on the App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=co.median.android.pwwrrbd" class="resource-link" target="_blank" rel="noopener noreferrer">Get on Google Play</a>
       </div>
 
     </div>
@@ -557,6 +542,15 @@
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
       </nav>
     </div>
+    <nav aria-label="Guides" class="footer-guides">
+      <span class="footer-guides-label">GUIDES</span>
+      <a href="learn-yoyo.html" class="footer-link">How to Yo-Yo</a>
+      <a href="yoyo-gear.html" class="footer-link">Gear &amp; Maintenance</a>
+      <a href="yoyo-history.html" class="footer-link">Yo-Yo History</a>
+      <a href="filipino-yoyo-history.html" class="footer-link">Filipino Yo-Yo History</a>
+      <a href="yoyo-science.html" class="footer-link">Yo-Yo Science</a>
+      <a href="https://map.dmvthrowers.club/" class="footer-link">Player Map</a>
+    </nav>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
     </div>
