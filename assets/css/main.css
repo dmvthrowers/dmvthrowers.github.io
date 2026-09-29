@@ -41,7 +41,6 @@
   padding: 12px 24px;
   font-weight: 700;
   font-size: 1rem;
-  border-radius: 0 0 8px 8px;
   text-decoration: none;
   transition: left 0.2s;
 }
@@ -130,6 +129,12 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 .nav-links { display: flex; gap: 24px; align-items: center; }
 .nav-link { cursor: pointer; letter-spacing: 0.11em; font-size: 0.72rem; font-weight: 600; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s, color 0.2s; color: var(--navy); text-decoration: none; }
 .nav-link:hover, .nav-link.active { border-bottom-color: var(--red); color: var(--red); }
+/* Keep labels and the brand on one line; tighten spacing on narrower desktops so nothing wraps. */
+.nav-link, .nav-brand-text-main, .nav-brand-text-sub { white-space: nowrap; }
+@media (min-width: 1181px) and (max-width: 1360px) {
+  .nav-links { gap: 16px; }
+  .nav-link { letter-spacing: 0.08em; }
+}
 .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
 .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
 .nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
@@ -252,11 +257,11 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
 .vsyc-sub { font-size: 0.9rem; color: #8090b8; margin-top: 6px; }
 
 /* ===== 10. Responsive breakpoints =====
-   1024px: laptop — nav collapses to hamburger (10 links overflow at smaller widths).
+   1180px: laptop · nav collapses to hamburger (the 11 links overflow at smaller widths).
    768px:  tablet — footer stacks.
    480px:  small phone — top bar recenters, nav/section padding shrinks.
    375px:  iPhone SE / small — further tighten letter-spacing on tiny text. */
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
 }
