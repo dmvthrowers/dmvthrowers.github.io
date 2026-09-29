@@ -261,6 +261,23 @@ footer nav { background: none; border: 0; padding: 0; position: static; will-cha
 .vsyc-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.6rem; color: white; }
 .vsyc-sub { font-size: 0.9rem; color: #8090b8; margin-top: 6px; }
 
+/* Learn & Reference strip (under the hero) and Keep Exploring block (end of main) on guide pages.
+   Injected by the guide_nav build step; sharp corners, no shadows, per brand. */
+.guide-nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 10px 24px; }
+.guide-nav-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+.guide-nav-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; color: var(--red); }
+.guide-nav a { color: var(--navy); font-size: 0.85rem; font-weight: 600; text-decoration: none; border-bottom: 2px solid transparent; padding: 2px 0; }
+.guide-nav a:hover, .guide-nav a.is-current { border-bottom-color: var(--red); color: var(--red); }
+.guide-more { background: var(--cream); border-top: 4px solid var(--navy); padding: 36px 24px; }
+.guide-more-inner { max-width: 1100px; margin: 0 auto; }
+.guide-more-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; color: var(--navy); margin-bottom: 16px; }
+.guide-more-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.guide-more-list li { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--red); padding: 12px 14px; }
+.guide-more-list a { display: block; color: var(--navy); font-weight: 700; text-decoration: none; margin-bottom: 4px; }
+.guide-more-list a:hover { color: var(--red); }
+.guide-more-list span { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+@media (max-width: 480px) { .guide-nav { padding: 10px 14px; } .guide-more { padding: 28px 14px; } }
+
 /* ===== 10. Responsive breakpoints =====
    1180px: laptop · nav collapses to hamburger (the 11 links overflow at smaller widths).
    768px:  tablet — footer stacks.

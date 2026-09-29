@@ -93,6 +93,15 @@
     .eq-box var { font-style: italic; }
     .eq-box .cite a { color: var(--cream) !important; text-decoration: underline; }
     .table-scroll { overflow-x: auto; margin: 12px 0 16px; }
+    @media (max-width: 600px) {
+      .stack-table thead { display: none; }
+      .stack-table caption { display: block; width: 100%; }
+      .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
+      .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
+      .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
+    }
     .sci-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
     .sci-table caption { text-align: left; font-weight: 700; color: var(--navy); padding-bottom: 6px; }
     .sci-table th, .sci-table td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; line-height: 1.5; }
@@ -193,6 +202,25 @@
   </div>
 </div>
 
+<!-- guide-nav:top -->
+<nav class="guide-nav" aria-label="Learn and reference guides">
+  <div class="guide-nav-inner"><span class="guide-nav-label">LEARN &amp; REFERENCE</span>
+    <a href="learn-yoyo.html">How to Yo-Yo</a>
+    <a href="yoyo-gear.html">Gear &amp; Maintenance</a>
+    <a href="yoyo-science.html" aria-current="page" class="is-current">Yo-Yo Science</a>
+    <a href="yoyo-history.html">Yo-Yo History</a>
+    <a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a>
+    <a href="yoyo-collecting.html">Collecting Yo-Yos</a>
+    <a href="resources.html">Resources</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+</nav>
+<!-- /guide-nav:top -->
+
+
+
+
+
 <!-- Every fact carries a numbered citation linking to the References list at the bottom. -->
 <section id="science" class="section-bg-white">
   <div class="section">
@@ -292,6 +320,23 @@
           <li><strong>H-shape:</strong> mass concentrated at the rims so the profile looks like an H. It has more rim weight than other shapes and is very stable.<sup class="cite"><a href="yoyo-science.html#ref-10" aria-label="Source 10">[10]</a><a href="yoyo-science.html#ref-11" aria-label="Source 11">[11]</a><a href="yoyo-science.html#ref-15" aria-label="Source 15">[15]</a></sup></li>
           <li>Rim and wall details matter too. Straight or stepped walls keep the string from rubbing the yo-yo and losing spin.<sup class="cite"><a href="yoyo-science.html#ref-16" aria-label="Source 16">[16]</a></sup></li>
         </ul>
+        <h3>The letter shapes: V, W, H, and O</h3>
+        <p>Modern players describe most butterfly yo-yos with four letters, each named for what the profile looks like when you cut the yo-yo in half and look at it edge-on.<sup class="cite"><a href="yoyo-science.html#ref-121" aria-label="Source 121">[121]</a><a href="yoyo-science.html#ref-122" aria-label="Source 122">[122]</a></sup> One Drop&rsquo;s Benchmark line made the letters famous: the same yo-yo, at the same weight and size, sold in several profiles so players could feel the difference. The 2013 set came as V, O, and H; its &ldquo;V&rdquo; was really a stepped shape, so the 2014 set renamed it W and added a true straight V.<sup class="cite"><a href="yoyo-science.html#ref-120" aria-label="Source 120">[120]</a><a href="yoyo-science.html#ref-122" aria-label="Source 122">[122]</a></sup></p>
+        <table class="sci-table stack-table">
+          <caption>The four common profiles<sup class="cite"><a href="yoyo-science.html#ref-121" aria-label="Source 121">[121]</a><a href="yoyo-science.html#ref-122" aria-label="Source 122">[122]</a><a href="yoyo-science.html#ref-123" aria-label="Source 123">[123]</a></sup></caption>
+          <thead><tr><th scope="col">Shape</th><th scope="col">Looks like</th><th scope="col">How it tends to play</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Shape"><strong>V</strong> (straight)</td><td data-label="Looks like">A funnel: straight walls from the gap to the rim</td><td data-label="How it tends to play">Big catch zone, fast and easy to land; spins may be less powerful<sup class="cite"><a href="yoyo-science.html#ref-121" aria-label="Source 121">[121]</a><a href="yoyo-science.html#ref-122" aria-label="Source 122">[122]</a><a href="yoyo-science.html#ref-123" aria-label="Source 123">[123]</a></sup></td></tr>
+            <tr><td data-label="Shape"><strong>H</strong></td><td data-label="Looks like">A steep extra cut in the middle of each half, pushing mass to the rims</td><td data-label="How it tends to play">The most rim weight, so the longest, most stable spins, but less maneuverable<sup class="cite"><a href="yoyo-science.html#ref-121" aria-label="Source 121">[121]</a><a href="yoyo-science.html#ref-122" aria-label="Source 122">[122]</a><a href="yoyo-science.html#ref-11" aria-label="Source 11">[11]</a></sup></td></tr>
+            <tr><td data-label="Shape"><strong>W</strong> (stepped)</td><td data-label="Looks like">A hybrid of V and H: a straight wall that steps out to a heavy rim</td><td data-label="How it tends to play">Strong spin with some center weight left for control; large catch zone<sup class="cite"><a href="yoyo-science.html#ref-121" aria-label="Source 121">[121]</a><a href="yoyo-science.html#ref-122" aria-label="Source 122">[122]</a></sup></td></tr>
+            <tr><td data-label="Shape"><strong>O</strong> (organic)</td><td data-label="Looks like">A dome: put the two rims together and you get an O</td><td data-label="How it tends to play">Varies the most from design to design; often a smaller gap and high walls that bind easily and suit regens, comfortable in the hand, but harder to land on the string<sup class="cite"><a href="yoyo-science.html#ref-121" aria-label="Source 121">[121]</a><a href="yoyo-science.html#ref-124" aria-label="Source 124">[124]</a></sup></td></tr>
+          </tbody>
+        </table>
+        <ul class="sci-list">
+          <li><strong>Other labels you&rsquo;ll see:</strong> U-shape (inverse round), Z-shape, flat rim (like the Edge or K&uuml;ntosh), and bell or &ldquo;Orca&rdquo; shapes.<sup class="cite"><a href="yoyo-science.html#ref-125" aria-label="Source 125">[125]</a></sup></li>
+          <li><strong>Do organics perform worse?</strong> Players disagree. One argument: high walls add inertia with less material, but also cost stability. Another: some makers skip organics because they chase competition performance, while others build them for players who want the old-school feel.<sup class="cite"><a href="yoyo-science.html#ref-126" aria-label="Source 126">[126]</a></sup></li>
+          <li><strong>Try it yourself:</strong> the Benchmark sets are the cleanest way to compare shapes, since everything else stays the same. They were never re-run, so look for them used.<sup class="cite"><a href="yoyo-science.html#ref-122" aria-label="Source 122">[122]</a></sup></li>
+        </ul>
         <h3>Bearings</h3>
         <div class="table-scroll">
         <table class="sci-table">
@@ -319,6 +364,20 @@
           </tbody>
         </table>
         </div>
+        <h3>Rare and odd materials: non-standard but interesting</h3>
+        <ul class="sci-list">
+          <li><strong>Magnesium:</strong> strong, light, and precise to machine, but pricey and flammable as a powder. The Duncan Freehand Mg was the first magnesium yo-yo, followed by the General Yo Magnum.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Heavy Gravity:</strong> YoYoJam&rsquo;s plastic saturated with metal powder, which gave cheap molded rim weight. Rising costs ended it after the K-OS Extreme.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Teflon (PTFE):</strong> the G Squared Ghost was machined from it, then discontinued partly because the hub was hard to mount securely.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Delrin/POM:</strong> a machinable, ding-resistant plastic first developed as a metal substitute. Eric Wolff&rsquo;s Alchemy Silk and Paul Yath&rsquo;s Born Crucial Milk are machined from it.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Steel and brass:</strong> too heavy for full-size yo-yos, so they show up in minis like the Mighty Flea and in bimetal rims.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Titanium quirks:</strong> it sparks when you walk the dog on concrete, anodizes in fewer colors than aluminum, and tradition says a titanium yo-yo gets &ldquo;Ti&rdquo; in its name. Never put a titanium axle in a titanium yo-yo; the two can fuse together.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Corian:</strong> countertop material, used only for prototypes and one-offs.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Plastic tricks:</strong> &ldquo;Sprite&rdquo; bubbles come from adding a powder such as baking soda during molding; &ldquo;Enyo&rdquo; is polycarbonate with holographic foil flecks. Keep solvents away from polycarbonate, which can craze, yellow, and turn brittle.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Rainbow wood:</strong> dyed plywood (&ldquo;Spectraply&rdquo;) was pioneered by Hummingbird and is used today by makers like TMBR and Spinworthy.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Unusual bimetals:</strong> titanium with steel rims, Delrin with titanium rims, and 7068 aluminum with steel and cobalt-chrome rings.<sup class="cite"><a href="yoyo-science.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+        </ul>
+        <p>For every bearing size, pad, and string material, including the niche ones, see the <a href="yoyo-gear.html#bearings">Gear &amp; Maintenance guide</a>.</p>
         <h3>String</h3>
         <p>Yo-yo string is one long strand, looped around the axle and twisted back up to the finger. Cotton is traditional. Cotton-blend and synthetic strings such as rayon and nylon last longer and feel smoother, and string thickness changes how a yo-yo plays too.<sup class="cite"><a href="yoyo-science.html#ref-54" aria-label="Source 54">[54]</a><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup></p>
       </article>
@@ -351,7 +410,7 @@
         <p>A <strong>patent</strong> protects an invention: how something works. A <strong>trademark</strong> protects a name or brand. The yo-yo has a famous story about both. Patents are public, so anyone can read them free on Google Patents.</p>
         <div class="table-scroll">
         <table class="sci-table">
-          <caption>Selected U.S. yo-yo patents</caption>
+          <caption>Selected granted U.S. yo-yo patents</caption>
           <thead><tr><th scope="col">Patent</th><th scope="col">What it covers</th></tr></thead>
           <tbody>
             <tr><td><a href="https://patents.google.com/patent/US59745A/en" target="_blank" rel="noopener noreferrer">US 59,745</a> (1866)</td><td>James L. Haven and Charles Hettrick of Cincinnati: an improved &ldquo;bandelore&rdquo; of two metal discs. Guinness lists it as the earliest known yo-yo patent.<sup class="cite"><a href="yoyo-science.html#ref-19" aria-label="Source 19">[19]</a><a href="yoyo-science.html#ref-20" aria-label="Source 20">[20]</a></sup></td></tr>
@@ -363,6 +422,33 @@
           </tbody>
         </table>
         </div>
+        <h3>Filed but never granted</h3>
+        <p>Published patent applications stay public even when they are never granted, so abandoned ideas are still there to read. Google Patents lists 67 U.S. yo-yo applications (class A63H1/30) that were published but not granted as of September 2026; a few are still pending. These are ones marked abandoned:<sup class="cite"><a href="yoyo-science.html#ref-114" aria-label="Source 114">[114]</a></sup></p>
+        <table class="sci-table stack-table">
+          <caption>Selected abandoned U.S. yo-yo patent applications</caption>
+          <thead><tr><th scope="col">Application</th><th scope="col">Filed by</th><th scope="col">What it proposed</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20010001087A1/en" target="_blank" rel="noopener noreferrer">US 2001/0001087 A1</a> (1998)</td><td data-label="Filed by">Junji Ichii and Nobuhiro Arai</td><td data-label="What it proposed">A high-performance yo-yo whose axle detaches from bearing portions in each half.<sup class="cite"><a href="yoyo-science.html#ref-101" aria-label="Source 101">[101]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20040198151A1/en" target="_blank" rel="noopener noreferrer">US 2004/0198151 A1</a> (2003)</td><td data-label="Filed by">Dale Bell</td><td data-label="What it proposed">A yo-yo meant to respond quickly to a tug while still spinning a long time.<sup class="cite"><a href="yoyo-science.html#ref-102" aria-label="Source 102">[102]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20050287910A1/en" target="_blank" rel="noopener noreferrer">US 2005/0287910 A1</a> (2003)</td><td data-label="Filed by">Brendon O&rsquo;Sullivan</td><td data-label="What it proposed">A bearing member for ball- or roller-bearing yo-yos with extremely wide string gaps for &ldquo;new school&rdquo; tricks.<sup class="cite"><a href="yoyo-science.html#ref-103" aria-label="Source 103">[103]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20060094329A1/en" target="_blank" rel="noopener noreferrer">US 2006/0094329 A1</a> (2004)</td><td data-label="Filed by">Hans Van Dan Elzen</td><td data-label="What it proposed">Multi-piece sides with removable shape disks held by a locking fastener.<sup class="cite"><a href="yoyo-science.html#ref-104" aria-label="Source 104">[104]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20070026762A1/en" target="_blank" rel="noopener noreferrer">US 2007/0026762 A1</a> (2005)</td><td data-label="Filed by">Benjamin McPhee</td><td data-label="What it proposed">A user-adjustable clutch: set a cam so the yo-yo auto-returns when it slows, or not.<sup class="cite"><a href="yoyo-science.html#ref-105" aria-label="Source 105">[105]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20070032164A1/en" target="_blank" rel="noopener noreferrer">US 2007/0032164 A1</a> (2005)</td><td data-label="Filed by">Yomega Corp. (inventor Ki Chow)</td><td data-label="What it proposed">A trick yo-yo with an on/off switch for its auto-return.<sup class="cite"><a href="yoyo-science.html#ref-106" aria-label="Source 106">[106]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20100112894A1/en" target="_blank" rel="noopener noreferrer">US 2010/0112894 A1</a> (2008)</td><td data-label="Filed by">Michael O. Smith</td><td data-label="What it proposed">An expanding and contracting yo-yo. A later continuation of this idea was granted.<sup class="cite"><a href="yoyo-science.html#ref-107" aria-label="Source 107">[107]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20100317254A1/en" target="_blank" rel="noopener noreferrer">US 2010/0317254 A1</a> (2009)</td><td data-label="Filed by">Hans W. Van Dan Elzen and Benjamin J. McPhee</td><td data-label="What it proposed">A push-button lock: buttons on each side translate across the yo-yo to lock the spool.<sup class="cite"><a href="yoyo-science.html#ref-108" aria-label="Source 108">[108]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20110009029A1/en" target="_blank" rel="noopener noreferrer">US 2011/0009029 A1</a> (2009)</td><td data-label="Filed by">Hans W. and Thomas J. Van Dan Elzen</td><td data-label="What it proposed">Shuttles on a cam that snap between set points to change responsiveness quickly.<sup class="cite"><a href="yoyo-science.html#ref-109" aria-label="Source 109">[109]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20120244780A1/en" target="_blank" rel="noopener noreferrer">US 2012/0244780 A1</a> (2011)</td><td data-label="Filed by">Hans W. and Thomas J. Van Dan Elzen</td><td data-label="What it proposed">Switch between a looper and a butterfly shape without taking the yo-yo apart.<sup class="cite"><a href="yoyo-science.html#ref-110" aria-label="Source 110">[110]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20130045658A1/en" target="_blank" rel="noopener noreferrer">US 2013/0045658 A1</a> (2011)</td><td data-label="Filed by">Yomega Corp.</td><td data-label="What it proposed">A customizable system of yo-yos that swap parts to build a set.<sup class="cite"><a href="yoyo-science.html#ref-111" aria-label="Source 111">[111]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20130165015A1/en" target="_blank" rel="noopener noreferrer">US 2013/0165015 A1</a> (2011)</td><td data-label="Filed by">NSK Ltd.</td><td data-label="What it proposed">A bearing unit that keeps a yo-yo precisely centered through repeated assembly and disassembly.<sup class="cite"><a href="yoyo-science.html#ref-112" aria-label="Source 112">[112]</a></sup></td></tr>
+            <tr><td data-label="Application"><a href="https://patents.google.com/patent/US20160184720A1/en" target="_blank" rel="noopener noreferrer">US 2016/0184720 A1</a> (2014)</td><td data-label="Filed by">YOYOdrone, LLC (inventor John Taylor Christiansen)</td><td data-label="What it proposed">A yo-yo with propeller blades in its bodies.<sup class="cite"><a href="yoyo-science.html#ref-113" aria-label="Source 113">[113]</a></sup></td></tr>
+          </tbody>
+        </table>
+        <ul class="sci-list">
+          <li><strong>Who filed them:</strong> Hans Van Dan Elzen (&ldquo;Yohans&rdquo;), owner of Playmaxx and YoYoFactory and a former world-record holder, is named on many of these applications, and on many granted patents too.<sup class="cite"><a href="yoyo-science.html#ref-116" aria-label="Source 116">[116]</a><a href="yoyo-science.html#ref-114" aria-label="Source 114">[114]</a></sup></li>
+          <li><strong>Abandoned isn&rsquo;t always the end.</strong> Michael O. Smith&rsquo;s expanding yo-yo was abandoned once, then a continuation was granted.<sup class="cite"><a href="yoyo-science.html#ref-107" aria-label="Source 107">[107]</a><a href="yoyo-science.html#ref-115" aria-label="Source 115">[115]</a></sup></li>
+          <li><strong>One Drop Side Effects were never patented.</strong> Introduced in 2010, they are swappable axle caps in aluminum or brass (spikes, domes, discs, even Lego pegs) that change a yo-yo&rsquo;s weight and look.<sup class="cite"><a href="yoyo-science.html#ref-117" aria-label="Source 117">[117]</a></sup> Instead of a patent, One Drop let other companies design Side Effect-compatible yo-yos as long as they bought the Side Effects from One Drop; Anti-Yo, Eternal Throw, YoYoCommunity, Toxic Strings, and 3yo3 all did.<sup class="cite"><a href="yoyo-science.html#ref-118" aria-label="Source 118">[118]</a><a href="yoyo-science.html#ref-117" aria-label="Source 117">[117]</a></sup></li>
+          <li><strong>A patent that shaped a style:</strong> Duncan held the patent on yo-yos sold packaged with a counterweight from 2000 to 2020.<sup class="cite"><a href="yoyo-science.html#ref-119" aria-label="Source 119">[119]</a><a href="yoyo-science.html#ref-25" aria-label="Source 25">[25]</a></sup></li>
+        </ul>
         <h3>How &ldquo;yo-yo&rdquo; lost its trademark</h3>
         <p>Pedro Flores trademarked the name &ldquo;yo-yo,&rdquo; and Donald F. Duncan bought both his company and the name.<sup class="cite"><a href="yoyo-science.html#ref-9" aria-label="Source 9">[9]</a></sup> Duncan defended the trademark hard, forcing rivals to sell &ldquo;return tops&rdquo; and &ldquo;Filipino twirlers.&rdquo;<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup> Then Duncan sued rival Royal Tops. In 1965 a federal appeals court ruled that &ldquo;yo-yo&rdquo; had become part of everyday speech, so Duncan could not own it.<sup class="cite"><a href="yoyo-science.html#ref-26" aria-label="Source 26">[26]</a><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup> <em>How Products Are Made</em> puts it simply: yo-yo was the name of the toy, like kite or baseball.<sup class="cite"><a href="yoyo-science.html#ref-5" aria-label="Source 5">[5]</a></sup> When a brand name becomes the everyday word for a product, lawyers call it a <strong>generic trademark</strong>.<sup class="cite"><a href="yoyo-science.html#ref-27" aria-label="Source 27">[27]</a></sup> In Canada, &ldquo;Yo-yo&rdquo; was registered as a trademark in 1932 and still is one.<sup class="cite"><a href="yoyo-science.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
       </article>
@@ -664,6 +750,32 @@
           <li id="ref-98">&ldquo;Donald F. Duncan Sr.&rdquo; Wikipedia. <a href="https://en.wikipedia.org/wiki/Donald_F._Duncan_Sr." target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Donald_F._Duncan_Sr.</a></li>
           <li id="ref-99">Smithsonian National Museum of American History Archives Center. &ldquo;Duncan Family Yo-yo Collection&rdquo; (SOVA). <a href="https://sova.si.edu/record/nmah.ac.0807" target="_blank" rel="noopener noreferrer">sova.si.edu/record/nmah.ac.0807</a></li>
           <li id="ref-100">Smithsonian&rsquo;s National Air and Space Museum. &ldquo;Toys in Space&rdquo; (Google Arts &amp; Culture). <a href="https://artsandculture.google.com/story/toys-in-space-smithsonian-national-air-and-space-museum/cgXxkg5p2YrIKA?hl=en" target="_blank" rel="noopener noreferrer">artsandculture.google.com/story/toys-in-space-smithsonian-national-air&hellip;</a></li>
+          <li id="ref-101">Google Patents. US20010001087A1, &ldquo;High performance yo-yo&rdquo; (priority 1998); legal status: abandoned. <a href="https://patents.google.com/patent/US20010001087A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20010001087A1/en</a></li>
+          <li id="ref-102">Google Patents. US20040198151A1, &ldquo;Yo-yo&rdquo; (priority 2003); legal status: abandoned. <a href="https://patents.google.com/patent/US20040198151A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20040198151A1/en</a></li>
+          <li id="ref-103">Google Patents. US20050287910A1, &ldquo;Yo-yo bearing member&rdquo; (priority 2003); legal status: abandoned. <a href="https://patents.google.com/patent/US20050287910A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20050287910A1/en</a></li>
+          <li id="ref-104">Google Patents. US20060094329A1, &ldquo;Yo-yo having modifiable side members&rdquo; (priority 2004); legal status: abandoned. <a href="https://patents.google.com/patent/US20060094329A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20060094329A1/en</a></li>
+          <li id="ref-105">Google Patents. US20070026762A1, &ldquo;Yo-yo having a user-adjustable clutch mechanism&rdquo; (priority 2005); legal status: abandoned. <a href="https://patents.google.com/patent/US20070026762A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20070026762A1/en</a></li>
+          <li id="ref-106">Google Patents. US20070032164A1, &ldquo;High performance yo-yo with on/off switchable auto-return&rdquo; (priority 2005); legal status: abandoned. <a href="https://patents.google.com/patent/US20070032164A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20070032164A1/en</a></li>
+          <li id="ref-107">Google Patents. US20100112894A1, &ldquo;Expanding and contracting yo-yo&rdquo; (priority 2008); legal status: abandoned. <a href="https://patents.google.com/patent/US20100112894A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20100112894A1/en</a></li>
+          <li id="ref-108">Google Patents. US20100317254A1, &ldquo;Yo-yo having a push-button locking mechanism&rdquo; (priority 2009); legal status: abandoned. <a href="https://patents.google.com/patent/US20100317254A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20100317254A1/en</a></li>
+          <li id="ref-109">Google Patents. US20110009029A1, &ldquo;Yo-yo having quickly-adjustable responsiveness&rdquo; (priority 2009); legal status: abandoned. <a href="https://patents.google.com/patent/US20110009029A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20110009029A1/en</a></li>
+          <li id="ref-110">Google Patents. US20120244780A1, &ldquo;Yo-yo having a changeable shape&rdquo; (priority 2011); legal status: abandoned. <a href="https://patents.google.com/patent/US20120244780A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20120244780A1/en</a></li>
+          <li id="ref-111">Google Patents. US20130045658A1, &ldquo;Customizable Yo-Yo System&rdquo; (priority 2011); legal status: abandoned. <a href="https://patents.google.com/patent/US20130045658A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20130045658A1/en</a></li>
+          <li id="ref-112">Google Patents. US20130165015A1, &ldquo;Bearing unit, yo-yo using the same, ball bearing unit and yo-yo using the same&rdquo; (priority 2011); legal status: abandoned. <a href="https://patents.google.com/patent/US20130165015A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20130165015A1/en</a></li>
+          <li id="ref-113">Google Patents. US20160184720A1, &ldquo;Yoyo with propeller blades&rdquo; (priority 2014); legal status: abandoned. <a href="https://patents.google.com/patent/US20160184720A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20160184720A1/en</a></li>
+          <li id="ref-114">Google Patents. Search: U.S. publications in CPC A63H1/30 (yo-yos) with status &ldquo;application&rdquo; (not granted), retrieved September 2026. <a href="https://patents.google.com/?cpc=A63H1%2F30&amp;country=US&amp;status=APPLICATION" target="_blank" rel="noopener noreferrer">patents.google.com/?cpc=A63H1%2F30&country=US&status=APPLICATION</a></li>
+          <li id="ref-115">Google Patents. US20120244781A1, &ldquo;Expanding and contracting yo-yo&rdquo;; legal status: active (reinstated). <a href="https://patents.google.com/patent/US20120244781A1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US20120244781A1/en</a></li>
+          <li id="ref-116">YoYo Wiki. &ldquo;Hans Van Dan Elzen.&rdquo; <a href="https://yoyo.fandom.com/wiki/Hans_Van_Dan_Elzen" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Hans_Van_Dan_Elzen</a></li>
+          <li id="ref-117">YoYo Wiki. &ldquo;One Drop Side Effects.&rdquo; <a href="https://yoyo.fandom.com/wiki/One_Drop_Side_Effects" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/One_Drop_Side_Effects</a></li>
+          <li id="ref-118">YoYoExpert Forums. &ldquo;One Drop Side Effects patent&rdquo; (2014). <a href="https://forums.yoyoexpert.com/t/70641" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/70641</a></li>
+          <li id="ref-119">YoYo Wiki. &ldquo;Styles Of Play.&rdquo; <a href="https://yoyo.fandom.com/wiki/Styles_Of_Play" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Styles_Of_Play</a></li>
+          <li id="ref-120">YoYo Wiki. &ldquo;One Drop Benchmark.&rdquo; <a href="https://yoyo.fandom.com/wiki/One_Drop_Benchmark" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/One_Drop_Benchmark</a></li>
+          <li id="ref-121">YoYoExpert Forums. &ldquo;A Beginner&rsquo;s Guide to Yoyo&rdquo; (2019). <a href="https://forums.yoyoexpert.com/t/303088" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/303088</a></li>
+          <li id="ref-122">YoYoExpert Forums. &ldquo;Yoyo shapes&rdquo; (2024). <a href="https://forums.yoyoexpert.com/t/395937" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/395937</a></li>
+          <li id="ref-123">YoYoExpert Forums. &ldquo;V, W, O, or H shaped&rdquo; (2015). <a href="https://forums.yoyoexpert.com/t/74442" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/74442</a></li>
+          <li id="ref-124">YoYoExpert Forums. &ldquo;Can someone explain organic in yoyo terms?&rdquo; (2023). <a href="https://forums.yoyoexpert.com/t/376835" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/376835</a></li>
+          <li id="ref-125">YoYoExpert Forums. &ldquo;Miscellaneous Yoyo Polls&rdquo; (2019). <a href="https://forums.yoyoexpert.com/t/297739" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/297739</a></li>
+          <li id="ref-126">YoYoExpert Forums. &ldquo;Is there any technical advantage on making organic shaped yoyos?&rdquo; (2014). <a href="https://forums.yoyoexpert.com/t/69710" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/69710</a></li>
         </ol>
         <div class="sci-credit">Spot an error or know a better source? Email <a href="mailto:contact@dmvthrowers.club" class="text-red">contact@dmvthrowers.club</a>.</div>
       </section>
@@ -671,6 +783,27 @@
   </div>
 </section>
 
+
+
+
+
+
+<!-- guide-nav:bottom -->
+<section class="guide-more" aria-labelledby="guide-more-title">
+  <div class="guide-more-inner">
+    <h2 class="guide-more-title" id="guide-more-title">Keep Exploring</h2>
+    <ul class="guide-more-list">
+      <li><a href="learn-yoyo.html">How to Yo-Yo</a><span>Throws, first 100 tricks, contests, glossary</span></li>
+      <li><a href="yoyo-gear.html">Gear &amp; Maintenance</a><span>Bearings, pads, string, styles, lingo</span></li>
+      <li><a href="yoyo-history.html">Yo-Yo History</a><span>From ancient Greece to today&rsquo;s contests</span></li>
+      <li><a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a><span>Pedro Flores and the demonstrators</span></li>
+      <li><a href="yoyo-collecting.html">Collecting Yo-Yos</a><span>Vintage, limited runs, value, museums</span></li>
+      <li><a href="resources.html">Resources</a><span>Downloads, tutorials, apps, links</span></li>
+      <li><a href="faq.html">FAQ</a><span>Meetups, the club, and contests</span></li>
+    </ul>
+  </div>
+</section>
+<!-- /guide-nav:bottom -->
 </main>
 
 <!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
@@ -708,6 +841,7 @@
       <a href="yoyo-history.html" class="footer-link">Yo-Yo History</a>
       <a href="filipino-yoyo-history.html" class="footer-link">Filipino Yo-Yo History</a>
       <a href="yoyo-science.html" class="footer-link">Yo-Yo Science</a>
+      <a href="yoyo-collecting.html" class="footer-link">Collecting Yo-Yos</a>
       <a href="https://map.dmvthrowers.club/" class="footer-link">Player Map</a>
     </nav>
     <div class="footer-bottom">
