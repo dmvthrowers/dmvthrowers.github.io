@@ -59,7 +59,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Yo-Yo Gear & Maintenance: Bearings, String, Response, Lube, Mods, and Polishing",
+      "headline": "Yo-Yo Gear & Maintenance: Styles, Bearings, String, Response, Lube, Counterweights, Tools, and Cases",
       "publisher": {"@type": "Organization", "name": "DMV Throwers", "url": "https://dmvthrowers.club/"},
       "datePublished": "2026-09-29",
       "url": "https://dmvthrowers.club/yoyo-gear.html"
@@ -107,6 +107,14 @@
     .ref-list li { padding: 4px 0; color: var(--text-body); overflow-wrap: anywhere; scroll-margin-top: 90px; }
     .ref-list li:target { background: var(--cream); outline: 2px solid var(--red); }
     .sci-credit { margin-top: 32px; padding: 16px 20px; border: 1px solid var(--border); background: var(--cream); font-size: 0.9rem; color: var(--text-muted); }
+    @media (max-width: 600px) {
+      .stack-table thead { display: none; }
+      .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
+      .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
+      .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
+    }
     @media (max-width: 760px) {
       .sci-toc { columns: 1; }
       .sci-title { font-size: 1.45rem; }
@@ -177,7 +185,7 @@
   <div class="page-hero-inner">
     <span class="red-tag">YO-YO GEAR</span>
     <h1 class="page-hero-title">Gear &amp; Maintenance</h1>
-    <p class="page-hero-sub">Bearings · String · Pads · Silicone · Lube · Mods · Polish</p>
+    <p class="page-hero-sub">Bearings · String · Pads · Lube · Counterweights · Picks · Cases</p>
   </div>
   <div class="page-hero-skyline">
     <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
@@ -189,16 +197,21 @@
 <section id="gear" class="section-bg-white">
   <div class="section">
     <div class="sci-wrap">
-      <p class="sci-intro">Keep your yo-yo playing like new. This page covers the parts inside a yo-yo, how they changed over time, what most players use today, and how to maintain them, with both dedicated yo-yo products and low-cost DIY options. Every fact links to a numbered source, including YoYoExpert forum threads, the YoYo Wiki, and our own <a href="assets/documents/maintenance-guide.pptx">Maintenance Guide</a>.</p>
+      <p class="sci-intro">Keep your yo-yo playing like new. This page covers the parts inside a yo-yo, how they changed over time, what most players use today, and how to maintain them. It also covers each style of play and its gear, counterweights, knot picks, and cases, with both dedicated yo-yo products and low-cost DIY options. Every fact links to a numbered source, including YoYoExpert forum threads, the YoYo Wiki, and our own <a href="assets/documents/maintenance-guide.pptx">Maintenance Guide</a>.</p>
       <p class="sci-note">Stuck? Bring your yo-yo to a <a href="events.html">meetup</a>. We keep spare strings, response pads, and lube on hand.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
       <ol class="sci-toc">
         <li><a href="yoyo-gear.html#standard">Today&rsquo;s Standard Setup</a></li>
+        <li><a href="yoyo-gear.html#find">Find It or Make It</a></li>
         <li><a href="yoyo-gear.html#basics">Beginner Gear Basics</a></li>
+        <li><a href="yoyo-gear.html#styles">Styles of Play and Their Gear</a></li>
         <li><a href="yoyo-gear.html#bearings">Bearings</a></li>
         <li><a href="yoyo-gear.html#cleaning">Cleaning a Bearing</a></li>
         <li><a href="yoyo-gear.html#lube">Lube</a></li>
         <li><a href="yoyo-gear.html#response">Response Pads and Silicone</a></li>
         <li><a href="yoyo-gear.html#string">String</a></li>
+        <li><a href="yoyo-gear.html#counterweights">Counterweights (5A)</a></li>
+        <li><a href="yoyo-gear.html#tools">Knot Picks and Tools</a></li>
+        <li><a href="yoyo-gear.html#cases">Cases and Holders</a></li>
         <li><a href="yoyo-gear.html#mods">Mods, Spacers, and Shims</a></li>
         <li><a href="yoyo-gear.html#polish">Cleaning, Polishing, and Dings</a></li>
         <li><a href="yoyo-gear.html#troubleshooting">Quick Troubleshooting</a></li>
@@ -215,6 +228,32 @@
             <li><strong>Lube:</strong> optional. A drop of thin lube keeps a bearing quiet and protected; it does not clean it.<sup class="cite"><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a><a href="yoyo-gear.html#ref-50" aria-label="Source 50">[50]</a></sup></li>
           </ul>
         </div>
+      </article>
+
+      <article id="find" class="sci-sec">
+        <div class="sci-kicker">Quick Reference</div>
+        <h2 class="sci-title">Find It or Make It</h2>
+        <p>Use this table to find each part, buy the dedicated product, or make a low-cost version yourself. Each row links to the full section below.</p>
+        <div class="table-scroll">
+        <table class="sci-table stack-table">
+          <caption>Gear reference guide</caption>
+          <thead><tr><th scope="col">Gear</th><th scope="col">What most players use</th><th scope="col">Make it or save</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#bearings">Bearing</a></td><td data-label="Most players use">C-size centering bearing<sup class="cite"><a href="yoyo-gear.html#ref-21" aria-label="Source 21">[21]</a><a href="yoyo-gear.html#ref-46" aria-label="Source 46">[46]</a></sup></td><td data-label="Make it or save">Clean it before you replace it<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#response">Response</a></td><td data-label="Most players use">19mm silicone pads<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></td><td data-label="Make it or save">Clear flowable silicone in the groove<sup class="cite"><a href="yoyo-gear.html#ref-42" aria-label="Source 42">[42]</a><a href="yoyo-gear.html#ref-29" aria-label="Source 29">[29]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#string">String</a></td><td data-label="Most players use">100% poly, type 8<sup class="cite"><a href="yoyo-gear.html#ref-53" aria-label="Source 53">[53]</a><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup></td><td data-label="Make it or save">Twist your own on a drill rig<sup class="cite"><a href="yoyo-gear.html#ref-36" aria-label="Source 36">[36]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#lube">Lube</a></td><td data-label="Most players use">Thin or thick yo-yo lube<sup class="cite"><a href="yoyo-gear.html#ref-50" aria-label="Source 50">[50]</a><a href="yoyo-gear.html#ref-51" aria-label="Source 51">[51]</a></sup></td><td data-label="Make it or save">Sewing machine oil or skate bearing lube<sup class="cite"><a href="yoyo-gear.html#ref-26" aria-label="Source 26">[26]</a><a href="yoyo-gear.html#ref-27" aria-label="Source 27">[27]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#cleaning">Bearing cleaner</a></td><td data-label="Most players use">Mineral spirits or lighter fluid<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></td><td data-label="Make it or save">Adults only, with good ventilation<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#mods">Shims and spacers</a></td><td data-label="Most players use">Duncan Mod Spacers, printed shims<sup class="cite"><a href="yoyo-gear.html#ref-12" aria-label="Source 12">[12]</a><a href="yoyo-gear.html#ref-57" aria-label="Source 57">[57]</a></sup></td><td data-label="Make it or save">Cardboard or plastic shims<sup class="cite"><a href="yoyo-gear.html#ref-10" aria-label="Source 10">[10]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#counterweights">Counterweight</a></td><td data-label="Most players use">A 10&ndash;11g die or ball<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></td><td data-label="Make it or save">Drilled or grooved dice, a bouncy ball, or a 3D print<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a><a href="yoyo-gear.html#ref-102" aria-label="Source 102">[102]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#tools">Knot pick</a></td><td data-label="Most players use">Bearing tool or string picker<sup class="cite"><a href="yoyo-gear.html#ref-95" aria-label="Source 95">[95]</a><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></td><td data-label="Make it or save">Toothpick, bamboo needle, or a 3D-printed pick<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a><a href="yoyo-gear.html#ref-101" aria-label="Source 101">[101]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#cases">Holder</a></td><td data-label="Most players use">Clip holder or throw-strap<sup class="cite"><a href="yoyo-gear.html#ref-96" aria-label="Source 96">[96]</a><a href="yoyo-gear.html#ref-97" aria-label="Source 97">[97]</a></sup></td><td data-label="Make it or save">Paracord, a carabiner, and a drilled die<sup class="cite"><a href="yoyo-gear.html#ref-86" aria-label="Source 86">[86]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#cases">Case</a></td><td data-label="Most players use">Foam-lined yo-yo case<sup class="cite"><a href="yoyo-gear.html#ref-98" aria-label="Source 98">[98]</a><a href="yoyo-gear.html#ref-99" aria-label="Source 99">[99]</a></sup></td><td data-label="Make it or save">Mic or tool case with cut foam, or clean socks<sup class="cite"><a href="yoyo-gear.html#ref-88" aria-label="Source 88">[88]</a><a href="yoyo-gear.html#ref-89" aria-label="Source 89">[89]</a></sup></td></tr>
+            <tr><td data-label="Gear"><a href="yoyo-gear.html#polish">Polish</a></td><td data-label="Most players use">Monkeyfinger Buff<sup class="cite"><a href="yoyo-gear.html#ref-56" aria-label="Source 56">[56]</a></sup></td><td data-label="Make it or save">Mild dish soap and a soft cloth<sup class="cite"><a href="yoyo-gear.html#ref-38" aria-label="Source 38">[38]</a></sup></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="sci-note">No 3D printer? Many public libraries now have 3D printers you can use, often for free.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup> See <a href="yoyo-science.html#print-local">where to print in DC and NoVA</a>.</p>
       </article>
 
       <article id="basics" class="sci-sec">
@@ -237,8 +276,47 @@
         <p>Plastic is cheap and tough; aluminum is denser and smoother; bimetal yo-yos add steel or brass rims for more spin.<sup class="cite"><a href="yoyo-gear.html#ref-16" aria-label="Source 16">[16]</a></sup></p>
       </article>
 
-      <article id="bearings" class="sci-sec">
+      <article id="styles" class="sci-sec">
         <div class="sci-kicker">Part 2</div>
+        <h2 class="sci-title">Styles of Play and Their Gear</h2>
+        <p>Players group tricks into styles. A true style needs different equipment that makes new tricks possible, which is why each style has its own gear.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup> The World Yo-Yo Contest awards titles in five styles, 1A through 5A, plus Artistic Performance.<sup class="cite"><a href="yoyo-gear.html#ref-72" aria-label="Source 72">[72]</a></sup> Many smaller contests combine every style except 1A into one open division.<sup class="cite"><a href="yoyo-gear.html#ref-60" aria-label="Source 60">[60]</a></sup></p>
+        <h3>How the styles came to be</h3>
+        <ul class="mini-tl"><li><span>Classic</span> &ldquo;0A&rdquo; casually meant one-handed looping tricks, where beginners started before 1A, 2A, and beyond.</li><li><span>Late 1950s</span> Photos show demonstrators doing basic two-yo-yo tricks, like a sleeper in one hand and a trapeze in the other.</li><li><span>Late 1990s</span> Contests had only A and AA divisions. &ldquo;3A&rdquo; began as a joke extending the naming, and it stuck.</li><li><span>1997&ndash;98</span> The Henrys Viper&rsquo;s rubber shells help popularize offstring. Team Hyper Viper tours Japan with the Hyper Viper.</li><li><span>1998</span> Mark McBride debuts Velvet Rolls at the U.S. Nationals, starting modern 3A.</li><li><span>1999</span> Steve Brown debuts freehand (5A) at the Bay Area Classic, using a counterweight.</li><li><span>2000&ndash;02</span> Worlds holds an &ldquo;X&rdquo; division for tricks outside 1A and 2A.</li><li><span>2003</span> Worlds splits X into separate 3A, 4A, and 5A divisions.</li><li><span>2012</span> Ed Haponik throws one wooden fixed-axle yo-yo for the entire year.</li><li><span>2019</span> Haponik and others reclaim &ldquo;0A&rdquo; for modern responsive and fixed-axle play.</li></ul>
+        <p class="sci-note">Sources: Classic and 2019, Haponik&rsquo;s blog<sup class="cite"><a href="yoyo-gear.html#ref-75" aria-label="Source 75">[75]</a></sup>; late 1950s and 1990s, the YoYo Wiki<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup>; offstring<sup class="cite"><a href="yoyo-gear.html#ref-68" aria-label="Source 68">[68]</a><a href="yoyo-gear.html#ref-69" aria-label="Source 69">[69]</a></sup>; 3A<sup class="cite"><a href="yoyo-gear.html#ref-66" aria-label="Source 66">[66]</a></sup>; 5A<sup class="cite"><a href="yoyo-gear.html#ref-73" aria-label="Source 73">[73]</a></sup>; Worlds divisions<sup class="cite"><a href="yoyo-gear.html#ref-72" aria-label="Source 72">[72]</a></sup>; 2012<sup class="cite"><a href="yoyo-gear.html#ref-62" aria-label="Source 62">[62]</a><a href="yoyo-gear.html#ref-76" aria-label="Source 76">[76]</a></sup>.</p>
+        <div class="table-scroll">
+        <table class="sci-table stack-table">
+          <caption>The numbered styles and the gear each one uses</caption>
+          <thead><tr><th scope="col">Style</th><th scope="col">What it is</th><th scope="col">Typical gear</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Style"><strong>0A</strong><br/>Modern responsive</td><td data-label="What it is">One responsive yo-yo. Stalls, regens, stop-and-go&rsquo;s, kickflips, and shoot-the-moons, with stalls often in place of string-trick mounts.<sup class="cite"><a href="yoyo-gear.html#ref-75" aria-label="Source 75">[75]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></td><td data-label="Typical gear">A fixed-axle or responsive bearing yo-yo; a classic Duncan Butterfly is fixed axle.<sup class="cite"><a href="yoyo-gear.html#ref-61" aria-label="Source 61">[61]</a><a href="yoyo-gear.html#ref-78" aria-label="Source 78">[78]</a></sup> Cotton string suits responsive play.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup></td></tr>
+            <tr><td data-label="Style"><strong>1A</strong><br/>String tricks</td><td data-label="What it is">One yo-yo, string tricks. Advanced 1A yo-yos are unresponsive and return with a bind.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></td><td data-label="Typical gear">Wide gap, silicone response, poly string. See <a href="yoyo-gear.html#standard">the standard setup</a>.<sup class="cite"><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a><a href="yoyo-gear.html#ref-53" aria-label="Source 53">[53]</a></sup></td></tr>
+            <tr><td data-label="Style"><strong>2A</strong><br/>Two-handed looping</td><td data-label="What it is">Two responsive yo-yos in constant loops, hops, and around-the-worlds.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></td><td data-label="Typical gear">Classic or modified shapes weighted in the center; Yomega Fireballs are often modified for 2A.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a><a href="yoyo-gear.html#ref-70" aria-label="Source 70">[70]</a></sup> Thick lube adds response.<sup class="cite"><a href="yoyo-gear.html#ref-51" aria-label="Source 51">[51]</a></sup></td></tr>
+            <tr><td data-label="Style"><strong>3A</strong><br/>Two-handed string</td><td data-label="What it is">String tricks with two yo-yos. Mounts are called &ldquo;houses.&rdquo;<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></td><td data-label="Typical gear">Two unresponsive yo-yos. 3A tangles and dings more than any other style, so keep a knot pick handy.<sup class="cite"><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></td></tr>
+            <tr><td data-label="Style"><strong>4A</strong><br/>Offstring</td><td data-label="What it is">The string ties to your finger but not the yo-yo. You launch it and catch it on the string.<sup class="cite"><a href="yoyo-gear.html#ref-67" aria-label="Source 67">[67]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></td><td data-label="Typical gear">Flared yo-yos with wide gaps and rubber rims, or delrin, which bounces. Learn outdoors.<sup class="cite"><a href="yoyo-gear.html#ref-67" aria-label="Source 67">[67]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></td></tr>
+            <tr><td data-label="Style"><strong>5A</strong><br/>Freehand</td><td data-label="What it is">A counterweight replaces your finger at the end of the string.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></td><td data-label="Typical gear">An unresponsive yo-yo and a 10&ndash;11g counterweight. See <a href="yoyo-gear.html#counterweights">Counterweights</a>.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></td></tr>
+            <tr><td data-label="Style"><strong>AP</strong><br/>Artistic Performance</td><td data-label="What it is">A choreographed routine with any yo-yo or prop, judged on performance.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a><a href="yoyo-gear.html#ref-72" aria-label="Source 72">[72]</a></sup></td><td data-label="Typical gear">Anything that suits the routine.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <h3>0A: a style and a mindset</h3>
+        <p>Ed Haponik spent 2012 throwing only a single wooden fixed-axle yo-yo, the SPYY &ldquo;eH,&rdquo; a year that inspired many players to reconsider fixed axle.<sup class="cite"><a href="yoyo-gear.html#ref-62" aria-label="Source 62">[62]</a><a href="yoyo-gear.html#ref-76" aria-label="Source 76">[76]</a></sup> In 2019 he posted a short &ldquo;manifesto-esque&rdquo; text, first written for Doc Pop&rsquo;s <cite>Stringburn</cite> zine, that begins &ldquo;ups &amp; downs, throws &amp; catches, stops &amp; go&rsquo;s, sleepers &amp; stalls.&rdquo; In it he describes modern responsive and fixed-axle play taking back 0A &ldquo;not as a contest designation, but as a counterpoint or counterbalance.&rdquo;<sup class="cite"><a href="yoyo-gear.html#ref-75" aria-label="Source 75">[75]</a></sup> Bryan Figueroa and Haponik made a 0A logo, and the YoYoExpert forum keeps a dedicated 0A thread.<sup class="cite"><a href="yoyo-gear.html#ref-77" aria-label="Source 77">[77]</a><a href="yoyo-gear.html#ref-75" aria-label="Source 75">[75]</a></sup> Haponik has called it &ldquo;a yoyo style and a mindset.&rdquo;<sup class="cite"><a href="yoyo-gear.html#ref-78" aria-label="Source 78">[78]</a></sup></p>
+        <p>For short responsive tutorials, the YoYo Wiki points to the bandalores project, with Drew Tetz, Ed Haponik, Doctor Popular, and Kyle Nations.<sup class="cite"><a href="yoyo-gear.html#ref-61" aria-label="Source 61">[61]</a></sup></p>
+        <h3>Sub-styles worth knowing</h3>
+        <ul class="sci-list">
+          <li><strong>Slippery Eel:</strong> freehand without a counterweight. Its limits led Steve Brown to invent 5A.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>Doubles:</strong> two yo-yos on one hand, invented by Steve Brown in 1999 and popularized by Tommy Gun.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>Soloham:</strong> two offstring yo-yos in one hand, first shown by Takahiko Hasegawa in 1998 and scored within 4A.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>M&ouml;bius:</strong> tricks inside the opened slipknot on two fingers, created by Doctor Popular in 2000.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>Washing Machine, Go West, and Sumo:</strong> popping the yo-yo in and out of an untwisted string loop.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>Astro, Sliding Counterweight, and Double Dice:</strong> 5A with a second weight, or one that slides along the string.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>Doc-Pop style:</strong> 4A with a paper clip on the string as a light counterweight, a free way to try it.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>Tourniquet:</strong> the slipknot around the upper arm and a very long string, from Jensen Kimmitt in 2010.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+          <li><strong>Double Dragon:</strong> one yo-yo with two strings, one per hand, shown by Ky Zizan at the 2013 Worlds.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="bearings" class="sci-sec">
+        <div class="sci-kicker">Part 3</div>
         <h2 class="sci-title">Bearings</h2>
         <p>A ball bearing has an outer race, an inner race, and balls between them, usually eight, held in place by a cage. Thin shields and C-clips keep out dirt; many players remove the shields for easier cleaning.<sup class="cite"><a href="yoyo-gear.html#ref-4" aria-label="Source 4">[4]</a><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></p>
         <h3>History</h3>
@@ -269,7 +347,7 @@
       </article>
 
       <article id="cleaning" class="sci-sec">
-        <div class="sci-kicker">Part 3</div>
+        <div class="sci-kicker">Part 4</div>
         <h2 class="sci-title">Cleaning a Bearing</h2>
         <p>Clean a bearing when it gets noisy, gritty, or too responsive. New bearings are often lubricated to prevent rust, which can make them responsive until cleaned.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
         <div class="try-box">
@@ -293,7 +371,7 @@
       </article>
 
       <article id="lube" class="sci-sec">
-        <div class="sci-kicker">Part 4</div>
+        <div class="sci-kicker">Part 5</div>
         <h2 class="sci-title">Lube</h2>
         <p>Lube does <strong>not</strong> clean a bearing. It keeps it quiet and protected, and it is optional.<sup class="cite"><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a></sup> A dry bearing is the least responsive but noisier, wears faster, and can rust.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
         <ul class="sci-list">
@@ -314,7 +392,7 @@
       </article>
 
       <article id="response" class="sci-sec">
-        <div class="sci-kicker">Part 5</div>
+        <div class="sci-kicker">Part 6</div>
         <h2 class="sci-title">Response Pads and Silicone</h2>
         <p>The response system grabs the string so the yo-yo can wind back up. When pads wear out or fall out, the yo-yo slips and won&rsquo;t return cleanly.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
         <h3>History</h3>
@@ -348,7 +426,7 @@
       </article>
 
       <article id="string" class="sci-sec">
-        <div class="sci-kicker">Part 6</div>
+        <div class="sci-kicker">Part 7</div>
         <h2 class="sci-title">String</h2>
         <h3>Materials and history</h3>
         <ul class="sci-list">
@@ -381,8 +459,98 @@
         </ul>
       </article>
 
+      <article id="counterweights" class="sci-sec">
+        <div class="sci-kicker">Part 8</div>
+        <h2 class="sci-title">Counterweights (5A)</h2>
+        <p>A counterweight is a small weight tied to the end of the string where your finger would go. In freehand (5A) you throw it hand to hand, bounce it off your body, and wrap it around the yo-yo as part of the trick.<sup class="cite"><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></p>
+        <h3>History</h3>
+        <ul class="mini-tl"><li><span>1998</span> Slippery Eel, freehand with no weight, is popular with Team High Performance. Its limits push Steve Brown toward a counterweight.</li><li><span>1999</span> Brown debuts freehand at the Bay Area Classic, playing a Team Losi Cherry Bomb he helped design.</li><li><span>2000</span> Brown files a patent for a yo-yo with a fixed or sliding counterweight. It is assigned to Duncan&rsquo;s parent company, Flambeau.</li><li><span>2001</span> The Duncan Freehand, the first yo-yo made for 5A, ships with a red casino-style die, rounded and drilled for the string.</li><li><span>Later</span> Bouncy-ball counterweights arrive with yo-yos like the Throw Monkey.</li><li><span>2011</span> YoYoJam licenses Takeshi Dice, with a ball bearing inside to adjust string tension instantly and a small &ldquo;Astro&rdquo; bead.</li><li><span>2015</span> Jake Elliott&rsquo;s delrin UltraWeight, with an internal bearing, wins the World 5A title.</li><li><span>2020</span> The counterweight patent expires. Until then, other companies needed a license from Duncan.</li></ul>
+        <p class="sci-note">Sources: 1998, the YoYo Wiki<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup>; 1999, Wikipedia and the YoYo Wiki<sup class="cite"><a href="yoyo-gear.html#ref-73" aria-label="Source 73">[73]</a><a href="yoyo-gear.html#ref-65" aria-label="Source 65">[65]</a></sup>; 2000, the patent<sup class="cite"><a href="yoyo-gear.html#ref-74" aria-label="Source 74">[74]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup>; 2001, the Freehand 1<sup class="cite"><a href="yoyo-gear.html#ref-64" aria-label="Source 64">[64]</a><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a></sup>; later years through 2015, the YoYo Wiki<sup class="cite"><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a></sup>; 2020, Wikipedia<sup class="cite"><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a></sup>.</p>
+        <h3>How heavy?</h3>
+        <p>Most players like a counterweight about one-sixth the weight of the yo-yo, so a 60&ndash;70g yo-yo pairs with a 10&ndash;11g weight.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup> Steve Brown has been quoted favoring a 7-to-1 ratio.<sup class="cite"><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a></sup> Forum players put the typical range at 10&ndash;13g and 2&ndash;3cm across.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></p>
+        <h3>Dedicated products</h3>
+        <ul class="sci-list">
+          <li><strong>Duncan Double Dice:</strong> a small cube that slides inside a larger die shell, for regular or sliding play; 10.8g.<sup class="cite"><a href="yoyo-gear.html#ref-92" aria-label="Source 92">[92]</a></sup></li>
+          <li><strong>Candy Dice:</strong> designed by 5A pioneer Shingo Terada. A grooved design lets you switch between 5A and 1A without removing the string, and the Pro Comet adds a bearing for string tension.<sup class="cite"><a href="yoyo-gear.html#ref-93" aria-label="Source 93">[93]</a></sup></li>
+          <li><strong>Doc Pop Pawn:</strong> a simple machined plastic counterweight with a through-hole.<sup class="cite"><a href="yoyo-gear.html#ref-94" aria-label="Source 94">[94]</a></sup></li>
+        </ul>
+        <h3>DIY: dice, balls, and erasers</h3>
+        <div class="try-box">
+          <div class="try-label">Ask an Adult to Drill or File</div>
+          <p>Keep it simple and safe. Skip anything with sharp points or lips that can catch on string or clothing. Plain dice, erasers, and rubber balls are good starting points, and odd shapes make learning harder.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></p>
+        </div>
+        <ol class="sci-steps">
+          <li><strong>Pick a weight.</strong> Weigh dice before you drill; cheap bulk dice can be only 3&ndash;5.5g. A small digital scale helps.<sup class="cite"><a href="yoyo-gear.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Drill or groove it.</strong> Drill a hole through the die, or file a groove around its middle for the slipknot. One player has used a filed-groove die for 14 years without it slipping.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></li>
+          <li><strong>Mark first.</strong> Trace a line with a marker so you stay centered. File the edges first, then the flats, and go shallow all the way around before deepening the groove to your string&rsquo;s thickness.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></li>
+          <li><strong>Test it.</strong> A 20-sided game die came out about 10g after filing a groove. A d20 plus a d6 on one string reached 10&ndash;11g.<sup class="cite"><a href="yoyo-gear.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+        </ol>
+        <h3>DIY: 3D-printed counterweights</h3>
+        <ul class="sci-list">
+          <li>Free models are shared online, and your local library may have a 3D printer you can use for free.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></li>
+          <li>Examples on Printables include a <a href="https://www.printables.com/model/1040116-lattice-cube-counterweight-for-yoyo-5a" target="_blank" rel="noopener noreferrer">Lattice Cube</a> with a shock-absorbing lattice<sup class="cite"><a href="yoyo-gear.html#ref-102" aria-label="Source 102">[102]</a></sup> and a <a href="https://www.printables.com/model/514879-bath-duck-yoyo-5a-counterweight" target="_blank" rel="noopener noreferrer">Bath Duck</a>.<sup class="cite"><a href="yoyo-gear.html#ref-103" aria-label="Source 103">[103]</a></sup> Browse more under the <a href="https://www.printables.com/tag/yoyo" target="_blank" rel="noopener noreferrer">yoyo tag</a>.<sup class="cite"><a href="yoyo-gear.html#ref-104" aria-label="Source 104">[104]</a></sup></li>
+          <li><strong>Coloring prints:</strong> all-purpose dye works on printed counterweights. Permanent marker rubs off on your hands unless sealed.<sup class="cite"><a href="yoyo-gear.html#ref-81" aria-label="Source 81">[81]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="tools" class="sci-sec">
+        <div class="sci-kicker">Part 9</div>
+        <h2 class="sci-title">Knot Picks and Tools</h2>
+        <p>Knots that jam around the bearing are part of the hobby, especially in 3A.<sup class="cite"><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup> The easy fixes are to unscrew the yo-yo, or just put on a new string.<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></p>
+        <h3>Dedicated tools</h3>
+        <ul class="sci-list">
+          <li><strong>Duncan Yo-Tility Holster:</strong> a belt-loop holster that is also a bearing removal tool and string cutter.<sup class="cite"><a href="yoyo-gear.html#ref-95" aria-label="Source 95">[95]</a></sup></li>
+          <li><strong>Bearing removal tools</strong> pull a bearing without scratching it.<sup class="cite"><a href="yoyo-gear.html#ref-58" aria-label="Source 58">[58]</a></sup> Some pocket multitools add a hex key and a pick.<sup class="cite"><a href="yoyo-gear.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+          <li><strong>String pickers</strong> from yo-yo brands are popular, though some are too thick for narrow fixed-axle gaps.<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></li>
+        </ul>
+        <h3>DIY and household picks</h3>
+        <ul class="sci-list">
+          <li><strong>Wooden toothpicks:</strong> cheap and disposable.<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a><a href="yoyo-gear.html#ref-83" aria-label="Source 83">[83]</a><a href="yoyo-gear.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+          <li><strong>The plastic toothpick</strong> from a Swiss Army knife.<sup class="cite"><a href="yoyo-gear.html#ref-83" aria-label="Source 83">[83]</a><a href="yoyo-gear.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+          <li><strong>Thin bamboo knitting needles</strong> (US 1, 2.25mm) for small gaps and fixed axles; also plastic yarn needles.<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></li>
+          <li><strong>A sewing seam ripper</strong>, thin enough for most gaps.<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></li>
+          <li><strong>Nylon zip ties</strong>, a 0.5mm mechanical pencil tip, or tweezers.<sup class="cite"><a href="yoyo-gear.html#ref-83" aria-label="Source 83">[83]</a><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></li>
+        </ul>
+        <p class="sci-note">Go easy with metal. Sharp needles and paper clips work, but players worry they will scratch anodized finishes. One maker uses soft aluminum wire for that reason.<sup class="cite"><a href="yoyo-gear.html#ref-84" aria-label="Source 84">[84]</a><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></p>
+        <h3>3D-printed picks and tools</h3>
+        <ul class="sci-list">
+          <li>A free <a href="https://www.printables.com/model/431605-yo-yo-string-pick" target="_blank" rel="noopener noreferrer">Yo-yo String Pick</a> on Printables has a hook for pulling up trapped string; the designer prefers it printed at 125% scale.<sup class="cite"><a href="yoyo-gear.html#ref-101" aria-label="Source 101">[101]</a></sup></li>
+          <li>One player shared a Tinkercad design that clips a printed knot pick to a bearing removal tool&rsquo;s keychain hole, for about a cent of filament.<sup class="cite"><a href="yoyo-gear.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
+          <li>A printable &ldquo;yo-yo string knotter&rdquo; ties slipknots at the same length every time, handy for 2A and 3A pairs.<sup class="cite"><a href="yoyo-gear.html#ref-107" aria-label="Source 107">[107]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="cases" class="sci-sec">
+        <div class="sci-kicker">Part 10</div>
+        <h2 class="sci-title">Cases and Holders</h2>
+        <h3>Holders and holsters</h3>
+        <ul class="sci-list">
+          <li><strong>Clip holders:</strong> a carabiner and elastic band clip a yo-yo to your bag or belt loop.<sup class="cite"><a href="yoyo-gear.html#ref-96" aria-label="Source 96">[96]</a></sup></li>
+          <li><strong>Throw-strap:</strong> a strap with a wooden bead and metal clasp, inspired by kendama and yo-yo holsters.<sup class="cite"><a href="yoyo-gear.html#ref-97" aria-label="Source 97">[97]</a></sup></li>
+          <li><strong>Utility holster:</strong> Duncan&rsquo;s Yo-Tility adds a bearing tool and string cutter.<sup class="cite"><a href="yoyo-gear.html#ref-95" aria-label="Source 95">[95]</a></sup></li>
+        </ul>
+        <h3>DIY: a paracord holder</h3>
+        <p>One player built a holder from a carabiner, paracord from a sporting goods store, and a drilled 12-sided die, for under $5 in materials. The top is a cobra stitch and the pouch is a sling weave.<sup class="cite"><a href="yoyo-gear.html#ref-86" aria-label="Source 86">[86]</a></sup> Cobra knots take only a few minutes to learn from video tutorials.<sup class="cite"><a href="yoyo-gear.html#ref-87" aria-label="Source 87">[87]</a></sup> Another player paired a carabiner with a begleri.<sup class="cite"><a href="yoyo-gear.html#ref-86" aria-label="Source 86">[86]</a></sup></p>
+        <h3>Cases</h3>
+        <ul class="sci-list">
+          <li><strong>Soft case:</strong> Duncan&rsquo;s bag (10 &times; 7.5 &times; 2.5 in) has foam channels for up to 12 yo-yos.<sup class="cite"><a href="yoyo-gear.html#ref-98" aria-label="Source 98">[98]</a></sup></li>
+          <li><strong>Hard case:</strong> the iYoYo case holds up to six yo-yos, plus a zippered pouch for parts and string.<sup class="cite"><a href="yoyo-gear.html#ref-99" aria-label="Source 99">[99]</a></sup></li>
+          <li><strong>Parts:</strong> the Capso box is 57mm across, sized to fit a case slot, for string, bearings, and pads.<sup class="cite"><a href="yoyo-gear.html#ref-100" aria-label="Source 100">[100]</a></sup></li>
+        </ul>
+        <h3>DIY cases</h3>
+        <ul class="sci-list">
+          <li><strong>Repurpose a hard case:</strong> players use microphone cases and Pelican-style cases, cutting yo-yo pockets in the foam.<sup class="cite"><a href="yoyo-gear.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
+          <li><strong>Cut clean circles:</strong> use the rim of a clean, cut-open deodorant can or a tomato paste can as a foam cutter.<sup class="cite"><a href="yoyo-gear.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
+          <li><strong>Divided storage boxes</strong> with packing foam cut to fit also work.<sup class="cite"><a href="yoyo-gear.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
+          <li><strong>Traveling light:</strong> put each yo-yo in a clean sock, or pack a clean chip can or tennis ball tube with foam between yo-yos.<sup class="cite"><a href="yoyo-gear.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
+          <li><strong>3D print it:</strong> one maker printed a foam-free case that holds yo-yos with stretchy cords.<sup class="cite"><a href="yoyo-gear.html#ref-90" aria-label="Source 90">[90]</a></sup> Thingiverse has a <a href="https://www.thingiverse.com/thing:4056665" target="_blank" rel="noopener noreferrer">Yo-Yo Holder</a> that doubles as a display, and two print together into a case.<sup class="cite"><a href="yoyo-gear.html#ref-105" aria-label="Source 105">[105]</a></sup> Browse more under the <a href="https://www.thingiverse.com/tag:yoyo_holder" target="_blank" rel="noopener noreferrer">yoyo holder tag</a>.<sup class="cite"><a href="yoyo-gear.html#ref-106" aria-label="Source 106">[106]</a></sup></li>
+          <li><strong>Display:</strong> a hanging sock organizer makes a wall display.<sup class="cite"><a href="yoyo-gear.html#ref-91" aria-label="Source 91">[91]</a></sup></li>
+        </ul>
+        <p class="sci-note">Before you buy a big case, Ed Haponik suggests asking how many yo-yos you really need to bring.<sup class="cite"><a href="yoyo-gear.html#ref-89" aria-label="Source 89">[89]</a></sup></p>
+      </article>
+
       <article id="mods" class="sci-sec">
-        <div class="sci-kicker">Part 7</div>
+        <div class="sci-kicker">Part 11</div>
         <h2 class="sci-title">Mods, Spacers, and Shims</h2>
         <p>Players have long modified stock yo-yos, and many mods became standard features later, like recessed response.<sup class="cite"><a href="yoyo-gear.html#ref-9" aria-label="Source 9">[9]</a></sup></p>
         <ul class="sci-list">
@@ -397,7 +565,7 @@
       </article>
 
       <article id="polish" class="sci-sec">
-        <div class="sci-kicker">Part 8</div>
+        <div class="sci-kicker">Part 12</div>
         <h2 class="sci-title">Cleaning, Polishing, and Dings</h2>
         <h3>Cleaning the body</h3>
         <p>Remove the axle and bearing, then wipe the yo-yo with a soft cloth, a drop of mild dish soap, and warm water. Rinse with a damp cloth and let it air dry.<sup class="cite"><a href="yoyo-gear.html#ref-38" aria-label="Source 38">[38]</a></sup> Monkeyfinger Buff brightens anodized finishes and leaves a slick surface for grinds.<sup class="cite"><a href="yoyo-gear.html#ref-56" aria-label="Source 56">[56]</a><a href="yoyo-gear.html#ref-38" aria-label="Source 38">[38]</a></sup></p>
@@ -414,7 +582,7 @@
       </article>
 
       <article id="troubleshooting" class="sci-sec">
-        <div class="sci-kicker">Part 9</div>
+        <div class="sci-kicker">Part 13</div>
         <h2 class="sci-title">Quick Troubleshooting</h2>
         <div class="table-scroll">
         <table class="sci-table">
@@ -493,6 +661,55 @@
           <li id="ref-56">YoYoExpert. &ldquo;Monkeyfinger Buff.&rdquo; <a href="https://shop.yoyoexpert.com/products/monkeyfinger-buff" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/monkeyfinger-buff</a></li>
           <li id="ref-57">YoYoExpert. &ldquo;3D Printed Shims&rdquo; (YJYoYo). <a href="https://shop.yoyoexpert.com/products/3d-printed-shims-by-yjyoyo" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/3d-printed-shims-by-yjyoyo</a></li>
           <li id="ref-58">YoYoExpert. &ldquo;YoYoFriends Bearing and Light Removal Tool.&rdquo; <a href="https://shop.yoyoexpert.com/products/yoyofriends-bearing-and-light-removal-tool" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/yoyofriends-bearing-and-light-removal-too&hellip;</a></li>
+          <li id="ref-59">YoYo Wiki. &ldquo;Styles Of Play.&rdquo; <a href="https://yoyo.fandom.com/wiki/Styles_Of_Play" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Styles_Of_Play</a></li>
+          <li id="ref-60">YoYo Wiki. &ldquo;Contest Divisions.&rdquo; <a href="https://yoyo.fandom.com/wiki/Contest_Divisions" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Contest_Divisions</a></li>
+          <li id="ref-61">YoYo Wiki. &ldquo;Modern Responsive.&rdquo; <a href="https://yoyo.fandom.com/wiki/Modern_Responsive" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Modern_Responsive</a></li>
+          <li id="ref-62">YoYo Wiki. &ldquo;Ed Haponik.&rdquo; <a href="https://yoyo.fandom.com/wiki/Ed_Haponik" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Ed_Haponik</a></li>
+          <li id="ref-63">YoYo Wiki. &ldquo;Counterweights.&rdquo; <a href="https://yoyo.fandom.com/wiki/Counterweights" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Counterweights</a></li>
+          <li id="ref-64">YoYo Wiki. &ldquo;Duncan Freehand 1.&rdquo; <a href="https://yoyo.fandom.com/wiki/Duncan_Freehand_1" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Duncan_Freehand_1</a></li>
+          <li id="ref-65">YoYo Wiki. &ldquo;Steve Brown.&rdquo; <a href="https://yoyo.fandom.com/wiki/Steve_Brown" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Steve_Brown</a></li>
+          <li id="ref-66">YoYo Wiki. &ldquo;Velvet Rolls.&rdquo; <a href="https://yoyo.fandom.com/wiki/Velvet_Rolls" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Velvet_Rolls</a></li>
+          <li id="ref-67">YoYo Wiki. &ldquo;Offstring.&rdquo; <a href="https://yoyo.fandom.com/wiki/Offstring" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Offstring</a></li>
+          <li id="ref-68">YoYo Wiki. &ldquo;Henrys Viper.&rdquo; <a href="https://yoyo.fandom.com/wiki/Henrys_Viper" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Henrys_Viper</a></li>
+          <li id="ref-69">YoYo Wiki. &ldquo;Team Hyper Viper.&rdquo; <a href="https://yoyo.fandom.com/wiki/Team_Hyper_Viper" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Team_Hyper_Viper</a></li>
+          <li id="ref-70">YoYo Wiki. &ldquo;Yomega Fireball.&rdquo; <a href="https://yoyo.fandom.com/wiki/Yomega_Fireball" target="_blank" rel="noopener noreferrer">yoyo.fandom.com/wiki/Yomega_Fireball</a></li>
+          <li id="ref-71">Wikipedia. &ldquo;Yo-yo&rdquo; (Styles section). <a href="https://en.wikipedia.org/wiki/Yo-yo#Styles" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Yo-yo#Styles</a></li>
+          <li id="ref-72">Wikipedia. &ldquo;World Yo-Yo Contest&rdquo; (divisions). <a href="https://en.wikipedia.org/wiki/World_Yo-Yo_Contest" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/World_Yo-Yo_Contest</a></li>
+          <li id="ref-73">Wikipedia. &ldquo;Steve Brown (yo-yo player).&rdquo; <a href="https://en.wikipedia.org/wiki/Steve_Brown_(yo-yo_player)" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Steve_Brown_(yo-yo_player)</a></li>
+          <li id="ref-74">Brown, Stephen D. &ldquo;Yo-yo and method for using a yo-yo.&rdquo; U.S. Patent 6,371,824 (filed 2000), assigned to Flambeau Products. <a href="https://patents.google.com/patent/US6371824B1/en" target="_blank" rel="noopener noreferrer">patents.google.com/patent/US6371824B1/en</a></li>
+          <li id="ref-75">Haponik, Ed. &ldquo;0a.&rdquo; <cite>ed [&hellip;]</cite> (blog), June 2019. <a href="http://kinopah.blogspot.com/2019/06/0a.html" target="_blank" rel="noopener noreferrer">http://kinopah.blogspot.com/2019/06/0a.html</a></li>
+          <li id="ref-76">Haponik, Ed. &ldquo;resolution.&rdquo; <cite>ed [&hellip;]</cite> (blog), December 31, 2011. <a href="http://kinopah.blogspot.com/2011/12/resolution.html" target="_blank" rel="noopener noreferrer">http://kinopah.blogspot.com/2011/12/resolution.html</a></li>
+          <li id="ref-77">YoYoExpert Forums. &ldquo;The 0A Thread (Fixed Axle &amp; Modern Responsive)&rdquo; (2019&ndash;). <a href="https://forums.yoyoexpert.com/t/the-0a-thread-fixed-axle-modern-responsive/304228" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/the-0a-thread-fixed-axle-modern-responsive/304&hellip;</a></li>
+          <li id="ref-78">YoYoExpert Forums. &ldquo;What exactly IS Fixed Axle/Modern Responsive?&rdquo; (2023). <a href="https://forums.yoyoexpert.com/t/what-exactly-is-fixed-axle-modern-responsive/385679" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/what-exactly-is-fixed-axle-modern-responsive/3&hellip;</a></li>
+          <li id="ref-79">YoYoExpert Forums. &ldquo;DIY 5A Counterweights?&rdquo; (2023). <a href="https://forums.yoyoexpert.com/t/diy-5a-counterweights/371696" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/diy-5a-counterweights/371696</a></li>
+          <li id="ref-80">YoYoExpert Forums. &ldquo;DIY Dice Counterweight Questions For You!&rdquo; (2025). <a href="https://forums.yoyoexpert.com/t/diy-dice-counterweight-questions-for-you/422822" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/diy-dice-counterweight-questions-for-you/42282&hellip;</a></li>
+          <li id="ref-81">YoYoExpert Forums. &ldquo;Coloring printed counterweights&rdquo; (2023). <a href="https://forums.yoyoexpert.com/t/coloring-printed-counterweights/370695" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/coloring-printed-counterweights/370695</a></li>
+          <li id="ref-82">YoYoExpert Forums. &ldquo;What is your favorite tool for knots?&rdquo; (2021). <a href="https://forums.yoyoexpert.com/t/what-is-your-favorite-tool-for-knots/334191" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/what-is-your-favorite-tool-for-knots/334191</a></li>
+          <li id="ref-83">YoYoExpert Forums. &ldquo;Perfect Knot Picking Tool&rdquo; (2024). <a href="https://forums.yoyoexpert.com/t/perfect-knot-picking-tool/411830" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/perfect-knot-picking-tool/411830</a></li>
+          <li id="ref-84">YoYoExpert Forums. &ldquo;Portable string pick/multitool recommendations?&rdquo; (2024). <a href="https://forums.yoyoexpert.com/t/portable-string-pick-multitool-recommendations/415763" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/portable-string-pick-multitool-recommendations&hellip;</a></li>
+          <li id="ref-85">YoYoExpert Forums. &ldquo;3d printed axle knot pick attachment&rdquo; (2026). <a href="https://forums.yoyoexpert.com/t/3d-printed-axle-knot-pick-attachment/442932" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/3d-printed-axle-knot-pick-attachment/442932</a></li>
+          <li id="ref-86">YoYoExpert Forums. &ldquo;DIY Paracord Yoyo Holder&rdquo; (2012). <a href="https://forums.yoyoexpert.com/t/diy-paracord-yoyo-holder/40115" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/diy-paracord-yoyo-holder/40115</a></li>
+          <li id="ref-87">YoYoExpert Forums. &ldquo;Paracord yoyo holster, thoughts?&rdquo; (2013). <a href="https://forums.yoyoexpert.com/t/paracord-yoyo-holster-thoughts/58583" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/paracord-yoyo-holster-thoughts/58583</a></li>
+          <li id="ref-88">YoYoExpert Forums. &ldquo;DIY Yoyo cases&rdquo; (2022). <a href="https://forums.yoyoexpert.com/t/diy-yoyo-cases/364427" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/diy-yoyo-cases/364427</a></li>
+          <li id="ref-89">YoYoExpert Forums. &ldquo;yoyo case alternatives??&rdquo; (2016). <a href="https://forums.yoyoexpert.com/t/yoyo-case-alternatives/79818" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/yoyo-case-alternatives/79818</a></li>
+          <li id="ref-90">YoYoExpert Forums. &ldquo;DIY Case without foam (incl. how to)&rdquo; (2021). <a href="https://forums.yoyoexpert.com/t/diy-case-without-foam-incl-how-to/344166" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/diy-case-without-foam-incl-how-to/344166</a></li>
+          <li id="ref-91">YoYoExpert Forums. &ldquo;Show us your coolest DIY yoyo related accessories&rdquo; (2024). <a href="https://forums.yoyoexpert.com/t/show-us-your-coolest-diy-yoyo-related-accessories/405744" target="_blank" rel="noopener noreferrer">forums.yoyoexpert.com/t/show-us-your-coolest-diy-yoyo-related-accessor&hellip;</a></li>
+          <li id="ref-92">YoYoExpert. &ldquo;Double Dice Counterweight&rdquo; (Duncan). <a href="https://shop.yoyoexpert.com/products/double-dice-yoyo-counterweight-by-duncan" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/double-dice-yoyo-counterweight-by-duncan</a></li>
+          <li id="ref-93">YoYoExpert. &ldquo;Candy Dice Pro Comet Counterweight.&rdquo; <a href="https://shop.yoyoexpert.com/products/candy-dice-pro-comet-counterweight" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/candy-dice-pro-comet-counterweight</a></li>
+          <li id="ref-94">YoYoExpert. &ldquo;Pawn Counterweight&rdquo; (Doc Pop). <a href="https://shop.yoyoexpert.com/products/pawn-counterweight-by-doc-pop" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/pawn-counterweight-by-doc-pop</a></li>
+          <li id="ref-95">YoYoExpert. &ldquo;Duncan Yo-Tility Holster.&rdquo; <a href="https://shop.yoyoexpert.com/products/duncan-yo-tility-holster" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/duncan-yo-tility-holster</a></li>
+          <li id="ref-96">YoYoExpert. &ldquo;YYF Yo-Yo Holder.&rdquo; <a href="https://shop.yoyoexpert.com/products/yoyofactory-yoyo-holder" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/yoyofactory-yoyo-holder</a></li>
+          <li id="ref-97">YoYoExpert. &ldquo;First Word Design Throw-Strap.&rdquo; <a href="https://shop.yoyoexpert.com/products/first-word-design-throw-strap" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/first-word-design-throw-strap</a></li>
+          <li id="ref-98">YoYoExpert. &ldquo;Duncan Yo-Yo Bag.&rdquo; <a href="https://shop.yoyoexpert.com/products/duncan-yoyo-bag" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/duncan-yoyo-bag</a></li>
+          <li id="ref-99">YoYoExpert. &ldquo;iYoYo Hard Case.&rdquo; <a href="https://shop.yoyoexpert.com/products/iyoyo-hard-case" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/iyoyo-hard-case</a></li>
+          <li id="ref-100">YoYoExpert. &ldquo;Capso Parts Case&rdquo; (Layer Infinity). <a href="https://shop.yoyoexpert.com/products/capso-parts-case-by-layer-infinity" target="_blank" rel="noopener noreferrer">shop.yoyoexpert.com/products/capso-parts-case-by-layer-infinity</a></li>
+          <li id="ref-101">Geddysburg. &ldquo;Yo-yo String Pick.&rdquo; Printables (free STL). <a href="https://www.printables.com/model/431605-yo-yo-string-pick" target="_blank" rel="noopener noreferrer">www.printables.com/model/431605-yo-yo-string-pick</a></li>
+          <li id="ref-102">fluo10. &ldquo;Lattice Cube Counterweight for Yoyo 5a.&rdquo; Printables (free STL). <a href="https://www.printables.com/model/1040116-lattice-cube-counterweight-for-yoyo-5a" target="_blank" rel="noopener noreferrer">www.printables.com/model/1040116-lattice-cube-counterweight-for-yoyo-5&hellip;</a></li>
+          <li id="ref-103">ivndbt. &ldquo;Bath Duck &ndash; YOYO 5A Counterweight.&rdquo; Printables (free STL). <a href="https://www.printables.com/model/514879-bath-duck-yoyo-5a-counterweight" target="_blank" rel="noopener noreferrer">www.printables.com/model/514879-bath-duck-yoyo-5a-counterweight</a></li>
+          <li id="ref-104">Printables. &ldquo;YOYO models for 3D printer&rdquo; (tag). <a href="https://www.printables.com/tag/yoyo" target="_blank" rel="noopener noreferrer">www.printables.com/tag/yoyo</a></li>
+          <li id="ref-105">DavH. &ldquo;Yo-Yo Holder.&rdquo; Thingiverse. <a href="https://www.thingiverse.com/thing:4056665" target="_blank" rel="noopener noreferrer">www.thingiverse.com/thing:4056665</a></li>
+          <li id="ref-106">Thingiverse. Things tagged &ldquo;Yoyo holder.&rdquo; <a href="https://www.thingiverse.com/tag:yoyo_holder" target="_blank" rel="noopener noreferrer">www.thingiverse.com/tag:yoyo_holder</a></li>
+          <li id="ref-107">Doctor Popular. &ldquo;A tool for making yo-yo slipknots?&rdquo; <cite>Doc Pop&rsquo;s Toys &amp; Games</cite>, August 4, 2023. <a href="https://doctorpopular.com/a-tool-for-making-slipknots/" target="_blank" rel="noopener noreferrer">doctorpopular.com/a-tool-for-making-slipknots/</a></li>
         </ol>
         <div class="sci-credit">Know a better tip or source? Email <a href="mailto:contact@dmvthrowers.club" class="text-red">contact@dmvthrowers.club</a>.</div>
       </section>
