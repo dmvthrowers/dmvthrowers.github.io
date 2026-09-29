@@ -197,6 +197,11 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
 .footer-link:hover { color: var(--red); }
 .footer-bottom { border-top: 1px solid #2a3a5a; padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .footer-copy { font-size: 0.75rem; color: var(--footer-copy); }
+/* The global nav rule (cream, sticky) is for the top bar only; reset it for footer navs. */
+footer nav { background: none; border: 0; padding: 0; position: static; will-change: auto; }
+.footer-guides { display: flex; flex-wrap: wrap; align-items: center; row-gap: 8px; margin-bottom: 20px; }
+.footer-guides-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; color: #C9A84C; margin-right: 6px; }
+.footer-guides .footer-link:first-of-type { margin-left: 4px; }
 /* footer brand text — two naming conventions used across pages */
 .footer-title, .footer-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: white; }
 .footer-subtitle, .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.16em; color: var(--footer-brand-sub); font-weight: 700; }
