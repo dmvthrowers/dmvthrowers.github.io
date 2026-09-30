@@ -2,7 +2,8 @@
 <!--
   vsyc26-rules.html — Contest ruleset for VSYC-26.
   Sections: top bar · contest nav · mobile menu · page hero · freestyle format · equipment · music · judging · footer.
-  Rules generally track IYYF/AYYA national guidelines — material changes should be announced before registration opens.
+  Rules track the National Yo-Yo League (NYYL) freestyle rules; scoring facts carry a Sources line linking the rule text.
+  The "How Scoring Worked" numbers must match VA-States (app/api/scores/route.ts and the vsyc_results view).
 -->
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
   <base href="/"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Rules · VSYC-26 · Brought to You by Goodles</title>
-  <meta name="description" content="VSYC-26 contest ruleset: freestyle format, equipment requirements, music guidelines, and judging criteria. IYYF/AYYA guidelines."/>
+  <meta name="description" content="VSYC-26 contest ruleset: freestyle format, equipment requirements, music guidelines, and judging criteria. Scored with National Yo-Yo League (NYYL) rules."/>
   <meta property="og:title" content="Rules · VSYC-26 · Brought to You by Goodles"/>
   <meta property="og:description" content="Contest ruleset: freestyle format, equipment, music, judging"/>
   <meta property="og:type" content="event"/>
@@ -40,8 +41,8 @@
   <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707" media="print" onload="this.media='all'"/>
-  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260707"/></noscript>
+  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20260930" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260930"/></noscript>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Rules","item":"https://dmvthrowers.club/vsyc26-rules.html"}]}
@@ -136,10 +137,11 @@
       <div class="rule-block">
         <div class="rule-block-title">FREESTYLE FORMAT</div>
         <ul class="rule-list">
-          <li>Freestyles follow NYYL/<a href="https://www.iyyf.org/rules" class="rules-link" target="_blank" rel="noopener noreferrer">IYYF</a> guidelines. <a href="https://yoyocontest.com/freestyle-rules-for-nyyl-events/" target="_blank" rel="noopener noreferrer" class="rules-link">view full NYYL ruleset</a></li>
+          <li>Freestyles follow the <a href="https://yoyocontest.com/freestyle-rules-for-nyyl-events/" target="_blank" rel="noopener noreferrer" class="rules-link">National Yo-Yo League (NYYL) freestyle rules</a>, the ruleset for U.S. contests. The <a href="https://iyyf.org/rules/" class="rules-link" target="_blank" rel="noopener noreferrer">IYYF</a> sets the rules for the World Yo-Yo Contest</li>
           <li>1A, X Division: 2-minute freestyle with music</li>
-          <li>Sport / Beginner / Junior (single combined division): 90-second format, no negative clickers, low-pressure division</li>
-          <li>No profanity or offensive content in music. Disqualification applies</li>
+          <li>Sport / Beginner / Junior (single combined division): 90-second format, no negative clicks, no major deductions, low-pressure division</li>
+          <li>NYYL lets organizers pick routine lengths and rounds to fit the field and the day. Its own defaults are 1 minute for Sport and a 3-minute 1A final</li>
+          <li>Music must be appropriate for all audiences. No profanity, slurs, or explicit themes. Inappropriate music means disqualification</li>
         </ul>
       </div>
       <div class="rule-block">
@@ -153,7 +155,7 @@
       <div class="rule-block">
         <div class="rule-block-title">MUSIC & PERFORMANCE</div>
         <ul class="rule-list">
-          <li>Music files due by Thursday, September 17. Late uploads accepted until then</li>
+          <li>Music files were due by Thursday, September 17</li>
           <li>File format: MP3, named DIVISION_Last_First.mp3</li>
           <li>No live music. Pre-recorded tracks only</li>
           <li>Competitors must be ready when called. Missing your slot forfeits your spot</li>
@@ -162,8 +164,8 @@
       <div class="rule-block">
         <div class="rule-block-title">JUDGING & CONDUCT</div>
         <ul class="rule-list">
-          <li>Judging follows NYYL scoring criteria. <a href="https://yoyocontest.com/freestyle-rules-for-nyyl-events/" target="_blank" rel="noopener noreferrer" class="rules-link">view full ruleset</a></li>
-          <li>Judge decisions are final</li>
+          <li>Judging follows NYYL scoring criteria. <a href="vsyc26-rules.html#scoring" class="rules-link">See how scoring worked below</a></li>
+          <li>Judge decisions are final. NYYL rules make the head judge and contest organizer the final word</li>
           <li>Respectful conduct required. Unsportsmanlike behavior may result in disqualification</li>
           <li>Couch judging welcome. Use the <a href="https://apps.apple.com/us/app/yoyo-pro-clicker/id6757318886" target="_blank" rel="noopener noreferrer" class="rules-link">YoYo Pro Clicker app →</a> (built by Joseph, <a href="https://instagram.com/jo.vo.007" target="_blank" rel="noopener noreferrer" class="rules-link">@jo.vo.007</a>) to track deductions along with our official judges</li>
           <li>All competitors and attendees are expected to follow the <a href="code-of-conduct.html" class="rules-link">DMV Throwers Code of Conduct →</a></li>
@@ -173,8 +175,117 @@
       </div>
     </div>
     <div class="rules-note">
-      <p class="rules-p">★ Full detailed ruleset will be distributed to registered competitors closer to the event date. Rulesets and competition rules may be modified up to one month prior to the event. Questions? Email <a href="mailto:vastateyoyocontest@gmail.com" class="rules-link">vastateyoyocontest@gmail.com</a></p>
+      <p class="rules-p">★ These are the rules VSYC-26 ran under on September 19, 2026. Rules for the next contest will be posted here before registration opens. Questions? Email <a href="mailto:vastateyoyocontest@gmail.com" class="rules-link">vastateyoyocontest@gmail.com</a></p>
     </div>
+    <p class="vsyc-sources"><span>Sources:</span> <a href="https://yoyocontest.com/freestyle-rules-for-nyyl-events/" target="_blank" rel="noopener noreferrer">NYYL: Freestyle Rules for NYYL Events</a> &middot; <a href="https://iyyf.org/rules/" target="_blank" rel="noopener noreferrer">IYYF: Contest Rules</a></p>
+  </div>
+</div>
+
+<!-- How scoring worked. Numbers mirror VA-States: TE caps and eval scales in app/api/scores/route.ts,
+     SBJ /20 eval scale in migration 0023, per-judge normalization in the vsyc_results view. -->
+<div class="section-wrap" id="scoring">
+  <div class="section">
+    <div class="gold-tag">JUDGING</div>
+    <h2 class="section-title">How Scoring Worked</h2>
+    <div class="divider-gold"></div>
+    <p class="sponsor-p">Every routine got two scores: Technical Execution from clickers, and a Routine Evaluation in four categories. Major deductions came off the top. Here is how each piece worked at VSYC-26.</p>
+    <div class="ruleset-grid">
+      <div class="rule-block">
+        <div class="rule-block-title">POINTS BY DIVISION</div>
+        <ul class="rule-list">
+          <li><strong>1A and X Division:</strong> Technical Execution 60 + Routine Evaluation 40 (four categories, 10 each) = 100</li>
+          <li><strong>Sport / Beginner / Junior:</strong> Technical Execution 20 + Routine Evaluation 80 (four categories, 20 each) = 100. Sport is weighted toward presentation, not trick count</li>
+          <li>Your final score is the average of your scores across the judging panel</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <div class="rule-block-title">TECHNICAL EXECUTION (CLICKERS)</div>
+        <ul class="rule-list">
+          <li>Each judge holds two hand tally counters: one for landed elements, one for misses</li>
+          <li>One click for a hard but low-risk element, like an Eli hop, laceration, or iron whip in 1A. Riskier variants, like a multi-hook, earn more</li>
+          <li>Repeats score less or nothing. Six Eli hops in a row score once</li>
+          <li>No clicks for moves that don&rsquo;t show yo-yo skill, like picture tricks</li>
+          <li>Sport / Beginner / Junior uses no negative clicks</li>
+          <li><strong>Normalization:</strong> each judge&rsquo;s top raw score becomes the full 60 (20 in Sport / Beginner / Junior), and everyone else scales against it. That keeps one generous judge from swinging the result</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <div class="rule-block-title">ROUTINE EVALUATION</div>
+        <ul class="rule-list">
+          <li><strong>Trick Presentation:</strong> mastery of your tricks and the style you show them in. Not your miss count or trick variety</li>
+          <li><strong>Performance Quality:</strong> professionalism, stage use, and how you play to the audience</li>
+          <li><strong>Musicality:</strong> hitting music cues and pacing tricks to the song</li>
+          <li><strong>Routine Construction:</strong> trick selection and order, and how tricks, music, and performance fit together</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <div class="rule-block-title">MAJOR DEDUCTIONS (1A &amp; X)</div>
+        <ul class="rule-list">
+          <li><strong>Stop, &minus;1:</strong> the yo-yo stops with the string fully unwound</li>
+          <li><strong>Discard, &minus;3:</strong> you swap out a yo-yo, or can&rsquo;t bring it back to your hand fully wound when the routine ends</li>
+          <li><strong>Detach, &minus;5:</strong> the yo-yo comes off the string (except 4A), the string breaks, or the yo-yo comes apart</li>
+          <li>With two yo-yos, deductions count per yo-yo</li>
+          <li>A yo-yo that flies into the audience behind the judges&rsquo; table can mean disqualification</li>
+          <li>Sport / Beginner / Junior has no major deductions</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rules-note">
+      <p class="rules-p">★ <strong>X Division:</strong> VSYC-26 follows NYYL rules, so X Division clicker scores are multiplied by style before normalization. Some styles tend to score higher, and the multiplier levels the field: 2A &times;1.40, 3A &times;1.50, 4A &times;1.30, 5A &times;1.60. NYYL rules are the source of truth for anything this page doesn&rsquo;t cover. The <a href="https://drive.google.com/drive/folders/1K-sFb0YOjgnVcvtr4EryiwZAeXq7s6ho" target="_blank" rel="noopener noreferrer" class="rules-link">raw judge scoring sheets</a> show every VSYC-26 score as it was tallied. See it in action on the <a href="vsyc26-results.html" class="rules-link">results page</a>, or read the full explainer on <a href="learn-yoyo.html#contests" class="rules-link">How to Yo-Yo</a>.</p>
+    </div>
+    <p class="vsyc-sources"><span>Sources:</span> <a href="https://yoyocontest.com/freestyle-rules-for-nyyl-events/" target="_blank" rel="noopener noreferrer">NYYL: Freestyle Rules for NYYL Events</a> (clicker scoring, normalization, routine scoring, major deductions, X Division, Sport) &middot; <a href="https://compete.yoyocontest.com/results/2026-virginia-state-yo-yo-contest" target="_blank" rel="noopener noreferrer">NYYL results archive: 2026 Virginia State Yo-Yo Contest</a></p>
+  </div>
+</div>
+
+<!-- Looking ahead. VSYC is annual and is realigning with NYYL rules; NYYL is the source of truth.
+     Update this comparison when the next contest's rules are set. -->
+<div class="section-wrap bg-navy" id="nyyl">
+  <div class="section">
+    <div class="gold-tag">LOOKING AHEAD</div>
+    <h2 class="section-title">Lining Up With NYYL</h2>
+    <div class="divider-gold"></div>
+    <p class="sponsor-p">VSYC is an annual contest, and future contests will follow the NYYL freestyle rules more closely. When this page and the NYYL rules disagree, NYYL wins. Here is how VSYC-26 compared, so you know what may change.</p>
+    <div class="ruleset-grid">
+      <div class="rule-block">
+        <div class="rule-block-title">ALREADY MATCHED NYYL AT VSYC-26</div>
+        <ul class="rule-list">
+          <li>Clicker scoring with per-judge normalization</li>
+          <li>Four evaluation categories: Trick Presentation, Performance Quality, Musicality, Routine Construction</li>
+          <li>Major deductions: stop &minus;1, discard &minus;3, detach &minus;5, counted per yo-yo</li>
+          <li>X Division style multipliers on clicker scores</li>
+          <li>Sport scoring: 20 Technical Execution + 80 evaluation, no negative clicks, no deductions</li>
+          <li>Music appropriate for all audiences</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <div class="rule-block-title">ROUTINE LENGTH &amp; ROUNDS</div>
+        <ul class="rule-list">
+          <li><strong>VSYC-26:</strong> one 2-minute freestyle for everyone in 1A and X. No prelims</li>
+          <li><strong>NYYL 1A Championship:</strong> 1-minute prelim and 3-minute final at regionals. Nationals adds a 1.5-minute semifinal. Organizers can skip the prelim with fewer than 10 players</li>
+          <li><strong>NYYL X Division:</strong> prelim, then final</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <div class="rule-block-title">SPORT &amp; YOUTH</div>
+        <ul class="rule-list">
+          <li><strong>VSYC-26:</strong> one combined Sport / Beginner / Junior division, 90 seconds</li>
+          <li><strong>NYYL Sport Freestyle:</strong> 1 minute, split into age divisions, with Sport 1A and Sport X held separately</li>
+          <li><strong>NYYL Youth Advanced 1A:</strong> for 1A players 17 and under, one 90-second round scored like a 1A prelim (70 + 30)</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <div class="rule-block-title">SPECIAL DIVISIONS</div>
+        <ul class="rule-list">
+          <li>NYYL describes Over 40, Women&rsquo;s, and International divisions, held mostly at the U.S. Nationals</li>
+          <li>Over 40 players can pick any style, 1A to 5A. You can enter Women&rsquo;s and a championship division</li>
+          <li>VSYC-26 didn&rsquo;t offer these. Several of you asked for Over 40 and Duo divisions in the survey</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rules-note">
+      <p class="rules-p">★ Rules for the next contest will be posted here before registration opens. Want a say? <a href="vsyc26.html#heard" class="rules-link">See what competitors told us</a>, or <a href="https://register.dmvthrowers.club/feedback?src=direct" class="rules-link">take the survey</a>.</p>
+    </div>
+    <p class="vsyc-sources"><span>Sources:</span> <a href="https://yoyocontest.com/freestyle-rules-for-nyyl-events/" target="_blank" rel="noopener noreferrer">NYYL: Freestyle Rules for NYYL Events</a> (division and round comparison, Sport, Youth Advanced, X Division, non-championship divisions) &middot; VSYC-26 post-event survey (25 responses as of Sept. 30, 2026)</p>
   </div>
 </div>
 
@@ -184,7 +295,7 @@
     <div class="gold-tag">GUEST EVENT</div>
     <h2 class="section-title">Stella Duellum · Prismatic Stars</h2>
     <div class="divider-gold"></div>
-    <p class="sponsor-p">Stella Duellum, hosted by <a href="https://www.twitch.tv/Anneurismz" target="_blank" rel="noopener noreferrer" class="rules-link">Anneurismz</a> for <a href="https://www.prismaticstars.com/" target="_blank" rel="noopener noreferrer" class="rules-link">Prismatic Stars</a>, runs separately at 12:00 PM, with its own sign-up and its own ruleset. It is not part of the contest divisions above.</p>
+    <p class="sponsor-p">Stella Duellum, hosted by <a href="https://www.twitch.tv/Anneurismz" target="_blank" rel="noopener noreferrer" class="rules-link">Anneurismz</a> for <a href="https://www.prismaticstars.com/" target="_blank" rel="noopener noreferrer" class="rules-link">Prismatic Stars</a>, ran separately at 12:00 PM, with its own sign-up and its own ruleset. It was not part of the contest divisions above.</p>
     <div class="btns-flex">
       <a href="vsyc26-dueling-stars.html" class="btn btn-outline btn-small2">STELLA DUELLUM RULES &amp; SIGN-UP →</a>
     </div>
