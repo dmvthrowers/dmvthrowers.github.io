@@ -14,5 +14,5 @@ jobs:
         # v3 renamed these inputs to snake_case. Kebab-case is silently
         # ignored and the action then fails on the missing required input.
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        issue_message: "Thanks for opening your first issue here. This site is run by volunteers at the DMV Throwers Yo-Yo & Skill Toy Club, so give us a little time to get back to you. If this is about an event or your registration, email dmvthrowers@gmail.com — that reaches us faster."
+        issue_message: "Thanks for opening your first issue here. This site is run by volunteers at the DMV Throwers Yo-Yo & Skill Toy Club, so give us a little time to get back to you. If this is about an event or your registration, email contact@dmvthrowers.club — that reaches us faster."
         pr_message: "Thanks for your first pull request. DMV Throwers is an all-volunteer club and we appreciate the help. A maintainer will review this when they can. Heads up that the site is hand-maintained static HTML with no build step, so please keep changes to the existing patterns — details are in CLAUDE.md."
