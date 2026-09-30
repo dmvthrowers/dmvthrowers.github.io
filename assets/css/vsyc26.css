@@ -434,3 +434,9 @@ p.schedule-note { margin-top: 16px; }
   .footer-title, .footer-copy { color: #333; }
   a { color: #000; text-decoration: underline; }
 }
+
+/* Sources line under contest facts (mirrors .era-sources on the main site). Sharp corners, no shadows. */
+.vsyc-sources { margin-top: 20px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; overflow-wrap: anywhere; max-width: 900px; }
+.vsyc-sources span { font-weight: 800; letter-spacing: 0.16em; font-size: 0.65rem; color: var(--gold); text-transform: uppercase; }
+.vsyc-sources a { color: var(--gold); }
+.faq-source { display: inline-block; margin-top: 8px; font-size: 0.78rem; }
