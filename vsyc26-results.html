@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Results · VSYC-26 · Brought to You by Goodles</title>
   <meta name="description" content="VSYC-26 final results: division champions and Virginia State Champions for X Division, 1A, and Sport/Beginner/Junior. September 19, 2026 at Dulles Town Center."/>
   <meta property="og:title" content="Results · VSYC-26 · Brought to You by Goodles"/>
@@ -45,6 +45,15 @@
   <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260930"/></noscript>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
+    /* Click-to-play finals videos: the YouTube iframe is only created after a click */
+    .vid-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }
+    .vid-embed { border: 1px solid var(--gold); background: var(--navy-deep); min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 16px; text-align: center; }
+    .vid-embed.playing { aspect-ratio: 16 / 9; min-height: 0; padding: 0; }
+    .vid-embed iframe { width: 100%; height: 100%; border: 0; }
+    .vid-embed .vid-title { color: var(--white); font-size: 0.95rem; font-weight: 600; }
+    .vid-play { background: var(--gold); color: var(--navy-deep); border: 0; font-weight: 700; letter-spacing: 0.08em; font-size: 0.8rem; padding: 10px 18px; cursor: pointer; }
+    .vid-embed .vid-note { color: rgba(255,255,255,0.75); font-size: 0.75rem; }
+    .vid-embed .vid-note a { color: var(--white); text-decoration: underline; }
     /* Social links on winners with a public profile. Page-specific: not reused elsewhere yet. */
     .social-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
     .social-link { font-size: 0.64rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 9px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; }
@@ -263,6 +272,7 @@
     <div class="note-style">
       <span class="note-span"><strong class="strong-white">VA State Champion: Bryant Baus</strong> · Virginia Beach, VA · 48.48 pts · 13th overall</span>
     </div>
+    <div class="vid-row"><div class="vid-embed" data-yt="HR3JGZqPU1A"><span class="vid-title">Ryan Kim · 1st place, 1A final</span><button type="button" class="vid-play" aria-label="Play video: Ryan Kim · 1st place, 1A final">PLAY VIDEO</button><span class="vid-note">From YoYo Contest Central. Nothing loads from YouTube until you press play. <a href="https://www.youtube.com/watch?v=HR3JGZqPU1A" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></span></div><div class="vid-embed" data-yt="YFuNwEWaCGg"><span class="vid-title">Bryant Baus · VA State Champion, 1A</span><button type="button" class="vid-play" aria-label="Play video: Bryant Baus · VA State Champion, 1A">PLAY VIDEO</button><span class="vid-note">From YoYo Contest Central. Nothing loads from YouTube until you press play. <a href="https://www.youtube.com/watch?v=YFuNwEWaCGg" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></span></div></div>
     <p style="margin-top: 16px;"><a href="https://www.youtube.com/playlist?list=PLXWgXdP6WcDk" target="_blank" rel="noopener noreferrer" class="rules-link">Watch every 1A finals run →</a></p>
   </div>
 </div>
@@ -311,6 +321,7 @@
         <a href="https://instagram.com/curfmoney" target="_blank" rel="noopener noreferrer" class="social-link" style="margin-left: 0.5rem;">Instagram ↗</a>
       </span>
     </div>
+    <div class="vid-row"><div class="vid-embed" data-yt="lV-TtA8M_0k"><span class="vid-title">Chandler Steele · 1st place, X Division</span><button type="button" class="vid-play" aria-label="Play video: Chandler Steele · 1st place, X Division">PLAY VIDEO</button><span class="vid-note">From YoYo Contest Central. Nothing loads from YouTube until you press play. <a href="https://www.youtube.com/watch?v=lV-TtA8M_0k" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></span></div><div class="vid-embed" data-yt="QyIUahI3wao"><span class="vid-title">Alex Curfman · VA State Champion, X Division</span><button type="button" class="vid-play" aria-label="Play video: Alex Curfman · VA State Champion, X Division">PLAY VIDEO</button><span class="vid-note">From YoYo Contest Central. Nothing loads from YouTube until you press play. <a href="https://www.youtube.com/watch?v=QyIUahI3wao" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></span></div></div>
     <p style="margin-top: 16px;"><a href="https://www.youtube.com/playlist?list=PLL-WART552LE" target="_blank" rel="noopener noreferrer" class="rules-link">Watch every X Division run →</a></p>
   </div>
 </div>
@@ -574,6 +585,18 @@
   }
 </script>
   <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script>
+  // Click-to-play: the YouTube iframe is only created after the visitor presses play.
+  document.querySelectorAll('.vid-embed .vid-play').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var w = b.closest('.vid-embed'), f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + w.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = w.querySelector('.vid-title').textContent;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+      w.innerHTML = ''; w.classList.add('playing'); w.appendChild(f);
+    });
+  });
+</script>
   <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>
