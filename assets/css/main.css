@@ -243,6 +243,11 @@ footer nav { background: none; border: 0; padding: 0; position: static; will-cha
 .stat-num { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 2.5rem; color: var(--navy); line-height: 1; margin-bottom: 0.25rem; }
 .stat-label { font-size: 0.78rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
 
+/* Real club photo under the stats grid (index + about) */
+.about-photo { margin: 16px 0 0; border: 1px solid var(--border); background: white; }
+.about-photo img { display: block; width: 100%; height: auto; }
+.about-photo figcaption { font-size: 0.85rem; color: var(--text-muted); padding: 10px 14px; }
+
 /* Club document download card */
 .doc-card { display: flex; gap: 20px; align-items: flex-start; background: white; border: 1px solid var(--border); border-left: 4px solid var(--navy); padding: 24px; margin-bottom: 24px; }
 .doc-card-icon { font-size: 2rem; flex-shrink: 0; }
