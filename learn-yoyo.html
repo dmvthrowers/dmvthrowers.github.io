@@ -124,6 +124,16 @@
     .trick-list { columns: 2; column-gap: 28px; padding-left: 34px; margin: 8px 0 18px; }
     .trick-list li { padding: 3px 0; break-inside: avoid; line-height: 1.5; color: var(--text-body); }
     @media (max-width: 600px) { .trick-list { columns: 1; } }
+    /* Sub-page index (the guide is split across several pages) */
+    .guide-parts { margin: 16px 0 8px; padding: 16px 20px; border: 1px solid var(--border); border-left: 4px solid var(--navy); background: white; }
+    .guide-parts-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+    .guide-parts-list { margin: 0; padding-left: 22px; }
+    .guide-parts-list li { padding: 4px 0; }
+    .guide-parts-list a { color: var(--navy); font-weight: 700; }
+    .guide-parts-list a[aria-current] { color: var(--red); }
+    .guide-parts-list span { display: block; font-size: 0.85rem; color: var(--text-muted); }
+    .guide-pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .guide-pager a { color: var(--navy); font-weight: 700; }
   </style>
 
 </head>
@@ -218,444 +228,35 @@
     <div class="sci-wrap">
       <p class="sci-intro">New to yo-yo? Start here. This page walks you through stringing, winding, throwing, and your first tricks, gives you a 100-trick path with a free video or guide for each one, shows where to keep learning after that, and tells the story of how tricks evolved. There are a lot of great teachers out there, so we point you to them. Every trick name links to a tutorial.</p>
       <p class="sci-note">Learning is faster in person. Come to a <a href="events.html">meetup</a>. Loaners are provided, all ages, all levels, always free.</p>
+      <nav class="guide-parts" aria-label="How to Yo-Yo sections">
+        <div class="guide-parts-label">THIS GUIDE IN 4 PARTS</div>
+        <ol class="guide-parts-list">
+          <li><a href="learn-yoyo-basics.html">Getting Started</a><span>Responsive or Unresponsive? &middot; String It Up &middot; Wind, Throw, and Sleep &middot; String Tension &middot; Your First Tricks</span></li>
+          <li><a href="learn-yoyo-tricks.html">The First 100 Tricks</a><span>The First 100 Tricks &middot; A Contest-Tested Ladder</span></li>
+          <li><a href="learn-yoyo-practice.html">Practice and Contests</a><span>Practice, Play Healthy, and Everyone Can Throw &middot; Contests and Judging</span></li>
+          <li><a href="learn-yoyo-beyond.html">Beyond the Basics</a><span>Keep Learning: Beyond the First 100 &middot; Make Your Own Tricks &middot; How Tricks Evolved &middot; Tips from Experienced Players &middot; Where to Learn More</span></li>
+        </ol>
+      </nav>
       <ol class="sci-toc">
-        <li><a href="learn-yoyo.html#types">Responsive or Unresponsive?</a></li>
-        <li><a href="learn-yoyo.html#string">String It Up</a></li>
-        <li><a href="learn-yoyo.html#throw">Wind, Throw, and Sleep</a></li>
-        <li><a href="learn-yoyo.html#tension">String Tension</a></li>
-        <li><a href="learn-yoyo.html#first">Your First Tricks</a></li>
-        <li><a href="learn-yoyo.html#first100">The First 100 Tricks</a></li>
-        <li><a href="learn-yoyo.html#ladder">A Contest-Tested Ladder</a></li>
-        <li><a href="learn-yoyo.html#practice">Practice, Play Healthy, and Everyone Can Throw</a></li>
-        <li><a href="learn-yoyo.html#contests">Contests and Judging</a></li>
-        <li><a href="learn-yoyo.html#beyond">Keep Learning: Beyond the First 100</a></li>
-        <li><a href="learn-yoyo.html#create">Make Your Own Tricks</a></li>
-        <li><a href="learn-yoyo.html#evolution">How Tricks Evolved</a></li>
-        <li><a href="learn-yoyo.html#tips">Tips from Experienced Players</a></li>
-        <li><a href="learn-yoyo.html#more">Where to Learn More</a></li>
+        <li><a href="learn-yoyo-basics.html#types">Responsive or Unresponsive?</a></li>
+        <li><a href="learn-yoyo-basics.html#string">String It Up</a></li>
+        <li><a href="learn-yoyo-basics.html#throw">Wind, Throw, and Sleep</a></li>
+        <li><a href="learn-yoyo-basics.html#tension">String Tension</a></li>
+        <li><a href="learn-yoyo-basics.html#first">Your First Tricks</a></li>
+        <li><a href="learn-yoyo-tricks.html#first100">The First 100 Tricks</a></li>
+        <li><a href="learn-yoyo-tricks.html#ladder">A Contest-Tested Ladder</a></li>
+        <li><a href="learn-yoyo-practice.html#practice">Practice, Play Healthy, and Everyone Can Throw</a></li>
+        <li><a href="learn-yoyo-practice.html#contests">Contests and Judging</a></li>
+        <li><a href="learn-yoyo-beyond.html#beyond">Keep Learning: Beyond the First 100</a></li>
+        <li><a href="learn-yoyo-beyond.html#create">Make Your Own Tricks</a></li>
+        <li><a href="learn-yoyo-beyond.html#evolution">How Tricks Evolved</a></li>
+        <li><a href="learn-yoyo-beyond.html#tips">Tips from Experienced Players</a></li>
+        <li><a href="learn-yoyo-beyond.html#more">Where to Learn More</a></li>
         <li><a href="learn-yoyo.html#glossary">Glossary</a></li>
         <li><a href="learn-yoyo.html#references">References</a></li>
       </ol>
 
-      <article id="types" class="sci-sec">
-        <div class="sci-kicker">Part 1</div>
-        <h2 class="sci-title">Responsive or Unresponsive?</h2>
-        <ul class="sci-list">
-          <li><strong>Responsive:</strong> comes back with a tug. Start here. Classic tricks like Walk the Dog, Rock the Baby, and looping all use a responsive yo-yo.<sup class="cite"><a href="learn-yoyo.html#ref-25" aria-label="Source 25">[25]</a><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
-          <li><strong>Unresponsive:</strong> a wider gap and silicone pads let it spin at the end of the string without coming back, even with slack. You return it with a <em>bind</em>, wrapping extra string into the gap.<sup class="cite"><a href="learn-yoyo.html#ref-26" aria-label="Source 26">[26]</a><a href="learn-yoyo.html#ref-25" aria-label="Source 25">[25]</a></sup></li>
-          <li>Inexpensive fixed-axle yo-yos usually sleep 10&ndash;20 seconds; ball-bearing yo-yos can sleep one to four minutes.<sup class="cite"><a href="learn-yoyo.html#ref-28" aria-label="Source 28">[28]</a></sup></li>
-        </ul>
-        <p>Many beginner yo-yos can be set up either way. See <a href="yoyo-gear.html#basics">Beginner Gear Basics</a> and <a href="yoyo-gear.html#styles">Styles of Play</a> on our Gear page.</p>
-      </article>
 
-      <article id="string" class="sci-sec">
-        <div class="sci-kicker">Part 2</div>
-        <h2 class="sci-title">String It Up</h2>
-        <h3>Put the string on the yo-yo</h3>
-        <ol class="sci-steps">
-          <li>Find the loop end, the end without the knot. Pinch the tip and pinch again an inch or two below, then untwist until the two strands separate.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
-          <li>Spread the strands open with your fingers and slip the loop over one half of the <strong>assembled</strong> yo-yo. Don&rsquo;t take it apart; the string can slip off the bearing and get caught between the halves.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
-          <li>Let go and let the string twist back up around the axle. Never tie a knot around the axle.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a><a href="learn-yoyo.html#ref-1" aria-label="Source 1">[1]</a></sup></li>
-        </ol>
-        <h3>Size it and make a slipknot</h3>
-        <ol class="sci-steps">
-          <li>Let the yo-yo rest on the floor between your feet and mark the string at your belly button.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
-          <li>Tie a new loop there and cut off the extra.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
-          <li>Pass the string through the loop to make a slipknot. Slide it onto your middle finger, snug between the first and second knuckle.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
-        </ol>
-        <h3>Freehand (5A): string a counterweight</h3>
-        <p>Pass the loop end of the string through the counterweight&rsquo;s hole, then through the slipknot, and pull tight so the knot closes around the weight. Or, without removing the string from the yo-yo, push the slipknot through the hole, make a new loop, pass the counterweight through it, and pull tight.<sup class="cite"><a href="learn-yoyo.html#ref-4" aria-label="Source 4">[4]</a></sup> See <a href="yoyo-gear.html#counterweights">Counterweights</a> for weights and DIY options.</p>
-      </article>
-
-      <article id="throw" class="sci-sec">
-        <div class="sci-kicker">Part 3</div>
-        <h2 class="sci-title">Wind, Throw, and Sleep</h2>
-        <h3>Wind it up</h3>
-        <p>Bearing yo-yos spin so freely that the string slips when you wind. The fix: lay a finger of your other hand across the gap, wind once over it, then wind three or four times under it so the string grips. Pull the finger out and keep winding.<sup class="cite"><a href="learn-yoyo.html#ref-5" aria-label="Source 5">[5]</a></sup></p>
-        <h3>Hold it right</h3>
-        <p>With your palm up, the string should come <strong>over the top</strong> of the yo-yo toward you. If it comes from underneath, the yo-yo is upside down and will tend to spin out.<sup class="cite"><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
-        <h3>Gravity Pull</h3>
-        <p>Hold the yo-yo palm down and simply let go; gravity pulls it down, then tug to bring it back. It is different from the Throw Down, which is thrown palm up.<sup class="cite"><a href="learn-yoyo.html#ref-19" aria-label="Source 19">[19]</a><a href="learn-yoyo.html#ref-29" aria-label="Source 29">[29]</a></sup></p>
-        <h3>The Basic Throw</h3>
-        <p>&ldquo;Make a muscle&rdquo; with the yo-yo in your palm, then extend your arm to throw it down. As it reaches the bottom, turn your hand over and pull up to catch it.<sup class="cite"><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
-        <h3>The Sleeper</h3>
-        <p>A sleeper is the yo-yo spinning at the end of the string. It&rsquo;s the base of almost every trick.<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a></sup></p>
-        <ul class="sci-list">
-          <li>Throw hard and straight. A tilted yo-yo won&rsquo;t sleep long.<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a></sup></li>
-          <li>Cushion the landing: as the yo-yo hits the bottom, dip your hand slightly so it doesn&rsquo;t bounce, gain slack, and come back.<sup class="cite"><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
-          <li>Return it with a tug (responsive) or a bind (unresponsive).<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a><a href="learn-yoyo.html#ref-14" aria-label="Source 14">[14]</a></sup></li>
-        </ul>
-        <p class="sci-note">Challenge: the YoYoTricks.com Screen Time Challenge starts with a 5-second sleeper.<sup class="cite"><a href="learn-yoyo.html#ref-16" aria-label="Source 16">[16]</a></sup></p>
-      </article>
-
-      <article id="tension" class="sci-sec">
-        <div class="sci-kicker">Part 4</div>
-        <h2 class="sci-title">String Tension</h2>
-        <p>A yo-yo string is two strands twisted together. Too many twists and it&rsquo;s too tight; too few and it&rsquo;s too loose. Either way, slack string curls into &ldquo;spaghetti.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-7" aria-label="Source 7">[7]</a></sup> Normal throwing slowly changes it; for right-handers, sleepers and trapezes tend to tighten it.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></p>
-        <h3>Check it</h3>
-        <p>Hold the unwound yo-yo like a trapeze, bring your hands together to add slack, and look down on the string. If it twists clockwise, it&rsquo;s too loose; counterclockwise, too tight.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></p>
-        <h3>Fix it</h3>
-        <ul class="sci-list">
-          <li><strong>Let it dangle:</strong> the classic fix is to take the slipknot off your finger and let the yo-yo hang until the string untwists.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></li>
-          <li><strong>UFO:</strong> throw the yo-yo so it sleeps flat, parallel to the ground, with your hand over the top so the string spins around it. Across your body loosens; away from your body tightens.<sup class="cite"><a href="learn-yoyo.html#ref-9" aria-label="Source 9">[9]</a><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></li>
-          <li><strong>Sidewinder:</strong> a smaller adjustment. Swing a sleeper out to one side until it rises level with your hand so the string spins out. YoYoTricks.com says to the right loosens and to the left tightens. Test which way works for you.<sup class="cite"><a href="learn-yoyo.html#ref-10" aria-label="Source 10">[10]</a></sup></li>
-          <li><strong>Unresponsive yo-yos</strong> have their own fixes: a separate lesson covers adjusting tension at the end of a trick.<sup class="cite"><a href="learn-yoyo.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
-          <li>While you check tension, check for wear too. Change a frayed, dirty, or greasy string.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></li>
-        </ul>
-      </article>
-
-      <article id="first" class="sci-sec">
-        <div class="sci-kicker">Part 5</div>
-        <h2 class="sci-title">Your First Tricks</h2>
-        <ul class="sci-list">
-          <li><strong>Walk the Dog:</strong> throw a strong sleeper and set it on the floor so it rolls. Swing it behind you first for momentum, and don&rsquo;t let your hand get too close or it will come back.<sup class="cite"><a href="learn-yoyo.html#ref-11" aria-label="Source 11">[11]</a></sup></li>
-          <li><strong>Rock the Baby:</strong> pinch the string near the middle with your other hand, pinch above the yo-yo with your yo-yo hand, and spread the string into a triangle cradle to rock the yo-yo through.<sup class="cite"><a href="learn-yoyo.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
-          <li><strong>Picture tricks:</strong> shapes like the Eiffel Tower and the Jamaican Flag. Practice with the yo-yo hanging, not spinning, until you know the shape.<sup class="cite"><a href="learn-yoyo.html#ref-12" aria-label="Source 12">[12]</a><a href="learn-yoyo.html#ref-13" aria-label="Source 13">[13]</a></sup></li>
-          <li><strong>Forward Pass:</strong> swing the yo-yo forward from behind, let it return, and catch it palm up. It leads to Loop the Loop and Shoot the Moon.<sup class="cite"><a href="learn-yoyo.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
-          <li><strong>UFO and Sleeping Beauty:</strong> the UFO above, plus catching the string for a flashy Sleeping Beauty.<sup class="cite"><a href="learn-yoyo.html#ref-9" aria-label="Source 9">[9]</a></sup></li>
-          <li><strong>DNA:</strong> a flat pinwheel, pop the yo-yo onto your other index finger to spin, then a quick laceration and sidewinder-style return. It plays with string tension like a UFO.<sup class="cite"><a href="learn-yoyo.html#ref-21" aria-label="Source 21">[21]</a></sup> See <a href="learn-yoyo.html#evolution">How Tricks Evolved</a> for how it went viral.</li>
-        </ul>
-      </article>
-
-      <article id="first100" class="sci-sec">
-        <div class="sci-kicker">Part 6</div>
-        <h2 class="sci-title">The First 100 Tricks</h2>
-        <p>One path through the basics, from your first throw to every style of play. Each name links to a free tutorial, most from the YoYoTricks.com library, which runs from first throw to master level.<sup class="cite"><a href="learn-yoyo.html#ref-15" aria-label="Source 15">[15]</a><a href="learn-yoyo.html#ref-17" aria-label="Source 17">[17]</a><a href="learn-yoyo.html#ref-13" aria-label="Source 13">[13]</a></sup> Gravity Pull links to Yomega&rsquo;s video list.<sup class="cite"><a href="learn-yoyo.html#ref-29" aria-label="Source 29">[29]</a></sup> Skip around; there&rsquo;s no wrong order.</p>
-        <p>Prefer a shorter list? Our own <a href="assets/documents/trick-reference-guide.pptx">Trick Reference Guide</a> slides start with 16 beginner tricks on a responsive yo-yo, then group intermediate and expert tricks into families by mount.<sup class="cite"><a href="learn-yoyo.html#ref-2" aria-label="Source 2">[2]</a></sup></p>
-        <h3>Stage 1: Throws and Responsive Classics</h3>
-        <p>Learn these on a responsive yo-yo. Most come from classic trick lists and the 2000 World Yo-Yo Contest beginner ladder.</p>
-        <ol class="trick-list" start="1"><li><a href="https://yoyotricks.com/yoyo-tricks/the-basic-throw/92/" target="_blank" rel="noopener noreferrer">Basic Throw and Sleeper</a></li><li><a href="https://yomega.com/learn-tricks/" target="_blank" rel="noopener noreferrer">Gravity Pull</a></li><li><a href="https://yoyo.fandom.com/wiki/Forward_Pass" target="_blank" rel="noopener noreferrer">Forward Pass</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/the-breakaway/154/" target="_blank" rel="noopener noreferrer">Breakaway</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/walk-the-dog/189/" target="_blank" rel="noopener noreferrer">Walk the Dog</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/the-creeper/202/" target="_blank" rel="noopener noreferrer">The Creeper</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/around-the-corner/743/" target="_blank" rel="noopener noreferrer">Around the Corner</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/the-elevator/937/" target="_blank" rel="noopener noreferrer">Elevator</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/rock-the-baby/95/" target="_blank" rel="noopener noreferrer">Rock the Baby</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/around-the-world/238/" target="_blank" rel="noopener noreferrer">Around the World</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/looping-introduction/139/" target="_blank" rel="noopener noreferrer">Loop the Loop</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/hop-the-fence/233/" target="_blank" rel="noopener noreferrer">Hop the Fence</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/ufo/243/" target="_blank" rel="noopener noreferrer">UFO / Sleeping Beauty</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/sidewinder/262/" target="_blank" rel="noopener noreferrer">Sidewinder</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/shoot-the-moon/3965/" target="_blank" rel="noopener noreferrer">Shoot the Moon</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/dog-bite/4194/" target="_blank" rel="noopener noreferrer">Dog Bite</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/pinwheel/1007/" target="_blank" rel="noopener noreferrer">Pinwheel</a></li><li><a href="https://yoyo.fandom.com/wiki/DNA" target="_blank" rel="noopener noreferrer">DNA</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/punching-bags/1183/" target="_blank" rel="noopener noreferrer">Punching Bags</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/warp-drive/4540/" target="_blank" rel="noopener noreferrer">Warp Drive</a></li></ol>
-        <h3>Stage 2: Picture Tricks</h3>
-        <p>Make a picture out of the string. Let the yo-yo hang without spinning while you learn the shape.</p>
-        <ol class="trick-list" start="21"><li><a href="https://yoyotricks.com/yoyo-tricks/eiffel-tower/130/" target="_blank" rel="noopener noreferrer">Eiffel Tower</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/jamaican-flag/8652/" target="_blank" rel="noopener noreferrer">Jamaican Flag</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/throw-the-baby/100/" target="_blank" rel="noopener noreferrer">Throw the Baby</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/itzy-bitzy-baby/97/" target="_blank" rel="noopener noreferrer">Itzy-bitzy Baby</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/rock-the-baby-in-the-pyramid/794/" target="_blank" rel="noopener noreferrer">Rock the Baby in the Pyramid</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/one-handed-star/910/" target="_blank" rel="noopener noreferrer">One-Handed Star</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/two-handed-star/8526/" target="_blank" rel="noopener noreferrer">Two-Handed Star</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/spelling-yo/133/" target="_blank" rel="noopener noreferrer">Spelling Yo</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/the-cross/629/" target="_blank" rel="noopener noreferrer">The Cross</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/british-flag/8946/" target="_blank" rel="noopener noreferrer">British Flag</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/four-leaf-clover/136/" target="_blank" rel="noopener noreferrer">Four-Leaf Clover</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/big-tokyo-tower/219075/" target="_blank" rel="noopener noreferrer">Big Tokyo Tower</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/picture-tricks/3d-spaceship/212640/" target="_blank" rel="noopener noreferrer">3D Spaceship</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/darth-vader/205/" target="_blank" rel="noopener noreferrer">Darth Vader</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/picture-tricks/rock-the-baby-on-the-eiffel-tower/207646/" target="_blank" rel="noopener noreferrer">Rock the Baby on the Eiffel Tower</a></li></ol>
-        <h3>Stage 3: Looping Basics</h3>
-        <p>Responsive looping, the root of 2A. Great for building wrist control.</p>
-        <ol class="trick-list" start="36"><li><a href="https://yoyotricks.com/yoyo-tricks/leg-wrap/192/" target="_blank" rel="noopener noreferrer">Leg Wrap</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/arm-wrap/194/" target="_blank" rel="noopener noreferrer">Arm Wrap</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/chain-wrap/199/" target="_blank" rel="noopener noreferrer">Chain Wrap</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/looping-tricks/elbow-wrap/176126/" target="_blank" rel="noopener noreferrer">Elbow Wrap</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/flips/1009/" target="_blank" rel="noopener noreferrer">Flips</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/stalls/1013/" target="_blank" rel="noopener noreferrer">Stalls</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/regenerations/1011/" target="_blank" rel="noopener noreferrer">Regenerations</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/guillotine/196/" target="_blank" rel="noopener noreferrer">Guillotine</a></li></ol>
-        <h3>Stage 4: String Trick Basics (1A)</h3>
-        <p>Mounts and the first string tricks. These work on responsive yo-yos and lead into unresponsive play.</p>
-        <ol class="trick-list" start="44"><li><a href="https://yoyotricks.com/yoyo-tricks/man-on-the-flying-trapeze/169/" target="_blank" rel="noopener noreferrer">Man on the Flying Trapeze</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/brain-scrambler/171/" target="_blank" rel="noopener noreferrer">Brain-Scrambler</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/brain-twister/195244/" target="_blank" rel="noopener noreferrer">Brain-Twister</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/double-or-nothing/208/" target="_blank" rel="noopener noreferrer">Double or Nothing</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/reverse-flip-front-mount/222/" target="_blank" rel="noopener noreferrer">Reverse Flip Front-Mount</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/side-mount-flips/257/" target="_blank" rel="noopener noreferrer">Side-Mount Flips</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/split-bottom-mount/619/" target="_blank" rel="noopener noreferrer">Split-Bottom Mount</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/man-on-the-flying-trapeze-and-his-brother/616/" target="_blank" rel="noopener noreferrer">Trapeze and His Brother</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/houdini-mount/1506/" target="_blank" rel="noopener noreferrer">Houdini Mount</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/under-or-nothing/179969/" target="_blank" rel="noopener noreferrer">Under or Nothing</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/one-and-a-half-side-mount/177/" target="_blank" rel="noopener noreferrer">One-and-a-Half Mount</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/brent/42329/" target="_blank" rel="noopener noreferrer">Brent</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/cross-arm-trapeze/22250/" target="_blank" rel="noopener noreferrer">Cross-Arm Trapeze</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/crazy-8/38717/" target="_blank" rel="noopener noreferrer">Crazy 8</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/kamikaze-mount/6424/" target="_blank" rel="noopener noreferrer">Kamikaze Mount</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/wrist-mount/6009/" target="_blank" rel="noopener noreferrer">Wrist Mount</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/split-the-atom/606/" target="_blank" rel="noopener noreferrer">Split the Atom</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/barrel-rolls/622/" target="_blank" rel="noopener noreferrer">Barrel Rolls</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/double-trapeze/187/" target="_blank" rel="noopener noreferrer">Double Trapeze</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/zipper/14568/" target="_blank" rel="noopener noreferrer">Zipper</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/skin-the-gerbil/1298/" target="_blank" rel="noopener noreferrer">Skin the Gerbil</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/ripcord/1156/" target="_blank" rel="noopener noreferrer">Ripcord</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/keychain-aka-one-finger-spin/752/" target="_blank" rel="noopener noreferrer">Keychain</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/buddhas-revenge/726/" target="_blank" rel="noopener noreferrer">Buddha&rsquo;s Revenge</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/mach-5/771/" target="_blank" rel="noopener noreferrer">Mach 5</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/halleys-comet/912/" target="_blank" rel="noopener noreferrer">Halley&rsquo;s Comet</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/eli-hops/255/" target="_blank" rel="noopener noreferrer">Eli Hops</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/boomerang/1226/" target="_blank" rel="noopener noreferrer">Boomerang</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/gondola/230/" target="_blank" rel="noopener noreferrer">Gondola</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/roller-coaster/943/" target="_blank" rel="noopener noreferrer">Roller Coaster</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/hydrogen-bomb/1240/" target="_blank" rel="noopener noreferrer">Hydrogen Bomb</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/kwyjibo/953/" target="_blank" rel="noopener noreferrer">Kwyjibo</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/seasick/1048/" target="_blank" rel="noopener noreferrer">Seasick</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/tmnt-cafe/1197/" target="_blank" rel="noopener noreferrer">TMNT Cafe</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/cold-fusion/1046/" target="_blank" rel="noopener noreferrer">Cold Fusion</a></li></ol>
-        <h3>Stage 5: Unresponsive Basics</h3>
-        <p>Once you can bind, a wider-gap unresponsive yo-yo opens up slack, whips, and grinds.</p>
-        <ol class="trick-list" start="79"><li><a href="https://yoyotricks.com/yoyo-tricks/binds/982/" target="_blank" rel="noopener noreferrer">Binds</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/easiest-bind-ever/2942/" target="_blank" rel="noopener noreferrer">Easiest Bind Ever</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/unresponsive-string-tension/984/" target="_blank" rel="noopener noreferrer">Unresponsive String Tension</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/unresponsive/throw-start/211915/" target="_blank" rel="noopener noreferrer">Throw Start</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/hook-i-e-hidemasa-hook/1001/" target="_blank" rel="noopener noreferrer">Hook</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/unresponsive-stop-n-go/221040/" target="_blank" rel="noopener noreferrer">Unresponsive Stop N&rsquo; Go</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/plastic-whip/988/" target="_blank" rel="noopener noreferrer">Plastic Whip</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/green-triangle-basics/1312/" target="_blank" rel="noopener noreferrer">Green Triangle</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/jump-rope/5717/" target="_blank" rel="noopener noreferrer">Jump Rope</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/laceration/999/" target="_blank" rel="noopener noreferrer">Laceration</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/slackicide/1322/" target="_blank" rel="noopener noreferrer">Slackicide</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/grind-introduction-finger-grinds/11823/" target="_blank" rel="noopener noreferrer">Finger Grinds</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/finger-spins/172249/" target="_blank" rel="noopener noreferrer">Finger Spins</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/ninja-vanish/1488/" target="_blank" rel="noopener noreferrer">Ninja Vanish</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/iron-whip/6172/" target="_blank" rel="noopener noreferrer">Iron Whip</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/jade-whip/5943/" target="_blank" rel="noopener noreferrer">Jade Whip</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/magic-drop-and-shockwave/6362/" target="_blank" rel="noopener noreferrer">Magic Drop and Shockwave</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/boingy-boing/765/" target="_blank" rel="noopener noreferrer">Boingy-Boing</a></li></ol>
-        <h3>Stage 6: Try Every Style</h3>
-        <p>One starter from each of the other styles.</p>
-        <ol class="trick-list" start="97"><li><a href="https://yoyotricks.com/yoyo-tricks/two-handed-loops/259/" target="_blank" rel="noopener noreferrer">2A: Two-Handed Loops</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/gunslinger-3a/3577/" target="_blank" rel="noopener noreferrer">3A: Gunslinger</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/basic-throw-for-offstring-yoyos/2845/" target="_blank" rel="noopener noreferrer">4A: Offstring Throw and Bind</a></li><li><a href="https://yoyotricks.com/yoyo-tricks/freehand-fundamentals/holding-a-freehand-yoyo/2923/" target="_blank" rel="noopener noreferrer">5A: Hold and Catch a Freehand Yo-Yo</a></li></ol>
-      </article>
-
-      <article id="ladder" class="sci-sec">
-        <div class="sci-kicker">Part 7</div>
-        <h2 class="sci-title">A Contest-Tested Ladder</h2>
-        <p>A trick ladder is a set list of tricks in rising difficulty, used at contests to ease newer players into competition.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup> The 2000 World Yo-Yo Contest ran a 30-trick sport ladder in three levels: one try per trick, one miss forgiven.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup> It still makes a great checklist.</p>
-        <div class="table-scroll">
-        <table class="sci-table stack-table">
-          <caption>2000 World Yo-Yo Contest Sport Ladder (simplified)<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup></caption>
-          <thead><tr><th scope="col">#</th><th scope="col">Trick</th><th scope="col">To pass</th></tr></thead>
-          <tbody>
-            <tr><td data-label="#">1</td><td data-label="Trick">Forward Pass</td><td data-label="To pass">Palm-up catch</td></tr>
-            <tr><td data-label="#">2</td><td data-label="Trick">Walk the Dog</td><td data-label="To pass">At least one foot forward</td></tr>
-            <tr><td data-label="#">3</td><td data-label="Trick">Rock the Baby</td><td data-label="To pass">Three full rocks</td></tr>
-            <tr><td data-label="#">4</td><td data-label="Trick">Around the World</td><td data-label="To pass">One time</td></tr>
-            <tr><td data-label="#">5</td><td data-label="Trick">Around the Corner</td><td data-label="To pass">Tug the string with your fingers</td></tr>
-            <tr><td data-label="#">6</td><td data-label="Trick">Loops</td><td data-label="To pass">Three inside loops</td></tr>
-            <tr><td data-label="#">7</td><td data-label="Trick">UFO</td><td data-label="To pass">Pick it up with the other hand</td></tr>
-            <tr><td data-label="#">8</td><td data-label="Trick">Hop the Fence</td><td data-label="To pass">Three repetitions</td></tr>
-            <tr><td data-label="#">9</td><td data-label="Trick">Tidal Wave</td><td data-label="To pass">Fingers touch at the start</td></tr>
-            <tr><td data-label="#">10</td><td data-label="Trick">Man on Trapeze</td><td data-label="To pass">No flip-overs</td></tr>
-            <tr><td data-label="#">11</td><td data-label="Trick">Pinwheel</td><td data-label="To pass">Over the thumb, three rotations</td></tr>
-            <tr><td data-label="#">12</td><td data-label="Trick">Restart</td><td data-label="To pass">Full stop, full rewind</td></tr>
-            <tr><td data-label="#">13</td><td data-label="Trick">Elevator</td><td data-label="To pass">Hop off at the top</td></tr>
-            <tr><td data-label="#">14</td><td data-label="Trick">Three-Leaf Clover</td><td data-label="To pass">Last loop inside</td></tr>
-            <tr><td data-label="#">15</td><td data-label="Trick">Brain Twister</td><td data-label="To pass">Two somersaults, loop ending</td></tr>
-            <tr><td data-label="#">16</td><td data-label="Trick">Double or Nothing</td><td data-label="To pass">Any dismount</td></tr>
-            <tr><td data-label="#">17</td><td data-label="Trick">Sidewinder</td><td data-label="To pass">Both sides</td></tr>
-            <tr><td data-label="#">18</td><td data-label="Trick">Time Warp</td><td data-label="To pass">Forward to reverse around the world</td></tr>
-            <tr><td data-label="#">19</td><td data-label="Trick">Dizzy Baby</td><td data-label="To pass">Three rocks, then three pinwheels</td></tr>
-            <tr><td data-label="#">20</td><td data-label="Trick">Split the Atom</td><td data-label="To pass">Three somersaults, loop ending</td></tr>
-            <tr><td data-label="#">21</td><td data-label="Trick">Reach for the Moon</td><td data-label="To pass">Five repetitions</td></tr>
-            <tr><td data-label="#">22</td><td data-label="Trick">Vertical Loops</td><td data-label="To pass">Five repetitions</td></tr>
-            <tr><td data-label="#">23</td><td data-label="Trick">Warp Drive</td><td data-label="To pass">Three regenerated worlds</td></tr>
-            <tr><td data-label="#">24</td><td data-label="Trick">Mach 5</td><td data-label="To pass">At least five spins</td></tr>
-            <tr><td data-label="#">25</td><td data-label="Trick">One-Hand Fountain</td><td data-label="To pass">Three reps each</td></tr>
-            <tr><td data-label="#">26</td><td data-label="Trick">Triple Trapeze</td><td data-label="To pass">Trapeze, then regen trapeze</td></tr>
-            <tr><td data-label="#">27</td><td data-label="Trick">Triple or Nothing</td><td data-label="To pass">Rewind dismount</td></tr>
-            <tr><td data-label="#">28</td><td data-label="Trick">Advanced Split the Atom</td><td data-label="To pass">Barrel rolls and somersaults</td></tr>
-            <tr><td data-label="#">29</td><td data-label="Trick">Hydrogen Bomb</td><td data-label="To pass">Ferris wheel dismount</td></tr>
-            <tr><td data-label="#">30</td><td data-label="Trick">Roller Coaster (McBride)</td><td data-label="To pass">Coaster mount and double or nothing</td></tr>
-          </tbody>
-        </table>
-        </div>
-      </article>
-
-
-
-      <article id="practice" class="sci-sec">
-        <div class="sci-kicker">Part 8</div>
-        <h2 class="sci-title">Practice, Play Healthy, and Everyone Can Throw</h2>
-        <p>You don&rsquo;t need hours a day. You need a little time most days, a reason for each session, and patience with yourself. Here&rsquo;s what experienced players on the YoYoExpert Forums say works.</p>
-        <h3>Practice with a purpose</h3>
-        <ul class="sci-list">
-          <li><strong>Make time, even a little:</strong> one player who improves steadily plays about an hour a day, often less, and argues that 15 to 30 minutes of real practice beats waiting for free time that never comes.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
-          <li><strong>Know why you&rsquo;re throwing:</strong> the goal can be as simple as &ldquo;I want this trick a little smoother.&rdquo; Playing to relax counts too, if you focus on doing each move well.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
-          <li><strong>Slow is fast:</strong> a classical musician in the same thread says to practice slowly until your hands know the trick, leave your phone in another room, and take a day off when you need one.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
-          <li><strong>Say &ldquo;yet&rdquo;:</strong> &ldquo;I can&rsquo;t do this yet, but if I stay consistent I will.&rdquo; Don&rsquo;t dwell on a long break or a late start.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
-        </ul>
-        <h3>Learning from videos</h3>
-        <ul class="sci-list">
-          <li><strong>Go frame by frame:</strong> on YouTube on a computer, pause and press the comma and period keys to step back and forward one frame. On a phone, screen-record the tutorial and scrub through the recording slowly.<sup class="cite"><a href="learn-yoyo.html#ref-92" aria-label="Source 92">[92]</a></sup></li>
-          <li><strong>Learn in pieces:</strong> break a trick into sections that start and end in a mount, then link them. See <a href="learn-yoyo.html#beyond">How experienced players learn</a> below.<sup class="cite"><a href="learn-yoyo.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
-        </ul>
-        <h3>Your throw, tilt, and restarts</h3>
-        <ul class="sci-list">
-          <li><strong>The floor-line drill:</strong> stand over a straight line in the floor, like a tile seam or the gap between floorboards, and throw a sleeper so the yo-yo&rsquo;s gap lines up with the line.<sup class="cite"><a href="learn-yoyo.html#ref-93" aria-label="Source 93">[93]</a></sup></li>
-          <li><strong>Don&rsquo;t chase a perfect throw:</strong> experienced players say tilt correction comes on its own after thousands of throws. In a trapeze, you can level a tilted yo-yo by pressing the string against its high side.<sup class="cite"><a href="learn-yoyo.html#ref-94" aria-label="Source 94">[94]</a></sup></li>
-          <li><strong>Restart instead of rewinding:</strong> when the yo-yo dies on the string, hold the string with your free hand and spin the yo-yo back up with your throwing hand, then bind. Some players twist cleanly, &ldquo;like turning a doorknob,&rdquo; instead of snapping hard, because a hard snap can jam your fingers.<sup class="cite"><a href="learn-yoyo.html#ref-95" aria-label="Source 95">[95]</a></sup></li>
-        </ul>
-        <h3>Stuck? Everyone hits a plateau</h3>
-        <ul class="sci-list">
-          <li><strong>Switch it up:</strong> try another style for a while. Players suggest modern responsive or 0A to relax, and 5A, where &ldquo;the mistakes are often better than the tricks.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
-          <li><strong>Get a quick win:</strong> go back to basics, or learn a short trick built from elements you already know.<sup class="cite"><a href="learn-yoyo.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
-          <li><strong>Stop comparing:</strong> some players started as little kids. Take a break when you&rsquo;re frustrated and come back fresh.<sup class="cite"><a href="learn-yoyo.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
-          <li><strong>How long it takes:</strong> one player saw spin time and technique jump at 6 to 8 months. Another compares it to an instrument: about a year for the fundamentals, two to feel comfortable, three to feel &ldquo;good.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-90" aria-label="Source 90">[90]</a></sup></li>
-          <li><strong>Is learning on an unresponsive yo-yo cheating?</strong> No. &ldquo;A completed trick is a completed trick.&rdquo; Or, as one longtime member put it: &ldquo;There&rsquo;s no cheating in yoyoing, just smiling.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-91" aria-label="Source 91">[91]</a></sup></li>
-        </ul>
-        <h3>Play healthy</h3>
-        <ul class="sci-list">
-          <li><strong>String burn happens:</strong> almost every player gets it learning tricks like Boingy Boing. Most build a callus over time. Some wear a glove, which protects your finger but lets you feel the string less.<sup class="cite"><a href="learn-yoyo.html#ref-96" aria-label="Source 96">[96]</a></sup></li>
-          <li><strong>Watch for overuse:</strong> one player developed what they believed was golfer&rsquo;s elbow from all the repeated throwing.<sup class="cite"><a href="learn-yoyo.html#ref-97" aria-label="Source 97">[97]</a></sup> Take breaks, switch styles, and stop if your arm hurts. See a doctor if pain doesn&rsquo;t go away.</li>
-          <li><strong>Throw soft after a shaky bind:</strong> if you&rsquo;re not sure a bind was clean, throw a softer &ldquo;safety throw.&rdquo; A snagged string on a hard breakaway can swing the yo-yo back into your face.<sup class="cite"><a href="learn-yoyo.html#ref-99" aria-label="Source 99">[99]</a></sup></li>
-          <li><strong>Mark a yo-yo zone:</strong> when you play with a group or teach kids, tape lines on the floor, or set cones outside, and only throw inside them so nobody runs through and gets bonked.<sup class="cite"><a href="learn-yoyo.html#ref-100" aria-label="Source 100">[100]</a></sup></li>
-          <li>See also the safety tips in <a href="learn-yoyo.html#tips">Tips from Experienced Players</a>.</li>
-        </ul>
-        <h3>Everyone can throw</h3>
-        <ul class="sci-list">
-          <li><strong>Any age:</strong> in &ldquo;Too old to start again?&rdquo; players in their 50s and 60s trade stories. One started around 50 and throws every day; another has played since 1966. The obstacles they named were joint pain, practice time, and impatience, not age.<sup class="cite"><a href="learn-yoyo.html#ref-101" aria-label="Source 101">[101]</a></sup></li>
-          <li><strong>One hand:</strong> a player who lost the use of their right arm learned Walk the Dog, Forward Pass, and One-Handed Star. The forum pointed them to 2A looping and to a sponsored player who plays one-handed.<sup class="cite"><a href="learn-yoyo.html#ref-102" aria-label="Source 102">[102]</a></sup></li>
-          <li><strong>A way to reset:</strong> many players say yo-yoing helps them decompress, like a nurse who throws after hard shifts, and others who use it to quiet anxiety.<sup class="cite"><a href="learn-yoyo.html#ref-97" aria-label="Source 97">[97]</a><a href="learn-yoyo.html#ref-98" aria-label="Source 98">[98]</a></sup> Doctor Popular&rsquo;s PopCast interviewed a social worker who uses yo-yos in counseling with kids.<sup class="cite"><a href="learn-yoyo.html#ref-98" aria-label="Source 98">[98]</a></sup> It isn&rsquo;t a treatment, but it&rsquo;s a great way to focus.</li>
-          <li><strong>Come throw with us:</strong> our <a href="events.html">monthly meetups</a> are free, all ages, all levels, with loaner yo-yos and someone to show you your first throw.</li>
-        </ul>
-      </article>
-
-      <article id="contests" class="sci-sec">
-        <div class="sci-kicker">Part 9</div>
-        <h2 class="sci-title">Contests and Judging</h2>
-        <p>U.S. contests, including our own <a href="vsyc26.html">VSYC-26</a>, score freestyles with the National Yo-Yo League (NYYL) rules. A freestyle is a routine to music you choose; a trick is any demonstration of yo-yo skill; and an <strong>element</strong> is one specific, scorable movement inside a trick.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
-        <h3>Two halves of every score</h3>
-        <ul class="sci-list">
-          <li><strong>Technical Execution (clickers):</strong> each judge holds two hand tally counters, one for positive clicks and one for negative clicks.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>Routine Evaluation:</strong> four categories: Trick Presentation (mastery and style), Performance Quality (professionalism, stage use, audience), Musicality (hitting cues and pacing to the song), and Routine Construction (trick order, cohesion, theme).<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li>In a 1A Championship final, a 3-minute routine, Technical Execution is worth 60 points and Evaluation 40.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-        </ul>
-        <h3>How clicks work</h3>
-        <ul class="sci-list">
-          <li><strong>One click</strong> for difficult but low-risk elements, like an Eli hop, laceration, or iron whip in 1A; loops, wraps, and around the worlds in 2A; rolls, kink mounts, and double trapezes in 3A; whips, recaptures, and boings in 4A; and 360s, propellers, and direction changes in 5A.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>More clicks</strong> for riskier variants, like a multi-hook instead of a single hook.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>Negative clicks</strong> for any missed element or loss of control.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>Repeats score less.</strong> Six Eli hops in a row score only the first; a later repeat can score zero. The point is to reward variety.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>No clicks</strong> for moves that don&rsquo;t show yo-yo skill, like picture tricks, string moves that don&rsquo;t involve the yo-yo, or tricks where the yo-yo never interacts with the string. Save <a href="learn-yoyo.html#first">picture tricks</a> for the crowd.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>Normalization:</strong> each judge&rsquo;s top scorer gets 60, everyone else is scaled against them, then the judges are averaged, so one generous judge can&rsquo;t swing the result.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-        </ul>
-        <h3>Major deductions</h3>
-        <table class="sci-table stack-table">
-          <caption>NYYL major deductions<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></caption>
-          <thead><tr><th scope="col">Deduction</th><th scope="col">Points</th><th scope="col">When</th></tr></thead>
-          <tbody>
-            <tr><td data-label="Deduction"><strong>Stop</strong></td><td data-label="Points">&minus;1</td><td data-label="When">The yo-yo stops with the string fully unwound.</td></tr>
-            <tr><td data-label="Deduction"><strong>Discard</strong></td><td data-label="Points">&minus;3</td><td data-label="When">You swap out a yo-yo, or can&rsquo;t bring it back to your hand fully wound when the routine ends.</td></tr>
-            <tr><td data-label="Deduction"><strong>Detach</strong></td><td data-label="Points">&minus;5</td><td data-label="When">The yo-yo comes off the string (except in 4A), the string breaks, or the yo-yo comes apart.</td></tr>
-          </tbody>
-        </table>
-        <p>With two yo-yos, deductions count per yo-yo, so swapping both after a 2A or 3A tangle costs &minus;6.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
-        <h3>Divisions for everyone</h3>
-        <ul class="sci-list">
-          <li><strong>Sport Freestyle:</strong> a 1-minute, low-stress division with no negative clicks and no major deductions, split by age. It&rsquo;s the place for a first contest.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>Trick ladders:</strong> a set list of tricks in rising difficulty, the other gateway into competing. See <a href="learn-yoyo.html#ladder">the ladder above</a>.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup></li>
-          <li><strong>X Division:</strong> 2A through 5A compete together, with clicker multipliers to level the field: 2A &times;1.40, 3A &times;1.50, 4A &times;1.30, 5A &times;1.60.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>Over 40:</strong> a showcase division, mostly at the U.S. Nationals, where players over 40 pick any style from 1A to 5A. Nationals also hosts International and Women&rsquo;s divisions.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>Music:</strong> anything appropriate for all audiences. Explicit lyrics or themes can mean disqualification.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-        </ul>
-        <h3>How each style is judged</h3>
-        <p>Every championship style uses the same two-part system: Technical Execution from clickers and a performance evaluation. What changes is <em>which</em> elements score. At the World Yo-Yo Contest, 1A through 5A each crown their own World Champion, and a 3-minute final is worth up to 60 points of Technical Execution and 40 of Freestyle Evaluation, minus major deductions.<sup class="cite"><a href="learn-yoyo.html#ref-86" aria-label="Source 86">[86]</a><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup> In every style, the yo-yo must be spinning, powered by the unwinding string, for a trick to count, and both the yo-yo and the string must be used.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></p>
-        <table class="sci-table stack-table">
-          <caption>What scores in each style (World Yo-Yo Contest rules)<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></caption>
-          <thead><tr><th scope="col">Style</th><th scope="col">What it is</th><th scope="col">Scores points</th><th scope="col">Scores nothing</th></tr></thead>
-          <tbody>
-            <tr><td data-label="Style"><strong>1A</strong></td><td data-label="What it is">One yo-yo, one string. Tricks built on mounts and touches between yo-yo and string.</td><td data-label="Scores points">Mounts (trapeze), hops (Eli hop), lacerations (hook), release catches (suicide), whip catches (iron whip, slack trapeze).</td><td data-label="Scores nothing">Picture tricks, looping, off-finger and M&ouml;bius moves, and string moves that don&rsquo;t touch the yo-yo.</td></tr>
-            <tr><td data-label="Style"><strong>2A</strong></td><td data-label="What it is">Two responsive yo-yos looping, one per hand.</td><td data-label="Scores points">Loops and hops, moons (reach for the moon, planet hop), wraps, tanglers, around the worlds.</td><td data-label="Scores nothing">One-hand looping and string tricks. A corkscrew in a loop is a negative click.</td></tr>
-            <tr><td data-label="Style"><strong>3A</strong></td><td data-label="What it is">Two long-spinning yo-yos, string tricks with both.</td><td data-label="Scores points">Rolls (Velvet Rolls), kinks (Kink Fu), two-hand trapezes, assisted tricks, KoroKoro.</td><td data-label="Scores nothing">Picture tricks, looping, tanglers that never land, and moves where one yo-yo just sits in a sleeper or trapeze while the other works.</td></tr>
-            <tr><td data-label="Style"><strong>4A</strong></td><td data-label="What it is">Offstring: the string is tied to your hand, not the yo-yo.</td><td data-label="Scores points">Whips (over whip, open whip), recaptures, Boingy Boingy, tosses, orbits around an arm or leg.</td><td data-label="Scores nothing">Tricks where the yo-yo never leaves the string, picture tricks, looping, and moves where the yo-yo doesn&rsquo;t interact with the string.</td></tr>
-            <tr><td data-label="Style"><strong>5A</strong></td><td data-label="What it is">Freehand: a counterweight replaces your hand at the end of the string.</td><td data-label="Scores points">Direction changes (shoulder pop), 360s, propellers, bee-stings, aerials (Meltdown Jump).</td><td data-label="Scores nothing">Moves while holding the weight, picture tricks, looping, and moves where the yo-yo or the weight just hangs, swings, or circles on its own.</td></tr>
-          </tbody>
-        </table>
-        <ul class="sci-list">
-          <li><strong>Combos are counted by element.</strong> Tricks like Gerbil or Rancid Milk are treated as a string of elements, each scored on its own. Repeating an element usually scores nothing the second time, though a high-risk repeat, like a suicide combo, can score again at reduced value.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
-          <li><strong>No bonus for non-yo-yo skills.</strong> Dancing, miming, juggling, or acrobatics earn nothing in Technical Execution, even during a trick.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
-          <li><strong>Two yo-yos, twice the risk.</strong> Negative clicks and major deductions count per yo-yo in 2A and 3A.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
-          <li><strong>Style-specific deductions:</strong> a detach costs &minus;5 in 1A, 2A, 3A, and 5A (both the yo-yo and the weight). In 4A the yo-yo is meant to leave the string, but letting it fly off the stage into the audience in any style, including 4A and 5A, can mean disqualification.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
-        </ul>
-        <h3>The World Contest&rsquo;s eight evaluation categories</h3>
-        <p>At Worlds, judges split into two groups: Group A clicks Technical Execution, and Group B scores the Freestyle Evaluation in eight categories from 0 to 10, halved to make 40 points: Execution, Control, Trick Diversity, Space Use, Music Use (choreography), Music Use (construction), Body Control, and Showmanship. Only Technical Execution is normalized between judges.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup> U.S. NYYL events use the four categories above instead.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
-        <h3>Artistic Performance (AP)</h3>
-        <ul class="sci-list">
-          <li><strong>No clickers.</strong> AP is judged mainly on performance rather than technical skill: choreography, music, creative stage use, movement, and entertainment. Solo players and teams can enter.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
-          <li><strong>Awards, not places.</strong> Judges may give a Grand Prix (the World Champion title), a Creativity Award, an Artistic Award, and an Entertainment Award, or none of them.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
-          <li><strong>The yo-yo still leads.</strong> Dance, acting, and props are welcome, but the yo-yo must be the main act. There are no deductions for misses, yet judges expect close to zero mistakes, like a professional show.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
-          <li><strong>Format:</strong> routines up to 4 minutes; finalists are chosen from submitted videos.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
-        </ul>
-        <h3>When styles are combined</h3>
-        <ul class="sci-list">
-          <li><strong>X Division:</strong> some contests lump 2A, 3A, 4A, and 5A into one division. The NYYL multiplies clicker scores to keep it fair, because some styles tend to score higher: 2A &times;1.40, 3A &times;1.50, 4A &times;1.30, 5A &times;1.60.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup> At <a href="vsyc26.html">VSYC-26</a>, X Division covered 2A, 3A, 4A, or 5A, and you picked one.</li>
-          <li><strong>Exhibitions at Worlds:</strong> Women&rsquo;s Freestyle and Over-40 Freestyle are 2-minute routines and Junior Freestyle (16 and under) is 90 seconds; in each, you choose one style from 1A to 5A. Championship divisions themselves have no age or gender classes.<sup class="cite"><a href="learn-yoyo.html#ref-86" aria-label="Source 86">[86]</a></sup></li>
-          <li><strong>Sport and beginner divisions:</strong> no negative clicks and no major deductions, so new players can get on stage without pressure (see above).<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
-          <li><strong>Duos:</strong> Doc Lucky Meisenheimer created &ldquo;Doc Lucky&rsquo;s Duos,&rdquo; now part of the National and World championships.<sup class="cite"><a href="learn-yoyo.html#ref-87" aria-label="Source 87">[87]</a></sup></li>
-        </ul>
-        <p>For the history of each style and the gear it uses, see <a href="yoyo-gear.html#styles">Styles of Play</a> on the Gear page.</p>
-        <h3>Your first contest</h3>
-        <ul class="sci-list">
-          <li><strong>Ladders aren&rsquo;t just for kids:</strong> many sport ladders mix ages, and a set trick list gives your practice direction. One player&rsquo;s advice: compete while you feel unprepared, so you know what to expect next time.<sup class="cite"><a href="learn-yoyo.html#ref-109" aria-label="Source 109">[109]</a></sup></li>
-          <li><strong>Make it memorable:</strong> asked about common mistakes in a first freestyle, Evan Nagao said new competitors use too few music cues and &ldquo;hype moments.&rdquo; You probably won&rsquo;t win your first contest, so aim to get the crowd going or do something creative.<sup class="cite"><a href="learn-yoyo.html#ref-111" aria-label="Source 111">[111]</a></sup></li>
-          <li><strong>Sometimes it works out:</strong> a player who entered 5A for the first time at the 2022 German Nationals came home as the division champion.<sup class="cite"><a href="learn-yoyo.html#ref-110" aria-label="Source 110">[110]</a></sup></li>
-          <li><strong>Filming a video entry:</strong> pick a spot with room to move, keep the sun behind the camera, plan the song and tricks before you shoot, and retake any trick you miss.<sup class="cite"><a href="learn-yoyo.html#ref-112" aria-label="Source 112">[112]</a></sup></li>
-        </ul>
-        <div class="try-box">
-          <div class="try-label">Practice like a judge</div>
-          <p>The NYYL notes that clickers (hand tally counters) are readily available for practice.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup> Try filming a routine and clicking it yourself: one hand for landed elements, one for misses. The free YoYo Pro Clicker app on our <a href="resources.html">Resources page</a> does the same thing on a phone. Then read the <a href="vsyc26-rules.html">VSYC-26 rules</a> and <a href="vsyc26-results.html">results</a> to see scoring in action.</p>
-        </div>
-      </article>
-
-      <article id="beyond" class="sci-sec">
-        <div class="sci-kicker">Part 10</div>
-        <h2 class="sci-title">Keep Learning: Beyond the First 100</h2>
-        <p>After the basics, the best way to keep growing is to learn with other people. These communities post a new trick on a schedule, cheer each other on, and help when you&rsquo;re stuck.</p>
-        <h3>Weekly trick clubs</h3>
-        <ul class="sci-list">
-          <li><strong><a href="https://forums.yoyoexpert.com/t/trick-a-week-2026-32-coyote-combo/438983" target="_blank" rel="noopener noreferrer">Trick-a-Week</a> (YoYoExpert Forums):</strong> a tutorial posted every Friday for the year. It isn&rsquo;t a race: the goal is to try a new trick each week, pick up new elements, and revisit old weeks any time. Posting videos is optional but encouraged.<sup class="cite"><a href="learn-yoyo.html#ref-59" aria-label="Source 59">[59]</a><a href="learn-yoyo.html#ref-58" aria-label="Source 58">[58]</a></sup> It has run yearly, with a new thread for 2026.<sup class="cite"><a href="learn-yoyo.html#ref-57" aria-label="Source 57">[57]</a><a href="learn-yoyo.html#ref-56" aria-label="Source 56">[56]</a></sup> An earlier 2020 version was aimed at players around the Kwyjibo level.<sup class="cite"><a href="learn-yoyo.html#ref-60" aria-label="Source 60">[60]</a></sup></li>
-          <li><strong><a href="https://forums.yoyoexpert.com/t/average-throwers-club-summer-school/442831" target="_blank" rel="noopener noreferrer">Average Throwers Club</a> (ATC), from <a href="https://www.gsquaredyoyos.com/" target="_blank" rel="noopener noreferrer">G Squared (G2) YoYos</a>:</strong> a free club for building your trick collection, with tricks of varying difficulty each week. It runs in G2&rsquo;s Discord, where members give live video help and earn points toward a season championship and credits toward merch. There are club meets on Zoom every other Thursday, and a separate basics club for newer players.<sup class="cite"><a href="learn-yoyo.html#ref-61" aria-label="Source 61">[61]</a><a href="learn-yoyo.html#ref-63" aria-label="Source 63">[63]</a></sup> Season 1 ended with a casual championship streamed live on YouTube.<sup class="cite"><a href="learn-yoyo.html#ref-62" aria-label="Source 62">[62]</a></sup></li>
-        </ul>
-        <h3>Style threads</h3>
-        <ul class="sci-list">
-          <li><a href="https://forums.yoyoexpert.com/t/2a-tuesdays-a-looping-thread/313632" target="_blank" rel="noopener noreferrer">2A Tuesdays</a> for looping.<sup class="cite"><a href="learn-yoyo.html#ref-64" aria-label="Source 64">[64]</a></sup></li>
-          <li><a href="https://forums.yoyoexpert.com/t/3a-thursday-3a-thread/385519" target="_blank" rel="noopener noreferrer">3A Thursday</a> for two-handed string tricks, with tips from experienced 3A players.<sup class="cite"><a href="learn-yoyo.html#ref-65" aria-label="Source 65">[65]</a></sup></li>
-          <li><a href="https://forums.yoyoexpert.com/t/4-everyday/385771" target="_blank" rel="noopener noreferrer">4A Everyday</a> for offstring.<sup class="cite"><a href="learn-yoyo.html#ref-66" aria-label="Source 66">[66]</a></sup></li>
-          <li><a href="https://forums.yoyoexpert.com/t/5a-may-2025/424262" target="_blank" rel="noopener noreferrer">5A May</a>, a month of counterweight play.<sup class="cite"><a href="learn-yoyo.html#ref-67" aria-label="Source 67">[67]</a></sup></li>
-          <li><a href="https://forums.yoyoexpert.com/t/fixed-axle-february-2026-presented-by-yybc/440253" target="_blank" rel="noopener noreferrer">Fixed Axle February</a>, run by the YoYo Boomers Club, and the ongoing <a href="https://forums.yoyoexpert.com/t/the-0a-thread-fixed-axle-modern-responsive/304228" target="_blank" rel="noopener noreferrer">0A Thread</a> for modern responsive.<sup class="cite"><a href="learn-yoyo.html#ref-68" aria-label="Source 68">[68]</a><a href="learn-yoyo.html#ref-69" aria-label="Source 69">[69]</a></sup></li>
-        </ul>
-        <h3>Share your progress</h3>
-        <p>Post wins in <a href="https://forums.yoyoexpert.com/t/the-i-finally-landed-it-thread/24607" target="_blank" rel="noopener noreferrer">&ldquo;I Finally Landed It!&rdquo;</a>, see what others are practicing in <a href="https://forums.yoyoexpert.com/t/what-trick-are-you-working-on-pre-2025/57231" target="_blank" rel="noopener noreferrer">&ldquo;What trick are you working on?&rdquo;</a>, and share your own creations in the <a href="https://forums.yoyoexpert.com/t/post-a-trick-thread/299367" target="_blank" rel="noopener noreferrer">Post a Trick thread</a>.<sup class="cite"><a href="learn-yoyo.html#ref-70" aria-label="Source 70">[70]</a><a href="learn-yoyo.html#ref-71" aria-label="Source 71">[71]</a><a href="learn-yoyo.html#ref-72" aria-label="Source 72">[72]</a></sup></p>
-        <h3>Go deeper</h3>
-        <ul class="sci-list">
-          <li><strong>Learn from the pros:</strong> YoYoTricks.com has trick collections from players like Gentry Stein, Ann Connolly, and Evan Nagao, plus combo series, long-string tricks, and a competition-training series.<sup class="cite"><a href="learn-yoyo.html#ref-76" aria-label="Source 76">[76]</a><a href="learn-yoyo.html#ref-77" aria-label="Source 77">[77]</a><a href="learn-yoyo.html#ref-78" aria-label="Source 78">[78]</a><a href="learn-yoyo.html#ref-79" aria-label="Source 79">[79]</a></sup></li>
-          <li><strong>Track your progress:</strong> Skill Addicts gives you points as you land tricks.<sup class="cite"><a href="learn-yoyo.html#ref-32" aria-label="Source 32">[32]</a></sup> Rewind&rsquo;s database sorts tricks by level and style.<sup class="cite"><a href="learn-yoyo.html#ref-35" aria-label="Source 35">[35]</a></sup></li>
-          <li><strong>Compete:</strong> many contests run beginner-friendly sport ladders.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup> Find events on our <a href="resources.html#contests">Resources page</a>, and see <a href="vsyc26.html">VSYC-26</a>, our Virginia State contest.</li>
-          <li><strong>Throw together:</strong> come to a <a href="events.html">DMV Throwers meetup</a> or visit a <a href="resources.html#clubs">sister club</a>.</li>
-        </ul>
-        <h3>How experienced players learn</h3>
-        <ul class="sci-list">
-          <li><strong>Pick the right trick:</strong> shorter tricks with fewer elements, and tutorials with a first-person view, are easier to learn from.<sup class="cite"><a href="learn-yoyo.html#ref-74" aria-label="Source 74">[74]</a></sup></li>
-          <li><strong>Think in checkpoints:</strong> remember a trick as a path from mount to mount. It also helps you link tricks into combos.<sup class="cite"><a href="learn-yoyo.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
-          <li><strong>Review:</strong> warm up by running through a list of the tricks you know, and practice slowly until they&rsquo;re automatic.<sup class="cite"><a href="learn-yoyo.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
-          <li><strong>From learning to owning:</strong> record yourself, break the trick down until you understand why it works, and practice until you can hit it on command.<sup class="cite"><a href="learn-yoyo.html#ref-75" aria-label="Source 75">[75]</a></sup></li>
-        </ul>
-      </article>
-
-      <article id="create" class="sci-sec">
-        <div class="sci-kicker">Part 11</div>
-        <h2 class="sci-title">Make Your Own Tricks</h2>
-        <p>Past the first 100, you&rsquo;ll notice most tricks are other tricks mixed together. That&rsquo;s your cue to start making your own.</p>
-        <h3>Think in elements</h3>
-        <p>An <a href="learn-yoyo.html#glossary">element</a> is one move, like a hop, a whip, or a hook. Elements are what get the yo-yo and string into and out of mounts, so the more elements you know, the more mounts you can invent, instead of cycling through the same few.<sup class="cite"><a href="learn-yoyo.html#ref-104" aria-label="Source 104">[104]</a></sup> A useful starting list, from a 2021 forum post:<sup class="cite"><a href="learn-yoyo.html#ref-103" aria-label="Source 103">[103]</a></sup></p>
-        <table class="sci-table stack-table">
-          <caption>1A building blocks<sup class="cite"><a href="learn-yoyo.html#ref-103" aria-label="Source 103">[103]</a></sup></caption>
-          <thead><tr><th scope="col">Type</th><th scope="col">Examples</th></tr></thead>
-          <tbody>
-            <tr><td data-label="Type"><strong>Mounts</strong></td><td data-label="Examples">Trapeze, Brother, 1.5, Double or Nothing, Houdini, Kamikaze, Wrist, Gorilla, Kink, Chopsticks, Brain Twister, Mach 5</td></tr>
-            <tr><td data-label="Type"><strong>Elements</strong></td><td data-label="Examples">Bind, regen, stall, kickflip, pinwheel, wrap, underpass, roll, hop, pop, pull-through, boing, suicide, whip, slack, laceration, hook, grind, finger spin, rejection, flop</td></tr>
-            <tr><td data-label="Type"><strong>Picture tricks</strong></td><td data-label="Examples">Green Triangle, Flag, Star, Tower, Ladder, Rock the Baby, Walk the Dog, DNA</td></tr>
-          </tbody>
-        </table>
-        <p>There&rsquo;s no shortcut, though. As one player put it: learn a lot of tricks, and you&rsquo;ll see how they build on each other and how the same ideas come up again and again.<sup class="cite"><a href="learn-yoyo.html#ref-105" aria-label="Source 105">[105]</a></sup></p>
-        <h3>Learn rejections in order</h3>
-        <p>A rejection pushes the string into the wall of the yo-yo so the spin kicks it back out of the gap. A 2024 forum sequence starts with tricks where you only reject the string, then adds catching the yo-yo, and finishes with Magic Drop.<sup class="cite"><a href="learn-yoyo.html#ref-106" aria-label="Source 106">[106]</a></sup></p>
-        <h3>Build a trick, step by step</h3>
-        <p>Zammy&rsquo;s 2013 guide breaks trick making into six steps:<sup class="cite"><a href="learn-yoyo.html#ref-107" aria-label="Source 107">[107]</a></sup></p>
-        <ol class="sci-steps">
-          <li><strong>Influence:</strong> borrow an idea you like from a player, from music, or from another skill toy, and make your own version.</li>
-          <li><strong>Experiment:</strong> throw and try something different each time. Failing is the point.</li>
-          <li><strong>Step by step:</strong> build the trick from point A to B to C, asking &ldquo;where do I go from here?&rdquo; at each step.</li>
-          <li><strong>Write it down:</strong> optional, but it keeps you from forgetting good ideas.</li>
-          <li><strong>Analyze:</strong> check the beginning (a strong mount), the middle (your main idea), and the end (a clean dismount or bind).</li>
-          <li><strong>Finalize:</strong> ask &ldquo;am I happy with it?&rdquo; and &ldquo;is it done?&rdquo; If not, go back and experiment more.</li>
-        </ol>
-        <h3>Find your style</h3>
-        <p>Because so many players learn from the same great tutorials, a lot of trick sets look alike today. Players in a 2023 thread point out that timing and transitions matter as much as the tricks, and one quotes Andr&eacute; Boulay: &ldquo;Make the simple amazing.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-108" aria-label="Source 108">[108]</a></sup> Share what you make in the <a href="https://forums.yoyoexpert.com/t/post-a-trick-thread/299367" target="_blank" rel="noopener noreferrer">Post a Trick thread</a>.<sup class="cite"><a href="learn-yoyo.html#ref-72" aria-label="Source 72">[72]</a></sup></p>
-      </article>
-
-      <article id="evolution" class="sci-sec">
-        <div class="sci-kicker">Part 12</div>
-        <h2 class="sci-title">How Tricks Evolved</h2>
-        <p>Every trick on this page rides on the hardware and ideas of an era. Here&rsquo;s how play grew from the classic sleeper to unresponsive, body, and horizontal tricks.</p>
-        <ul class="mini-tl"><li><span>1920s</span> Pedro Flores&rsquo;s looped string lets a yo-yo sleep at the end of the string, opening up far more tricks. Donald Duncan spreads them with demonstrations, contests, and school tours.</li><li><span>c. 1950</span> A Duncan employee proposes the starburst, which becomes the standard response system for decades.</li><li><span>Classic contests</span> Players compete by completing set lists of tricks, called compulsories.</li><li><span>1984</span> The Yomega Brain&rsquo;s clutch returns the yo-yo on its own, helping beginners build a strong throw and sleeper.</li><li><span>1989</span> The Fireball&rsquo;s transaxle spins about three times longer than a fixed axle.</li><li><span>1980s&ndash;1990s</span> Longer spins from new axles, response systems, and materials make whole new categories of tricks possible.</li><li><span>1998&ndash;2003</span> Velvet Rolls (3A), freehand (5A), and offstring binds (4A) arrive. Early-2000s 1A tricks move from responsive looping combos toward technical string tricks that need wider gaps.</li><li><span>2002&ndash;03</span> The first C-size bearing yo-yos and yo-yos built to be unresponsive out of the box appear, as forum historians recall them.</li><li><span>c. 2007</span> Big contests replace compulsories with preliminary freestyles.</li><li><span>2000s&ndash;2010s</span> YouTube spreads tutorials and new tricks worldwide, including horizontal play and finger spins.</li><li><span>2020s</span> Short-form video makes tricks like the DNA go viral.</li></ul>
-        <p class="sci-note">Sources: 1920s, Gentry Stein<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup>; c. 1950, the YoYo Wiki<sup class="cite"><a href="learn-yoyo.html#ref-25" aria-label="Source 25">[25]</a></sup>; contests<sup class="cite"><a href="learn-yoyo.html#ref-39" aria-label="Source 39">[39]</a></sup>; 1984<sup class="cite"><a href="learn-yoyo.html#ref-40" aria-label="Source 40">[40]</a></sup>; 1989<sup class="cite"><a href="learn-yoyo.html#ref-41" aria-label="Source 41">[41]</a></sup>; 1980s&ndash;1990s<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup>; 1998&ndash;2003<sup class="cite"><a href="learn-yoyo.html#ref-46" aria-label="Source 46">[46]</a><a href="learn-yoyo.html#ref-48" aria-label="Source 48">[48]</a></sup>; 2002&ndash;03<sup class="cite"><a href="learn-yoyo.html#ref-47" aria-label="Source 47">[47]</a></sup>; c. 2007<sup class="cite"><a href="learn-yoyo.html#ref-39" aria-label="Source 39">[39]</a></sup>; 2000s onward<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup>.</p>
-        <h3>Early responsive play</h3>
-        <p>For most of the yo-yo&rsquo;s history, tricks started from a sleeper and ended with a tug: Walk the Dog, Rock the Baby, Around the World, loops. Contests were about completing set tricks better than the next player.<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a><a href="learn-yoyo.html#ref-39" aria-label="Source 39">[39]</a></sup> Many forum players call roughly 1998&ndash;2002 &ldquo;old school,&rdquo; 2003&ndash;2007 &ldquo;mid school,&rdquo; and 2008 on &ldquo;modern,&rdquo; though everyone draws the lines a little differently.<sup class="cite"><a href="learn-yoyo.html#ref-47" aria-label="Source 47">[47]</a></sup></p>
-        <h3>The unresponsive turn</h3>
-        <p>As yo-yos became less responsive, players needed a way to bring them back on command. The bind was the breakthrough; it lets a yo-yo stay unresponsive through slack and long combos, and it underpins modern 1A.<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a><a href="learn-yoyo.html#ref-26" aria-label="Source 26">[26]</a></sup> New trick families followed:</p>
-        <ul class="sci-list">
-          <li><strong>Lacerations:</strong> Brent Stole is a green-triangle laceration by Alex Berenguel. Its name comes from Brent, who used a similar laceration on the way to winning the 2002 U.S. Nationals.<sup class="cite"><a href="learn-yoyo.html#ref-42" aria-label="Source 42">[42]</a></sup></li>
-          <li><strong>Slack and whips:</strong> the Plastic Whip is the classic introduction to slack-style 1A.<sup class="cite"><a href="learn-yoyo.html#ref-43" aria-label="Source 43">[43]</a></sup></li>
-          <li><strong>Borrowed moves:</strong> Paul Escolar&rsquo;s Suicide, releasing and recatching the trapeze loop, comes from a diabolo trick of the same name.<sup class="cite"><a href="learn-yoyo.html#ref-44" aria-label="Source 44">[44]</a></sup></li>
-          <li><strong>Rolls and flops:</strong> Doctor Popular is known for the Gyroscopic Flop.<sup class="cite"><a href="learn-yoyo.html#ref-45" aria-label="Source 45">[45]</a></sup></li>
-        </ul>
-        <h3>Body, head, and neck</h3>
-        <p>Looping lessons include wraps around the arm, leg, and elbow, plus chain wraps.<sup class="cite"><a href="learn-yoyo.html#ref-55" aria-label="Source 55">[55]</a></sup> Tourniquet style (2010) wears the slipknot around the upper arm with an extra-long string for body-based wraps.<sup class="cite"><a href="learn-yoyo.html#ref-46" aria-label="Source 46">[46]</a></sup> Modern 1A tricks like Ghost Neck loop the string around the neck.<sup class="cite"><a href="learn-yoyo.html#ref-54" aria-label="Source 54">[54]</a></sup></p>
-        <div class="try-box">
-          <div class="try-label">Safety: Neck Tricks</div>
-          <p>Never pull on a string that&rsquo;s around your neck. If you get a knot, take the string off your finger first, then untangle it.<sup class="cite"><a href="learn-yoyo.html#ref-54" aria-label="Source 54">[54]</a></sup> Save these tricks for once your basics are solid, and practice with room around you.</p>
-        </div>
-        <h3>Horizontal play</h3>
-        <p>In horizontal play, the yo-yo spins on its side. Steve Brown recalls trying a horizontal Brain Twister in his first freehand routine in 1999.<sup class="cite"><a href="learn-yoyo.html#ref-48" aria-label="Source 48">[48]</a></sup> The internet spread horizontal play worldwide,<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup> and Doctor Popular&rsquo;s PopCast recorded an oral history of modern horizontal yo-yoing with Josh Yee.<sup class="cite"><a href="learn-yoyo.html#ref-49" aria-label="Source 49">[49]</a></sup> To start:</p>
-        <ul class="sci-list">
-          <li>Shorten your string. It&rsquo;s faster, and it keeps a swinging yo-yo farther from your face.<sup class="cite"><a href="learn-yoyo.html#ref-52" aria-label="Source 52">[52]</a></sup></li>
-          <li>Learn the horizontal throw on a responsive yo-yo first.<sup class="cite"><a href="learn-yoyo.html#ref-52" aria-label="Source 52">[52]</a></sup></li>
-          <li>Learn each trick vertically before trying it horizontal, and vertical behind-the-back before horizontal behind-the-back.<sup class="cite"><a href="learn-yoyo.html#ref-53" aria-label="Source 53">[53]</a></sup></li>
-        </ul>
-        <h3>The social era</h3>
-        <p>Gentry Stein posted an early finger-spin trick in July 2020; an August 1 video passed 7 million views, and a viewer compared the twisting string to DNA, which gave the trick its name. It has since been seen across social media more than a billion times, and it works as an easy modern responsive trick.<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup> Doctor Popular&rsquo;s PopCast also interviewed Páll Guðmundsson, creator of the DNA bind, also called the Tornado Bind.<sup class="cite"><a href="learn-yoyo.html#ref-50" aria-label="Source 50">[50]</a></sup> For more, watch Doctor Popular&rsquo;s <a href="https://www.youtube.com/playlist?list=PL1g-GXFBtDQd-NeFP1_wsJELt6YfD9-Rs" target="_blank" rel="noopener noreferrer">Yo-Yo History playlist</a>, with episodes on binds, gyroscopic flops, and horizontal tricks.<sup class="cite"><a href="learn-yoyo.html#ref-51" aria-label="Source 51">[51]</a><a href="learn-yoyo.html#ref-49" aria-label="Source 49">[49]</a></sup> For the full story of the toy, see <a href="yoyo-history.html">The Story of the Yo-Yo</a>. The move is older than its viral name: Doctor Popular&rsquo;s PopCast <a href="https://www.youtube.com/watch?v=ViybURFu-so" target="_blank" rel="noopener noreferrer">interviewed Palli</a> about the history of the Tornado Bind, as many players call it, and forum players point to similar moves from the mid-2000s.<sup class="cite"><a href="learn-yoyo.html#ref-113" aria-label="Source 113">[113]</a></sup></p>
-      </article>
-
-      <article id="tips" class="sci-sec">
-        <div class="sci-kicker">Part 13</div>
-        <h2 class="sci-title">Tips from Experienced Players</h2>
-        <ul class="sci-list">
-          <li>Before every throw, look around so no one is within your swing radius, and check your string for fraying or knots.<sup class="cite"><a href="learn-yoyo.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
-          <li>Start with one-handed string tricks (1A). Buy strings in a pack and keep spare response pads.<sup class="cite"><a href="learn-yoyo.html#ref-24" aria-label="Source 24">[24]</a></sup></li>
-          <li>Adjust your string to your height before learning tricks, or you&rsquo;ll end up throwing with your arm raised.<sup class="cite"><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
-          <li>If the yo-yo keeps spinning out at the bottom, check that it&rsquo;s not upside down in your hand.<sup class="cite"><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
-          <li>Binds are easier when the yo-yo is on the string spinning the opposite way. Try pinching the string with your other hand, then lift your yo-yo hand.<sup class="cite"><a href="learn-yoyo.html#ref-14" aria-label="Source 14">[14]</a></sup></li>
-          <li>For looping, learn each trick with both hands.<sup class="cite"><a href="learn-yoyo.html#ref-10" aria-label="Source 10">[10]</a></sup></li>
-          <li>Learn offstring outdoors, away from anything breakable.<sup class="cite"><a href="learn-yoyo.html#ref-27" aria-label="Source 27">[27]</a></sup></li>
-          <li>Replace worn string, and work through problems in order: pads, lube, string.<sup class="cite"><a href="learn-yoyo.html#ref-1" aria-label="Source 1">[1]</a></sup> See <a href="yoyo-gear.html#troubleshooting">Quick Troubleshooting</a>.</li>
-        </ul>
-      </article>
-
-      <article id="more" class="sci-sec">
-        <div class="sci-kicker">Part 14</div>
-        <h2 class="sci-title">Where to Learn More</h2>
-        <ul class="sci-list">
-          <li><a href="https://yoyotricks.com/yoyo-tricks/" target="_blank" rel="noopener noreferrer">YoYoTricks.com</a>: a big free video library, sorted by style and level, with a Screen Time Challenge for beginners.<sup class="cite"><a href="learn-yoyo.html#ref-15" aria-label="Source 15">[15]</a><a href="learn-yoyo.html#ref-16" aria-label="Source 16">[16]</a></sup></li>
-          <li><a href="https://yoyoexpert.com/pages/learn-yoyo-tricks" target="_blank" rel="noopener noreferrer">YoYoExpert Learn</a>: step-by-step trick guides for every style.<sup class="cite"><a href="learn-yoyo.html#ref-31" aria-label="Source 31">[31]</a></sup></li>
-          <li><a href="https://skilladdicts.com/" target="_blank" rel="noopener noreferrer">Skill Addicts</a>: tutorials across 1A&ndash;5A.<sup class="cite"><a href="learn-yoyo.html#ref-32" aria-label="Source 32">[32]</a></sup></li>
-          <li><a href="https://yomega.com/learn-tricks/" target="_blank" rel="noopener noreferrer">Yomega Learn Tricks</a> and <a href="https://duncantoys.com/pages/tutorial-videos" target="_blank" rel="noopener noreferrer">Duncan Tutorial Videos</a>: classic tricks from classic brands.<sup class="cite"><a href="learn-yoyo.html#ref-29" aria-label="Source 29">[29]</a><a href="learn-yoyo.html#ref-30" aria-label="Source 30">[30]</a></sup></li>
-          <li><a href="https://www.yoyosam.com/pages/beginner-yo-yo-tutorial" target="_blank" rel="noopener noreferrer">YoYoSam Beginner Tutorial</a>: string, wind, throw, and first tricks.<sup class="cite"><a href="learn-yoyo.html#ref-33" aria-label="Source 33">[33]</a></sup></li>
-          <li><a href="https://www.classicyoyotricks.com/" target="_blank" rel="noopener noreferrer">Classic Yoyo Tricks</a>: the basics, a video for each.<sup class="cite"><a href="learn-yoyo.html#ref-34" aria-label="Source 34">[34]</a></sup></li>
-          <li><a href="https://trick.yoyorewind.com/" target="_blank" rel="noopener noreferrer">Yo-Yo Trick Database</a> (Rewind): tricks by level and style, in Japanese and English.<sup class="cite"><a href="learn-yoyo.html#ref-35" aria-label="Source 35">[35]</a></sup></li>
-          <li><a href="https://www.mryoyothrower.com/" target="_blank" rel="noopener noreferrer">MrYoYoThrower</a>: 1A tricks organized by mount.<sup class="cite"><a href="learn-yoyo.html#ref-36" aria-label="Source 36">[36]</a></sup></li>
-          <li><a href="https://yoyo.fandom.com/wiki/Sleeper" target="_blank" rel="noopener noreferrer">YoYo Wiki</a>: trick write-ups and history.<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup></li>
-          <li><a href="https://forums.yoyoexpert.com/" target="_blank" rel="noopener noreferrer">YoYoExpert Forums</a>: ask questions, share progress.<sup class="cite"><a href="learn-yoyo.html#ref-37" aria-label="Source 37">[37]</a></sup></li>
-          <li>Our <a href="assets/documents/trick-reference-guide.pptx">Trick Reference Guide</a> slides, to take home and practice.<sup class="cite"><a href="learn-yoyo.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
-          <li>Our printable <a href="assets/documents/beginner-trick-checklist.pdf">Beginner Trick Checklist</a>: the first 43 tricks on one page, to check off as you land them.</li>
-          <li>Our <a href="resources.html#learn">Resources page</a> for apps, clubs, and contests, and our <a href="yoyo-gear.html">Gear &amp; Maintenance</a>, <a href="yoyo-science.html">Science</a>, and <a href="yoyo-history.html">History</a> pages.</li>
-        </ul>
-      </article>
 
       <article id="glossary" class="sci-sec">
         <div class="sci-kicker">Part 15</div>
@@ -665,36 +266,36 @@
           <caption>Yo-yo glossary</caption>
           <thead><tr><th scope="col">Term</th><th scope="col">Meaning</th><th scope="col">More</th></tr></thead>
           <tbody>
-            <tr><td data-label="Term"><strong>0A&ndash;5A, X, AP</strong></td><td data-label="Meaning">The styles of play, from modern responsive through freehand, plus the X division and Artistic Performance.<sup class="cite"><a href="learn-yoyo.html#ref-46" aria-label="Source 46">[46]</a></sup></td><td data-label="More"><a href="yoyo-gear.html#styles" aria-label="Read more: 0A&ndash;5A, X, AP">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>B-grade</strong></td><td data-label="Meaning">A yo-yo sold at a discount for finish flaws or vibe.</td><td data-label="More"><a href="yoyo-gear.html#culture" aria-label="Read more: B-grade">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>0A&ndash;5A, X, AP</strong></td><td data-label="Meaning">The styles of play, from modern responsive through freehand, plus the X division and Artistic Performance.<sup class="cite"><a href="learn-yoyo.html#ref-46" aria-label="Source 46">[46]</a></sup></td><td data-label="More"><a href="yoyo-gear-basics.html#styles" aria-label="Read more: 0A&ndash;5A, X, AP">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>B-grade</strong></td><td data-label="Meaning">A yo-yo sold at a discount for finish flaws or vibe.</td><td data-label="More"><a href="yoyo-gear-mods.html#culture" aria-label="Read more: B-grade">Read more</a></td></tr>
             <tr><td data-label="Term"><strong>Bandalorist</strong></td><td data-label="Meaning">A yo-yo collector.</td><td data-label="More"><a href="yoyo-collecting.html#what" aria-label="Read more: Bandalorist">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Bearing size (A, C, MR85&hellip;)</strong></td><td data-label="Meaning">Letter or part-number sizes for yo-yo bearings; C is today&rsquo;s standard.</td><td data-label="More"><a href="yoyo-gear.html#bearings" aria-label="Read more: Bearing size (A, C, MR85&hellip;)">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Bearing size (A, C, MR85&hellip;)</strong></td><td data-label="Meaning">Letter or part-number sizes for yo-yo bearings; C is today&rsquo;s standard.</td><td data-label="More"><a href="yoyo-gear-maintenance.html#bearings" aria-label="Read more: Bearing size (A, C, MR85&hellip;)">Read more</a></td></tr>
             <tr><td data-label="Term"><strong>Bimetal</strong></td><td data-label="Meaning">A yo-yo made of two metals, usually aluminum with steel rims for more rim weight.</td><td data-label="More"><a href="yoyo-science.html#design" aria-label="Read more: Bimetal">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Bind</strong></td><td data-label="Meaning">Winding string into the gap to make an unresponsive yo-yo return.<sup class="cite"><a href="learn-yoyo.html#ref-26" aria-label="Source 26">[26]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#types" aria-label="Read more: Bind">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Bind</strong></td><td data-label="Meaning">Winding string into the gap to make an unresponsive yo-yo return.<sup class="cite"><a href="learn-yoyo.html#ref-26" aria-label="Source 26">[26]</a></sup></td><td data-label="More"><a href="learn-yoyo-basics.html#types" aria-label="Read more: Bind">Read more</a></td></tr>
             <tr><td data-label="Term"><strong>BST</strong></td><td data-label="Meaning">Buy/sell/trade: forum marketplaces for used yo-yos.</td><td data-label="More"><a href="yoyo-collecting.html#bst" aria-label="Read more: BST">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Clicker</strong></td><td data-label="Meaning">A hand tally counter judges use to score elements.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#contests" aria-label="Read more: Clicker">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Counterweight</strong></td><td data-label="Meaning">The weight on the free end of the string in 5A.</td><td data-label="More"><a href="yoyo-gear.html#counterweights" aria-label="Read more: Counterweight">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Element</strong></td><td data-label="Meaning">One specific, scorable movement inside a trick.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#contests" aria-label="Read more: Element">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Fixed axle</strong></td><td data-label="Meaning">A yo-yo whose string wraps a solid axle instead of a bearing; a &ldquo;fixie.&rdquo;</td><td data-label="More"><a href="yoyo-gear.html#axles" aria-label="Read more: Fixed axle">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Floaty</strong></td><td data-label="Meaning">A yo-yo that feels light and drifts through tricks.</td><td data-label="More"><a href="yoyo-gear.html#culture" aria-label="Read more: Floaty">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Green Triangle (GT)</strong></td><td data-label="Meaning">A mount that is basically a knot with the yo-yo in the loop, invented by Paul Escolar; the pop-out side matters.<sup class="cite"><a href="learn-yoyo.html#ref-82" aria-label="Source 82">[82]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#beyond" aria-label="Read more: Green Triangle (GT)">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Clicker</strong></td><td data-label="Meaning">A hand tally counter judges use to score elements.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></td><td data-label="More"><a href="learn-yoyo-practice.html#contests" aria-label="Read more: Clicker">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Counterweight</strong></td><td data-label="Meaning">The weight on the free end of the string in 5A.</td><td data-label="More"><a href="yoyo-gear-accessories.html#counterweights" aria-label="Read more: Counterweight">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Element</strong></td><td data-label="Meaning">One specific, scorable movement inside a trick.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></td><td data-label="More"><a href="learn-yoyo-practice.html#contests" aria-label="Read more: Element">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Fixed axle</strong></td><td data-label="Meaning">A yo-yo whose string wraps a solid axle instead of a bearing; a &ldquo;fixie.&rdquo;</td><td data-label="More"><a href="yoyo-gear-maintenance.html#axles" aria-label="Read more: Fixed axle">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Floaty</strong></td><td data-label="Meaning">A yo-yo that feels light and drifts through tricks.</td><td data-label="More"><a href="yoyo-gear-mods.html#culture" aria-label="Read more: Floaty">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Green Triangle (GT)</strong></td><td data-label="Meaning">A mount that is basically a knot with the yo-yo in the loop, invented by Paul Escolar; the pop-out side matters.<sup class="cite"><a href="learn-yoyo.html#ref-82" aria-label="Source 82">[82]</a></sup></td><td data-label="More"><a href="learn-yoyo-beyond.html#beyond" aria-label="Read more: Green Triangle (GT)">Read more</a></td></tr>
             <tr><td data-label="Term"><strong>H, V, W, O shapes</strong></td><td data-label="Meaning">Profile shapes: rim-heavy H, straight V, stepped W, and rounded O (organic).</td><td data-label="More"><a href="yoyo-science.html#design" aria-label="Read more: H, V, W, O shapes">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Hubstack</strong></td><td data-label="Meaning">Capped bearings on the hubs you can grab while the yo-yo spins.</td><td data-label="More"><a href="yoyo-gear.html#culture" aria-label="Read more: Hubstack">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>KonKave</strong></td><td data-label="Meaning">Frank Difeo&rsquo;s curved, string-centering bearing from 2003.</td><td data-label="More"><a href="yoyo-gear.html#bearings" aria-label="Read more: KonKave">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Mount</strong></td><td data-label="Meaning">A position the string can be in with the yo-yo on it; in 3A, mounts are called houses.<sup class="cite"><a href="learn-yoyo.html#ref-81" aria-label="Source 81">[81]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#first100" aria-label="Read more: Mount">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Rejection</strong></td><td data-label="Meaning">Pushing the string into the yo-yo&rsquo;s wall so the spin kicks it out of the gap.<sup class="cite"><a href="learn-yoyo.html#ref-106" aria-label="Source 106">[106]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#create">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Responsive / unresponsive</strong></td><td data-label="Meaning">Comes back with a tug, or needs a bind.<sup class="cite"><a href="learn-yoyo.html#ref-25" aria-label="Source 25">[25]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#types" aria-label="Read more: Responsive / unresponsive">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Silicone / flowable</strong></td><td data-label="Meaning">The response material in most unresponsive yo-yos, as pads or poured into a groove.</td><td data-label="More"><a href="yoyo-gear.html#response" aria-label="Read more: Silicone / flowable">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Restart</strong></td><td data-label="Meaning">Spinning a stopped yo-yo back up on the string instead of rewinding it.<sup class="cite"><a href="learn-yoyo.html#ref-95" aria-label="Source 95">[95]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#practice">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Sleeper</strong></td><td data-label="Meaning">The yo-yo spinning at the end of the string.<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#throw" aria-label="Read more: Sleeper">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Stop, discard, detach</strong></td><td data-label="Meaning">Contest deductions of &minus;1, &minus;3, and &minus;5.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#contests" aria-label="Read more: Stop, discard, detach">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>String tension</strong></td><td data-label="Meaning">Twist in the string; too much makes loops and kinks.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#tension" aria-label="Read more: String tension">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>String type 6, 8, 9</strong></td><td data-label="Meaning">String thickness by strand count; type 8 is standard.</td><td data-label="More"><a href="yoyo-gear.html#string" aria-label="Read more: String type 6, 8, 9">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Suicide</strong></td><td data-label="Meaning">Releasing a string loop and catching it again on your finger; invented by Paul Escolar from a diabolo trick of the same name.<sup class="cite"><a href="learn-yoyo.html#ref-44" aria-label="Source 44">[44]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#beyond" aria-label="Read more: Suicide">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Throw down</strong></td><td data-label="Meaning">The basic throw every trick starts from.<sup class="cite"><a href="learn-yoyo.html#ref-83" aria-label="Source 83">[83]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#throw" aria-label="Read more: Throw down">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Transaxle</strong></td><td data-label="Meaning">A sleeve or bearing around the axle so the string doesn&rsquo;t rub a fixed axle.</td><td data-label="More"><a href="yoyo-gear.html#axles" aria-label="Read more: Transaxle">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Trick ladder</strong></td><td data-label="Meaning">A set list of tricks in rising difficulty used at contests.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup></td><td data-label="More"><a href="learn-yoyo.html#ladder" aria-label="Read more: Trick ladder">Read more</a></td></tr>
-            <tr><td data-label="Term"><strong>Vibe</strong></td><td data-label="Meaning">Vibration you feel through the string, usually from misaligned halves.</td><td data-label="More"><a href="yoyo-gear.html#culture" aria-label="Read more: Vibe">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Hubstack</strong></td><td data-label="Meaning">Capped bearings on the hubs you can grab while the yo-yo spins.</td><td data-label="More"><a href="yoyo-gear-mods.html#culture" aria-label="Read more: Hubstack">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>KonKave</strong></td><td data-label="Meaning">Frank Difeo&rsquo;s curved, string-centering bearing from 2003.</td><td data-label="More"><a href="yoyo-gear-maintenance.html#bearings" aria-label="Read more: KonKave">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Mount</strong></td><td data-label="Meaning">A position the string can be in with the yo-yo on it; in 3A, mounts are called houses.<sup class="cite"><a href="learn-yoyo.html#ref-81" aria-label="Source 81">[81]</a></sup></td><td data-label="More"><a href="learn-yoyo-tricks.html#first100" aria-label="Read more: Mount">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Rejection</strong></td><td data-label="Meaning">Pushing the string into the yo-yo&rsquo;s wall so the spin kicks it out of the gap.<sup class="cite"><a href="learn-yoyo.html#ref-106" aria-label="Source 106">[106]</a></sup></td><td data-label="More"><a href="learn-yoyo-beyond.html#create">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Responsive / unresponsive</strong></td><td data-label="Meaning">Comes back with a tug, or needs a bind.<sup class="cite"><a href="learn-yoyo.html#ref-25" aria-label="Source 25">[25]</a></sup></td><td data-label="More"><a href="learn-yoyo-basics.html#types" aria-label="Read more: Responsive / unresponsive">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Silicone / flowable</strong></td><td data-label="Meaning">The response material in most unresponsive yo-yos, as pads or poured into a groove.</td><td data-label="More"><a href="yoyo-gear-maintenance.html#response" aria-label="Read more: Silicone / flowable">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Restart</strong></td><td data-label="Meaning">Spinning a stopped yo-yo back up on the string instead of rewinding it.<sup class="cite"><a href="learn-yoyo.html#ref-95" aria-label="Source 95">[95]</a></sup></td><td data-label="More"><a href="learn-yoyo-practice.html#practice">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Sleeper</strong></td><td data-label="Meaning">The yo-yo spinning at the end of the string.<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a></sup></td><td data-label="More"><a href="learn-yoyo-basics.html#throw" aria-label="Read more: Sleeper">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Stop, discard, detach</strong></td><td data-label="Meaning">Contest deductions of &minus;1, &minus;3, and &minus;5.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></td><td data-label="More"><a href="learn-yoyo-practice.html#contests" aria-label="Read more: Stop, discard, detach">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>String tension</strong></td><td data-label="Meaning">Twist in the string; too much makes loops and kinks.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></td><td data-label="More"><a href="learn-yoyo-basics.html#tension" aria-label="Read more: String tension">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>String type 6, 8, 9</strong></td><td data-label="Meaning">String thickness by strand count; type 8 is standard.</td><td data-label="More"><a href="yoyo-gear-accessories.html#string" aria-label="Read more: String type 6, 8, 9">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Suicide</strong></td><td data-label="Meaning">Releasing a string loop and catching it again on your finger; invented by Paul Escolar from a diabolo trick of the same name.<sup class="cite"><a href="learn-yoyo.html#ref-44" aria-label="Source 44">[44]</a></sup></td><td data-label="More"><a href="learn-yoyo-beyond.html#beyond" aria-label="Read more: Suicide">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Throw down</strong></td><td data-label="Meaning">The basic throw every trick starts from.<sup class="cite"><a href="learn-yoyo.html#ref-83" aria-label="Source 83">[83]</a></sup></td><td data-label="More"><a href="learn-yoyo-basics.html#throw" aria-label="Read more: Throw down">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Transaxle</strong></td><td data-label="Meaning">A sleeve or bearing around the axle so the string doesn&rsquo;t rub a fixed axle.</td><td data-label="More"><a href="yoyo-gear-maintenance.html#axles" aria-label="Read more: Transaxle">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Trick ladder</strong></td><td data-label="Meaning">A set list of tricks in rising difficulty used at contests.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup></td><td data-label="More"><a href="learn-yoyo-tricks.html#ladder" aria-label="Read more: Trick ladder">Read more</a></td></tr>
+            <tr><td data-label="Term"><strong>Vibe</strong></td><td data-label="Meaning">Vibration you feel through the string, usually from misaligned halves.</td><td data-label="More"><a href="yoyo-gear-mods.html#culture" aria-label="Read more: Vibe">Read more</a></td></tr>
           </tbody>
         </table>
       </article>
@@ -885,6 +486,14 @@
   </div>
 </footer>
 
+<!-- Sections moved to sub-pages: forward old deep links (learn-yoyo.html#id) to the page that now holds the id. -->
+<script>
+  (function () {
+    var moved = {"types":"learn-yoyo-basics.html","string":"learn-yoyo-basics.html","throw":"learn-yoyo-basics.html","tension":"learn-yoyo-basics.html","first":"learn-yoyo-basics.html","first100":"learn-yoyo-tricks.html","ladder":"learn-yoyo-tricks.html","practice":"learn-yoyo-practice.html","contests":"learn-yoyo-practice.html","beyond":"learn-yoyo-beyond.html","create":"learn-yoyo-beyond.html","evolution":"learn-yoyo-beyond.html","tips":"learn-yoyo-beyond.html","more":"learn-yoyo-beyond.html"};
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (Object.prototype.hasOwnProperty.call(moved, id)) location.replace(moved[id] + '#' + id);
+  })();
+</script>
 <!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
 <script>
   document.getElementById('hamburger').addEventListener('click', () => {

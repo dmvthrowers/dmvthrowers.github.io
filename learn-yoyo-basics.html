@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--
+  learn-yoyo-basics.html — Getting Started, part 1 of 4 of How to Yo-Yo (learn-yoyo.html).
+  Split mechanically from learn-yoyo.html; the section content is verbatim. Citation
+  numbers link to the References list on learn-yoyo.html.
+-->
+<html lang="en">
+<head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <!-- base href="/" makes every relative URL resolve from the site root. -->
+  <base href="/"/>
+  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
+       formspree for the contact form, Google Fonts for typography). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <title>Getting Started · How to Yo-Yo - DMV Throwers · Yo-Yo &amp; Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="Getting Started, from the DMV Throwers How to Yo-Yo guide: Responsive or Unresponsive?, String It Up, Wind, Throw, and Sleep, String Tension, Your First Tricks."/>
+  <meta property="og:title" content="Getting Started · How to Yo-Yo - DMV Throwers"/>
+  <meta property="og:description" content="Getting Started, from the DMV Throwers How to Yo-Yo guide: Responsive or Unresponsive?, String It Up, Wind, Throw, and Sleep, String Tension, Your First Tricks."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/learn-yoyo-basics.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="Getting Started · How to Yo-Yo - DMV Throwers"/>
+  <meta name="twitter:description" content="Getting Started, from the DMV Throwers How to Yo-Yo guide: Responsive or Unresponsive?, String It Up, Wind, Throw, and Sleep, String Tension, Your First Tricks."/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="keywords" content="how to yo-yo, yo-yo tricks for beginners, how to string a yo-yo, how to wind a yo-yo, sleeper, gravity pull, string tension, walk the dog, rock the baby, first 100 yo-yo tricks"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <meta name="geo.placename" content="Arlington, Virginia"/>
+  <link rel="canonical" href="https://dmvthrowers.club/learn-yoyo-basics.html"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + Article. Not rendered; consumed by search engines. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
+        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://dmvthrowers.club/resources.html"},
+        {"@type": "ListItem", "position": 3, "name": "How to Yo-Yo", "item": "https://dmvthrowers.club/learn-yoyo.html"},
+        {"@type": "ListItem", "position": 4, "name": "Getting Started", "item": "https://dmvthrowers.club/learn-yoyo-basics.html"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Yo-Yo: Getting Started",
+      "publisher": {"@type": "Organization", "name": "DMV Throwers", "url": "https://dmvthrowers.club/"},
+      "datePublished": "2026-09-29",
+      "url": "https://dmvthrowers.club/learn-yoyo-basics.html"
+    }
+  ]
+  </script>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
+    .sci-wrap { max-width: 860px; margin: 0 auto; }
+    .sci-intro { color: var(--text-muted); font-size: 1rem; line-height: 1.65; margin-bottom: 12px; }
+    .sci-toc { margin: 16px 0 8px; padding: 16px 20px 16px 40px; border: 1px solid var(--border); border-left: 4px solid var(--red); background: var(--cream); columns: 2; column-gap: 24px; }
+    .sci-toc li { padding: 3px 0; break-inside: avoid; }
+    .sci-toc a { color: var(--navy); font-weight: 700; }
+    .sci-sec { margin-top: 48px; scroll-margin-top: 80px; }
+    .sci-kicker { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); }
+    .sci-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.8rem; color: var(--navy); line-height: 1.2; margin: 6px 0 14px; }
+    .sci-sec h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin: 24px 0 8px; }
+    .sci-sec p, .sci-list li, .sci-steps li { line-height: 1.7; color: var(--text-body); }
+    .sci-sec p { margin-bottom: 12px; }
+    .sci-wrap a:not(.btn) { color: var(--navy); font-weight: 700; }
+    .sci-list, .sci-steps { padding-left: 20px; margin: 8px 0 14px; }
+    .sci-list li, .sci-steps li { padding: 3px 0; }
+    .cite { font-size: 0.72em; line-height: 0; margin-left: 1px; white-space: nowrap; }
+    .sci-wrap .cite a { color: var(--red); font-weight: 700; text-decoration: none; }
+    .std-box { padding: 18px 22px; background: var(--navy); color: var(--cream); }
+    .std-box ul { margin: 6px 0 0; padding-left: 18px; }
+    .std-box li { padding: 4px 0; line-height: 1.6; color: var(--cream); }
+    .std-box strong { color: var(--cream); }
+    .std-box .cite a { color: var(--cream) !important; text-decoration: underline; }
+    .std-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--cream); opacity: 0.85; }
+    .mini-tl { list-style: none; margin: 8px 0 6px; padding: 0 0 0 14px; border-left: 3px solid var(--navy); }
+    .mini-tl li { padding: 4px 0; line-height: 1.55; color: var(--text-body); }
+    .mini-tl span { display: inline-block; min-width: 92px; font-weight: 700; color: var(--red); }
+    .table-scroll { overflow-x: auto; margin: 12px 0 16px; }
+    .sci-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .sci-table caption { text-align: left; font-weight: 700; color: var(--navy); padding-bottom: 6px; }
+    .sci-table th, .sci-table td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; line-height: 1.5; }
+    .sci-table th { background: var(--navy); color: var(--cream); font-size: 0.78rem; letter-spacing: var(--caps-track); text-transform: uppercase; }
+    .sci-table tbody tr:nth-child(odd) td { background: var(--cream); }
+    .try-box { margin: 16px 0; padding: 14px 18px; border: 2px dashed var(--red); background: var(--cream); }
+    .try-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 4px; }
+    .sci-note { font-size: 0.92rem; color: var(--text-muted); font-style: italic; }
+    .ref-list { padding-left: 24px; font-size: 0.86rem; line-height: 1.6; }
+    .ref-list li { padding: 4px 0; color: var(--text-body); overflow-wrap: anywhere; scroll-margin-top: 90px; }
+    .ref-list li:target { background: var(--cream); outline: 2px solid var(--red); }
+    .sci-credit { margin-top: 32px; padding: 16px 20px; border: 1px solid var(--border); background: var(--cream); font-size: 0.9rem; color: var(--text-muted); }
+    @media (max-width: 600px) {
+      .stack-table thead { display: none; }
+      .stack-table caption { display: block; width: 100%; }
+      .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
+      .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
+      .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
+    }
+    @media (max-width: 760px) {
+      .sci-toc { columns: 1; }
+      .sci-title { font-size: 1.45rem; }
+      .mini-tl span { display: block; min-width: 0; }
+    }
+    .trick-list { columns: 2; column-gap: 28px; padding-left: 34px; margin: 8px 0 18px; }
+    .trick-list li { padding: 3px 0; break-inside: avoid; line-height: 1.5; color: var(--text-body); }
+    @media (max-width: 600px) { .trick-list { columns: 1; } }
+    /* Sub-page index (the guide is split across several pages) */
+    .guide-parts { margin: 16px 0 8px; padding: 16px 20px; border: 1px solid var(--border); border-left: 4px solid var(--navy); background: white; }
+    .guide-parts-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+    .guide-parts-list { margin: 0; padding-left: 22px; }
+    .guide-parts-list li { padding: 4px 0; }
+    .guide-parts-list a { color: var(--navy); font-weight: 700; }
+    .guide-parts-list a[aria-current] { color: var(--red); }
+    .guide-parts-list span { display: block; font-size: 0.85rem; color: var(--text-muted); }
+    .guide-pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .guide-pager a { color: var(--navy); font-weight: 700; }
+  </style>
+
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: headline event + shortcut. Update the text each month. -->
+<div id="top-bar">
+  <span>NEXT MEET: SUNDAY, OCTOBER 18 · 1–4 PM · ARLINGTON CENTRAL LIBRARY</span>
+  <a href="events.html">SEE EVENTS →</a>
+</div>
+
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
+      <div>
+        <div class="nav-brand-text-main">DMV THROWERS</div>
+        <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
+      <a href="events.html" class="nav-link">CLUB EVENTS</a>
+      <a href="gallery.html" class="nav-link">GALLERY</a>
+      <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
+      <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link">MAP</a>
+        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">ABOUT</a>
+  <a href="team.html">TEAM</a>
+  <a href="events.html">CLUB EVENTS</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="resources.html">RESOURCES</a>
+  <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/">MAP</a>
+    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
+  <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="red-tag">LEARN</span>
+    <h1 class="page-hero-title">Getting Started</h1>
+    <p class="page-hero-sub">Responsive or Unresponsive? · String It Up · Wind, Throw, and Sleep · String Tension · Your First Tricks</p>
+  </div>
+  <div class="page-hero-skyline">
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
+  </div>
+</div>
+
+<!-- guide-nav:top -->
+<nav class="guide-nav" aria-label="Learn and reference guides">
+  <div class="guide-nav-inner"><span class="guide-nav-label">LEARN &amp; REFERENCE</span>
+    <a href="learn-yoyo.html" aria-current="true" class="is-current">How to Yo-Yo</a>
+    <a href="yoyo-gear.html">Gear &amp; Maintenance</a>
+    <a href="yoyo-science.html">Yo-Yo Science</a>
+    <a href="yoyo-history.html">Yo-Yo History</a>
+    <a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a>
+    <a href="yoyo-collecting.html">Collecting Yo-Yos</a>
+    <a href="resources.html">Resources</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+</nav>
+<!-- /guide-nav:top -->
+
+<!-- Aggregates free tutorials from across the hobby; facts carry numbered citations. -->
+<section id="learn" class="section-bg-white">
+  <div class="section">
+    <div class="sci-wrap">
+      <p class="sci-note">Part 1 of 4 of <a href="learn-yoyo.html">How to Yo-Yo</a>. Source numbers link to the <a href="learn-yoyo.html#references">References</a> list.</p>
+      <nav class="guide-parts" aria-label="How to Yo-Yo sections">
+        <div class="guide-parts-label">THIS GUIDE IN 4 PARTS</div>
+        <ol class="guide-parts-list">
+          <li><a href="learn-yoyo-basics.html" aria-current="page">Getting Started</a><span>Responsive or Unresponsive? &middot; String It Up &middot; Wind, Throw, and Sleep &middot; String Tension &middot; Your First Tricks</span></li>
+          <li><a href="learn-yoyo-tricks.html">The First 100 Tricks</a><span>The First 100 Tricks &middot; A Contest-Tested Ladder</span></li>
+          <li><a href="learn-yoyo-practice.html">Practice and Contests</a><span>Practice, Play Healthy, and Everyone Can Throw &middot; Contests and Judging</span></li>
+          <li><a href="learn-yoyo-beyond.html">Beyond the Basics</a><span>Keep Learning: Beyond the First 100 &middot; Make Your Own Tricks &middot; How Tricks Evolved &middot; Tips from Experienced Players &middot; Where to Learn More</span></li>
+        </ol>
+      </nav>
+
+      <article id="types" class="sci-sec">
+        <div class="sci-kicker">Part 1</div>
+        <h2 class="sci-title">Responsive or Unresponsive?</h2>
+        <ul class="sci-list">
+          <li><strong>Responsive:</strong> comes back with a tug. Start here. Classic tricks like Walk the Dog, Rock the Baby, and looping all use a responsive yo-yo.<sup class="cite"><a href="learn-yoyo.html#ref-25" aria-label="Source 25">[25]</a><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+          <li><strong>Unresponsive:</strong> a wider gap and silicone pads let it spin at the end of the string without coming back, even with slack. You return it with a <em>bind</em>, wrapping extra string into the gap.<sup class="cite"><a href="learn-yoyo.html#ref-26" aria-label="Source 26">[26]</a><a href="learn-yoyo.html#ref-25" aria-label="Source 25">[25]</a></sup></li>
+          <li>Inexpensive fixed-axle yo-yos usually sleep 10&ndash;20 seconds; ball-bearing yo-yos can sleep one to four minutes.<sup class="cite"><a href="learn-yoyo.html#ref-28" aria-label="Source 28">[28]</a></sup></li>
+        </ul>
+        <p>Many beginner yo-yos can be set up either way. See <a href="yoyo-gear-basics.html#basics">Beginner Gear Basics</a> and <a href="yoyo-gear-basics.html#styles">Styles of Play</a> on our Gear page.</p>
+      </article>
+
+      <article id="string" class="sci-sec">
+        <div class="sci-kicker">Part 2</div>
+        <h2 class="sci-title">String It Up</h2>
+        <h3>Put the string on the yo-yo</h3>
+        <ol class="sci-steps">
+          <li>Find the loop end, the end without the knot. Pinch the tip and pinch again an inch or two below, then untwist until the two strands separate.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li>Spread the strands open with your fingers and slip the loop over one half of the <strong>assembled</strong> yo-yo. Don&rsquo;t take it apart; the string can slip off the bearing and get caught between the halves.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li>Let go and let the string twist back up around the axle. Never tie a knot around the axle.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a><a href="learn-yoyo.html#ref-1" aria-label="Source 1">[1]</a></sup></li>
+        </ol>
+        <h3>Size it and make a slipknot</h3>
+        <ol class="sci-steps">
+          <li>Let the yo-yo rest on the floor between your feet and mark the string at your belly button.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li>Tie a new loop there and cut off the extra.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+          <li>Pass the string through the loop to make a slipknot. Slide it onto your middle finger, snug between the first and second knuckle.<sup class="cite"><a href="learn-yoyo.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
+        </ol>
+        <h3>Freehand (5A): string a counterweight</h3>
+        <p>Pass the loop end of the string through the counterweight&rsquo;s hole, then through the slipknot, and pull tight so the knot closes around the weight. Or, without removing the string from the yo-yo, push the slipknot through the hole, make a new loop, pass the counterweight through it, and pull tight.<sup class="cite"><a href="learn-yoyo.html#ref-4" aria-label="Source 4">[4]</a></sup> See <a href="yoyo-gear-accessories.html#counterweights">Counterweights</a> for weights and DIY options.</p>
+      </article>
+
+      <article id="throw" class="sci-sec">
+        <div class="sci-kicker">Part 3</div>
+        <h2 class="sci-title">Wind, Throw, and Sleep</h2>
+        <h3>Wind it up</h3>
+        <p>Bearing yo-yos spin so freely that the string slips when you wind. The fix: lay a finger of your other hand across the gap, wind once over it, then wind three or four times under it so the string grips. Pull the finger out and keep winding.<sup class="cite"><a href="learn-yoyo.html#ref-5" aria-label="Source 5">[5]</a></sup></p>
+        <h3>Hold it right</h3>
+        <p>With your palm up, the string should come <strong>over the top</strong> of the yo-yo toward you. If it comes from underneath, the yo-yo is upside down and will tend to spin out.<sup class="cite"><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
+        <h3>Gravity Pull</h3>
+        <p>Hold the yo-yo palm down and simply let go; gravity pulls it down, then tug to bring it back. It is different from the Throw Down, which is thrown palm up.<sup class="cite"><a href="learn-yoyo.html#ref-19" aria-label="Source 19">[19]</a><a href="learn-yoyo.html#ref-29" aria-label="Source 29">[29]</a></sup></p>
+        <h3>The Basic Throw</h3>
+        <p>&ldquo;Make a muscle&rdquo; with the yo-yo in your palm, then extend your arm to throw it down. As it reaches the bottom, turn your hand over and pull up to catch it.<sup class="cite"><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></p>
+        <h3>The Sleeper</h3>
+        <p>A sleeper is the yo-yo spinning at the end of the string. It&rsquo;s the base of almost every trick.<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a></sup></p>
+        <ul class="sci-list">
+          <li>Throw hard and straight. A tilted yo-yo won&rsquo;t sleep long.<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a></sup></li>
+          <li>Cushion the landing: as the yo-yo hits the bottom, dip your hand slightly so it doesn&rsquo;t bounce, gain slack, and come back.<sup class="cite"><a href="learn-yoyo.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
+          <li>Return it with a tug (responsive) or a bind (unresponsive).<sup class="cite"><a href="learn-yoyo.html#ref-18" aria-label="Source 18">[18]</a><a href="learn-yoyo.html#ref-14" aria-label="Source 14">[14]</a></sup></li>
+        </ul>
+        <p class="sci-note">Challenge: the YoYoTricks.com Screen Time Challenge starts with a 5-second sleeper.<sup class="cite"><a href="learn-yoyo.html#ref-16" aria-label="Source 16">[16]</a></sup></p>
+      </article>
+
+      <article id="tension" class="sci-sec">
+        <div class="sci-kicker">Part 4</div>
+        <h2 class="sci-title">String Tension</h2>
+        <p>A yo-yo string is two strands twisted together. Too many twists and it&rsquo;s too tight; too few and it&rsquo;s too loose. Either way, slack string curls into &ldquo;spaghetti.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-7" aria-label="Source 7">[7]</a></sup> Normal throwing slowly changes it; for right-handers, sleepers and trapezes tend to tighten it.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></p>
+        <h3>Check it</h3>
+        <p>Hold the unwound yo-yo like a trapeze, bring your hands together to add slack, and look down on the string. If it twists clockwise, it&rsquo;s too loose; counterclockwise, too tight.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></p>
+        <h3>Fix it</h3>
+        <ul class="sci-list">
+          <li><strong>Let it dangle:</strong> the classic fix is to take the slipknot off your finger and let the yo-yo hang until the string untwists.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></li>
+          <li><strong>UFO:</strong> throw the yo-yo so it sleeps flat, parallel to the ground, with your hand over the top so the string spins around it. Across your body loosens; away from your body tightens.<sup class="cite"><a href="learn-yoyo.html#ref-9" aria-label="Source 9">[9]</a><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></li>
+          <li><strong>Sidewinder:</strong> a smaller adjustment. Swing a sleeper out to one side until it rises level with your hand so the string spins out. YoYoTricks.com says to the right loosens and to the left tightens. Test which way works for you.<sup class="cite"><a href="learn-yoyo.html#ref-10" aria-label="Source 10">[10]</a></sup></li>
+          <li><strong>Unresponsive yo-yos</strong> have their own fixes: a separate lesson covers adjusting tension at the end of a trick.<sup class="cite"><a href="learn-yoyo.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
+          <li>While you check tension, check for wear too. Change a frayed, dirty, or greasy string.<sup class="cite"><a href="learn-yoyo.html#ref-22" aria-label="Source 22">[22]</a></sup></li>
+        </ul>
+      </article>
+
+      <article id="first" class="sci-sec">
+        <div class="sci-kicker">Part 5</div>
+        <h2 class="sci-title">Your First Tricks</h2>
+        <ul class="sci-list">
+          <li><strong>Walk the Dog:</strong> throw a strong sleeper and set it on the floor so it rolls. Swing it behind you first for momentum, and don&rsquo;t let your hand get too close or it will come back.<sup class="cite"><a href="learn-yoyo.html#ref-11" aria-label="Source 11">[11]</a></sup></li>
+          <li><strong>Rock the Baby:</strong> pinch the string near the middle with your other hand, pinch above the yo-yo with your yo-yo hand, and spread the string into a triangle cradle to rock the yo-yo through.<sup class="cite"><a href="learn-yoyo.html#ref-12" aria-label="Source 12">[12]</a></sup></li>
+          <li><strong>Picture tricks:</strong> shapes like the Eiffel Tower and the Jamaican Flag. Practice with the yo-yo hanging, not spinning, until you know the shape.<sup class="cite"><a href="learn-yoyo.html#ref-12" aria-label="Source 12">[12]</a><a href="learn-yoyo.html#ref-13" aria-label="Source 13">[13]</a></sup></li>
+          <li><strong>Forward Pass:</strong> swing the yo-yo forward from behind, let it return, and catch it palm up. It leads to Loop the Loop and Shoot the Moon.<sup class="cite"><a href="learn-yoyo.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
+          <li><strong>UFO and Sleeping Beauty:</strong> the UFO above, plus catching the string for a flashy Sleeping Beauty.<sup class="cite"><a href="learn-yoyo.html#ref-9" aria-label="Source 9">[9]</a></sup></li>
+          <li><strong>DNA:</strong> a flat pinwheel, pop the yo-yo onto your other index finger to spin, then a quick laceration and sidewinder-style return. It plays with string tension like a UFO.<sup class="cite"><a href="learn-yoyo.html#ref-21" aria-label="Source 21">[21]</a></sup> See <a href="learn-yoyo-beyond.html#evolution">How Tricks Evolved</a> for how it went viral.</li>
+        </ul>
+      </article>
+
+      <nav class="guide-pager" aria-label="More of this guide">
+        <a href="learn-yoyo.html">&larr; How to Yo-Yo</a>
+        <a href="learn-yoyo-tricks.html">The First 100 Tricks &rarr;</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- guide-nav:bottom -->
+<section class="guide-more" aria-labelledby="guide-more-title">
+  <div class="guide-more-inner">
+    <h2 class="guide-more-title" id="guide-more-title">Keep Exploring</h2>
+    <ul class="guide-more-list">
+      <li><a href="yoyo-gear.html">Gear &amp; Maintenance</a><span>Bearings, pads, string, styles, lingo</span></li>
+      <li><a href="yoyo-science.html">Yo-Yo Science</a><span>Physics, shapes, materials, patents, DIY</span></li>
+      <li><a href="yoyo-history.html">Yo-Yo History</a><span>From ancient Greece to today&rsquo;s contests</span></li>
+      <li><a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a><span>Pedro Flores and the demonstrators</span></li>
+      <li><a href="yoyo-collecting.html">Collecting Yo-Yos</a><span>Vintage, limited runs, value, museums</span></li>
+      <li><a href="resources.html">Resources</a><span>Downloads, tutorials, apps, links</span></li>
+      <li><a href="faq.html">FAQ</a><span>Meetups, the club, and contests</span></li>
+    </ul>
+  </div>
+</section>
+<!-- /guide-nav:bottom -->
+</main>
+
+<!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
+          <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
+        <a href="events.html" class="footer-link">Events</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="resources.html" class="footer-link">Resources</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+      </nav>
+    </div>
+    <nav aria-label="Guides" class="footer-guides">
+      <span class="footer-guides-label">GUIDES</span>
+      <a href="learn-yoyo.html" class="footer-link">How to Yo-Yo</a>
+      <a href="yoyo-gear.html" class="footer-link">Gear &amp; Maintenance</a>
+      <a href="yoyo-history.html" class="footer-link">Yo-Yo History</a>
+      <a href="filipino-yoyo-history.html" class="footer-link">Filipino Yo-Yo History</a>
+      <a href="yoyo-science.html" class="footer-link">Yo-Yo Science</a>
+      <a href="yoyo-collecting.html" class="footer-link">Collecting Yo-Yos</a>
+      <a href="https://map.dmvthrowers.club/" class="footer-link">Player Map</a>
+    </nav>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+</script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>
