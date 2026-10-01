@@ -258,6 +258,9 @@ footer nav { background: none; border: 0; padding: 0; position: static; will-cha
 .ref-fig-row { align-items: start; }
 .ref-fig-row .ref-fig { margin: 0; }
 .ref-fig-row .ref-fig img { aspect-ratio: 1 / 1; object-fit: contain; background: white; }
+/* "See photos" links: we link out to museum, archive, wiki, and forum photos instead of copying them */
+.see-photos { margin: 14px 0; padding: 8px 12px; border-left: 3px solid var(--red); background: white; font-size: 0.88rem; line-height: 1.6; }
+.see-photos a { overflow-wrap: anywhere; }
 /* Click-to-play video: nothing loads from YouTube until the viewer presses play */
 .vid-embed { margin: 18px 0; border: 1px solid var(--border); background: var(--navy); min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 16px; text-align: center; }
 .vid-embed.playing { aspect-ratio: 16 / 9; min-height: 0; padding: 0; }
