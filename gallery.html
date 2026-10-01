@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Gallery - DMV Throwers · Yo-Yo & Skill Toy Club · DC MD VA</title>
   <meta name="description" content="Photo gallery of DMV Throwers yo-yo club events and members. See our community in action at Arlington Central Library meetups."/>
   <meta property="og:title" content="Gallery - DMV Throwers · Yo-Yo & Skill Toy Club"/>
@@ -59,6 +59,10 @@
     .gallery-more-box h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; margin-bottom: 12px; }
     .gallery-more-box p { color: rgba(255,255,255,0.7); margin-bottom: 24px; }
     .gallery-more-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .club-videos { margin-top: 40px; }
+    .club-videos-title { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 1.4rem; margin-bottom: 8px; }
+    .club-videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .club-videos-grid .vid-embed { margin: 0; }
     .gallery-more-link { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: white; padding: 12px 20px; font-weight: 700; text-decoration: none; transition: background 0.2s; }
     .gallery-more-link:hover { background: var(--red-dark); }
     @media (max-width: 768px) {
@@ -227,12 +231,22 @@
       </div>
     </div>
 
+    <div class="club-videos">
+      <h3 class="club-videos-title">Club Videos</h3>
+      <p class="gallery-desc-p">Short clips from meetups, posted on the <a href="https://www.youtube.com/@dmvthrowers" class="text-red" target="_blank" rel="noopener noreferrer">DMV Throwers YouTube channel</a>.</p>
+      <div class="club-videos-grid">
+        <div class="vid-embed" data-yt="NofU2R77wAg"><span class="vid-title">UpDn Orange at DMVT</span><button type="button" class="vid-play" aria-label="Play video: UpDn Orange at DMVT">PLAY VIDEO</button><span class="vid-note">From the DMV Throwers channel. Nothing loads from YouTube until you press play. <a href="https://www.youtube.com/watch?v=NofU2R77wAg" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></span></div>
+        <div class="vid-embed" data-yt="jg1uIU3h-gg"><span class="vid-title">Old school throwing and spin tops at club</span><button type="button" class="vid-play" aria-label="Play video: Old school throwing and spin tops at club">PLAY VIDEO</button><span class="vid-note">From the DMV Throwers channel. Nothing loads from YouTube until you press play. <a href="https://www.youtube.com/watch?v=jg1uIU3h-gg" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></span></div>
+      </div>
+    </div>
+
     <div class="gallery-more">
       <div class="gallery-more-box">
         <h3>More Photos</h3>
         <p>Follow us on social media for the latest photos and videos from every event</p>
         <div class="gallery-more-links">
           <a href="https://instagram.com/dmv_throwers" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in new tab)" class="gallery-more-link">Instagram</a>
+          <a href="https://www.youtube.com/@dmvthrowers" target="_blank" rel="noopener noreferrer" aria-label="YouTube (opens in new tab)" class="gallery-more-link">YouTube</a>
           <a href="https://www.facebook.com/share/g/1DbrxESDDc/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in new tab)" class="gallery-more-link">Facebook</a>
         </div>
       </div>
@@ -296,6 +310,18 @@
   });
 </script>
 <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script>
+  // Click-to-play: the YouTube iframe is only created after the visitor presses play.
+  document.querySelectorAll('.vid-embed .vid-play').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var w = b.closest('.vid-embed'), f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + w.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = w.querySelector('.vid-title').textContent;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+      w.innerHTML = ''; w.classList.add('playing'); w.appendChild(f);
+    });
+  });
+</script>
 <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>
