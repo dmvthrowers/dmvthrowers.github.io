@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--
+  learn-yoyo-practice.html — Practice and Contests, part 3 of 4 of How to Yo-Yo (learn-yoyo.html).
+  Split mechanically from learn-yoyo.html; the section content is verbatim. Citation
+  numbers link to the References list on learn-yoyo.html.
+-->
+<html lang="en">
+<head>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <!-- base href="/" makes every relative URL resolve from the site root. -->
+  <base href="/"/>
+  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
+       formspree for the contact form, Google Fonts for typography). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <title>Practice and Contests · How to Yo-Yo - DMV Throwers · Yo-Yo &amp; Skill Toy Club · DC MD VA</title>
+  <meta name="description" content="Practice and Contests, from the DMV Throwers How to Yo-Yo guide: Practice, Play Healthy, and Everyone Can Throw, Contests and Judging."/>
+  <meta property="og:title" content="Practice and Contests · How to Yo-Yo - DMV Throwers"/>
+  <meta property="og:description" content="Practice and Contests, from the DMV Throwers How to Yo-Yo guide: Practice, Play Healthy, and Everyone Can Throw, Contests and Judging."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/learn-yoyo-practice.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="Practice and Contests · How to Yo-Yo - DMV Throwers"/>
+  <meta name="twitter:description" content="Practice and Contests, from the DMV Throwers How to Yo-Yo guide: Practice, Play Healthy, and Everyone Can Throw, Contests and Judging."/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
+  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="keywords" content="how to yo-yo, yo-yo tricks for beginners, how to string a yo-yo, how to wind a yo-yo, sleeper, gravity pull, string tension, walk the dog, rock the baby, first 100 yo-yo tricks"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <meta name="geo.placename" content="Arlington, Virginia"/>
+  <link rel="canonical" href="https://dmvthrowers.club/learn-yoyo-practice.html"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + Article. Not rendered; consumed by search engines. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
+        {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://dmvthrowers.club/resources.html"},
+        {"@type": "ListItem", "position": 3, "name": "How to Yo-Yo", "item": "https://dmvthrowers.club/learn-yoyo.html"},
+        {"@type": "ListItem", "position": 4, "name": "Practice and Contests", "item": "https://dmvthrowers.club/learn-yoyo-practice.html"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Yo-Yo: Practice and Contests",
+      "publisher": {"@type": "Organization", "name": "DMV Throwers", "url": "https://dmvthrowers.club/"},
+      "datePublished": "2026-09-29",
+      "url": "https://dmvthrowers.club/learn-yoyo-practice.html"
+    }
+  ]
+  </script>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
+    .sci-wrap { max-width: 860px; margin: 0 auto; }
+    .sci-intro { color: var(--text-muted); font-size: 1rem; line-height: 1.65; margin-bottom: 12px; }
+    .sci-toc { margin: 16px 0 8px; padding: 16px 20px 16px 40px; border: 1px solid var(--border); border-left: 4px solid var(--red); background: var(--cream); columns: 2; column-gap: 24px; }
+    .sci-toc li { padding: 3px 0; break-inside: avoid; }
+    .sci-toc a { color: var(--navy); font-weight: 700; }
+    .sci-sec { margin-top: 48px; scroll-margin-top: 80px; }
+    .sci-kicker { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); }
+    .sci-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.8rem; color: var(--navy); line-height: 1.2; margin: 6px 0 14px; }
+    .sci-sec h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin: 24px 0 8px; }
+    .sci-sec p, .sci-list li, .sci-steps li { line-height: 1.7; color: var(--text-body); }
+    .sci-sec p { margin-bottom: 12px; }
+    .sci-wrap a:not(.btn) { color: var(--navy); font-weight: 700; }
+    .sci-list, .sci-steps { padding-left: 20px; margin: 8px 0 14px; }
+    .sci-list li, .sci-steps li { padding: 3px 0; }
+    .cite { font-size: 0.72em; line-height: 0; margin-left: 1px; white-space: nowrap; }
+    .sci-wrap .cite a { color: var(--red); font-weight: 700; text-decoration: none; }
+    .std-box { padding: 18px 22px; background: var(--navy); color: var(--cream); }
+    .std-box ul { margin: 6px 0 0; padding-left: 18px; }
+    .std-box li { padding: 4px 0; line-height: 1.6; color: var(--cream); }
+    .std-box strong { color: var(--cream); }
+    .std-box .cite a { color: var(--cream) !important; text-decoration: underline; }
+    .std-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--cream); opacity: 0.85; }
+    .mini-tl { list-style: none; margin: 8px 0 6px; padding: 0 0 0 14px; border-left: 3px solid var(--navy); }
+    .mini-tl li { padding: 4px 0; line-height: 1.55; color: var(--text-body); }
+    .mini-tl span { display: inline-block; min-width: 92px; font-weight: 700; color: var(--red); }
+    .table-scroll { overflow-x: auto; margin: 12px 0 16px; }
+    .sci-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .sci-table caption { text-align: left; font-weight: 700; color: var(--navy); padding-bottom: 6px; }
+    .sci-table th, .sci-table td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; line-height: 1.5; }
+    .sci-table th { background: var(--navy); color: var(--cream); font-size: 0.78rem; letter-spacing: var(--caps-track); text-transform: uppercase; }
+    .sci-table tbody tr:nth-child(odd) td { background: var(--cream); }
+    .try-box { margin: 16px 0; padding: 14px 18px; border: 2px dashed var(--red); background: var(--cream); }
+    .try-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 4px; }
+    .sci-note { font-size: 0.92rem; color: var(--text-muted); font-style: italic; }
+    .ref-list { padding-left: 24px; font-size: 0.86rem; line-height: 1.6; }
+    .ref-list li { padding: 4px 0; color: var(--text-body); overflow-wrap: anywhere; scroll-margin-top: 90px; }
+    .ref-list li:target { background: var(--cream); outline: 2px solid var(--red); }
+    .sci-credit { margin-top: 32px; padding: 16px 20px; border: 1px solid var(--border); background: var(--cream); font-size: 0.9rem; color: var(--text-muted); }
+    @media (max-width: 600px) {
+      .stack-table thead { display: none; }
+      .stack-table caption { display: block; width: 100%; }
+      .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
+      .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
+      .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
+    }
+    @media (max-width: 760px) {
+      .sci-toc { columns: 1; }
+      .sci-title { font-size: 1.45rem; }
+      .mini-tl span { display: block; min-width: 0; }
+    }
+    .trick-list { columns: 2; column-gap: 28px; padding-left: 34px; margin: 8px 0 18px; }
+    .trick-list li { padding: 3px 0; break-inside: avoid; line-height: 1.5; color: var(--text-body); }
+    @media (max-width: 600px) { .trick-list { columns: 1; } }
+    /* Sub-page index (the guide is split across several pages) */
+    .guide-parts { margin: 16px 0 8px; padding: 16px 20px; border: 1px solid var(--border); border-left: 4px solid var(--navy); background: white; }
+    .guide-parts-label { font-size: 0.75rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+    .guide-parts-list { margin: 0; padding-left: 22px; }
+    .guide-parts-list li { padding: 4px 0; }
+    .guide-parts-list a { color: var(--navy); font-weight: 700; }
+    .guide-parts-list a[aria-current] { color: var(--red); }
+    .guide-parts-list span { display: block; font-size: 0.85rem; color: var(--text-muted); }
+    .guide-pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .guide-pager a { color: var(--navy); font-weight: 700; }
+  </style>
+
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: headline event + shortcut. Update the text each month. -->
+<div id="top-bar">
+  <span>NEXT MEET: SUNDAY, OCTOBER 18 · 1–4 PM · ARLINGTON CENTRAL LIBRARY</span>
+  <a href="events.html">SEE EVENTS →</a>
+</div>
+
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
+      <div>
+        <div class="nav-brand-text-main">DMV THROWERS</div>
+        <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
+      <a href="events.html" class="nav-link">CLUB EVENTS</a>
+      <a href="gallery.html" class="nav-link">GALLERY</a>
+      <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
+      <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link">MAP</a>
+        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">ABOUT</a>
+  <a href="team.html">TEAM</a>
+  <a href="events.html">CLUB EVENTS</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="resources.html">RESOURCES</a>
+  <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/">MAP</a>
+    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
+  <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="red-tag">LEARN</span>
+    <h1 class="page-hero-title">Practice and Contests</h1>
+    <p class="page-hero-sub">Practice, Play Healthy, and Everyone Can Throw · Contests and Judging</p>
+  </div>
+  <div class="page-hero-skyline">
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
+  </div>
+</div>
+
+<!-- guide-nav:top -->
+<nav class="guide-nav" aria-label="Learn and reference guides">
+  <div class="guide-nav-inner"><span class="guide-nav-label">LEARN &amp; REFERENCE</span>
+    <a href="learn-yoyo.html" aria-current="true" class="is-current">How to Yo-Yo</a>
+    <a href="yoyo-gear.html">Gear &amp; Maintenance</a>
+    <a href="yoyo-science.html">Yo-Yo Science</a>
+    <a href="yoyo-history.html">Yo-Yo History</a>
+    <a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a>
+    <a href="yoyo-collecting.html">Collecting Yo-Yos</a>
+    <a href="resources.html">Resources</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+</nav>
+<!-- /guide-nav:top -->
+
+<!-- Aggregates free tutorials from across the hobby; facts carry numbered citations. -->
+<section id="learn" class="section-bg-white">
+  <div class="section">
+    <div class="sci-wrap">
+      <p class="sci-note">Part 3 of 4 of <a href="learn-yoyo.html">How to Yo-Yo</a>. Source numbers link to the <a href="learn-yoyo.html#references">References</a> list.</p>
+      <nav class="guide-parts" aria-label="How to Yo-Yo sections">
+        <div class="guide-parts-label">THIS GUIDE IN 4 PARTS</div>
+        <ol class="guide-parts-list">
+          <li><a href="learn-yoyo-basics.html">Getting Started</a><span>Responsive or Unresponsive? &middot; String It Up &middot; Wind, Throw, and Sleep &middot; String Tension &middot; Your First Tricks</span></li>
+          <li><a href="learn-yoyo-tricks.html">The First 100 Tricks</a><span>The First 100 Tricks &middot; A Contest-Tested Ladder</span></li>
+          <li><a href="learn-yoyo-practice.html" aria-current="page">Practice and Contests</a><span>Practice, Play Healthy, and Everyone Can Throw &middot; Contests and Judging</span></li>
+          <li><a href="learn-yoyo-beyond.html">Beyond the Basics</a><span>Keep Learning: Beyond the First 100 &middot; Make Your Own Tricks &middot; How Tricks Evolved &middot; Tips from Experienced Players &middot; Where to Learn More</span></li>
+        </ol>
+      </nav>
+
+      <article id="practice" class="sci-sec">
+        <div class="sci-kicker">Part 8</div>
+        <h2 class="sci-title">Practice, Play Healthy, and Everyone Can Throw</h2>
+        <p>You don&rsquo;t need hours a day. You need a little time most days, a reason for each session, and patience with yourself. Here&rsquo;s what experienced players on the YoYoExpert Forums say works.</p>
+        <h3>Practice with a purpose</h3>
+        <ul class="sci-list">
+          <li><strong>Make time, even a little:</strong> one player who improves steadily plays about an hour a day, often less, and argues that 15 to 30 minutes of real practice beats waiting for free time that never comes.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
+          <li><strong>Know why you&rsquo;re throwing:</strong> the goal can be as simple as &ldquo;I want this trick a little smoother.&rdquo; Playing to relax counts too, if you focus on doing each move well.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
+          <li><strong>Slow is fast:</strong> a classical musician in the same thread says to practice slowly until your hands know the trick, leave your phone in another room, and take a day off when you need one.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
+          <li><strong>Say &ldquo;yet&rdquo;:</strong> &ldquo;I can&rsquo;t do this yet, but if I stay consistent I will.&rdquo; Don&rsquo;t dwell on a long break or a late start.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
+        </ul>
+        <h3>Learning from videos</h3>
+        <ul class="sci-list">
+          <li><strong>Go frame by frame:</strong> on YouTube on a computer, pause and press the comma and period keys to step back and forward one frame. On a phone, screen-record the tutorial and scrub through the recording slowly.<sup class="cite"><a href="learn-yoyo.html#ref-92" aria-label="Source 92">[92]</a></sup></li>
+          <li><strong>Learn in pieces:</strong> break a trick into sections that start and end in a mount, then link them. See <a href="learn-yoyo-beyond.html#beyond">How experienced players learn</a> below.<sup class="cite"><a href="learn-yoyo.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
+        </ul>
+        <h3>Your throw, tilt, and restarts</h3>
+        <ul class="sci-list">
+          <li><strong>The floor-line drill:</strong> stand over a straight line in the floor, like a tile seam or the gap between floorboards, and throw a sleeper so the yo-yo&rsquo;s gap lines up with the line.<sup class="cite"><a href="learn-yoyo.html#ref-93" aria-label="Source 93">[93]</a></sup></li>
+          <li><strong>Don&rsquo;t chase a perfect throw:</strong> experienced players say tilt correction comes on its own after thousands of throws. In a trapeze, you can level a tilted yo-yo by pressing the string against its high side.<sup class="cite"><a href="learn-yoyo.html#ref-94" aria-label="Source 94">[94]</a></sup></li>
+          <li><strong>Restart instead of rewinding:</strong> when the yo-yo dies on the string, hold the string with your free hand and spin the yo-yo back up with your throwing hand, then bind. Some players twist cleanly, &ldquo;like turning a doorknob,&rdquo; instead of snapping hard, because a hard snap can jam your fingers.<sup class="cite"><a href="learn-yoyo.html#ref-95" aria-label="Source 95">[95]</a></sup></li>
+        </ul>
+        <h3>Stuck? Everyone hits a plateau</h3>
+        <ul class="sci-list">
+          <li><strong>Switch it up:</strong> try another style for a while. Players suggest modern responsive or 0A to relax, and 5A, where &ldquo;the mistakes are often better than the tricks.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
+          <li><strong>Get a quick win:</strong> go back to basics, or learn a short trick built from elements you already know.<sup class="cite"><a href="learn-yoyo.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
+          <li><strong>Stop comparing:</strong> some players started as little kids. Take a break when you&rsquo;re frustrated and come back fresh.<sup class="cite"><a href="learn-yoyo.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
+          <li><strong>How long it takes:</strong> one player saw spin time and technique jump at 6 to 8 months. Another compares it to an instrument: about a year for the fundamentals, two to feel comfortable, three to feel &ldquo;good.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-90" aria-label="Source 90">[90]</a></sup></li>
+          <li><strong>Is learning on an unresponsive yo-yo cheating?</strong> No. &ldquo;A completed trick is a completed trick.&rdquo; Or, as one longtime member put it: &ldquo;There&rsquo;s no cheating in yoyoing, just smiling.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-91" aria-label="Source 91">[91]</a></sup></li>
+        </ul>
+        <h3>Play healthy</h3>
+        <ul class="sci-list">
+          <li><strong>String burn happens:</strong> almost every player gets it learning tricks like Boingy Boing. Most build a callus over time. Some wear a glove, which protects your finger but lets you feel the string less.<sup class="cite"><a href="learn-yoyo.html#ref-96" aria-label="Source 96">[96]</a></sup></li>
+          <li><strong>Watch for overuse:</strong> one player developed what they believed was golfer&rsquo;s elbow from all the repeated throwing.<sup class="cite"><a href="learn-yoyo.html#ref-97" aria-label="Source 97">[97]</a></sup> Take breaks, switch styles, and stop if your arm hurts. See a doctor if pain doesn&rsquo;t go away.</li>
+          <li><strong>Throw soft after a shaky bind:</strong> if you&rsquo;re not sure a bind was clean, throw a softer &ldquo;safety throw.&rdquo; A snagged string on a hard breakaway can swing the yo-yo back into your face.<sup class="cite"><a href="learn-yoyo.html#ref-99" aria-label="Source 99">[99]</a></sup></li>
+          <li><strong>Mark a yo-yo zone:</strong> when you play with a group or teach kids, tape lines on the floor, or set cones outside, and only throw inside them so nobody runs through and gets bonked.<sup class="cite"><a href="learn-yoyo.html#ref-100" aria-label="Source 100">[100]</a></sup></li>
+          <li>See also the safety tips in <a href="learn-yoyo-beyond.html#tips">Tips from Experienced Players</a>.</li>
+        </ul>
+        <h3>Everyone can throw</h3>
+        <ul class="sci-list">
+          <li><strong>Any age:</strong> in &ldquo;Too old to start again?&rdquo; players in their 50s and 60s trade stories. One started around 50 and throws every day; another has played since 1966. The obstacles they named were joint pain, practice time, and impatience, not age.<sup class="cite"><a href="learn-yoyo.html#ref-101" aria-label="Source 101">[101]</a></sup></li>
+          <li><strong>One hand:</strong> a player who lost the use of their right arm learned Walk the Dog, Forward Pass, and One-Handed Star. The forum pointed them to 2A looping and to a sponsored player who plays one-handed.<sup class="cite"><a href="learn-yoyo.html#ref-102" aria-label="Source 102">[102]</a></sup></li>
+          <li><strong>A way to reset:</strong> many players say yo-yoing helps them decompress, like a nurse who throws after hard shifts, and others who use it to quiet anxiety.<sup class="cite"><a href="learn-yoyo.html#ref-97" aria-label="Source 97">[97]</a><a href="learn-yoyo.html#ref-98" aria-label="Source 98">[98]</a></sup> Doctor Popular&rsquo;s PopCast interviewed a social worker who uses yo-yos in counseling with kids.<sup class="cite"><a href="learn-yoyo.html#ref-98" aria-label="Source 98">[98]</a></sup> It isn&rsquo;t a treatment, but it&rsquo;s a great way to focus.</li>
+          <li><strong>Come throw with us:</strong> our <a href="events.html">monthly meetups</a> are free, all ages, all levels, with loaner yo-yos and someone to show you your first throw.</li>
+        </ul>
+      </article>
+
+      <article id="contests" class="sci-sec">
+        <div class="sci-kicker">Part 9</div>
+        <h2 class="sci-title">Contests and Judging</h2>
+        <p>U.S. contests, including our own <a href="vsyc26.html">VSYC-26</a>, score freestyles with the National Yo-Yo League (NYYL) rules. A freestyle is a routine to music you choose; a trick is any demonstration of yo-yo skill; and an <strong>element</strong> is one specific, scorable movement inside a trick.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
+        <h3>Two halves of every score</h3>
+        <ul class="sci-list">
+          <li><strong>Technical Execution (clickers):</strong> each judge holds two hand tally counters, one for positive clicks and one for negative clicks.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Routine Evaluation:</strong> four categories: Trick Presentation (mastery and style), Performance Quality (professionalism, stage use, audience), Musicality (hitting cues and pacing to the song), and Routine Construction (trick order, cohesion, theme).<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li>In a 1A Championship final, a 3-minute routine, Technical Execution is worth 60 points and Evaluation 40.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+        </ul>
+        <h3>How clicks work</h3>
+        <ul class="sci-list">
+          <li><strong>One click</strong> for difficult but low-risk elements, like an Eli hop, laceration, or iron whip in 1A; loops, wraps, and around the worlds in 2A; rolls, kink mounts, and double trapezes in 3A; whips, recaptures, and boings in 4A; and 360s, propellers, and direction changes in 5A.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>More clicks</strong> for riskier variants, like a multi-hook instead of a single hook.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Negative clicks</strong> for any missed element or loss of control.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Repeats score less.</strong> Six Eli hops in a row score only the first; a later repeat can score zero. The point is to reward variety.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>No clicks</strong> for moves that don&rsquo;t show yo-yo skill, like picture tricks, string moves that don&rsquo;t involve the yo-yo, or tricks where the yo-yo never interacts with the string. Save <a href="learn-yoyo-basics.html#first">picture tricks</a> for the crowd.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Normalization:</strong> each judge&rsquo;s top scorer gets 60, everyone else is scaled against them, then the judges are averaged, so one generous judge can&rsquo;t swing the result.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+        </ul>
+        <h3>Major deductions</h3>
+        <table class="sci-table stack-table">
+          <caption>NYYL major deductions<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></caption>
+          <thead><tr><th scope="col">Deduction</th><th scope="col">Points</th><th scope="col">When</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Deduction"><strong>Stop</strong></td><td data-label="Points">&minus;1</td><td data-label="When">The yo-yo stops with the string fully unwound.</td></tr>
+            <tr><td data-label="Deduction"><strong>Discard</strong></td><td data-label="Points">&minus;3</td><td data-label="When">You swap out a yo-yo, or can&rsquo;t bring it back to your hand fully wound when the routine ends.</td></tr>
+            <tr><td data-label="Deduction"><strong>Detach</strong></td><td data-label="Points">&minus;5</td><td data-label="When">The yo-yo comes off the string (except in 4A), the string breaks, or the yo-yo comes apart.</td></tr>
+          </tbody>
+        </table>
+        <p>With two yo-yos, deductions count per yo-yo, so swapping both after a 2A or 3A tangle costs &minus;6.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
+        <h3>Divisions for everyone</h3>
+        <ul class="sci-list">
+          <li><strong>Sport Freestyle:</strong> a 1-minute, low-stress division with no negative clicks and no major deductions, split by age. It&rsquo;s the place for a first contest.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Trick ladders:</strong> a set list of tricks in rising difficulty, the other gateway into competing. See <a href="learn-yoyo-tricks.html#ladder">the ladder above</a>.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup></li>
+          <li><strong>X Division:</strong> 2A through 5A compete together, with clicker multipliers to level the field: 2A &times;1.40, 3A &times;1.50, 4A &times;1.30, 5A &times;1.60.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Over 40:</strong> a showcase division, mostly at the U.S. Nationals, where players over 40 pick any style from 1A to 5A. Nationals also hosts International and Women&rsquo;s divisions.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Music:</strong> anything appropriate for all audiences. Explicit lyrics or themes can mean disqualification.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+        </ul>
+        <h3>How each style is judged</h3>
+        <p>Every championship style uses the same two-part system: Technical Execution from clickers and a performance evaluation. What changes is <em>which</em> elements score. At the World Yo-Yo Contest, 1A through 5A each crown their own World Champion, and a 3-minute final is worth up to 60 points of Technical Execution and 40 of Freestyle Evaluation, minus major deductions.<sup class="cite"><a href="learn-yoyo.html#ref-86" aria-label="Source 86">[86]</a><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup> In every style, the yo-yo must be spinning, powered by the unwinding string, for a trick to count, and both the yo-yo and the string must be used.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></p>
+        <table class="sci-table stack-table">
+          <caption>What scores in each style (World Yo-Yo Contest rules)<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></caption>
+          <thead><tr><th scope="col">Style</th><th scope="col">What it is</th><th scope="col">Scores points</th><th scope="col">Scores nothing</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Style"><strong>1A</strong></td><td data-label="What it is">One yo-yo, one string. Tricks built on mounts and touches between yo-yo and string.</td><td data-label="Scores points">Mounts (trapeze), hops (Eli hop), lacerations (hook), release catches (suicide), whip catches (iron whip, slack trapeze).</td><td data-label="Scores nothing">Picture tricks, looping, off-finger and M&ouml;bius moves, and string moves that don&rsquo;t touch the yo-yo.</td></tr>
+            <tr><td data-label="Style"><strong>2A</strong></td><td data-label="What it is">Two responsive yo-yos looping, one per hand.</td><td data-label="Scores points">Loops and hops, moons (reach for the moon, planet hop), wraps, tanglers, around the worlds.</td><td data-label="Scores nothing">One-hand looping and string tricks. A corkscrew in a loop is a negative click.</td></tr>
+            <tr><td data-label="Style"><strong>3A</strong></td><td data-label="What it is">Two long-spinning yo-yos, string tricks with both.</td><td data-label="Scores points">Rolls (Velvet Rolls), kinks (Kink Fu), two-hand trapezes, assisted tricks, KoroKoro.</td><td data-label="Scores nothing">Picture tricks, looping, tanglers that never land, and moves where one yo-yo just sits in a sleeper or trapeze while the other works.</td></tr>
+            <tr><td data-label="Style"><strong>4A</strong></td><td data-label="What it is">Offstring: the string is tied to your hand, not the yo-yo.</td><td data-label="Scores points">Whips (over whip, open whip), recaptures, Boingy Boingy, tosses, orbits around an arm or leg.</td><td data-label="Scores nothing">Tricks where the yo-yo never leaves the string, picture tricks, looping, and moves where the yo-yo doesn&rsquo;t interact with the string.</td></tr>
+            <tr><td data-label="Style"><strong>5A</strong></td><td data-label="What it is">Freehand: a counterweight replaces your hand at the end of the string.</td><td data-label="Scores points">Direction changes (shoulder pop), 360s, propellers, bee-stings, aerials (Meltdown Jump).</td><td data-label="Scores nothing">Moves while holding the weight, picture tricks, looping, and moves where the yo-yo or the weight just hangs, swings, or circles on its own.</td></tr>
+          </tbody>
+        </table>
+        <ul class="sci-list">
+          <li><strong>Combos are counted by element.</strong> Tricks like Gerbil or Rancid Milk are treated as a string of elements, each scored on its own. Repeating an element usually scores nothing the second time, though a high-risk repeat, like a suicide combo, can score again at reduced value.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+          <li><strong>No bonus for non-yo-yo skills.</strong> Dancing, miming, juggling, or acrobatics earn nothing in Technical Execution, even during a trick.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+          <li><strong>Two yo-yos, twice the risk.</strong> Negative clicks and major deductions count per yo-yo in 2A and 3A.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+          <li><strong>Style-specific deductions:</strong> a detach costs &minus;5 in 1A, 2A, 3A, and 5A (both the yo-yo and the weight). In 4A the yo-yo is meant to leave the string, but letting it fly off the stage into the audience in any style, including 4A and 5A, can mean disqualification.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
+        </ul>
+        <h3>The World Contest&rsquo;s eight evaluation categories</h3>
+        <p>At Worlds, judges split into two groups: Group A clicks Technical Execution, and Group B scores the Freestyle Evaluation in eight categories from 0 to 10, halved to make 40 points: Execution, Control, Trick Diversity, Space Use, Music Use (choreography), Music Use (construction), Body Control, and Showmanship. Only Technical Execution is normalized between judges.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup> U.S. NYYL events use the four categories above instead.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
+        <h3>Artistic Performance (AP)</h3>
+        <ul class="sci-list">
+          <li><strong>No clickers.</strong> AP is judged mainly on performance rather than technical skill: choreography, music, creative stage use, movement, and entertainment. Solo players and teams can enter.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
+          <li><strong>Awards, not places.</strong> Judges may give a Grand Prix (the World Champion title), a Creativity Award, an Artistic Award, and an Entertainment Award, or none of them.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
+          <li><strong>The yo-yo still leads.</strong> Dance, acting, and props are welcome, but the yo-yo must be the main act. There are no deductions for misses, yet judges expect close to zero mistakes, like a professional show.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
+          <li><strong>Format:</strong> routines up to 4 minutes; finalists are chosen from submitted videos.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
+        </ul>
+        <h3>When styles are combined</h3>
+        <ul class="sci-list">
+          <li><strong>X Division:</strong> some contests lump 2A, 3A, 4A, and 5A into one division. The NYYL multiplies clicker scores to keep it fair, because some styles tend to score higher: 2A &times;1.40, 3A &times;1.50, 4A &times;1.30, 5A &times;1.60.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup> At <a href="vsyc26.html">VSYC-26</a>, X Division covered 2A, 3A, 4A, or 5A, and you picked one.</li>
+          <li><strong>Exhibitions at Worlds:</strong> Women&rsquo;s Freestyle and Over-40 Freestyle are 2-minute routines and Junior Freestyle (16 and under) is 90 seconds; in each, you choose one style from 1A to 5A. Championship divisions themselves have no age or gender classes.<sup class="cite"><a href="learn-yoyo.html#ref-86" aria-label="Source 86">[86]</a></sup></li>
+          <li><strong>Sport and beginner divisions:</strong> no negative clicks and no major deductions, so new players can get on stage without pressure (see above).<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
+          <li><strong>Duos:</strong> Doc Lucky Meisenheimer created &ldquo;Doc Lucky&rsquo;s Duos,&rdquo; now part of the National and World championships.<sup class="cite"><a href="learn-yoyo.html#ref-87" aria-label="Source 87">[87]</a></sup></li>
+        </ul>
+        <p>For the history of each style and the gear it uses, see <a href="yoyo-gear-basics.html#styles">Styles of Play</a> on the Gear page.</p>
+        <h3>Your first contest</h3>
+        <ul class="sci-list">
+          <li><strong>Ladders aren&rsquo;t just for kids:</strong> many sport ladders mix ages, and a set trick list gives your practice direction. One player&rsquo;s advice: compete while you feel unprepared, so you know what to expect next time.<sup class="cite"><a href="learn-yoyo.html#ref-109" aria-label="Source 109">[109]</a></sup></li>
+          <li><strong>Make it memorable:</strong> asked about common mistakes in a first freestyle, Evan Nagao said new competitors use too few music cues and &ldquo;hype moments.&rdquo; You probably won&rsquo;t win your first contest, so aim to get the crowd going or do something creative.<sup class="cite"><a href="learn-yoyo.html#ref-111" aria-label="Source 111">[111]</a></sup></li>
+          <li><strong>Sometimes it works out:</strong> a player who entered 5A for the first time at the 2022 German Nationals came home as the division champion.<sup class="cite"><a href="learn-yoyo.html#ref-110" aria-label="Source 110">[110]</a></sup></li>
+          <li><strong>Filming a video entry:</strong> pick a spot with room to move, keep the sun behind the camera, plan the song and tricks before you shoot, and retake any trick you miss.<sup class="cite"><a href="learn-yoyo.html#ref-112" aria-label="Source 112">[112]</a></sup></li>
+        </ul>
+        <div class="try-box">
+          <div class="try-label">Practice like a judge</div>
+          <p>The NYYL notes that clickers (hand tally counters) are readily available for practice.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup> Try filming a routine and clicking it yourself: one hand for landed elements, one for misses. The free YoYo Pro Clicker app on our <a href="resources.html">Resources page</a> does the same thing on a phone. Then read the <a href="vsyc26-rules.html">VSYC-26 rules</a> and <a href="vsyc26-results.html">results</a> to see scoring in action.</p>
+        </div>
+      </article>
+
+      <nav class="guide-pager" aria-label="More of this guide">
+        <a href="learn-yoyo-tricks.html">&larr; The First 100 Tricks</a>
+        <a href="learn-yoyo-beyond.html">Beyond the Basics &rarr;</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- guide-nav:bottom -->
+<section class="guide-more" aria-labelledby="guide-more-title">
+  <div class="guide-more-inner">
+    <h2 class="guide-more-title" id="guide-more-title">Keep Exploring</h2>
+    <ul class="guide-more-list">
+      <li><a href="yoyo-gear.html">Gear &amp; Maintenance</a><span>Bearings, pads, string, styles, lingo</span></li>
+      <li><a href="yoyo-science.html">Yo-Yo Science</a><span>Physics, shapes, materials, patents, DIY</span></li>
+      <li><a href="yoyo-history.html">Yo-Yo History</a><span>From ancient Greece to today&rsquo;s contests</span></li>
+      <li><a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a><span>Pedro Flores and the demonstrators</span></li>
+      <li><a href="yoyo-collecting.html">Collecting Yo-Yos</a><span>Vintage, limited runs, value, museums</span></li>
+      <li><a href="resources.html">Resources</a><span>Downloads, tutorials, apps, links</span></li>
+      <li><a href="faq.html">FAQ</a><span>Meetups, the club, and contests</span></li>
+    </ul>
+  </div>
+</section>
+<!-- /guide-nav:bottom -->
+</main>
+
+<!-- Footer: canonical template. When other pages' footers go out of sync, copy this block. -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
+          <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
+        <a href="events.html" class="footer-link">Events</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="resources.html" class="footer-link">Resources</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+      </nav>
+    </div>
+    <nav aria-label="Guides" class="footer-guides">
+      <span class="footer-guides-label">GUIDES</span>
+      <a href="learn-yoyo.html" class="footer-link">How to Yo-Yo</a>
+      <a href="yoyo-gear.html" class="footer-link">Gear &amp; Maintenance</a>
+      <a href="yoyo-history.html" class="footer-link">Yo-Yo History</a>
+      <a href="filipino-yoyo-history.html" class="footer-link">Filipino Yo-Yo History</a>
+      <a href="yoyo-science.html" class="footer-link">Yo-Yo Science</a>
+      <a href="yoyo-collecting.html" class="footer-link">Collecting Yo-Yos</a>
+      <a href="https://map.dmvthrowers.club/" class="footer-link">Player Map</a>
+    </nav>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+</script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>
