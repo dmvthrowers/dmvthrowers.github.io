@@ -199,6 +199,9 @@ footer { background: var(--navy); padding: 40px 24px 24px; }
 .footer-copy { font-size: 0.75rem; color: var(--footer-copy); }
 /* The global nav rule (cream, sticky) is for the top bar only; reset it for footer navs. */
 footer nav { background: none; border: 0; padding: 0; position: static; will-change: auto; }
+/* In-page guide navs are <nav> too: keep them in the flow so they never pin over the content on phones. */
+.guide-nav, .guide-parts, .guide-pager { position: static; z-index: auto; will-change: auto; }
+nav.guide-pager { background: none; padding-left: 0; padding-right: 0; }
 .footer-guides { display: flex; flex-wrap: wrap; align-items: center; row-gap: 8px; margin-bottom: 20px; }
 .footer-guides-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; color: #C9A84C; margin-right: 6px; }
 .footer-guides .footer-link:first-of-type { margin-left: 4px; }
@@ -303,7 +306,9 @@ footer nav { background: none; border: 0; padding: 0; position: static; will-cha
 .guide-more-list a { display: block; color: var(--navy); font-weight: 700; text-decoration: none; margin-bottom: 4px; }
 .guide-more-list a:hover { color: var(--red); }
 .guide-more-list span { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
-@media (max-width: 480px) { .guide-nav { padding: 10px 14px; } .guide-more { padding: 28px 14px; } }
+@media (max-width: 480px) { .guide-nav { padding: 8px 14px; } .guide-nav-inner { gap: 4px 14px; } .guide-nav a { font-size: 0.8rem; } .guide-more { padding: 28px 14px; } }
+/* On phones the part list shows titles only; the section summaries are long and push the content down. */
+@media (max-width: 600px) { nav.guide-parts .guide-parts-list span { display: none; } nav.guide-parts { padding: 12px 16px; } }
 
 /* ===== 10. Responsive breakpoints =====
    1180px: laptop · nav collapses to hamburger (the 11 links overflow at smaller widths).
