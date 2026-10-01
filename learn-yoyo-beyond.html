@@ -14,7 +14,7 @@
   <base href="/"/>
   <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
        formspree for the contact form, Google Fonts for typography). -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
   <title>Beyond the Basics · How to Yo-Yo - DMV Throwers · Yo-Yo &amp; Skill Toy Club · DC MD VA</title>
   <meta name="description" content="Beyond the Basics, from the DMV Throwers How to Yo-Yo guide: Keep Learning: Beyond the First 100, Make Your Own Tricks, How Tricks Evolved, Tips from Experienced Players, Where to Learn More."/>
   <meta property="og:title" content="Beyond the Basics · How to Yo-Yo - DMV Throwers"/>
@@ -254,6 +254,7 @@
           <li><a href="https://forums.yoyoexpert.com/t/5a-may-2025/424262" target="_blank" rel="noopener noreferrer">5A May</a>, a month of counterweight play.<sup class="cite"><a href="learn-yoyo.html#ref-67" aria-label="Source 67">[67]</a></sup></li>
           <li><a href="https://forums.yoyoexpert.com/t/fixed-axle-february-2026-presented-by-yybc/440253" target="_blank" rel="noopener noreferrer">Fixed Axle February</a>, run by the YoYo Boomers Club, and the ongoing <a href="https://forums.yoyoexpert.com/t/the-0a-thread-fixed-axle-modern-responsive/304228" target="_blank" rel="noopener noreferrer">0A Thread</a> for modern responsive.<sup class="cite"><a href="learn-yoyo.html#ref-68" aria-label="Source 68">[68]</a><a href="learn-yoyo.html#ref-69" aria-label="Source 69">[69]</a></sup></li>
         </ul>
+        <div class="vid-embed" data-yt="kTqHnbTWxF8"><span class="vid-title">Fixed Axle February tutorial: Dazzling Dave</span><button type="button" class="vid-play" aria-label="Play video: Fixed Axle February tutorial: Dazzling Dave">PLAY VIDEO</button><span class="vid-note">From the YoYo Boomers Club channel. Nothing loads from YouTube until you press play. <a href="https://www.youtube.com/watch?v=kTqHnbTWxF8" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></span></div>
         <h3>Share your progress</h3>
         <p>Post wins in <a href="https://forums.yoyoexpert.com/t/the-i-finally-landed-it-thread/24607" target="_blank" rel="noopener noreferrer">&ldquo;I Finally Landed It!&rdquo;</a>, see what others are practicing in <a href="https://forums.yoyoexpert.com/t/what-trick-are-you-working-on-pre-2025/57231" target="_blank" rel="noopener noreferrer">&ldquo;What trick are you working on?&rdquo;</a>, and share your own creations in the <a href="https://forums.yoyoexpert.com/t/post-a-trick-thread/299367" target="_blank" rel="noopener noreferrer">Post a Trick thread</a>.<sup class="cite"><a href="learn-yoyo.html#ref-70" aria-label="Source 70">[70]</a><a href="learn-yoyo.html#ref-71" aria-label="Source 71">[71]</a><a href="learn-yoyo.html#ref-72" aria-label="Source 72">[72]</a></sup></p>
         <h3>Go deeper</h3>
@@ -452,6 +453,18 @@
   });
 </script>
 <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script>
+  // Click-to-play: the YouTube iframe is only created after the visitor presses play.
+  document.querySelectorAll('.vid-embed .vid-play').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var w = b.closest('.vid-embed'), f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + w.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = w.querySelector('.vid-title').textContent;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+      w.innerHTML = ''; w.classList.add('playing'); w.appendChild(f);
+    });
+  });
+</script>
 <script src="assets/js/mobile-enhancements.js" defer></script>
 </body>
 </html>
