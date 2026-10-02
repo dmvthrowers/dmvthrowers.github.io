@@ -64,6 +64,17 @@ verified end to end, one lockfile, one deploy target, a working Dependabot confi
 ## Where the audit itself lives
 
 The full October 2026 audit — security assessment, threat model, incident-response and
-disaster-recovery runbooks, asset inventory, discoverability report — is kept in the club's
-private Google Drive, not in these public repos, because parts of it describe accounts and
-unrotated credentials. The repo docs above carry the actionable, non-sensitive parts.
+disaster-recovery runbooks, asset inventory, discoverability report, repo specs — is in the
+club's Google Drive:
+**[Technical docs - Oct 2026](https://drive.google.com/drive/folders/1Jt7amThKNkeVJenksPtA87cBtR-nwZiq)**
+(access-restricted; ask the coordinator for access). It stays out of these public repos because
+parts of it describe accounts and credentials. The repo docs above carry the actionable,
+non-sensitive parts.
+
+| Drive subfolder | What's in it |
+|---|---|
+| `repo-docs/` | Per-repo structure guides (the source for each repo's `docs/REPO_GUIDE.md`) |
+| `repo-specs/` | Task specs for each repo, including the `/ideas` board spec |
+| `deep-dive/`, `audit-2/` | Sep 30 security/dependency review and the Oct 1 fix verification |
+| `security/nist-800-171/` | NIST 800-171 gap assessment, risk register, runbooks, policies |
+| `discoverability-audit/` | Search ranking, technical SEO and reputation report |

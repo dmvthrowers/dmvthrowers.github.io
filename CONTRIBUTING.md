@@ -33,6 +33,17 @@ We welcome contributions such as:
 4. Confirm links, dates, and contact details are accurate.
 5. Open a pull request with a short summary of what changed, why it changed, and screenshots for UI or content updates.
 
+## Local Checks
+
+- Read [`CLAUDE.md`](CLAUDE.md) first: page map, boilerplate, and gotchas.
+- Preview with `python -m http.server 8000` from the repo root (pages use `<base href="/">`).
+- Install the guards once: `pip install pre-commit && pre-commit install`. They protect `CNAME`
+  and flag off-brand colors, rounded corners, shadows, new font hosts and tracking scripts.
+- Never edit `CNAME`. Use relative links. Keep the nav identical on every page.
+- New or changed pages: update `sitemap.xml` `lastmod`, check the page at 360px wide with no
+  horizontal scroll, and give every image alt text (or `alt=""` if decorative).
+- Open work is listed in [`docs/ROADMAP.md`](docs/ROADMAP.md).
+
 ## Content and Media Rules
 
 - Only submit media you created or have explicit permission to use
