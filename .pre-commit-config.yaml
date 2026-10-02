@@ -14,13 +14,13 @@ repos:
 
   # ── Built-in file guards ────────────────────────────────────────────────────
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
       - id: check-merge-conflict
       - id: end-of-file-fixer
-        exclude: "^assets/"
+        exclude: "^(assets/|CNAME$)"
       - id: trailing-whitespace
-        exclude: "^assets/"
+        exclude: "^(assets/|CNAME$)"
       - id: no-commit-to-branch
         args: ["--branch", "main"]
         stages: [pre-push]
@@ -31,7 +31,7 @@ repos:
       - id: protect-cname
         name: "Protect CNAME (must stay dmvthrowers.club)"
         language: system
-        entry: bash -c 'if git diff --cached --name-only | grep -q "^CNAME$"; then echo "ERROR: CNAME is protected. It must remain dmvthrowers.club."; exit 1; fi'
+        entry: bash -c 'if git diff --cached --name-only | grep -q "^CNAME$"; then echo "ERROR - CNAME is protected; it must remain dmvthrowers.club."; exit 1; fi'
         pass_filenames: false
         always_run: true
 
