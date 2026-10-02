@@ -2,12 +2,13 @@
 
 **The Washington DC, Northern Virginia, and Maryland yo-yo and skill toy community.**
 
-🌐 **Website:** [dmvthrowers.club](https://dmvthrowers.club)
-📸 **Instagram:** [@dmv_throwers](https://instagram.com/dmv_throwers)
-🔗 **Linktree:** [linktr.ee/dmvthrowers](https://linktr.ee/dmvthrowers)
+**Website:** [dmvthrowers.club](https://dmvthrowers.club)
+**YoYo Player Map:** [map.dmvthrowers.club](https://map.dmvthrowers.club)
+**Instagram:** [@dmv_throwers](https://instagram.com/dmv_throwers)
+**Linktree:** [linktr.ee/dmvthrowers](https://linktr.ee/dmvthrowers)
 ☕ **Support us:** [ko-fi.com/dmvthrowers](https://ko-fi.com/dmvthrowers)
 
-Last updated: 2026-04-02
+Last updated: 2026-10-02
 
 ---
 
@@ -15,31 +16,31 @@ Last updated: 2026-04-02
 
 DMV Throwers is a free, community-run yo-yo and skill toy club serving the DC, Maryland, and Virginia area. Founded in 2021, we host free monthly meetups at Arlington Central Library in Arlington, VA — open to all ages and skill levels, from total beginners to competitive players.
 
-We welcome yo-yo, kendama, diabolo, juggling, and all skill toys.
+We welcome yo-yo, kendama, diabolo, juggling, and all skill toys. All ages, all levels, always free.
 
 ---
 
 ## Monthly Meetups
 
-📅 **Every 3rd Sunday · 1–4 PM**
-📍 **Arlington Central Library** · Barbara M. Donnellan Auditorium
-🗺️ 1015 N Quincy St, Arlington, VA 22201
-💵 **Free to attend · No registration required · Loaner yo-yos available**
+- **Every 3rd Sunday · 1–4 PM** (next: Sunday, October 18, 2026)
+- **Arlington Central Library** · Barbara M. Donnellan Auditorium
+- 1015 N Quincy St, Arlington, VA 22201
+- **Free to attend · No registration required · Loaner yo-yos available**
+
+The NEXT MEET banner and past meetup cards are advanced automatically each week by `scripts/update_meetup.py` (`.github/workflows/update-meetup.yml`).
 
 ---
 
 ## VSYC-26 · Virginia State Yo-Yo Contest 2026
 
-We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to Northern Virginia for the first time.
+The **16th annual Virginia State Yo-Yo Contest** was held **September 19, 2026** at **Dulles Town Center · Center Court · Sterling, VA**, brought to you by Goodles. Results, recap and videos are up:
 
-- 📅 **September 19, 2026**
-- 📍 **Dulles Town Center · Center Court · Sterling, VA**
-- 🕙 **10 AM – 7 PM**
-- 🎟 **Free to spectate · $15–25/division to compete**
-- 🏆 **Divisions:** 1A · X Division · Beginner/Junior · Fixed Axle
+- **Contest hub:** [dmvthrowers.club/vsyc26.html](https://dmvthrowers.club/vsyc26.html)
+- **Results:** [dmvthrowers.club/vsyc26-results.html](https://dmvthrowers.club/vsyc26-results.html) · full leaderboard at [register.dmvthrowers.club/results](https://register.dmvthrowers.club/results)
+- **Recap:** [dmvthrowers.club/vsyc26-recap.html](https://dmvthrowers.club/vsyc26-recap.html)
+- **Sponsor inquiries:** <vastateyoyocontest@gmail.com>
 
-**Contest site:** [dmvthrowers.club/vsyc26.html](https://dmvthrowers.club/vsyc26.html)
-**Sponsor inquiries:** <vastateyoyocontest@gmail.com>
+VSYC-27 planning is tracked in this repo's issues (#76–#96).
 
 ---
 
@@ -57,79 +58,51 @@ We're organizing the **16th annual Virginia State Yo-Yo Contest** — coming to 
 
 ## Site Structure
 
-| Page | URL |
+| Section | Pages |
 | --- | --- |
-| Home | [dmvthrowers.club](https://dmvthrowers.club) |
-| About | [dmvthrowers.club/about.html](https://dmvthrowers.club/about.html) |
-| Team | [dmvthrowers.club/team.html](https://dmvthrowers.club/team.html) |
-| Events | [dmvthrowers.club/events.html](https://dmvthrowers.club/events.html) |
-| Gallery | [dmvthrowers.club/gallery.html](https://dmvthrowers.club/gallery.html) |
-| Resources | [dmvthrowers.club/resources.html](https://dmvthrowers.club/resources.html) |
-| FAQ | [dmvthrowers.club/faq.html](https://dmvthrowers.club/faq.html) |
-| Contact | [dmvthrowers.club/contact.html](https://dmvthrowers.club/contact.html) |
-| **VSYC-26** | |
-| — About | [dmvthrowers.club/vsyc26.html](https://dmvthrowers.club/vsyc26.html) |
-| — Divisions | [dmvthrowers.club/vsyc26-register.html#divisions](https://dmvthrowers.club/vsyc26-register.html#divisions) |
-| — Schedule | [dmvthrowers.club/vsyc26-schedule.html](https://dmvthrowers.club/vsyc26-schedule.html) |
-| — Register | [dmvthrowers.club/vsyc26-register.html](https://dmvthrowers.club/vsyc26-register.html) |
-| — Sponsors | [dmvthrowers.club/vsyc26-sponsors.html](https://dmvthrowers.club/vsyc26-sponsors.html) |
-| — Venue | [dmvthrowers.club/vsyc26-venue.html](https://dmvthrowers.club/vsyc26-venue.html) |
-| — Rules | [dmvthrowers.club/vsyc26-rules.html](https://dmvthrowers.club/vsyc26-rules.html) |
-| — FAQ & Contact | [dmvthrowers.club/vsyc26-faq.html](https://dmvthrowers.club/vsyc26-faq.html) |
+| Club | [Home](https://dmvthrowers.club) · [About](https://dmvthrowers.club/about.html) · [Team](https://dmvthrowers.club/team.html) · [Events](https://dmvthrowers.club/events.html) · [Gallery](https://dmvthrowers.club/gallery.html) · [Resources](https://dmvthrowers.club/resources.html) · [FAQ](https://dmvthrowers.club/faq.html) · [Contact](https://dmvthrowers.club/contact.html) · [Privacy](https://dmvthrowers.club/privacy.html) · [Code of Conduct](https://dmvthrowers.club/code-of-conduct.html) |
+| Guides | [How to Yo-Yo](https://dmvthrowers.club/learn-yoyo.html) (4 parts) · [Gear & Maintenance](https://dmvthrowers.club/yoyo-gear.html) (4 parts) · [Science & DIY](https://dmvthrowers.club/yoyo-science.html) · [History](https://dmvthrowers.club/yoyo-history.html) · [Collecting](https://dmvthrowers.club/yoyo-collecting.html) · [Filipino Yo-Yo History](https://dmvthrowers.club/filipino-yoyo-history.html) |
+| VSYC-26 | [Hub](https://dmvthrowers.club/vsyc26.html) · [Results](https://dmvthrowers.club/vsyc26-results.html) · [Recap](https://dmvthrowers.club/vsyc26-recap.html) · [Schedule](https://dmvthrowers.club/vsyc26-schedule.html) · [Divisions & Register](https://dmvthrowers.club/vsyc26-register.html) · [Rules](https://dmvthrowers.club/vsyc26-rules.html) · [Venue](https://dmvthrowers.club/vsyc26-venue.html) · [Sponsors](https://dmvthrowers.club/vsyc26-sponsors.html) · [Dueling Stars](https://dmvthrowers.club/vsyc26-dueling-stars.html) · [Twirly Tour](https://dmvthrowers.club/vsyc26-twirly-tour.html) · [Merch](https://dmvthrowers.club/vsyc26-merch.html) · [FAQ](https://dmvthrowers.club/vsyc26-faq.html) · [Terms](https://dmvthrowers.club/vsyc26-terms.html) |
+| Other club apps | [YoYo Player Map](https://map.dmvthrowers.club) ([repo](https://github.com/dmvthrowers/yoyo-player-map)) · [Contest registration](https://register.dmvthrowers.club) ([repo](https://github.com/dmvthrowers/VA-States)) |
+
+The full page map, boilerplate pattern and gotchas are in [`CLAUDE.md`](CLAUDE.md) (identical to [`AGENTS.md`](AGENTS.md)).
 
 ---
 
-## File Structure
+## Working on the Site
+
+Static HTML/CSS/JS on GitHub Pages — no build step. Preview from the repo root (the pages use `<base href="/">`, so they must be served from the root):
+
+```sh
+python -m http.server 8000   # then open http://localhost:8000/
+```
+
+Optional local guards: `pip install pre-commit && pre-commit install` (protects `CNAME`, flags off-brand colors, border-radius, shadows, new font hosts and tracking scripts).
+
+Never edit `CNAME` — it must stay `dmvthrowers.club`.
 
 ```text
-/ (root)
-├── index.html                  # Homepage
-├── about.html                  # About page
-├── team.html                   # Team / officers page
-├── events.html                 # Events page
-├── gallery.html                # Gallery page
-├── resources.html              # Resources page
-├── faq.html                    # FAQ page
-├── contact.html                # Contact page
-├── 404.html                    # Custom 404 error page
-├── vsyc26.html                 # VSYC-26 landing (hero + about)
-├── vsyc26-divisions.html       # Redirect to registration divisions section
-├── vsyc26-schedule.html        # VSYC-26 schedule
-├── vsyc26-register.html        # VSYC-26 registration + music upload
-├── vsyc26-sponsors.html        # VSYC-26 sponsor tiers + JotForm
-├── vsyc26-venue.html           # VSYC-26 venue info
-├── vsyc26-rules.html           # VSYC-26 contest rules
-├── vsyc26-faq.html             # VSYC-26 FAQ + contact
-├── sitemap.xml                 # Sitemap for search engines
-├── robots.txt                  # Crawl directives
-├── CNAME                       # GitHub Pages custom domain
-├── README.md                   # This file
-└── assets/
-    ├── css/
-    │   ├── main.css                        # Shared stylesheet for all main-site pages
-    │   └── vsyc26.css                      # Shared stylesheet for all VSYC-26 pages
-    ├── js/
-    │   └── mobile-enhancements.js          # Touch/mobile interaction enhancements
-    ├── images/
-    │   ├── logo.png                        # Main club logo
-    │   ├── dc-skyline.svg                  # Club page skyline silhouette
-    │   ├── va-cardinal.svg                 # VSYC page nature silhouette
-    │   ├── events/                         # Event graphics archive
-    │   ├── gallery/                        # Club photo gallery
-    │   │   └── club*.PNG
-    │   └── logos/                          # Logo variants
-    │       ├── DMVT_Logo_*.jpeg/png
-    │       └── VAStateLogo_Final.*
-    └── documents/                          # PDFs and presentations
-        ├── workshop-run-sheet.docx
-        ├── trick-reference-guide.pptx
-        ├── club-display-loop.pptx
-        ├── event-checklist.docx
-        ├── maintenance-guide.pptx
-        ├── DMV Throwers Charter v5.docx
-        ├── DMV Throwers Officer Roles.docx
-        └── DMV Throwers Press Kit.pdf
+/ (root)                 every .html file is a live page
+├── assets/css/          main.css (club site), vsyc26.css (contest pages)
+├── assets/js/           mobile-enhancements.js (the only shared script)
+├── assets/images/       logos, favicons, events/, gallery/, history/, vsyc26*/ photos
+├── assets/documents/    charter, press kit, trick checklists, run sheets
+├── assets/videos/       local video files
+├── scripts/             update_meetup.py (weekly NEXT MEET update)
+├── docs/                cross-repo overview + roadmap (not deployed)
+├── sitemap.xml, robots.txt, CNAME, .nojekyll
+└── .github/workflows/   Pages deploy, CodeQL, super-linter, meetup update, hygiene bots
 ```
+
+---
+
+## Docs
+
+- [`CLAUDE.md`](CLAUDE.md) / [`AGENTS.md`](AGENTS.md) — contributor rules and page map
+- [`docs/README.md`](docs/README.md) — how the five club repos and shared services fit together
+- [`docs/ROADMAP.md`](docs/ROADMAP.md) — open work for the site
+- [`CONTRIBUTING.md`](CONTRIBUTING.md), [`SECURITY.md`](SECURITY.md), [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)
+- Full October 2026 technical audit (Google Drive, access-restricted): [Technical docs - Oct 2026](https://drive.google.com/drive/folders/1Jt7amThKNkeVJenksPtA87cBtR-nwZiq)
 
 ---
 

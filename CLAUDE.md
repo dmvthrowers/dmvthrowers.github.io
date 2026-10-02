@@ -31,14 +31,30 @@ One shared JS file (`assets/js/mobile-enhancements.js`) is loaded on every page 
 | `code-of-conduct.html` | Community code of conduct with a version tag + effective date |
 | `404.html` | Custom "page not found"; `noindex,follow` |
 
+### Guides (long-form, main-site styling)
+
+| Page | Purpose |
+| --- | --- |
+| `learn-yoyo.html` | Hub for "How to Yo-Yo": TOC, glossary, and the shared `#references` list |
+| `learn-yoyo-{basics,tricks,practice,beyond}.html` | Parts 1–4. Each opens with "Part N of 4" and cites sources from the hub's `#references` |
+| `yoyo-gear.html` | Hub for "Yo-Yo Gear & Maintenance": TOC + shared `#references` |
+| `yoyo-gear-{basics,maintenance,accessories,mods}.html` | Parts 1–4, same pattern |
+| `yoyo-science.html`, `yoyo-history.html`, `yoyo-collecting.html`, `filipino-yoyo-history.html` | Standalone long-form guides |
+
+The hubs carry a small script that forwards old deep links (`learn-yoyo.html#some-section`) to the part that now holds that section. Hub ↔ part links are plain `href`s — when you move a section, update both sides and the forwarder.
+
 ### VSYC-26 contest sub-site
 
 | Page | Purpose |
 | --- | --- |
-| `vsyc26.html` | Landing — hero with live countdown + Event JSON-LD |
+| `vsyc26.html` | Landing — hero with date/venue facts + post-event wrap stats (the countdown was retired after the contest) + Event JSON-LD |
 | `vsyc26-schedule.html` | Day-of schedule |
-| `vsyc26-register.html` | Divisions + JotForm registration embed |
-| `vsyc26-sponsors.html` | Tiers + current-sponsor list + JotForm inquiry embed |
+| `vsyc26-register.html` | Divisions (`#divisions`) + links out to the registration app at `register.dmvthrowers.club` (no embed). Says registration is closed |
+| `vsyc26-sponsors.html` | Tiers + current-sponsor list + JotForm inquiry embed (slated for replacement — site issue #77) |
+| `vsyc26-results.html`, `vsyc26-recap.html` | Post-contest results and recap, with YouTube-nocookie videos |
+| `vsyc26-dueling-stars.html` | Stella Duellum battles; embeds a Challonge bracket iframe |
+| `vsyc26-twirly-tour.html`, `vsyc26-merch.html` | Sponsor tour and merch pages |
+| `vsyc26-battles.html` | **Redirect stub** → `vsyc26-dueling-stars.html` |
 | `vsyc26-venue.html` | Venue details (Dulles Town Center · Center Court) |
 | `vsyc26-rules.html` | Contest ruleset (freestyle, equipment, music, judging) |
 | `vsyc26-faq.html` | Accordion with inline `toggleFaq` + matching `FAQPage` JSON-LD |
@@ -127,3 +143,4 @@ Then open `http://localhost:8000/`.
 - `assets/documents/` — PDFs linked from `resources.html`.
 - `CNAME` — custom-domain config for GitHub Pages.
 - `robots.txt` + `sitemap.xml` — SEO plumbing.
+- `docs/README.md` — how the five club repos fit together; `docs/ROADMAP.md` — open work. The full October 2026 audit is in Google Drive: [Technical docs - Oct 2026](https://drive.google.com/drive/folders/1Jt7amThKNkeVJenksPtA87cBtR-nwZiq) (access-restricted).
