@@ -102,7 +102,7 @@ Never edit `CNAME` — it must stay `dmvthrowers.club`.
 - [`docs/README.md`](docs/README.md) — how the five club repos and shared services fit together
 - [`docs/ROADMAP.md`](docs/ROADMAP.md) — open work for the site
 - [`CONTRIBUTING.md`](CONTRIBUTING.md), [`SECURITY.md`](SECURITY.md), [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)
-- Full October 2026 technical audit (Google Drive, access-restricted): [Technical docs - Oct 2026](https://drive.google.com/drive/folders/1Jt7amThKNkeVJenksPtA87cBtR-nwZiq)
+- Full October 2026 technical audit (club Google Drive — ask the coordinator for access): "Technical docs - Oct 2026"
 
 ---
 

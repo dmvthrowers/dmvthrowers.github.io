@@ -143,4 +143,4 @@ Then open `http://localhost:8000/`.
 - `assets/documents/` — PDFs linked from `resources.html`.
 - `CNAME` — custom-domain config for GitHub Pages.
 - `robots.txt` + `sitemap.xml` — SEO plumbing.
-- `docs/README.md` — how the five club repos fit together; `docs/ROADMAP.md` — open work. The full October 2026 audit is in Google Drive: [Technical docs - Oct 2026](https://drive.google.com/drive/folders/1Jt7amThKNkeVJenksPtA87cBtR-nwZiq) (access-restricted).
+- `docs/README.md` — how the five club repos fit together; `docs/ROADMAP.md` — open work. The full October 2026 audit is in Google Drive: "Technical docs - Oct 2026" (ask the coordinator for access).

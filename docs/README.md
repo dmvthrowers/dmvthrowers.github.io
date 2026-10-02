@@ -66,8 +66,8 @@ verified end to end, one lockfile, one deploy target, a working Dependabot confi
 The full October 2026 audit — security assessment, threat model, incident-response and
 disaster-recovery runbooks, asset inventory, discoverability report, repo specs — is in the
 club's Google Drive:
-**[Technical docs - Oct 2026](https://drive.google.com/drive/folders/1Jt7amThKNkeVJenksPtA87cBtR-nwZiq)**
-(access-restricted; ask the coordinator for access). It stays out of these public repos because
+**"Technical docs - Oct 2026"**
+(ask the coordinator for access). It stays out of these public repos because
 parts of it describe accounts and credentials. The repo docs above carry the actionable,
 non-sensitive parts.
 
