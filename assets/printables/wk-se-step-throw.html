@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Throw a Sleeper · DMV Throwers</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Verdana, Geneva, Tahoma, sans-serif; color: #111; background: #fff; margin: 0; padding: 20px; }
+  .page { max-width: 7.5in; margin: 0 auto; }
+  .print-btn { display: inline-block; font-size: 18px; padding: 10px 22px; border: 3px solid #111; background: #fff; border-radius: 8px; cursor: pointer; margin-bottom: 12px; font-family: inherit; font-weight: bold; }
+  .print-btn:hover { background: #eee; }
+  .header { text-align: center; border-bottom: 4px double #111; padding-bottom: 10px; margin-bottom: 8px; }
+  .club { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; }
+  h1 { font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif; font-size: 32px; margin: 8px 0 4px; }
+  .instr { font-size: 20px; margin: 4px 0 0; }
+  .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px 0; }
+  .step { border: 4px solid #111; border-radius: 12px; padding: 10px 6px; text-align: center; }
+  .stepnum { font-size: 30px; font-weight: bold; background: #111; color: #fff; width: 52px; height: 52px;
+             border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; }
+  .step svg { width: 100%; height: 110px; display: block; margin-bottom: 6px; }
+  .stepwords { font-size: 19px; font-weight: bold; line-height: 1.3; margin: 0; }
+  .note { font-size: 18px; border: 3px solid #111; border-radius: 10px; padding: 12px 16px; margin-top: 16px; }
+  .footer { margin-top: 14px; padding-top: 8px; border-top: 2px solid #111; text-align: center; font-size: 13px; }
+  @media print {
+    .print-btn { display: none !important; }
+    body { padding: 0; }
+    @page { size: letter; margin: 0.6in; }
+    .strip, .note { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print-btn" onclick="window.print()">&#128438; Print</button>
+  <div class="header">
+    <div class="club">DMV Throwers &middot; Yo-Yos in the Classroom</div>
+    <h1>How to Throw a Sleeper</h1>
+    <p class="instr">Follow the steps. One at a time.</p>
+  </div>
+
+  <div class="strip" role="list" aria-label="Five steps to throw a sleeper">
+    <div class="step" role="listitem">
+      <div class="stepnum">1</div>
+      <svg viewBox="0 0 120 110" aria-hidden="true">
+        <rect x="38" y="18" width="44" height="30" rx="10" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="76" r="26" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="76" r="7" fill="#111"/>
+      </svg>
+      <p class="stepwords">Hold<br>yo-yo</p>
+    </div>
+    <div class="step" role="listitem">
+      <div class="stepnum">2</div>
+      <svg viewBox="0 0 120 110" aria-hidden="true">
+        <line x1="60" y1="14" x2="60" y2="66" stroke="#111" stroke-width="6"/>
+        <polygon points="60,86 46,64 74,64" fill="#111"/>
+        <circle cx="60" cy="30" r="12" fill="#fff" stroke="#111" stroke-width="5"/>
+      </svg>
+      <p class="stepwords">Throw<br>down</p>
+    </div>
+    <div class="step" role="listitem">
+      <div class="stepnum">3</div>
+      <svg viewBox="0 0 120 110" aria-hidden="true">
+        <path d="M 60 55 m 0 -4 a 4 4 0 0 1 4 4 a 9 9 0 0 1 -9 9 a 14 14 0 0 1 -14 -14 a 19 19 0 0 1 19 -19 a 24 24 0 0 1 24 24"
+              fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="60" cy="55" r="6" fill="#111"/>
+      </svg>
+      <p class="stepwords">Let it<br>spin</p>
+    </div>
+    <div class="step" role="listitem">
+      <div class="stepnum">4</div>
+      <svg viewBox="0 0 120 110" aria-hidden="true">
+        <line x1="60" y1="96" x2="60" y2="40" stroke="#111" stroke-width="6"/>
+        <polygon points="60,20 46,42 74,42" fill="#111"/>
+        <circle cx="60" cy="88" r="12" fill="#fff" stroke="#111" stroke-width="5"/>
+      </svg>
+      <p class="stepwords">Tug<br>string</p>
+    </div>
+    <div class="step" role="listitem">
+      <div class="stepnum">5</div>
+      <svg viewBox="0 0 120 110" aria-hidden="true">
+        <circle cx="60" cy="34" r="20" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="34" r="6" fill="#111"/>
+        <path d="M 30 100 Q 60 78 90 100" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+        <line x1="30" y1="100" x2="30" y2="88" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+        <line x1="90" y1="100" x2="90" y2="88" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <p class="stepwords">Catch!</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Tip for helpers:</strong> cut the strip apart and hand one step at a time, or point to each box as the student does it. Celebrate step 5!
+  </div>
+
+  <div class="footer">dmvthrowers.club &middot; Free for classroom and homeschool use.</div>
+</div>
+</body>
+</html>

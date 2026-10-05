@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiplication Arrays &middot; DMV Throwers</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Verdana, Geneva, Tahoma, sans-serif; color: #111; background: #fff; margin: 0; padding: 20px; }
+  .page { max-width: 7.5in; margin: 0 auto; }
+  .print-btn { display: inline-block; font-size: 15px; padding: 8px 18px; border: 2px solid #111; background: #fff; border-radius: 8px; cursor: pointer; margin-bottom: 12px; font-family: inherit; }
+  .print-btn:hover { background: #eee; }
+  .header { text-align: center; border-bottom: 3px double #111; padding-bottom: 10px; margin-bottom: 10px; }
+  .club { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; }
+  h1 { font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif; font-size: 26px; margin: 8px 0 4px; }
+  .instr { font-style: italic; font-size: 13.5px; margin: 0; }
+  .nameline { display: flex; justify-content: space-between; font-size: 13px; margin: 12px 0 8px; }
+  .problem { margin: 12px 0 14px; }
+  .ptext { font-size: 13.5px; margin: 0 0 6px; line-height: 1.5; }
+  .pnum { font-weight: bold; }
+  .workbox { border: 2px solid #111; border-radius: 6px; min-height: 78px; padding: 6px 10px;
+             background: repeating-linear-gradient(to bottom, #ffffff 0px, #ffffff 20px, #cccccc 20px, #cccccc 21px); }
+  .worklabel { font-size: 11px; font-style: italic; margin-bottom: 2px; }
+  .answerline { font-size: 14px; margin-top: 8px; }
+  .key { border: 2px dashed #111; border-radius: 10px; padding: 10px 14px; font-size: 12.5px; margin-top: 16px; }
+  .key strong { font-size: 13px; }
+  .key table { border-collapse: collapse; margin-top: 6px; }
+  .key td { padding: 3px 14px 3px 0; vertical-align: top; }
+  .footer { margin-top: 14px; padding-top: 8px; border-top: 2px solid #111; text-align: center; font-size: 11px; }
+  svg.array { display: block; margin: 6px 0; }
+  @media print {
+    .print-btn { display: none !important; }
+    body { padding: 0; }
+    @page { size: letter; margin: 0.6in; }
+    .problem, .key { break-inside: avoid; }
+    .workbox { background: #fff; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print-btn" onclick="window.print()">&#128438; Print</button>
+  <div class="header">
+    <div class="club">DMV Throwers &middot; Yo-Yos in the Classroom</div>
+    <h1>Multiplication Arrays</h1>
+    <p class="instr">Grade 3 &mdash; Count the rows and columns, then multiply. Yo-yo arrays make multiplication visible!</p>
+  </div>
+  <div class="nameline"><span>Name: ______________________________</span><span>Date: ____________</span></div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">1.</span> Count the rows and columns of yo-yos, then multiply.</p>
+    <svg class="array" width="114" height="88" viewBox="0 0 114 88" role="img" aria-label="3 rows of 4 yo-yos"><circle cx="18.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="18.0" r="2.5" fill="black"/><circle cx="44.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="18.0" r="2.5" fill="black"/><circle cx="70.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="18.0" r="2.5" fill="black"/><circle cx="96.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="18.0" r="2.5" fill="black"/><circle cx="18.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="44.0" r="2.5" fill="black"/><circle cx="44.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="44.0" r="2.5" fill="black"/><circle cx="70.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="44.0" r="2.5" fill="black"/><circle cx="96.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="44.0" r="2.5" fill="black"/><circle cx="18.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="70.0" r="2.5" fill="black"/><circle cx="44.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="70.0" r="2.5" fill="black"/><circle cx="70.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="70.0" r="2.5" fill="black"/><circle cx="96.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="70.0" r="2.5" fill="black"/></svg>
+    <p class="answerline">_____ rows &times; _____ columns = _____ yo-yos</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">2.</span> Count the rows and columns of yo-yos, then multiply.</p>
+    <svg class="array" width="140" height="62" viewBox="0 0 140 62" role="img" aria-label="2 rows of 5 yo-yos"><circle cx="18.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="18.0" r="2.5" fill="black"/><circle cx="44.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="18.0" r="2.5" fill="black"/><circle cx="70.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="18.0" r="2.5" fill="black"/><circle cx="96.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="18.0" r="2.5" fill="black"/><circle cx="122.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="122.0" cy="18.0" r="2.5" fill="black"/><circle cx="18.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="44.0" r="2.5" fill="black"/><circle cx="44.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="44.0" r="2.5" fill="black"/><circle cx="70.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="44.0" r="2.5" fill="black"/><circle cx="96.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="44.0" r="2.5" fill="black"/><circle cx="122.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="122.0" cy="44.0" r="2.5" fill="black"/></svg>
+    <p class="answerline">_____ rows &times; _____ columns = _____ yo-yos</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">3.</span> Count the rows and columns of yo-yos, then multiply.</p>
+    <svg class="array" width="88" height="114" viewBox="0 0 88 114" role="img" aria-label="4 rows of 3 yo-yos"><circle cx="18.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="18.0" r="2.5" fill="black"/><circle cx="44.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="18.0" r="2.5" fill="black"/><circle cx="70.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="18.0" r="2.5" fill="black"/><circle cx="18.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="44.0" r="2.5" fill="black"/><circle cx="44.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="44.0" r="2.5" fill="black"/><circle cx="70.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="44.0" r="2.5" fill="black"/><circle cx="18.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="70.0" r="2.5" fill="black"/><circle cx="44.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="70.0" r="2.5" fill="black"/><circle cx="70.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="70.0" r="2.5" fill="black"/><circle cx="18.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="96.0" r="2.5" fill="black"/><circle cx="44.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="96.0" r="2.5" fill="black"/><circle cx="70.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="96.0" r="2.5" fill="black"/></svg>
+    <p class="answerline">_____ rows &times; _____ columns = _____ yo-yos</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">4.</span> Count the rows and columns of yo-yos, then multiply.</p>
+    <svg class="array" width="62" height="140" viewBox="0 0 62 140" role="img" aria-label="5 rows of 2 yo-yos"><circle cx="18.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="18.0" r="2.5" fill="black"/><circle cx="44.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="18.0" r="2.5" fill="black"/><circle cx="18.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="44.0" r="2.5" fill="black"/><circle cx="44.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="44.0" r="2.5" fill="black"/><circle cx="18.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="70.0" r="2.5" fill="black"/><circle cx="44.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="70.0" r="2.5" fill="black"/><circle cx="18.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="96.0" r="2.5" fill="black"/><circle cx="44.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="96.0" r="2.5" fill="black"/><circle cx="18.0" cy="122.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="122.0" r="2.5" fill="black"/><circle cx="44.0" cy="122.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="122.0" r="2.5" fill="black"/></svg>
+    <p class="answerline">_____ rows &times; _____ columns = _____ yo-yos</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">5.</span> Count the rows and columns of yo-yos, then multiply.</p>
+    <svg class="array" width="166" height="62" viewBox="0 0 166 62" role="img" aria-label="2 rows of 6 yo-yos"><circle cx="18.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="18.0" r="2.5" fill="black"/><circle cx="44.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="18.0" r="2.5" fill="black"/><circle cx="70.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="18.0" r="2.5" fill="black"/><circle cx="96.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="18.0" r="2.5" fill="black"/><circle cx="122.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="122.0" cy="18.0" r="2.5" fill="black"/><circle cx="148.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="148.0" cy="18.0" r="2.5" fill="black"/><circle cx="18.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="44.0" r="2.5" fill="black"/><circle cx="44.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="44.0" r="2.5" fill="black"/><circle cx="70.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="44.0" r="2.5" fill="black"/><circle cx="96.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="44.0" r="2.5" fill="black"/><circle cx="122.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="122.0" cy="44.0" r="2.5" fill="black"/><circle cx="148.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="148.0" cy="44.0" r="2.5" fill="black"/></svg>
+    <p class="answerline">_____ rows &times; _____ columns = _____ yo-yos</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">6.</span> Count the rows and columns of yo-yos, then multiply.</p>
+    <svg class="array" width="114" height="114" viewBox="0 0 114 114" role="img" aria-label="4 rows of 4 yo-yos"><circle cx="18.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="18.0" r="2.5" fill="black"/><circle cx="44.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="18.0" r="2.5" fill="black"/><circle cx="70.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="18.0" r="2.5" fill="black"/><circle cx="96.0" cy="18.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="18.0" r="2.5" fill="black"/><circle cx="18.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="44.0" r="2.5" fill="black"/><circle cx="44.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="44.0" r="2.5" fill="black"/><circle cx="70.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="44.0" r="2.5" fill="black"/><circle cx="96.0" cy="44.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="44.0" r="2.5" fill="black"/><circle cx="18.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="70.0" r="2.5" fill="black"/><circle cx="44.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="70.0" r="2.5" fill="black"/><circle cx="70.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="70.0" r="2.5" fill="black"/><circle cx="96.0" cy="70.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="70.0" r="2.5" fill="black"/><circle cx="18.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="18.0" cy="96.0" r="2.5" fill="black"/><circle cx="44.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="44.0" cy="96.0" r="2.5" fill="black"/><circle cx="70.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="70.0" cy="96.0" r="2.5" fill="black"/><circle cx="96.0" cy="96.0" r="9" fill="white" stroke="black" stroke-width="2"/><circle cx="96.0" cy="96.0" r="2.5" fill="black"/></svg>
+    <p class="answerline">_____ rows &times; _____ columns = _____ yo-yos</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">7.</span> 3 &times; 2 = _____</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">8.</span> 4 &times; 3 = _____</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">9.</span> 5 &times; 4 = _____</p>
+  </div>
+  <div class="problem">
+    <p class="ptext"><span class="pnum">10.</span> 2 &times; 7 = _____</p>
+  </div>
+
+  <div class="key">
+    <strong>&#9986; Teacher Answer Key</strong> (cut or fold under before copying)
+    <table>
+<tr><td><strong>1.</strong> 3&times;4=12</td><td><strong>2.</strong> 2&times;5=10</td></tr><tr><td><strong>3.</strong> 4&times;3=12</td><td><strong>4.</strong> 5&times;2=10</td></tr><tr><td><strong>5.</strong> 2&times;6=12</td><td><strong>6.</strong> 4&times;4=16</td></tr><tr><td><strong>7.</strong> 3&times;2=6</td><td><strong>8.</strong> 4&times;3=12</td><td><strong>9.</strong> 5&times;4=20</td><td><strong>10.</strong> 2&times;7=14</td></tr>
+    </table>
+  </div>
+
+  <div class="footer">dmvthrowers.club &middot; Free for classroom and homeschool use.</div>
+</div>
+</body>
+</html>

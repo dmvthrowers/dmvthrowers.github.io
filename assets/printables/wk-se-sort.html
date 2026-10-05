@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sort the Yo-Yos · DMV Throwers</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Verdana, Geneva, Tahoma, sans-serif; color: #111; background: #fff; margin: 0; padding: 20px; }
+  .page { max-width: 7.5in; margin: 0 auto; }
+  .print-btn { display: inline-block; font-size: 18px; padding: 10px 22px; border: 3px solid #111; background: #fff; border-radius: 8px; cursor: pointer; margin-bottom: 12px; font-family: inherit; font-weight: bold; }
+  .print-btn:hover { background: #eee; }
+  .header { text-align: center; border-bottom: 4px double #111; padding-bottom: 10px; margin-bottom: 8px; }
+  .club { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; }
+  h1 { font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif; font-size: 32px; margin: 8px 0 4px; }
+  .instr { font-size: 20px; margin: 4px 0 0; }
+  .nameline { display: flex; justify-content: space-between; font-size: 18px; margin: 14px 0 4px; }
+  .sortset { border: 3px solid #111; border-radius: 12px; padding: 14px; margin: 18px 0; }
+  .sortset h2 { font-size: 24px; margin: 0 0 4px; }
+  .sortset .rule { font-size: 20px; margin: 0 0 10px; }
+  .yoyorow { display: flex; justify-content: space-around; align-items: flex-end; margin: 6px 0 12px; }
+  .yoyorow svg { display: block; }
+  .bins { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .bin { border: 4px dashed #111; border-radius: 12px; min-height: 110px; padding: 8px; text-align: center; }
+  .bin span { font-size: 24px; font-weight: bold; }
+  .footer { margin-top: 14px; padding-top: 8px; border-top: 2px solid #111; text-align: center; font-size: 13px; }
+  @media print {
+    .print-btn { display: none !important; }
+    body { padding: 0; }
+    @page { size: letter; margin: 0.6in; }
+    .sortset { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print-btn" onclick="window.print()">&#128438; Print</button>
+  <div class="header">
+    <div class="club">DMV Throwers &middot; Yo-Yos in the Classroom</div>
+    <h1>Sort the Yo-Yos</h1>
+    <p class="instr">Look close. Put each yo-yo in the right box.</p>
+  </div>
+  <div class="nameline"><span>Name: ______________________________</span><span>Date: ____________</span></div>
+
+  <!-- SET 1: sort by size -->
+  <div class="sortset">
+    <h2>Set 1</h2>
+    <p class="rule">Sort by <strong>size</strong>: BIG or SMALL.</p>
+    <div class="yoyorow">
+      <svg viewBox="0 0 120 130" width="110" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="30" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="84" r="46" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="84" r="12" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+      <svg viewBox="0 0 120 130" width="70" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="58" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="98" r="30" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="98" r="9" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+      <svg viewBox="0 0 120 130" width="70" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="58" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="98" r="30" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="98" r="9" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+      <svg viewBox="0 0 120 130" width="110" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="30" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="84" r="46" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="84" r="12" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+      <svg viewBox="0 0 120 130" width="110" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="30" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="84" r="46" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="84" r="12" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+      <svg viewBox="0 0 120 130" width="70" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="58" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="98" r="30" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="98" r="9" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+    </div>
+    <div class="bins">
+      <div class="bin"><span>BIG</span></div>
+      <div class="bin"><span>SMALL</span></div>
+    </div>
+  </div>
+
+  <!-- SET 2: sort by pattern -->
+  <div class="sortset">
+    <h2>Set 2</h2>
+    <p class="rule">Sort by <strong>pattern</strong>: PLAIN or STRIPED.</p>
+    <div class="yoyorow">
+      <svg viewBox="0 0 120 130" width="100" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="36" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="88" r="42" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="88" r="11" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+      <svg viewBox="0 0 120 130" width="100" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="36" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="88" r="42" fill="#fff" stroke="#111" stroke-width="6"/>
+        <path d="M 24 74 Q 60 56 96 74" fill="none" stroke="#111" stroke-width="5"/>
+        <path d="M 24 102 Q 60 84 96 102" fill="none" stroke="#111" stroke-width="5"/>
+        <circle cx="60" cy="88" r="11" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+      <svg viewBox="0 0 120 130" width="100" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="36" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="88" r="42" fill="#fff" stroke="#111" stroke-width="6"/>
+        <path d="M 24 74 Q 60 56 96 74" fill="none" stroke="#111" stroke-width="5"/>
+        <path d="M 24 102 Q 60 84 96 102" fill="none" stroke="#111" stroke-width="5"/>
+        <circle cx="60" cy="88" r="11" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+      <svg viewBox="0 0 120 130" width="100" aria-hidden="true">
+        <line x1="60" y1="0" x2="60" y2="36" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="88" r="42" fill="#fff" stroke="#111" stroke-width="6"/>
+        <circle cx="60" cy="88" r="11" fill="#fff" stroke="#111" stroke-width="6"/>
+      </svg>
+    </div>
+    <div class="bins">
+      <div class="bin"><span>PLAIN</span></div>
+      <div class="bin"><span>STRIPED</span></div>
+    </div>
+  </div>
+
+  <div class="footer">dmvthrowers.club &middot; Free for classroom and homeschool use.</div>
+</div>
+</body>
+</html>

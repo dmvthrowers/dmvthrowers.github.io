@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graph Our Favorite Tricks &middot; DMV Throwers</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Verdana, Geneva, Tahoma, sans-serif; color: #111; background: #fff; margin: 0; padding: 20px; }
+  .page { max-width: 7.5in; margin: 0 auto; }
+  .print-btn { display: inline-block; font-size: 15px; padding: 8px 18px; border: 2px solid #111; background: #fff; border-radius: 8px; cursor: pointer; margin-bottom: 12px; font-family: inherit; }
+  .print-btn:hover { background: #eee; }
+  .header { text-align: center; border-bottom: 3px double #111; padding-bottom: 10px; margin-bottom: 10px; }
+  .club { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; }
+  h1 { font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif; font-size: 26px; margin: 8px 0 4px; }
+  .instr { font-style: italic; font-size: 13.5px; margin: 0; }
+  .nameline { display: flex; justify-content: space-between; font-size: 13px; margin: 12px 0 8px; }
+  .key { border: 2px dashed #111; border-radius: 10px; padding: 10px 14px; font-size: 12.5px; margin-top: 16px; }
+  .key strong { font-size: 13px; }
+  .footer { margin-top: 14px; padding-top: 8px; border-top: 2px solid #111; text-align: center; font-size: 11px; }
+  @media print {
+    .print-btn { display: none !important; }
+    body { padding: 0; }
+    @page { size: letter; margin: 0.6in; }
+    .key, .block { break-inside: avoid; }
+  }
+
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print-btn" onclick="window.print()">&#128438; Print</button>
+  <div class="header">
+    <div class="club">DMV Throwers &middot; Yo-Yos in the Classroom</div>
+    <h1>Graph Our Favorite Tricks</h1>
+    <p class="instr">Survey your friends, tally the results, and build a bar graph!</p>
+  </div>
+  <div class="nameline"><span>Name: ______________________________</span><span>Date: ____________</span></div>
+<style>
+  .tally-table { border-collapse: collapse; margin: 12px 0; }
+  .tally-table th, .tally-table td { border: 2px solid #111; padding: 6px 10px; font-size: 13px; text-align: left; }
+  .tally-table td.tallybox { min-width: 120px; height: 30px; }
+  .bargrid { border-collapse: collapse; margin: 12px auto; }
+  .bargrid td { width: 44px; height: 22px; border: 1px solid #888; }
+  .bargrid td.lbl { border: none; font-size: 11px; font-weight: bold; text-align: right; padding-right: 6px; width: 110px; }
+  .q { margin: 12px 0; font-size: 13.5px; }
+  .aline { border-bottom: 2px solid #111; display: inline-block; min-width: 220px; height: 1.2em; }
+</style>
+<div class="block">
+<p style="font-size:13.5px;"><strong>Step 1:</strong> Ask 10 friends: "What is your favorite yo-yo trick?" Tally their answers below.</p>
+<table class="tally-table">
+<tr><th>Trick</th><th>Tally marks</th><th>Total</th></tr>
+<tr><td>Sleeper</td><td class="tallybox"></td><td class="tallybox"></td></tr>
+<tr><td>Walk the Dog</td><td class="tallybox"></td><td class="tallybox"></td></tr>
+<tr><td>Forward Pass</td><td class="tallybox"></td><td class="tallybox"></td></tr>
+<tr><td>Rock the Baby</td><td class="tallybox"></td><td class="tallybox"></td></tr>
+</table>
+<p style="font-size:13.5px;"><strong>Step 2:</strong> Color one box for each vote to make your bar graph.</p>
+<table class="bargrid" aria-label="Bar graph">
+<tr><td class="lbl">Sleeper</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="lbl">Walk the Dog</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="lbl">Forward Pass</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="lbl">Rock the Baby</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+<p class="q"><strong>1.</strong> Which trick got the most votes? <span class="aline"></span></p>
+<p class="q"><strong>2.</strong> How many more votes did the winner get than the trick with the fewest votes? <span class="aline"></span></p>
+</div>
+  <div class="key">
+    <strong>&#9986; Teacher Answer Key</strong> (cut or fold under before copying)<br>
+Answers depend on each student's survey data — that's the point! Check that: (1) the bar graph matches the tally table, (2) the 'most votes' answer matches the tallest bar, (3) the subtraction in Q2 is correct.
+  </div>
+  <div class="footer">dmvthrowers.club &middot; Free for classroom and homeschool use.</div>
+</div>
+</body>
+</html>

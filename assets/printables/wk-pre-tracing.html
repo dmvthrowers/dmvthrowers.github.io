@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace to the Yo-Yo · DMV Throwers</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Verdana, Geneva, Tahoma, sans-serif; color: #111; background: #fff; margin: 0; padding: 20px; }
+  .page { max-width: 7.5in; margin: 0 auto; }
+  .print-btn { display: inline-block; font-size: 15px; padding: 8px 18px; border: 2px solid #111; background: #fff; border-radius: 8px; cursor: pointer; margin-bottom: 12px; font-family: inherit; }
+  .print-btn:hover { background: #eee; }
+  .header { text-align: center; border-bottom: 3px double #111; padding-bottom: 10px; margin-bottom: 10px; }
+  .club { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; }
+  h1 { font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif; font-size: 30px; margin: 8px 0 4px; }
+  .instr { font-size: 18px; margin: 4px 0 0; }
+  .nameline { display: flex; justify-content: space-between; font-size: 14px; margin: 14px 0 6px; }
+  .tracerow { display: flex; align-items: center; gap: 12px; margin: 26px 0; }
+  .tracerow svg.line { flex: 1 1 auto; height: 90px; }
+  .tracerow svg.yoyo { flex: 0 0 110px; height: 120px; }
+  .footer { margin-top: 14px; padding-top: 8px; border-top: 2px solid #111; text-align: center; font-size: 11px; }
+  @media print {
+    .print-btn { display: none !important; }
+    body { padding: 0; }
+    @page { size: letter; margin: 0.6in; }
+    .tracerow { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print-btn" onclick="window.print()">&#128438; Print</button>
+  <div class="header">
+    <div class="club">DMV Throwers &middot; Yo-Yos in the Classroom</div>
+    <h1>Trace to the Yo-Yo</h1>
+    <p class="instr">Trace each dotted line all the way to the yo-yo! &#9998;&#65039;</p>
+  </div>
+  <div class="nameline"><span>Name: ______________________________</span><span>Date: ____________</span></div>
+
+  <!-- 1. straight -->
+  <div class="tracerow">
+    <svg class="line" viewBox="0 0 480 90" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="10" y1="45" x2="470" y2="45" stroke="#111" stroke-width="9" stroke-dasharray="18,14" stroke-linecap="round"/>
+    </svg>
+    <svg class="yoyo" viewBox="0 0 120 140" aria-hidden="true">
+      <line x1="60" y1="0" x2="60" y2="34" stroke="#111" stroke-width="6"/>
+      <circle cx="60" cy="88" r="50" fill="#fff" stroke="#111" stroke-width="6"/>
+      <circle cx="60" cy="88" r="13" fill="#fff" stroke="#111" stroke-width="6"/>
+    </svg>
+  </div>
+
+  <!-- 2. wavy -->
+  <div class="tracerow">
+    <svg class="line" viewBox="0 0 480 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M 10 45 Q 60 5, 110 45 T 210 45 T 310 45 T 410 45 T 470 45" fill="none" stroke="#111" stroke-width="9" stroke-dasharray="18,14" stroke-linecap="round"/>
+    </svg>
+    <svg class="yoyo" viewBox="0 0 120 140" aria-hidden="true">
+      <line x1="60" y1="0" x2="60" y2="34" stroke="#111" stroke-width="6"/>
+      <circle cx="60" cy="88" r="50" fill="#fff" stroke="#111" stroke-width="6"/>
+      <circle cx="60" cy="88" r="13" fill="#fff" stroke="#111" stroke-width="6"/>
+    </svg>
+  </div>
+
+  <!-- 3. zigzag -->
+  <div class="tracerow">
+    <svg class="line" viewBox="0 0 480 90" preserveAspectRatio="none" aria-hidden="true">
+      <polyline points="10,70 70,20 130,70 190,20 250,70 310,20 370,70 430,20 470,45" fill="none" stroke="#111" stroke-width="9" stroke-dasharray="18,14" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="yoyo" viewBox="0 0 120 140" aria-hidden="true">
+      <line x1="60" y1="0" x2="60" y2="34" stroke="#111" stroke-width="6"/>
+      <circle cx="60" cy="88" r="50" fill="#fff" stroke="#111" stroke-width="6"/>
+      <circle cx="60" cy="88" r="13" fill="#fff" stroke="#111" stroke-width="6"/>
+    </svg>
+  </div>
+
+  <!-- 4. loopy -->
+  <div class="tracerow">
+    <svg class="line" viewBox="0 0 480 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M 10 45 C 60 45, 60 10, 110 25 C 160 40, 130 70, 180 60 C 230 50, 210 15, 260 25 C 310 35, 290 70, 340 60 C 390 50, 370 20, 420 30 C 445 35, 455 40, 470 45" fill="none" stroke="#111" stroke-width="9" stroke-dasharray="18,14" stroke-linecap="round"/>
+    </svg>
+    <svg class="yoyo" viewBox="0 0 120 140" aria-hidden="true">
+      <line x1="60" y1="0" x2="60" y2="34" stroke="#111" stroke-width="6"/>
+      <circle cx="60" cy="88" r="50" fill="#fff" stroke="#111" stroke-width="6"/>
+      <circle cx="60" cy="88" r="13" fill="#fff" stroke="#111" stroke-width="6"/>
+    </svg>
+  </div>
+
+  <div class="footer">dmvthrowers.club &middot; Free for classroom and homeschool use.</div>
+</div>
+</body>
+</html>
