@@ -13,6 +13,9 @@ after the October 2026 technical audit.
 | `dmvthrowers/VA-States` | Contest registration, Stripe payments, day-of ops (run order, scoring, music). **The money app** | register.dmvthrowers.club (Vercel) | `docs/REPO_GUIDE.md`, `docs/ROADMAP.md` |
 | `dmvthrowers/dmvt-event-hub` | Community event calendar (React + Vite + Supabase, Lovable-built). **Not launched** | — (target events.dmvthrowers.club) | its `AGENTS.md` |
 | `dmvthrowers/DMVT-Design` | Brand and design-system reference + a Claude skill. Not an app | — | its `README.md` |
+| `dmvthrowers/yoyoclub-template` | Public template other clubs copy: this site's club pages as a `site.jsonc` + Python builder. Meetup dates generated from a rule | dmvthrowers.club/yoyoclub-template (showcase) | its `AGENTS.md` |
+| `dmvthrowers/yoyo-contest-template` | Public template for contests, built from the VSYC-26 pages. Stages (registration, contest day, wrap) switch by date | dmvthrowers.club/yoyo-contest-template (showcase) | its `AGENTS.md` |
+| `dmvthrowers/Scouts-Template-Site` | Sister template for Scout units and kids clubs; same engine | dmvthrowers.club/Scouts-Template-Site (showcase) | its `AGENTS.md` |
 
 How they relate: the site is the front door and links out to registration (VA-States) and the
 map. VA-States and the map are separate Next.js + Supabase apps that share patterns (structured
