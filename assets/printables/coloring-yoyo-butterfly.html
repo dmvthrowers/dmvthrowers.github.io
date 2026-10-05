@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Color the Butterfly Yo-Yo · DMV Throwers</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Verdana, Geneva, Tahoma, sans-serif; color: #111; background: #fff; margin: 0; padding: 20px; }
+  .page { max-width: 7.5in; margin: 0 auto; }
+  .print-btn { display: inline-block; font-size: 15px; padding: 8px 18px; border: 2px solid #111; background: #fff; border-radius: 8px; cursor: pointer; margin-bottom: 12px; font-family: inherit; }
+  .print-btn:hover { background: #eee; }
+  .header { text-align: center; border-bottom: 3px double #111; padding-bottom: 10px; margin-bottom: 10px; }
+  .club { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; }
+  h1 { font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif; font-size: 26px; margin: 8px 0 4px; }
+  .instr { font-style: italic; font-size: 13.5px; margin: 0; }
+  .nameline { display: flex; justify-content: space-between; font-size: 13px; margin: 12px 0 4px; }
+  .art { display: block; margin: 0 auto; max-width: 100%; }
+  .fact { border: 2px dashed #111; border-radius: 10px; padding: 10px 14px; margin: 12px 0; font-size: 13px; }
+  .footer { margin-top: 14px; padding-top: 8px; border-top: 2px solid #111; text-align: center; font-size: 11px; }
+  @media print {
+    .print-btn { display: none !important; }
+    body { padding: 0; }
+    @page { size: letter; margin: 0.6in; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print-btn" onclick="window.print()">&#128438; Print</button>
+  <div class="header">
+    <div class="club">DMV Throwers &middot; Yo-Yos in the Classroom</div>
+    <h1>Color the Butterfly Yo-Yo</h1>
+    <p class="instr">The wide "butterfly" shape is made for string tricks. Color it in!</p>
+  </div>
+  <div class="nameline"><span>Name: ______________________________</span><span>Date: ____________</span></div>
+
+  <svg class="art" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Butterfly yo-yo coloring page">
+    <!-- string -->
+    <line x1="200" y1="96" x2="200" y2="36" stroke="#111" stroke-width="3"/>
+    <ellipse cx="200" cy="24" rx="9" ry="12" fill="none" stroke="#111" stroke-width="3"/>
+    <!-- left half -->
+    <path d="M192,100 L78,68 Q60,66 58,84 L58,276 Q60,294 78,292 L192,260 Z"
+          fill="#fff" stroke="#111" stroke-width="3.5"/>
+    <!-- right half -->
+    <path d="M208,100 L322,68 Q340,66 342,84 L342,276 Q340,294 322,292 L208,260 Z"
+          fill="#fff" stroke="#111" stroke-width="3.5"/>
+    <!-- axle -->
+    <circle cx="200" cy="180" r="7" fill="#fff" stroke="#111" stroke-width="3"/>
+    <!-- waves -->
+    <path d="M80,140 q20,-18 40,0 t40,0" fill="none" stroke="#111" stroke-width="2.5"/>
+    <path d="M240,140 q20,-18 40,0 t40,0" fill="none" stroke="#111" stroke-width="2.5"/>
+    <!-- triangles -->
+    <path d="M95,212 l10,-18 l10,18 Z M120,212 l10,-18 l10,18 Z M145,212 l10,-18 l10,18 Z"
+          fill="none" stroke="#111" stroke-width="2.5"/>
+    <path d="M235,212 l10,-18 l10,18 Z M260,212 l10,-18 l10,18 Z M285,212 l10,-18 l10,18 Z"
+          fill="none" stroke="#111" stroke-width="2.5"/>
+    <!-- circles -->
+    <circle cx="100" cy="252" r="5" fill="none" stroke="#111" stroke-width="2.5"/>
+    <circle cx="140" cy="256" r="5" fill="none" stroke="#111" stroke-width="2.5"/>
+    <circle cx="260" cy="252" r="5" fill="none" stroke="#111" stroke-width="2.5"/>
+    <circle cx="300" cy="256" r="5" fill="none" stroke="#111" stroke-width="2.5"/>
+    <!-- extra dots near rims -->
+    <circle cx="80" cy="180" r="4" fill="none" stroke="#111" stroke-width="2.5"/>
+    <circle cx="320" cy="180" r="4" fill="none" stroke="#111" stroke-width="2.5"/>
+  </svg>
+
+  <div class="fact"><strong>Yo-yo fact:</strong> The butterfly shape was designed so the string can land in the wide gap &mdash; that's what makes modern string tricks possible!</div>
+
+  <div class="footer">dmvthrowers.club &middot; Free for classroom and homeschool use.</div>
+</div>
+</body>
+</html>
