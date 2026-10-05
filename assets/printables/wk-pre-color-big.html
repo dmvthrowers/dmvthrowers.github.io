@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My First Yo-Yo · DMV Throwers</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Verdana, Geneva, Tahoma, sans-serif; color: #111; background: #fff; margin: 0; padding: 20px; }
+  .page { max-width: 7.5in; margin: 0 auto; text-align: center; }
+  .print-btn { display: inline-block; font-size: 15px; padding: 8px 18px; border: 2px solid #111; background: #fff; border-radius: 8px; cursor: pointer; margin-bottom: 12px; font-family: inherit; }
+  .print-btn:hover { background: #eee; }
+  .header { border-bottom: 3px double #111; padding-bottom: 10px; margin-bottom: 6px; }
+  .club { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; }
+  h1 { font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif; font-size: 32px; margin: 8px 0 4px; }
+  .instr { font-size: 20px; margin: 6px 0 0; }
+  .nameline { display: flex; justify-content: space-between; font-size: 14px; margin: 14px 0 0; text-align: left; }
+  svg.big { width: 100%; max-width: 6in; height: auto; margin: 4px auto; display: block; }
+  .footer { margin-top: 8px; padding-top: 8px; border-top: 2px solid #111; text-align: center; font-size: 11px; }
+  @media print {
+    .print-btn { display: none !important; }
+    body { padding: 0; }
+    @page { size: letter; margin: 0.6in; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <button class="print-btn" onclick="window.print()">&#128438; Print</button>
+  <div class="header">
+    <div class="club">DMV Throwers &middot; Yo-Yos in the Classroom</div>
+    <h1>My First Yo-Yo</h1>
+    <p class="instr">Color the big yo-yo! &#127912;</p>
+  </div>
+  <div class="nameline"><span>Name: ______________________________</span><span>Date: ____________</span></div>
+
+  <svg class="big" viewBox="0 0 600 660" role="img" aria-label="A large simple yo-yo to color">
+    <!-- string -->
+    <line x1="300" y1="10" x2="300" y2="120" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+    <!-- finger loop -->
+    <ellipse cx="300" cy="42" rx="26" ry="34" fill="none" stroke="#111" stroke-width="8"/>
+    <!-- yo-yo body -->
+    <circle cx="300" cy="400" r="250" fill="#fff" stroke="#111" stroke-width="10"/>
+    <!-- hub / axle -->
+    <circle cx="300" cy="400" r="52" fill="#fff" stroke="#111" stroke-width="10"/>
+    <circle cx="300" cy="400" r="14" fill="#111"/>
+  </svg>
+
+  <div class="footer">dmvthrowers.club &middot; Free for classroom and homeschool use.</div>
+</div>
+</body>
+</html>
