@@ -38,6 +38,7 @@ and all access runs through that one account.
 | Upstash (Redis, QStash) | VA-States, map | Rate limiting; QStash backstop for email drains |
 | Cloudflare Turnstile | map | Bot check on submit/report |
 | Sentry, Healthchecks.io | VA-States, map | Errors and job check-ins; both off when unset |
+| UptimeRobot (free) | site, map, VA-States | Public status page at https://stats.uptimerobot.com/7XjeeDhuSq, linked from the contact page. Monitors: the site root, two troop pages, `map.dmvthrowers.club`, `register.dmvthrowers.club/`. Add a monitor for `register.dmvthrowers.club/api/health` so a database or app failure shows up |
 | Formspree, JotForm | site | Contact form; sponsor-interest form (JotForm slated for replacement, issue #77) |
 | Porkbun | all | Registrar, DNS, email forwarding |
 
