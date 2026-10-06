@@ -58,9 +58,30 @@
     .social-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
     .social-link { font-size: 0.64rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 9px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; }
     .social-link:hover { background: var(--gold); color: var(--navy-deep); }
-  .recap-body{max-width:680px;margin:0 auto;background:#fffdfa;padding:32px 24px;}
-  @media (max-width:480px){.recap-body{padding:24px 16px;}}
-  .recap-body img{max-width:100%;height:auto;}
+  .recap-lede { font-size: 1.05rem; line-height: 1.7; max-width: 68ch; margin-bottom: 16px; }
+  .recap-note { max-width: 68ch; margin-top: 20px; }
+  .recap-photo { display: block; width: 100%; max-width: 900px; height: auto; margin: 24px 0 0; border: 1px solid var(--gold); }
+  .recap-stats { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 24px; }
+  .recap-stat { background: var(--navy); border: 1px solid var(--border); padding: 20px; }
+  .recap-stat strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 2.4rem; font-weight: 800; line-height: 1; color: var(--gold); margin-bottom: 6px; }
+  .recap-winners { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .recap-winners li { background: var(--navy); border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 18px 20px; }
+  .recap-winners h3 { font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .recap-champ { color: var(--gold); font-weight: 800; margin-top: 8px; }
+  .recap-links { padding-left: 1.2em; max-width: 68ch; }
+  .recap-links li { margin-bottom: 10px; line-height: 1.6; }
+  .recap-table-wrap { overflow-x: auto; margin: 16px 0; }
+  .recap-table { width: 100%; min-width: 480px; border-collapse: collapse; }
+  .recap-table th, .recap-table td { text-align: left; vertical-align: top; padding: 12px 14px; border: 1px solid var(--border); }
+  @media (max-width: 560px) {
+    .recap-table { min-width: 0; }
+    .recap-table thead { position: absolute; left: -9999px; }
+    .recap-table tr { display: block; margin-bottom: 12px; border: 1px solid var(--border); }
+    .recap-table td { display: block; border: 0; border-bottom: 1px solid var(--border); }
+    .recap-table td:last-child { border-bottom: 0; }
+    .recap-table td::before { content: attr(data-label); display: block; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  }
+  .recap-table th { background: var(--navy); color: var(--gold); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; }
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"VSYC-26","item":"https://dmvthrowers.club/vsyc26.html"},{"@type":"ListItem","position":3,"name":"Results","item":"https://dmvthrowers.club/vsyc26-results.html"},{"@type":"ListItem","position":4,"name":"Recap","item":"https://dmvthrowers.club/vsyc26-recap.html"}]}
@@ -146,8 +167,83 @@
 </div>
 
 <div class="section-wrap">
-  <div class="section recap-body">
-<p style="margin:0 0 16px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:1.55;color:#102040;">Thank you to everyone who came out to the 16th Virginia State Yo-Yo Contest, or watched from home. Center Court at Dulles Town Center was packed all day, and a lot of that energy came from you.</p><img src="assets/images/vsyc26-recap/crowd.jpg" width="1200" height="799" alt="A packed Center Court at Dulles Town Center during the contest" style="display:block;width:100%;max-width:560px;height:auto;border:0;margin:0 0 20px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 22px 0;"><tr><td valign="top" width="33%" style="padding:0 8px 0 0;"><div style="border-top:4px solid #C9A84C;padding-top:10px;"><div style="font-family:Georgia, serif;font-size:28px;font-weight:bold;color:#102040;line-height:1.1;">400+</div><div style="font-family:Arial, Helvetica, sans-serif;font-size:13px;line-height:1.4;color:#45506A;padding-top:4px;">Attendees across the day</div></div></td><td valign="top" width="33%" style="padding:0 8px 0 0;"><div style="border-top:4px solid #C9A84C;padding-top:10px;"><div style="font-family:Georgia, serif;font-size:28px;font-weight:bold;color:#102040;line-height:1.1;">50</div><div style="font-family:Arial, Helvetica, sans-serif;font-size:13px;line-height:1.4;color:#45506A;padding-top:4px;">Players from 14 states</div></div></td><td valign="top" width="33%" style="padding:0 8px 0 0;"><div style="border-top:4px solid #C9A84C;padding-top:10px;"><div style="font-family:Georgia, serif;font-size:28px;font-weight:bold;color:#102040;line-height:1.1;">5,037</div><div style="font-family:Arial, Helvetica, sans-serif;font-size:13px;line-height:1.4;color:#45506A;padding-top:4px;">Livestream views worldwide</div></div></td></tr></table><p style="margin:0 0 6px 0;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#B80000;">Results</p><h2 style="margin:0 0 14px 0;font-family:Georgia, 'Times New Roman', serif;font-size:24px;line-height:1.25;color:#102040;">Who won</h2><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 18px 0;"><tr><td style="padding:10px 0;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.5;color:#102040;"><strong style="color:#B80000;">1A</strong><br>1st Ryan Kim (MD) &middot; 2nd Connor Sheahan (CO) &middot; 3rd Colin Beckford (OH)<br><span style="color:#45506A;">VA State Champion: Bryant Baus</span></td></tr><tr><td style="padding:10px 0;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.5;color:#102040;"><strong style="color:#B80000;">X Division</strong><br>1st Chandler Steele (OH) &middot; 2nd Drew Buscemi (NY) &middot; 3rd Richard Pigkaso (NY)<br><span style="color:#45506A;">VA State Champion: Alex Curfman</span></td></tr><tr><td style="padding:10px 0;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.5;color:#102040;"><strong style="color:#B80000;">Sport / Beginner / Junior</strong><br>1st Steen H. (GA) &middot; 2nd Larkin M. (NC) &middot; 3rd Joshua Russell (NC)<br><span style="color:#45506A;">VA State Champion: Christian E.</span></td></tr></table><p style="margin:0 0 16px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:1.55;color:#102040;">Ari K. won the Stella Duellum guest battle, undefeated through an 18-player bracket. <a href="https://challonge.com/StellaDuellum26/standings" style="color:#B80000;font-weight:bold;text-decoration:underline;">See the full standings</a>.</p><p style="margin:0 0 6px 0;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#B80000;">Photos and video</p><h2 style="margin:0 0 14px 0;font-family:Georgia, 'Times New Roman', serif;font-size:24px;line-height:1.25;color:#102040;">Relive the day</h2><ul style="margin:0 0 18px 0;padding:0 0 0 20px;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:1.5;color:#102040;"><li style="margin:0 0 8px 0;"><a href="https://dmvthrowers.club/vsyc26-results.html" style="color:#B80000;font-weight:bold;text-decoration:underline;">Results and podiums</a></li><li style="margin:0 0 8px 0;"><a href="https://register.dmvthrowers.club/results" style="color:#B80000;font-weight:bold;text-decoration:underline;">Full leaderboard with every score</a></li><li style="margin:0 0 8px 0;"><a href="https://photos.app.goo.gl/tSxb2QX8mzap5dYY7" style="color:#B80000;font-weight:bold;text-decoration:underline;">Photo album</a> and <a href="https://photos.app.goo.gl/dQZcVV1gkVLLD2vN8" style="color:#B80000;font-weight:bold;text-decoration:underline;">video album</a>, free for everyone</li><li style="margin:0 0 8px 0;"><a href="https://www.youtube.com/live/yVLew1sJqNA" style="color:#B80000;font-weight:bold;text-decoration:underline;">The full livestream replay</a> and <a href="https://drive.google.com/file/d/1SwSvjQ1E1d4wHg9tc6ASFkrlSyON7_1q/view?usp=drivesdk" style="color:#B80000;font-weight:bold;text-decoration:underline;">the whole day in 60 seconds</a></li></ul><img src="assets/images/vsyc26-recap/vendor-row.jpg" width="1200" height="923" alt="Freshly Dirty&#x27;s table on the vendor row" style="display:block;width:100%;max-width:560px;height:auto;border:0;margin:0 0 20px 0;"><p style="margin:0 0 6px 0;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#B80000;">Your feedback</p><h2 style="margin:0 0 14px 0;font-family:Georgia, 'Times New Roman', serif;font-size:24px;line-height:1.25;color:#102040;">What you told us</h2><p style="margin:0 0 16px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:1.55;color:#102040;">Spectators rated the day 4.2 out of 5, and every survey respondent said they'd come back, many with friends in tow. Your favorite parts were the competitor routines, the vendor tables, the crowd energy and the Goodles booth. You also told us what didn't work, and here's what we're changing.</p><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 22px 0;border:1px solid #E6DFCC;border-collapse:collapse;"><tr><td style="background:#102040;color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;padding:10px;">What we heard</td><td style="background:#102040;color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:13px;font-weight:bold;padding:10px;">What we're changing</td></tr><tr><td valign="top" style="background:#fff;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;width:50%;">The schedule ran long and it was hard to know what was next</td><td valign="top" style="background:#fff;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;">A live schedule board by the stage, and a set lunch break</td></tr><tr><td valign="top" style="background:#FBF8F1;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;width:50%;">The yo-yo battles ran too long in the middle of the day</td><td valign="top" style="background:#FBF8F1;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;">Battles move to the end as the finale</td></tr><tr><td valign="top" style="background:#fff;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;width:50%;">Families waited all day for the youngest division's awards</td><td valign="top" style="background:#fff;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;">Awards handed out as each division finishes</td></tr><tr><td valign="top" style="background:#FBF8F1;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;width:50%;">Warm-ups near the judges blocked the view</td><td valign="top" style="background:#FBF8F1;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;">A marked practice zone and a clear line of sight to the stage</td></tr><tr><td valign="top" style="background:#fff;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;width:50%;">Restrooms and the right entrance were hard to find</td><td valign="top" style="background:#fff;border-bottom:1px solid #E6DFCC;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:1.45;color:#102040;padding:10px;">Signage for check-in, restrooms, food and vendors</td></tr></table><p style="margin:0 0 16px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:1.55;color:#102040;">Haven't taken the survey? It takes two minutes. <a href="https://register.dmvthrowers.club/feedback?src=email" style="color:#B80000;font-weight:bold;text-decoration:underline;">Share your feedback</a>.</p><p style="margin:0 0 6px 0;font-family:Arial, Helvetica, sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#B80000;">DMV Throwers</p><h2 style="margin:0 0 14px 0;font-family:Georgia, 'Times New Roman', serif;font-size:24px;line-height:1.25;color:#102040;">Keep throwing with us</h2><p style="margin:0 0 16px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:1.55;color:#102040;">Caught the bug? DMV Throwers meets every third Sunday, 1 to 4 PM, at Arlington Central Library. It's free, all ages, and we bring loaner yo-yos, so you don't need to own one. <a href="https://dmvthrowers.club/events.html" style="color:#B80000;font-weight:bold;text-decoration:underline;">See upcoming meetups</a>.</p><p style="margin:0 0 16px 0;font-family:Arial, Helvetica, sans-serif;font-size:16px;line-height:1.55;color:#102040;">Thanks for being part of the day.</p>
+  <div class="section">
+    <p class="recap-lede">Thank you to everyone who came out to the 16th Virginia State Yo-Yo Contest, or watched from home. Center Court at Dulles Town Center was packed all day, and a lot of that energy came from you.</p>
+    <img class="recap-photo" src="assets/images/vsyc26-recap/crowd.jpg" width="1200" height="799" alt="A packed Center Court at Dulles Town Center during the contest"/>
+    <ul class="recap-stats">
+      <li class="recap-stat"><strong>400+</strong><span>Attendees across the day</span></li>
+      <li class="recap-stat"><strong>50</strong><span>Players from 14 states</span></li>
+      <li class="recap-stat"><strong>5,037</strong><span>Livestream views worldwide</span></li>
+    </ul>
+  </div>
+</div>
+<div class="section-wrap bg-navy">
+  <div class="section">
+    <div class="gold-tag">RESULTS</div>
+    <h2 class="section-title">Who Won</h2>
+    <div class="divider-gold"></div>
+    <ul class="recap-winners">
+      <li>
+        <h3>1A</h3>
+        <p>1st Ryan Kim (MD) &middot; 2nd Connor Sheahan (CO) &middot; 3rd Colin Beckford (OH)</p>
+        <p class="recap-champ">VA State Champion: Bryant Baus</p>
+      </li>
+      <li>
+        <h3>X Division</h3>
+        <p>1st Chandler Steele (OH) &middot; 2nd Drew Buscemi (NY) &middot; 3rd Richard Pigkaso (NY)</p>
+        <p class="recap-champ">VA State Champion: Alex Curfman</p>
+      </li>
+      <li>
+        <h3>Sport / Beginner / Junior</h3>
+        <p>1st Steen H. (GA) &middot; 2nd Larkin M. (NC) &middot; 3rd Joshua Russell (NC)</p>
+        <p class="recap-champ">VA State Champion: Christian E.</p>
+      </li>
+    </ul>
+    <p class="recap-note">Ari K. won the Stella Duellum guest battle, undefeated through an 18-player bracket. <a href="https://challonge.com/StellaDuellum26/standings" target="_blank" rel="noopener noreferrer" class="rules-link">See the full standings</a>.</p>
+  </div>
+</div>
+<div class="section-wrap">
+  <div class="section">
+    <div class="gold-tag">PHOTOS AND VIDEO</div>
+    <h2 class="section-title">Relive the Day</h2>
+    <div class="divider-gold"></div>
+    <ul class="recap-links">
+      <li><a href="vsyc26-results.html" class="rules-link">Results and podiums</a></li>
+      <li><a href="https://register.dmvthrowers.club/results" target="_blank" rel="noopener noreferrer" class="rules-link">Full leaderboard with every score</a></li>
+      <li><a href="https://photos.app.goo.gl/tSxb2QX8mzap5dYY7" target="_blank" rel="noopener noreferrer" class="rules-link">Photo album</a> and <a href="https://photos.app.goo.gl/dQZcVV1gkVLLD2vN8" target="_blank" rel="noopener noreferrer" class="rules-link">video album</a>, free for everyone</li>
+      <li><a href="https://www.youtube.com/live/yVLew1sJqNA" target="_blank" rel="noopener noreferrer" class="rules-link">The full livestream replay</a> and <a href="https://drive.google.com/file/d/1SwSvjQ1E1d4wHg9tc6ASFkrlSyON7_1q/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="rules-link">the whole day in 60 seconds</a></li>
+    </ul>
+    <img class="recap-photo" src="assets/images/vsyc26-recap/vendor-row.jpg" width="1200" height="923" alt="Freshly Dirty's table on the vendor row"/>
+  </div>
+</div>
+<div class="section-wrap bg-navy">
+  <div class="section">
+    <div class="gold-tag">YOUR FEEDBACK</div>
+    <h2 class="section-title">What You Told Us</h2>
+    <div class="divider-gold"></div>
+    <p class="recap-lede">Spectators rated the day 4.2 out of 5, and every survey respondent said they'd come back, many with friends in tow. Your favorite parts were the competitor routines, the vendor tables, the crowd energy and the Goodles booth. You also told us what didn't work, and here's what we're changing.</p>
+    <div class="recap-table-wrap">
+      <table class="recap-table">
+        <thead><tr><th scope="col">What we heard</th><th scope="col">What we're changing</th></tr></thead>
+        <tbody>
+          <tr><td data-label="What we heard">The schedule ran long and it was hard to know what was next</td><td data-label="What we're changing">A live schedule board by the stage, and a set lunch break</td></tr>
+          <tr><td data-label="What we heard">The yo-yo battles ran too long in the middle of the day</td><td data-label="What we're changing">Battles move to the end as the finale</td></tr>
+          <tr><td data-label="What we heard">Families waited all day for the youngest division's awards</td><td data-label="What we're changing">Awards handed out as each division finishes</td></tr>
+          <tr><td data-label="What we heard">Warm-ups near the judges blocked the view</td><td data-label="What we're changing">A marked practice zone and a clear line of sight to the stage</td></tr>
+          <tr><td data-label="What we heard">Restrooms and the right entrance were hard to find</td><td data-label="What we're changing">Signage for check-in, restrooms, food and vendors</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="recap-note">Haven't taken the survey? It takes two minutes. <a href="https://register.dmvthrowers.club/feedback?src=recap" target="_blank" rel="noopener noreferrer" class="rules-link">Share your feedback</a>.</p>
+  </div>
+</div>
+<div class="section-wrap">
+  <div class="section">
+    <div class="gold-tag">DMV THROWERS</div>
+    <h2 class="section-title">Keep Throwing With Us</h2>
+    <div class="divider-gold"></div>
+    <p class="recap-lede">Caught the bug? DMV Throwers meets every 3rd Sunday, 1&ndash;4 PM, at Arlington Central Library. It's free, all ages, and we bring loaner yo-yos, so you don't need to own one. <a href="events.html" class="rules-link">See upcoming meetups</a>.</p>
+    <p class="recap-lede">Thanks for being part of the day.</p>
   </div>
 </div>
 <div class="section-wrap bg-navy">
@@ -195,7 +291,7 @@
         <figcaption>A Sport, Beginner, and Junior competitor on stage as the judges watch</figcaption>
       </figure>
     </div>
-    <p style="margin-top: 16px;"><a href="https://photos.app.goo.gl/dQZcVV1gkVLLD2vN8" target="_blank" rel="noopener noreferrer" class="rules-link">See every contest video &rarr;</a></p>
+    <p class="recap-note"><a href="https://photos.app.goo.gl/dQZcVV1gkVLLD2vN8" target="_blank" rel="noopener noreferrer" class="rules-link">See every contest video &rarr;</a></p>
   </div>
 </div>
 </main>
