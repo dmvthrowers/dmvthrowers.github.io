@@ -61,10 +61,10 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .mobile-more-label { font-size: 0.62rem; letter-spacing: 0.15em; font-weight: 700; color: var(--text-body); opacity: 0.6; text-transform: uppercase; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; touch-action: manipulation; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); }
-.mobile-menu { display: none; flex-direction: column; background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 4px; }
+.mobile-menu { display: none; flex-direction: column; background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 4px 24px 20px; gap: 0; }
 .mobile-menu.open { display: flex; }
-.mobile-menu a { font-size: 0.85rem; letter-spacing: 0.1em; font-weight: 700; color: var(--text-muted); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--border); }
-.mobile-menu .mobile-home { background: var(--gold); color: var(--navy-deep); padding: 10px 16px; border-bottom: none; font-weight: 800; text-align: center; }
+.mobile-menu a { font-size: 0.85rem; letter-spacing: 0.1em; font-weight: 700; color: var(--text-muted); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.mobile-menu .mobile-home { background: var(--gold); color: var(--navy-deep); padding: 10px 16px; border-bottom: none; font-weight: 800; text-align: center; margin: 8px 0 4px; }
 
 /* HERO */
 #hero { background: var(--navy); position: relative; overflow: hidden; min-height: 560px; display: flex; align-items: center; }

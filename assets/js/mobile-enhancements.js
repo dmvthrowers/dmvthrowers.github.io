@@ -109,9 +109,12 @@
       + ".skip-link { position: fixed; left: 10px; top: -44px; z-index: 1200; background: #111827; color: #ffffff; padding: 10px 12px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; text-decoration: none; transition: top 0.2s ease; }"
       + ".skip-link:focus { top: 10px; outline: 2px solid #ffffff; outline-offset: 2px; }"
       + "@media (max-width: 768px) {"
-      + ".mobile-menu { position: fixed !important; top: 64px; left: 0; right: 0; max-height: calc(100vh - 64px); overflow-y: auto; z-index: 900; }"
+      // top is set from the nav's real bottom edge in positionMenu(); bottom: 0 keeps the
+      // panel inside the visible viewport (100vh overshoots behind iOS browser chrome).
+      + ".mobile-menu { position: fixed !important; top: 64px; left: 0; right: 0; bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; z-index: 900; padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important; }"
       + ".mobile-menu.open { display: flex !important; }"
-      + ".mobile-nav-locked { overflow: hidden; touch-action: none; }"
+      + ".mobile-nav-locked { overflow: hidden; }"
+      + ".mobile-nav-locked .mobile-top-btn { opacity: 0; pointer-events: none; }"
       + ".mobile-quick-actions { position: fixed; right: calc(14px + env(safe-area-inset-right, 0px)); bottom: calc(14px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 10px; z-index: 1000; }"
       + ".mobile-quick-btn { min-width: 58px; height: 42px; border: none; border-radius: 999px; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.12em; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,0.25); }"
       + ".mobile-top-btn { background: #C8102E; color: #ffffff; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity 0.2s ease, transform 0.2s ease; }"
@@ -151,12 +154,24 @@
       return window.matchMedia('(max-width: 768px)').matches;
     }
 
+    // Pins the open menu directly under the main nav, wherever the nav currently sits
+    // (below the top bar at page top, or stuck at 0 once scrolled).
+    function positionMenu(menu) {
+      var nav = document.querySelector('body > nav');
+      var top = nav ? Math.max(0, Math.round(nav.getBoundingClientRect().bottom)) : 64;
+      menu.style.top = top + 'px';
+    }
+
     // Single source of truth for menu state across the hamburger, the FAB menu button,
     // and body's scroll-lock class. Called on toggle, scroll, resize, outside-click, Escape.
     function syncMenuState() {
       var menu = document.getElementById('mobile-menu');
       var hamburger = document.getElementById('hamburger');
       var isOpen = !!(menu && menu.classList.contains('open') && isMobileView());
+
+      if (isOpen) {
+        positionMenu(menu);
+      }
 
       document.body.classList.toggle('mobile-nav-locked', isOpen);
       if (hamburger) {
