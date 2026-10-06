@@ -59,7 +59,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .nav-more-menu a { padding: 10px 16px; font-size: 0.68rem; letter-spacing: 0.11em; font-weight: 700; color: var(--text-muted); text-decoration: none; opacity: 0.75; }
 .nav-more-menu a:hover { color: var(--gold); opacity: 1; }
 .mobile-more-label { font-size: 0.62rem; letter-spacing: 0.15em; font-weight: 700; color: var(--text-body); opacity: 0.6; text-transform: uppercase; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
-.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; touch-action: manipulation; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; touch-action: manipulation; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); }
 .mobile-menu { display: none; flex-direction: column; background: var(--navy-deep); border-bottom: 1px solid var(--border); padding: 4px 24px 20px; gap: 0; }
 .mobile-menu.open { display: flex; }
@@ -265,7 +265,7 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .footer-subtitle { font-size: 0.58rem; letter-spacing: 0.18em; color: var(--gold); font-weight: 700; }
 .footer-presented { font-size: 0.55rem; letter-spacing: 0.18em; color: var(--text-muted); font-weight: 700; margin-top: 3px; }
 .footer-presented span { color: var(--gold); font-weight: 800; }
-.footer-link { color: var(--white); font-size: 0.75rem; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
+.footer-link { color: var(--white); font-size: 0.75rem; text-decoration: none; margin: 0 10px; padding: 12px 0; display: inline-block; transition: color 0.2s; }
 .footer-link:hover { color: var(--gold); }
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .footer-copy { font-size: 0.72rem; color: #8b9bbf; }
