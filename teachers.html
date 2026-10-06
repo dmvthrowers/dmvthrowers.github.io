@@ -59,27 +59,28 @@
   <link rel="stylesheet" href="assets/css/main.css"/>
   <style>
     .subject-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
-    .subject-card { background: var(--cream); border: 2px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+    .subject-card { background: #fff; border: 2px solid var(--border); padding: 1.5rem; }
     .subject-card h3 { margin-top: 0; font-size: 1.25rem; }
-    .subject-card .grade { display: inline-block; font-size: 0.8rem; font-weight: 700; background: var(--navy); color: #fff; border-radius: 999px; padding: 0.15rem 0.7rem; margin-bottom: 0.75rem; }
+    .subject-card .grade { display: inline-block; font-size: 0.8rem; font-weight: 700; background: var(--navy); color: #fff; padding: 0.15rem 0.7rem; margin-bottom: 0.75rem; }
     .subject-card ul { margin: 0.75rem 0; padding-left: 1.2rem; }
     .subject-card li { margin-bottom: 0.4rem; }
+    #printables h3 { margin-top: 2rem; }
     .printable-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .printable-card { border: 2px solid var(--border); border-radius: 10px; padding: 1.25rem; text-align: center; background: #fff; }
-    .printable-card .emoji { font-size: 2.2rem; }
-    .printable-card h4 { margin: 0.5rem 0; }
+    .printable-card { border: 2px solid var(--border); padding: 1.25rem; text-align: center; background: #fff; }
+    .printable-card h4 { margin: 0 0 0.5rem; }
     .printable-card p { font-size: 0.9rem; margin-bottom: 1rem; }
     .code-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-    .code-card { border: 2px solid var(--border); border-radius: 10px; padding: 1.25rem; background: #fff; }
+    .code-card { border: 2px solid var(--border); padding: 1.25rem; background: #fff; }
     .code-card h4 { margin-top: 0; }
     .code-card .tag { font-size: 0.75rem; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 0.05em; }
-    .chip-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0; }
-    .chip { display: inline-block; border: 2px solid var(--navy); border-radius: 999px; padding: 0.4rem 1rem; font-weight: 600; font-size: 0.9rem; text-decoration: none; color: var(--navy); }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0 0; }
+    .chip { display: inline-block; border: 2px solid var(--navy); padding: 0.4rem 1rem; font-weight: 600; font-size: 0.9rem; text-decoration: none; color: var(--navy); }
     .chip:hover { background: var(--navy); color: #fff; }
-    .cta-band { background: var(--navy); color: #fff; border-radius: 14px; padding: 2.5rem 2rem; text-align: center; margin: 3rem 0 2rem; }
+    .cta-band { background: var(--navy); color: #fff; padding: 2.5rem 2rem; text-align: center; }
     .cta-band h2 { color: #fff; margin-top: 0; }
     .cta-band p { max-width: 640px; margin: 0 auto 1.5rem; }
     .ref-list { font-size: 0.9rem; }
+    .subject-card a, .code-card a, .ref-list a { color: var(--red); font-weight: 600; }
     .ref-list li { margin-bottom: 0.5rem; }
   </style>
 </head>
@@ -141,41 +142,63 @@
 
 <main id="main-content" role="main">
 
-<!-- Hero -->
-<section id="hero">
-  <div class="hero-dots"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-tag">FOR TEACHERS &amp; HOMESCHOOL FAMILIES</div>
-      <h1 class="hero-title">YO-YOS IN<br/>THE CLASSROOM</h1>
-      <p class="hero-subtitle">FREE LESSON IDEAS · PRINTABLES · CODING PROJECTS</p>
-      <p class="hero-desc">A yo-yo is a physics lab, a math manipulative, a PE unit, a history lesson, and an art project — all for the price of a toy. Everything below is free for classroom and homeschool use.</p>
-      <div class="hero-btns">
-        <a href="#printables" class="btn btn-red">PRINTABLE WORKSHEETS</a>
-        <a href="#coding" class="btn btn-outline-white">CODING PROJECTS</a>
-      </div>
+<!-- Page hero: compact banner used on secondary pages. -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="red-tag">FOR TEACHERS &amp; HOMESCHOOL FAMILIES</span>
+    <h1 class="page-hero-title">Yo-Yos in the Classroom</h1>
+    <p class="page-hero-sub">Free Lesson Ideas · Printables · Coding Projects</p>
+  </div>
+  <div class="page-hero-skyline">
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
+  </div>
+</div>
+
+<!-- guide-nav:top -->
+<nav class="guide-nav" aria-label="Learn and reference guides">
+  <div class="guide-nav-inner"><span class="guide-nav-label">LEARN &amp; REFERENCE</span>
+    <a href="learn-yoyo.html">How to Yo-Yo</a>
+    <a href="yoyo-gear.html">Gear &amp; Maintenance</a>
+    <a href="yoyo-science.html">Yo-Yo Science</a>
+    <a href="yoyo-history.html">Yo-Yo History</a>
+    <a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a>
+    <a href="yoyo-collecting.html">Collecting Yo-Yos</a>
+    <a href="teachers.html" aria-current="page" class="is-current">For Teachers</a>
+    <a href="resources.html">Resources</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+</nav>
+<!-- /guide-nav:top -->
+
+<section id="intro" class="section-bg-white">
+  <div class="section">
+    <p class="section-intro">A yo-yo is a physics lab, a math manipulative, a PE unit, a history lesson, and an art project, all for the price of a toy. Everything below is free for classroom and homeschool use.</p>
+    <div class="hero-btns">
+      <a href="teachers.html#printables" class="btn btn-red">PRINTABLE WORKSHEETS</a>
+      <a href="teachers.html#coding-projects" class="btn btn-outline-red">CODING PROJECTS</a>
     </div>
+    <nav class="chip-row" aria-label="Jump to a subject">
+      <a class="chip" href="teachers.html#science">Science</a>
+      <a class="chip" href="teachers.html#math">Math</a>
+      <a class="chip" href="teachers.html#pe">PE &amp; Mindset</a>
+      <a class="chip" href="teachers.html#history">History</a>
+      <a class="chip" href="teachers.html#art">Art</a>
+      <a class="chip" href="teachers.html#coding">Coding</a>
+    </nav>
   </div>
 </section>
 
-<div class="chip-row" aria-label="Jump to a subject">
-  <a class="chip" href="#science">🔬 Science</a>
-  <a class="chip" href="#math">🔢 Math</a>
-  <a class="chip" href="#pe">🤸 PE &amp; Mindset</a>
-  <a class="chip" href="#history">📜 History</a>
-  <a class="chip" href="#art">🎨 Art</a>
-  <a class="chip" href="#coding">💻 Coding</a>
-</div>
-
 <!-- Subject cards -->
-<section id="subjects">
-  <h2>Ideas by Subject</h2>
+<section id="subjects" class="section-bg-cream">
+<div class="section">
+  <h2 class="section-title">Ideas by Subject</h2>
+  <div class="divider"></div>
   <p>Pick a subject, grab an idea, and run with it. Each card lists what to teach, the grade band it fits, and where to find more.</p>
   <div class="subject-grid">
 
     <div class="subject-card" id="science">
       <span class="grade">Grades 4–12</span>
-      <h3>🔬 Science &amp; Physics</h3>
+      <h3>Science &amp; Physics</h3>
       <ul>
         <li><strong>Potential vs. kinetic energy:</strong> hold the yo-yo up (potential), throw it (kinetic), watch it sleep. The classic demo — needs five minutes and one yo-yo.</li>
         <li><strong>Newton's laws:</strong> why does the yo-yo keep spinning? Why does a tug bring it back? Friction, inertia, and angular momentum in your hand.</li>
@@ -186,7 +209,7 @@
 
     <div class="subject-card" id="math">
       <span class="grade">Grades 3–12</span>
-      <h3>🔢 Math</h3>
+      <h3>Math</h3>
       <ul>
         <li><strong>Statistics:</strong> attempt a trick 20 times, tally successes, compute the success rate. Real data, real motivation. <a href="assets/printables/math-trick-tally.html">Try our tally sheet →</a></li>
         <li><strong>Word problems:</strong> string length, trick counts, buying yo-yos — arithmetic with a toy attached. <a href="assets/printables/math-yoyo-word-problems.html">Print the set →</a></li>
@@ -196,7 +219,7 @@
 
     <div class="subject-card" id="pe">
       <span class="grade">Grades K–6</span>
-      <h3>🤸 PE &amp; Growth Mindset</h3>
+      <h3>PE &amp; Growth Mindset</h3>
       <ul>
         <li><strong>Hand-eye coordination:</strong> throwing and catching builds fine motor skills, bilateral coordination, and focus.</li>
         <li><strong>Growth mindset, built in:</strong> nobody lands a trick on the first try. "Never give up, encourage others, do your best" — the NED Show's whole character-education program is built on yo-yos.</li>
@@ -207,7 +230,7 @@
 
     <div class="subject-card" id="history">
       <span class="grade">Grades 4–12</span>
-      <h3>📜 History &amp; Culture</h3>
+      <h3>History &amp; Culture</h3>
       <ul>
         <li><strong>2,500 years of history:</strong> from ancient Greece to the Philippines to Pedro Flores's 1928 factory — the yo-yo is a case study in immigration, invention, and marketing.</li>
         <li><strong>Filipino American history:</strong> Flores invented the looped string that makes every modern trick possible. <a href="filipino-yoyo-history.html">Our Filipino yo-yo history page →</a></li>
@@ -218,9 +241,9 @@
 
     <div class="subject-card" id="art">
       <span class="grade">Grades K–6</span>
-      <h3>🎨 Art &amp; Design</h3>
+      <h3>Art &amp; Design</h3>
       <ul>
-        <li><strong>Coloring pages:</strong> classic and butterfly yo-yo line art, free to print. <a href="#printables">See below ↓</a></li>
+        <li><strong>Coloring pages:</strong> classic and butterfly yo-yo line art, free to print. <a href="teachers.html#printables">See below ↓</a></li>
         <li><strong>Design your own:</strong> real yo-yo companies start with sketches. Our design sheet walks kids through naming and decorating their signature yo-yo.</li>
         <li><strong>Extension:</strong> 3D-print a yo-yo at the library — <a href="yoyo-science.html">see our science page →</a> for where to print in DC/NoVA.</li>
       </ul>
@@ -228,99 +251,105 @@
 
     <div class="subject-card" id="coding">
       <span class="grade">Grades 6–12</span>
-      <h3>💻 Coding Projects</h3>
+      <h3>Coding Projects</h3>
       <ul>
-        <li><strong>Real open-source templates:</strong> students can fork and customize actual club websites — a yo-yo club site, a scout troop site, a contest page. <a href="#coding-projects">See the projects ↓</a></li>
+        <li><strong>Real open-source templates:</strong> students can fork and customize actual club websites — a yo-yo club site, a scout troop site, a contest page. <a href="teachers.html#coding-projects">See the projects ↓</a></li>
         <li><strong>Skills:</strong> HTML, CSS, GitHub Pages deployment — a finished, shareable website in one class period.</li>
       </ul>
     </div>
 
   </div>
+</div>
 </section>
 
 <!-- Printables -->
-<section id="printables">
-  <h2>🖨️ Printable Classroom Resources</h2>
+<section id="printables" class="section-bg-white">
+<div class="section">
+  <h2 class="section-title">Printable Classroom Resources</h2>
+  <div class="divider"></div>
   <p>Free to print and copy for classroom and homeschool use. Black-and-white friendly — each page has a print button, and math sheets include teacher answer keys. <strong>41 printables</strong> across every grade band.</p>
 
-  <h3>🍼 Preschool (Ages 3–4)</h3>
+  <h3>Preschool (Ages 3–4)</h3>
   <div class="printable-grid">
-    <div class="printable-card"><div class="emoji" aria-hidden="true">✏️</div><h4>Trace to the Yo-Yo</h4><p>Extra-thick dashed tracing paths for little hands.</p><a href="assets/printables/wk-pre-tracing.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🔗</div><h4>Match the Yo-Yos</h4><p>Draw lines to match big/small, plain/striped pairs.</p><a href="assets/printables/wk-pre-matching.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🪀</div><h4>My First Yo-Yo</h4><p>Extra-large simple yo-yo outline for first coloring.</p><a href="assets/printables/wk-pre-color-big.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Trace to the Yo-Yo</h4><p>Extra-thick dashed tracing paths for little hands.</p><a href="assets/printables/wk-pre-tracing.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Match the Yo-Yos</h4><p>Draw lines to match big/small, plain/striped pairs.</p><a href="assets/printables/wk-pre-matching.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>My First Yo-Yo</h4><p>Extra-large simple yo-yo outline for first coloring.</p><a href="assets/printables/wk-pre-color-big.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
   </div>
 
-  <h3>🧒 Kindergarten – Grade 2 · Math</h3>
+  <h3>Kindergarten – Grade 2 · Math</h3>
   <div class="printable-grid">
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🔢</div><h4>Count the Yo-Yos (K)</h4><p>Count circles, write the number, compare groups.</p><a href="assets/printables/wk-k-counting-yoyos.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🎨</div><h4>Colors &amp; Shapes (K)</h4><p>Color by word, draw shapes inside yo-yos.</p><a href="assets/printables/wk-k-colors-shapes.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">➕</div><h4>Addition to 10 (1st)</h4><p>Word problems + dot pictures, sums to 10.</p><a href="assets/printables/wk-1-addition-10.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🔢</div><h4>Number Order (1st)</h4><p>Missing numbers, before/after, smallest to largest.</p><a href="assets/printables/wk-1-number-order.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">➖</div><h4>Add &amp; Subtract to 20 (2nd)</h4><p>Two-digit numbers, no regrouping.</p><a href="assets/printables/wk-2-add-subtract-20.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🔁</div><h4>Skip Counting (2nd)</h4><p>Count by 2s, 5s, 10s + word problems.</p><a href="assets/printables/wk-2-skip-counting.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Count the Yo-Yos (K)</h4><p>Count circles, write the number, compare groups.</p><a href="assets/printables/wk-k-counting-yoyos.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Colors &amp; Shapes (K)</h4><p>Color by word, draw shapes inside yo-yos.</p><a href="assets/printables/wk-k-colors-shapes.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Addition to 10 (1st)</h4><p>Word problems + dot pictures, sums to 10.</p><a href="assets/printables/wk-1-addition-10.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Number Order (1st)</h4><p>Missing numbers, before/after, smallest to largest.</p><a href="assets/printables/wk-1-number-order.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Add &amp; Subtract to 20 (2nd)</h4><p>Two-digit numbers, no regrouping.</p><a href="assets/printables/wk-2-add-subtract-20.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Skip Counting (2nd)</h4><p>Count by 2s, 5s, 10s + word problems.</p><a href="assets/printables/wk-2-skip-counting.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
   </div>
 
-  <h3>🧒 Grades 3–5 · Math</h3>
+  <h3>Grades 3–5 · Math</h3>
   <div class="printable-grid">
-    <div class="printable-card"><div class="emoji" aria-hidden="true">✖️</div><h4>Multiplication Arrays (3rd)</h4><p>Count rows &amp; columns in yo-yo arrays, then multiply.</p><a href="assets/printables/wk-3-multiplication-arrays.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🕒</div><h4>Telling Time (3rd)</h4><p>Read clock faces + elapsed-time word problems.</p><a href="assets/printables/wk-3-time.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">✖️</div><h4>Multi-Digit Multiplication (4th)</h4><p>2-digit × 1-digit and 2-digit × 2-digit.</p><a href="assets/printables/wk-4-multiplication.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🍕</div><h4>Fractions (4th)</h4><p>Shade fractions, compare, fraction word problems.</p><a href="assets/printables/wk-4-fractions.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">💵</div><h4>Decimals &amp; Money (5th)</h4><p>Add/subtract decimals, make change, compare spin times.</p><a href="assets/printables/wk-5-decimals-money.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">➗</div><h4>Division (5th)</h4><p>Long division with remainders, work boxes.</p><a href="assets/printables/wk-5-division.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">📊</div><h4>Trick Tally: Statistics (3–6)</h4><p>Tally 20 attempts, compute success rate, draw a bar chart.</p><a href="assets/printables/math-trick-tally.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">📝</div><h4>Yo-Yo Word Problems (3–5)</h4><p>8 word problems: counting, money, measurement.</p><a href="assets/printables/math-yoyo-word-problems.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Multiplication Arrays (3rd)</h4><p>Count rows &amp; columns in yo-yo arrays, then multiply.</p><a href="assets/printables/wk-3-multiplication-arrays.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Telling Time (3rd)</h4><p>Read clock faces + elapsed-time word problems.</p><a href="assets/printables/wk-3-time.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Multi-Digit Multiplication (4th)</h4><p>2-digit × 1-digit and 2-digit × 2-digit.</p><a href="assets/printables/wk-4-multiplication.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Fractions (4th)</h4><p>Shade fractions, compare, fraction word problems.</p><a href="assets/printables/wk-4-fractions.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Decimals &amp; Money (5th)</h4><p>Add/subtract decimals, make change, compare spin times.</p><a href="assets/printables/wk-5-decimals-money.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Division (5th)</h4><p>Long division with remainders, work boxes.</p><a href="assets/printables/wk-5-division.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Trick Tally: Statistics (3–6)</h4><p>Tally 20 attempts, compute success rate, draw a bar chart.</p><a href="assets/printables/math-trick-tally.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Yo-Yo Word Problems (3–5)</h4><p>8 word problems: counting, money, measurement.</p><a href="assets/printables/math-yoyo-word-problems.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
   </div>
 
-  <h3>🧑 Grades 6–8 · Math</h3>
+  <h3>Grades 6–8 · Math</h3>
   <div class="printable-grid">
-    <div class="printable-card"><div class="emoji" aria-hidden="true">📊</div><h4>Ratios &amp; Percent (6th)</h4><p>Trick success as ratios, lowest terms, unit rates.</p><a href="assets/printables/wk-6-ratios-percent.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🌡️</div><h4>Integers (6th)</h4><p>Contest scoring with positives and negatives.</p><a href="assets/printables/wk-6-integers.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🅧</div><h4>Pre-Algebra (7th)</h4><p>One- and two-step equations, substitution checks.</p><a href="assets/printables/wk-7-prealgebra.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🎲</div><h4>Probability (7th)</h4><p>Simple + compound probability with tricks.</p><a href="assets/printables/wk-7-probability.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">📈</div><h4>Linear Equations (8th)</h4><p>Multi-step equations + write-the-equation problems.</p><a href="assets/printables/wk-8-linear-equations.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">💥</div><h4>Exponents (8th)</h4><p>Powers, doubling growth, scientific notation.</p><a href="assets/printables/wk-8-exponents.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Ratios &amp; Percent (6th)</h4><p>Trick success as ratios, lowest terms, unit rates.</p><a href="assets/printables/wk-6-ratios-percent.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Integers (6th)</h4><p>Contest scoring with positives and negatives.</p><a href="assets/printables/wk-6-integers.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Pre-Algebra (7th)</h4><p>One- and two-step equations, substitution checks.</p><a href="assets/printables/wk-7-prealgebra.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Probability (7th)</h4><p>Simple + compound probability with tricks.</p><a href="assets/printables/wk-7-probability.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Linear Equations (8th)</h4><p>Multi-step equations + write-the-equation problems.</p><a href="assets/printables/wk-8-linear-equations.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Exponents (8th)</h4><p>Powers, doubling growth, scientific notation.</p><a href="assets/printables/wk-8-exponents.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
   </div>
 
-  <h3>🎓 Grades 8–12 · Advanced</h3>
+  <h3>Grades 8–12 · Advanced</h3>
   <div class="printable-grid">
-    <div class="printable-card"><div class="emoji" aria-hidden="true">⚛️</div><h4>Yo-Yo Physics Lab (9–12)</h4><p>Energy calculations + sleeper experiment with data table.</p><a href="assets/printables/wk-9-12-physics-lab.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">📉</div><h4>Trick Data: Statistics (9–12)</h4><p>30-value dataset: mean, median, mode, range, spread.</p><a href="assets/printables/wk-9-12-statistics.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">✍️</div><h4>Writing Prompts (8–12)</h4><p>8 prompts: narrative, argumentative, research + rubric.</p><a href="assets/printables/wk-8-12-writing-prompts.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">⚙️</div><h4>Engineering Design Challenge (8–12)</h4><p>Design a yo-yo under real constraints. Sketch + justify.</p><a href="assets/printables/wk-8-12-design-challenge.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">💼</div><h4>Business Case Study (9–12)</h4><p>Duncan/Flores: profit, margin, break-even, marketing.</p><a href="assets/printables/wk-9-12-business-case.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Yo-Yo Physics Lab (9–12)</h4><p>Energy calculations + sleeper experiment with data table.</p><a href="assets/printables/wk-9-12-physics-lab.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Trick Data: Statistics (9–12)</h4><p>30-value dataset: mean, median, mode, range, spread.</p><a href="assets/printables/wk-9-12-statistics.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Writing Prompts (8–12)</h4><p>8 prompts: narrative, argumentative, research + rubric.</p><a href="assets/printables/wk-8-12-writing-prompts.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Engineering Design Challenge (8–12)</h4><p>Design a yo-yo under real constraints. Sketch + justify.</p><a href="assets/printables/wk-8-12-design-challenge.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Business Case Study (9–12)</h4><p>Duncan/Flores: profit, margin, break-even, marketing.</p><a href="assets/printables/wk-9-12-business-case.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
   </div>
 
-  <h3>🧩 Puzzles &amp; Fun (K–5)</h3>
+  <h3>Puzzles &amp; Fun (K–5)</h3>
   <div class="printable-grid">
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🌀</div><h4>Yo-Yo Maze</h4><p>Help the yo-yo find its string.</p><a href="assets/printables/wk-k5-maze.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🔎</div><h4>Word Search</h4><p>10 hidden yo-yo words, across and down.</p><a href="assets/printables/wk-k5-wordsearch.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">📊</div><h4>Graph Our Favorite Tricks</h4><p>Survey friends, tally, color a bar graph.</p><a href="assets/printables/wk-k5-graphing.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🔁</div><h4>Yo-Yo Patterns</h4><p>AB, AAB, ABC patterns — draw what comes next.</p><a href="assets/printables/wk-k5-patterns.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🔟</div><h4>Number Bonds to 10</h4><p>Fill the missing part of each yo-yo pair.</p><a href="assets/printables/wk-k5-number-bonds.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">📏</div><h4>Measure the String</h4><p>Non-standard measurement with paperclips.</p><a href="assets/printables/wk-k5-measurement.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Yo-Yo Maze</h4><p>Help the yo-yo find its string.</p><a href="assets/printables/wk-k5-maze.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Word Search</h4><p>10 hidden yo-yo words, across and down.</p><a href="assets/printables/wk-k5-wordsearch.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Graph Our Favorite Tricks</h4><p>Survey friends, tally, color a bar graph.</p><a href="assets/printables/wk-k5-graphing.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Yo-Yo Patterns</h4><p>AB, AAB, ABC patterns — draw what comes next.</p><a href="assets/printables/wk-k5-patterns.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Number Bonds to 10</h4><p>Fill the missing part of each yo-yo pair.</p><a href="assets/printables/wk-k5-number-bonds.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Measure the String</h4><p>Non-standard measurement with paperclips.</p><a href="assets/printables/wk-k5-measurement.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
   </div>
 
-  <h3>🎨 Coloring &amp; Art</h3>
+  <h3>Coloring &amp; Art</h3>
   <div class="printable-grid">
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🪀</div><h4>Color the Classic Yo-Yo</h4><p>Line-art coloring page: classic imperial yo-yo.</p><a href="assets/printables/coloring-yoyo-classic.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🎨</div><h4>Color the Butterfly Yo-Yo</h4><p>Line-art coloring page: wide butterfly yo-yo.</p><a href="assets/printables/coloring-yoyo-butterfly.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">✏️</div><h4>Design Your Own Yo-Yo</h4><p>Blank outlines + prompts: name it, decorate it.</p><a href="assets/printables/coloring-design-your-own.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Color the Classic Yo-Yo</h4><p>Line-art coloring page: classic imperial yo-yo.</p><a href="assets/printables/coloring-yoyo-classic.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Color the Butterfly Yo-Yo</h4><p>Line-art coloring page: wide butterfly yo-yo.</p><a href="assets/printables/coloring-yoyo-butterfly.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Design Your Own Yo-Yo</h4><p>Blank outlines + prompts: name it, decorate it.</p><a href="assets/printables/coloring-design-your-own.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
   </div>
 
-  <h3>♿ Special Education</h3>
+  <h3>Special Education</h3>
   <div class="printable-grid">
-    <div class="printable-card"><div class="emoji" aria-hidden="true">✏️</div><h4>Large-Print Tracing</h4><p>Thick lines, big shapes, high contrast, low clutter.</p><a href="assets/printables/wk-se-tracing-large.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🪀</div><h4>How to Throw: Step Strip</h4><p>5-step visual task strip for throwing a sleeper.</p><a href="assets/printables/wk-se-step-throw.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">🗂️</div><h4>Sort the Yo-Yos</h4><p>Sort by size, then by pattern. One attribute at a time.</p><a href="assets/printables/wk-se-sort.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
-    <div class="printable-card"><div class="emoji" aria-hidden="true">📓</div><h4>My Yo-Yo Trick Diary</h4><p>One-week tracker: tries, landed, notes, weekly goal.</p><a href="assets/printables/yoyo-diary.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Large-Print Tracing</h4><p>Thick lines, big shapes, high contrast, low clutter.</p><a href="assets/printables/wk-se-tracing-large.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>How to Throw: Step Strip</h4><p>5-step visual task strip for throwing a sleeper.</p><a href="assets/printables/wk-se-step-throw.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>Sort the Yo-Yos</h4><p>Sort by size, then by pattern. One attribute at a time.</p><a href="assets/printables/wk-se-sort.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
+    <div class="printable-card"><h4>My Yo-Yo Trick Diary</h4><p>One-week tracker: tries, landed, notes, weekly goal.</p><a href="assets/printables/yoyo-diary.html" class="btn btn-red">OPEN &amp; PRINT</a></div>
   </div>
+</div>
 </section>
 
 
 <!-- Coding projects -->
-<section id="coding-projects">
-  <h2>💻 Student Coding Projects</h2>
+<section id="coding-projects" class="section-bg-cream">
+<div class="section">
+  <h2 class="section-title">Student Coding Projects</h2>
+  <div class="divider"></div>
   <p>Our club builds real open-source website templates. Students can fork one, change the colors and text, and publish a real website with GitHub Pages — no backend, no cost. Each is a complete, working site, not a toy example.</p>
   <div class="code-grid">
     <div class="code-card">
@@ -360,11 +389,14 @@
       <p><a href="contact.html">Contact us →</a></p>
     </div>
   </div>
+</div>
 </section>
 
 <!-- External resources -->
-<section id="external-resources">
-  <h2>🔗 More Resources Around the Web</h2>
+<section id="external-resources" class="section-bg-white">
+<div class="section">
+  <h2 class="section-title">More Resources Around the Web</h2>
+  <div class="divider"></div>
   <p>Good material other people made — collected here so you don't have to hunt.</p>
   <ul class="ref-list">
     <li><a href="https://www.lessonplanet.com/search?keywords=yo+yo" target="_blank" rel="noopener noreferrer">Lesson Planet: yo-yo lesson plans &amp; worksheets ↗</a> — teacher-reviewed, including Newton's First Law with a yo-yo (4th) and the Yo-Yo Problem linear equations (9th–12th).</li>
@@ -374,28 +406,53 @@
     <li><a href="https://www.losmedanos.edu/departments/ptech/documents/EnergyInMotion_13.pdf" target="_blank" rel="noopener noreferrer">Energy in Motion (PDF) ↗</a> — a 60-minute potential/kinetic energy lesson built around yo-yos (grades 9–12).</li>
     <li><a href="https://www.yoyomagic.fun/" target="_blank" rel="noopener noreferrer">Yeet the Yo! ↗</a> — a yo-yo school program with published NGSS standards alignment.</li>
   </ul>
+</div>
 </section>
 
 <!-- School visit CTA -->
+<section id="school-visits" class="section-bg-white">
+<div class="section" style="padding-top:0;padding-bottom:0;">
 <div class="cta-band">
   <h2>Want Yo-Yos at Your School?</h2>
   <p>We run free yo-yo demos and hands-on workshops for schools, libraries, and scout groups around DC, Maryland, and Virginia. Tell us about your class and we'll figure out a visit.</p>
   <a href="contact.html" class="btn btn-red">REQUEST A SCHOOL VISIT</a>
 </div>
+</div>
+</section>
 
 <!-- References -->
-<section id="references">
-  <h2>References</h2>
+<section id="references" class="section-bg-white">
+<div class="section">
+  <h2 class="section-title">References</h2>
+  <div class="divider"></div>
   <ol class="ref-list">
     <li>Lesson Planet — "Yo Yo Lesson Plans &amp; Worksheets Reviewed by Teachers." <a href="https://www.lessonplanet.com/search?keywords=yo+yo" target="_blank" rel="noopener noreferrer">lessonplanet.com ↗</a></li>
     <li>CK-12 Foundation — interactive STEM resources. <a href="https://www.ck12.org/" target="_blank" rel="noopener noreferrer">ck12.org ↗</a></li>
-    <li>The NED Shows — school assembly programs &amp; PE lesson plans. <a href="https://www.thenedshow.com/" target="_blank" rel="noopener noreferrer">thennedshow.com ↗</a></li>
+    <li>The NED Shows — school assembly programs &amp; PE lesson plans. <a href="https://www.thenedshow.com/" target="_blank" rel="noopener noreferrer">thenedshow.com ↗</a></li>
     <li>LearningCorner — Subject Explorer: learning through yo-yo play. <a href="https://learningcorner.co/" target="_blank" rel="noopener noreferrer">learningcorner.co ↗</a></li>
     <li>Los Medanos College — "Energy in Motion" lesson (PDF). <a href="https://www.losmedanos.edu/departments/ptech/documents/EnergyInMotion_13.pdf" target="_blank" rel="noopener noreferrer">losmedanos.edu ↗</a></li>
     <li>Yeet the Yo! — standards alignment (PDF). <a href="https://img1.wsimg.com/blobby/go/31f8de24-1a6c-4469-b67a-8e1f464ca273/Yeet%20Standards.pdf" target="_blank" rel="noopener noreferrer">wsimg.com ↗</a></li>
   </ol>
+</div>
 </section>
 
+<!-- guide-nav:bottom -->
+<section class="guide-more" aria-labelledby="guide-more-title">
+  <div class="guide-more-inner">
+    <h2 class="guide-more-title" id="guide-more-title">Keep Exploring</h2>
+    <ul class="guide-more-list">
+      <li><a href="learn-yoyo.html">How to Yo-Yo</a><span>Throws, first 100 tricks, contests, glossary</span></li>
+      <li><a href="yoyo-gear.html">Gear &amp; Maintenance</a><span>Bearings, pads, string, styles, lingo</span></li>
+      <li><a href="yoyo-science.html">Yo-Yo Science</a><span>Physics, shapes, materials, patents, DIY</span></li>
+      <li><a href="yoyo-history.html">Yo-Yo History</a><span>From ancient Greece to today&rsquo;s contests</span></li>
+      <li><a href="filipino-yoyo-history.html">Filipino Yo-Yo History</a><span>Pedro Flores and the demonstrators</span></li>
+      <li><a href="yoyo-collecting.html">Collecting Yo-Yos</a><span>Vintage, limited runs, value, museums</span></li>
+      <li><a href="resources.html">Resources</a><span>Downloads, tutorials, apps, links</span></li>
+      <li><a href="faq.html">FAQ</a><span>Meetups, the club, and contests</span></li>
+    </ul>
+  </div>
+</section>
+<!-- /guide-nav:bottom -->
 </main>
 
 
@@ -435,6 +492,7 @@
       <a href="filipino-yoyo-history.html" class="footer-link">Filipino Yo-Yo History</a>
       <a href="yoyo-science.html" class="footer-link">Yo-Yo Science</a>
       <a href="yoyo-collecting.html" class="footer-link">Collecting Yo-Yos</a>
+      <a href="teachers.html" class="footer-link">For Teachers</a>
       <a href="https://map.dmvthrowers.club/" class="footer-link">Player Map</a>
     </nav>
     <div class="footer-bottom">
