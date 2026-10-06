@@ -21,7 +21,7 @@ One shared JS file (`assets/js/mobile-enhancements.js`) is loaded on every page 
 | --- | --- |
 | `index.html` | Landing page — big hero, about, upcoming highlights, sponsors, CTA |
 | `about.html` | About the club. **Canonical footer template — copy its footer structure when editing others.** |
-| `team.html` | Officers + member cards. Placeholder cards use emoji `🪀` inside an `aria-hidden="true"` div |
+| `team.html` | Officers + member cards. Cards have no emoji; skip bios that are not written yet instead of adding placeholder text |
 | `events.html` | Monthly meetups + special events + holidays. **Hand-sorted by date; keep chronological** |
 | `gallery.html` | Photo grid with `<picture>` WebP + PNG fallbacks and `width`/`height` to reserve layout |
 | `resources.html` | Links to PDFs in `assets/documents/` + external yo-yo resources |

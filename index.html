@@ -15,23 +15,25 @@
   <base href="/"/>
   <!-- Content Security Policy: restrict scripts/frames/forms to trusted origins.
        jotform = VSYC-26 registration; formspree = contact form; Google Fonts for typography. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jotfor.ms; frame-src https://form.jotform.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cdn.jotfor.ms https://form.jotform.com https://formspree.io; form-action 'self' https://formspree.io;"/>
-  <title>DMV Throwers · Yo-Yo & Skill Toy Club · Washington DC, Northern Virginia, Maryland</title>
-  <meta name="description" content="DMV Throwers is the Washington DC, Northern Virginia, and Maryland yo-yo and skill toy club. Free meetups every 3rd Sunday at Arlington Central Library. All ages and skill levels welcome."/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <title>DMV Throwers · Free Yo-Yo Club in DC, MD and VA</title>
+  <meta name="description" content="DMV Throwers is the free yo-yo and skill toy club for DC, Northern Virginia and Maryland. Meetups every 3rd Sunday in Arlington. All ages welcome."/>
   <meta name="keywords" content="yo-yo club DC, yo-yo club Virginia, yo-yo club Maryland, DMV yo-yo, skill toy club Northern Virginia, kendama club DC, yo-yo Arlington Virginia, yoyo club Washington DC, DMV Throwers"/>
   <meta property="og:title" content="DMV Throwers · Yo-Yo & Skill Toy Club · DC · VA · MD"/>
   <meta property="og:description" content="Free yo-yo and skill toy meetups every 3rd Sunday in Arlington VA. All ages, all levels. Serving DC, Northern Virginia, and Maryland."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://dmvthrowers.club/"/>
-  <meta property="og:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
-  <meta property="og:image:alt" content="DMV Throwers logo"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/og/dmvt-share.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="DMV Throwers: free yo-yo and skill toy club in DC, Maryland and Virginia"/>
   <meta property="og:site_name" content="DMV Throwers"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@dmv_throwers"/>
   <meta name="twitter:title" content="DMV Throwers · Yo-Yo &amp; Skill Toy Club · DC · VA · MD"/>
   <meta name="twitter:description" content="Free yo-yo and skill toy meetups every 3rd Sunday in Arlington VA. All ages, all levels. Serving DC, Northern Virginia, and Maryland."/>
-  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/logo.png"/>
-  <meta name="twitter:image:alt" content="DMV Throwers logo"/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/og/dmvt-share.png"/>
+  <meta name="twitter:image:alt" content="DMV Throwers: free yo-yo and skill toy club in DC, Maryland and Virginia"/>
   <meta property="og:locale" content="en_US"/>
   <meta name="robots" content="index, follow"/>
   <meta name="geo.region" content="US-VA"/>
@@ -70,6 +72,15 @@
       {"@type": "State", "name": "Maryland"}
     ],
     "isAccessibleForFree": true
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"}
+    ]
   }
   </script>
   <style>
@@ -177,8 +188,9 @@
 <body>
 
 <!-- Top bar: headline event + shortcut. Update the text each month. -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <div id="top-bar">
-  <a href="#main-content" class="skip-link">Skip to main content</a>
   <span>NEXT MEET: SUNDAY, OCTOBER 18 · 1–4 PM · ARLINGTON CENTRAL LIBRARY</span>
   <a href="events.html">SEE EVENTS →</a>
 </div>
@@ -253,7 +265,7 @@
     </div>
   </div>
   <div class="hero-skyline">
-    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy"/>
+    <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy" width="1400" height="100"/>
   </div>
 </section>
 
@@ -284,7 +296,7 @@
         <div class="stat-card"><div class="stat-num">2021</div><div class="stat-label">EST. DC · MD · VA</div></div>
       </div>
       <figure class="about-photo">
-        <picture><source srcset="assets/images/gallery/gallery-05.webp" type="image/webp"/><img src="assets/images/gallery/gallery-05.png" alt="About fifteen DMV Throwers members of all ages posing with yo-yos in a library meeting room" loading="lazy" width="839" height="357"/></picture>
+        <picture><source srcset="assets/images/gallery/gallery-05.webp" type="image/webp"/><img src="assets/images/gallery/gallery-05.jpg" alt="About fifteen DMV Throwers members of all ages posing with yo-yos in a library meeting room" loading="lazy" width="839" height="357"/></picture>
         <figcaption>Our first library meetup at Arlington Central Library. <a href="gallery.html" class="text-red">See the gallery</a></figcaption>
       </figure>
       </div>
@@ -343,7 +355,7 @@
   <div class="vsyc-banner">
     <div>
       <div class="vsyc-label">HELD SEPTEMBER 19, 2026</div>
-      <div class="vsyc-title">Virginia State YoYo Contest 2026</div>
+      <div class="vsyc-title">Virginia State Yo-Yo Contest 2026</div>
       <div class="vsyc-sub">VSYC-26 · Brought to You by <a href="https://www.goodles.com/" class="inherit-link" target="_blank" rel="noopener noreferrer">Goodles</a> · <a href="https://www.dullestowncenter.com" class="inherit-link" target="_blank" rel="noopener noreferrer">Dulles Town Center</a> · Sterling VA · 10 AM – 7 PM · Free to spectate</div>
     </div>
     <div class="vsyc-banner-btns">
