@@ -143,9 +143,10 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 /* Hamburger + mobile menu. .open class is toggled by the inline script on each page. */
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); }
-.mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 12px 24px 20px; gap: 16px; }
+.mobile-menu { display: none; flex-direction: column; background: var(--cream); border-bottom: 1px solid var(--border); padding: 4px 24px 20px; gap: 0; }
 .mobile-menu.open { display: flex; }
-.mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 13px 0; border-bottom: 1px solid var(--border); }
+.mobile-menu .mobile-donate, .mobile-menu .mobile-vsyc { margin-top: 12px; text-align: center; }
 .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
 .mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
 
