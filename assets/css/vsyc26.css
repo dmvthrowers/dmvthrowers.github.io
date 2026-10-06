@@ -1,12 +1,12 @@
 /* VSYC-26 Shared Stylesheet */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --navy: #102040;
-  --navy-deep: #0a1530;
+  --navy: #1a2744;
+  --navy-deep: #0d1428;
   --gold: #C9A84C;
   --gold-light: #e8c97a;
   --red: #B80000;
-  --cream: #fffdfa;
+  --cream: #f5f0e8;
   --cream-mid: #ede8dc;
   --border: #2a3a5a;
   --text-muted: #fff;
