@@ -1,12 +1,12 @@
 /* VSYC-26 Shared Stylesheet */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --navy: #1a2744;
-  --navy-deep: #0d1428;
+  --navy: #102040;
+  --navy-deep: #0a1530;
   --gold: #C9A84C;
   --gold-light: #e8c97a;
-  --red: #C8102E;
-  --cream: #f5f0e8;
+  --red: #B80000;
+  --cream: #fffdfa;
   --cream-mid: #ede8dc;
   --border: #2a3a5a;
   --text-muted: #fff;
@@ -218,7 +218,7 @@ nav { background: var(--navy-deep); border-bottom: 1px solid var(--border); padd
 .price-discount { font-size: 0.75rem; color: var(--text-muted); font-family: 'Montserrat', sans-serif; font-weight: 400; }
 .price-free { color: #6adb8a; }
 .payment-box { margin-top: 16px; background: var(--navy); border: 1px solid var(--border); padding: 20px; border-left: 4px solid var(--red); }
-.payment-title { font-size: 0.62rem; letter-spacing: 0.16em; font-weight: 800; color: var(--red); margin-bottom: 6px; }
+.payment-title { font-size: 0.7rem; letter-spacing: 0.16em; font-weight: 800; color: var(--gold); margin-bottom: 6px; }
 .payment-text { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
 .payment-btns { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
 .btn-small { padding: 10px 20px; font-size: 0.72rem; }

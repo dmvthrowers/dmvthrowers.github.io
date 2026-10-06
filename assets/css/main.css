@@ -204,7 +204,7 @@ footer nav { background: none; border: 0; padding: 0; position: static; will-cha
 .guide-nav, .guide-parts, .guide-pager { position: static; z-index: auto; will-change: auto; }
 nav.guide-pager { background: none; padding-left: 0; padding-right: 0; }
 .footer-guides { display: flex; flex-wrap: wrap; align-items: center; row-gap: 8px; margin-bottom: 20px; }
-.footer-guides-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; color: #C9A84C; margin-right: 6px; }
+.footer-guides-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; color: var(--footer-brand-sub); margin-right: 6px; }
 .footer-guides .footer-link:first-of-type { margin-left: 4px; }
 /* footer brand text — two naming conventions used across pages */
 .footer-title, .footer-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: white; }
