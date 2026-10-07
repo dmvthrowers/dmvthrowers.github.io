@@ -40,8 +40,11 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
    science, collecting) is reachable only through inline links. Adding a nav item means editing
    every page's nav identically — plan it as one change across all pages.
 8. **`/.well-known/security.txt`** with a contact address.
-9. **Cold-load flash on `vsyc26.html`**: hero title briefly renders in fallback fonts and the nav
-    logo shows a broken-image glyph. Check font-display and the logo's `width`/`height`.
+9. **Cold-load flash on `vsyc26.html`.** Logo half done: the VSYC pages now load a 3 KB logo
+    instead of 36 KB, so it arrives with the text (the broken-image glyph didn't reproduce on a
+    throttled load in Chromium). The font half remains: `display=swap` shows fallback fonts until
+    Google Fonts arrive. The real fix is self-hosting Playfair Display, DM Sans and Montserrat
+    (OFL), which also drops the only outside origin from every page's CSP.
 10. **JotForm leftovers.** `privacy.html` still lists JotForm as a registration processor (update
    once no live JotForm forms remain; owner confirms wording). 16 pages (`about.html`,
    `index.html`, `teachers.html`, the guides) carry stale "jotform for VSYC-26" CSP comments.

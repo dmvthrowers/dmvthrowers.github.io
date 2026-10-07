@@ -261,6 +261,7 @@ footer { background: #080d1a; padding: 40px 24px 24px; border-top: 1px solid var
 .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 24px; }
 .footer-flex { display: flex; align-items: center; gap: 12px; }
 .footer-logo { width: 34px; height: 34px; object-fit: contain; }
+.nav-brand > picture, .footer-flex > picture { flex: none; display: block; line-height: 0; }
 .footer-title { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 0.95rem; color: var(--white); }
 .footer-subtitle { font-size: 0.58rem; letter-spacing: 0.18em; color: var(--gold); font-weight: 700; }
 .footer-presented { font-size: 0.55rem; letter-spacing: 0.18em; color: var(--text-muted); font-weight: 700; margin-top: 3px; }
