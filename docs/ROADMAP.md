@@ -190,6 +190,41 @@ simple map could gain without a server: marker clustering, a search box, browse-
 and a privacy page. Multiple languages, accounts and moderation stay full-app only.
 **Decision:** should the full map app also become a template (level 2), like the registration app?
 
+## Gaps found in the roadmap review (2026-10-07)
+
+Things no roadmap covered yet, checked against every repo's roadmap and the principles in the
+registration template's `docs/CONTEST_APP_MASTER_PLAN.md`.
+
+1. **Accounts and the bus factor.** `github.com/dmvthrowers` is one user account; every repo, and
+   most service logins, run through it. A `DMV-Throwers` organization already exists (with its own
+   copy of VA-States). Move the repos into the organization or add a second owner, add a second
+   admin on Vercel, Supabase, Stripe, Porkbun and Resend, keep logins in a shared password manager,
+   and write a one-page handoff note. Also decide which VA-States repo is canonical.
+2. **Template releases.** The templates have no versions, so "pull template updates cleanly" has
+   nothing to pull. Tag releases, keep a `CHANGELOG.md`, and add a short "update your copy" guide to
+   each template. Parity ports land in the next release.
+3. **Accessibility pass.** Only spot fixes are planned (map markers, one form label). Do a WCAG 2.2
+   AA review of the club site, contest pages, templates and registration app, and add an automated
+   axe check to each CI.
+4. **Languages.** The map speaks 11 languages; the club site, contest pages, registration app and
+   static templates are English only. Start with Spanish on the club and contest pages, and give the
+   templates a `language` setting with translatable strings.
+5. **End-to-end smoke tests.** No repo has one. Add a Playwright run of the registration happy path
+   (Stripe test mode) to the registration template and VA-States, and a build-and-click run of each
+   template's showcase.
+6. **Photo and video consent.** Minors' names are protected, but photos and routine videos aren't
+   tied to any consent. Record photo and video consent at registration (a guardian's for minors) and
+   honor it on the gallery, results videos and recap. The club gallery needs the same rule.
+7. **Event hub launch.** `dmvt-event-hub` is built but not launched and has no roadmap: swap the
+   email stub for a real provider, untrack `.env`, fix its `skills/` files (written for the map),
+   point `events.dmvthrowers.club` at it, add it to the tables above, and decide whether it also
+   becomes a template.
+8. **Brand parity.** DMVT-Design is the brand contract, but nothing checks the live site and apps
+   against it. Add a small check of colors, fonts and corner radius against DMVT-Design's tokens.
+9. **Club calendar feed.** Meetups have no `.ics` or `webcal://` subscription on the live site or
+   the club template (the contest app's feeds are planned separately). Generate one from the
+   meetup rule.
+
 ## Other club repos (tracked here)
 
 ### yoyo-player-map: dependency majors
