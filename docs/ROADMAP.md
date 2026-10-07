@@ -44,8 +44,8 @@ The build order across every repo, with status per item, is in [`BUILD_PLAN.md`]
    before 2027-10-01.
 9. **Cold-load flash on `vsyc26.html`**: hero title briefly renders in fallback fonts and the nav
     logo shows a broken-image glyph. Check font-display and the logo's `width`/`height`.
-10. **JotForm leftovers.** `privacy.html` still lists JotForm as a registration processor (update
-   once no live JotForm forms remain; owner confirms wording). 16 pages (`about.html`,
+10. **JotForm leftovers.** ~~`privacy.html` still lists JotForm as a registration processor.~~
+   Removed (owner confirmed no JotForm form is live). 16 pages (`about.html`,
    `index.html`, `teachers.html`, the guides) carry stale "jotform for VSYC-26" CSP comments.
    `AGENTS.md` still describes a JotForm embed on `vsyc26-sponsors.html`. One small PR.
 11. ~~**Status page link in the footers**, not only on the contact page.~~ Done: every footer
