@@ -1,0 +1,8 @@
+# Security contact for dmvthrowers.club (RFC 9116).
+# Covers this site, register.dmvthrowers.club and map.dmvthrowers.club.
+# Renew "Expires" before it passes: it must stay less than a year away.
+Contact: mailto:contact@dmvthrowers.club
+Expires: 2027-10-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://dmvthrowers.club/.well-known/security.txt
+Policy: https://github.com/dmvthrowers/dmvthrowers.github.io/security/policy
