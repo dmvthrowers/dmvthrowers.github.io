@@ -59,8 +59,11 @@ The build order across every repo, with status per item, is in [`BUILD_PLAN.md`]
   enforcement. Putting Cloudflare (free) in front would add real headers.
 - Sitemap check in CI so a new page can't ship without a `sitemap.xml` entry.
 
-- **Raw hex colors** remain in page `<style>` blocks. Convert them to `--red`, `--navy`, `--cream`
-  and `--border`.
+- **Raw hex colors** in page `<style>` blocks. Brand colors and white are now variables
+  everywhere (`--white` added to `main.css`). What's left is off-palette, so mapping it changes how
+  pages look and needs a design call: the events page's status colors (greens, blues, greys), the
+  team page's badge colors, the teal on `index.html`, and the gold and grey-blue text on
+  `vsyc26-terms.html` and `about.html` (`#f0c040`, `#8090b8`, `#c8d0e0`).
 
 ## Owner actions (not code)
 
