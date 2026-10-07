@@ -142,8 +142,8 @@ Each is a few hours or less. Ordered by value.
 | 2.6 | site | External link checker (`lychee`, weekly, not per PR) (Next 4) | ◐ #157 |
 | 2.7 | site | Guides in the main nav, one change across every page (Next 7) | ◐ #155 |
 | 2.8 | site | Conduct page: named team, steps, response time, changelog | ⛔ 0.7 |
-| 2.9 | all templates | Releases: tag v1.0.0, `CHANGELOG.md`, an "update your copy" guide (Gap 2) | ☐ |
-| 2.10 | all templates | Showcase smoke test in CI: build every example, click every page in Chromium (Gap 5) | ☐ |
+| 2.9 | all templates | Releases: tag v1.0.0, `CHANGELOG.md`, an "update your copy" guide (Gap 2) | ◐ club #12, contest #11, scouts #12, map #9; tag is owner |
+| 2.10 | all templates | Showcase smoke test in CI: build every example, click every page in Chromium (Gap 5) | ◐ club #13, contest #12, scouts #13, map #10 |
 | 2.11 | all static repos | Automated accessibility check (axe) in CI, then fix what it finds (Gap 3) | ☐ |
 | 2.12 | site | Self-host Playfair Display, DM Sans and Montserrat (OFL): ends the font swap flash and removes Google Fonts from every page's CSP | ◐ #149 |
 
