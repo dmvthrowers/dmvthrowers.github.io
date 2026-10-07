@@ -53,6 +53,20 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
   enforcement. Putting Cloudflare (free) in front would add real headers.
 - Sitemap check in CI so a new page can't ship without a `sitemap.xml` entry.
 
+- **Raw hex colors** remain in page `<style>` blocks. Convert them to `--red`, `--navy`, `--cream`
+  and `--border`.
+
+## Decisions needed (owner)
+
+- **Heading case on the guide pages:** Title Case (the brand rule) or leave as is.
+- **Share cards:** `dmvt-share.png` and `vsyc26-share.png` render in fallback system fonts.
+  Regenerate them with Playfair Display?
+- **GitHub topics and descriptions** on the six template repos (set by hand in each repo's
+  settings). Suggested topics: `yo-yo`, `skill-toys`, `github-pages`, `static-site`,
+  `website-template`.
+- **Girl-Scout-Troop-80301 history:** volunteer names are still in git history. Rewriting
+  history is only worth it if that matters.
+
 ## Discoverability (from the Oct 2 audit — not code)
 
 - "DMV" collides with motor-vehicle results: always pair the name with "yo-yo club" in titles,
@@ -63,3 +77,39 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
   "yoyo club near me").
 - A third-party listing (ngos1.com) shows the wrong phone number; request a correction.
 - Submit VSYC-27 to the NYYL calendar (yoyocontest.com) once it's dated.
+
+## Other club repos (tracked here)
+
+### yoyo-player-map: dependency majors
+
+Each is its own migration and PR:
+
+- react 18 → 19, with `@types/react` and `@types/react-dom`
+- eslint 9 → 10
+- react-leaflet 4 → 5, and react-leaflet-cluster 3 → 4
+- typescript 6 → 7
+- workflow 4 → 5. It also warns about an unmet peer (`@swc/core` 1.15.3 wanted, 1.16.13
+  installed); harmless today.
+- `@types/node` 25 → 26
+- `braces` stays allow-listed (GHSA-vfj7-8cjw-p6xm). Drop the entry once a patched release exists.
+
+### yoyo-player-map: product
+
+- About 43% of the non-English map strings are untranslated.
+- Confirm Googlebot gets past the Vercel checkpoint on `map.dmvthrowers.club`; if not, the map
+  can't be indexed.
+
+### Generated and template sites
+
+- Some generated pages skip from h1 to h3.
+- The troop site's `build.py` hasn't been synced back to the upstream template.
+- The map template has no `og:image`.
+- No deploy guard stops sample data from shipping to a live site.
+
+### VA-States and the registration template
+
+- Refactor inline styles and large components.
+- Remove the legacy `/admin` pages.
+- Contest app features (formats, contest-day tools, spectator pages): see the registration
+  template's `docs/CONTEST_APP_PLAN.md`, with its sources `CONTEST_APP_MASTER_PLAN.md` and
+  `FORMAT_RESEARCH.md`, linked from `docs/HUB_ROADMAP.md`.
