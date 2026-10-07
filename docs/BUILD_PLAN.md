@@ -67,11 +67,11 @@ Each is a few hours or less. Ordered by value.
 
 | # | Repo | Item | Status |
 |---|---|---|---|
-| 1.1 | site | `/.well-known/security.txt` with the contact address (Next 8) | ☐ |
-| 1.2 | site | Status link in every footer, not only contact (Next 11) | ☐ |
+| 1.1 | site | `/.well-known/security.txt` with the contact address (Next 8) | ◐ #142 |
+| 1.2 | site | Status link in every footer, not only contact (Next 11) | ◐ #143 |
 | 1.3 | site | Sitemap check in the site check (every page in `sitemap.xml`, no dead entries) — after #139 | ☐ |
-| 1.4 | site | Guide part numbering: renumber body headings per part (Next 6) | ☐ |
-| 1.5 | site | Cold-load flash on `vsyc26.html`: logo size and font-display (Next 9) | ☐ |
+| 1.4 | site | Guide part numbering: renumber body headings per part (Next 6) | ◐ #144 |
+| 1.5 | site | Cold-load flash on `vsyc26.html`: logo size (Next 9); fonts are 2.12 | ◐ #145 |
 | 1.6 | site | Raw hex colors in page `<style>` blocks → brand variables (Later) | ☐ |
 | 1.7 | site | Headings that skip a level (h1 → h3) | ☐ |
 | 1.8 | all three static templates | Deploy guard: the build warns, and CI fails, when sample data (example.org email, "Jordan Example") would ship to a real site | ☐ |
@@ -103,6 +103,7 @@ Each is a few hours or less. Ordered by value.
 | 2.9 | all templates | Releases: tag v1.0.0, `CHANGELOG.md`, an "update your copy" guide (Gap 2) | ☐ |
 | 2.10 | all templates | Showcase smoke test in CI: build every example, click every page in Chromium (Gap 5) | ☐ |
 | 2.11 | all static repos | Automated accessibility check (axe) in CI, then fix what it finds (Gap 3) | ☐ |
+| 2.12 | site | Self-host Playfair Display, DM Sans and Montserrat (OFL): ends the font swap flash and removes Google Fonts from every page's CSP | ☐ |
 
 ## Wave 3: the player map app (`yoyo-player-map`)
 
