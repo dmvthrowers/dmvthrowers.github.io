@@ -46,8 +46,8 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
    once no live JotForm forms remain; owner confirms wording). 16 pages (`about.html`,
    `index.html`, `teachers.html`, the guides) carry stale "jotform for VSYC-26" CSP comments.
    `AGENTS.md` still describes a JotForm embed on `vsyc26-sponsors.html`. One small PR.
-11. **Status page link in the footers**, not only on the contact page. Touches every footer, so
-    plan it as one change across all pages.
+11. ~~**Status page link in the footers**, not only on the contact page.~~ Done: every footer
+    links the UptimeRobot status page.
 
 ## Later
 
