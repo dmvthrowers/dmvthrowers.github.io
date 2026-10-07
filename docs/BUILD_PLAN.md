@@ -134,13 +134,13 @@ Each is a few hours or less. Ordered by value.
 
 | # | Repo | Item | Status |
 |---|---|---|---|
-| 2.1 | yoyo-contest-template | Bracket page built from config (no outside embed) | ☐ |
-| 2.2 | yoyo-contest-template | Optional merch and side-event pages | ☐ |
+| 2.1 | yoyo-contest-template | Bracket page built from config (no outside embed) | ◐ contest #9 |
+| 2.2 | yoyo-contest-template | Optional merch and side-event pages | ◐ contest #10 |
 | 2.3 | yoyoclub-template | Long-form guides: hub plus parts from `content/`, shared references, deep-link forwarder | ☐ |
 | 2.4 | site + templates | One shared JS: pick `mobile-enhancements.js` as the source, port `site.js` improvements both ways | ☐ |
-| 2.5 | site | HTML validation in CI (`vnu`) (Next 5) | ☐ |
-| 2.6 | site | External link checker (`lychee`, weekly, not per PR) (Next 4) | ☐ |
-| 2.7 | site | Guides in the main nav, one change across every page (Next 7) | ☐ |
+| 2.5 | site | HTML validation in CI (`vnu`) (Next 5) | ◐ #154 |
+| 2.6 | site | External link checker (`lychee`, weekly, not per PR) (Next 4) | ◐ #157 |
+| 2.7 | site | Guides in the main nav, one change across every page (Next 7) | ◐ #155 |
 | 2.8 | site | Conduct page: named team, steps, response time, changelog | ⛔ 0.7 |
 | 2.9 | all templates | Releases: tag v1.0.0, `CHANGELOG.md`, an "update your copy" guide (Gap 2) | ☐ |
 | 2.10 | all templates | Showcase smoke test in CI: build every example, click every page in Chromium (Gap 5) | ☐ |
