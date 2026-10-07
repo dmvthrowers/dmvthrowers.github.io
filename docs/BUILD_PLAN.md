@@ -124,11 +124,11 @@ Each is a few hours or less. Ordered by value.
 | 1.18 | yoyoclub-template | Optional "For schools" page (parity with `teachers.html`) and loaner program page | ◐ club #11 |
 | 1.19 | site | Press kit "Founded 2021" | ⛔ 0.11 |
 | 1.20 | site | #76: archive VSYC-26 pages and reset for VSYC-27, stale post-event wording | ⛔ 0.6 |
-| 1.6b | site | Map off-palette colors to brand colors (events, team, index, terms, about) | ☐ |
+| 1.6b | site | Map off-palette colors to brand colors (events, team, index, terms, about) | ◐ #151 |
 | 1.19b | Scouts-Template-Site | Generalized `DEPLOY.md` from the troop repo | ◐ scouts #11 |
 | 1.21 | site | Remove JotForm from `privacy.html` | ◐ #148 |
-| 1.22 | site | Title Case on guide headings | ☐ |
-| 1.23 | site | Regenerate `dmvt-share.png` and `vsyc26-share.png` with the brand fonts | ☐ |
+| 1.22 | site | Title Case on guide headings | ◐ #152 |
+| 1.23 | site | Regenerate `dmvt-share.png` and `vsyc26-share.png` with the brand fonts | ◐ #153 |
 
 ## Wave 2: medium static features
 
