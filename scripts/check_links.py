@@ -122,7 +122,9 @@ def main():
         if rows:
             print(f"\n{title} ({len(rows)})")
             for u, why in rows:
-                print(f"  - {u}\n      {why}; on {', '.join(sorted(links[u]))}")
+                pages = sorted(links[u])
+                on = ", ".join(pages[:3]) + (f" and {len(pages) - 3} more" if len(pages) > 3 else "")
+                print(f"  - {u}\n      {why}; on {on}")
     show("BROKEN", gone)
     show("Can't tell (blocked, slow or erroring)", warn)
     show("Moved (worth updating)", moved)
