@@ -79,8 +79,8 @@ Each is a few hours or less. Ordered by value.
 | 1.10 | yoyo-map-template | Marker clustering (vendored Leaflet.markercluster, MIT) | ☐ |
 | 1.11 | yoyo-map-template | Browse-by-place pages (one static page per region) | ☐ |
 | 1.12 | yoyo-map-template | Visibility per entry: city, region, or listed but not pinned | ☐ |
-| 1.13 | yoyoclub-template | Conduct settings: team, report link, steps, version, effective date | ☐ |
-| 1.14 | yoyo-contest-template | Same conduct settings | ☐ |
+| 1.13 | yoyoclub-template | Conduct settings: team, report link, steps, version, effective date | ◐ club #10 |
+| 1.14 | yoyo-contest-template | Same conduct settings | ◐ contest #8 |
 | 1.15 | Scouts-Template-Site | Photo permission and first-names-only settings, with `check_site.py` flagging full names | ☐ |
 | 1.16 | Scouts-Template-Site | Youth protection section (two-adult rule, official training links) as a setting | ☐ |
 | 1.17 | Scouts-Template-Site | Forms library page (permission, medical, registration forms with dates) | ☐ |
