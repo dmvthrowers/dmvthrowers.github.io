@@ -225,6 +225,33 @@ registration template's `docs/CONTEST_APP_MASTER_PLAN.md`.
    the club template (the contest app's feeds are planned separately). Generate one from the
    meetup rule.
 
+## Fair and safe: the code of conduct everywhere (2026-10-07)
+
+Goal: everyone is treated equitably and fairly, and every space we run (meetups, contests, the
+map, the calendar, online) is a safe place to be. The contest app's part is P1–P9 in the
+registration template's `docs/CONTEST_APP_MASTER_PLAN.md` (judge conflicts, published draws,
+appeals, accommodations, fee waivers, youth safety). The rest:
+
+- **A private way to report.** `code-of-conduct.html` asks people to email `contact@`, which goes to
+  one inbox. Add a confidential report form (through the forms system, P2) that reaches a named
+  conduct team of at least two people, skips anyone named in the report, and allows anonymous
+  reports. Link it from every footer.
+- **Name the conduct team and the steps.** Say who handles reports, how fast they respond, and what
+  can happen (a conversation, a warning, a break from events, a ban), so the process is known
+  before anyone needs it. Keep the version tag and effective date, and add a short changelog when
+  the code changes.
+- **At meetups:** a visible point of contact at every meetup (named on the events page and on site),
+  and the code of conduct posted at the table.
+- **Club and contest templates:** make the conduct team, report link, steps, version and effective
+  date settings, so every club that copies the template starts with a complete code, not just an
+  email address.
+- **Troop and pack template:** a youth protection section (two-adult rule, links to the official
+  training for each organization) as a setting.
+- **Event hub and map:** submitters agree to the code of conduct; events and entries that break it
+  are hidden; conduct reports go to the conduct team, not the general moderation queue.
+- **Review it yearly** with the people it protects, and publish what changed (fits "open at every
+  level").
+
 ## Features worth adding, from research (2026-10-07)
 
 What comparable tools do that ours don't, per repo. Sources: [The Yoyo Archive](https://yoyoarchive.org/yya-events)
