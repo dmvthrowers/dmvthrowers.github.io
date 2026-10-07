@@ -94,7 +94,6 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
 - **Contest app open questions:** the ten in the registration template's
   `docs/CONTEST_APP_MASTER_PLAN.md` (Part 6).
 
-- **Heading case on the guide pages:** Title Case (the brand rule) or leave as is.
 - **Share cards:** `dmvt-share.png` and `vsyc26-share.png` render in fallback system fonts.
   Regenerate them with Playfair Display?
 - **GitHub topics and descriptions** on the six template repos (set by hand in each repo's
