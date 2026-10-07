@@ -118,14 +118,14 @@ Each is a few hours or less. Ordered by value.
 | 1.12 | yoyo-map-template | Visibility per entry: city, region, or listed but not pinned | ◐ map #8 |
 | 1.13 | yoyoclub-template | Conduct settings: team, report link, steps, version, effective date | ◐ club #10 |
 | 1.14 | yoyo-contest-template | Same conduct settings | ◐ contest #8 |
-| 1.15 | Scouts-Template-Site | Photo permission and first-names-only settings, with `check_site.py` flagging full names | ☐ |
-| 1.16 | Scouts-Template-Site | Youth protection section (two-adult rule, official training links) as a setting | ☐ |
-| 1.17 | Scouts-Template-Site | Forms library page (permission, medical, registration forms with dates) | ☐ |
-| 1.18 | yoyoclub-template | Optional "For schools" page (parity with `teachers.html`) and loaner program page | ☐ |
+| 1.15 | Scouts-Template-Site | Photo permission and first-names-only settings, with `check_site.py` flagging full names | ◐ scouts #8 |
+| 1.16 | Scouts-Template-Site | Youth protection section (two-adult rule, official training links) as a setting | ◐ scouts #9 |
+| 1.17 | Scouts-Template-Site | Forms library page (permission, medical, registration forms with dates) | ◐ scouts #10 |
+| 1.18 | yoyoclub-template | Optional "For schools" page (parity with `teachers.html`) and loaner program page | ◐ club #11 |
 | 1.19 | site | Press kit "Founded 2021" | ⛔ 0.11 |
 | 1.20 | site | #76: archive VSYC-26 pages and reset for VSYC-27, stale post-event wording | ⛔ 0.6 |
 | 1.6b | site | Map off-palette colors to brand colors (events, team, index, terms, about) | ☐ |
-| 1.19b | Scouts-Template-Site | Generalized `DEPLOY.md` from the troop repo | ☐ |
+| 1.19b | Scouts-Template-Site | Generalized `DEPLOY.md` from the troop repo | ◐ scouts #11 |
 | 1.21 | site | Remove JotForm from `privacy.html` | ◐ #148 |
 | 1.22 | site | Title Case on guide headings | ☐ |
 | 1.23 | site | Regenerate `dmvt-share.png` and `vsyc26-share.png` with the brand fonts | ☐ |
