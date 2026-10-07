@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;"/>
   <title>Club Events · DMV Throwers</title>
   <meta name="description" content="Upcoming yo-yo meetups and events for DMV Throwers. Free monthly meetups every 3rd Sunday at Arlington Central Library in Arlington, VA. All ages welcome."/>
   <meta property="og:title" content="Club Events - DMV Throwers · Yo-Yo & Skill Toy Club"/>
@@ -40,8 +40,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
   <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
   <link rel="canonical" href="https://dmvthrowers.club/events.html"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <!-- JSON-LD: BreadcrumbList + one Event entry per scheduled meetup. Not rendered. -->
   <script type="application/ld+json">
 [
@@ -174,7 +172,9 @@
 ]
 </script>
   <link rel="stylesheet" href="assets/css/main.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preload" href="assets/fonts/playfair-display-latin-61a963.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-002a94.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/fonts.css"/>
   <style>
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     /* Fixed event card structure */

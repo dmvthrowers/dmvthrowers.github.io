@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;"/>
   <title>Results · VSYC-26 · Brought to You by Goodles</title>
   <meta name="description" content="VSYC-26 final results: division champions and Virginia State Champions for X Division, 1A, and Sport/Beginner/Junior. September 19, 2026 at Dulles Town Center."/>
   <meta property="og:title" content="Results · VSYC-26 · Brought to You by Goodles"/>
@@ -41,11 +41,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/vsyc26-va-logo-32.png"/>
   <link rel="icon" type="image/png" sizes="48x48" href="assets/images/vsyc26-va-logo-48.png"/>
   <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="assets/css/vsyc26.css?v=20260930" media="print" onload="this.media='all'"/>
   <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20260930"/></noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="preload" href="assets/fonts/playfair-display-latin-61a963.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="assets/fonts/montserrat-latin-49e242.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/fonts.css"/>
   <style>
     /* Click-to-play finals videos: the YouTube iframe is only created after a click */
     .vid-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }

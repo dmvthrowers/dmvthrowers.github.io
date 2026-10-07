@@ -15,7 +15,7 @@
   <base href="/"/>
   <!-- Content Security Policy: restrict scripts/frames/forms to trusted origins.
        jotform = VSYC-26 registration; formspree = contact form; Google Fonts for typography. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;"/>
   <title>DMV Throwers · Free Yo-Yo Club in DC, MD and VA</title>
   <meta name="description" content="DMV Throwers is the free yo-yo and skill toy club for DC, Northern Virginia and Maryland. Meetups every 3rd Sunday in Arlington. All ages welcome."/>
   <meta name="keywords" content="yo-yo club DC, yo-yo club Virginia, yo-yo club Maryland, DMV yo-yo, skill toy club Northern Virginia, kendama club DC, yo-yo Arlington Virginia, yoyo club Washington DC, DMV Throwers"/>
@@ -43,9 +43,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
   <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
   <link rel="canonical" href="https://dmvthrowers.club/"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet" crossorigin="anonymous"/>
+  <link rel="preload" href="assets/fonts/playfair-display-latin-61a963.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-002a94.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/fonts.css"/>
   <!-- JSON-LD structured data for search engines (schema.org/SportsClub). Not rendered. -->
   <script type="application/ld+json">
   {

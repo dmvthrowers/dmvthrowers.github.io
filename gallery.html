@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <base href="/"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;"/>
   <title>Gallery · DMV Throwers</title>
   <meta name="description" content="Photo gallery of DMV Throwers yo-yo club events and members. See our community in action at Arlington Central Library meetups."/>
   <meta property="og:title" content="Gallery - DMV Throwers · Yo-Yo & Skill Toy Club"/>
@@ -40,9 +40,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
   <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preload" href="assets/fonts/playfair-display-latin-61a963.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-002a94.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/fonts.css"/>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dmvthrowers.club/"},{"@type":"ListItem","position":2,"name":"Gallery","item":"https://dmvthrowers.club/gallery.html"}]}
   </script>

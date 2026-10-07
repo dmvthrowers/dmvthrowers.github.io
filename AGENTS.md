@@ -69,7 +69,7 @@ Every content page repeats the same outer skeleton:
 <head>
   charset / viewport / author / <base href="/">
   CSP meta / title / description / OG + Twitter
-  favicons / preconnect + font stylesheet
+  favicons / font preloads + assets/css/fonts.css (self-hosted, assets/fonts/)
   JSON-LD (BreadcrumbList, sometimes Event / FAQPage / Organization)
   <link rel="stylesheet" href="assets/css/main.css">
   <style> page-specific rules </style>
