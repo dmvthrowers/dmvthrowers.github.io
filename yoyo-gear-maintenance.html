@@ -12,8 +12,7 @@
   <meta name="author" content="DMV Throwers"/>
   <!-- base href="/" makes every relative URL resolve from the site root. -->
   <base href="/"/>
-  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
-       formspree for the contact form, Google Fonts for typography). -->
+  <!-- CSP: scripts, images and frames from this site only; fonts are self-hosted. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;"/>
   <title>Bearings and Response · Gear Guide · DMV Throwers</title>
   <meta name="description" content="Axles and response systems, bearings, cleaning, lube, and response pads. Part of the DMV Throwers Gear &amp; Maintenance guide for yo-yo players."/>
@@ -113,7 +112,7 @@
       .stack-table thead { display: none; }
       .stack-table caption { display: block; width: 100%; }
       .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
-      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: var(--white); }
       .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
       .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
       .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
@@ -164,6 +163,7 @@
       <a href="events.html" class="nav-link">CLUB EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="guides.html" class="nav-link">GUIDES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
@@ -183,6 +183,7 @@
   <a href="events.html">CLUB EVENTS</a>
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
+  <a href="guides.html">GUIDES</a>
   <a href="faq.html">FAQ</a>
     <a href="https://map.dmvthrowers.club/">MAP</a>
     <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
@@ -237,7 +238,7 @@
       </nav>
 
       <article id="axles" class="sci-sec">
-        <div class="sci-kicker">Part 4</div>
+        <div class="sci-kicker">Section 1</div>
         <h2 class="sci-title">Axles and Response Systems</h2>
         <p>The axle holds the two halves together. Originally the yo-yo spun right on the axle inside the string loop. Transaxle sleeves and ball bearings came later to cut friction and add spin time.<sup class="cite"><a href="yoyo-gear.html#ref-111" aria-label="Source 111">[111]</a></sup></p>
         <div class="table-scroll">
@@ -254,7 +255,7 @@
           </tbody>
         </table>
         </div>
-        <h3>Adjustable response systems</h3>
+        <h3>Adjustable Response Systems</h3>
         <ul class="sci-list">
           <li><strong>Henrys Viper (1997&ndash;98):</strong> the &ldquo;Quicktrick&rdquo; system. Twist the halves in or out to narrow or widen the gap on the fly.<sup class="cite"><a href="yoyo-gear.html#ref-68" aria-label="Source 68">[68]</a></sup></li>
           <li><strong>YoYoFactory F.A.S.T. 201 (2003):</strong> &ldquo;Fully Active Starburst Technology,&rdquo; invented by Hans Van Dan Elzen. Spokes form starbursts, and twisting the halves changes the gap: narrower is more responsive, wider sleeps longer. It needed almost no maintenance but was famously noisy, so players often pulled the spokes and filled the holes with silicone.<sup class="cite"><a href="yoyo-gear.html#ref-122" aria-label="Source 122">[122]</a></sup></li>
@@ -262,14 +263,14 @@
           <li><strong>Came-Yo Mondial:</strong> a port in the hub lets you add thick lube with a syringe without taking it apart.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a></sup></li>
           <li><strong>Mod spacers and shims:</strong> see <a href="yoyo-gear-mods.html#mods">Mods</a>.</li>
         </ul>
-        <h3>Maintenance by system</h3>
+        <h3>Maintenance by System</h3>
         <ul class="sci-list">
           <li><strong>Transaxle:</strong> transaxles often have very little response. A double loop of string around the sleeve helps; so does thick lube, at the cost of spin time.<sup class="cite"><a href="yoyo-gear.html#ref-148" aria-label="Source 148">[148]</a><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a></sup></li>
           <li><strong>Clutch:</strong> the clutch grips the O-ring on the sleeve. Remove the O-ring and it sleeps like a Fireball, but you&rsquo;ll have to return it yourself.<sup class="cite"><a href="yoyo-gear.html#ref-113" aria-label="Source 113">[113]</a></sup></li>
           <li><strong>Starburst:</strong> soft plastic starbursts can wear away and can&rsquo;t be replaced.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a></sup></li>
           <li><strong>Old-school DIY:</strong> before silicone, players cut homemade pads from brake pads.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a></sup></li>
         </ul>
-        <h3>Stripped and stuck axles</h3>
+        <h3>Stripped and Stuck Axles</h3>
         <ul class="sci-list">
           <li><strong>It&rsquo;s usually the yo-yo&rsquo;s threads, not the axle.</strong> Axles are steel and most yo-yos are aluminum, so the aluminum gives first. A damaged axle (bent, or chewed up by pliers) is cheap to replace, often about $2.<sup class="cite"><a href="yoyo-gear.html#ref-196" aria-label="Source 196">[196]</a></sup></li>
           <li><strong>Avoid cross-threading:</strong> line up the halves, turn them gently counterclockwise until you feel a click, then screw them together.<sup class="cite"><a href="yoyo-gear.html#ref-197" aria-label="Source 197">[197]</a></sup></li>
@@ -284,7 +285,7 @@
       </article>
 
       <article id="wood" class="sci-sec">
-        <div class="sci-kicker">Part 5</div>
+        <div class="sci-kicker">Section 2</div>
         <h2 class="sci-title">Wood and Fixed-Axle Care</h2>
         <p>A well-made wooden yo-yo takes as much abuse as a lot of plastics. Ed Haponik has never seen one wear out from regular play except for the axle.<sup class="cite"><a href="yoyo-gear.html#ref-152" aria-label="Source 152">[152]</a></sup></p>
         <h3>String</h3>
@@ -293,30 +294,30 @@
           <li>Fixed axles wear through string fast, so change it often.<sup class="cite"><a href="yoyo-gear.html#ref-149" aria-label="Source 149">[149]</a></sup></li>
           <li>Some players rub a tiny bit of wax lip balm on the string for grip; a little goes a long way, and more makes it grabby.<sup class="cite"><a href="yoyo-gear.html#ref-149" aria-label="Source 149">[149]</a><a href="yoyo-gear.html#ref-154" aria-label="Source 154">[154]</a></sup></li>
         </ul>
-        <h3>Response and play</h3>
+        <h3>Response and Play</h3>
         <ul class="sci-list">
           <li><strong>Warm up.</strong> Response is friction, and friction is heat, so temperature and humidity matter. A few loops and hops warm up the string and axle.<sup class="cite"><a href="yoyo-gear.html#ref-150" aria-label="Source 150">[150]</a></sup></li>
           <li><strong>The &ldquo;thud&rdquo;:</strong> a small thud at the end of the string is normal on many fixed axles. Adjust string tension, or try a thicker string.<sup class="cite"><a href="yoyo-gear.html#ref-150" aria-label="Source 150">[150]</a></sup></li>
           <li><strong>Break-in:</strong> a rough-feeling gap may be the response. Play loops and hops to break it in, or saw the string back and forth in the gap.<sup class="cite"><a href="yoyo-gear.html#ref-148" aria-label="Source 148">[148]</a></sup></li>
         </ul>
-        <h3>Take-apart wooden yo-yos</h3>
+        <h3>Take-Apart Wooden Yo-Yos</h3>
         <ul class="sci-list">
           <li><strong>Don&rsquo;t overtighten.</strong> Cranking down can warp a wooden axle sleeve.<sup class="cite"><a href="yoyo-gear.html#ref-151" aria-label="Source 151">[151]</a></sup></li>
           <li><strong>If it keeps unscrewing,</strong> wrap the threads with Teflon tape, or swap the O-ring for a solid shim cut from card stock or clear plastic packaging.<sup class="cite"><a href="yoyo-gear.html#ref-151" aria-label="Source 151">[151]</a></sup></li>
           <li><strong>Replacement axles</strong> are the main wear part; makers like TMBR sell spares.<sup class="cite"><a href="yoyo-gear.html#ref-152" aria-label="Source 152">[152]</a></sup></li>
         </ul>
-        <h3>Fixing wood</h3>
+        <h3>Fixing Wood</h3>
         <ul class="sci-list">
           <li>If edges get rough, a few minutes with 320-grit sandpaper smooths them. Bent wood can sometimes be bent back into shape.<sup class="cite"><a href="yoyo-gear.html#ref-152" aria-label="Source 152">[152]</a></sup></li>
           <li>Some players lightly sand a rough gap with medium-grit paper on a putty knife.<sup class="cite"><a href="yoyo-gear.html#ref-148" aria-label="Source 148">[148]</a></sup></li>
         </ul>
-        <h3>DIY: turn your own</h3>
+        <h3>DIY: Turn Your Own</h3>
         <p>One forum maker turned a playable fixed-axle yo-yo on a small hobby lathe in 30 minutes, using a hardwood body and a 5/16&Prime; dowel axle in a tight friction fit so it could come apart. A denser white oak body with an osage orange axle played far better. A later take-apart version used a headless 8-32 screw in brass threaded inserts with a walnut axle sleeve.<sup class="cite"><a href="yoyo-gear.html#ref-153" aria-label="Source 153">[153]</a></sup> Lathe work needs adult supervision and proper training. See <a href="yoyo-science.html#diy">Yo-Yo Science &amp; DIY</a> for more on making your own.</p>
       <p class="see-photos"><strong>See photos:</strong> <a href="https://yoyoarchive.org/articles/spinworthy-yoyos-keeping-fixed-axle-moving-forward" target="_blank" rel="noopener noreferrer">YoYo Archive: Spinworthy yo-yos and fixed axle</a> &middot; <a href="https://yoyoarchive.org/material/wood" target="_blank" rel="noopener noreferrer">YoYo Archive: wooden yo-yos</a></p>
       </article>
 
       <article id="bearings" class="sci-sec">
-        <div class="sci-kicker">Part 6</div>
+        <div class="sci-kicker">Section 3</div>
         <h2 class="sci-title">Bearings</h2>
         <p>A ball bearing has an outer race, an inner race, and balls between them, usually eight, held in place by a cage. Thin shields and C-clips keep out dirt; many players remove the shields for easier cleaning.<sup class="cite"><a href="yoyo-gear.html#ref-4" aria-label="Source 4">[4]</a><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></p>
         <div class="ref-fig-row"><figure class="ref-fig"><picture><source srcset="assets/images/reference/ball-bearing-cutaway.webp" type="image/webp"/><img src="assets/images/reference/ball-bearing-cutaway.jpg" alt="Line drawing of a ball bearing cut open to show the balls between the inner and outer rings" width="800" height="480" loading="lazy"/></picture><figcaption>Inside a ball bearing: steel balls roll between an inner and an outer race.<span class="fig-credit">Pearson Scott Foresman, public domain, via <a href="https://commons.wikimedia.org/wiki/File:Ball_Bearing_-_open_(PSF).png" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span></figcaption></figure><figure class="ref-fig"><picture><source srcset="assets/images/reference/bearing-yoyo.webp" type="image/webp"/><img src="assets/images/reference/bearing-yoyo.jpg" alt="Two gold metal yo-yo halves on carpet, one showing the ball bearing in its hub" width="1000" height="584" loading="lazy"/></picture><figcaption>A metal yo-yo apart, with the ball bearing seated in the hub.<span class="fig-credit">Sarah Jones, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Yo-yo_with_bearing_inside.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span></figcaption></figure></div>
@@ -345,14 +346,14 @@
             <tr><td data-label="Size"><strong>M</strong> &middot; special order</td><td data-label="Dimensions">9 &times; 17 &times; 5 mm</td><td data-label="Part no.">Not listed</td><td data-label="Where you&rsquo;ll find it">YoYoJam Big Yo 2; bigger than anything else on this list<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></td></tr>
           </tbody>
         </table>
-        <h3>MR85: the newest small size</h3>
+        <h3>MR85: The Newest Small Size</h3>
         <p>When MK1 Yoyos and Spinworthy turned the wooden Bloodcell into the metal RBC in 2021, they skipped the usual A bearing for an MR85, because its 8 mm outer diameter matches the wooden original&rsquo;s axle.<sup class="cite"><a href="yoyo-gear.html#ref-163" aria-label="Source 163">[163]</a></sup> The similar DocPop Weekender takes a standard A bearing instead.<sup class="cite"><a href="yoyo-gear.html#ref-164" aria-label="Source 164">[164]</a></sup> Spinworthy&rsquo;s Flying Lemon later used a 4 mm wide MR85 for unresponsive play.<sup class="cite"><a href="yoyo-gear.html#ref-166" aria-label="Source 166">[166]</a></sup></p>
         <ul class="sci-list">
           <li><strong>Keeping it responsive:</strong> the races are so small that thick lube tends to smear onto the string. Players apply it with a toothpick, run it dry, or buy greased, rubber-shielded MR85s.<sup class="cite"><a href="yoyo-gear.html#ref-168" aria-label="Source 168">[168]</a></sup></li>
           <li><strong>Make it a fixie:</strong> fixed-axle fans fill MR85s with steel epoxy to make &ldquo;bearing blanks,&rdquo; turning an RBC into a fixed-axle yo-yo.<sup class="cite"><a href="yoyo-gear.html#ref-167" aria-label="Source 167">[167]</a></sup></li>
           <li><strong>Buying one:</strong> search &ldquo;MR85&rdquo; and check the width. Flat ceramic MR85s exist; concave ceramic versions are hard to find.<sup class="cite"><a href="yoyo-gear.html#ref-165" aria-label="Source 165">[165]</a></sup></li>
         </ul>
-        <h3>Shapes and types</h3>
+        <h3>Shapes and Types</h3>
         <ul class="sci-list">
           <li><strong>Flat:</strong> the basic stainless steel 8-ball bearing.<sup class="cite"><a href="yoyo-gear.html#ref-48" aria-label="Source 48">[48]</a></sup></li>
           <li><strong>Centering (concave):</strong> the KonKave (2003) has a curved outer race that keeps the string centered and away from the response. Others followed: YoYoFactory&rsquo;s Center Trac (flat with flared edges), V-shaped designs, YoYoRecreation&rsquo;s DS, grooved bearings, and the stepped CLYW &times; iYoYo Pixel.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a><a href="yoyo-gear.html#ref-46" aria-label="Source 46">[46]</a></sup></li>
@@ -360,7 +361,7 @@
           <li><strong>Ceramic:</strong> silicon nitride balls in a steel race; pricier and more sensitive to shock.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
           <li><strong>Sealed and lubed:</strong> One Drop&rsquo;s Greasebucket is silicone-sealed and packed with lube for a consistently responsive, no-maintenance feel.<sup class="cite"><a href="yoyo-gear.html#ref-49" aria-label="Source 49">[49]</a></sup></li>
         </ul>
-        <h3>Specialty bearings: non-standard but interesting</h3>
+        <h3>Specialty Bearings: Non-Standard but Interesting</h3>
         <ul class="sci-list">
           <li><strong>More centering shapes:</strong> Henrys&rsquo; V-shaped Trapeze (D size only), B.I.S.T.&rsquo;s V-Cave, Twisted Stringz&rsquo; 10-ball Trifecta (KonKave curve plus a groove), and Born Crucial&rsquo;s grooved bearings.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
           <li><strong>Treated and coated:</strong> YoYoFactory&rsquo;s Dorothy was meant to run dry and never be cleaned, but some players found it prone to locking up. The Gold bearing, commissioned by Takahiko &ldquo;Taka&rdquo; Hasegawa, got its color from a treatment that wears off. Infinite Illusions&rsquo; Mercury bearings (no actual mercury) used a factory cleaning process for longer spins; the Mercury Fat Lip widened the inner race so shims can&rsquo;t touch the shields.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
@@ -368,7 +369,7 @@
           <li><strong>NSK:</strong> precision Japanese bearings with a curved, string-centering race that need little maintenance, though their tight tolerances can lock up.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
           <li><strong>Ruby:</strong> Wolf Yoyo Works built experimental bearings with real ruby balls. They were never sold.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
         </ul>
-        <h3>Makers who built their own: Tom Kuhn, Custom, and Dif-e-Yo</h3>
+        <h3>Makers Who Built Their Own: Tom Kuhn, Custom, and Dif-e-Yo</h3>
         <p><strong>Tom Kuhn.</strong> A San Francisco dentist and 1955 neighborhood Duncan champion, Dr. Tom Kuhn made the No Jive 3-in-1, the all-metal Silver Bullet, and in 1990 the Silver Bullet 2 (SB-2), the first metal ball-bearing yo-yo.<sup class="cite"><a href="yoyo-gear.html#ref-158" aria-label="Source 158">[158]</a><a href="yoyo-gear.html#ref-159" aria-label="Source 159">[159]</a></sup> The SB-2 used Kuhn&rsquo;s own small I-size bearing and a patented adjustable gap: screw the bearing cups in or out with a small tool.<sup class="cite"><a href="yoyo-gear.html#ref-159" aria-label="Source 159">[159]</a><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup> With no response system, players double-looped the string around the axle to get it to return. In 1999 Kuhn added his patented cloth Turbo Discs.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-gear.html#ref-159" aria-label="Source 159">[159]</a><a href="yoyo-gear.html#ref-158" aria-label="Source 158">[158]</a></sup> An SB-2 flew aboard Space Shuttle Atlantis in 1992, and Kuhn joined the National Yo-Yo Hall of Fame in 2006.<sup class="cite"><a href="yoyo-gear.html#ref-158" aria-label="Source 158">[158]</a><a href="yoyo-gear.html#ref-159" aria-label="Source 159">[159]</a></sup></p>
         <p><strong>Custom Products.</strong> This Arizona maker used its own tiny G-size bearing until switching to A in 2008.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup> Eric Wolff converted a fixed-axle Custom Reactor to a bearing and added response strips cut from a Rubbermaid no-slip bathtub tread. That idea became Custom&rsquo;s &ldquo;Performance Rings,&rdquo; and it drew a Brake Pad patent lawsuit from Playmaxx. After a judge ruled against Custom, the two settled and Custom redesigned the rings.<sup class="cite"><a href="yoyo-gear.html#ref-160" aria-label="Source 160">[160]</a><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></p>
         <p><strong>Dif-e-Yo and Frank Difeo.</strong> Frank P. Difeo (1952&ndash;2024) trained at Haverhill Trade School in Massachusetts and spent 18 years as a tool maker at Lucent Technologies before retiring into aluminum yo-yos around 2001.<sup class="cite"><a href="yoyo-gear.html#ref-156" aria-label="Source 156">[156]</a><a href="yoyo-gear.html#ref-155" aria-label="Source 155">[155]</a></sup> He machined on a mill instead of the usual lathe, which let him cut unusual hub shapes.<sup class="cite"><a href="yoyo-gear.html#ref-155" aria-label="Source 155">[155]</a></sup> His 2002 Daizzy-Fly, a 55-piece serial-numbered collector run, used a grooved bearing to center the string; in 2003 he refined it into the KonKave, which comes in A, C, D, and L sizes (plus a ceramic C). Upgrading another yo-yo with his conversion kits became known as &ldquo;KonKaving.&rdquo;<sup class="cite"><a href="yoyo-gear.html#ref-157" aria-label="Source 157">[157]</a><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup> He also made Dif Pads (2003) and Dif-Binders (2015); see <a href="yoyo-gear-maintenance.html#response">Response Pads</a>.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a><a href="yoyo-gear.html#ref-156" aria-label="Source 156">[156]</a></sup> Frank Difeo passed away on March 3, 2024.<sup class="cite"><a href="yoyo-gear.html#ref-156" aria-label="Source 156">[156]</a></sup></p>
@@ -377,7 +378,7 @@
       </article>
 
       <article id="cleaning" class="sci-sec">
-        <div class="sci-kicker">Part 7</div>
+        <div class="sci-kicker">Section 4</div>
         <h2 class="sci-title">Cleaning a Bearing</h2>
         <p>Clean a bearing when it gets noisy, gritty, or too responsive. New bearings are often lubricated to prevent rust, which can make them responsive until cleaned.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
         <div class="try-box">
@@ -391,14 +392,14 @@
           <li>Blow it dry with compressed air, or spin it on a pencil as it dries, so no residue stays behind.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
           <li>Add a drop of lube if you want it quieter or more responsive (see below).<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></li>
         </ol>
-        <h3>Removing a stuck bearing</h3>
+        <h3>Removing a Stuck Bearing</h3>
         <ul class="sci-list">
           <li><strong>Needle-nose pliers:</strong> YoYoTricks&rsquo; G2 Jake grips the bearing with needle-nose pliers and wiggles it off. Wiggle, don&rsquo;t just pull.<sup class="cite"><a href="yoyo-gear.html#ref-201" aria-label="Source 201">[201]</a></sup></li>
           <li><strong>The string trick:</strong> lay the middle of a string in the deepest part of the bearing seat, screw the yo-yo together tight, then unscrew. The bearing usually moves to the other half on the string, and you pull both ends to pop it off.<sup class="cite"><a href="yoyo-gear.html#ref-201" aria-label="Source 201">[201]</a></sup></li>
           <li><strong>Still stuck:</strong> squeeze a bearing removal tool with pliers for more leverage, or put the yo-yo in the freezer for about 30 minutes first.<sup class="cite"><a href="yoyo-gear.html#ref-203" aria-label="Source 203">[203]</a></sup></li>
           <li><strong>Prevent it:</strong> press the bearing onto its seat before you screw the yo-yo together. Letting the axle force it on can damage the seat and make the bearing seize.<sup class="cite"><a href="yoyo-gear.html#ref-202" aria-label="Source 202">[202]</a></sup></li>
         </ul>
-        <h3>Which solvent?</h3>
+        <h3>Which Solvent?</h3>
         <ul class="sci-list">
           <li><strong>Mineral spirits (paint thinner)</strong> and <strong>lighter fluid</strong> are common choices; many players use lighter fluid, which is gentler on plastics than acetone.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a><a href="yoyo-gear.html#ref-25" aria-label="Source 25">[25]</a></sup></li>
           <li><strong>Acetone</strong> is a strong solvent, but it can damage plastics and paint, and the YoYo Wiki warns it can promote rust.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a><a href="yoyo-gear.html#ref-25" aria-label="Source 25">[25]</a></sup></li>
@@ -412,7 +413,7 @@
       </article>
 
       <article id="lube" class="sci-sec">
-        <div class="sci-kicker">Part 8</div>
+        <div class="sci-kicker">Section 5</div>
         <h2 class="sci-title">Lube</h2>
         <p>Lube does <strong>not</strong> clean a bearing. It keeps it quiet and protected, and it is optional.<sup class="cite"><a href="yoyo-gear.html#ref-14" aria-label="Source 14">[14]</a></sup> A dry bearing is the least responsive but noisier, wears faster, and can rust.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
         <ul class="sci-list">
@@ -423,9 +424,9 @@
         </ul>
         <h3>History</h3>
         <p>Players once used 3-in-1 oil for a responsive yo-yo and trumpet valve oil for an unresponsive one. Dedicated yo-yo lubes followed from brands like YoYoJam.<sup class="cite"><a href="yoyo-gear.html#ref-3" aria-label="Source 3">[3]</a></sup></p>
-        <h3>Dedicated products</h3>
+        <h3>Dedicated Products</h3>
         <p><a href="https://shop.yoyoexpert.com/products/yoyojam-lube" target="_blank" rel="noopener noreferrer">YoYoJam Thick and Thin Lube</a><sup class="cite"><a href="yoyo-gear.html#ref-51" aria-label="Source 51">[51]</a></sup>, <a href="https://shop.yoyoexpert.com/products/one-drop-v4m-lube" target="_blank" rel="noopener noreferrer">One Drop V4M</a> (thin)<sup class="cite"><a href="yoyo-gear.html#ref-50" aria-label="Source 50">[50]</a></sup>, and <a href="https://shop.yoyoexpert.com/products/yyf-performance-oil" target="_blank" rel="noopener noreferrer">YoYoFactory Performance Oil</a> (Long Spin or Loop/Response).<sup class="cite"><a href="yoyo-gear.html#ref-52" aria-label="Source 52">[52]</a></sup></p>
-        <h3>Low-cost DIY options</h3>
+        <h3>Low-Cost DIY Options</h3>
         <ul class="sci-list">
           <li><strong>Sewing machine oil</strong> works as a thin lube; players report it performs as well as yo-yo lube.<sup class="cite"><a href="yoyo-gear.html#ref-26" aria-label="Source 26">[26]</a><a href="yoyo-gear.html#ref-27" aria-label="Source 27">[27]</a></sup></li>
           <li><strong>Skateboard bearing lube</strong> has a similar thickness to thin yo-yo lube and costs less per ounce.<sup class="cite"><a href="yoyo-gear.html#ref-27" aria-label="Source 27">[27]</a></sup></li>
@@ -435,20 +436,20 @@
       </article>
 
       <article id="response" class="sci-sec">
-        <div class="sci-kicker">Part 9</div>
+        <div class="sci-kicker">Section 6</div>
         <h2 class="sci-title">Response Pads and Silicone</h2>
         <p>The response system grabs the string so the yo-yo can wind back up. When pads wear out or fall out, the yo-yo slips and won&rsquo;t return cleanly.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></p>
         <h3>History</h3>
         <ul class="mini-tl"><li><span>Fixed axle</span> Friction from the axle itself winds the string.</li><li><span>c. 1950</span> A Duncan employee proposes the raised starburst around the axle.</li><li><span>Playmaxx</span> Reverse starbursts (grooves), then rubber Brake Pads that look like cork. Brake Pads became the basis of modern replaceable pads.</li><li><span>Late 1990s</span> Friction stickers (patented in Britain in 1984) catch on with the rise of aluminum yo-yos.</li><li><span>YoYoJam</span> Rubber O-rings in a groove around the axle, often shaved flush.</li><li><span>Silicone</span> Flowable silicone and silicone pads take over for unresponsive play.</li></ul>
         <p class="sci-note">Timeline from the YoYo Wiki.<sup class="cite"><a href="yoyo-gear.html#ref-7" aria-label="Source 7">[7]</a><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup> O-rings faded because black rings left string dirty and grew less reliable as gaps widened; silicone was more consistent.<sup class="cite"><a href="yoyo-gear.html#ref-32" aria-label="Source 32">[32]</a></sup></p>
-        <h3>Pad sizes</h3>
+        <h3>Pad Sizes</h3>
         <ul class="sci-list">
           <li><strong>19mm &ldquo;Large Slim&rdquo;</strong> silicone pads are the most common size today. Central Bearing Company makes them with YoYoFactory; other brands, including Duncan, make compatible 19mm pads.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a><a href="yoyo-gear.html#ref-43" aria-label="Source 43">[43]</a><a href="yoyo-gear.html#ref-45" aria-label="Source 45">[45]</a></sup></li>
           <li>Standard 19mm pads are about 1&ndash;1.1mm thick; One Drop&rsquo;s are thinner, about 0.7&ndash;0.8mm.<sup class="cite"><a href="yoyo-gear.html#ref-44" aria-label="Source 44">[44]</a></sup></li>
           <li>Other sizes include small pads for A-size bearing yo-yos, 21mm &ldquo;Large Broad,&rdquo; and the older .555 size.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a><a href="yoyo-gear.html#ref-33" aria-label="Source 33">[33]</a></sup></li>
         </ul>
         <p>Pad recesses come in four standards: small, large, .555 (named for its .555-inch inner diameter), and the silicone groove. Small pads fit A-bearing yo-yos with no lip; large pads fit A or D yo-yos with a lip, or C yo-yos without one; .555 pads fit C yo-yos with a lip.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></p>
-        <h3>Pads through the years</h3>
+        <h3>Pads through the Years</h3>
         <ul class="sci-list">
           <li><strong>Playmaxx Brake Pads (1997):</strong> thick, cork-looking rubber with teeth arranged in a starburst, first on the ProYo Turbo Bumble Bee. Duncan took them over when it bought Playmaxx, and they became the basis for every modern pad. YoYoFactory re-released them in 2023 as Retro Response Brake Pads with the Turbo Grind Machine.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
           <li><strong>Tom Kuhn Turbo Discs (1999):</strong> the only pads made of cloth, with patented fibers that interact with the string. The YoYo Wiki notes that 3M Durapore medical tape works the same way.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a><a href="yoyo-gear.html#ref-158" aria-label="Source 158">[158]</a></sup></li>
@@ -460,7 +461,7 @@
           <li><strong>IrPads:</strong> handmade pink silicone pads by 2007 East Japan 1A champion Ryosuke Iwasawa, made in more sizes and thicknesses than any other pad.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
           <li><strong>Ghost Pads and carbon fiber:</strong> Paul Yath made clear pads from flowable silicone, plus carbon fiber stickers that some players avoided over worries they could cut string.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
         </ul>
-        <h3>Niche response tricks and mods</h3>
+        <h3>Niche Response Tricks and Mods</h3>
         <ul class="sci-list">
           <li><strong>Hybrid response:</strong> YoYoJam popularized one O-ring on one side and a starburst on the other.<sup class="cite"><a href="yoyo-gear.html#ref-178" aria-label="Source 178">[178]</a></sup></li>
           <li><strong>Cut your own reverse starburst:</strong> because it&rsquo;s just radial grooves, players cut them into plastic and metal yo-yos with a sharp tool; the original Henrys Viper was a common target.<sup class="cite"><a href="yoyo-gear.html#ref-178" aria-label="Source 178">[178]</a></sup></li>
@@ -470,7 +471,7 @@
           <li><strong>Recessing mods:</strong> modders lathe a pocket so pads sit flush, like Takeshi Kamisato&rsquo;s recessed Freehand Zero.<sup class="cite"><a href="yoyo-gear.html#ref-178" aria-label="Source 178">[178]</a></sup></li>
           <li><strong>Electrodynamic bearings:</strong> a bearing that uses eddy currents from a rotor spinning in a magnet field, with no active controller, supplied by Magnetal AB.<sup class="cite"><a href="yoyo-gear.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
         </ul>
-        <h3>Odd pads: non-standard but interesting</h3>
+        <h3>Odd Pads: Non-Standard but Interesting</h3>
         <ul class="sci-list">
           <li>YoYoFactory&rsquo;s early Redline yo-yos came with three sticker materials: pencil-eraser rubber, three-ply river-raft material, and faux belt leather.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
           <li>Chu Pads were thin plastic, thinner than a thin Dif Pad, for just a hint of response.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
@@ -478,7 +479,7 @@
           <li>Henrys&rsquo; Gecko Pads click into place with no adhesive but fit only Henrys yo-yos.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
           <li>Even Bandai&rsquo;s motorized Hyper Infinity had replaceable rubber pads.<sup class="cite"><a href="yoyo-gear.html#ref-8" aria-label="Source 8">[8]</a></sup></li>
         </ul>
-        <h3>Replacing pads</h3>
+        <h3>Replacing Pads</h3>
         <ol class="sci-steps">
           <li>Unscrew the yo-yo and find the response groove around the bearing seat.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></li>
           <li>Clean the groove with a cotton swab to remove debris and old adhesive.<sup class="cite"><a href="yoyo-gear.html#ref-1" aria-label="Source 1">[1]</a></sup></li>
@@ -490,7 +491,7 @@
           <li><strong>Reusing a pad:</strong> you can pull a pad and put it back if you don&rsquo;t stretch it. Park it on the backing paper from an old sticker.<sup class="cite"><a href="yoyo-gear.html#ref-210" aria-label="Source 210">[210]</a></sup></li>
           <li><strong>Old silicone:</strong> pick it out with a wooden toothpick; a broken toothpick&rsquo;s flat end works like a tiny brush. A few leftover bits are fine because new flowable silicone bonds over them. Vinegar softens uncured silicone, but your yo-yo will smell like pickles.<sup class="cite"><a href="yoyo-gear.html#ref-211" aria-label="Source 211">[211]</a><a href="yoyo-gear.html#ref-212" aria-label="Source 212">[212]</a></sup></li>
         </ul>
-        <h3>DIY: flowable silicone</h3>
+        <h3>DIY: Flowable Silicone</h3>
         <p>Flowable silicone is a windshield and glass sealant sold at auto parts and hardware stores. YoYoExpert sells a Permatex tube for yo-yos.<sup class="cite"><a href="yoyo-gear.html#ref-42" aria-label="Source 42">[42]</a></sup></p>
         <ol class="sci-steps">
           <li>Fill the response groove with flowable silicone and smooth it out.<sup class="cite"><a href="yoyo-gear.html#ref-42" aria-label="Source 42">[42]</a></sup></li>
@@ -552,12 +553,14 @@
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
         <a href="resources.html" class="footer-link">Resources</a>
+        <a href="guides.html" class="footer-link">Guides</a>
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://stats.uptimerobot.com/7XjeeDhuSq" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Site status (opens in new tab)">Status</a>
       </nav>
     </div>
     <nav aria-label="Guides" class="footer-guides">

@@ -12,8 +12,7 @@
   <meta name="author" content="DMV Throwers"/>
   <!-- base href="/" makes every relative URL resolve from the site root. -->
   <base href="/"/>
-  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
-       formspree for the contact form, Google Fonts for typography). -->
+  <!-- CSP: scripts and images from this site only; frames from youtube-nocookie.com; fonts are self-hosted. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;"/>
   <title>Beyond the Basics · How to Yo-Yo · DMV Throwers</title>
   <meta name="description" content="Keep learning after your first 100 tricks: make your own tricks, see how tricks evolved, and get tips from experienced players. Part 4 of 4."/>
@@ -113,7 +112,7 @@
       .stack-table thead { display: none; }
       .stack-table caption { display: block; width: 100%; }
       .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
-      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: var(--white); }
       .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
       .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
       .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
@@ -168,6 +167,7 @@
       <a href="events.html" class="nav-link">CLUB EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="guides.html" class="nav-link">GUIDES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
@@ -187,6 +187,7 @@
   <a href="events.html">CLUB EVENTS</a>
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
+  <a href="guides.html">GUIDES</a>
   <a href="faq.html">FAQ</a>
     <a href="https://map.dmvthrowers.club/">MAP</a>
     <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
@@ -241,15 +242,15 @@
       </nav>
 
       <article id="beyond" class="sci-sec">
-        <div class="sci-kicker">Part 10</div>
+        <div class="sci-kicker">Section 1</div>
         <h2 class="sci-title">Keep Learning: Beyond the First 100</h2>
         <p>After the basics, the best way to keep growing is to learn with other people. These communities post a new trick on a schedule, cheer each other on, and help when you&rsquo;re stuck.</p>
-        <h3>Weekly trick clubs</h3>
+        <h3>Weekly Trick Clubs</h3>
         <ul class="sci-list">
           <li><strong><a href="https://forums.yoyoexpert.com/t/trick-a-week-2026-32-coyote-combo/438983" target="_blank" rel="noopener noreferrer">Trick-a-Week</a> (YoYoExpert Forums):</strong> a tutorial posted every Friday for the year. It isn&rsquo;t a race: the goal is to try a new trick each week, pick up new elements, and revisit old weeks any time. Posting videos is optional but encouraged.<sup class="cite"><a href="learn-yoyo.html#ref-59" aria-label="Source 59">[59]</a><a href="learn-yoyo.html#ref-58" aria-label="Source 58">[58]</a></sup> It has run yearly, with a new thread for 2026.<sup class="cite"><a href="learn-yoyo.html#ref-57" aria-label="Source 57">[57]</a><a href="learn-yoyo.html#ref-56" aria-label="Source 56">[56]</a></sup> An earlier 2020 version was aimed at players around the Kwyjibo level.<sup class="cite"><a href="learn-yoyo.html#ref-60" aria-label="Source 60">[60]</a></sup></li>
           <li><strong><a href="https://forums.yoyoexpert.com/t/average-throwers-club-summer-school/442831" target="_blank" rel="noopener noreferrer">Average Throwers Club</a> (ATC), from <a href="https://www.gsquaredyoyos.com/" target="_blank" rel="noopener noreferrer">G Squared (G2) YoYos</a>:</strong> a free club for building your trick collection, with tricks of varying difficulty each week. It runs in G2&rsquo;s Discord, where members give live video help and earn points toward a season championship and credits toward merch. There are club meets on Zoom every other Thursday, and a separate basics club for newer players.<sup class="cite"><a href="learn-yoyo.html#ref-61" aria-label="Source 61">[61]</a><a href="learn-yoyo.html#ref-63" aria-label="Source 63">[63]</a></sup> Season 1 ended with a casual championship streamed live on YouTube.<sup class="cite"><a href="learn-yoyo.html#ref-62" aria-label="Source 62">[62]</a></sup></li>
         </ul>
-        <h3>Style threads</h3>
+        <h3>Style Threads</h3>
         <ul class="sci-list">
           <li><a href="https://forums.yoyoexpert.com/t/2a-tuesdays-a-looping-thread/313632" target="_blank" rel="noopener noreferrer">2A Tuesdays</a> for looping.<sup class="cite"><a href="learn-yoyo.html#ref-64" aria-label="Source 64">[64]</a></sup></li>
           <li><a href="https://forums.yoyoexpert.com/t/3a-thursday-3a-thread/385519" target="_blank" rel="noopener noreferrer">3A Thursday</a> for two-handed string tricks, with tips from experienced 3A players.<sup class="cite"><a href="learn-yoyo.html#ref-65" aria-label="Source 65">[65]</a></sup></li>
@@ -258,16 +259,16 @@
           <li><a href="https://forums.yoyoexpert.com/t/fixed-axle-february-2026-presented-by-yybc/440253" target="_blank" rel="noopener noreferrer">Fixed Axle February</a>, run by the YoYo Boomers Club, and the ongoing <a href="https://forums.yoyoexpert.com/t/the-0a-thread-fixed-axle-modern-responsive/304228" target="_blank" rel="noopener noreferrer">0A Thread</a> for modern responsive.<sup class="cite"><a href="learn-yoyo.html#ref-68" aria-label="Source 68">[68]</a><a href="learn-yoyo.html#ref-69" aria-label="Source 69">[69]</a></sup></li>
         </ul>
         <div class="vid-embed" data-yt="kTqHnbTWxF8"><span class="vid-title">Fixed Axle February tutorial: Dazzling Dave</span><button type="button" class="vid-play" aria-label="Play video: Fixed Axle February tutorial: Dazzling Dave">PLAY VIDEO</button><span class="vid-note">From the YoYo Boomers Club channel. Nothing loads from YouTube until you press play. <a href="https://www.youtube.com/watch?v=kTqHnbTWxF8" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></span></div>
-        <h3>Share your progress</h3>
+        <h3>Share Your Progress</h3>
         <p>Post wins in <a href="https://forums.yoyoexpert.com/t/the-i-finally-landed-it-thread/24607" target="_blank" rel="noopener noreferrer">&ldquo;I Finally Landed It!&rdquo;</a>, see what others are practicing in <a href="https://forums.yoyoexpert.com/t/what-trick-are-you-working-on-pre-2025/57231" target="_blank" rel="noopener noreferrer">&ldquo;What trick are you working on?&rdquo;</a>, and share your own creations in the <a href="https://forums.yoyoexpert.com/t/post-a-trick-thread/299367" target="_blank" rel="noopener noreferrer">Post a Trick thread</a>.<sup class="cite"><a href="learn-yoyo.html#ref-70" aria-label="Source 70">[70]</a><a href="learn-yoyo.html#ref-71" aria-label="Source 71">[71]</a><a href="learn-yoyo.html#ref-72" aria-label="Source 72">[72]</a></sup></p>
-        <h3>Go deeper</h3>
+        <h3>Go Deeper</h3>
         <ul class="sci-list">
           <li><strong>Learn from the pros:</strong> YoYoTricks.com has trick collections from players like Gentry Stein, Ann Connolly, and Evan Nagao, plus combo series, long-string tricks, and a competition-training series.<sup class="cite"><a href="learn-yoyo.html#ref-76" aria-label="Source 76">[76]</a><a href="learn-yoyo.html#ref-77" aria-label="Source 77">[77]</a><a href="learn-yoyo.html#ref-78" aria-label="Source 78">[78]</a><a href="learn-yoyo.html#ref-79" aria-label="Source 79">[79]</a></sup></li>
           <li><strong>Track your progress:</strong> Skill Addicts gives you points as you land tricks.<sup class="cite"><a href="learn-yoyo.html#ref-32" aria-label="Source 32">[32]</a></sup> Rewind&rsquo;s database sorts tricks by level and style.<sup class="cite"><a href="learn-yoyo.html#ref-35" aria-label="Source 35">[35]</a></sup></li>
           <li><strong>Compete:</strong> many contests run beginner-friendly sport ladders.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup> Find events on our <a href="resources.html#contests">Resources page</a>, and see <a href="vsyc26.html">VSYC-26</a>, our Virginia State contest.</li>
           <li><strong>Throw together:</strong> come to a <a href="events.html">DMV Throwers meetup</a> or visit a <a href="resources.html#clubs">sister club</a>.</li>
         </ul>
-        <h3>How experienced players learn</h3>
+        <h3>How Experienced Players Learn</h3>
         <ul class="sci-list">
           <li><strong>Pick the right trick:</strong> shorter tricks with fewer elements, and tutorials with a first-person view, are easier to learn from.<sup class="cite"><a href="learn-yoyo.html#ref-74" aria-label="Source 74">[74]</a></sup></li>
           <li><strong>Think in checkpoints:</strong> remember a trick as a path from mount to mount. It also helps you link tricks into combos.<sup class="cite"><a href="learn-yoyo.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
@@ -277,10 +278,10 @@
       </article>
 
       <article id="create" class="sci-sec">
-        <div class="sci-kicker">Part 11</div>
+        <div class="sci-kicker">Section 2</div>
         <h2 class="sci-title">Make Your Own Tricks</h2>
         <p>Past the first 100, you&rsquo;ll notice most tricks are other tricks mixed together. That&rsquo;s your cue to start making your own.</p>
-        <h3>Think in elements</h3>
+        <h3>Think in Elements</h3>
         <p>An <a href="learn-yoyo.html#glossary">element</a> is one move, like a hop, a whip, or a hook. Elements are what get the yo-yo and string into and out of mounts, so the more elements you know, the more mounts you can invent, instead of cycling through the same few.<sup class="cite"><a href="learn-yoyo.html#ref-104" aria-label="Source 104">[104]</a></sup> A useful starting list, from a 2021 forum post:<sup class="cite"><a href="learn-yoyo.html#ref-103" aria-label="Source 103">[103]</a></sup></p>
         <table class="sci-table stack-table">
           <caption>1A building blocks<sup class="cite"><a href="learn-yoyo.html#ref-103" aria-label="Source 103">[103]</a></sup></caption>
@@ -292,9 +293,9 @@
           </tbody>
         </table>
         <p>There&rsquo;s no shortcut, though. As one player put it: learn a lot of tricks, and you&rsquo;ll see how they build on each other and how the same ideas come up again and again.<sup class="cite"><a href="learn-yoyo.html#ref-105" aria-label="Source 105">[105]</a></sup></p>
-        <h3>Learn rejections in order</h3>
+        <h3>Learn Rejections in Order</h3>
         <p>A rejection pushes the string into the wall of the yo-yo so the spin kicks it back out of the gap. A 2024 forum sequence starts with tricks where you only reject the string, then adds catching the yo-yo, and finishes with Magic Drop.<sup class="cite"><a href="learn-yoyo.html#ref-106" aria-label="Source 106">[106]</a></sup></p>
-        <h3>Build a trick, step by step</h3>
+        <h3>Build a Trick, Step by Step</h3>
         <p>Zammy&rsquo;s 2013 guide breaks trick making into six steps:<sup class="cite"><a href="learn-yoyo.html#ref-107" aria-label="Source 107">[107]</a></sup></p>
         <ol class="sci-steps">
           <li><strong>Influence:</strong> borrow an idea you like from a player, from music, or from another skill toy, and make your own version.</li>
@@ -304,19 +305,19 @@
           <li><strong>Analyze:</strong> check the beginning (a strong mount), the middle (your main idea), and the end (a clean dismount or bind).</li>
           <li><strong>Finalize:</strong> ask &ldquo;am I happy with it?&rdquo; and &ldquo;is it done?&rdquo; If not, go back and experiment more.</li>
         </ol>
-        <h3>Find your style</h3>
+        <h3>Find Your Style</h3>
         <p>Because so many players learn from the same great tutorials, a lot of trick sets look alike today. Players in a 2023 thread point out that timing and transitions matter as much as the tricks, and one quotes Andr&eacute; Boulay: &ldquo;Make the simple amazing.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-108" aria-label="Source 108">[108]</a></sup> Share what you make in the <a href="https://forums.yoyoexpert.com/t/post-a-trick-thread/299367" target="_blank" rel="noopener noreferrer">Post a Trick thread</a>.<sup class="cite"><a href="learn-yoyo.html#ref-72" aria-label="Source 72">[72]</a></sup></p>
       </article>
 
       <article id="evolution" class="sci-sec">
-        <div class="sci-kicker">Part 12</div>
+        <div class="sci-kicker">Section 3</div>
         <h2 class="sci-title">How Tricks Evolved</h2>
         <p>Every trick on this page rides on the hardware and ideas of an era. Here&rsquo;s how play grew from the classic sleeper to unresponsive, body, and horizontal tricks.</p>
         <ul class="mini-tl"><li><span>1920s</span> Pedro Flores&rsquo;s looped string lets a yo-yo sleep at the end of the string, opening up far more tricks. Donald Duncan spreads them with demonstrations, contests, and school tours.</li><li><span>c. 1950</span> A Duncan employee proposes the starburst, which becomes the standard response system for decades.</li><li><span>Classic contests</span> Players compete by completing set lists of tricks, called compulsories.</li><li><span>1984</span> The Yomega Brain&rsquo;s clutch returns the yo-yo on its own, helping beginners build a strong throw and sleeper.</li><li><span>1989</span> The Fireball&rsquo;s transaxle spins about three times longer than a fixed axle.</li><li><span>1980s&ndash;1990s</span> Longer spins from new axles, response systems, and materials make whole new categories of tricks possible.</li><li><span>1998&ndash;2003</span> Velvet Rolls (3A), freehand (5A), and offstring binds (4A) arrive. Early-2000s 1A tricks move from responsive looping combos toward technical string tricks that need wider gaps.</li><li><span>2002&ndash;03</span> The first C-size bearing yo-yos and yo-yos built to be unresponsive out of the box appear, as forum historians recall them.</li><li><span>c. 2007</span> Big contests replace compulsories with preliminary freestyles.</li><li><span>2000s&ndash;2010s</span> YouTube spreads tutorials and new tricks worldwide, including horizontal play and finger spins.</li><li><span>2020s</span> Short-form video makes tricks like the DNA go viral.</li></ul>
         <p class="sci-note">Sources: 1920s, Gentry Stein<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup>; c. 1950, the YoYo Wiki<sup class="cite"><a href="learn-yoyo.html#ref-25" aria-label="Source 25">[25]</a></sup>; contests<sup class="cite"><a href="learn-yoyo.html#ref-39" aria-label="Source 39">[39]</a></sup>; 1984<sup class="cite"><a href="learn-yoyo.html#ref-40" aria-label="Source 40">[40]</a></sup>; 1989<sup class="cite"><a href="learn-yoyo.html#ref-41" aria-label="Source 41">[41]</a></sup>; 1980s&ndash;1990s<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup>; 1998&ndash;2003<sup class="cite"><a href="learn-yoyo.html#ref-46" aria-label="Source 46">[46]</a><a href="learn-yoyo.html#ref-48" aria-label="Source 48">[48]</a></sup>; 2002&ndash;03<sup class="cite"><a href="learn-yoyo.html#ref-47" aria-label="Source 47">[47]</a></sup>; c. 2007<sup class="cite"><a href="learn-yoyo.html#ref-39" aria-label="Source 39">[39]</a></sup>; 2000s onward<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup>.</p>
-        <h3>Early responsive play</h3>
+        <h3>Early Responsive Play</h3>
         <p>For most of the yo-yo&rsquo;s history, tricks started from a sleeper and ended with a tug: Walk the Dog, Rock the Baby, Around the World, loops. Contests were about completing set tricks better than the next player.<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a><a href="learn-yoyo.html#ref-39" aria-label="Source 39">[39]</a></sup> Many forum players call roughly 1998&ndash;2002 &ldquo;old school,&rdquo; 2003&ndash;2007 &ldquo;mid school,&rdquo; and 2008 on &ldquo;modern,&rdquo; though everyone draws the lines a little differently.<sup class="cite"><a href="learn-yoyo.html#ref-47" aria-label="Source 47">[47]</a></sup></p>
-        <h3>The unresponsive turn</h3>
+        <h3>The Unresponsive Turn</h3>
         <p>As yo-yos became less responsive, players needed a way to bring them back on command. The bind was the breakthrough; it lets a yo-yo stay unresponsive through slack and long combos, and it underpins modern 1A.<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a><a href="learn-yoyo.html#ref-26" aria-label="Source 26">[26]</a></sup> New trick families followed:</p>
         <ul class="sci-list">
           <li><strong>Lacerations:</strong> Brent Stole is a green-triangle laceration by Alex Berenguel. Its name comes from Brent, who used a similar laceration on the way to winning the 2002 U.S. Nationals.<sup class="cite"><a href="learn-yoyo.html#ref-42" aria-label="Source 42">[42]</a></sup></li>
@@ -324,25 +325,25 @@
           <li><strong>Borrowed moves:</strong> Paul Escolar&rsquo;s Suicide, releasing and recatching the trapeze loop, comes from a diabolo trick of the same name.<sup class="cite"><a href="learn-yoyo.html#ref-44" aria-label="Source 44">[44]</a></sup></li>
           <li><strong>Rolls and flops:</strong> Doctor Popular is known for the Gyroscopic Flop.<sup class="cite"><a href="learn-yoyo.html#ref-45" aria-label="Source 45">[45]</a></sup></li>
         </ul>
-        <h3>Body, head, and neck</h3>
+        <h3>Body, Head, and Neck</h3>
         <p>Looping lessons include wraps around the arm, leg, and elbow, plus chain wraps.<sup class="cite"><a href="learn-yoyo.html#ref-55" aria-label="Source 55">[55]</a></sup> Tourniquet style (2010) wears the slipknot around the upper arm with an extra-long string for body-based wraps.<sup class="cite"><a href="learn-yoyo.html#ref-46" aria-label="Source 46">[46]</a></sup> Modern 1A tricks like Ghost Neck loop the string around the neck.<sup class="cite"><a href="learn-yoyo.html#ref-54" aria-label="Source 54">[54]</a></sup></p>
         <div class="try-box">
           <div class="try-label">Safety: Neck Tricks</div>
           <p>Never pull on a string that&rsquo;s around your neck. If you get a knot, take the string off your finger first, then untangle it.<sup class="cite"><a href="learn-yoyo.html#ref-54" aria-label="Source 54">[54]</a></sup> Save these tricks for once your basics are solid, and practice with room around you.</p>
         </div>
-        <h3>Horizontal play</h3>
+        <h3>Horizontal Play</h3>
         <p>In horizontal play, the yo-yo spins on its side. Steve Brown recalls trying a horizontal Brain Twister in his first freehand routine in 1999.<sup class="cite"><a href="learn-yoyo.html#ref-48" aria-label="Source 48">[48]</a></sup> The internet spread horizontal play worldwide,<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup> and Doctor Popular&rsquo;s PopCast recorded an oral history of modern horizontal yo-yoing with Josh Yee.<sup class="cite"><a href="learn-yoyo.html#ref-49" aria-label="Source 49">[49]</a></sup> To start:</p>
         <ul class="sci-list">
           <li>Shorten your string. It&rsquo;s faster, and it keeps a swinging yo-yo farther from your face.<sup class="cite"><a href="learn-yoyo.html#ref-52" aria-label="Source 52">[52]</a></sup></li>
           <li>Learn the horizontal throw on a responsive yo-yo first.<sup class="cite"><a href="learn-yoyo.html#ref-52" aria-label="Source 52">[52]</a></sup></li>
           <li>Learn each trick vertically before trying it horizontal, and vertical behind-the-back before horizontal behind-the-back.<sup class="cite"><a href="learn-yoyo.html#ref-53" aria-label="Source 53">[53]</a></sup></li>
         </ul>
-        <h3>The social era</h3>
+        <h3>The Social Era</h3>
         <p>Gentry Stein posted an early finger-spin trick in July 2020; an August 1 video passed 7 million views, and a viewer compared the twisting string to DNA, which gave the trick its name. It has since been seen across social media more than a billion times, and it works as an easy modern responsive trick.<sup class="cite"><a href="learn-yoyo.html#ref-38" aria-label="Source 38">[38]</a></sup> Doctor Popular&rsquo;s PopCast also interviewed Páll Guðmundsson, creator of the DNA bind, also called the Tornado Bind.<sup class="cite"><a href="learn-yoyo.html#ref-50" aria-label="Source 50">[50]</a></sup> For more, watch Doctor Popular&rsquo;s <a href="https://www.youtube.com/playlist?list=PL1g-GXFBtDQd-NeFP1_wsJELt6YfD9-Rs" target="_blank" rel="noopener noreferrer">Yo-Yo History playlist</a>, with episodes on binds, gyroscopic flops, and horizontal tricks.<sup class="cite"><a href="learn-yoyo.html#ref-51" aria-label="Source 51">[51]</a><a href="learn-yoyo.html#ref-49" aria-label="Source 49">[49]</a></sup> For the full story of the toy, see <a href="yoyo-history.html">The Story of the Yo-Yo</a>. The move is older than its viral name: Doctor Popular&rsquo;s PopCast <a href="https://www.youtube.com/watch?v=ViybURFu-so" target="_blank" rel="noopener noreferrer">interviewed Palli</a> about the history of the Tornado Bind, as many players call it, and forum players point to similar moves from the mid-2000s.<sup class="cite"><a href="learn-yoyo.html#ref-113" aria-label="Source 113">[113]</a></sup></p>
       </article>
 
       <article id="tips" class="sci-sec">
-        <div class="sci-kicker">Part 13</div>
+        <div class="sci-kicker">Section 4</div>
         <h2 class="sci-title">Tips from Experienced Players</h2>
         <ul class="sci-list">
           <li>Before every throw, look around so no one is within your swing radius, and check your string for fraying or knots.<sup class="cite"><a href="learn-yoyo.html#ref-2" aria-label="Source 2">[2]</a></sup></li>
@@ -357,7 +358,7 @@
       </article>
 
       <article id="more" class="sci-sec">
-        <div class="sci-kicker">Part 14</div>
+        <div class="sci-kicker">Section 5</div>
         <h2 class="sci-title">Where to Learn More</h2>
         <ul class="sci-list">
           <li><a href="https://yoyotricks.com/yoyo-tricks/" target="_blank" rel="noopener noreferrer">YoYoTricks.com</a>: a big free video library, sorted by style and level, with a Screen Time Challenge for beginners.<sup class="cite"><a href="learn-yoyo.html#ref-15" aria-label="Source 15">[15]</a><a href="learn-yoyo.html#ref-16" aria-label="Source 16">[16]</a></sup></li>
@@ -423,12 +424,14 @@
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
         <a href="resources.html" class="footer-link">Resources</a>
+        <a href="guides.html" class="footer-link">Guides</a>
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://stats.uptimerobot.com/7XjeeDhuSq" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Site status (opens in new tab)">Status</a>
       </nav>
     </div>
     <nav aria-label="Guides" class="footer-guides">

@@ -1,0 +1,29 @@
+# Checks every page for broken links and images, missing alt text, titles, descriptions,
+# skip links and CSP tags, invalid JSON-LD, http:// links, and nav or footer drift between
+# pages. Standard-library Python only. See scripts/check_site.py.
+name: Check site
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+# Least privilege: the check only reads the code.
+permissions:
+  contents: read
+
+concurrency:
+  group: check-site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Check every page
+        run: python3 scripts/check_site.py
