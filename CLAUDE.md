@@ -35,6 +35,7 @@ One shared JS file (`assets/js/mobile-enhancements.js`) is loaded on every page 
 
 | Page | Purpose |
 | --- | --- |
+| `guides.html` | **The GUIDES item in the main nav.** Hub with one card per guide below. When you publish a new guide, add a card here |
 | `learn-yoyo.html` | Hub for "How to Yo-Yo": TOC, glossary, and the shared `#references` list |
 | `learn-yoyo-{basics,tricks,practice,beyond}.html` | Parts 1–4. Each opens with "Part N of 4" and cites sources from the hub's `#references` |
 | `yoyo-gear.html` | Hub for "Yo-Yo Gear & Maintenance": TOC + shared `#references` |
