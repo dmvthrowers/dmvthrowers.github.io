@@ -155,7 +155,9 @@ Into the live site:
 - **An automated site check.** The template's `scripts/check_site.py` fails the build when headers
   or footers differ, links break or alt text is missing. Live hand-copies the same nav and footer
   onto about 40 pages with no check; run an equivalent in CI (goes with "Link checker" and "HTML
-  validation" under Next).
+  validation" under Next). The template's version also rejects inline styles and scripts, which
+  live pages use on purpose (per-page `<style>`, the FAQ toggle), so port the header, footer, link,
+  alt-text and JSON-LD checks and leave that rule out.
 
 Both: live uses `assets/js/mobile-enhancements.js`, the templates use `assets/site.js`. Pick one
 as the source for shared fixes (menu, external-link safety) and port the other's improvements.
