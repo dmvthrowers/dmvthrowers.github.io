@@ -9,7 +9,9 @@ small inline scripts on purpose).
 Checks: broken internal links and images (paths resolve from the repo root, because every page
 has <base href="/">), images without alt text, missing title or description, the CSP meta tag,
 the skip link and main#main-content, valid JSON-LD with a BreadcrumbList, no http:// links, and
-that the main nav and footer are identical across each group of pages (club pages, VSYC pages).
+that the main nav and footer are identical across each group of pages (club pages, VSYC pages),
+and that sitemap.xml lists every indexable page and nothing else (no redirect stubs, noindex pages
+or files that do not exist).
 Redirect stubs are skipped, and 404.html is left out of the nav and footer comparison
 (it has a deliberately minimal nav and no footer). Exits non-zero if anything fails. Standard library only.
 """
@@ -92,6 +94,7 @@ def resolves(ref):
 
 
 groups = {}
+indexable, skipped = set(), set()
 pages = sorted(ROOT.glob("*.html"))
 for page in pages:
     html = page.read_text(encoding="utf-8")
@@ -99,7 +102,12 @@ for page in pages:
     p.feed(html)
     err = lambda msg, n=page.name: errors.append(f"{n}: {msg}")
     if p.refresh:
+        skipped.add(page.name)
         continue  # redirect stub
+    if "noindex" in p.meta.get("robots", "").lower():
+        skipped.add(page.name)
+    else:
+        indexable.add(page.name)
     if not p.title:
         err("missing <title>")
     if not p.meta.get("description"):
@@ -145,6 +153,21 @@ for group, members in groups.items():
             for names in variants.values():
                 if names is not common:
                     errors.append(f"{group} pages: {label} differs from the {len(common)}-page majority on {', '.join(names)}")
+
+sitemap = ROOT / "sitemap.xml"
+if sitemap.exists():
+    listed = set()
+    for loc in re.findall(r"<loc>\s*(.*?)\s*</loc>", sitemap.read_text(encoding="utf-8")):
+        name = urlparse(loc).path.lstrip("/") or "index.html"
+        if name in listed:
+            errors.append(f"sitemap.xml: {loc} is listed twice")
+        listed.add(name)
+        if not (ROOT / name).is_file():
+            errors.append(f"sitemap.xml: {loc} has no matching file")
+        elif name in skipped:
+            errors.append(f"sitemap.xml: {loc} is a redirect stub or noindex page")
+    for name in sorted(indexable - listed):
+        errors.append(f"{name}: not listed in sitemap.xml")
 
 if errors:
     print("\n".join(errors))
