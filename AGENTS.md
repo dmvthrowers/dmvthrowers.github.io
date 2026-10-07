@@ -147,6 +147,14 @@ java -jar /tmp/vnu/node_modules/vnu-jar/build/dist/vnu.jar --errors-only --skip-
 
 No output means no errors. `<base href="/">` must come before every `<link>` and `<script>` in `<head>`.
 
+## Outside links
+
+`scripts/check_links.py` checks every outside link on every page (about 900). It runs weekly and on demand
+(Actions → Check links → Run workflow), not on pull requests. Only links that are clearly gone fail the run
+(404, 410, a name that no longer exists, a bad certificate); sites that block bots or time out are listed as
+warnings. Try it with `python3 scripts/check_links.py --limit 20` or `--host yoyotricks.com`. When it reports a
+broken link, fix or drop the link on every page that has it. Don't weaken the check to get a green run.
+
 ## Where things live
 
 - `assets/css/main.css` — shared main-site styles. Sectioned with `===== N. Name =====` banners.

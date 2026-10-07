@@ -1,0 +1,37 @@
+# Checks the outside links on every page once a week, and on demand (Actions > Check links > Run workflow).
+# It is not a pull-request check: the web changes on its own schedule, and a site that is down for an hour
+# shouldn't block a change. Only links that are clearly gone fail the run (404, 410, a name that no longer
+# exists, a bad certificate); sites that block bots or time out are listed as warnings. See scripts/check_links.py.
+name: Check links
+
+on:
+  schedule:
+    - cron: "17 9 * * 1"   # Mondays, 09:17 UTC
+  workflow_dispatch:
+
+# Least privilege: the check only reads the code.
+permissions:
+  contents: read
+
+concurrency:
+  group: check-links
+  cancel-in-progress: true
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Check the outside links
+        run: |
+          status=0
+          python3 scripts/check_links.py > links.txt || status=$?
+          cat links.txt
+          { echo '```'; cat links.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          exit $status
