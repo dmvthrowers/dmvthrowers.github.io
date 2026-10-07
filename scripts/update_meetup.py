@@ -3,10 +3,10 @@
 DMV Throwers — Update 3rd Sunday meetup dates and clear past meetup events.
 
 Run this the Monday after each 3rd Sunday meetup to keep the site current:
-  1. Update "NEXT MEET" top bar in index.html and events.html
+  1. Update the "NEXT MEET" top bar on every page that has one
   2. Remove past monthly meetup event cards from events.html
   3. Remove past monthly meetup entries from the JSON-LD in events.html
-  4. Update sitemap.xml lastmod for index and events pages
+  4. Update sitemap.xml lastmod for every page that changed
   5. Rewrite meetups.ics (the next 12 meetups) for calendar subscriptions
 
 Usage:
@@ -57,6 +57,11 @@ def upcoming_third_sundays(n: int = 12, today: date | None = None) -> list[date]
     return results
 
 
+def fmt_banner(d: date) -> str:
+    """Return 'SUNDAY, OCTOBER 18' (the current top-bar style), uppercased."""
+    return f"{d.strftime('%A')}, {d.strftime('%B')} {d.day}".upper()
+
+
 def fmt_upper(d: date) -> str:
     """Return 'MONTH D, YYYY' with no leading zero, uppercased."""
     return d.strftime("%B %d, %Y").replace(" 0", " ").upper()
@@ -74,16 +79,32 @@ _TOPBAR_RE = re.compile(
 )
 
 
-def update_topbar(html_path: Path, next_date: date, dry_run: bool = False) -> bool:
-    """Replace the date in the 'NEXT MEET: …' top-bar span."""
+# The current top bar: "NEXT MEET: SUNDAY, OCTOBER 18 · 1–4 PM · ARLINGTON CENTRAL LIBRARY".
+_BANNER_RE = re.compile(
+    r"(NEXT MEET:\s*)"
+    r"((?:MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY|SUNDAY),\s*"
+    r"(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|"
+    r"OCTOBER|NOVEMBER|DECEMBER)\s+\d{1,2})(?!,\s*\d{4})",
+    re.IGNORECASE,
+)
+
+
+def update_topbar(html_path: Path, next_date: date, dry_run: bool = False, quiet: bool = False) -> bool:
+    """Replace the date in the 'NEXT MEET: …' top-bar span (either style)."""
     text = html_path.read_text(encoding="utf-8")
-    new_str = fmt_upper(next_date)
 
-    if not _TOPBAR_RE.search(text):
-        print(f"  [!] NEXT MEET pattern not found in {html_path.name}")
+    if _BANNER_RE.search(text):
+        new_str = fmt_banner(next_date)
+        new_text = _BANNER_RE.sub(lambda m: m.group(1) + new_str, text)
+    elif _TOPBAR_RE.search(text):
+        new_str = fmt_upper(next_date)
+        new_text = _TOPBAR_RE.sub(lambda m: m.group(1) + new_str, text)
+    else:
+        if not quiet:
+            print(f"  [!] NEXT MEET pattern not found in {html_path.name}")
         return False
-
-    new_text = _TOPBAR_RE.sub(r"\g<1>" + new_str, text)
+    if new_text == text and quiet:
+        return False
     if new_text == text:
         print(f"  [=] {html_path.name}: top bar already shows {new_str}")
         return False
@@ -98,13 +119,18 @@ def update_topbar(html_path: Path, next_date: date, dry_run: bool = False) -> bo
 # events.html — remove past monthly meetup cards
 # ---------------------------------------------------------------------------
 
-# Matches exactly <div class="event-card"> (no extra classes).
+# Matches a meetup card: <div class="event-card"> or the highlighted
+# <div class="event-card event-card-next">. Holiday and special-event cards
+# carry other classes and are left alone.
 # Event-card divs sit at 4-space indent; inner divs are 6+ spaces, so
 # \n    </div> reliably marks only the outermost closing tag.
 _MEETUP_CARD_RE = re.compile(
-    r"\n    <div class=\"event-card\">\n(.*?)\n    </div>",
+    r"\n    <div class=\"event-card(?: event-card-next)?\">\n(.*?)\n    </div>",
     re.DOTALL,
 )
+_MEETUP_LABELS = ("● MONTHLY MEETUP", "● NEXT MEETUP")
+_FIRST_TIME_LINE = ('          <div class="event-loc">First time? Just show up. We have loaners, '
+                    'and someone will teach you your first throw.</div>')
 
 
 def _parse_card_date(card_body: str, today: date) -> date | None:
@@ -167,8 +193,8 @@ def remove_past_meetup_cards(events_path: Path, today: date | None = None, dry_r
     def replacer(m: re.Match) -> str:
         nonlocal removed
         body = m.group(1)
-        if "● MONTHLY MEETUP" not in body:
-            return m.group(0)  # keep (shouldn't happen with this exact class)
+        if not any(label in body for label in _MEETUP_LABELS):
+            return m.group(0)  # not a meetup card
         card_date = _parse_card_date(body, today)
         if card_date is not None and card_date < today:
             removed += 1
@@ -180,6 +206,21 @@ def remove_past_meetup_cards(events_path: Path, today: date | None = None, dry_r
     if removed == 0:
         print(f"  [=] {events_path.name}: no past meetup cards to remove")
         return False
+
+    # The highlighted "NEXT MEETUP" card was the one that just passed:
+    # promote the next monthly meetup card in its place.
+    if 'class="event-card event-card-next"' not in new_text:
+        def promote(m: re.Match) -> str:
+            body = m.group(1)
+            if "● MONTHLY MEETUP" not in body:
+                return m.group(0)
+            body = body.replace("● MONTHLY MEETUP", "● NEXT MEETUP", 1)
+            lines = body.split("\n")
+            last_loc = max((i for i, l in enumerate(lines) if 'class="event-loc"' in l), default=None)
+            if last_loc is not None and "First time?" not in body:
+                lines.insert(last_loc + 1, _FIRST_TIME_LINE)
+            return '\n    <div class="event-card event-card-next">\n' + "\n".join(lines) + "\n    </div>"
+        new_text = _MEETUP_CARD_RE.sub(promote, new_text, count=1)
 
     if not dry_run:
         events_path.write_text(new_text, encoding="utf-8")
@@ -341,12 +382,15 @@ def _make_lastmod_re(url: str) -> re.Pattern[str]:
     )
 
 
-def update_sitemap(sitemap_path: Path, dry_run: bool = False) -> bool:
+def page_url(name: str) -> str:
+    return "https://dmvthrowers.club/" if name == "index.html" else f"https://dmvthrowers.club/{name}"
+
+
+def update_sitemap(sitemap_path: Path, dry_run: bool = False, pages: list[str] | None = None) -> bool:
     """
-    Update <lastmod> for the homepage and events page in sitemap.xml.
-    Uses text-level substitution so the file's formatting and XML
-    declaration are preserved unchanged.
-    Only call this when index.html or events.html actually changed.
+    Update <lastmod> in sitemap.xml for the pages that changed (default: the
+    homepage and events page). Uses text-level substitution so the file's
+    formatting and XML declaration are preserved unchanged.
     """
     if not sitemap_path.exists():
         return False
@@ -354,7 +398,8 @@ def update_sitemap(sitemap_path: Path, dry_run: bool = False) -> bool:
         text = sitemap_path.read_text(encoding="utf-8")
         today_str = date.today().isoformat()
         new_text = text
-        for target_url in _SITEMAP_TARGETS:
+        targets = [page_url(p) for p in pages] if pages else _SITEMAP_TARGETS
+        for target_url in targets:
             new_text = _make_lastmod_re(target_url).sub(
                 r"\g<1>" + today_str + r"\2", new_text
             )
@@ -388,10 +433,14 @@ def main() -> None:
         action="store_true",
         help="Print planned changes without writing any files",
     )
+    parser.add_argument(
+        "--today",
+        help="Pretend today is YYYY-MM-DD (for testing)",
+    )
     args = parser.parse_args()
 
     repo = Path(args.repo).resolve()
-    today = date.today()
+    today = date.fromisoformat(args.today) if args.today else date.today()
     dates = upcoming_third_sundays(12, today)
     next_date = dates[0]
 
@@ -400,31 +449,31 @@ def main() -> None:
     if args.dry_run:
         print("(dry-run - no files will be modified)\n")
 
-    index_html = repo / "index.html"
     events_html = repo / "events.html"
+    changed: list[str] = []
 
-    site_changed = False
-
-    print("\nindex.html:")
-    if index_html.exists():
-        site_changed |= update_topbar(index_html, next_date, args.dry_run)
-    else:
-        print("  [!] file not found")
+    print("\nTop bar (every page):")
+    for page in sorted(repo.glob("*.html")):
+        if update_topbar(page, next_date, args.dry_run, quiet=True):
+            changed.append(page.name)
+    if not changed:
+        print("  [=] already current everywhere")
 
     print("\nevents.html:")
     if events_html.exists():
-        site_changed |= update_topbar(events_html, next_date, args.dry_run)
-        site_changed |= remove_past_meetup_cards(events_html, today, args.dry_run)
-        site_changed |= remove_past_meetup_jsonld(events_html, today, args.dry_run)
+        if remove_past_meetup_cards(events_html, today, args.dry_run) | \
+           remove_past_meetup_jsonld(events_html, today, args.dry_run):
+            if "events.html" not in changed:
+                changed.append("events.html")
     else:
         print("  [!] file not found")
 
-    # Only bump sitemap lastmod when index.html or events.html actually changed.
-    # Updating it unconditionally would cause a commit every Monday even when
-    # the meetup banner and cards were already current.
+    # Only bump sitemap lastmod for pages that actually changed. Updating it
+    # unconditionally would cause a commit every Monday even when the
+    # banner and cards were already current.
     print("\nsitemap.xml:")
-    if site_changed:
-        update_sitemap(repo / "sitemap.xml", args.dry_run)
+    if changed:
+        update_sitemap(repo / "sitemap.xml", args.dry_run, changed)
     else:
         print("  [=] skipped (no page content changed)")
 

@@ -45,6 +45,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html events.html sitemap.xml meetups.ics
+          git add -- *.html sitemap.xml meetups.ics
           git commit -m "chore: update meetup dates for $(date +'%B %Y')"
           git push
