@@ -7,6 +7,7 @@ Run this the Monday after each 3rd Sunday meetup to keep the site current:
   2. Remove past monthly meetup event cards from events.html
   3. Remove past monthly meetup entries from the JSON-LD in events.html
   4. Update sitemap.xml lastmod for index and events pages
+  5. Rewrite meetups.ics (the next 12 meetups) for calendar subscriptions
 
 Usage:
   python scripts/update_meetup.py
@@ -17,8 +18,9 @@ Usage:
 import argparse
 import json
 import re
-from datetime import date, timedelta
+from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 MONTH_NAMES = [
@@ -254,6 +256,67 @@ def remove_past_meetup_jsonld(events_path: Path, today: date | None = None, dry_
 
 
 # ---------------------------------------------------------------------------
+# meetups.ics — calendar subscription (webcal://dmvthrowers.club/meetups.ics)
+# ---------------------------------------------------------------------------
+
+MEETUP_TZ = ZoneInfo("America/New_York")
+MEETUP_START, MEETUP_END = time(13, 0), time(16, 0)
+MEETUP_WHERE = "Arlington Central Library, 1015 N Quincy St, Arlington, VA 22201"
+MEETUP_DESC = ("Free monthly yo-yo and skill toy meetup. All ages, all levels, always free. "
+               "Loaner yo-yos available. No registration required.")
+
+
+def _ics_text(v: str) -> str:
+    return v.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+
+
+def _ics_fold(line: str) -> str:
+    out, b = [], line.encode("utf-8")
+    while len(b) > 75:
+        cut = 75
+        while (b[cut] & 0xC0) == 0x80:  # don't split a UTF-8 character
+            cut -= 1
+        out.append(b[:cut].decode("utf-8"))
+        b = b" " + b[cut:]
+    out.append(b.decode("utf-8"))
+    return "\r\n".join(out)
+
+
+def _ics_utc(d: date, t: time) -> str:
+    return datetime.combine(d, t, tzinfo=MEETUP_TZ).astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+
+def build_ics(dates: list[date]) -> str:
+    """The next meetups as an iCalendar file. Times are written in UTC so daylight saving is right
+    in every calendar app. DTSTAMP is derived from the dates, not the clock, so the file only
+    changes (and the workflow only commits) when the list of dates moves on."""
+    stamp = datetime.combine(dates[0] - timedelta(days=31), time(0, 0), tzinfo=timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//DMV Throwers//Meetups//EN",
+             "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:DMV Throwers meetups",
+             "X-WR-TIMEZONE:America/New_York"]
+    for d in dates:
+        lines += ["BEGIN:VEVENT", f"UID:{d.isoformat()}-meetup@dmvthrowers.club", f"DTSTAMP:{stamp}",
+                  f"SUMMARY:{_ics_text('DMV Throwers monthly meetup')}",
+                  f"DTSTART:{_ics_utc(d, MEETUP_START)}", f"DTEND:{_ics_utc(d, MEETUP_END)}",
+                  f"LOCATION:{_ics_text(MEETUP_WHERE)}", f"DESCRIPTION:{_ics_text(MEETUP_DESC)}",
+                  "URL:https://dmvthrowers.club/events.html", "END:VEVENT"]
+    lines.append("END:VCALENDAR")
+    return "\r\n".join(_ics_fold(l) for l in lines) + "\r\n"
+
+
+def write_ics(ics_path: Path, dates: list[date], dry_run: bool = False) -> bool:
+    new = build_ics(dates)
+    old = ics_path.read_text(encoding="utf-8", newline="") if ics_path.exists() else ""
+    if new == old:
+        print(f"  [=] {ics_path.name}: already current")
+        return False
+    if not dry_run:
+        ics_path.write_text(new, encoding="utf-8", newline="")
+    print(f"  [ok] {ics_path.name}: {len(dates)} meetups from {dates[0].isoformat()}")
+    return True
+
+
+# ---------------------------------------------------------------------------
 # sitemap.xml — bump lastmod for index/events URLs
 # ---------------------------------------------------------------------------
 
@@ -364,6 +427,9 @@ def main() -> None:
         update_sitemap(repo / "sitemap.xml", args.dry_run)
     else:
         print("  [=] skipped (no page content changed)")
+
+    print("\nmeetups.ics:")
+    write_ics(repo / "meetups.ics", dates, args.dry_run)
 
     print("\nUpcoming meetups:")
     for d in dates[:6]:
