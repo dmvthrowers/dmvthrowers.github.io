@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share cards</title>
+<!-- Source for assets/images/og/dmvt-share.png and vsyc26-share.png (1200 x 630). See README.md here. -->
+<link rel="stylesheet" href="../../assets/css/fonts.css">
+<style>
+  :root { --red: #B80000; --navy: #102040; --cream: #fffdfa; --cream-mid: #f7f3ec; --gold: #C9A84C; }
+  * { box-sizing: border-box; border-radius: 0; margin: 0; }
+  body { background: #444; }
+  .card { position: relative; width: 1200px; height: 630px; background: var(--navy); color: var(--cream); overflow: hidden; display: none; }
+  body.dmvt .card.dmvt, body.vsyc .card.vsyc { display: block; }
+  .bar { position: absolute; top: 0; left: 0; right: 0; height: 14px; }
+  .dmvt .bar { background: var(--red); }
+  .vsyc .bar { background: var(--gold); }
+  .text { position: absolute; left: 90px; top: 0; bottom: 0; width: 760px; display: flex; flex-direction: column; justify-content: center; }
+  .eyebrow { font-size: 24px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 14px; }
+  .logo { position: absolute; right: 90px; top: 50%; transform: translateY(-50%); }
+  .url { position: absolute; left: 90px; bottom: 44px; font-size: 24px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+
+  .dmvt .text { font-family: 'DM Sans', sans-serif; }
+  .dmvt .eyebrow { color: var(--cream-mid); opacity: 0.85; }
+  .dmvt h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 140px; line-height: 0.95; color: var(--cream); margin-bottom: 26px; }
+  .dmvt .line { font-size: 36px; font-weight: 500; line-height: 1.35; color: var(--cream-mid); }
+  .dmvt .url { font-family: 'DM Sans', sans-serif; color: var(--cream-mid); opacity: 0.85; }
+  .dmvt .logo img { width: 250px; height: 250px; display: block; }
+
+  .vsyc .text { font-family: 'Montserrat', sans-serif; }
+  .vsyc .eyebrow { color: var(--gold); }
+  .vsyc h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 170px; line-height: 1; color: var(--cream); margin-bottom: 30px; letter-spacing: -0.01em; }
+  .vsyc .line { font-size: 34px; font-weight: 600; line-height: 1.4; color: var(--cream-mid); }
+  .vsyc .url { font-family: 'Montserrat', sans-serif; color: var(--gold); }
+  .vsyc .logo img { width: 250px; height: 250px; display: block; clip-path: circle(46.2%); } /* the source file has black corners; the logo itself is round */
+</style>
+</head>
+<body class="dmvt">
+<div class="card dmvt">
+  <div class="bar"></div>
+  <div class="text">
+    <p class="eyebrow">Yo-Yo &amp; Skill Toy Club</p>
+    <h1>DMV<br>Throwers</h1>
+    <p class="line">All ages, all levels, always free.<br>DC, Maryland and Virginia.</p>
+  </div>
+  <div class="logo"><img src="../../assets/images/dmvt-logo-512.png" alt="" width="250" height="250"></div>
+  <p class="url">dmvthrowers.club</p>
+</div>
+<div class="card vsyc">
+  <div class="bar"></div>
+  <div class="text">
+    <p class="eyebrow">Virginia State Yo-Yo Contest</p>
+    <h1>VSYC-26</h1>
+    <p class="line">September 19, 2026<br>Dulles Town Center · Sterling, VA</p>
+  </div>
+  <div class="logo"><img src="../../assets/images/vsyc26-va-logo-512.png" alt="" width="230" height="230"></div>
+  <p class="url">dmvthrowers.club/vsyc26</p>
+</div>
+</body>
+</html>
