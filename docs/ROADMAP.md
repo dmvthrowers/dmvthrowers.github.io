@@ -35,9 +35,8 @@ The build order across every repo, with status per item, is in [`BUILD_PLAN.md`]
 4. **Link checker in CI** (`lychee` against the staged site) — the hub ↔ part guide links,
    redirect stubs and JSON-LD URLs are all hand-maintained and drift silently.
 5. **HTML validation in CI** (`vnu` / `html5validator`) for the copy-paste boilerplate.
-6. **Guide part numbering.** Part intros say "Part N of 4", but body section headings keep the
-   old global numbers (e.g. maintenance is "Part 2 of 4" with sections "PART 4–9"). Renumber the
-   body headings per part, or drop the numbers.
+6. ~~**Guide part numbering.**~~ Done: section labels on each part now read "Section 1, 2…"
+   per page, and the two hub labels read "Quick reference".
 7. **Guides aren't in the main nav.** The largest content (learn-yoyo, yoyo-gear, history,
    science, collecting) is reachable only through inline links. Adding a nav item means editing
    every page's nav identically — plan it as one change across all pages.
