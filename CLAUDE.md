@@ -134,6 +134,17 @@ npx serve .
 
 Then open `http://localhost:8000/`.
 
+## Checks
+
+Two checks run on every pull request. `python3 scripts/check_site.py` (links, alt text, nav and footer drift; from the site check) and the W3C HTML validator (`.github/workflows/validate-html.yml`). To run the validator yourself, with Java installed:
+
+```sh
+npm install --prefix /tmp/vnu vnu-jar@26.10.7
+java -jar /tmp/vnu/node_modules/vnu-jar/build/dist/vnu.jar --errors-only --skip-non-html ./*.html
+```
+
+No output means no errors. `<base href="/">` must come before every `<link>` and `<script>` in `<head>`.
+
 ## Where things live
 
 - `assets/css/main.css` — shared main-site styles. Sectioned with `===== N. Name =====` banners.
