@@ -12,8 +12,7 @@
   <meta name="author" content="DMV Throwers"/>
   <!-- base href="/" makes every relative URL resolve from the site root. -->
   <base href="/"/>
-  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
-       formspree for the contact form, Google Fonts for typography). -->
+  <!-- CSP: scripts, images and frames from this site only; Google Fonts for typography. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>String and Accessories · Gear Guide · DMV Throwers</title>
   <meta name="description" content="String, counterweights (5A), knot picks and tools, cases and holders, and DIY accessories. Part of the DMV Throwers Gear &amp; Maintenance guide."/>
@@ -113,7 +112,7 @@
       .stack-table thead { display: none; }
       .stack-table caption { display: block; width: 100%; }
       .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
-      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: var(--white); }
       .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
       .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
       .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
@@ -164,6 +163,7 @@
       <a href="events.html" class="nav-link">CLUB EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="guides.html" class="nav-link">GUIDES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
@@ -183,6 +183,7 @@
   <a href="events.html">CLUB EVENTS</a>
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
+  <a href="guides.html">GUIDES</a>
   <a href="faq.html">FAQ</a>
     <a href="https://map.dmvthrowers.club/">MAP</a>
     <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
@@ -237,9 +238,9 @@
       </nav>
 
       <article id="string" class="sci-sec">
-        <div class="sci-kicker">Part 10</div>
+        <div class="sci-kicker">Section 1</div>
         <h2 class="sci-title">String</h2>
-        <h3>Materials and history</h3>
+        <h3>Materials and History</h3>
         <ul class="sci-list">
           <li><strong>Cotton:</strong> the traditional material, still best for beginners and responsive play.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-gear.html#ref-54" aria-label="Source 54">[54]</a></sup> Classic manufacturers long used cotton string.<sup class="cite"><a href="yoyo-gear.html#ref-20" aria-label="Source 20">[20]</a></sup></li>
           <li><strong>Slick / 50-50:</strong> cotton blended with polyester or nylon; more durable.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
@@ -247,7 +248,7 @@
           <li><strong>Nylon and rayon:</strong> soft, springy synthetics; rayon is very durable.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a><a href="yoyo-gear.html#ref-36" aria-label="Source 36">[36]</a></sup></li>
         </ul>
         <figure class="ref-fig"><picture><source srcset="assets/images/reference/yoyo-strings.webp" type="image/webp"/><img src="assets/images/reference/yoyo-strings.jpg" alt="A tangled bundle of cotton yo-yo strings, with an inset of the twisted two-strand loop end" width="1000" height="552" loading="lazy"/></picture><figcaption>A bundle of yo-yo strings. Inset: the two-strand, closed-loop end that goes around the axle.<span class="fig-credit">Fluzwup, public domain, via <a href="https://commons.wikimedia.org/wiki/File:Yo-yo_strings.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span></figcaption></figure>
-        <h3>Niche materials: non-standard but interesting</h3>
+        <h3>Niche Materials: Non-Standard but Interesting</h3>
         <ul class="sci-list">
           <li><strong>Kevlar blends:</strong> commercial Kevlar string has generally been a blend. YoYoExpert&rsquo;s #82 Kevlar is 8 strands of polyester to 2 of Kevlar, and Twisted Stringz sold a blend players describe as roughly a third Kevlar. Players find it coarse and stiff but report it outlasts regular polyester by a wide margin.<sup class="cite"><a href="yoyo-gear.html#ref-171" aria-label="Source 171">[171]</a><a href="yoyo-gear.html#ref-172" aria-label="Source 172">[172]</a><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
           <li><strong>Silk:</strong> made by hand by a few players. It is very dense and extremely whippy when new, breaks in after about two hours of throwing, then plateaus, and stretches about 5 cm on a 140 cm string. Fans call it great for slacks; good silk thread is hard to source.<sup class="cite"><a href="yoyo-gear.html#ref-169" aria-label="Source 169">[169]</a><a href="yoyo-gear.html#ref-170" aria-label="Source 170">[170]</a></sup></li>
@@ -266,7 +267,7 @@
           <li>Store yo-yos with the string unwound to keep it springy.<sup class="cite"><a href="yoyo-gear.html#ref-5" aria-label="Source 5">[5]</a></sup></li>
           <li>If the string twists up when slack, fix the tension: throw a UFO across your body to loosen or the other way to tighten.<sup class="cite"><a href="yoyo-gear.html#ref-6" aria-label="Source 6">[6]</a></sup></li>
         </ul>
-        <h3>DIY: make your own string</h3>
+        <h3>DIY: Make Your Own String</h3>
         <p>String makers twist thread with a drill on a simple rig. The YoYoExpert mega-thread&rsquo;s basic recipe:<sup class="cite"><a href="yoyo-gear.html#ref-36" aria-label="Source 36">[36]</a></sup></p>
         <ol class="sci-steps">
           <li>Set two anchors 12 feet apart and wrap thread between them 6&ndash;8 times. More wraps make a thicker string.</li>
@@ -283,22 +284,22 @@
       </article>
 
       <article id="counterweights" class="sci-sec">
-        <div class="sci-kicker">Part 11</div>
+        <div class="sci-kicker">Section 2</div>
         <h2 class="sci-title">Counterweights (5A)</h2>
         <p>A counterweight is a small weight tied to the end of the string where your finger would go. In freehand (5A) you throw it hand to hand, bounce it off your body, and wrap it around the yo-yo as part of the trick.<sup class="cite"><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup></p>
         <figure class="ref-fig narrow"><picture><source srcset="assets/images/reference/counterweight-5a.webp" type="image/webp"/><img src="assets/images/reference/counterweight-5a.jpg" alt="A purple yo-yo on a table with its string tied to a round yellow counterweight" width="900" height="675" loading="lazy"/></picture><figcaption>A 5A (freehand) setup: the string ends in a counterweight, not a finger loop.<span class="fig-credit">Sarah Jones, <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Yo-yo_with_counter_weight.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></span></figcaption></figure>
         <h3>History</h3>
         <ul class="mini-tl"><li><span>1998</span> Slippery Eel, freehand with no weight, is popular with Team High Performance. Its limits push Steve Brown toward a counterweight.</li><li><span>1999</span> Brown debuts freehand at the Bay Area Classic, playing a Team Losi Cherry Bomb he helped design.</li><li><span>2000</span> Brown files a patent for a yo-yo with a fixed or sliding counterweight. It is assigned to Duncan&rsquo;s parent company, Flambeau.</li><li><span>2001</span> The Duncan Freehand, the first yo-yo made for 5A, ships with a red casino-style die, rounded and drilled for the string.</li><li><span>Later</span> Bouncy-ball counterweights arrive with yo-yos like the Throw Monkey.</li><li><span>2011</span> YoYoJam licenses Takeshi Dice, with a ball bearing inside to adjust string tension instantly and a small &ldquo;Astro&rdquo; bead.</li><li><span>2015</span> Jake Elliott&rsquo;s delrin UltraWeight, with an internal bearing, wins the World 5A title.</li><li><span>2020</span> The counterweight patent expires. Until then, other companies needed a license from Duncan.</li></ul>
         <p class="sci-note">Sources: 1998, the YoYo Wiki<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup>; 1999, Wikipedia and the YoYo Wiki<sup class="cite"><a href="yoyo-gear.html#ref-73" aria-label="Source 73">[73]</a><a href="yoyo-gear.html#ref-65" aria-label="Source 65">[65]</a></sup>; 2000, the patent<sup class="cite"><a href="yoyo-gear.html#ref-74" aria-label="Source 74">[74]</a><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup>; 2001, the Freehand 1<sup class="cite"><a href="yoyo-gear.html#ref-64" aria-label="Source 64">[64]</a><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a></sup>; later years through 2015, the YoYo Wiki<sup class="cite"><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a></sup>; 2020, Wikipedia<sup class="cite"><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a></sup>.</p>
-        <h3>How heavy?</h3>
+        <h3>How Heavy?</h3>
         <p>Most players like a counterweight about one-sixth the weight of the yo-yo, so a 60&ndash;70g yo-yo pairs with a 10&ndash;11g weight.<sup class="cite"><a href="yoyo-gear.html#ref-59" aria-label="Source 59">[59]</a></sup> Steve Brown has been quoted favoring a 7-to-1 ratio.<sup class="cite"><a href="yoyo-gear.html#ref-63" aria-label="Source 63">[63]</a></sup> Forum players put the typical range at 10&ndash;13g and 2&ndash;3cm across.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></p>
-        <h3>Dedicated products</h3>
+        <h3>Dedicated Products</h3>
         <ul class="sci-list">
           <li><strong>Duncan Double Dice:</strong> a small cube that slides inside a larger die shell, for regular or sliding play; 10.8g.<sup class="cite"><a href="yoyo-gear.html#ref-92" aria-label="Source 92">[92]</a></sup></li>
           <li><strong>Candy Dice:</strong> designed by 5A pioneer Shingo Terada. A grooved design lets you switch between 5A and 1A without removing the string, and the Pro Comet adds a bearing for string tension.<sup class="cite"><a href="yoyo-gear.html#ref-93" aria-label="Source 93">[93]</a></sup></li>
           <li><strong>Doc Pop Pawn:</strong> a simple machined plastic counterweight with a through-hole.<sup class="cite"><a href="yoyo-gear.html#ref-94" aria-label="Source 94">[94]</a></sup></li>
         </ul>
-        <h3>DIY: dice, balls, and erasers</h3>
+        <h3>DIY: Dice, Balls, and Erasers</h3>
         <div class="try-box">
           <div class="try-label">Ask an Adult to Drill or File</div>
           <p>Keep it simple and safe. Skip anything with sharp points or lips that can catch on string or clothing. Plain dice, erasers, and rubber balls are good starting points, and odd shapes make learning harder.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></p>
@@ -309,7 +310,7 @@
           <li><strong>Mark first.</strong> Trace a line with a marker so you stay centered. File the edges first, then the flats, and go shallow all the way around before deepening the groove to your string&rsquo;s thickness.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></li>
           <li><strong>Test it.</strong> A 20-sided game die came out about 10g after filing a groove. A d20 plus a d6 on one string reached 10&ndash;11g.<sup class="cite"><a href="yoyo-gear.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
         </ol>
-        <h3>DIY: 3D-printed counterweights</h3>
+        <h3>DIY: 3D-Printed Counterweights</h3>
         <ul class="sci-list">
           <li>Free models are shared online, and your local library may have a 3D printer you can use for free.<sup class="cite"><a href="yoyo-gear.html#ref-79" aria-label="Source 79">[79]</a></sup></li>
           <li>Examples on Printables include a <a href="https://www.printables.com/model/1040116-lattice-cube-counterweight-for-yoyo-5a" target="_blank" rel="noopener noreferrer">Lattice Cube</a> with a shock-absorbing lattice<sup class="cite"><a href="yoyo-gear.html#ref-102" aria-label="Source 102">[102]</a></sup> and a <a href="https://www.printables.com/model/514879-bath-duck-yoyo-5a-counterweight" target="_blank" rel="noopener noreferrer">Bath Duck</a>.<sup class="cite"><a href="yoyo-gear.html#ref-103" aria-label="Source 103">[103]</a></sup> Browse more under the <a href="https://www.printables.com/tag/yoyo" target="_blank" rel="noopener noreferrer">yoyo tag</a>.<sup class="cite"><a href="yoyo-gear.html#ref-104" aria-label="Source 104">[104]</a></sup></li>
@@ -321,16 +322,16 @@
       </article>
 
       <article id="tools" class="sci-sec">
-        <div class="sci-kicker">Part 12</div>
+        <div class="sci-kicker">Section 3</div>
         <h2 class="sci-title">Knot Picks and Tools</h2>
         <p>Knots that jam around the bearing are part of the hobby, especially in 3A.<sup class="cite"><a href="yoyo-gear.html#ref-71" aria-label="Source 71">[71]</a></sup> The easy fixes are to unscrew the yo-yo, or just put on a new string.<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></p>
-        <h3>Dedicated tools</h3>
+        <h3>Dedicated Tools</h3>
         <ul class="sci-list">
           <li><strong>Duncan Yo-Tility Holster:</strong> a belt-loop holster that is also a bearing removal tool and string cutter.<sup class="cite"><a href="yoyo-gear.html#ref-95" aria-label="Source 95">[95]</a></sup></li>
           <li><strong>Bearing removal tools</strong> pull a bearing without scratching it.<sup class="cite"><a href="yoyo-gear.html#ref-58" aria-label="Source 58">[58]</a></sup> Some pocket multitools add a hex key and a pick.<sup class="cite"><a href="yoyo-gear.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
           <li><strong>String pickers</strong> from yo-yo brands are popular, though some are too thick for narrow fixed-axle gaps.<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></li>
         </ul>
-        <h3>DIY and household picks</h3>
+        <h3>DIY and Household Picks</h3>
         <ul class="sci-list">
           <li><strong>Wooden toothpicks:</strong> cheap and disposable.<sup class="cite"><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a><a href="yoyo-gear.html#ref-83" aria-label="Source 83">[83]</a><a href="yoyo-gear.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
           <li><strong>The plastic toothpick</strong> from a Swiss Army knife.<sup class="cite"><a href="yoyo-gear.html#ref-83" aria-label="Source 83">[83]</a><a href="yoyo-gear.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
@@ -339,7 +340,7 @@
           <li><strong>Nylon zip ties</strong>, a 0.5mm mechanical pencil tip, or tweezers.<sup class="cite"><a href="yoyo-gear.html#ref-83" aria-label="Source 83">[83]</a><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></li>
         </ul>
         <p class="sci-note">Go easy with metal. Sharp needles and paper clips work, but players worry they will scratch anodized finishes. One maker uses soft aluminum wire for that reason.<sup class="cite"><a href="yoyo-gear.html#ref-84" aria-label="Source 84">[84]</a><a href="yoyo-gear.html#ref-82" aria-label="Source 82">[82]</a></sup></p>
-        <h3>3D-printed picks and tools</h3>
+        <h3>3D-Printed Picks and Tools</h3>
         <ul class="sci-list">
           <li>A free <a href="https://www.printables.com/model/431605-yo-yo-string-pick" target="_blank" rel="noopener noreferrer">Yo-yo String Pick</a> on Printables has a hook for pulling up trapped string; the designer prefers it printed at 125% scale.<sup class="cite"><a href="yoyo-gear.html#ref-101" aria-label="Source 101">[101]</a></sup></li>
           <li>One player shared a Tinkercad design that clips a printed knot pick to a bearing removal tool&rsquo;s keychain hole, for about a cent of filament.<sup class="cite"><a href="yoyo-gear.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
@@ -349,15 +350,15 @@
       </article>
 
       <article id="cases" class="sci-sec">
-        <div class="sci-kicker">Part 13</div>
+        <div class="sci-kicker">Section 4</div>
         <h2 class="sci-title">Cases and Holders</h2>
-        <h3>Holders and holsters</h3>
+        <h3>Holders and Holsters</h3>
         <ul class="sci-list">
           <li><strong>Clip holders:</strong> a carabiner and elastic band clip a yo-yo to your bag or belt loop.<sup class="cite"><a href="yoyo-gear.html#ref-96" aria-label="Source 96">[96]</a></sup></li>
           <li><strong>Throw-strap:</strong> a strap with a wooden bead and metal clasp, inspired by kendama and yo-yo holsters.<sup class="cite"><a href="yoyo-gear.html#ref-97" aria-label="Source 97">[97]</a></sup></li>
           <li><strong>Utility holster:</strong> Duncan&rsquo;s Yo-Tility adds a bearing tool and string cutter.<sup class="cite"><a href="yoyo-gear.html#ref-95" aria-label="Source 95">[95]</a></sup></li>
         </ul>
-        <h3>DIY: a paracord holder</h3>
+        <h3>DIY: A Paracord Holder</h3>
         <p>One player built a holder from a carabiner, paracord from a sporting goods store, and a drilled 12-sided die, for under $5 in materials. The top is a cobra stitch and the pouch is a sling weave.<sup class="cite"><a href="yoyo-gear.html#ref-86" aria-label="Source 86">[86]</a></sup> Cobra knots take only a few minutes to learn from video tutorials.<sup class="cite"><a href="yoyo-gear.html#ref-87" aria-label="Source 87">[87]</a></sup> Another player paired a carabiner with a begleri.<sup class="cite"><a href="yoyo-gear.html#ref-86" aria-label="Source 86">[86]</a></sup></p>
         <h3>Cases</h3>
         <ul class="sci-list">
@@ -365,7 +366,7 @@
           <li><strong>Hard case:</strong> the iYoYo case holds up to six yo-yos, plus a zippered pouch for parts and string.<sup class="cite"><a href="yoyo-gear.html#ref-99" aria-label="Source 99">[99]</a></sup></li>
           <li><strong>Parts:</strong> the Capso box is 57mm across, sized to fit a case slot, for string, bearings, and pads.<sup class="cite"><a href="yoyo-gear.html#ref-100" aria-label="Source 100">[100]</a></sup></li>
         </ul>
-        <h3>DIY cases</h3>
+        <h3>DIY Cases</h3>
         <ul class="sci-list">
           <li><strong>Repurpose a hard case:</strong> players use microphone cases and Pelican-style cases, cutting yo-yo pockets in the foam.<sup class="cite"><a href="yoyo-gear.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
           <li><strong>Cut clean circles:</strong> use the rim of a clean, cut-open deodorant can or a tomato paste can as a foam cutter.<sup class="cite"><a href="yoyo-gear.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
@@ -378,7 +379,7 @@
       </article>
 
       <article id="diy" class="sci-sec">
-        <div class="sci-kicker">Part 14</div>
+        <div class="sci-kicker">Section 5</div>
         <h2 class="sci-title">More DIY Accessories</h2>
         <p>Players on the YoYoExpert forum have shared plenty of low-cost gear made from things around the house.<sup class="cite"><a href="yoyo-gear.html#ref-91" aria-label="Source 91">[91]</a></sup></p>
         <ul class="sci-list">
@@ -442,12 +443,14 @@
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
         <a href="resources.html" class="footer-link">Resources</a>
+        <a href="guides.html" class="footer-link">Guides</a>
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://stats.uptimerobot.com/7XjeeDhuSq" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Site status (opens in new tab)">Status</a>
       </nav>
     </div>
     <nav aria-label="Guides" class="footer-guides">

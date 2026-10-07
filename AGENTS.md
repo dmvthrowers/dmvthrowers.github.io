@@ -35,6 +35,7 @@ One shared JS file (`assets/js/mobile-enhancements.js`) is loaded on every page 
 
 | Page | Purpose |
 | --- | --- |
+| `guides.html` | **The GUIDES item in the main nav.** Hub with one card per guide below. When you publish a new guide, add a card here |
 | `learn-yoyo.html` | Hub for "How to Yo-Yo": TOC, glossary, and the shared `#references` list |
 | `learn-yoyo-{basics,tricks,practice,beyond}.html` | Parts 1–4. Each opens with "Part N of 4" and cites sources from the hub's `#references` |
 | `yoyo-gear.html` | Hub for "Yo-Yo Gear & Maintenance": TOC + shared `#references` |
@@ -50,7 +51,7 @@ The hubs carry a small script that forwards old deep links (`learn-yoyo.html#som
 | `vsyc26.html` | Landing — hero with date/venue facts + post-event wrap stats (the countdown was retired after the contest) + Event JSON-LD |
 | `vsyc26-schedule.html` | Day-of schedule |
 | `vsyc26-register.html` | Divisions (`#divisions`) + links out to the registration app at `register.dmvthrowers.club` (no embed). Says registration is closed |
-| `vsyc26-sponsors.html` | Tiers + current-sponsor list + JotForm inquiry embed (slated for replacement — site issue #77) |
+| `vsyc26-sponsors.html` | Tiers + current-sponsor list + a link to the inquiry form at `register.dmvthrowers.club/sponsor` (replaced the JotForm embed, site issue #77) |
 | `vsyc26-results.html`, `vsyc26-recap.html` | Post-contest results and recap, with YouTube-nocookie videos |
 | `vsyc26-dueling-stars.html` | Stella Duellum battles; embeds a Challonge bracket iframe |
 | `vsyc26-twirly-tour.html`, `vsyc26-merch.html` | Sponsor tour and merch pages |
@@ -95,6 +96,7 @@ Every content page repeats the same outer skeleton:
 
 - **Styles**: shared components + brand variables in `assets/css/main.css`; per-page layout tweaks in each page's inline `<style>` block. Don't migrate page-specific rules to `main.css` unless they're reused.
 - **Brand palette**: `--red`, `--navy`, `--cream`, `--border`. Use the variables, not raw hex.
+- **Headings**: Title Case on every heading, guides included. Articles, short conjunctions and prepositions (a, the, and, but, of, in, with, from) stay lowercase unless first or last; hyphenated words capitalize each part ("Trade-Offs"); the first word after a colon is capitalized.
 - **Images**:
   - Gallery and hero images use `<picture>` with WebP `<source>` + PNG/JPG fallback `<img>`.
   - `width`/`height` are always set on content images to reserve layout (CLS).

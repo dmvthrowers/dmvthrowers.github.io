@@ -8,7 +8,7 @@ after the October 2026 technical audit.
 
 | Repo | What it is | Live at | Start with |
 |---|---|---|---|
-| `dmvthrowers/dmvthrowers.github.io` (this one) | Static club website: meetups, guides, VSYC contest pages. No build step | dmvthrowers.club (GitHub Pages) | `CLAUDE.md`, `docs/ROADMAP.md` |
+| `dmvthrowers/dmvthrowers.github.io` (this one) | Static club website: meetups, guides, VSYC contest pages. No build step | dmvthrowers.club (GitHub Pages) | `CLAUDE.md`, `docs/ROADMAP.md`, `docs/BUILD_PLAN.md` |
 | `dmvthrowers/yoyo-player-map` | Public player/club/shop map. No login; email-verified; person pins jittered ~10 mi | map.dmvthrowers.club (Vercel) | `docs/REPO_GUIDE.md`, `docs/ROADMAP.md` |
 | `dmvthrowers/VA-States` | Contest registration, Stripe payments, day-of ops (run order, scoring, music). **The money app** | register.dmvthrowers.club (Vercel) | `docs/REPO_GUIDE.md`, `docs/ROADMAP.md` |
 | `dmvthrowers/dmvt-event-hub` | Community event calendar (React + Vite + Supabase, Lovable-built). **Not launched** | — (target events.dmvthrowers.club) | its `AGENTS.md` |
