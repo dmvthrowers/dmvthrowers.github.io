@@ -4,6 +4,8 @@ Open work for the static site, in priority order. Built from the October 2026 au
 status was re-checked against the repo on 2026-10-02. VSYC-27 planning items live in GitHub
 issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
 
+The build order across every repo, with status per item, is in [`BUILD_PLAN.md`](BUILD_PLAN.md).
+
 ## Done since the audit
 
 | Item | Where |
@@ -33,21 +35,21 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
 4. **Link checker in CI** (`lychee` against the staged site) — the hub ↔ part guide links,
    redirect stubs and JSON-LD URLs are all hand-maintained and drift silently.
 5. **HTML validation in CI** (`vnu` / `html5validator`) for the copy-paste boilerplate.
-6. **Guide part numbering.** Part intros say "Part N of 4", but body section headings keep the
-   old global numbers (e.g. maintenance is "Part 2 of 4" with sections "PART 4–9"). Renumber the
-   body headings per part, or drop the numbers.
+6. ~~**Guide part numbering.**~~ Done: section labels on each part now read "Section 1, 2…"
+   per page, and the two hub labels read "Quick reference".
 7. **Guides aren't in the main nav.** The largest content (learn-yoyo, yoyo-gear, history,
    science, collecting) is reachable only through inline links. Adding a nav item means editing
    every page's nav identically — plan it as one change across all pages.
-8. **`/.well-known/security.txt`** with a contact address.
+8. ~~**`/.well-known/security.txt`** with a contact address.~~ Done; renew its `Expires` line
+   before 2027-10-01.
 9. **Cold-load flash on `vsyc26.html`**: hero title briefly renders in fallback fonts and the nav
     logo shows a broken-image glyph. Check font-display and the logo's `width`/`height`.
-10. **JotForm leftovers.** `privacy.html` still lists JotForm as a registration processor (update
-   once no live JotForm forms remain; owner confirms wording). 16 pages (`about.html`,
+10. **JotForm leftovers.** ~~`privacy.html` still lists JotForm as a registration processor.~~
+   Removed (owner confirmed no JotForm form is live). 16 pages (`about.html`,
    `index.html`, `teachers.html`, the guides) carry stale "jotform for VSYC-26" CSP comments.
    `AGENTS.md` still describes a JotForm embed on `vsyc26-sponsors.html`. One small PR.
-11. **Status page link in the footers**, not only on the contact page. Touches every footer, so
-    plan it as one change across all pages.
+11. ~~**Status page link in the footers**, not only on the contact page.~~ Done: every footer
+    links the UptimeRobot status page.
 
 ## Later
 
@@ -57,8 +59,11 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
   enforcement. Putting Cloudflare (free) in front would add real headers.
 - Sitemap check in CI so a new page can't ship without a `sitemap.xml` entry.
 
-- **Raw hex colors** remain in page `<style>` blocks. Convert them to `--red`, `--navy`, `--cream`
-  and `--border`.
+- **Raw hex colors** in page `<style>` blocks. Brand colors and white are now variables
+  everywhere (`--white` added to `main.css`). What's left is off-palette, so mapping it changes how
+  pages look and needs a design call: the events page's status colors (greens, blues, greys), the
+  team page's badge colors, the teal on `index.html`, and the gold and grey-blue text on
+  `vsyc26-terms.html` and `about.html` (`#f0c040`, `#8090b8`, `#c8d0e0`).
 
 ## Owner actions (not code)
 
@@ -94,7 +99,6 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
 - **Contest app open questions:** the ten in the registration template's
   `docs/CONTEST_APP_MASTER_PLAN.md` (Part 6).
 
-- **Heading case on the guide pages:** Title Case (the brand rule) or leave as is.
 - **Share cards:** `dmvt-share.png` and `vsyc26-share.png` render in fallback system fonts.
   Regenerate them with Playfair Display?
 - **GitHub topics and descriptions** on the six template repos (set by hand in each repo's
