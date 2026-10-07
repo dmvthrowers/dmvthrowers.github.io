@@ -114,6 +114,80 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
 - A third-party listing (ngos1.com) shows the wrong phone number; request a correction.
 - Submit VSYC-27 to the NYYL calendar (yoyocontest.com) once it's dated.
 
+## Parity fixes (audit, 2026-10-07)
+
+Every live site stays in step with its template (see `docs/PARITY.md` in the registration
+template). This audit compared each pair. Fixes are listed by direction: what the template should
+gain from the live site, and the reverse.
+
+### VSYC pages ↔ `yoyo-contest-template`
+
+Same core pages on both sides (home, schedule, register, rules, venue, sponsors, results, FAQ,
+terms, 404). Into the template:
+
+- **Results with routine videos and a recap page.** Live has `vsyc26-results.html` and
+  `vsyc26-recap.html` with privacy-friendly YouTube embeds; the template's results page has none.
+- **A bracket page.** Live `vsyc26-dueling-stars.html` embeds a Challonge bracket; the template has
+  bracket settings but no page. Build it from the template's own config (or the registration app)
+  rather than an outside embed, per the contest app plan.
+- **Merch and side-event pages.** Live has `vsyc26-merch.html` and `vsyc26-twirly-tour.html`;
+  the template has neither. Add both as optional pages.
+- **Redirects for retired pages.** Live keeps `vsyc26-battles.html` and `vsyc26-divisions.html` as
+  redirect stubs; add a `redirects` setting so a template site can retire a page without breaking
+  links.
+
+### Club pages ↔ `yoyoclub-template`
+
+Same core pages (home, about, meetups/events, team, gallery, resources, FAQ, contact, conduct,
+privacy, 404). Into the template:
+
+- **Long-form guides.** Live has the "How to Yo-Yo" and "Gear" hubs with four parts each, a
+  deep-link forwarder, a shared references list, and standalone guides (history, science,
+  collecting, Filipino yo-yo history). The template has one Learn page. Add optional guide pages
+  (hub plus parts) from `content/`.
+- **A contact form.** Live uses Formspree with a honeypot and a locked CSP `form-action`; the
+  template only shows an email link. Add an optional form endpoint, off by default.
+- **A teachers page.** Live has `teachers.html`; add it as an optional "For schools" page.
+- **A status page link** in the footer (site #135), as an optional setting.
+
+Into the live site:
+
+- **An automated site check.** The template's `scripts/check_site.py` fails the build when headers
+  or footers differ, links break or alt text is missing. Live hand-copies the same nav and footer
+  onto about 40 pages with no check; run an equivalent in CI (goes with "Link checker" and "HTML
+  validation" under Next).
+
+Both: live uses `assets/js/mobile-enhancements.js`, the templates use `assets/site.js`. Pick one
+as the source for shared fixes (menu, external-link safety) and port the other's improvements.
+
+### Registration app (`VA-States` ↔ `yoyo-registration-template`)
+
+The full list is in the template's `docs/PARITY.md`. The headline:
+
+- **Into the template:** home-state champion rule, round plans, division split, prizes, score
+  status, DJ battle view, payment dispute flags, the bot check, nightly backups, the day-of runbook.
+- **Into VA-States:** roles and the `/staff` pane with its role pages, migration replay in CI, the
+  setup scripts, newer `resend` and `@vercel/analytics`, three test files.
+- **Both:** 151 of 236 shared files differ, mostly VSYC wording written into VA-States code where
+  the template reads config. Move it into config until shared files match. Migration numbers
+  0037–0049 mean different things in each repo; map them before porting schema changes.
+
+### Troop and pack sites (`Scouts-Template-Site`)
+
+The full list is in that repo's `PARITY.md`. The headline:
+
+- **Girl Scout Troop 80301** is behind the template. Copy the template's `build.py` (custom words,
+  automatic Vercel address) and `presets/`, then rebuild.
+- **Cub Scout Pack 1125** loads Google Fonts (the template promises no outside fonts), shows
+  official rank badges (confirm permission or use plain names), and runs a different check script.
+
+### Player map (`yoyo-player-map` ↔ `yoyo-map-template`)
+
+Two levels again: the template is the simple static map, the live map is a full app. Features the
+simple map could gain without a server: marker clustering, a search box, browse-by-place pages,
+and a privacy page. Multiple languages, accounts and moderation stay full-app only.
+**Decision:** should the full map app also become a template (level 2), like the registration app?
+
 ## Other club repos (tracked here)
 
 ### yoyo-player-map: dependency majors
