@@ -50,7 +50,7 @@ The hubs carry a small script that forwards old deep links (`learn-yoyo.html#som
 | `vsyc26.html` | Landing — hero with date/venue facts + post-event wrap stats (the countdown was retired after the contest) + Event JSON-LD |
 | `vsyc26-schedule.html` | Day-of schedule |
 | `vsyc26-register.html` | Divisions (`#divisions`) + links out to the registration app at `register.dmvthrowers.club` (no embed). Says registration is closed |
-| `vsyc26-sponsors.html` | Tiers + current-sponsor list + JotForm inquiry embed (slated for replacement — site issue #77) |
+| `vsyc26-sponsors.html` | Tiers + current-sponsor list + a link to the inquiry form at `register.dmvthrowers.club/sponsor` (replaced the JotForm embed, site issue #77) |
 | `vsyc26-results.html`, `vsyc26-recap.html` | Post-contest results and recap, with YouTube-nocookie videos |
 | `vsyc26-dueling-stars.html` | Stella Duellum battles; embeds a Challonge bracket iframe |
 | `vsyc26-twirly-tour.html`, `vsyc26-merch.html` | Sponsor tour and merch pages |
