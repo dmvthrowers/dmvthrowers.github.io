@@ -138,8 +138,8 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 }
 .nav-vsyc { background: var(--navy); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
 .nav-vsyc:hover { background: var(--red) !important; border-bottom: none !important; }
-.nav-donate { background: #13C3A3; color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
-.nav-donate:hover { background: #0f9d84 !important; border-bottom: none !important; }
+.nav-donate { background: var(--red); color: white !important; padding: 7px 14px !important; font-size: 0.68rem !important; font-weight: 700 !important; border-bottom: none !important; white-space: nowrap; transition: background 0.2s !important; }
+.nav-donate:hover { background: var(--red-dark) !important; border-bottom: none !important; }
 
 /* Hamburger + mobile menu. .open class is toggled by the inline script on each page. */
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
@@ -149,7 +149,7 @@ nav { background: var(--cream); border-bottom: 1px solid var(--border); padding:
 .mobile-menu a { font-size: 0.85rem; letter-spacing: 0.12em; font-weight: 600; color: var(--navy); text-decoration: none; padding: 13px 0; border-bottom: 1px solid var(--border); }
 .mobile-menu .mobile-donate, .mobile-menu .mobile-vsyc { margin-top: 12px; text-align: center; }
 .mobile-menu .mobile-vsyc { background: var(--navy); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
-.mobile-menu .mobile-donate { background: #13C3A3; color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
+.mobile-menu .mobile-donate { background: var(--red); color: white; padding: 10px 16px; border-bottom: none; font-weight: 700; }
 
 /* ===== 5. Sections & headings ===== */
 .section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }

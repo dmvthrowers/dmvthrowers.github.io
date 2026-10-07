@@ -178,10 +178,10 @@
   <style>
     /* Page-specific styles only; shared base styles come from assets/css/main.css */
     /* Fixed event card structure */
-    .event-card { background: #fffaf2; border: 1px solid #ece3d2; border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; }
+    .event-card { background: var(--cream-mid); border: 1px solid var(--border); border-left: 4px solid var(--navy); margin-bottom: 24px; overflow: hidden; }
     .event-card-next { border-left-color: var(--red); border-left-width: 6px; }
     .event-card-next .event-type { color: var(--red); }
-    .event-card-special { background: #1f4f8a; border-left-color: #153b66; }
+    .event-card-special { background: var(--navy); border-left-color: var(--red); }
     .event-card-special .event-type,
     .event-card-special .event-name,
     .event-card-special .event-loc,
@@ -189,19 +189,19 @@
     .event-card-special .event-day { color: white; }
     .event-card-special .event-type { opacity: 0.92; }
     .event-card-special .event-loc a { color: white; text-decoration: underline; }
-    .event-card-holiday { background: #2f7d4c; border-left-color: #1e5b36; }
+    .event-card-holiday { background: var(--text-muted); border-left-color: var(--navy); }
     .event-card-holiday .event-type,
     .event-card-holiday .event-name,
     .event-card-holiday .event-loc,
     .event-card-holiday .event-date,
     .event-card-holiday .event-day { color: white; }
     .event-card-holiday .event-type { opacity: 0.95; }
-    .event-card-cancelled { background: #f2f0ec; border-left-color: #9aa3b8; }
+    .event-card-cancelled { background: var(--cream); border-left-color: var(--border); }
     .event-card-cancelled .event-type { color: var(--red); }
-    .event-card-cancelled .event-name { color: #4b5563; }
-    .event-card-cancelled .event-date { color: #4b5563; text-decoration: line-through; }
-    .event-card-cancelled .event-day { color: #4b5563; }
-    .event-card-cancelled .event-loc { color: #4b5563; }
+    .event-card-cancelled .event-name { color: var(--text-muted); }
+    .event-card-cancelled .event-date { color: var(--text-muted); text-decoration: line-through; }
+    .event-card-cancelled .event-day { color: var(--text-muted); }
+    .event-card-cancelled .event-loc { color: var(--text-muted); }
     .event-card-body { padding: 20px 24px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
     .event-type { font-size: 0.65rem; letter-spacing: 0.18em; font-weight: 700; color: var(--red); margin-bottom: 6px; }
     .event-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--navy); }

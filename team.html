@@ -60,15 +60,15 @@
     .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 8px; }
     .team-card { background: white; border: 1px solid var(--border); overflow: hidden; }
     .team-card-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; background: var(--cream-mid); display: block; }
-    .team-card-photo-placeholder { width: 100%; aspect-ratio: 4/3; background: #dce3f0; display: flex; align-items: center; justify-content: center; }
+    .team-card-photo-placeholder { width: 100%; aspect-ratio: 4/3; background: var(--cream-mid); display: flex; align-items: center; justify-content: center; }
     .team-card-photo-placeholder-icon { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 3.5rem; color: var(--navy); opacity: 0.35; letter-spacing: 0.04em; }
     .team-card-body { padding: 24px; }
     .team-card-role { font-size: 0.63rem; letter-spacing: 0.18em; font-weight: 700; color: var(--red); margin-bottom: 5px; }
     .team-card-name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; color: var(--navy); margin-bottom: 4px; }
     .team-card-status { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 2px 9px; display: inline-block; margin-bottom: 14px; }
-    .status-active { background: #e6f4ec; color: #1e5b36; }
-    .status-transitional { background: #fff8e1; color: #b45309; }
-    .status-pending { background: #f0f0f0; color: #666; }
+    .status-active { background: var(--navy); color: var(--white); }
+    .status-transitional { background: var(--cream-mid); color: var(--red); border: 1px solid var(--red); }
+    .status-pending { background: var(--cream-mid); color: var(--text-muted); border: 1px solid var(--border); }
     .team-card-bio { font-size: 0.93rem; line-height: 1.75; color: var(--text-body); margin-bottom: 18px; }
     .team-card-links { display: flex; flex-wrap: wrap; gap: 8px; }
     .team-link { display: inline-flex; align-items: center; gap: 5px; background: var(--cream-mid); border: 1px solid var(--border); color: var(--navy); font-size: 0.78rem; font-weight: 600; padding: 6px 12px; text-decoration: none; transition: background 0.15s, color 0.15s; letter-spacing: 0.04em; }
