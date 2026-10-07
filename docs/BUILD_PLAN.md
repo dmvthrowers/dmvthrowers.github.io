@@ -153,15 +153,15 @@ Its own roadmap's "Next" list, all decision-free. One PR each.
 
 | # | Item | Status |
 |---|---|---|
-| 3.1 | Error envelope on the 11 routes still returning bare `{ error }` | ☐ |
-| 3.2 | hreflang alternates and per-page canonicals for the 11 locales | ☐ |
-| 3.3 | Idempotency key and 24h dedupe on `POST /api/submit` | ☐ |
-| 3.4 | Map accessibility: container label, link to `/players` for keyboard and screen readers | ☐ |
-| 3.5 | Re-enable the React Compiler lint rules and fix what they flag | ☐ |
-| 3.6 | Split the 820-line admin page into components | ☐ |
-| 3.7 | OSV-Scanner workflow: delete if broken (as on the site) | ☐ |
-| 3.8 | Remove unused `wouter`, unmounted analytics packages; `@types/node@22` | ☐ |
-| 3.9 | Free vector tiles (OpenFreeMap) for both maps | ☐ |
+| 3.1 | Error envelope on the 11 routes still returning bare `{ error }` | ☑ map #258 |
+| 3.2 | hreflang alternates and per-page canonicals for the 11 locales | ☑ already done (map `5587eb2`) |
+| 3.3 | Idempotency key and 24h dedupe on `POST /api/submit` | ☑ map #259 |
+| 3.4 | Map accessibility: container label, link to `/players` for keyboard and screen readers | ☑ map #260 |
+| 3.5 | Re-enable the React Compiler lint rules and fix what they flag | ☑ map #261 |
+| 3.6 | Split the 820-line admin page into components | ◐ map #269 |
+| 3.7 | OSV-Scanner workflow: delete if broken (as on the site) | ☑ map #262 |
+| 3.8 | Remove unused `wouter`, unmounted analytics packages; `@types/node@22` | ☑ map #263 |
+| 3.9 | Free vector tiles (OpenFreeMap) for both maps | ◐ map #265 (player map, off by default; owner turns it on). Template half ⛔ owner call: vendoring MapLibre adds ~1 MB to every copy |
 
 ## Wave 4: the contest app, Phase 1 (template first, then VA-States)
 
