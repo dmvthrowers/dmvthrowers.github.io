@@ -89,6 +89,7 @@
   --cream: #fffdfa; /* Slightly lighter for more contrast */
   --cream-mid: #f7f3ec;
   --border: #b0a890;
+  --white: #fff;
   --text-muted: #4a5a7a; /* Darker muted text for better contrast */
   --text-body: #1a2744; /* Use navy for body text for max contrast */
   /* Letter-spacing tokens for uppercase labels (SECTION TAGS, nav links). Keep pairs in lockstep. */

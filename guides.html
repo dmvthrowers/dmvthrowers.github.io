@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<!--
+  guides.html — Hub for the long-form guides (learn, gear, science, history, collecting, classroom).
+  Sections: top bar · main nav · page hero · guide cards · footer.
+  Add a card to the grid whenever a new guide is published.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <base href="/"/>
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
+  <title>Guides · DMV Throwers</title>
+  <meta name="description" content="Free, sourced yo-yo guides from DMV Throwers: how to yo-yo, gear and maintenance, science, history, collecting, and classroom resources."/>
+  <meta property="og:title" content="Guides - DMV Throwers · Yo-Yo & Skill Toy Club"/>
+  <meta property="og:description" content="Free, sourced yo-yo guides from DMV Throwers: how to yo-yo, gear and maintenance, science, history, collecting, and classroom resources."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/guides.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/og/dmvt-share.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="DMV Throwers: free yo-yo and skill toy club in DC, Maryland and Virginia"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="Guides - DMV Throwers · Yo-Yo & Skill Toy Club"/>
+  <meta name="twitter:description" content="Free, sourced yo-yo guides from DMV Throwers: how to yo-yo, gear and maintenance, science, history, collecting, and classroom resources."/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/og/dmvt-share.png"/>
+  <meta name="twitter:image:alt" content="DMV Throwers: free yo-yo and skill toy club in DC, Maryland and Virginia"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="keywords" content="yo-yo guides, how to yo-yo, yo-yo history, yo-yo science, yo-yo collecting, DMV Throwers"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <meta name="geo.placename" content="Arlington, Virginia"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/dmvt-favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/dmvt-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dmvt-logo-32.png"/>
+  <link rel="apple-touch-icon" href="assets/images/dmvt-logo-180.png"/>
+  <link rel="canonical" href="https://dmvthrowers.club/guides.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- JSON-LD: BreadcrumbList + ItemList of downloadable resources. Not rendered. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
+      {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://dmvthrowers.club/guides.html"}
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    /* Page-specific styles only; shared base styles come from assets/css/main.css */
+    .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 32px; }
+    .resource-card { background: white; padding: 24px; border: 1px solid var(--border); border-top: 4px solid var(--navy); }
+    .resource-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
+    .resource-desc { color: var(--text-muted); margin-bottom: 20px; line-height: 1.5; }
+    .resource-link { display: inline-flex; align-items: center; gap: 6px; background: var(--navy); color: white; padding: 8px 16px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+    .resource-link:hover, .resource-link:focus-visible { background: var(--red); }
+    .resources-section-bg { background: white; }
+    .resources-desc { color: var(--text-muted); margin-bottom: 8px; font-size: 0.95rem; }
+    @media (max-width: 768px) {
+      .resource-grid { grid-template-columns: 1fr; }
+      .resource-card { padding: 20px; }
+      .resource-title { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: headline event + shortcut. Update the text each month. -->
+<div id="top-bar">
+  <span>NEXT MEET: SUNDAY, OCTOBER 18 · 1–4 PM · ARLINGTON CENTRAL LIBRARY</span>
+  <a href="events.html">SEE EVENTS →</a>
+</div>
+
+<!-- Main nav. aria-current="page" marks the active tab; set per-page. -->
+<nav aria-label="Main navigation" role="navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp" width="38" height="38"/>
+        <img src="assets/images/logo.png" alt="DMV Throwers Logo" class="header-logo" width="38" height="38"/>
+      </picture>
+      <div>
+        <div class="nav-brand-text-main">DMV THROWERS</div>
+        <div class="nav-brand-text-sub">YO-YO & SKILL TOY CLUB</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="nav-link">ABOUT</a>
+      <a href="team.html" class="nav-link">TEAM</a>
+      <a href="events.html" class="nav-link">CLUB EVENTS</a>
+      <a href="gallery.html" class="nav-link">GALLERY</a>
+      <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="guides.html" class="nav-link active" aria-current="page">GUIDES</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
+      <a href="vsyc26.html" class="nav-link nav-vsyc">VSYC-26 →</a>
+        <a href="https://map.dmvthrowers.club/" class="nav-link">MAP</a>
+        <a href="https://yoyoarchive.org/yya-events" class="nav-link" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">ABOUT</a>
+  <a href="team.html">TEAM</a>
+  <a href="events.html">CLUB EVENTS</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="resources.html">RESOURCES</a>
+  <a href="guides.html">GUIDES</a>
+  <a href="faq.html">FAQ</a>
+    <a href="https://map.dmvthrowers.club/">MAP</a>
+    <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="mobile-donate">☕ DONATE</a>
+  <a href="vsyc26.html" class="mobile-vsyc">VSYC-26 → VIRGINIA STATE YO-YO CONTEST</a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- Page hero: compact banner used on secondary pages. -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="red-tag">DMV THROWERS</span>
+    <h1 class="page-hero-title">Guides</h1>
+    <p class="page-hero-sub">Learn · Gear · Science · History</p>
+  </div>
+  <div class="page-hero-skyline">
+          <img src="assets/images/dc-skyline.svg" alt="" aria-hidden="true" loading="lazy" width="1400" height="100"/>
+  </div>
+</div>
+
+<!-- Guide hub: one card per long-form guide. Add a card here whenever a new guide is published. -->
+<section id="guides" class="resources-section-bg">
+  <div class="section">
+    <div class="red-tag">LEARN &amp; REFERENCE</div>
+    <h2 class="section-title">All Our Guides</h2>
+    <div class="divider"></div>
+    <p class="resources-desc">Free, sourced guides for new and experienced players, teachers and collectors. Looking for downloads and trusted links instead? See <a href="resources.html">Resources</a>.</p>
+
+    <div class="resource-grid">
+
+      <div class="resource-card">
+        <div class="resource-title">How to Yo-Yo</div>
+        <div class="resource-desc">Learn to yo-yo: string it, wind it, throw a sleeper, fix string tension, and work through your first 100 tricks with links to free video tutorials.</div>
+        <a href="learn-yoyo.html" class="resource-link" aria-label="Read: How to Yo-Yo">Read the guide</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-title">Yo-Yo Gear &amp; Maintenance</div>
+        <div class="resource-desc">A cited guide to yo-yo gear and maintenance: bearings, string, response pads, lube, mods, cleaning and polishing, with low-cost DIY options.</div>
+        <a href="yoyo-gear.html" class="resource-link" aria-label="Read: Yo-Yo Gear &amp; Maintenance">Read the guide</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-title">Yo-Yo Science &amp; DIY</div>
+        <div class="resource-desc">How yo-yos work: the physics, math, design and patents behind them, plus free 3D-printable designs and DC-area makerspaces. Every fact cited.</div>
+        <a href="yoyo-science.html" class="resource-link" aria-label="Read: Yo-Yo Science &amp; DIY">Read the guide</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-title">The Story of the Yo-Yo</div>
+        <div class="resource-desc">A sourced timeline of the yo-yo, from ancient Greek vase paintings to Pedro Flores, Duncan and today&#x27;s world contests, with DC-area connections.</div>
+        <a href="yoyo-history.html" class="resource-link" aria-label="Read: The Story of the Yo-Yo">Read the guide</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-title">Filipino Yo-Yo History</div>
+        <div class="resource-desc">The story of Pedro Flores, Duncan&#x27;s Filipino yo-yo demonstrators, Joe Radovan, and DC-area TV performer Tommy Reyes, from Robert Reyes&#x27;s history exhibit.</div>
+        <a href="filipino-yoyo-history.html" class="resource-link" aria-label="Read: Filipino Yo-Yo History">Read the guide</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-title">Collecting Yo-Yos</div>
+        <div class="resource-desc">A cited guide to yo-yo collecting: vintage brands, modern limited runs and prototypes, condition and value, safe trading, storage and museums.</div>
+        <a href="yoyo-collecting.html" class="resource-link" aria-label="Read: Collecting Yo-Yos">Read the guide</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-title">Yo-Yos in the Classroom</div>
+        <div class="resource-desc">Free classroom yo-yo resources: physics and math activities, 41 printable worksheets, and student coding projects for teachers and homeschoolers.</div>
+        <a href="teachers.html" class="resource-link" aria-label="Read: Yo-Yos in the Classroom">Read the guide</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer. Canonical structure lives in about.html; keep in sync when editing. -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp" width="34" height="34"/>
+          <img src="assets/images/logo.png" alt="DMV Throwers logo" class="footer-logo" loading="lazy" width="34" height="34"/>
+        </picture>
+        <div>
+          <div class="footer-brand-main">DMV THROWERS</div>
+          <div class="footer-brand-sub">YO-YO & SKILL TOY CLUB · DC · VA · MD</div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="about.html" class="footer-link">About</a>
+        <a href="team.html" class="footer-link">Team</a>
+        <a href="events.html" class="footer-link">Events</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="resources.html" class="footer-link">Resources</a>
+        <a href="guides.html" class="footer-link">Guides</a>
+        <a href="faq.html" class="footer-link">FAQ</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://stats.uptimerobot.com/7XjeeDhuSq" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Site status (opens in new tab)">Status</a>
+      </nav>
+    </div>
+    <nav aria-label="Guides" class="footer-guides">
+      <span class="footer-guides-label">GUIDES</span>
+      <a href="learn-yoyo.html" class="footer-link">How to Yo-Yo</a>
+      <a href="yoyo-gear.html" class="footer-link">Gear &amp; Maintenance</a>
+      <a href="yoyo-history.html" class="footer-link">Yo-Yo History</a>
+      <a href="filipino-yoyo-history.html" class="footer-link">Filipino Yo-Yo History</a>
+      <a href="yoyo-science.html" class="footer-link">Yo-Yo Science</a>
+      <a href="yoyo-collecting.html" class="footer-link">Collecting Yo-Yos</a>
+      <a href="teachers.html" class="footer-link">For Teachers</a>
+      <a href="https://map.dmvthrowers.club/" class="footer-link">Player Map</a>
+    </nav>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 DMV Throwers · Est. 2021 · Yo-Yo & Skill Toy Club · DC · Northern Virginia · Maryland</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+</script>
+<!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>

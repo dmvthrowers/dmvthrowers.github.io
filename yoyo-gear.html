@@ -7,14 +7,13 @@
 -->
 <html lang="en">
 <head>
-    <link rel="manifest" href="assets/images/site.webmanifest"/>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <!-- base href="/" makes every relative URL resolve from the site root. -->
   <base href="/"/>
-  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
-       formspree for the contact form, Google Fonts for typography). -->
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <!-- CSP: scripts, images and frames from this site only; Google Fonts for typography. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Yo-Yo Gear &amp; Maintenance · DMV Throwers</title>
   <meta name="description" content="A cited guide to yo-yo gear and maintenance: bearings, string, response pads, lube, mods, cleaning and polishing, with low-cost DIY options."/>
@@ -113,7 +112,7 @@
       .stack-table thead { display: none; }
       .stack-table caption { display: block; width: 100%; }
       .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
-      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: var(--white); }
       .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
       .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
       .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
@@ -164,6 +163,7 @@
       <a href="events.html" class="nav-link">CLUB EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="guides.html" class="nav-link">GUIDES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
@@ -183,6 +183,7 @@
   <a href="events.html">CLUB EVENTS</a>
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
+  <a href="guides.html">GUIDES</a>
   <a href="faq.html">FAQ</a>
     <a href="https://map.dmvthrowers.club/">MAP</a>
     <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
@@ -273,7 +274,7 @@
       </article>
 
       <article id="troubleshooting" class="sci-sec">
-        <div class="sci-kicker">Part 18</div>
+        <div class="sci-kicker">Quick reference</div>
         <h2 class="sci-title">Quick Troubleshooting</h2>
         <div class="table-scroll">
         <table class="sci-table">
@@ -560,12 +561,14 @@
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
         <a href="resources.html" class="footer-link">Resources</a>
+        <a href="guides.html" class="footer-link">Guides</a>
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://stats.uptimerobot.com/7XjeeDhuSq" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Site status (opens in new tab)">Status</a>
       </nav>
     </div>
     <nav aria-label="Guides" class="footer-guides">
