@@ -225,6 +225,78 @@ registration template's `docs/CONTEST_APP_MASTER_PLAN.md`.
    the club template (the contest app's feeds are planned separately). Generate one from the
    meetup rule.
 
+## Features worth adding, from research (2026-10-07)
+
+What comparable tools do that ours don't, per repo. Sources: [The Yoyo Archive](https://yoyoarchive.org/yya-events)
+and its open dataset, [WCA Live and the WCA results export](https://www.worldcubeassociation.org/export/results),
+[BCOE&M](https://github.com/geoffhumphrey/brewcompetitiononlineentry) (open-source competition entry
+and judging), CompAdminPro, [Gancio and Mobilizon](https://docs.mobilizon.org/6.%20Fediverse/3.gancio/)
+(community calendars), [OpenFreeMap](https://openfreemap.org/) and Open User Map, and troop-site
+guidance from [TroopWebHost](https://www.troopwebhost.org/help.aspx?ID=397).
+
+### Event hub (`dmvt-event-hub`)
+
+- **Past events become an archive.** Keep every event page after it ends, with "Upcoming" and
+  "Past" tabs and month navigation; link each past contest to its results, recap and photos.
+  (Yoyo Archive)
+- **Search.** One search box across events, venues and organizers. (Yoyo Archive)
+- **Open data.** Publish the events as a dataset (JSON and CSV) under an open license in a public
+  repo, alongside the `.ics` and RSS feeds. (Yoyo Archive, CC BY-SA)
+- **Share instead of duplicate.** Offer our events and results to the Yoyo Archive's open dataset,
+  and read theirs, rather than building a second archive of the same contests.
+- **Federation and embeds.** An embeddable event list for club sites, and ActivityPub export so
+  Gancio or Mobilizon calendars can follow ours. (Gancio, Mobilizon)
+
+### Registration app (VA-States and the template)
+
+Contest-specific; detailed as D1–D6 in the template's `docs/CONTEST_APP_MASTER_PLAN.md`.
+
+- **Player career page** across seasons: every placement, linked from results. (Yoyo Archive
+  player profiles, WCA person view)
+- **Open results data:** each season's public results as JSON and CSV under an open license.
+  (WCA export)
+- **Psych sheet:** registered players with their past placements, for seeding, run order and the
+  MC. (WCA Live)
+- **Judge notes:** short written feedback attached to a player's score sheet. (BCOE&M scoresheets,
+  CompAdminPro)
+- **A documented contest data format** (divisions, rounds, entries, results) for moving a contest
+  between deployments and tools. (WCA's WCIF)
+- **Schedule conflict check:** warn when a player's divisions overlap. (CompAdminPro)
+
+### Club site and `yoyoclub-template`
+
+- **Site search** across the guides, as a static index with no tracking (for example Pagefind).
+  (Yoyo Archive)
+- **Loaner program page:** what loaners are, how to borrow one, and the rules. (Astronomy club
+  sites)
+- **News archive with RSS:** each month's recap as a post, so people can follow without social
+  media.
+- **Supporters page:** who helps keep the club free, alongside the open books (contest app O4).
+  (Yoyo Archive supporters)
+- **Events from the hub:** show the event hub's feed on the events page instead of hand-editing
+  cards each month.
+
+### Troop and pack sites (`Scouts-Template-Site`)
+
+- **Photo permission and first names only** as template settings, with `check_site.py` flagging
+  full names and photos without permission. (Troop-site guidelines)
+- **Event sign-ups and electronic permission slips** need a server, so they belong in "forms on our
+  own system" in the registration template, linked from the static site. (TroopWebHost)
+- **Forms library:** the unit's permission, medical and registration forms in one place with dates.
+
+### Player map and `yoyo-map-template`
+
+- **Free vector tiles with no key or limits** (OpenFreeMap), for both maps.
+- **Visibility per entry:** city, region, or hidden from the map but listed. (Member directories)
+- **Clustering and search** in the simple template (already under Parity fixes).
+- **Open counts, not people:** publish players per region as open data, never individual pins.
+
+### Contest site (`yoyo-contest-template`)
+
+- **Live results from the app:** when a registration app exists, the results page reads its public
+  feed instead of being edited by hand.
+- **A link to the season's open results data** (see the registration app above).
+
 ## Other club repos (tracked here)
 
 ### yoyo-player-map: dependency majors
