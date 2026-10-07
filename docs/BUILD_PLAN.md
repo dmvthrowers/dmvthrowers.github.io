@@ -72,9 +72,9 @@ Each is a few hours or less. Ordered by value.
 | 1.3 | site | Sitemap check in the site check (every page in `sitemap.xml`, no dead entries) — after #139 | ☐ |
 | 1.4 | site | Guide part numbering: renumber body headings per part (Next 6) | ◐ #144 |
 | 1.5 | site | Cold-load flash on `vsyc26.html`: logo size (Next 9); fonts are 2.12 | ◐ #145 |
-| 1.6 | site | Raw hex colors in page `<style>` blocks → brand variables (Later) | ☐ |
-| 1.7 | site | Headings that skip a level (h1 → h3) | ☐ |
-| 1.8 | all three static templates | Deploy guard: the build warns, and CI fails, when sample data (example.org email, "Jordan Example") would ship to a real site | ☐ |
+| 1.6 | site | Raw hex colors in page `<style>` blocks → brand variables (Later); off-palette ones need a design call | ◐ #146 |
+| 1.7 | site + templates | Headings that skip a level (h1 → h3) | ◐ #147, club #8, scouts #6 |
+| 1.8 | all four static templates | Deploy guard: a copy's CI fails while sample data (example.org, the sample names) would ship | ◐ club #9, contest #7, scouts #7, map #4 |
 | 1.9 | yoyo-map-template | `og:image`, a privacy page, h1→h3 fix | ☐ |
 | 1.10 | yoyo-map-template | Marker clustering (vendored Leaflet.markercluster, MIT) | ☐ |
 | 1.11 | yoyo-map-template | Browse-by-place pages (one static page per region) | ☐ |
