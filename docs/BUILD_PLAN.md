@@ -42,24 +42,61 @@ This file is the *how and when*. Written 2026-10-07. Update the status column as
 Every one shows a red `github-advanced-security` check: the Copilot quota is used up (owner action
 below), not a code problem.
 
+## Decisions made (2026-10-07)
+
+| Topic | Decision | Lands in |
+|---|---|---|
+| `github-advanced-security` red on every PR | Leave it red until the Copilot quota resets; merge anyway | — |
+| Fonts | Self-host Playfair Display, DM Sans and Montserrat on the club site | 2.12 |
+| Off-palette colors | Map them to brand colors (before/after screenshots in the PR) | 1.6b |
+| Guides in the nav | Add one GUIDES item, same on every page, to a guides hub | 2.7 |
+| Canonical VA-States repo | `dmvthrowers/VA-States` | 0.4 |
+| JotForm on the privacy page | Remove it; no JotForm form is live | 1.21 |
+| Pack 1125 | Self-host fonts; plain rank names instead of badge images | scouts parity |
+| Full map app as a template | Yes, plan it as a level-2 template | 7.8 |
+| Troop `DEPLOY.md`, `TEMPLATE-README.md` | Generalize into the scouts template | 1.19b |
+| Site search | Yes: a static index (Pagefind) built in CI, club site and club template | 7.6 |
+| Guide heading case | Title Case everywhere | 1.22 |
+| Share cards | Regenerate both with the brand fonts | 1.23 |
+| Kendama | Trick-deck battles and speed ladder first; a kendama division at VSYC-27 | 4.16, 4.17 |
+| Girls divisions | $0 add-ons fed by the main division's results | 4.18 |
+| Fan picks | Build it, off by default | wave 6 |
+| Video prelims and online entries | Yes, in a later phase | wave 6 |
+| Brackets from other tools | Support CSV import and export | wave 6 (R9) |
+| Results on club sites | A public feed any club can use | wave 6 (T16) |
+| Sponsor payments | Invoice only | — |
+| Open books | Kept in the app's finance screens | 5.5 |
+| Event hub and contest app | Two apps sharing one event format | 5.4, wave 7 |
+| Juggling | Host our own convention (moves S8, R7, R8 earlier) | wave 6 |
+| TypeScript 7 on the map | Wait for 7.1 | — |
+| Payment records | Keep 7 years | 4.4 |
+| Waivers and guardian consent | Until the minor turns 21; 3 years for adults | 4.4 |
+| Registrant personal data | Anonymize after the archive merges; keep stats | 4.4 |
+| Player accounts | Keep across seasons; purge each season's data | 4.4 |
+| Past champions table | Yes, public names only | 4.4 |
+| Dismissed sponsor inquiries | Delete after 1 year | sponsor extras |
+| Troop git history | Leave it | — |
+| GitHub topics on the templates | `yo-yo`, `skill-toys`, `github-pages`, `static-site`, `website-template` (owner sets them) | 0.13 |
+
 ## Wave 0: owner actions and decisions
 
 These unblock later waves. Nothing in code waits on the ones marked *no code waits*.
 
 | # | Action or decision | Unblocks |
 |---|---|---|
-| 0.1 | Fix the Copilot quota or turn off `github-advanced-security` | Green checks everywhere |
+| 0.1 | ~~Copilot quota~~ Decided: leave red until it resets | — |
 | 0.2 | VA-States "Now" list: close VSYC-26 registration, remove dead env vars, Stripe webhook events, backups and a test restore, rotate staff accounts | *no code waits* |
 | 0.3 | Map "Now" list: confirm the service-role key rotation, secret scanning, Vercel storage cleanup | *no code waits* |
-| 0.4 | Which VA-States repo is canonical; second owner or org move (Gap 1) | 6.x ports stay simple |
-| 0.5 | Archive and purge retention (`docs/specs/season-archive.md` in VA-States) | 4.4 purge and reset, D1, D2 |
+| 0.4 | Canonical repo decided (`dmvthrowers/VA-States`); still open: a second owner or org move (Gap 1) | Bus factor |
+| 0.5 | ~~Archive and purge retention~~ Decided (see above) | 4.4 unblocked |
 | 0.6 | VSYC-27 date and venue | 1.20 contest page reset (#76) |
 | 0.7 | Conduct team names (at least two) and response time | 2.8 conduct page, P2 |
 | 0.8 | Sponsor questions (17, `docs/SPONSOR_FORM.md`) | Sponsor extras |
-| 0.9 | Contest app decisions (master plan Part 7): kendama formats, girls divisions, fan picks, video prelims, results on club sites | F-items, R1, R2, T9, T16 |
-| 0.10 | Privacy page JotForm line wording; pack Google Fonts and rank badges; troop `DEPLOY.md`; full map app as a template | 1.x site cleanups, scouts parity |
+| 0.9 | ~~Contest app decisions~~ Decided (see above) | F1, S7, R2 unblocked |
+| 0.10 | ~~Privacy JotForm, pack fonts and badges, troop docs, map template~~ Decided (see above) | — |
 | 0.11 | Press kit source file (to fix "Founded 2023") | 1.19 |
 | 0.12 | Add `dmvt-event-hub` and `DMVT-Design` to the agent's repo access | Wave 7, 3.9 |
+| 0.13 | Set GitHub topics on the six template repos (Settings → About) | Discoverability |
 
 ## Wave 1: small, decision-free, static (start now)
 
@@ -87,6 +124,11 @@ Each is a few hours or less. Ordered by value.
 | 1.18 | yoyoclub-template | Optional "For schools" page (parity with `teachers.html`) and loaner program page | ☐ |
 | 1.19 | site | Press kit "Founded 2021" | ⛔ 0.11 |
 | 1.20 | site | #76: archive VSYC-26 pages and reset for VSYC-27, stale post-event wording | ⛔ 0.6 |
+| 1.6b | site | Map off-palette colors to brand colors (events, team, index, terms, about) | ☐ |
+| 1.19b | Scouts-Template-Site | Generalized `DEPLOY.md` from the troop repo | ☐ |
+| 1.21 | site | Remove JotForm from `privacy.html` | ☐ |
+| 1.22 | site | Title Case on guide headings | ☐ |
+| 1.23 | site | Regenerate `dmvt-share.png` and `vsyc26-share.png` with the brand fonts | ☐ |
 
 ## Wave 2: medium static features
 
@@ -131,7 +173,7 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | 4.1 | Port score status, round plans, split, prizes, DJ battle view, disputes, bot check, champion rule into the template | Parity (VA-States → template). Prerequisite for T1 and the rest | ☐ |
 | 4.2 | Port roles and `/staff`, migration replay in CI, setup scripts, three tests into VA-States | Parity (template → VA-States). Production care | ☐ |
 | 4.3 | Migration number map (0037–0049) and the survey table name | Parity "Both". Docs plus one rename | ☐ |
-| 4.4 | Season archive purge and reset | ⛔ 0.5 | ⛔ |
+| 4.4 | Season archive purge and reset, with the retention decisions above | Production care | ☐ |
 | 4.5 | T19 port to VA-States | After template #45 merges | ☐ |
 | 4.6 | T1 scores-in board | Builds on score status | ☐ |
 | 4.7 | T2 release gates (run order gate, head-judge "checked") | | ☐ |
@@ -144,8 +186,8 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | 4.14 | T18 contest guide page + O1 first contest path | | ☐ |
 | 4.15 | E8 email log stub · E9 first admin once | Setup safety | ☐ |
 | 4.16 | F1 bracket match scores | Kendama payoff; format steps in master plan Part 6 | ☐ |
-| 4.17 | S2 trick list page, S3 prize table, S7 kendama preset | Kendama choices ⛔ 0.9 for S7 | ☐ |
-| 4.18 | R2 $0 add-on divisions | ⛔ 0.9 (girls divisions) | ⛔ |
+| 4.17 | S2 trick list page, S3 prize table, S7 kendama preset (trick-deck battles + speed ladder) | | ☐ |
+| 4.18 | R2 $0 add-on divisions (girls divisions as $0 add-ons) | | ☐ |
 | 4.19 | VA-States leftovers: admin route rate limit (Next 8), money-path route tests (Next 9) | | ☐ |
 | 4.20 | VA-States results data gaps on `/results` (Next 12) | Needs a read of the import rows | ☐ |
 
@@ -180,6 +222,7 @@ when we get there; most wait on wave 5.
 | 7.5 | Brand parity check against DMVT-Design tokens (Gap 8) | ⛔ 0.12 |
 | 7.6 | Site search with a static index (Pagefind) | Needs a CI step that writes the index; owner nod since the site has no build step |
 | 7.7 | News archive with RSS, supporters page | Content from the owner |
+| 7.8 | Full map app as a level-2 template (like the registration app) | After wave 3 |
 
 ## What we're chipping first
 
