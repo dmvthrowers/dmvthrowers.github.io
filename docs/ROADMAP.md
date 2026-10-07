@@ -57,11 +57,11 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
   enforcement. Putting Cloudflare (free) in front would add real headers.
 - Sitemap check in CI so a new page can't ship without a `sitemap.xml` entry.
 
-- **Raw hex colors** in page `<style>` blocks. Brand colors and white are now variables
-  everywhere (`--white` added to `main.css`). What's left is off-palette, so mapping it changes how
-  pages look and needs a design call: the events page's status colors (greens, blues, greys), the
-  team page's badge colors, the teal on `index.html`, and the gold and grey-blue text on
-  `vsyc26-terms.html` and `about.html` (`#f0c040`, `#8090b8`, `#c8d0e0`).
+- **Raw hex colors** in page `<style>` blocks: done. Brand colors and white are variables everywhere
+  (`--white` added to `main.css`), and the off-palette ones are mapped to brand colors: the events
+  page's status cards (navy, slate, cream), the team page's status badges, the donate button's teal
+  (now red, in `main.css` and `index.html`), and the gold and grey-blue text on `vsyc26-terms.html`
+  and `about.html`.
 
 ## Owner actions (not code)
 
