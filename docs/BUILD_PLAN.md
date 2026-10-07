@@ -126,7 +126,7 @@ Each is a few hours or less. Ordered by value.
 | 1.20 | site | #76: archive VSYC-26 pages and reset for VSYC-27, stale post-event wording | ⛔ 0.6 |
 | 1.6b | site | Map off-palette colors to brand colors (events, team, index, terms, about) | ☐ |
 | 1.19b | Scouts-Template-Site | Generalized `DEPLOY.md` from the troop repo | ☐ |
-| 1.21 | site | Remove JotForm from `privacy.html` | ☐ |
+| 1.21 | site | Remove JotForm from `privacy.html` | ◐ #148 |
 | 1.22 | site | Title Case on guide headings | ☐ |
 | 1.23 | site | Regenerate `dmvt-share.png` and `vsyc26-share.png` with the brand fonts | ☐ |
 
@@ -145,7 +145,7 @@ Each is a few hours or less. Ordered by value.
 | 2.9 | all templates | Releases: tag v1.0.0, `CHANGELOG.md`, an "update your copy" guide (Gap 2) | ☐ |
 | 2.10 | all templates | Showcase smoke test in CI: build every example, click every page in Chromium (Gap 5) | ☐ |
 | 2.11 | all static repos | Automated accessibility check (axe) in CI, then fix what it finds (Gap 3) | ☐ |
-| 2.12 | site | Self-host Playfair Display, DM Sans and Montserrat (OFL): ends the font swap flash and removes Google Fonts from every page's CSP | ☐ |
+| 2.12 | site | Self-host Playfair Display, DM Sans and Montserrat (OFL): ends the font swap flash and removes Google Fonts from every page's CSP | ◐ #149 |
 
 ## Wave 3: the player map app (`yoyo-player-map`)
 
