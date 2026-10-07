@@ -106,16 +106,16 @@ Each is a few hours or less. Ordered by value.
 |---|---|---|---|
 | 1.1 | site | `/.well-known/security.txt` with the contact address (Next 8) | ◐ #142 |
 | 1.2 | site | Status link in every footer, not only contact (Next 11) | ◐ #143 |
-| 1.3 | site | Sitemap check in the site check (every page in `sitemap.xml`, no dead entries) — after #139 | ☐ |
+| 1.3 | site | Sitemap check in the site check (every page in `sitemap.xml`, no dead entries) — after #139 | ◐ #150 |
 | 1.4 | site | Guide part numbering: renumber body headings per part (Next 6) | ◐ #144 |
 | 1.5 | site | Cold-load flash on `vsyc26.html`: logo size (Next 9); fonts are 2.12 | ◐ #145 |
 | 1.6 | site | Raw hex colors in page `<style>` blocks → brand variables (Later); off-palette ones need a design call | ◐ #146 |
 | 1.7 | site + templates | Headings that skip a level (h1 → h3) | ◐ #147, club #8, scouts #6 |
 | 1.8 | all four static templates | Deploy guard: a copy's CI fails while sample data (example.org, the sample names) would ship | ◐ club #9, contest #7, scouts #7, map #4 |
-| 1.9 | yoyo-map-template | `og:image`, a privacy page, h1→h3 fix | ☐ |
-| 1.10 | yoyo-map-template | Marker clustering (vendored Leaflet.markercluster, MIT) | ☐ |
-| 1.11 | yoyo-map-template | Browse-by-place pages (one static page per region) | ☐ |
-| 1.12 | yoyo-map-template | Visibility per entry: city, region, or listed but not pinned | ☐ |
+| 1.9 | yoyo-map-template | `og:image`, a privacy page, h1→h3 fix | ◐ map #5 |
+| 1.10 | yoyo-map-template | Marker clustering (vendored Leaflet.markercluster, MIT) | ◐ map #6 |
+| 1.11 | yoyo-map-template | Browse-by-place pages (one static page per region) | ◐ map #7 |
+| 1.12 | yoyo-map-template | Visibility per entry: city, region, or listed but not pinned | ◐ map #8 |
 | 1.13 | yoyoclub-template | Conduct settings: team, report link, steps, version, effective date | ◐ club #10 |
 | 1.14 | yoyo-contest-template | Same conduct settings | ◐ contest #8 |
 | 1.15 | Scouts-Template-Site | Photo permission and first-names-only settings, with `check_site.py` flagging full names | ☐ |
