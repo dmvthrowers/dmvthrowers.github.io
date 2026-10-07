@@ -95,6 +95,7 @@ Every content page repeats the same outer skeleton:
 
 - **Styles**: shared components + brand variables in `assets/css/main.css`; per-page layout tweaks in each page's inline `<style>` block. Don't migrate page-specific rules to `main.css` unless they're reused.
 - **Brand palette**: `--red`, `--navy`, `--cream`, `--border`. Use the variables, not raw hex.
+- **Headings**: Title Case on every heading, guides included. Articles, short conjunctions and prepositions (a, the, and, but, of, in, with, from) stay lowercase unless first or last; hyphenated words capitalize each part ("Trade-Offs"); the first word after a colon is capitalized.
 - **Images**:
   - Gallery and hero images use `<picture>` with WebP `<source>` + PNG/JPG fallback `<img>`.
   - `width`/`height` are always set on content images to reserve layout (CLS).
