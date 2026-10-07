@@ -4,6 +4,8 @@ Open work for the static site, in priority order. Built from the October 2026 au
 status was re-checked against the repo on 2026-10-02. VSYC-27 planning items live in GitHub
 issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
 
+The build order across every repo, with status per item, is in [`BUILD_PLAN.md`](BUILD_PLAN.md).
+
 ## Done since the audit
 
 | Item | Where |
