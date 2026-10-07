@@ -12,8 +12,7 @@
   <!-- base href="/" makes every relative URL resolve from the site root. -->
   <base href="/"/>
   <link rel="manifest" href="assets/images/site.webmanifest"/>
-  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
-       formspree for the contact form, Google Fonts for typography). -->
+  <!-- CSP: scripts, images and frames from this site only; Google Fonts for typography. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Yo-Yos in the Classroom · DMV Throwers</title>
   <meta name="description" content="Free classroom yo-yo resources: physics and math activities, PE ideas, 41 printable worksheets, and student coding projects for teachers and homeschoolers."/>
@@ -61,25 +60,25 @@
   <link rel="stylesheet" href="assets/css/main.css"/>
   <style>
     .subject-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
-    .subject-card { background: #fff; border: 2px solid var(--border); padding: 1.5rem; }
+    .subject-card { background: var(--white); border: 2px solid var(--border); padding: 1.5rem; }
     .subject-card h3 { margin-top: 0; font-size: 1.25rem; }
-    .subject-card .grade { display: inline-block; font-size: 0.8rem; font-weight: 700; background: var(--navy); color: #fff; padding: 0.15rem 0.7rem; margin-bottom: 0.75rem; }
+    .subject-card .grade { display: inline-block; font-size: 0.8rem; font-weight: 700; background: var(--navy); color: var(--white); padding: 0.15rem 0.7rem; margin-bottom: 0.75rem; }
     .subject-card ul { margin: 0.75rem 0; padding-left: 1.2rem; }
     .subject-card li { margin-bottom: 0.4rem; }
     #printables h3 { margin-top: 2rem; }
     .printable-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .printable-card { border: 2px solid var(--border); padding: 1.25rem; text-align: center; background: #fff; }
+    .printable-card { border: 2px solid var(--border); padding: 1.25rem; text-align: center; background: var(--white); }
     .printable-card h4 { margin: 0 0 0.5rem; }
     .printable-card p { font-size: 0.9rem; margin-bottom: 1rem; }
     .code-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-    .code-card { border: 2px solid var(--border); padding: 1.25rem; background: #fff; }
+    .code-card { border: 2px solid var(--border); padding: 1.25rem; background: var(--white); }
     .code-card h3 { margin-top: 0; font-size: 1em; }
     .code-card .tag { font-size: 0.75rem; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 0.05em; }
     .chip-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0 0; }
     .chip { display: inline-block; border: 2px solid var(--navy); padding: 0.4rem 1rem; font-weight: 600; font-size: 0.9rem; text-decoration: none; color: var(--navy); }
-    .chip:hover { background: var(--navy); color: #fff; }
-    .cta-band { background: var(--navy); color: #fff; padding: 2.5rem 2rem; text-align: center; }
-    .cta-band h2 { color: #fff; margin-top: 0; }
+    .chip:hover { background: var(--navy); color: var(--white); }
+    .cta-band { background: var(--navy); color: var(--white); padding: 2.5rem 2rem; text-align: center; }
+    .cta-band h2 { color: var(--white); margin-top: 0; }
     .cta-band p { max-width: 640px; margin: 0 auto 1.5rem; }
     .ref-list { font-size: 0.9rem; }
     .subject-card a, .code-card a, .ref-list a { color: var(--red); font-weight: 600; }
@@ -115,6 +114,7 @@
       <a href="events.html" class="nav-link">CLUB EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="guides.html" class="nav-link">GUIDES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
@@ -134,6 +134,7 @@
   <a href="events.html">CLUB EVENTS</a>
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
+  <a href="guides.html">GUIDES</a>
   <a href="faq.html">FAQ</a>
     <a href="https://map.dmvthrowers.club/">MAP</a>
     <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
@@ -478,12 +479,14 @@
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
         <a href="resources.html" class="footer-link">Resources</a>
+        <a href="guides.html" class="footer-link">Guides</a>
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://stats.uptimerobot.com/7XjeeDhuSq" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Site status (opens in new tab)">Status</a>
       </nav>
     </div>
     <nav aria-label="Guides" class="footer-guides">
