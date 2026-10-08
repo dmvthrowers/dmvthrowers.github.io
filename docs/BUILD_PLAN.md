@@ -170,24 +170,24 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 
 | # | Item | Notes | Status |
 |---|---|---|---|
-| 4.1 | Port score status, round plans, split, prizes, DJ battle view, disputes, bot check, champion rule into the template | Parity (VA-States → template). Prerequisite for T1 and the rest | ☐ |
+| 4.1 | Port score status, round plans, split, prizes, DJ battle view, disputes, bot check, champion rule into the template | Parity (VA-States → template). Prerequisite for T1 and the rest | ◐ template #47 score status, #48 bot check, #49 split, #50 prizes, #51 DJ battle view, #52 round plans, #53 dispute flags; champion rule is an owner decision (not built) |
 | 4.2 | Port roles and `/staff`, migration replay in CI, setup scripts, three tests into VA-States | Parity (template → VA-States). Production care | ☐ |
-| 4.3 | Migration number map (0037–0049) and the survey table name | Parity "Both". Docs plus one rename | ☐ |
+| 4.3 | Migration number map (0037–0049) and the survey table name | Parity "Both". Docs plus one rename | ◐ template #54, VA-States #80 |
 | 4.4 | Season archive purge and reset, with the retention decisions above | Production care | ☐ |
 | 4.5 | T19 port to VA-States | After template #45 merges | ☐ |
-| 4.6 | T1 scores-in board | Builds on score status | ☐ |
-| 4.7 | T2 release gates (run order gate, head-judge "checked") | | ☐ |
-| 4.8 | P4 published draws (recorded seed, re-checkable) | | ☐ |
-| 4.9 | P1 code of conduct version recorded per person, re-accept on change | | ☐ |
-| 4.10 | R11 photo and video consent at registration, honored on results videos | Before any video work ships in the app | ☐ |
-| 4.11 | T11 how it was scored + T12 score shading | Frontend only | ☐ |
-| 4.12 | T4 MC cards (say-it-like-this name, intro line) | | ☐ |
-| 4.13 | O5 rules with a changelog · O4 open books (public budget page) | | ☐ |
-| 4.14 | T18 contest guide page + O1 first contest path | | ☐ |
-| 4.15 | E8 email log stub · E9 first admin once | Setup safety | ☐ |
-| 4.16 | F1 bracket match scores | Kendama payoff; format steps in master plan Part 6 | ☐ |
-| 4.17 | S2 trick list page, S3 prize table, S7 kendama preset (trick-deck battles + speed ladder) | | ☐ |
-| 4.18 | R2 $0 add-on divisions (girls divisions as $0 add-ons) | | ☐ |
+| 4.6 | T1 scores-in board | Builds on score status | ◐ template #55 (stacked on #47) |
+| 4.7 | T2 release gates (run order gate, head-judge "checked") | | ◐ template #56 (stacked on #55), migration 0052 |
+| 4.8 | P4 published draws (recorded seed, re-checkable) | | ◐ template #57, migration 0053 |
+| 4.9 | P1 code of conduct version recorded per person, re-accept on change | | ◐ template #58, migration 0054 (record only; re-accept prompt is a follow-up) |
+| 4.10 | R11 photo and video consent at registration, honored on results videos | Before any video work ships in the app | ◐ template #59, migration 0055; stays required until the owner opts in |
+| 4.11 | T11 how it was scored + T12 score shading | Frontend only | ◐ template #60 (per-judge public score sheet not built: owner choice) |
+| 4.12 | T4 MC cards (say-it-like-this name, intro line) | | ◐ template #61, migration 0056 |
+| 4.13 | O5 rules with a changelog · O4 open books (public budget page) | | ◐ template #62 rules changelog, #63 open books (migration 0057) |
+| 4.14 | T18 contest guide page + O1 first contest path | | ◐ template #64 |
+| 4.15 | E8 email log stub · E9 first admin once | Setup safety | ◐ template #65 |
+| 4.16 | F1 bracket match scores | Kendama payoff; format steps in master plan Part 6 | ◐ template #66, migration 0058 |
+| 4.17 | S2 trick list page, S3 prize table, S7 kendama preset (trick-deck battles + speed ladder) | | ◐ template #67 (S7, S2; stacked on #66), #68 (S3; stacked on #50) |
+| 4.18 | R2 $0 add-on divisions (girls divisions as $0 add-ons) | | ◐ template #69, migration 0059 |
 | 4.19 | VA-States leftovers: admin route rate limit (Next 8), money-path route tests (Next 9) | | ☐ |
 | 4.20 | VA-States results data gaps on `/results` (Next 12) | Needs a read of the import rows | ☐ |
 
