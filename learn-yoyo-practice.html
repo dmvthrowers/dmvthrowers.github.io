@@ -6,14 +6,13 @@
 -->
 <html lang="en">
 <head>
-    <link rel="manifest" href="assets/images/site.webmanifest"/>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="DMV Throwers"/>
   <!-- base href="/" makes every relative URL resolve from the site root. -->
   <base href="/"/>
-  <!-- CSP: restrict scripts/frames/forms to trusted origins (jotform for VSYC-26,
-       formspree for the contact form, Google Fonts for typography). -->
+    <link rel="manifest" href="assets/images/site.webmanifest"/>
+  <!-- CSP: scripts, images and frames from this site only; Google Fonts for typography. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;"/>
   <title>Practice and Contests · How to Yo-Yo · DMV Throwers</title>
   <meta name="description" content="Practice and Contests, from the DMV Throwers How to Yo-Yo guide: Practice, Play Healthy, and Everyone Can Throw, Contests and Judging."/>
@@ -113,7 +112,7 @@
       .stack-table thead { display: none; }
       .stack-table caption { display: block; width: 100%; }
       .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
-      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: #fff; }
+      .stack-table tr { border: 1px solid var(--border); border-left: 4px solid var(--red); margin-bottom: 12px; background: var(--white); }
       .stack-table td { border: none; border-top: 1px solid var(--border); background: transparent !important; }
       .stack-table td:first-child { border-top: none; background: var(--cream) !important; }
       .stack-table td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: var(--caps-track); text-transform: uppercase; color: var(--red); margin-bottom: 2px; }
@@ -168,6 +167,7 @@
       <a href="events.html" class="nav-link">CLUB EVENTS</a>
       <a href="gallery.html" class="nav-link">GALLERY</a>
       <a href="resources.html" class="nav-link">RESOURCES</a>
+      <a href="guides.html" class="nav-link">GUIDES</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link">CONTACT</a>
       <a href="https://ko-fi.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="nav-link nav-donate">☕ DONATE</a>
@@ -187,6 +187,7 @@
   <a href="events.html">CLUB EVENTS</a>
   <a href="gallery.html">GALLERY</a>
   <a href="resources.html">RESOURCES</a>
+  <a href="guides.html">GUIDES</a>
   <a href="faq.html">FAQ</a>
     <a href="https://map.dmvthrowers.club/">MAP</a>
     <a href="https://yoyoarchive.org/yya-events" target="_blank" rel="noopener noreferrer">US EVENTS ↗</a>
@@ -241,28 +242,28 @@
       </nav>
 
       <article id="practice" class="sci-sec">
-        <div class="sci-kicker">Part 8</div>
+        <div class="sci-kicker">Section 1</div>
         <h2 class="sci-title">Practice, Play Healthy, and Everyone Can Throw</h2>
         <p>You don&rsquo;t need hours a day. You need a little time most days, a reason for each session, and patience with yourself. Here&rsquo;s what experienced players on the YoYoExpert Forums say works.</p>
-        <h3>Practice with a purpose</h3>
+        <h3>Practice with a Purpose</h3>
         <ul class="sci-list">
           <li><strong>Make time, even a little:</strong> one player who improves steadily plays about an hour a day, often less, and argues that 15 to 30 minutes of real practice beats waiting for free time that never comes.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
           <li><strong>Know why you&rsquo;re throwing:</strong> the goal can be as simple as &ldquo;I want this trick a little smoother.&rdquo; Playing to relax counts too, if you focus on doing each move well.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
           <li><strong>Slow is fast:</strong> a classical musician in the same thread says to practice slowly until your hands know the trick, leave your phone in another room, and take a day off when you need one.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
           <li><strong>Say &ldquo;yet&rdquo;:</strong> &ldquo;I can&rsquo;t do this yet, but if I stay consistent I will.&rdquo; Don&rsquo;t dwell on a long break or a late start.<sup class="cite"><a href="learn-yoyo.html#ref-88" aria-label="Source 88">[88]</a></sup></li>
         </ul>
-        <h3>Learning from videos</h3>
+        <h3>Learning from Videos</h3>
         <ul class="sci-list">
           <li><strong>Go frame by frame:</strong> on YouTube on a computer, pause and press the comma and period keys to step back and forward one frame. On a phone, screen-record the tutorial and scrub through the recording slowly.<sup class="cite"><a href="learn-yoyo.html#ref-92" aria-label="Source 92">[92]</a></sup></li>
-          <li><strong>Learn in pieces:</strong> break a trick into sections that start and end in a mount, then link them. See <a href="learn-yoyo-beyond.html#beyond">How experienced players learn</a> below.<sup class="cite"><a href="learn-yoyo.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
+          <li><strong>Learn in pieces:</strong> break a trick into sections that start and end in a mount, then link them. See <a href="learn-yoyo-beyond.html#beyond">How Experienced Players Learn</a> below.<sup class="cite"><a href="learn-yoyo.html#ref-73" aria-label="Source 73">[73]</a></sup></li>
         </ul>
-        <h3>Your throw, tilt, and restarts</h3>
+        <h3>Your Throw, Tilt, and Restarts</h3>
         <ul class="sci-list">
           <li><strong>The floor-line drill:</strong> stand over a straight line in the floor, like a tile seam or the gap between floorboards, and throw a sleeper so the yo-yo&rsquo;s gap lines up with the line.<sup class="cite"><a href="learn-yoyo.html#ref-93" aria-label="Source 93">[93]</a></sup></li>
           <li><strong>Don&rsquo;t chase a perfect throw:</strong> experienced players say tilt correction comes on its own after thousands of throws. In a trapeze, you can level a tilted yo-yo by pressing the string against its high side.<sup class="cite"><a href="learn-yoyo.html#ref-94" aria-label="Source 94">[94]</a></sup></li>
           <li><strong>Restart instead of rewinding:</strong> when the yo-yo dies on the string, hold the string with your free hand and spin the yo-yo back up with your throwing hand, then bind. Some players twist cleanly, &ldquo;like turning a doorknob,&rdquo; instead of snapping hard, because a hard snap can jam your fingers.<sup class="cite"><a href="learn-yoyo.html#ref-95" aria-label="Source 95">[95]</a></sup></li>
         </ul>
-        <h3>Stuck? Everyone hits a plateau</h3>
+        <h3>Stuck? Everyone Hits a Plateau</h3>
         <ul class="sci-list">
           <li><strong>Switch it up:</strong> try another style for a while. Players suggest modern responsive or 0A to relax, and 5A, where &ldquo;the mistakes are often better than the tricks.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
           <li><strong>Get a quick win:</strong> go back to basics, or learn a short trick built from elements you already know.<sup class="cite"><a href="learn-yoyo.html#ref-89" aria-label="Source 89">[89]</a></sup></li>
@@ -270,7 +271,7 @@
           <li><strong>How long it takes:</strong> one player saw spin time and technique jump at 6 to 8 months. Another compares it to an instrument: about a year for the fundamentals, two to feel comfortable, three to feel &ldquo;good.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-90" aria-label="Source 90">[90]</a></sup></li>
           <li><strong>Is learning on an unresponsive yo-yo cheating?</strong> No. &ldquo;A completed trick is a completed trick.&rdquo; Or, as one longtime member put it: &ldquo;There&rsquo;s no cheating in yoyoing, just smiling.&rdquo;<sup class="cite"><a href="learn-yoyo.html#ref-91" aria-label="Source 91">[91]</a></sup></li>
         </ul>
-        <h3>Play healthy</h3>
+        <h3>Play Healthy</h3>
         <ul class="sci-list">
           <li><strong>String burn happens:</strong> almost every player gets it learning tricks like Boingy Boing. Most build a callus over time. Some wear a glove, which protects your finger but lets you feel the string less.<sup class="cite"><a href="learn-yoyo.html#ref-96" aria-label="Source 96">[96]</a></sup></li>
           <li><strong>Watch for overuse:</strong> one player developed what they believed was golfer&rsquo;s elbow from all the repeated throwing.<sup class="cite"><a href="learn-yoyo.html#ref-97" aria-label="Source 97">[97]</a></sup> Take breaks, switch styles, and stop if your arm hurts. See a doctor if pain doesn&rsquo;t go away.</li>
@@ -278,7 +279,7 @@
           <li><strong>Mark a yo-yo zone:</strong> when you play with a group or teach kids, tape lines on the floor, or set cones outside, and only throw inside them so nobody runs through and gets bonked.<sup class="cite"><a href="learn-yoyo.html#ref-100" aria-label="Source 100">[100]</a></sup></li>
           <li>See also the safety tips in <a href="learn-yoyo-beyond.html#tips">Tips from Experienced Players</a>.</li>
         </ul>
-        <h3>Everyone can throw</h3>
+        <h3>Everyone Can Throw</h3>
         <ul class="sci-list">
           <li><strong>Any age:</strong> in &ldquo;Too old to start again?&rdquo; players in their 50s and 60s trade stories. One started around 50 and throws every day; another has played since 1966. The obstacles they named were joint pain, practice time, and impatience, not age.<sup class="cite"><a href="learn-yoyo.html#ref-101" aria-label="Source 101">[101]</a></sup></li>
           <li><strong>One hand:</strong> a player who lost the use of their right arm learned Walk the Dog, Forward Pass, and One-Handed Star. The forum pointed them to 2A looping and to a sponsored player who plays one-handed.<sup class="cite"><a href="learn-yoyo.html#ref-102" aria-label="Source 102">[102]</a></sup></li>
@@ -288,16 +289,16 @@
       </article>
 
       <article id="contests" class="sci-sec">
-        <div class="sci-kicker">Part 9</div>
+        <div class="sci-kicker">Section 2</div>
         <h2 class="sci-title">Contests and Judging</h2>
         <p>U.S. contests, including our own <a href="vsyc26.html">VSYC-26</a>, score freestyles with the National Yo-Yo League (NYYL) rules. A freestyle is a routine to music you choose; a trick is any demonstration of yo-yo skill; and an <strong>element</strong> is one specific, scorable movement inside a trick.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
-        <h3>Two halves of every score</h3>
+        <h3>Two Halves of Every Score</h3>
         <ul class="sci-list">
           <li><strong>Technical Execution (clickers):</strong> each judge holds two hand tally counters, one for positive clicks and one for negative clicks.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
           <li><strong>Routine Evaluation:</strong> four categories: Trick Presentation (mastery and style), Performance Quality (professionalism, stage use, audience), Musicality (hitting cues and pacing to the song), and Routine Construction (trick order, cohesion, theme).<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
           <li>In a 1A Championship final, a 3-minute routine, Technical Execution is worth 60 points and Evaluation 40.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
         </ul>
-        <h3>How clicks work</h3>
+        <h3>How Clicks Work</h3>
         <ul class="sci-list">
           <li><strong>One click</strong> for difficult but low-risk elements, like an Eli hop, laceration, or iron whip in 1A; loops, wraps, and around the worlds in 2A; rolls, kink mounts, and double trapezes in 3A; whips, recaptures, and boings in 4A; and 360s, propellers, and direction changes in 5A.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
           <li><strong>More clicks</strong> for riskier variants, like a multi-hook instead of a single hook.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
@@ -306,7 +307,7 @@
           <li><strong>No clicks</strong> for moves that don&rsquo;t show yo-yo skill, like picture tricks, string moves that don&rsquo;t involve the yo-yo, or tricks where the yo-yo never interacts with the string. Save <a href="learn-yoyo-basics.html#first">picture tricks</a> for the crowd.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
           <li><strong>Normalization:</strong> each judge&rsquo;s top scorer gets 60, everyone else is scaled against them, then the judges are averaged, so one generous judge can&rsquo;t swing the result.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
         </ul>
-        <h3>Major deductions</h3>
+        <h3>Major Deductions</h3>
         <table class="sci-table stack-table">
           <caption>NYYL major deductions<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></caption>
           <thead><tr><th scope="col">Deduction</th><th scope="col">Points</th><th scope="col">When</th></tr></thead>
@@ -317,7 +318,7 @@
           </tbody>
         </table>
         <p>With two yo-yos, deductions count per yo-yo, so swapping both after a 2A or 3A tangle costs &minus;6.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
-        <h3>Divisions for everyone</h3>
+        <h3>Divisions for Everyone</h3>
         <ul class="sci-list">
           <li><strong>Sport Freestyle:</strong> a 1-minute, low-stress division with no negative clicks and no major deductions, split by age. It&rsquo;s the place for a first contest.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
           <li><strong>Trick ladders:</strong> a set list of tricks in rising difficulty, the other gateway into competing. See <a href="learn-yoyo-tricks.html#ladder">the ladder above</a>.<sup class="cite"><a href="learn-yoyo.html#ref-23" aria-label="Source 23">[23]</a></sup></li>
@@ -325,7 +326,7 @@
           <li><strong>Over 40:</strong> a showcase division, mostly at the U.S. Nationals, where players over 40 pick any style from 1A to 5A. Nationals also hosts International and Women&rsquo;s divisions.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
           <li><strong>Music:</strong> anything appropriate for all audiences. Explicit lyrics or themes can mean disqualification.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></li>
         </ul>
-        <h3>How each style is judged</h3>
+        <h3>How Each Style Is Judged</h3>
         <p>Every championship style uses the same two-part system: Technical Execution from clickers and a performance evaluation. What changes is <em>which</em> elements score. At the World Yo-Yo Contest, 1A through 5A each crown their own World Champion, and a 3-minute final is worth up to 60 points of Technical Execution and 40 of Freestyle Evaluation, minus major deductions.<sup class="cite"><a href="learn-yoyo.html#ref-86" aria-label="Source 86">[86]</a><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup> In every style, the yo-yo must be spinning, powered by the unwinding string, for a trick to count, and both the yo-yo and the string must be used.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></p>
         <table class="sci-table stack-table">
           <caption>What scores in each style (World Yo-Yo Contest rules)<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></caption>
@@ -344,7 +345,7 @@
           <li><strong>Two yo-yos, twice the risk.</strong> Negative clicks and major deductions count per yo-yo in 2A and 3A.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
           <li><strong>Style-specific deductions:</strong> a detach costs &minus;5 in 1A, 2A, 3A, and 5A (both the yo-yo and the weight). In 4A the yo-yo is meant to leave the string, but letting it fly off the stage into the audience in any style, including 4A and 5A, can mean disqualification.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup></li>
         </ul>
-        <h3>The World Contest&rsquo;s eight evaluation categories</h3>
+        <h3>The World Contest&rsquo;s Eight Evaluation Categories</h3>
         <p>At Worlds, judges split into two groups: Group A clicks Technical Execution, and Group B scores the Freestyle Evaluation in eight categories from 0 to 10, halved to make 40 points: Execution, Control, Trick Diversity, Space Use, Music Use (choreography), Music Use (construction), Body Control, and Showmanship. Only Technical Execution is normalized between judges.<sup class="cite"><a href="learn-yoyo.html#ref-84" aria-label="Source 84">[84]</a></sup> U.S. NYYL events use the four categories above instead.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup></p>
         <h3>Artistic Performance (AP)</h3>
         <ul class="sci-list">
@@ -353,7 +354,7 @@
           <li><strong>The yo-yo still leads.</strong> Dance, acting, and props are welcome, but the yo-yo must be the main act. There are no deductions for misses, yet judges expect close to zero mistakes, like a professional show.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
           <li><strong>Format:</strong> routines up to 4 minutes; finalists are chosen from submitted videos.<sup class="cite"><a href="learn-yoyo.html#ref-85" aria-label="Source 85">[85]</a></sup></li>
         </ul>
-        <h3>When styles are combined</h3>
+        <h3>When Styles Are Combined</h3>
         <ul class="sci-list">
           <li><strong>X Division:</strong> some contests lump 2A, 3A, 4A, and 5A into one division. The NYYL multiplies clicker scores to keep it fair, because some styles tend to score higher: 2A &times;1.40, 3A &times;1.50, 4A &times;1.30, 5A &times;1.60.<sup class="cite"><a href="learn-yoyo.html#ref-80" aria-label="Source 80">[80]</a></sup> At <a href="vsyc26.html">VSYC-26</a>, X Division covered 2A, 3A, 4A, or 5A, and you picked one.</li>
           <li><strong>Exhibitions at Worlds:</strong> Women&rsquo;s Freestyle and Over-40 Freestyle are 2-minute routines and Junior Freestyle (16 and under) is 90 seconds; in each, you choose one style from 1A to 5A. Championship divisions themselves have no age or gender classes.<sup class="cite"><a href="learn-yoyo.html#ref-86" aria-label="Source 86">[86]</a></sup></li>
@@ -361,7 +362,7 @@
           <li><strong>Duos:</strong> Doc Lucky Meisenheimer created &ldquo;Doc Lucky&rsquo;s Duos,&rdquo; now part of the National and World championships.<sup class="cite"><a href="learn-yoyo.html#ref-87" aria-label="Source 87">[87]</a></sup></li>
         </ul>
         <p>For the history of each style and the gear it uses, see <a href="yoyo-gear-basics.html#styles">Styles of Play</a> on the Gear page.</p>
-        <h3>Your first contest</h3>
+        <h3>Your First Contest</h3>
         <ul class="sci-list">
           <li><strong>Ladders aren&rsquo;t just for kids:</strong> many sport ladders mix ages, and a set trick list gives your practice direction. One player&rsquo;s advice: compete while you feel unprepared, so you know what to expect next time.<sup class="cite"><a href="learn-yoyo.html#ref-109" aria-label="Source 109">[109]</a></sup></li>
           <li><strong>Make it memorable:</strong> asked about common mistakes in a first freestyle, Evan Nagao said new competitors use too few music cues and &ldquo;hype moments.&rdquo; You probably won&rsquo;t win your first contest, so aim to get the crowd going or do something creative.<sup class="cite"><a href="learn-yoyo.html#ref-111" aria-label="Source 111">[111]</a></sup></li>
@@ -421,12 +422,14 @@
         <a href="events.html" class="footer-link">Events</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
         <a href="resources.html" class="footer-link">Resources</a>
+        <a href="guides.html" class="footer-link">Guides</a>
         <a href="faq.html" class="footer-link">FAQ</a>
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="vsyc26.html" class="footer-link footer-vsyc">VSYC-26</a>
         <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
         <a href="privacy.html" class="footer-link">Privacy</a>
         <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub (opens in new tab)">GitHub</a>
+        <a href="https://stats.uptimerobot.com/7XjeeDhuSq" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Site status (opens in new tab)">Status</a>
       </nav>
     </div>
     <nav aria-label="Guides" class="footer-guides">

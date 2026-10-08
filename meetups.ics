@@ -1,0 +1,152 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DMV Throwers//Meetups//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DMV Throwers meetups
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:2026-10-18-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20261018T170000Z
+DTEND:20261018T200000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-15-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20261115T180000Z
+DTEND:20261115T210000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-20-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20261220T180000Z
+DTEND:20261220T210000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-01-17-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270117T180000Z
+DTEND:20270117T210000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-02-21-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270221T180000Z
+DTEND:20270221T210000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-03-21-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270321T170000Z
+DTEND:20270321T200000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-04-18-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270418T170000Z
+DTEND:20270418T200000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-05-16-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270516T170000Z
+DTEND:20270516T200000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-06-20-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270620T170000Z
+DTEND:20270620T200000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-07-18-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270718T170000Z
+DTEND:20270718T200000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-08-15-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270815T170000Z
+DTEND:20270815T200000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-09-19-meetup@dmvthrowers.club
+DTSTAMP:20260917T000000Z
+SUMMARY:DMV Throwers monthly meetup
+DTSTART:20270919T170000Z
+DTEND:20270919T200000Z
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 2220
+ 1
+DESCRIPTION:Free monthly yo-yo and skill toy meetup. All ages\, all levels\
+ , always free. Loaner yo-yos available. No registration required.
+URL:https://dmvthrowers.club/events.html
+END:VEVENT
+END:VCALENDAR

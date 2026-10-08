@@ -35,6 +35,7 @@ One shared JS file (`assets/js/mobile-enhancements.js`) is loaded on every page 
 
 | Page | Purpose |
 | --- | --- |
+| `guides.html` | **The GUIDES item in the main nav.** Hub with one card per guide below. When you publish a new guide, add a card here |
 | `learn-yoyo.html` | Hub for "How to Yo-Yo": TOC, glossary, and the shared `#references` list |
 | `learn-yoyo-{basics,tricks,practice,beyond}.html` | Parts 1–4. Each opens with "Part N of 4" and cites sources from the hub's `#references` |
 | `yoyo-gear.html` | Hub for "Yo-Yo Gear & Maintenance": TOC + shared `#references` |
@@ -50,7 +51,7 @@ The hubs carry a small script that forwards old deep links (`learn-yoyo.html#som
 | `vsyc26.html` | Landing — hero with date/venue facts + post-event wrap stats (the countdown was retired after the contest) + Event JSON-LD |
 | `vsyc26-schedule.html` | Day-of schedule |
 | `vsyc26-register.html` | Divisions (`#divisions`) + links out to the registration app at `register.dmvthrowers.club` (no embed). Says registration is closed |
-| `vsyc26-sponsors.html` | Tiers + current-sponsor list + JotForm inquiry embed (slated for replacement — site issue #77) |
+| `vsyc26-sponsors.html` | Tiers + current-sponsor list + a link to the inquiry form at `register.dmvthrowers.club/sponsor` (replaced the JotForm embed, site issue #77) |
 | `vsyc26-results.html`, `vsyc26-recap.html` | Post-contest results and recap, with YouTube-nocookie videos |
 | `vsyc26-dueling-stars.html` | Stella Duellum battles; embeds a Challonge bracket iframe |
 | `vsyc26-twirly-tour.html`, `vsyc26-merch.html` | Sponsor tour and merch pages |
@@ -95,6 +96,7 @@ Every content page repeats the same outer skeleton:
 
 - **Styles**: shared components + brand variables in `assets/css/main.css`; per-page layout tweaks in each page's inline `<style>` block. Don't migrate page-specific rules to `main.css` unless they're reused.
 - **Brand palette**: `--red`, `--navy`, `--cream`, `--border`. Use the variables, not raw hex.
+- **Headings**: Title Case on every heading, guides included. Articles, short conjunctions and prepositions (a, the, and, but, of, in, with, from) stay lowercase unless first or last; hyphenated words capitalize each part ("Trade-Offs"); the first word after a colon is capitalized.
 - **Images**:
   - Gallery and hero images use `<picture>` with WebP `<source>` + PNG/JPG fallback `<img>`.
   - `width`/`height` are always set on content images to reserve layout (CLS).
@@ -133,6 +135,25 @@ npx serve .
 ```
 
 Then open `http://localhost:8000/`.
+
+## Checks
+
+Two checks run on every pull request. `python3 scripts/check_site.py` (links, alt text, nav and footer drift; from the site check) and the W3C HTML validator (`.github/workflows/validate-html.yml`). To run the validator yourself, with Java installed:
+
+```sh
+npm install --prefix /tmp/vnu vnu-jar@26.10.7
+java -jar /tmp/vnu/node_modules/vnu-jar/build/dist/vnu.jar --errors-only --skip-non-html ./*.html
+```
+
+No output means no errors. `<base href="/">` must come before every `<link>` and `<script>` in `<head>`.
+
+## Outside links
+
+`scripts/check_links.py` checks every outside link on every page (about 900). It runs weekly and on demand
+(Actions → Check links → Run workflow), not on pull requests. Only links that are clearly gone fail the run
+(404, 410, a name that no longer exists, a bad certificate); sites that block bots or time out are listed as
+warnings. Try it with `python3 scripts/check_links.py --limit 20` or `--host yoyotricks.com`. When it reports a
+broken link, fix or drop the link on every page that has it. Don't weaken the check to get a green run.
 
 ## Where things live
 

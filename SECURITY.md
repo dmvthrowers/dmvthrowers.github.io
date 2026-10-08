@@ -17,6 +17,10 @@ Report vulnerabilities privately to:
 
 - [contact@dmvthrowers.club](mailto:contact@dmvthrowers.club)
 
+The same contact is published for security tools at
+[`/.well-known/security.txt`](https://dmvthrowers.club/.well-known/security.txt). Its `Expires` date
+must be renewed before 2027-10-01.
+
 When possible, include:
 
 - A clear description of the issue and impact
