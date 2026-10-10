@@ -63,6 +63,12 @@ the owner is in Wave 0 below.
 | Dismissed sponsor inquiries | Delete after 1 year | sponsor extras |
 | Troop git history | Leave it | — |
 | GitHub topics on the templates | `yo-yo`, `skill-toys`, `github-pages`, `static-site`, `website-template` (owner sets them) | 0.13 |
+| Turnstile bot check | On everywhere, behind a setting; goes live when the Cloudflare keys are added | 4.1 |
+| Champion rule | Port it into the template as a config option; collect the home address only when a contest uses a state champion | 4.1 |
+| Roles and `/staff` in the template | Keep them; no personal data lives in the template (checked 2026-10-10: only organization links) | 4.2 |
+| Survey table name | Not renamed now; rename `vsyc26_survey_responses` when a contest is archived | 4.3 |
+| Photo release | Mandatory for competitors: no acceptance, no entry (as built). Migration 0055 stays unused | 4.10 |
+| Shared JS across the site and templates | Keep them separate; port improvements by hand | 2.4 |
 
 ## Wave 0: owner actions and decisions
 
@@ -128,7 +134,7 @@ Each is a few hours or less. Ordered by value.
 | 2.1 | yoyo-contest-template | Bracket page built from config (no outside embed) | ◐ contest #9 |
 | 2.2 | yoyo-contest-template | Optional merch and side-event pages | ◐ contest #10 |
 | 2.3 | yoyoclub-template | Long-form guides: hub plus parts from `content/`, shared references, deep-link forwarder | ◐ yoyoclub-template #15 (merged) |
-| 2.4 | site + templates | One shared JS: pick `mobile-enhancements.js` as the source, port `site.js` improvements both ways | ⛔ owner call: see "Waiting on owner" (a) |
+| 2.4 | site + templates | One shared JS: pick `mobile-enhancements.js` as the source, port `site.js` improvements both ways | ☑ decided: keep them separate, port by hand |
 | 2.5 | site | HTML validation in CI (`vnu`) (Next 5) | ◐ #154 |
 | 2.6 | site | External link checker (`lychee`, weekly, not per PR) (Next 4) | ◐ #157 |
 | 2.7 | site | Guides in the main nav, one change across every page (Next 7) | ◐ #155 |
@@ -170,7 +176,7 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | 4.7 | T2 release gates (run order gate, head-judge "checked") | | ✓ VA-States #90 (off until `dayOf.releaseGates`); migration 0052 applied 2026-10-10 |
 | 4.8 | P4 published draws (recorded seed, re-checkable) | | ✓ VA-States #91 (off until `dayOf.publishedDraws`); migration 0053 applied 2026-10-10 |
 | 4.9 | P1 code of conduct version recorded per person, re-accept on change | | ✓ VA-States #92; migration 0054 applied 2026-10-10 (record only; re-accept prompt is a follow-up) |
-| 4.10 | R11 photo and video consent at registration, honored on results videos | Before any video work ships in the app | ◐ template #59, migration 0055; stays required until the owner opts in |
+| 4.10 | R11 photo and video consent at registration, honored on results videos | Before any video work ships in the app | ◐ template #59, migration 0055; decided: mandatory for competitors, nothing to build |
 | 4.11 | T11 how it was scored + T12 score shading | Frontend only | ◐ template #60 (per-judge public score sheet not built: owner choice) |
 | 4.12 | T4 MC cards (say-it-like-this name, intro line) | | ✓ VA-States #93 (admin only); migration 0056 applied 2026-10-10 |
 | 4.13 | O5 rules with a changelog · O4 open books (public budget page) | | ◐ rules changelog: template #62 only; ✓ open books VA-States #94, migration 0057 applied 2026-10-10 |
@@ -223,18 +229,13 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 
 | Item | What is needed | Unblocks |
 |---|---|---|
-| 4.1 | Champion rule and whether to collect home address | Template port of the home-state rule; VA-States already has it |
-| 4.3 | Rename survey table `vsyc26_survey_responses` to `contest_survey_responses`? (not additive) | One shared name in both repos |
-| 4.2 | Go or no-go on porting roles and `/staff` to VA-States | A single staff pane in the live app |
+| 4.2 | Template keeps roles and `/staff` (decided). Still open: port them into the live VA-States app too, or leave VA-States as it is? | A single staff pane in the live app |
 | 4.18 | Eligibility rule for Girls add-on (now self-tick plus optional age limits) | Tighter add-on checks |
-| 4.10 | Should the photo release become optional in the live contest? | Switching `photoConsent` to optional |
 | 4.11 | Naming for the public per-judge score sheet | Building it |
 | 4.4 | Audit-log retention window | Adding the audit log to the purge |
-| 2.4 | Shared JS across the live site and the templates. Not built because two things conflict: (1) the live site allows inline scripts and styles and `mobile-enhancements.js` injects its own `<style>`, but the templates forbid injected styles (strict CSP); (2) that script builds pill-shaped TOP and MENU buttons (`border-radius: 999px`, red/navy fills) that break the sharp-corners rule. **Decide:** keep the TOP/MENU buttons (then the live site moves their CSS into `main.css`/`vsyc26.css` and they get square corners), or drop them? | One shared behaviour file; the templates then get rel-safety, lazy images and click-outside-to-close |
 | 5.2 | Conduct reports (P2): who is on the conduct team (at least two named people), who gets told, how reports are acknowledged and how long you keep them. The forms engine and review screen are ready for it. | Building the confidential report form |
 | 5.4 | Multi-event: is a deployment one organizer running several related events, or separate organizers sharing a hub? | Whether `event_id` is built, and how |
 | 5.1 | Who besides Admin may read form answers (`forms.review`)? | A conduct team or organizer reading the answers |
-| 4.1 | Whether Turnstile ships on | Keys, then flipping the setting |
 | 1.19 / 1.20 | Founded-year source; VSYC-27 date and venue | Those two club-site edits |
 | 0.x | Items 0.2–0.4, 0.6–0.8, 0.11–0.13 | See Wave 0 |
 | other | yoyomagic.fun 404, GUIDES in the VSYC nav, Challonge embed replacement, open axe colour findings, troop repo items | Each as noted in its PR |
