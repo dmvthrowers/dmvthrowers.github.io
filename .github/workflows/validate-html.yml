@@ -1,0 +1,31 @@
+# Validates every page with the W3C Nu HTML Checker (the validator behind validator.w3.org).
+# It reports errors only, so a green run means no invalid markup, such as an element in the
+# wrong place, a bad attribute or a skipped heading level. Runs on the Java and Node that
+# ubuntu-latest already has. The checker version is pinned.
+name: Validate HTML
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+# Least privilege: the check only reads the code.
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-html-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Get the validator
+        run: npm install --prefix "$RUNNER_TEMP/vnu" --no-audit --no-fund vnu-jar@26.10.7
+      - name: Validate every page
+        run: java -jar "$RUNNER_TEMP/vnu/node_modules/vnu-jar/build/dist/vnu.jar" --errors-only --skip-non-html ./*.html

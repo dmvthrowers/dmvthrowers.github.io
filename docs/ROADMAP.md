@@ -42,8 +42,10 @@ The build order across every repo, with status per item, is in [`BUILD_PLAN.md`]
    every page's nav identically — plan it as one change across all pages.
 8. ~~**`/.well-known/security.txt`** with a contact address.~~ Done; renew its `Expires` line
    before 2027-10-01.
-9. **Cold-load flash on `vsyc26.html`**: hero title briefly renders in fallback fonts and the nav
-    logo shows a broken-image glyph. Check font-display and the logo's `width`/`height`.
+9. **Cold-load flash on `vsyc26.html`.** Logo half done: the VSYC pages now load a 3 KB logo
+    instead of 36 KB, so it arrives with the text (the broken-image glyph didn't reproduce on a
+    throttled load in Chromium). The font half is self-hosting Playfair Display, DM Sans and
+    Montserrat (OFL), build plan item 2.12.
 10. **JotForm leftovers.** ~~`privacy.html` still lists JotForm as a registration processor.~~
    Removed (owner confirmed no JotForm form is live). 16 pages (`about.html`,
    `index.html`, `teachers.html`, the guides) carry stale "jotform for VSYC-26" CSP comments.
