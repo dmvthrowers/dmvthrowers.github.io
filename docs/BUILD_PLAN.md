@@ -65,7 +65,7 @@ the owner is in Wave 0 below.
 | GitHub topics on the templates | `yo-yo`, `skill-toys`, `github-pages`, `static-site`, `website-template` (owner sets them) | 0.13 |
 | Turnstile bot check | On everywhere, behind a setting; goes live when the Cloudflare keys are added | 4.1 |
 | Champion rule | Port it into the template as a config option; collect the home address only when a contest uses a state champion | 4.1 |
-| Roles and `/staff` in the template | Keep them; no personal data lives in the template (checked 2026-10-10: only organization links) | 4.2 |
+| Roles and `/staff` | In the template, no personal data lives there (checked 2026-10-10). Also port them into the live app, as part of the parity rule | 4.2, 8.9 |
 | Survey table name | Not renamed now; rename `vsyc26_survey_responses` when a contest is archived | 4.3 |
 | Photo release | Mandatory for competitors: no acceptance, no entry (as built). Migration 0055 stays unused | 4.10 |
 | Shared JS across the site and templates | Keep them separate; port improvements by hand | 2.4 |
@@ -221,6 +221,27 @@ when we get there; most wait on wave 5.
 | 7.7 | News archive with RSS, supporters page | Content from the owner |
 | 7.8 | Full map app as a level-2 template (like the registration app) | After wave 3 |
 
+## Wave 8: parity (owner rule, 2026-10-10)
+
+The template and the live repo stay in parity: core features exist in both, and the live repo differs only
+where it holds real data or its own config and content. The registration app's gaps come from a file-by-file
+audit (`yoyo-registration-template/docs/PARITY.md`, PR #73). One PR per row, lowest risk first. Production
+care applies to every row that touches VA-States: off by default where it can be, tests, no unreviewed
+migration.
+
+| # | Direction | Item | Notes |
+|---|---|---|---|
+| 8.1 | VA-States → template | Home-state eligibility and the champion rule, as a config option | Blank `stateChampion.state` turns it off |
+| 8.2 | VA-States → template | Season purge and reset code, `scripts/purge.ts`, results-gaps query | Design is already in the template's `SEASON_ARCHIVE.md` |
+| 8.3 | VA-States → template | Money-path route test harness and its stubs | |
+| 8.4 | VA-States → template | Nightly encrypted backup workflow, generic day-of runbook, generic audit and spec docs | |
+| 8.5 | template → VA-States | Schedule clash check | No migration |
+| 8.6 | template → VA-States | Contest guide, rules with changelog, trick-list pages | Config-driven; VA-States keeps its own content |
+| 8.7 | template → VA-States | Setup safety: email log stub, first admin once, auth email renderer, local deadline display | |
+| 8.8 | template → VA-States | Forms engine, `/forms-review`, migration 0061 | Off unless a form is configured; needs the Supabase SQL editor for the migration |
+| 8.9 | template → VA-States | Roles, grants, `/staff` pane, then the role pages (media, merch, stream, volunteers, finance, event, staff) | Largest port; touches sign-in, so last, behind a flag, with route tests. Owner: yes |
+| 8.10 | static sites and maps | Same audit for the club site and club template, contest site and contest template, map app and map template, scouts template and the two live sites | Not started |
+
 ## Waiting on owner (2026-10-10)
 
 Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, club-template #15 and the live-site docs PRs are merged; this list is what is left.
@@ -229,7 +250,6 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 
 | Item | What is needed | Unblocks |
 |---|---|---|
-| 4.2 | Template keeps roles and `/staff` (decided). Still open: port them into the live VA-States app too, or leave VA-States as it is? | A single staff pane in the live app |
 | 4.18 | Eligibility rule for Girls add-on (now self-tick plus optional age limits) | Tighter add-on checks |
 | 4.11 | Naming for the public per-judge score sheet | Building it |
 | 4.4 | Audit-log retention window | Adding the audit log to the purge |
