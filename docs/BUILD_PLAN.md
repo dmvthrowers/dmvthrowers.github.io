@@ -87,19 +87,19 @@ These unblock later waves. Nothing in code waits on the ones marked *no code wai
 | 0.3 | Map "Now" list: confirm the service-role key rotation, secret scanning, Vercel storage cleanup | *no code waits* |
 | 0.4 | Canonical repo decided (`dmvthrowers/VA-States`); still open: a second owner or org move (Gap 1) | Bus factor |
 | 0.5 | ~~Archive and purge retention~~ Decided (see above) | 4.4 unblocked |
-| 0.6 | VSYC-27 date and venue | 1.20 contest page reset (#76) |
-| 0.7 | Conduct team names (at least two) and response time | 2.8 conduct page, P2 |
-| 0.8 | Sponsor questions (17, `docs/SPONSOR_FORM.md`) | Sponsor extras |
+| 0.6 | VSYC-27 date and venue. Not set yet; the owner expects them in a few weeks (as of 2026-10-10) | 1.20 contest page reset (#76) |
+| 0.7 | Conduct team names (at least two) and response time. No team yet; pending (as of 2026-10-10) | 2.8 conduct page, P2 |
+| 0.8 | Sponsor questions (17, `docs/SPONSOR_FORM.md`). Pending (as of 2026-10-10) | Sponsor extras |
 | 0.9 | ~~Contest app decisions~~ Decided (see above) | F1, S7, R2 unblocked |
 | 0.10 | ~~Privacy JotForm, pack fonts and badges, troop docs, map template~~ Decided (see above) | — |
-| 0.11 | Press kit source file (to fix "Founded 2023") | 1.19 |
+| 0.11 | Press kit source file (to fix "Founded 2023"). It came from Ben Gates at NYYL, so the corrected file has to come from him; the owner can ask when ready | 1.19 |
 | 0.12 | Add `dmvt-event-hub` and `DMVT-Design` to the agent's repo access | Wave 7, 3.9 |
 | 0.13 | Set GitHub topics on the six template repos (Settings → About) | Discoverability |
 | 0.14 | Player map: look at OpenFreeMap tiles (`NEXT_PUBLIC_MAP_TILES=openfreemap` in `pnpm dev`), then set it in Vercel if you like it | 3.9 goes live |
 | 0.15 | Map template tiles: OpenFreeMap needs ~1 MB of MapLibre in every copy. Recommendation: keep OpenStreetMap raster | 3.9 template half |
 | 0.16 | Close Dependabot map #251 and #245 (`@types/node` 26); #263 pinned the runtime's 22 and ignores majors | Dependabot noise |
 | 0.17 | Production check of submit dedupe (#259): submit the same form twice, expect the same message and one row in `entries` | Confirms 3.3 |
-| 0.18 | Prize scale for VSYC-27 | Real amounts in the S3 prize table (template #68) |
+| 0.18 | Prize scale for VSYC-27. Pending (as of 2026-10-10) | Real amounts in the S3 prize table (template #68) |
 
 ## Wave 1: small, decision-free, static (start now)
 
@@ -250,6 +250,8 @@ migration.
 
 ## Waiting on owner (2026-10-10)
 
+**Update 2026-10-10:** the facts below (conduct team, VSYC-27 date and venue, sponsor answers, prize scale) are not decided yet; the owner expects them in a few weeks. Nothing that can be built without them waits: it is being built meanwhile (Wave 8 parity, multi-event).
+
 Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, club-template #15 and the live-site docs PRs are merged; this list is what is left.
 
 ### (a) Facts and answers
@@ -257,7 +259,7 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 | Item | What is needed | Unblocks |
 |---|---|---|
 | 5.2 | Conduct reports (P2): who is on the conduct team (at least two named people), who gets told, how reports are acknowledged and how long you keep them. The forms engine and review screen are ready for it. | Building the confidential report form |
-| 1.19 / 1.20 | Founded-year source; VSYC-27 date and venue | Those two club-site edits |
+| 1.19 / 1.20 | Founded-year source (the press kit file is NYYL's, from Ben Gates); VSYC-27 date and venue (not set; expected in a few weeks) | Those two club-site edits |
 | 0.x | Items 0.2–0.4, 0.6–0.8, 0.11–0.13 | See Wave 0 |
 | other | yoyomagic.fun 404, GUIDES in the VSYC nav, Challonge embed replacement, open axe colour findings, troop repo items | Each as noted in its PR |
 
