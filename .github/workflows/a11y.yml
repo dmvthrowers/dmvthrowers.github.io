@@ -1,0 +1,35 @@
+# Runs the axe accessibility checker on every page, at phone and desktop width. See scripts/a11y_test.js.
+# Report only for now: it lists serious and critical problems in the run log but does not fail the build,
+# because a few remaining ones are colour choices for the owner (see AGENTS.md). Turn the flag off once they are fixed.
+name: Accessibility check
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: a11y-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  axe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Get a browser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/pw" --no-audit --no-fund playwright@1.56.1 axe-core@4.10.3
+          "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Run axe on every page (report only; remove continue-on-error when the known colour findings are fixed)
+        continue-on-error: true
+        env:
+          NODE_PATH: ${{ runner.temp }}/pw/node_modules
+        run: node scripts/a11y_test.js .

@@ -155,6 +155,10 @@ No output means no errors. `<base href="/">` must come before every `<link>` and
 warnings. Try it with `python3 scripts/check_links.py --limit 20` or `--host yoyotricks.com`. When it reports a
 broken link, fix or drop the link on every page that has it. Don't weaken the check to get a green run.
 
+## Accessibility check
+
+`.github/workflows/a11y.yml` runs axe on every page (`node scripts/a11y_test.js .`, needs Playwright and axe-core). It is report-only for now. Known findings left for a design call: the red `.vsyc-label` on the navy VSYC banner (index.html), the red link on navy in the teachers resource list, the light footer links over red in the teachers page, and the gold-outline buttons on the VSYC rules page. Fix them with brand-token colours, then remove `continue-on-error` from the workflow.
+
 ## Where things live
 
 - `assets/css/main.css` — shared main-site styles. Sectioned with `===== N. Name =====` banners.
