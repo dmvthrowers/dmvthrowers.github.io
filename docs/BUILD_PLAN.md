@@ -239,10 +239,10 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 | 4.10 | Should the photo release become optional in the live contest? | Switching `photoConsent` to optional |
 | 4.11 | Naming for the public per-judge score sheet | Building it |
 | 4.4 | Audit-log retention window | Adding the audit log to the purge |
-| 3.x | Whether Turnstile ships on | Keys, then flipping the setting |
+| 4.1 | Whether Turnstile ships on | Keys, then flipping the setting |
 | 1.19 / 1.20 | Founded-year source; VSYC-27 date and venue | Those two club-site edits |
 | 0.x | Items 0.2–0.4, 0.6–0.8, 0.11–0.13 | See Wave 0 |
-| other | yomagic.fun 404, GUIDES in the VSYC nav, Challonge embed replacement, open axe colour findings, troop repo items | Each as noted in its PR |
+| other | yoyomagic.fun 404, GUIDES in the VSYC nav, Challonge embed replacement, open axe colour findings, troop repo items | Each as noted in its PR |
 
 ### (b) Dashboard and account actions
 
