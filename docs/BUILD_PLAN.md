@@ -137,7 +137,7 @@ Each is a few hours or less. Ordered by value.
 | 2.1 | yoyo-contest-template | Bracket page built from config (no outside embed) | ◐ contest #9 |
 | 2.2 | yoyo-contest-template | Optional merch and side-event pages | ◐ contest #10 |
 | 2.3 | yoyoclub-template | Long-form guides: hub plus parts from `content/`, shared references, deep-link forwarder | ◐ yoyoclub-template #15 (merged) |
-| 2.4 | site + templates | One shared JS: pick `mobile-enhancements.js` as the source, port `site.js` improvements both ways | ☐ |
+| 2.4 | site + templates | One shared JS: pick `mobile-enhancements.js` as the source, port `site.js` improvements both ways | ⛔ owner call: see "Waiting on owner" (a) |
 | 2.5 | site | HTML validation in CI (`vnu`) (Next 5) | ◐ #154 |
 | 2.6 | site | External link checker (`lychee`, weekly, not per PR) (Next 4) | ◐ #157 |
 | 2.7 | site | Guides in the main nav, one change across every page (Next 7) | ◐ #155 |
@@ -239,6 +239,7 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 | 4.10 | Should the photo release become optional in the live contest? | Switching `photoConsent` to optional |
 | 4.11 | Naming for the public per-judge score sheet | Building it |
 | 4.4 | Audit-log retention window | Adding the audit log to the purge |
+| 2.4 | Shared JS across the live site and the templates. Not built because two things conflict: (1) the live site allows inline scripts and styles and `mobile-enhancements.js` injects its own `<style>`, but the templates forbid injected styles (strict CSP); (2) that script builds pill-shaped TOP and MENU buttons (`border-radius: 999px`, red/navy fills) that break the sharp-corners rule. **Decide:** keep the TOP/MENU buttons (then the live site moves their CSS into `main.css`/`vsyc26.css` and they get square corners), or drop them? | One shared behaviour file; the templates then get rel-safety, lazy images and click-outside-to-close |
 | 4.1 | Whether Turnstile ships on | Keys, then flipping the setting |
 | 1.19 / 1.20 | Founded-year source; VSYC-27 date and venue | Those two club-site edits |
 | 0.x | Items 0.2–0.4, 0.6–0.8, 0.11–0.13 | See Wave 0 |
