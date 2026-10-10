@@ -70,7 +70,8 @@ the owner is in Wave 0 below.
 | Per-judge public score sheet | Build it, named "Judges' Scores", off by default | 4.11 |
 | Audit-log retention | 12 months after the event, then purged with the season | 4.4 |
 | Who reads form answers | Admins, plus staff an admin explicitly grants `forms.review` | 5.1 |
-| Multi-event | Every event is treated as multi-event, and an event can have its own organizers. Designed first (`docs/MULTI_EVENT.md`), then built in stages | 5.4 |
+| Multi-event | Every event is multi-event, and an event can have its own organizers. Design approved (`yoyo-registration-template/docs/MULTI_EVENT.md`): a Stripe key per organizer, platform admin creates organizers and organizer admins create events (config first, a screen later), sponsors organizer-level and budget lines per event, player accounts per organizer, `/e/<event>/…` URLs | 5.4 |
+| Access waterfall | Platform admin → organizer admin → event admin → role staff. Each level has full access to everything beneath it, none above or sideways; nobody grants above their own scope | 5.4 |
 | Survey table name | Not renamed now; rename `vsyc26_survey_responses` when a contest is archived | 4.3 |
 | Photo release | Mandatory for competitors: no acceptance, no entry (as built). Migration 0055 stays unused | 4.10 |
 | Shared JS across the site and templates | Keep them separate; port improvements by hand | 2.4 |
@@ -200,7 +201,7 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | 5.1 | Forms on our own system (config plus one submission table), sponsor form as the first instance | ◐ registration template #70 (engine, `/forms/<id>`, `/forms-review`, migration 0061). The sponsor form is not moved onto it yet: it has tier slots and a convert step |
 | 5.2 | P2 confidential conduct reports on the forms system, linked from every footer (site, templates, app) | ⛔ owner: who is on the conduct team, and who sees reports (see "Waiting on owner" (a)). Needs 0.7 for routing |
 | 5.3 | Scoring-format interface and registry (hub "next steps" 1) | Deferred on purpose: `FORMATS` plus TypeScript exhaustiveness already list every place a new format must touch. Extract the interface together with the first Wave 6 format (F3) so its shape comes from a real second format |
-| 5.4 | Stage 1: `event_id` with a default, `events` in config, per-event routes and results (hub steps 2–4), E2 one event shape | ◐ decided: every event is multi-event with its own organizers; design first. Was: is a deployment one organizer running several events, or separate organizers sharing a hub? (hub open question 1). Large schema change; not started |
+| 5.4 | Stage 1: `event_id` with a default, `events` in config, per-event routes and results (hub steps 2–4), E2 one event shape | ◐ design approved. Build order, one PR each, all parity-checked: 1a events as a value in config, 1b `event_id` migrations (expand, then contract), 1c `/e/<event>/…` URLs, 1d scoped grants and the access waterfall |
 | 5.5 | Finance and budget upgrade (feeds O4) | Not started: scope is not defined beyond "open books" (done in 4.13). Needs a list of what finance wants to see |
 | 5.6 | E4 daily housekeeping, E5 report a problem, E6 status page, E1 filtered feeds | E5 can be a plain form on the 5.1 engine (add one to `contest.forms`; see `docs/FORMS.md`). The others are not started |
 | 5.7 | Move VSYC wording in VA-States into config until shared files match the template | Parity "Both", ongoing |
