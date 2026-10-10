@@ -66,6 +66,11 @@ the owner is in Wave 0 below.
 | Turnstile bot check | On everywhere, behind a setting; goes live when the Cloudflare keys are added | 4.1 |
 | Champion rule | Port it into the template as a config option; collect the home address only when a contest uses a state champion | 4.1 |
 | Roles and `/staff` | In the template, no personal data lives there (checked 2026-10-10). Also port them into the live app, as part of the parity rule | 4.2, 8.9 |
+| Girls division | An option any contest can switch on: a $0 add-on, self-tick, optional age limits. A ready-to-copy example goes in the template docs | 4.18 |
+| Per-judge public score sheet | Build it, named "Judges' Scores", off by default | 4.11 |
+| Audit-log retention | 12 months after the event, then purged with the season | 4.4 |
+| Who reads form answers | Admins, plus staff an admin explicitly grants `forms.review` | 5.1 |
+| Multi-event | Every event is treated as multi-event, and an event can have its own organizers. Designed first (`docs/MULTI_EVENT.md`), then built in stages | 5.4 |
 | Survey table name | Not renamed now; rename `vsyc26_survey_responses` when a contest is archived | 4.3 |
 | Photo release | Mandatory for competitors: no acceptance, no entry (as built). Migration 0055 stays unused | 4.10 |
 | Shared JS across the site and templates | Keep them separate; port improvements by hand | 2.4 |
@@ -177,7 +182,7 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | 4.8 | P4 published draws (recorded seed, re-checkable) | | ✓ VA-States #91 (off until `dayOf.publishedDraws`); migration 0053 applied 2026-10-10 |
 | 4.9 | P1 code of conduct version recorded per person, re-accept on change | | ✓ VA-States #92; migration 0054 applied 2026-10-10 (record only; re-accept prompt is a follow-up) |
 | 4.10 | R11 photo and video consent at registration, honored on results videos | Before any video work ships in the app | ◐ template #59, migration 0055; decided: mandatory for competitors, nothing to build |
-| 4.11 | T11 how it was scored + T12 score shading | Frontend only | ◐ template #60 (per-judge public score sheet not built: owner choice) |
+| 4.11 | T11 how it was scored + T12 score shading | Frontend only | ◐ template #60; per-judge public score sheet ("Judges' Scores") decided, to build |
 | 4.12 | T4 MC cards (say-it-like-this name, intro line) | | ✓ VA-States #93 (admin only); migration 0056 applied 2026-10-10 |
 | 4.13 | O5 rules with a changelog · O4 open books (public budget page) | | ◐ rules changelog: template #62 only; ✓ open books VA-States #94, migration 0057 applied 2026-10-10 |
 | 4.14 | T18 contest guide page + O1 first contest path | | ◐ template #64 |
@@ -195,7 +200,7 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | 5.1 | Forms on our own system (config plus one submission table), sponsor form as the first instance | ◐ registration template #70 (engine, `/forms/<id>`, `/forms-review`, migration 0061). The sponsor form is not moved onto it yet: it has tier slots and a convert step |
 | 5.2 | P2 confidential conduct reports on the forms system, linked from every footer (site, templates, app) | ⛔ owner: who is on the conduct team, and who sees reports (see "Waiting on owner" (a)). Needs 0.7 for routing |
 | 5.3 | Scoring-format interface and registry (hub "next steps" 1) | Deferred on purpose: `FORMATS` plus TypeScript exhaustiveness already list every place a new format must touch. Extract the interface together with the first Wave 6 format (F3) so its shape comes from a real second format |
-| 5.4 | Stage 1: `event_id` with a default, `events` in config, per-event routes and results (hub steps 2–4), E2 one event shape | ⛔ owner: is a deployment one organizer running several events, or separate organizers sharing a hub? (hub open question 1). Large schema change; not started |
+| 5.4 | Stage 1: `event_id` with a default, `events` in config, per-event routes and results (hub steps 2–4), E2 one event shape | ◐ decided: every event is multi-event with its own organizers; design first. Was: is a deployment one organizer running several events, or separate organizers sharing a hub? (hub open question 1). Large schema change; not started |
 | 5.5 | Finance and budget upgrade (feeds O4) | Not started: scope is not defined beyond "open books" (done in 4.13). Needs a list of what finance wants to see |
 | 5.6 | E4 daily housekeeping, E5 report a problem, E6 status page, E1 filtered feeds | E5 can be a plain form on the 5.1 engine (add one to `contest.forms`; see `docs/FORMS.md`). The others are not started |
 | 5.7 | Move VSYC wording in VA-States into config until shared files match the template | Parity "Both", ongoing |
@@ -250,12 +255,7 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 
 | Item | What is needed | Unblocks |
 |---|---|---|
-| 4.18 | Eligibility rule for Girls add-on (now self-tick plus optional age limits) | Tighter add-on checks |
-| 4.11 | Naming for the public per-judge score sheet | Building it |
-| 4.4 | Audit-log retention window | Adding the audit log to the purge |
 | 5.2 | Conduct reports (P2): who is on the conduct team (at least two named people), who gets told, how reports are acknowledged and how long you keep them. The forms engine and review screen are ready for it. | Building the confidential report form |
-| 5.4 | Multi-event: is a deployment one organizer running several related events, or separate organizers sharing a hub? | Whether `event_id` is built, and how |
-| 5.1 | Who besides Admin may read form answers (`forms.review`)? | A conduct team or organizer reading the answers |
 | 1.19 / 1.20 | Founded-year source; VSYC-27 date and venue | Those two club-site edits |
 | 0.x | Items 0.2–0.4, 0.6–0.8, 0.11–0.13 | See Wave 0 |
 | other | yoyomagic.fun 404, GUIDES in the VSYC nav, Challonge embed replacement, open axe colour findings, troop repo items | Each as noted in its PR |
