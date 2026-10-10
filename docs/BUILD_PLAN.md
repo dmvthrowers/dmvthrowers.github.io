@@ -127,8 +127,8 @@ Each is a few hours or less. Ordered by value.
 |---|---|---|---|
 | 2.1 | yoyo-contest-template | Bracket page built from config (no outside embed) | ◐ contest #9 |
 | 2.2 | yoyo-contest-template | Optional merch and side-event pages | ◐ contest #10 |
-| 2.3 | yoyoclub-template | Long-form guides: hub plus parts from `content/`, shared references, deep-link forwarder | ☐ |
-| 2.4 | site + templates | One shared JS: pick `mobile-enhancements.js` as the source, port `site.js` improvements both ways | ☐ |
+| 2.3 | yoyoclub-template | Long-form guides: hub plus parts from `content/`, shared references, deep-link forwarder | ◐ yoyoclub-template #15 (merged) |
+| 2.4 | site + templates | One shared JS: pick `mobile-enhancements.js` as the source, port `site.js` improvements both ways | ⛔ owner call: see "Waiting on owner" (a) |
 | 2.5 | site | HTML validation in CI (`vnu`) (Next 5) | ◐ #154 |
 | 2.6 | site | External link checker (`lychee`, weekly, not per PR) (Next 4) | ◐ #157 |
 | 2.7 | site | Guides in the main nav, one change across every page (Next 7) | ◐ #155 |
@@ -162,10 +162,10 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | # | Item | Notes | Status |
 |---|---|---|---|
 | 4.1 | Port score status, round plans, split, prizes, DJ battle view, disputes, bot check, champion rule into the template | Parity (VA-States → template). Prerequisite for T1 and the rest | ◐ template #47 score status, #48 bot check, #49 split, #50 prizes, #51 DJ battle view, #52 round plans, #53 dispute flags; champion rule is an owner decision (not built) |
-| 4.2 | Port roles and `/staff`, migration replay in CI, setup scripts, three tests into VA-States | Parity (template → VA-States). Production care | ☐ |
+| 4.2 | Port roles and `/staff`, migration replay in CI, setup scripts, three tests into VA-States | Parity (template → VA-States). Production care | ◐ VA-States #82 (merged: migration replay in CI, setup script, three tests). Roles and `/staff` not ported: owner call |
 | 4.3 | Migration number map (0037–0049) and the survey table name | Parity "Both". Docs plus one rename | ◐ template #54, VA-States #80 |
-| 4.4 | Season archive purge and reset, with the retention decisions above | Production care | ☐ |
-| 4.5 | T19 port to VA-States | After template #45 merges | ☐ |
+| 4.4 | Season archive purge and reset, with the retention decisions above | Production care | ◐ VA-States #83 (merged). Migration 0060 applied to production 2026-10-10; nothing purged |
+| 4.5 | T19 port to VA-States | After template #45 merges | ◐ VA-States #84 (merged) |
 | 4.6 | T1 scores-in board | Builds on score status | ◐ template #55 (stacked on #47) |
 | 4.7 | T2 release gates (run order gate, head-judge "checked") | | ◐ template #56 (stacked on #55), migration 0052 |
 | 4.8 | P4 published draws (recorded seed, re-checkable) | | ◐ template #57, migration 0053 |
@@ -179,8 +179,8 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | 4.16 | F1 bracket match scores | Kendama payoff; format steps in master plan Part 6 | ◐ template #66, migration 0058 |
 | 4.17 | S2 trick list page, S3 prize table, S7 kendama preset (trick-deck battles + speed ladder) | | ◐ template #67 (S7, S2; stacked on #66), #68 (S3; stacked on #50) |
 | 4.18 | R2 $0 add-on divisions (girls divisions as $0 add-ons) | | ◐ template #69, migration 0059 |
-| 4.19 | VA-States leftovers: admin route rate limit (Next 8), money-path route tests (Next 9) | | ☐ |
-| 4.20 | VA-States results data gaps on `/results` (Next 12) | Needs a read of the import rows | ☐ |
+| 4.19 | VA-States leftovers: admin route rate limit (Next 8), money-path route tests (Next 9) | | ◐ VA-States #81 (merged) |
+| 4.20 | VA-States results data gaps on `/results` (Next 12) | Needs a read of the import rows | ◐ VA-States #85 (merged): the read-only query is in; the fix waits on its output |
 
 ## Wave 5: platform pieces
 
@@ -214,6 +214,46 @@ when we get there; most wait on wave 5.
 | 7.6 | Site search with a static index (Pagefind) | Needs a CI step that writes the index; owner nod since the site has no build step |
 | 7.7 | News archive with RSS, supporters page | Content from the owner |
 | 7.8 | Full map app as a level-2 template (like the registration app) | After wave 3 |
+
+## Waiting on owner (2026-10-10)
+
+Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, club-template #15 and the live-site docs PRs are merged; this list is what is left.
+
+### (a) Facts and answers
+
+| Item | What is needed | Unblocks |
+|---|---|---|
+| 4.1 | Champion rule and whether to collect home address | Template port of the home-state rule; VA-States already has it |
+| 4.3 | Rename survey table `vsyc26_survey_responses` to `contest_survey_responses`? (not additive) | One shared name in both repos |
+| 4.2 | Go or no-go on porting roles and `/staff` to VA-States | A single staff pane in the live app |
+| 4.18 | Eligibility rule for Girls add-on (now self-tick plus optional age limits) | Tighter add-on checks |
+| 4.10 | Should the photo release become optional in the live contest? | Switching `photoConsent` to optional |
+| 4.11 | Naming for the public per-judge score sheet | Building it |
+| 4.4 | Audit-log retention window | Adding the audit log to the purge |
+| 2.4 | Shared JS across the live site and the templates. Not built because two things conflict: (1) the live site allows inline scripts and styles and `mobile-enhancements.js` injects its own `<style>`, but the templates forbid injected styles (strict CSP); (2) that script builds pill-shaped TOP and MENU buttons (`border-radius: 999px`, red/navy fills) that break the sharp-corners rule. **Decide:** keep the TOP/MENU buttons (then the live site moves their CSS into `main.css`/`vsyc26.css` and they get square corners), or drop them? | One shared behaviour file; the templates then get rel-safety, lazy images and click-outside-to-close |
+| 4.1 | Whether Turnstile ships on | Keys, then flipping the setting |
+| 1.19 / 1.20 | Founded-year source; VSYC-27 date and venue | Those two club-site edits |
+| 0.x | Items 0.2–0.4, 0.6–0.8, 0.11–0.13 | See Wave 0 |
+| other | yoyomagic.fun 404, GUIDES in the VSYC nav, Challonge embed replacement, open axe colour findings, troop repo items | Each as noted in its PR |
+
+### (b) Dashboard and account actions
+
+- Create a `v1.0.0` tag on each of the four static templates.
+- Cloudflare Turnstile: create the site and keys.
+- Stripe: turn on `charge.dispute.created` and `charge.dispute.closed` for the webhook.
+- Repo access for `dmvt-event-hub` and `DMVT-Design` (0.12).
+- Run `scripts/results-gaps.sql` read-only in the Supabase SQL editor and send the output (4.20).
+- Supabase API: DDL through the API times out on project `vsyc26-registration` (migration 0060 was applied by hand in the SQL editor). Worth a support ticket.
+- Before any purge: take a backup, test a restore, run `npm run purge` as a dry run and read the counts, then `--apply`. Not before the 2026 archive page is live.
+
+### (c) Migrations
+
+- VA-States 0060: applied 2026-10-10 (tables first, functions by hand). Add the history row if you track it.
+- Template 0050–0059: nothing to apply until a deployment exists. Deploy order for a new deployment: apply 0054, 0056, 0057, 0058 before turning on the routes that write them.
+
+### (d) Reviews and merges
+
+Nothing open from this run except the owner items above and the ports still to build (4.6–4.18 into VA-States, 2.4, Waves 5–7).
 
 ## What we're chipping first
 
