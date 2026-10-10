@@ -167,18 +167,18 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 | 4.4 | Season archive purge and reset, with the retention decisions above | Production care | ◐ VA-States #83 (merged). Migration 0060 applied to production 2026-10-10; nothing purged |
 | 4.5 | T19 port to VA-States | After template #45 merges | ◐ VA-States #84 (merged) |
 | 4.6 | T1 scores-in board | Builds on score status | ◐ template #55 (stacked on #47) |
-| 4.7 | T2 release gates (run order gate, head-judge "checked") | | ◐ template #56 (stacked on #55), migration 0052 |
-| 4.8 | P4 published draws (recorded seed, re-checkable) | | ◐ template #57, migration 0053 |
-| 4.9 | P1 code of conduct version recorded per person, re-accept on change | | ◐ template #58, migration 0054 (record only; re-accept prompt is a follow-up) |
+| 4.7 | T2 release gates (run order gate, head-judge "checked") | | ✓ VA-States #90 (off until `dayOf.releaseGates`); migration 0052 applied 2026-10-10 |
+| 4.8 | P4 published draws (recorded seed, re-checkable) | | ✓ VA-States #91 (off until `dayOf.publishedDraws`); migration 0053 applied 2026-10-10 |
+| 4.9 | P1 code of conduct version recorded per person, re-accept on change | | ✓ VA-States #92; migration 0054 applied 2026-10-10 (record only; re-accept prompt is a follow-up) |
 | 4.10 | R11 photo and video consent at registration, honored on results videos | Before any video work ships in the app | ◐ template #59, migration 0055; stays required until the owner opts in |
 | 4.11 | T11 how it was scored + T12 score shading | Frontend only | ◐ template #60 (per-judge public score sheet not built: owner choice) |
-| 4.12 | T4 MC cards (say-it-like-this name, intro line) | | ◐ template #61, migration 0056 |
-| 4.13 | O5 rules with a changelog · O4 open books (public budget page) | | ◐ template #62 rules changelog, #63 open books (migration 0057) |
+| 4.12 | T4 MC cards (say-it-like-this name, intro line) | | ✓ VA-States #93 (admin only); migration 0056 applied 2026-10-10 |
+| 4.13 | O5 rules with a changelog · O4 open books (public budget page) | | ◐ rules changelog: template #62 only; ✓ open books VA-States #94, migration 0057 applied 2026-10-10 |
 | 4.14 | T18 contest guide page + O1 first contest path | | ◐ template #64 |
 | 4.15 | E8 email log stub · E9 first admin once | Setup safety | ◐ template #65 |
-| 4.16 | F1 bracket match scores | Kendama payoff; format steps in master plan Part 6 | ◐ template #66, migration 0058 |
+| 4.16 | F1 bracket match scores | Kendama payoff; format steps in master plan Part 6 | ✓ VA-States #95 (off until a division sets `matchScoring`); migration 0058 applied 2026-10-10 |
 | 4.17 | S2 trick list page, S3 prize table, S7 kendama preset (trick-deck battles + speed ladder) | | ◐ template #67 (S7, S2; stacked on #66), #68 (S3; stacked on #50) |
-| 4.18 | R2 $0 add-on divisions (girls divisions as $0 add-ons) | | ◐ template #69, migration 0059 |
+| 4.18 | R2 $0 add-on divisions (girls divisions as $0 add-ons) | | ✓ VA-States #96 (no add-on configured yet); migration 0059 applied 2026-10-10 |
 | 4.19 | VA-States leftovers: admin route rate limit (Next 8), money-path route tests (Next 9) | | ◐ VA-States #81 (merged) |
 | 4.20 | VA-States results data gaps on `/results` (Next 12) | Needs a read of the import rows | ◐ VA-States #85 (merged): the read-only query is in; the fix waits on its output |
 
@@ -252,11 +252,12 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 ### (c) Migrations
 
 - VA-States 0060: applied 2026-10-10 (tables first, functions by hand). Add the history row if you track it.
+- VA-States 0052–0059: applied 2026-10-10 in the Supabase SQL editor (the API tool hangs on any statement containing `DROP`, so constraint changes go through the editor). 0055 (photo release) is skipped on purpose. The code for all of them is merged and each feature is off until its setting is turned on.
 - Template 0050–0059: nothing to apply until a deployment exists. Deploy order for a new deployment: apply 0054, 0056, 0057, 0058 before turning on the routes that write them.
 
 ### (d) Reviews and merges
 
-Nothing open from this run except the owner items above and the ports still to build (4.6–4.18 into VA-States, 2.4, Waves 5–7).
+Nothing open from this run except the owner items above. The migration-dependent VA-States ports (4.7, 4.8, 4.9, 4.12, 4.13, 4.16, 4.18) are merged; 4.10 waits on the photo release decision. Still to build: 2.4, Waves 5–7. After the next registration, check that `code_of_conduct_version` is stored, and open `/budget` to confirm the totals.
 
 ## What we're chipping first
 
