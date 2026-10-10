@@ -186,12 +186,12 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 
 | # | Item | Notes |
 |---|---|---|
-| 5.1 | Forms on our own system (config plus one submission table), sponsor form as the first instance | Unblocks P2 and the conduct report form |
-| 5.2 | P2 confidential conduct reports on the forms system, linked from every footer (site, templates, app) | Needs 0.7 for routing |
-| 5.3 | Scoring-format interface and registry (hub "next steps" 1) | Before any new format in wave 6 |
-| 5.4 | Stage 1: `event_id` with a default, `events` in config, per-event routes and results (hub steps 2–4), E2 one event shape | |
-| 5.5 | Finance and budget upgrade (feeds O4) | |
-| 5.6 | E4 daily housekeeping, E5 report a problem, E6 status page, E1 filtered feeds | |
+| 5.1 | Forms on our own system (config plus one submission table), sponsor form as the first instance | ◐ registration template #70 (engine, `/forms/<id>`, `/forms-review`, migration 0061). The sponsor form is not moved onto it yet: it has tier slots and a convert step |
+| 5.2 | P2 confidential conduct reports on the forms system, linked from every footer (site, templates, app) | ⛔ owner: who is on the conduct team, and who sees reports (see "Waiting on owner" (a)). Needs 0.7 for routing |
+| 5.3 | Scoring-format interface and registry (hub "next steps" 1) | Deferred on purpose: `FORMATS` plus TypeScript exhaustiveness already list every place a new format must touch. Extract the interface together with the first Wave 6 format (F3) so its shape comes from a real second format |
+| 5.4 | Stage 1: `event_id` with a default, `events` in config, per-event routes and results (hub steps 2–4), E2 one event shape | ⛔ owner: is a deployment one organizer running several events, or separate organizers sharing a hub? (hub open question 1). Large schema change; not started |
+| 5.5 | Finance and budget upgrade (feeds O4) | Not started: scope is not defined beyond "open books" (done in 4.13). Needs a list of what finance wants to see |
+| 5.6 | E4 daily housekeeping, E5 report a problem, E6 status page, E1 filtered feeds | E5 can be a plain form on the 5.1 engine (add one to `contest.forms`; see `docs/FORMS.md`). The others are not started |
 | 5.7 | Move VSYC wording in VA-States into config until shared files match the template | Parity "Both", ongoing |
 
 ## Wave 6: contest app Phase 2 and 3
@@ -231,6 +231,9 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 | 4.11 | Naming for the public per-judge score sheet | Building it |
 | 4.4 | Audit-log retention window | Adding the audit log to the purge |
 | 2.4 | Shared JS across the live site and the templates. Not built because two things conflict: (1) the live site allows inline scripts and styles and `mobile-enhancements.js` injects its own `<style>`, but the templates forbid injected styles (strict CSP); (2) that script builds pill-shaped TOP and MENU buttons (`border-radius: 999px`, red/navy fills) that break the sharp-corners rule. **Decide:** keep the TOP/MENU buttons (then the live site moves their CSS into `main.css`/`vsyc26.css` and they get square corners), or drop them? | One shared behaviour file; the templates then get rel-safety, lazy images and click-outside-to-close |
+| 5.2 | Conduct reports (P2): who is on the conduct team (at least two named people), who gets told, how reports are acknowledged and how long you keep them. The forms engine and review screen are ready for it. | Building the confidential report form |
+| 5.4 | Multi-event: is a deployment one organizer running several related events, or separate organizers sharing a hub? | Whether `event_id` is built, and how |
+| 5.1 | Who besides Admin may read form answers (`forms.review`)? | A conduct team or organizer reading the answers |
 | 4.1 | Whether Turnstile ships on | Keys, then flipping the setting |
 | 1.19 / 1.20 | Founded-year source; VSYC-27 date and venue | Those two club-site edits |
 | 0.x | Items 0.2–0.4, 0.6–0.8, 0.11–0.13 | See Wave 0 |
