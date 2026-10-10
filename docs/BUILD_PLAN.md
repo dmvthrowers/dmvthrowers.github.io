@@ -24,23 +24,9 @@ This file is the *how and when*. Written 2026-10-07. Update the status column as
 
 ## In flight (waiting on review)
 
-| PR | What | Item |
-|---|---|---|
-| site #138 | Stale JotForm notes in CSP comments and `AGENTS.md` | Roadmap Next 10 (part) |
-| site #139 | Site check in CI (links, alt, nav and footer drift, JSON-LD) | Parity "automated site check", Next 4 (part) |
-| site #140 | Meetup `.ics` feed, weekly job fixes | Gap 9 |
-| yoyoclub-template #5 | Meetup `.ics` feed | Gap 9 |
-| yoyoclub-template #6 | Optional contact form | Parity |
-| yoyoclub-template #7 | Optional status link | Parity |
-| yoyo-contest-template #5 | `redirects` setting | Parity |
-| yoyo-contest-template #6 | Routine videos and a recap page | Parity, T13 (static side) |
-| yoyo-map-template #3 | Search box | Parity, research |
-| yoyo-registration-template #45 | Judge scores survive a dropped connection | T19 |
-| yoyo-registration-template #46, VA-States #79 | Form labels tied to inputs | VA-States Next 11 |
-| Girl-Scout-Troop-80301 #4 | Sync with the template's `build.py` and presets | Scouts parity |
-
-Every one shows a red `github-advanced-security` check: the Copilot quota is used up (owner action
-below), not a code problem.
+Nothing from the first build session: every PR it opened (site #138–#149, #158; templates; map
+#258–#270; registration #45, #46; VA-States #79; troop #4) merged by 2026-10-10. What's left for
+the owner is in Wave 0 below.
 
 ## Decisions made (2026-10-07)
 
@@ -97,6 +83,11 @@ These unblock later waves. Nothing in code waits on the ones marked *no code wai
 | 0.11 | Press kit source file (to fix "Founded 2023") | 1.19 |
 | 0.12 | Add `dmvt-event-hub` and `DMVT-Design` to the agent's repo access | Wave 7, 3.9 |
 | 0.13 | Set GitHub topics on the six template repos (Settings → About) | Discoverability |
+| 0.14 | Player map: look at OpenFreeMap tiles (`NEXT_PUBLIC_MAP_TILES=openfreemap` in `pnpm dev`), then set it in Vercel if you like it | 3.9 goes live |
+| 0.15 | Map template tiles: OpenFreeMap needs ~1 MB of MapLibre in every copy. Recommendation: keep OpenStreetMap raster | 3.9 template half |
+| 0.16 | Close Dependabot map #251 and #245 (`@types/node` 26); #263 pinned the runtime's 22 and ignores majors | Dependabot noise |
+| 0.17 | Production check of submit dedupe (#259): submit the same form twice, expect the same message and one row in `entries` | Confirms 3.3 |
+| 0.18 | Prize scale for VSYC-27 | Real amounts in the S3 prize table (template #68) |
 
 ## Wave 1: small, decision-free, static (start now)
 
@@ -158,10 +149,10 @@ Its own roadmap's "Next" list, all decision-free. One PR each.
 | 3.3 | Idempotency key and 24h dedupe on `POST /api/submit` | ☑ map #259 |
 | 3.4 | Map accessibility: container label, link to `/players` for keyboard and screen readers | ☑ map #260 |
 | 3.5 | Re-enable the React Compiler lint rules and fix what they flag | ☑ map #261 |
-| 3.6 | Split the 820-line admin page into components | ◐ map #269 |
+| 3.6 | Split the 820-line admin page into components | ☑ map #269 |
 | 3.7 | OSV-Scanner workflow: delete if broken (as on the site) | ☑ map #262 |
 | 3.8 | Remove unused `wouter`, unmounted analytics packages; `@types/node@22` | ☑ map #263 |
-| 3.9 | Free vector tiles (OpenFreeMap) for both maps | ◐ map #265 (player map, off by default; owner turns it on). Template half ⛔ owner call: vendoring MapLibre adds ~1 MB to every copy |
+| 3.9 | Free vector tiles (OpenFreeMap) for both maps | ☑ map #265 (player map, off by default; turning it on is 0.14). Template half ⛔ 0.15 |
 
 ## Wave 4: the contest app, Phase 1 (template first, then VA-States)
 
