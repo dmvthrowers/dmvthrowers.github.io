@@ -6,6 +6,7 @@ The order we build things in, across every repo. The *what* and *why* live in th
 - the registration template's `docs/CONTEST_APP_MASTER_PLAN.md` (item codes F, T, R, S, O, E, D, P)
   and `docs/HUB_ROADMAP.md`
 - VA-States' and yoyo-player-map's `docs/ROADMAP.md`, and Scouts-Template-Site's `PARITY.md`
+- this repo's [`SECURITY_PLAN.md`](SECURITY_PLAN.md): encryption and zero trust across every repo (Wave 9)
 
 This file is the *how and when*. Written 2026-10-07. Update the status column as PRs open and merge.
 
@@ -247,6 +248,52 @@ migration.
 | 8.8 | template → VA-States | Forms engine, `/forms-review`, migration 0061 | Off unless a form is configured; needs the Supabase SQL editor for the migration |
 | 8.9 | template → VA-States | Roles, grants, `/staff` pane, then the role pages (media, merch, stream, volunteers, finance, event, staff) | Largest port; touches sign-in, so last, behind a flag, with route tests. Owner: yes |
 | 8.10 | static sites and maps | Same audit for the club site and club template, contest site and contest template, map app and map template, scouts template and the two live sites | Not started |
+
+## Wave 9: security, encryption and zero trust (2026-10-11)
+
+From [`SECURITY_PLAN.md`](SECURITY_PLAN.md), which has the reasons and the per-repo findings. Everything here
+is free unless the row says otherwise. Order: the owner's account switches first (an afternoon, and the largest
+risk cut), then CI hardening, then identity in the apps, then encryption, then monitoring. Template first, then
+VA-States, as everywhere else.
+
+### Owner actions (dashboards, no code)
+
+| # | Action | Status |
+|---|---|---|
+| 9.01 | Passkeys or security keys, plus recovery codes stored offline, on GitHub, Google, Vercel, Supabase, Stripe, Porkbun, Resend, Formspree, Sentry, UptimeRobot, Upstash (and Cloudflare if 9.12) | ☐ |
+| 9.02 | Password manager with a shared vault (Bitwarden free org for two, or Vaultwarden); every login, token (with expiry) and recovery code in it. Also the Gap 1 handoff | ☐ |
+| 9.03 | On every public repo: secret scanning plus push protection, Dependabot alerts, private vulnerability reporting | ☐ |
+| 9.04 | Branch ruleset on `main` in every repo: PR and passing checks required, no force-push, no deletion | ☐ |
+| 9.05 | DNS at Porkbun: DNSSEC on, CAA records for the authorities in use (Let's Encrypt for Pages and Vercel) | ☐ |
+| 9.06 | Email: confirm SPF and DKIM for Resend, DMARC `p=none` with reports, then `quarantine`, then `reject`. MTA-STS and TLS-RPT for inbound mail | ☐ |
+| 9.07 | Each Supabase project: Enforce SSL, TOTP MFA on in Auth, shorter JWT expiry, switch to `sb_secret_` keys and revoke the legacy `service_role` JWT, run the Security Advisor | ☐ |
+| 9.08 | Stripe restricted key in place of the secret key; Resend sending-only key scoped to the domain | ☐ |
+| 9.09 | Vercel: mark every secret Sensitive, preview deployments protected, dead variables removed (0.2). GitHub Pages: "Enforce HTTPS" checked | ☐ |
+| 9.10 | `age` backup private key in two offline places and the vault; a test restore every quarter (VA-States, map) | ☐ |
+| 9.11 | Full-disk encryption and a screen lock on every device that holds repo access, dumps or exports | ☐ |
+| 9.12 | Decision: free Cloudflare in front of `dmvthrowers.club` for HSTS and real headers, then HSTS preload | ⛔ owner decision |
+| 9.13 | Rotation calendar and access review (after each contest, and every October); first run after VSYC-26 wrap | ☐ |
+| 9.14 | Optional purchase: two hardware security keys for the owner account (about $25–60 each) | ⛔ owner decision |
+
+### Code (one PR per repo per row)
+
+| # | Repo | Item | Status |
+|---|---|---|---|
+| 9.20 | all with workflows | Pin every action to a SHA, `permissions: contents: read` at the top of each workflow, delete starter workflows (setup-example, PowerShell, duplicate CodeQL, super-linter, summary), backup secret into a `backup` environment limited to `main` | ☐ site, DMVT-Design, hub, map, VA-States, template |
+| 9.21 | all | zizmor and gitleaks on every PR; OpenSSF Scorecard weekly on public repos | ☐ |
+| 9.22 | DMVT-Design, hub, map, VA-States | Untrack `.vs/` and gitignore it (345, 66, 66 files); DMVT-Design gets Dependabot and `SECURITY.md`, and loses the uploads `.zip`; VA-States gets the template's `SECURITY.md` | ☐ |
+| 9.23 | site | CSP meta on every page adds `object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests` (Formspree on contact only); `check_site.py` fails a page without them | ☐ |
+| 9.24 | static templates | Same CSP rule in `check_site.py`, `security.txt` built from a `security` block in `site.jsonc`, a "Secure your copy" list in `DEPLOY.md`; port to troop and pack | ☐ |
+| 9.25 | template → VA-States | Staff TOTP MFA: enrol screen, `aal2` checked on the server for admin and finance, optional for contest-day roles, second admin resets a lost factor | ⛔ decision 2 in the security plan |
+| 9.26 | template → VA-States, map | Nonce-based CSP from `proxy.ts`/middleware; no `'unsafe-eval'` or `'unsafe-inline'` scripts in production; self-hosted fonts in the apps | ☐ |
+| 9.27 | template → VA-States | Field-level AES-256-GCM for guardian, emergency-contact and address fields; `key_id` for rotation; `registrations.contact` capability; audit row per decrypt; expand and contract migration | ⛔ decision 3; spec PR first |
+| 9.28 | template → VA-States | Audit log append-only (no update or delete for any role) with sign-in events; per-IP rate limit on the two unthrottled staff guards | ☐ |
+| 9.29 | yoyo-player-map | Named Supabase Auth admins with TOTP, an `admins` table, audit log records who; then remove `ADMIN_PASSWORD` and the `x-admin-token` header | ☐ |
+| 9.30 | dmvt-event-hub | Launch security gate for 7.1: untrack `.env`, CORS allow-list on mutating functions, `verify_jwt` on where a user is needed, admin MFA, `age`-encrypted nightly backup | ☐ (ships with 7.1) |
+| 9.31 | VA-States, map, hub | `public/.well-known/security.txt` on each app domain | ☐ |
+| 9.32 | site | Weekly outside-in check of every domain (headers, TLS, certificate expiry) and an OWASP ZAP baseline, report-only | ☐ |
+| 9.33 | site | `docs/INCIDENT_RESPONSE.md` (rotate each key, pause registration, tell families) and a data inventory (field, tier, store, retention, readers) | ☐ |
+| 9.34 | scouts-private | Secure-by-design spec before any code; gitleaks and osv-scanner in CI | ☐ |
 
 ## Waiting on owner (2026-10-10)
 

@@ -229,6 +229,31 @@ registration template's `docs/CONTEST_APP_MASTER_PLAN.md`.
    the club template (the contest app's feeds are planned separately). Generate one from the
    meetup rule.
 
+## Security: encryption and zero trust (2026-10-11)
+
+Goal: build every repo to an enterprise standard on a free, open-source budget. That means
+encryption in transit and at rest, and zero trust: every request proves who it's from, named
+accounts only, MFA everywhere, least privilege. The review of all 13 repos, the principles and
+the costs are in [`SECURITY_PLAN.md`](SECURITY_PLAN.md). The build order is Wave 9 in
+[`BUILD_PLAN.md`](BUILD_PLAN.md). The headline:
+
+- **Owner accounts first.** Passkeys or security keys on every service, a shared password vault
+  (also the Gap 1 fix), DNSSEC and CAA, DMARC to `reject`, Supabase Enforce SSL and new secret
+  keys, a Stripe restricted key. All free, about an afternoon.
+- **The biggest gap:** the player map's admin is one shared password in a header. Replace it with
+  named accounts, MFA and a who-did-what audit log.
+- **The registration app:** MFA for admin and finance, a strict nonce-based CSP, and app-level
+  encryption for minors' guardian, emergency-contact and address fields, on top of Supabase's disk
+  encryption.
+- **CI everywhere:** pin actions to SHAs, least-privilege `permissions:`, zizmor and gitleaks,
+  remove starter workflows and the tracked `.vs/` caches.
+- **The event hub launches secure:** a launch gate with CORS, JWT checks, MFA and an encrypted
+  backup.
+- **Templates carry it forward:** CSP checks and `security.txt` in every template, so each club
+  that copies one starts secure.
+- **Decisions:** Cloudflare in front of the site (for HSTS and real headers), who must use MFA,
+  field-encryption scope, two hardware keys.
+
 ## Fair and safe: the code of conduct everywhere (2026-10-07)
 
 Goal: everyone is treated equitably and fairly, and every space we run (meetups, contests, the
