@@ -304,6 +304,39 @@ VA-States, as everywhere else.
 | 9.33 | site | `docs/INCIDENT_RESPONSE.md` (rotate each key, pause registration, tell families) and a data inventory (field, tier, store, retention, readers) | ☐ |
 | 9.34 | scouts-private | Secure-by-design spec before any code; gitleaks and osv-scanner in CI | ☐ |
 
+## Where we stopped (2026-10-11) and what is next
+
+Wave 8 parity is built and merged except the multi-event work and a few static-site ports. Everything merged is dormant or safe until the owner steps below are done.
+
+### Owner, in this order
+
+1. **Run three SQL files in the Supabase SQL editor** (project `vsyc26-registration`), each as one paste. They contain `drop policy/constraint if exists`, which the API tool cannot run. Send each check query's output; the history rows are then inserted by hand.
+
+   | Order | File (in the session scratchpad; regenerate from the migration if lost) | Migrations | What it turns on |
+   |---|---|---|---|
+   | 1 | `va_migrations_0061_0063_for_sql_editor.sql` | 0061 form answers table, 0063 role grants (one grant backfilled per staff account) | Forms (still off: `forms: []`), role grants |
+   | 2 | `va_migration_0064_for_sql_editor.sql` | 0064 staff accounts may hold any role | New roles on `/admin/staff` |
+   | 3 | `va_migration_0065_for_sql_editor.sql` | 0065 run-sheet table | Stream, media, MC and merch run sheets |
+
+   Migration files are in `VA-States/supabase/migrations/` (`20261010200000_0063_…`, `…200100_0061_…`, `…200200_0064_…`, `…200300_0065_…`). Nothing breaks if these wait: the code falls back to each account's current role.
+2. **Smoke-test the live app after the deploy:** sign in as an admin (dashboard, `/budget`, volunteers, sponsors) and as a judge (`/judge`); the admin guards now decide by role grants. Do one test registration and check the conduct version is stored. Submit the volunteer and sponsor forms once to check the Turnstile keys in Vercel.
+3. **When ready, turn things on:** `contest.staffPane.enabled` (after staff have their roles at `/admin/staff`), and any form under `contest.forms` (after migration 0061 and a retention rule for the answers).
+
+### Still to build (tomorrow and after)
+
+| Item | Notes |
+|---|---|
+| Multi-event stage 1a to 1d | Move readers of `contest.date`, `name`, `dayOf` (about 170 sites in 59 files) onto `eventOf()` **together with** the `/e/<event>/…` routes (1c), not before: it changes nothing until a second event exists. Then `event_id` migrations (1b) and scoped grants with the access waterfall (1d). Design: `docs/MULTI_EVENT.md` in the template |
+| Audit-log retention | 12 months after the event, in the purge (decided; code not written) |
+| Dependency bumps | `resend` 6 and `@vercel/analytics` 2 in VA-States (currently 4 and 1) |
+| Static-site ports (8.10) | Pack 1125 (fonts, Youth Protection, Forms page, photo gate, stronger check), live map CI (axe and smoke test), contest recap page and stage switch, `security.txt` setting, repo hygiene (`.vs/`, `.agents/skills/**`, `__pycache__`), refresh `Scouts-Template-Site/PARITY.md` |
+| Template follow-ups | Template `docs/MIGRATION_MAP.md` already lists 0063; keep both maps in step when a migration is added |
+| Waves 5 to 7, item 2.4 | As listed above |
+
+### Merged since the last update
+
+Template #78 to #82, VA-States #102 to #108, Girl-Scout-Troop-80301 #5, site docs #167. The VA-States lint baseline is now 47 warnings (the template's copies of the staff screens carry the same set-state-in-effect warning); the template's is 30.
+
 ## Waiting on owner (2026-10-10)
 
 **Update 2026-10-10:** the facts below (conduct team, VSYC-27 date and venue, sponsor answers, prize scale) are not decided yet; the owner expects them in a few weeks. Nothing that can be built without them waits: it is being built meanwhile (Wave 8 parity, multi-event).
@@ -332,6 +365,7 @@ Everything below needs a person. Template PRs #47–#69, VA-States #80–#85, cl
 ### (c) Migrations
 
 - VA-States 0060: applied 2026-10-10 (tables first, functions by hand). Add the history row if you track it.
+- VA-States 0061, 0063, 0064, 0065: written 2026-10-11, **not applied**; see the table at the top of this section for the order.
 - VA-States 0052–0059: applied 2026-10-10 in the Supabase SQL editor (the API tool hangs on any statement containing `DROP`, so constraint changes go through the editor). 0055 (photo release) is skipped on purpose. The code for all of them is merged and each feature is off until its setting is turned on.
 - Template 0050–0059: nothing to apply until a deployment exists. Deploy order for a new deployment: apply 0054, 0056, 0057, 0058 before turning on the routes that write them.
 
