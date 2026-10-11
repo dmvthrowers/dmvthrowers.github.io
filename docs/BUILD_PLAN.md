@@ -237,16 +237,25 @@ migration.
 
 | # | Direction | Item | Notes |
 |---|---|---|---|
-| 8.1 | VA-States → template | Home-state eligibility and the champion rule, as a config option | Blank `stateChampion.state` turns it off |
-| 8.2 | VA-States → template | Season purge and reset code, `scripts/purge.ts`, results-gaps query | Design is already in the template's `SEASON_ARCHIVE.md` |
-| 8.3 | VA-States → template | Money-path route test harness and its stubs | |
-| 8.4 | VA-States → template | Nightly encrypted backup workflow, generic day-of runbook, generic audit and spec docs | |
-| 8.5 | template → VA-States | Schedule clash check | No migration |
-| 8.6 | template → VA-States | Contest guide, rules with changelog, trick-list pages | Config-driven; VA-States keeps its own content |
-| 8.7 | template → VA-States | Setup safety: email log stub, first admin once, auth email renderer, local deadline display | |
-| 8.8 | template → VA-States | Forms engine, `/forms-review`, migration 0061 | Off unless a form is configured; needs the Supabase SQL editor for the migration |
-| 8.9 | template → VA-States | Roles, grants, `/staff` pane, then the role pages (media, merch, stream, volunteers, finance, event, staff) | Largest port; touches sign-in, so last, behind a flag, with route tests. Owner: yes |
-| 8.10 | static sites and maps | Same audit for the club site and club template, contest site and contest template, map app and map template, scouts template and the two live sites | Not started |
+| 8.1 | VA-States → template | Home-state eligibility and the champion rule, as a config option | Blank `stateChampion.state` turns it off **Done: template #78** |
+| 8.2 | VA-States → template | Season purge and reset code, `scripts/purge.ts`, results-gaps query | Design is already in the template's `SEASON_ARCHIVE.md` **Done: template #79 (results-gaps.sql stays in VA-States, it audits that app's data)** |
+| 8.3 | VA-States → template | Money-path route test harness and its stubs | **Done: template #80 (also added the admin rate limit the template lacked)** |
+| 8.4 | VA-States → template | Nightly encrypted backup workflow, generic day-of runbook, generic audit and spec docs | **Done: template #81 and #82 (DAY_OF and the audit docs stay in VA-States: FORMS/FORMATS already cover the first, the second audits the live app)** |
+| 8.5 | template → VA-States | Schedule clash check | No migration **Done** |
+| 8.6 | template → VA-States | Contest guide, rules with changelog, trick-list pages | Config-driven; VA-States keeps its own content **Done (pages disabled until the copy is checked)** |
+| 8.7 | template → VA-States | Setup safety: email log stub, first admin once, auth email renderer, local deadline display | **Done** |
+| 8.8 | template → VA-States | Forms engine, `/forms-review`, migration 0061 | Off unless a form is configured; needs the Supabase SQL editor for the migration **Done: VA-States #104, migration 0061 written, not applied** |
+| 8.9 | template → VA-States | Roles, grants, `/staff` pane, then the role pages (media, merch, stream, volunteers, finance, event, staff) | Largest port; touches sign-in, so last, behind a flag, with route tests. Owner: yes **Done: VA-States #103 (grants, migration 0063), #105 and #106 (every admin, ops and MC route asks for a capability), #107 (staff and roles screen, migration 0064), #108 (staff pane behind `contest.staffPane`, role pages, migration 0065). Migrations 0061 and 0063 to 0065 are not applied yet** |
+| 8.10 | static sites and maps | Same audit for the club site and club template, contest site and contest template, map app and map template, scouts template and the two live sites | Audit done 2026-10-11 (below); first port merged: troop 80301 engine sync (Girl-Scout-Troop-80301 #5) |
+
+### 8.10 audit, validated against each repo's `origin/main` (2026-10-11)
+
+The read-only audit of the club, contest, map, scouts and the two live units was checked against what is on main. Findings:
+
+- **Corrected:** the audit said the club guides engine and the map PRs might not be on main. They are: club-template #15 (guides), map-template #7 to #11 (browse by place, visibility, axe, smoke test, releases) and the axe and smoke-test workflows in all four templates.
+- **Confirmed and fixed:** Troop 80301's engine was behind the Scouts template (`build.py` 804 vs 901 lines, `check_site.py` 165 vs 239, deploy without `--real`). Synced in Girl-Scout-Troop-80301 #5; `site.jsonc` and `content/` untouched; only three pages changed, by accessibility labels.
+- **Still open, safe to build, one PR each:** pack 1125 gaps (Google Fonts removal, Youth Protection section, Forms page, photo gate, stronger `check_site.py`; the rank badge images and leader names need the owner); map CI for the live map (axe and a browser smoke test, CI only); the optional contest recap page and date-driven stage switch; `security.txt` and a security contact setting in the club template; repo hygiene (tracked `.vs/` and `.agents/skills/**` in yoyo-player-map, `scripts/__pycache__` in the club site).
+- **Left alone on purpose:** live-only content (printables, guides text, pack leader names), the static template's missing server features (accounts, email verification, moderation), i18n for the map template (large, needs a decision), and `Scouts-Template-Site/PARITY.md`, which should be refreshed when the pack port lands.
 
 ## Waiting on owner (2026-10-10)
 
