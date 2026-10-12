@@ -6,6 +6,11 @@ issues #76–#96 (contest-app items carry a `[VA-States]` prefix).
 
 The build order across every repo, with status per item, is in [`BUILD_PLAN.md`](BUILD_PLAN.md).
 
+The Organizer Hub (turning these repos into a kit any club or contest organizer can use) is
+specced in [`hub/SPEC.md`](hub/SPEC.md), with its lanes and gates in
+[`hub/BUILD_PLAN.md`](hub/BUILD_PLAN.md). Its site work is the "Organizer Hub" section below;
+its build order is Wave 10 of `BUILD_PLAN.md`.
+
 ## Done since the audit
 
 | Item | Where |
@@ -67,6 +72,25 @@ The build order across every repo, with status per item, is in [`BUILD_PLAN.md`]
   team page's badge colors, the teal on `index.html`, and the gold and grey-blue text on
   `vsyc26-terms.html` and `about.html` (`#f0c040`, `#8090b8`, `#c8d0e0`).
 
+## Organizer Hub (2026-10-11)
+
+What the hub puts on this site. The rest lands in other repos: the event hub (Phase 1, the
+Exchange) and the registration template plus VA-States (Phase 4). Full plan:
+[`hub/BUILD_PLAN.md`](hub/BUILD_PLAN.md).
+
+1. **Front door page** with four paths: start a club, run a contest, host a meetup or demo, run an
+   online event (spec §2). It stands in for the hub shell until the event hub relaunches. Fall
+   2026 Build 6.
+2. **Event kit** first: package the Event Planning Kit and Workshop Run Sheet, and write the
+   Conway, SC school/library playbook from the Nov 23 program. Then demo scripts and the
+   library-partnership pattern (spec §3.3).
+3. **Seed retros** for VSYC-26 and the club, as markdown, built from the four VSYC-26 surveys and
+   the recaps (spec §4). They become the Exchange's first content.
+4. **Contest kit, then club kit** as guides (spec §3.1–3.2). The contest kit feeds VSYC-27 prep.
+5. **Governance pack** (charter, roles, conduct, budget, youth protection templates). Waits on the
+   conduct team decision below.
+6. **Events page reads the hub's calendar feed** (BUILD_PLAN 7.3) once the event hub relaunches.
+
 ## Owner actions (not code)
 
 - **Send one test sponsor inquiry** at `register.dmvthrowers.club/sponsor` (the database has
@@ -100,6 +124,10 @@ The build order across every repo, with status per item, is in [`BUILD_PLAN.md`]
 - **TypeScript 7 on yoyo-player-map:** hold for 7.1, or take #250 (green).
 - **Contest app open questions:** the ten in the registration template's
   `docs/CONTEST_APP_MASTER_PLAN.md` (Part 6).
+- **Organizer Hub open questions** ([`hub/SPEC.md`](hub/SPEC.md) §9): the commons / back-office
+  boundary, the youth-safe and outlives-its-founder principles, who is on the conduct team,
+  an OpenSkill back-test for the circuit ranking, who holds circuit prize money, a CC BY 4.0
+  license for Exchange contributions, and design partners.
 
 - **GitHub topics and descriptions** on the six template repos (set by hand in each repo's
   settings). Suggested topics: `yo-yo`, `skill-toys`, `github-pages`, `static-site`,

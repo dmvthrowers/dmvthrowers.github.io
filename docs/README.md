@@ -8,10 +8,10 @@ after the October 2026 technical audit.
 
 | Repo | What it is | Live at | Start with |
 |---|---|---|---|
-| `dmvthrowers/dmvthrowers.github.io` (this one) | Static club website: meetups, guides, VSYC contest pages. No build step | dmvthrowers.club (GitHub Pages) | `CLAUDE.md`, `docs/ROADMAP.md`, `docs/BUILD_PLAN.md`, `docs/SECURITY_PLAN.md` |
+| `dmvthrowers/dmvthrowers.github.io` (this one) | Static club website: meetups, guides, VSYC contest pages. No build step. Also holds the Organizer Hub plan | dmvthrowers.club (GitHub Pages) | `CLAUDE.md`, `docs/ROADMAP.md`, `docs/BUILD_PLAN.md`, `docs/SECURITY_PLAN.md`, `docs/hub/` |
 | `dmvthrowers/yoyo-player-map` | Public player/club/shop map. No login; email-verified; person pins jittered ~10 mi | map.dmvthrowers.club (Vercel) | `docs/REPO_GUIDE.md`, `docs/ROADMAP.md` |
 | `dmvthrowers/VA-States` | Contest registration, Stripe payments, day-of ops (run order, scoring, music). **The money app** | register.dmvthrowers.club (Vercel) | `docs/REPO_GUIDE.md`, `docs/ROADMAP.md` |
-| `dmvthrowers/dmvt-event-hub` | Community event calendar (React + Vite + Supabase, Lovable-built). **Not launched** | — (target events.dmvthrowers.club) | its `AGENTS.md` |
+| `dmvthrowers/dmvt-event-hub` | Community event calendar (React + Vite + Supabase, Lovable-built). **Not launched**; relaunching on Cloudflare Pages + Workers + D1 as the Organizer Hub's central app | — (target events.dmvthrowers.club) | its `AGENTS.md`, `docs/hub/` here |
 | `dmvthrowers/DMVT-Design` | Brand and design-system reference + a Claude skill. Not an app | — | its `README.md` |
 | `dmvthrowers/yoyoclub-template` | Public template other clubs copy: this site's club pages as a `site.jsonc` + Python builder. Meetup dates generated from a rule | dmvthrowers.club/yoyoclub-template (showcase) | its `AGENTS.md` |
 | `dmvthrowers/yoyo-contest-template` | Public template for contests, built from the VSYC-26 pages. Stages (registration, contest day, wrap) switch by date | dmvthrowers.club/yoyo-contest-template (showcase) | its `AGENTS.md` |
