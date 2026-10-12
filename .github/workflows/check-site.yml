@@ -27,3 +27,5 @@ jobs:
           python-version: "3.13"
       - name: Check every page
         run: python3 scripts/check_site.py
+      - name: Test the meetup updater
+        run: python3 -m unittest discover -s scripts -p "test_*.py"
