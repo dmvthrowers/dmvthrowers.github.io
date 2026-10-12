@@ -347,12 +347,15 @@ def build_ics(dates: list[date]) -> str:
 
 def write_ics(ics_path: Path, dates: list[date], dry_run: bool = False) -> bool:
     new = build_ics(dates)
-    old = ics_path.read_text(encoding="utf-8", newline="") if ics_path.exists() else ""
+    # pathlib has no newline= kwarg; use open() to keep the CRLF line endings
+    # the ICS spec requires when comparing and writing the file.
+    old = ics_path.open("r", encoding="utf-8", newline="").read() if ics_path.exists() else ""
     if new == old:
         print(f"  [=] {ics_path.name}: already current")
         return False
     if not dry_run:
-        ics_path.write_text(new, encoding="utf-8", newline="")
+        with ics_path.open("w", encoding="utf-8", newline="") as fh:
+            fh.write(new)
     print(f"  [ok] {ics_path.name}: {len(dates)} meetups from {dates[0].isoformat()}")
     return True
 
