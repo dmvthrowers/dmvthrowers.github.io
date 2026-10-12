@@ -7,6 +7,7 @@ The order we build things in, across every repo. The *what* and *why* live in th
   and `docs/HUB_ROADMAP.md`
 - VA-States' and yoyo-player-map's `docs/ROADMAP.md`, and Scouts-Template-Site's `PARITY.md`
 - this repo's [`SECURITY_PLAN.md`](SECURITY_PLAN.md): encryption and zero trust across every repo (Wave 9)
+- this repo's [`hub/SPEC.md`](hub/SPEC.md) and [`hub/BUILD_PLAN.md`](hub/BUILD_PLAN.md): the Organizer Hub, its lanes, phases and gates (Wave 10)
 
 This file is the *how and when*. Written 2026-10-07. Update the status column as PRs open and merge.
 
@@ -210,7 +211,7 @@ tests, additive migration if any, UI at 360px, then a port PR to VA-States.
 ## Wave 6: contest app Phase 2 and 3
 
 Formats (F3, F6, F7, F9, then F2, F4, F5, F8, F10), the public side (T10, T13, T14, T15, T17, R10),
-music desk (T5), player page (O2), video prelims (R1), volunteer shifts (T8), the research items
+music desk (T5), player page (O2), video prelims (R1), volunteer shifts (T8, moved up to 10.8), the research items
 (D3, D4, D6, then D1, D2, D5), the remaining fair-and-safe items (P3, P5–P9), and the convention
 items (S8, R7, R8). Ordered as in the master plan Part 6. Plan each one in its own PR description
 when we get there; most wait on wave 5.
@@ -219,7 +220,7 @@ when we get there; most wait on wave 5.
 
 | # | Item | Notes |
 |---|---|---|
-| 7.1 | Event hub launch: real email provider, untrack `.env`, fix `skills/`, point `events.dmvthrowers.club` | ⛔ 0.12 |
+| 7.1 | Event hub relaunch on Cloudflare Pages + Workers + D1 with its own Resend key (decided 2026-10-11; hub Phase 1). Rebuild the Lovable app's Supabase RLS, edge functions and pg_cron as Workers code, D1 queries and Cron Triggers; untrack `.env`, fix `skills/`, point `events.dmvthrowers.club` | ⛔ 0.12; Cloudflare Workers Scripts Edit permission |
 | 7.2 | Hub archive, search, open data, embeds | After 7.1 |
 | 7.3 | Club events page reads the hub's feed | After 7.1 |
 | 7.4 | Spanish on the club and contest pages; a `language` setting with translatable strings in the templates (Gap 4) | |
@@ -303,6 +304,29 @@ VA-States, as everywhere else.
 | 9.32 | site | Weekly outside-in check of every domain (headers, TLS, certificate expiry) and an OWASP ZAP baseline, report-only | ☐ |
 | 9.33 | site | `docs/INCIDENT_RESPONSE.md` (rotate each key, pause registration, tell families) and a data inventory (field, tier, store, retention, readers) | ☐ |
 | 9.34 | scouts-private | Secure-by-design spec before any code; gitleaks and osv-scanner in CI | ☐ |
+
+## Wave 10: Organizer Hub (2026-10-11)
+
+The hub's build order, from [`hub/BUILD_PLAN.md`](hub/BUILD_PLAN.md). Four lanes, so the
+Cloudflare blocker stops only the event hub work. Every item needs its spec section approved
+first (the hub's hard gate). Lane B follows this file's rule: template first, then VA-States.
+
+| # | Lane | Item | Hub phase | Gate / notes |
+|---|---|---|---|---|
+| 10.1 | A | Front door page on the site: four paths | 3 (spec §2) | Fall Build 6 |
+| 10.2 | A | Event kit, starting with the Conway, SC playbook from the Nov 23 program | 3 | |
+| 10.3 | A | Seed retros: VSYC-26 and the club, as markdown | 2 (seed) | Exchange content before the board exists |
+| 10.4 | A | Contest kit, then club kit | 3 | |
+| 10.5 | A | Governance pack + standards seed (open results format, canonical division map) | 5 | ⛔ conduct team (5.2) |
+| 10.6 | B | Sponsor fulfillment ledger (Fall Build 9) | 4 | Builds on 5.1 sponsor form; before VSYC-27 outreach (Nov–Dec) |
+| 10.7 | B | Sponsor recap generator (Fall Build 5) | 4 | Same deadline as 10.6 |
+| 10.8 | B | Volunteer shift scheduling, briefing email, role cards (Fall Build 8) | 4 | Is T8; moves up from Wave 6. Before spring 2027 recruiting |
+| 10.9 | B | Live scores and standings overlay (Fall Build 10) | 4 | Issue #96; before contest season |
+| 10.10 | C | Event hub relaunch on Cloudflare | 1 | Is 7.1 |
+| 10.11 | C | The Exchange: hosted retro board | 2 | After 10.10 |
+| 10.12 | D | Circuit back-test: v0 power ranking vs OpenSkill on real results | 6a | Start now with VSYC-26 `results.json` |
+| 10.13 | D | Circuit standings tool | 6b | ⛔ NYYL standard |
+| 10.14 | C | Package the hub as a self-hostable template | 7 | After phases 1–5 |
 
 ## Where we stopped (2026-10-11) and what is next
 
