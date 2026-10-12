@@ -1,8 +1,8 @@
-# YoYo Community Organizer Hub — Spec (v1.1)
+# YoYo Community Organizer Hub — Spec (v1.2)
 
-Oct 11, 2026 · Brandon Rogers · v1.1 revises v1 after a review against the repos, mail and Drive. Changes are listed at the end. Anything marked **Proposed** is new in v1.1 and needs Brandon's approval before it binds.
+Oct 12, 2026 (v1.1 Oct 11) · Brandon Rogers · v1.1 revises v1 after a review against the repos, mail and Drive. Changes are listed at the end. Anything marked **Proposed** is new in v1.1 and needs Brandon's approval before it binds.
 
-**This file is the source of truth.** Its build order is [`BUILD_PLAN.md`](BUILD_PLAN.md) in this folder; both are folded into [`../ROADMAP.md`](../ROADMAP.md) and [`../BUILD_PLAN.md`](../BUILD_PLAN.md) (Wave 10). The Google Drive copies are Oct 11 snapshots and keep organizer contact names, which stay out of this public repo.
+**This file is the source of truth.** Its build order is [`BUILD_PLAN.md`](BUILD_PLAN.md) in this folder, build facts are in [`REFERENCE.md`](REFERENCE.md), and draft feature specs are in [`specs/`](specs/); both are folded into [`../ROADMAP.md`](../ROADMAP.md) and [`../BUILD_PLAN.md`](../BUILD_PLAN.md) (Wave 10). The Google Drive copies are Oct 11 snapshots and keep organizer contact names, which stay out of this public repo.
 
 ## 1. Vision
 
@@ -68,8 +68,8 @@ v1 said "nothing like these exists today." That was wrong: VA-States already run
 | Piece | Exists today (VA-States) | Gap | Build |
 | --- | --- | --- | --- |
 | Volunteers | `/volunteer` signup with roles and shift preferences; `/volunteers` admin | Shift scheduling (T8), briefing email, day-of role cards | 8 |
-| Sponsors | `/sponsors` with prospect, pledged and paid; `/sponsors/form` with tier slots and a convert step | Fulfillment ledger: each tier's promises tracked to delivery, with a drafted shoutout queue | 9 |
-| Sponsor recaps | 17 recaps built by hand (Sept 30) | Generator from contest and survey data | 5 |
+| Sponsors | `/sponsors` with prospect, contacted, committed, paid and declined; a per-sponsor deliverables checklist (`contest_sponsors.deliverables`, label + done, added by hand); `/sponsor` inquiry form with tier slots and an "Add as prospect" step | Fulfillment ledger: deliverables seeded from the tier, with due dates, proof links and an owner, plus a drafted shoutout queue ([spec](specs/03-sponsor-fulfillment-ledger.md)) | 9 |
+| Sponsor recaps | 17 recaps built by hand (Sept 30) | Generator from contest and survey data ([spec](specs/04-sponsor-recap-generator.md)) | 5 |
 | Stream overlays | `/overlay/schedule`, `/overlay/battle`, `/overlay/side-event` | Live scores and standings overlay (issue #96) | 10 |
 | Meetup check-in + passport | — | QR stamps, nickname-only profiles; attendance feeds sponsor data and gamification | Unassigned |
 | Loaner library tracker | — | Pairs with throw-it-forward (§10) | Unassigned |
@@ -101,7 +101,7 @@ Standard practices for contests and clubs: sanctioning checklist, division struc
 
 Added (Proposed):
 
-- **Open contest results format.** The season-archive `results.json` (already minor-safe) becomes the standard every template emits and the circuit ingests, until NYYL publishes a format.
+- **Open contest results format.** The season-archive `results.json` (already minor-safe) becomes the standard every template emits and the circuit ingests, until NYYL publishes a format. Gap: rows carry a public name and city/state but no stable player key, so cross-contest matching needs one (an opt-in player id, or a documented name + state matching rule).
 - **Canonical division map.** One division list plus a per-contest mapping table (VSYC-26 combined Sport/Beginner/Junior and ran X-Division as one group).
 - Versioned as v0.x with named editors.
 
@@ -117,7 +117,7 @@ Self-hosted alternatives tier (lowest priority — a self-hosted option, never a
 
 ## 7. Where it lives
 
-- **Event hub = the commons and central app.** The Exchange, calendar, kits index, circuit standings and club directory live here: public, cross-organizer, light accounts. Platform: Cloudflare Pages + Workers + D1 with isolated email (its own Resend key), replatformed off Lovable (decided Oct 11, 2026). Leaving Lovable means re-implementing the Supabase RLS policies, edge functions and pg_cron jobs as Workers code, D1 queries and Cron Triggers, so scope it as a rebuild, not a redeploy.
+- **Event hub = the commons and central app.** The Exchange, calendar, kits index, circuit standings and club directory live here: public, cross-organizer, light accounts. Platform: Cloudflare Pages + Workers + D1 with isolated email (its own Resend key), replatformed off Lovable (decided Oct 11, 2026). Leaving Lovable means re-implementing the Supabase RLS policies, edge functions and pg_cron jobs as Workers code, D1 queries and Cron Triggers, so scope it as a rebuild, not a redeploy. The backend today is 12 tables and 13 edge functions (submit, verify, manage, renew, report, geocode, feeds, feed subscriptions, sitemap, service status, admin actions, daily maintenance) ([spec](specs/05-event-hub-cloudflare.md)).
 - **Registration platform = the back office (Proposed boundary).** Money, registrations, judging, volunteers and sponsors, scoped per organizer and per event (the approved multi-event design). It publishes public facts — results and events — as feeds the commons reads.
 - **Feeds out (Proposed).** The calendar publishes iCal and JSON. Offer the feed to Yoyo Archive rather than compete with its US events list.
 - Guides as markdown in a repo (versioned, PR-able); templates stay in their repos.
@@ -264,6 +264,13 @@ Draft Oct 2026 → back-test on real results → present to NYYL + state organiz
 Virginia, Indiana (Indy States wants Oct 23, 2027; VSYC-27 avoids that weekend), Minnesota, Colorado, Michigan. Existing organizer relationships to seed the pilot; contacts are in the Drive copy.
 
 **Methodology:** iantheman60, creator of the community NYYL 1A Pro power ranking — natural collaborator on the power ranking and the back-test.
+
+## Changes in v1.2 (Oct 12)
+
+- Links to `REFERENCE.md` and the draft specs in `specs/`.
+- §3.6: the sponsor deliverables checklist already exists; Build 9's gap narrowed to tier-seeded deliverables, due dates, proof and a shoutout queue.
+- §5: results format needs a stable player key for circuit matching.
+- §7: event hub rebuild sized at 12 tables and 13 edge functions.
 
 ## Changes in v1.1
 

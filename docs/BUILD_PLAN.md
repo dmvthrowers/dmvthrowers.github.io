@@ -313,16 +313,17 @@ first (the hub's hard gate). Lane B follows this file's rule: template first, th
 
 | # | Lane | Item | Hub phase | Gate / notes |
 |---|---|---|---|---|
-| 10.1 | A | Front door page on the site: four paths | 3 (spec §2) | Fall Build 6 |
-| 10.2 | A | Event kit, starting with the Conway, SC playbook from the Nov 23 program | 3 | |
+| 10.0 | Site | Meetup booking gate in `update_meetup.py` | — | [spec 00](hub/specs/00-meetup-booking-gate.md); before the Oct 19 run |
+| 10.1 | A | Front door page on the site: four paths | 3 (spec §2) | Fall Build 6; [spec 01](hub/specs/01-front-door.md) |
+| 10.2 | A | Event kit, starting with the Conway, SC playbook from the Nov 23 program | 3 | [spec 02](hub/specs/02-event-kit.md) |
 | 10.3 | A | Seed retros: VSYC-26 and the club, as markdown | 2 (seed) | Exchange content before the board exists |
 | 10.4 | A | Contest kit, then club kit | 3 | |
 | 10.5 | A | Governance pack + standards seed (open results format, canonical division map) | 5 | ⛔ conduct team (5.2) |
-| 10.6 | B | Sponsor fulfillment ledger (Fall Build 9) | 4 | Builds on 5.1 sponsor form; before VSYC-27 outreach (Nov–Dec) |
-| 10.7 | B | Sponsor recap generator (Fall Build 5) | 4 | Same deadline as 10.6 |
+| 10.6 | B | Sponsor fulfillment ledger (Fall Build 9) | 4 | Extends the existing deliverables checklist; before VSYC-27 outreach (Nov–Dec); [spec 03](hub/specs/03-sponsor-fulfillment-ledger.md) |
+| 10.7 | B | Sponsor recap generator (Fall Build 5) | 4 | Same deadline as 10.6; [spec 04](hub/specs/04-sponsor-recap-generator.md) |
 | 10.8 | B | Volunteer shift scheduling, briefing email, role cards (Fall Build 8) | 4 | Is T8; moves up from Wave 6. Before spring 2027 recruiting |
 | 10.9 | B | Live scores and standings overlay (Fall Build 10) | 4 | Issue #96; before contest season |
-| 10.10 | C | Event hub relaunch on Cloudflare | 1 | Is 7.1 |
+| 10.10 | C | Event hub relaunch on Cloudflare | 1 | Is 7.1; [spec 05](hub/specs/05-event-hub-cloudflare.md) |
 | 10.11 | C | The Exchange: hosted retro board | 2 | After 10.10 |
 | 10.12 | D | Circuit back-test: v0 power ranking vs OpenSkill on real results | 6a | Start now with VSYC-26 `results.json` |
 | 10.13 | D | Circuit standings tool | 6b | ⛔ NYYL standard |
