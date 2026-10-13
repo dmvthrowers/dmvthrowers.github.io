@@ -138,7 +138,7 @@ Then open `http://localhost:8000/`.
 
 ## Checks
 
-Two checks run on every pull request. `python3 scripts/check_site.py` (links, alt text, nav and footer drift; from the site check) and the W3C HTML validator (`.github/workflows/validate-html.yml`). To run the validator yourself, with Java installed:
+Three checks run on every pull request. `python3 scripts/check_site.py` (links, alt text, nav and footer drift; from the site check), the meetup-updater unit tests (`python3 -m unittest discover -s scripts -p "test_*.py"`, same workflow) and the W3C HTML validator (`.github/workflows/validate-html.yml`). To run the validator yourself, with Java installed:
 
 ```sh
 npm install --prefix /tmp/vnu vnu-jar@26.10.7

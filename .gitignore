@@ -23,3 +23,7 @@ skills/
 
 # Temp folders
 .security-purge-temp/
+
+# Python bytecode
+__pycache__/
+*.pyc
