@@ -1,6 +1,6 @@
-# YoYo Community Organizer Hub — Build Plan (v1.1)
+# YoYo Community Organizer Hub — Build Plan (v1.2)
 
-Oct 11, 2026 · Brandon Rogers · Companion to the [Organizer Hub spec](SPEC.md). Folded into the repo-wide [`../BUILD_PLAN.md`](../BUILD_PLAN.md) as Wave 10 and into [`../ROADMAP.md`](../ROADMAP.md). The spec says what and why; this doc says how, when, and who. It is a living document: phases move from upcoming → active → done, and gates are recorded here with dates. Anything marked **Proposed** is new in v1.1 and needs Brandon's approval.
+Oct 12, 2026 (v1.1 Oct 11) · Brandon Rogers · Companion to the [Organizer Hub spec](SPEC.md). Folded into the repo-wide [`../BUILD_PLAN.md`](../BUILD_PLAN.md) as Wave 10 and into [`../ROADMAP.md`](../ROADMAP.md). The spec says what and why; this doc says how, when, and who. It is a living document: phases move from upcoming → active → done, and gates are recorded here with dates. Anything marked **Proposed** is new in v1.1 and needs Brandon's approval.
 
 The main change from v1: the plan now runs in four lanes, so the Cloudflare blocker stops only the work that needs the app. Kits, the governance pack and seed retros are markdown and can start now.
 
@@ -79,7 +79,7 @@ Parallel track (non-blocking): NYYL conversations — sanctioning checklist, see
 
 Cloudflare Pages + Workers + D1, isolated email (its own Resend key), cross-links between all DMVT apps and sites, calendar as a tied-in event feature. This phase IS Fall 2026 Build 1. One plan, one owner, tracked once.
 
-Scope it as a rebuild: the Lovable app's Supabase RLS policies, edge functions (submit, verify, manage, renew, daily maintenance) and pg_cron job become Workers code, D1 queries and Cron Triggers. The React front end carries over.
+Scope it as a rebuild: the Lovable app's 12 tables with RLS, 13 edge functions (submit, verify, manage, renew, report, geocode, feeds, feed subscriptions, sitemap, service status, admin actions, daily maintenance, plus shared helpers) and pg_cron job become Workers code, D1 queries and Cron Triggers. The React front end carries over. Spec: [`specs/05-event-hub-cloudflare.md`](specs/05-event-hub-cloudflare.md).
 
 - **Entry:** Workers Scripts Edit permission resolved. Check first whether it's an API-token scope: a token created from the "Edit Cloudflare Workers" template in the Cloudflare dashboard may be the whole fix. Separate Resend key created.
 - **Exit:** events.dmvthrowers.club live on the new stack; a test submission receives its verify email; the renewal cron runs; the club site reads the calendar feed; all DMVT apps cross-linked; deploy documented as the Cloudflare reference architecture.
@@ -110,7 +110,7 @@ Most of this exists in VA-States for one contest (spec §3.6). Each build finish
 
 | Order | Build | Missing piece | Needed by |
 | --- | --- | --- | --- |
-| 1 | 9 Sponsor pipeline | Fulfillment ledger: per-tier promises tracked to delivery, drafted shoutout queue | VSYC-27 sponsor outreach (Nov–Dec) |
+| 1 | 9 Sponsor pipeline | Fulfillment ledger on the existing deliverables checklist: tier-seeded items, due dates, proof links, owner, drafted shoutout queue | VSYC-27 sponsor outreach (Nov–Dec) |
 | 2 | 5 Sponsor recap generator | Recaps from contest and survey data, not by hand | Same outreach: open with last year's numbers |
 | 3 | 8 Volunteer module | Shift scheduling (T8), briefing email, role cards | Volunteer recruiting (spring 2027) |
 | 4 | 10 Livestream overlay | Live scores and standings overlay (#96) | Contest season 2027 |
@@ -143,6 +143,21 @@ Package the hub as a self-hostable open-source template: docs, one-click deploy,
 ### Parking lot (unphased)
 
 From spec §10 — each gets specced when its turn comes. Net-new community building stays the top priority: challenge platform, online event template (Boomer Club playbook), online contest format (ANTE reference), mentorship matching, throw-it-forward, charity throwdown, regional circuit, State of the Scene report, new-player journey, demo-in-a-box, content drumbeat, sponsor-funded challenges, judge pool registry, regional sponsor directory, verified press list, venue pitch pack.
+
+### Draft specs (Oct 12)
+
+Each waits on Brandon's approval (§1, spec-first gate). Each ends with acceptance criteria and a Claude Code handoff prompt.
+
+| Spec | Lane / phase | Repo | Why now |
+| --- | --- | --- | --- |
+| [00 Meetup booking gate](specs/00-meetup-booking-gate.md) | Site (not hub) | dmvthrowers.github.io | The weekly updater publishes 12 months of Arlington dates with nothing booked past Oct 18 |
+| [01 Front door page](specs/01-front-door.md) | A / 3 | dmvthrowers.github.io | Stands in for the hub shell; links every kit |
+| [02 Event kit + Conway playbook](specs/02-event-kit.md) | A / 3 | dmvthrowers.github.io | Nov 23 Conway, SC program is the live test |
+| [03 Sponsor fulfillment ledger](specs/03-sponsor-fulfillment-ledger.md) | B / 4 | yoyo-registration-template → VA-States | Before VSYC-27 sponsor outreach |
+| [04 Sponsor recap generator](specs/04-sponsor-recap-generator.md) | B / 4 | yoyo-registration-template → VA-States | Same outreach: open with last year's numbers |
+| [05 Event hub on Cloudflare](specs/05-event-hub-cloudflare.md) | C / 1 | dmvt-event-hub | Blocked on the Workers permission; spec now so the token is the only wait |
+
+**Work in progress limit (Proposed):** run two lanes at once, A and B, until Phase 4's first two builds ship. Lane C starts when the Cloudflare permission clears; Lane D's back-test fills gaps.
 
 ## 6. One plan: mapping
 
@@ -196,13 +211,15 @@ How this doc keeps the build from drifting:
 | Oct 11, 2026 | Event hub replatforms to Cloudflare Pages + Workers + D1 with isolated email, as a reference architecture |
 | Oct 11, 2026 | Phase 0 done |
 | Oct 11, 2026 | Spec and build plan live in `docs/hub/`; folded into the repo ROADMAP and BUILD_PLAN (Wave 10) |
+| Oct 12, 2026 | PR #170 merged |
 
 Pending (from spec §9): commons / back-office boundary; youth-safe and outlives-its-founder principles; conduct team; OpenSkill back-test; circuit money custody and committee; contribution license; design partners; lanes and phase changes in this v1.1.
 
 ### Risks & watch items
 
 - **Cloudflare Workers Scripts Edit permission** — known blocker for Phase 1. May be a token scope (§5, Phase 1). Blocks Lane C only.
-- **D1 rebuild effort** — leaving Lovable means rewriting the backend, not redeploying it. Budget 1–2 weekends honestly, not one evening.
+- **D1 rebuild effort** — leaving Lovable means rewriting the backend (12 tables, 13 functions), not redeploying it. Budget 2–3 weekends, not one evening.
+- **Meetup dates published without a booking** — the site's weekly updater writes 12 months of 3rd-Sunday dates to the site and `meetups.ics` with no booking check. Spec 00 adds a gate.
 - **Supabase Management API access down** — it needs a fresh personal access token. Lane B database work means manual SQL-editor runs until then.
 - **Free-tier ceilings** — Cloudflare Workers/D1 limits for the hub; Supabase free projects pause when idle; Vercel's free plan is for non-commercial use, which a fee-charging contest may not meet.
 - **NYYL responsiveness** — external dependency; the 2027 pilot gives runway, and 6a uses the wait.
@@ -213,6 +230,13 @@ Pending (from spec §9): commons / back-office boundary; youth-safe and outlives
 - **Plan drift** — five overlapping planning docs; the §6 mapping and `docs/hub/` as the single source are the fix.
 - **Brandon bandwidth** — he is the decision and merge bottleneck. Keep phases small and sequential where he's the constraint; parallelize where he isn't (lanes A and B vs C). Design partners take some review load.
 - **Burnout** — the club kit literally calls for a burnout guide. Take the hint: sustainable pace, or the hub becomes another unfinished project.
+
+## Changes in v1.2 (Oct 12)
+
+- Draft specs index and a proposed two-lane WIP limit (§5).
+- Phase 1 sized at 12 tables and 13 edge functions; effort raised to 2–3 weekends.
+- Phase 4 Build 9 narrowed: the deliverables checklist already exists.
+- Decision log: PR #170 merged. New risk: meetup dates published without a booking.
 
 ## Changes in v1.1
 

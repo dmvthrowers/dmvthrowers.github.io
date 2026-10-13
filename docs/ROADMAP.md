@@ -34,6 +34,10 @@ its build order is Wave 10 of `BUILD_PLAN.md`.
    Fold into #76.
 3. **Press kit says "Founded 2023"**; the club was founded in 2021. Fix the source and re-export
    `assets/documents/DMV Throwers Press Kit.pdf`.
+4. **Meetup booking gate** ([spec](hub/specs/00-meetup-booking-gate.md)). `scripts/update_meetup.py`
+   advances NEXT MEET and writes 12 months of 3rd Sundays to `events.html` and `meetups.ics` with no
+   booking check. Arlington is booked only through Oct 18. Before the Oct 19 run: add a
+   `booked_through` date and a "date to be announced" state, or pause the workflow.
 
 ## Next
 
@@ -78,10 +82,10 @@ What the hub puts on this site. The rest lands in other repos: the event hub (Ph
 Exchange) and the registration template plus VA-States (Phase 4). Full plan:
 [`hub/BUILD_PLAN.md`](hub/BUILD_PLAN.md).
 
-1. **Front door page** with four paths: start a club, run a contest, host a meetup or demo, run an
+1. **Front door page** ([spec](hub/specs/01-front-door.md)) with four paths: start a club, run a contest, host a meetup or demo, run an
    online event (spec §2). It stands in for the hub shell until the event hub relaunches. Fall
    2026 Build 6.
-2. **Event kit** first: package the Event Planning Kit and Workshop Run Sheet, and write the
+2. **Event kit** ([spec](hub/specs/02-event-kit.md)) first: package the Event Planning Kit and Workshop Run Sheet, and write the
    Conway, SC school/library playbook from the Nov 23 program. Then demo scripts and the
    library-partnership pattern (spec §3.3).
 3. **Seed retros** for VSYC-26 and the club, as markdown, built from the four VSYC-26 surveys and
@@ -93,6 +97,9 @@ Exchange) and the registration template plus VA-States (Phase 4). Full plan:
 
 ## Owner actions (not code)
 
+- **Confirm meetup venue and dates from November on**, then set `booked_through` (spec 00).
+- **Approve or change the draft specs** in [`hub/specs/`](hub/specs/) — nothing in them is built until approved.
+- **Review third-party app access** on the club Google accounts and bank (Plaid-linked and Google-connected apps).
 - **Send one test sponsor inquiry** at `register.dmvthrowers.club/sponsor` (the database has
   none yet), then check the row, the slot count and the notice email.
 - **Set `SPONSOR_NOTICE_EMAIL`** in Vercel for the registration app.
