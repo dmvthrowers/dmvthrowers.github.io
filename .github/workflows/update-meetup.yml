@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # to start the deploy after pushing (see the last step)
 
 jobs:
   update-meetup:
@@ -28,7 +29,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
-          python-version: "3.12"
+          python-version: "3.13"  # same as the check that tests the updater
 
       - name: Run meetup update script
         run: python scripts/update_meetup.py --repo .
@@ -48,3 +49,11 @@ jobs:
           git add -- *.html sitemap.xml meetups.ics
           git commit -m "chore: update meetup dates for $(date +'%B %Y')"
           git push
+
+      # Pushes made with GITHUB_TOKEN don't trigger other workflows, so the deploy would never
+      # see this commit. Start it by hand; it runs the checks first like any other deploy.
+      - name: Deploy the update
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run static.yml --ref main --repo "$GITHUB_REPOSITORY"

@@ -1,4 +1,7 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Deploys the site to GitHub Pages, but only after the site, HTML and mobile checks pass.
+# A failing check stops the deploy and the live site stays as it was.
+# Break glass: Actions > Deploy static content to Pages > Run workflow > "Skip checks" deploys
+# without them. Use it only when a check itself is broken and a fix has to go live.
 name: Deploy static content to Pages
 
 env:
@@ -9,14 +12,18 @@ on:
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Manual runs from the Actions tab. The meetup bot also starts one after it pushes, because
+  # pushes made with GITHUB_TOKEN don't trigger other workflows.
   workflow_dispatch:
+    inputs:
+      skip_checks:
+        description: "Skip checks (break glass: only when a check itself is broken)"
+        type: boolean
+        default: false
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Least privilege by default; only the deploy job gets Pages rights.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -25,8 +32,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  site:
+    if: ${{ !inputs.skip_checks }}
+    uses: ./.github/workflows/check-site.yml
+  html:
+    if: ${{ !inputs.skip_checks }}
+    uses: ./.github/workflows/validate-html.yml
+  mobile:
+    if: ${{ !inputs.skip_checks }}
+    uses: ./.github/workflows/check-mobile.yml
+
   deploy:
+    needs: [site, html, mobile]
+    # Deploy when every check passed, or when they were skipped on purpose.
+    if: ${{ !cancelled() && !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled') }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
