@@ -138,7 +138,7 @@ Then open `http://localhost:8000/`.
 
 ## Checks
 
-Two checks run on every pull request. `python3 scripts/check_site.py` (links, alt text, nav and footer drift; from the site check) and the W3C HTML validator (`.github/workflows/validate-html.yml`). To run the validator yourself, with Java installed:
+The same checks run on every pull request and again before every deploy: `.github/workflows/static.yml` calls them and only deploys if they all pass, so a broken push never reaches dmvthrowers.club. They are `python3 scripts/check_site.py` (links, alt text, nav and footer drift), `python3 scripts/check_brand.py` (square corners, no shadows or animations, no external fonts or trackers, relative links, images under 500 KB, sitemap lastmod bumped for changed pages; set `BASE_SHA=<commit>` to run the lastmod check locally), the meetup-updater unit tests (`python3 -m unittest discover -s scripts -p "test_*.py"`), the 360px no-sideways-scroll check (`node scripts/check_mobile.js`, needs Playwright with Chromium) and the W3C HTML validator (`.github/workflows/validate-html.yml`). If a check itself breaks and a fix has to go live, run the deploy by hand with "Skip checks" ticked. To run the validator yourself, with Java installed:
 
 ```sh
 npm install --prefix /tmp/vnu vnu-jar@26.10.7

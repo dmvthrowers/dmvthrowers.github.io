@@ -7,8 +7,8 @@ name: Validate HTML
 on:
   pull_request:
     branches: ["main"]
-  push:
-    branches: ["main"]
+  # Also called by the deploy workflow (static.yml) before every deploy.
+  workflow_call:
 
 # Least privilege: the check only reads the code.
 permissions:

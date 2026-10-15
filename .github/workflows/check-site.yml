@@ -1,13 +1,15 @@
 # Checks every page for broken links and images, missing alt text, titles, descriptions,
 # skip links and CSP tags, invalid JSON-LD, http:// links, and nav or footer drift between
-# pages. Standard-library Python only. See scripts/check_site.py.
+# pages (scripts/check_site.py), then the brand guardrails: square corners, no shadows or
+# animations, no external fonts or trackers, relative links, images under 500 KB, and sitemap
+# lastmod bumped for changed pages (scripts/check_brand.py). Standard-library Python only.
+# Runs on pull requests, and is called by the deploy workflow (static.yml) before every deploy.
 name: Check site
 
 on:
   pull_request:
     branches: ["main"]
-  push:
-    branches: ["main"]
+  workflow_call:
 
 # Least privilege: the check only reads the code.
 permissions:
@@ -27,5 +29,18 @@ jobs:
           python-version: "3.13"
       - name: Check every page
         run: python3 scripts/check_site.py
+      - name: Fetch the commit to compare against (for the sitemap lastmod check)
+        id: base
+        env:
+          # The PR's base on pull requests; the previous tip of main when called from a push deploy.
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$BASE" ] && [ "$BASE" != "0000000000000000000000000000000000000000" ]; then
+            git fetch --no-tags --depth=1 origin "$BASE" && echo "sha=$BASE" >> "$GITHUB_OUTPUT" || echo "Could not fetch $BASE; skipping the lastmod-bump check"
+          fi
+      - name: Check brand and guardrails
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: python3 scripts/check_brand.py
       - name: Test the meetup updater
         run: python3 -m unittest discover -s scripts -p "test_*.py"
