@@ -10,3 +10,6 @@ Disallow: /skills/
 Disallow: /*.md
 
 Sitemap: https://dmvthrowers.club/sitemap.xml
+Sitemap: https://dmvthrowers.club/pack1125-dumfries/sitemap.xml
+Sitemap: https://dmvthrowers.club/Girl-Scout-Troop-80301/sitemap.xml
+Sitemap: https://dmvthrowers.club/Scouts-Template-Site/sitemap.xml
