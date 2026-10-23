@@ -21,7 +21,7 @@ jobs:
           persist-credentials: false
       - name: Get a browser
         run: |
-          npm install --prefix "$RUNNER_TEMP/pw" --no-audit --no-fund playwright@1.56.1
+          npm install --prefix "$RUNNER_TEMP/pw" --no-audit --no-fund playwright@1.64.1
           "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
       - name: Check every page at 360px
         env:
