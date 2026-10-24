@@ -26,7 +26,7 @@ jobs:
           persist-credentials: false
       - name: Get a browser
         run: |
-          npm install --prefix "$RUNNER_TEMP/pw" --no-audit --no-fund playwright@1.56.1 axe-core@4.10.3
+          npm install --prefix "$RUNNER_TEMP/pw" --no-audit --no-fund playwright@1.64.1 axe-core@4.10.3
           "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
       - name: Run axe on every page (report only; remove continue-on-error when the known colour findings are fixed)
         continue-on-error: true
