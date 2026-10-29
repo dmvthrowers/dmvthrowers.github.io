@@ -39,11 +39,18 @@ jobs:
                   }
                 ]
               }')" | jq -r '.choices[0].message.content')
-          echo "response=$response" >> "$GITHUB_OUTPUT"
+          # Multi-line summaries need a delimiter, or only the first line reaches the next step.
+          {
+            echo "response<<SUMMARY_EOF"
+            echo "$response"
+            echo "SUMMARY_EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Comment with AI summary
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # No checkout in this job, so gh can't read the repo from .git; tell it directly.
+          GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           RESPONSE: ${{ steps.inference.outputs.response }}
         run: |
