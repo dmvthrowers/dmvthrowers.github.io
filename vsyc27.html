@@ -53,6 +53,10 @@
   <link rel="preload" href="assets/fonts/montserrat-latin-49e242.woff2" as="font" type="font/woff2" crossorigin/>
   <link rel="stylesheet" href="assets/css/fonts.css"/>
   <link rel="stylesheet" href="assets/css/vsyc26.css?v=20261007"/>
+  <style>
+    /* Dogwood banner is a raster: crop from the bottom centre on narrow screens instead of stretching. */
+    .hero-dogwoods img { object-fit: cover; object-position: 50% 100%; }
+  </style>
 </head>
 <body>
 
@@ -130,8 +134,8 @@
       <a href="vsyc26.html" class="btn btn-outline">SEE VSYC-26</a>
     </div>
   </div>
-  <div class="hero-skyline">
-    <img src="assets/images/vsyc27-dogwoods-hero.svg" alt="" aria-hidden="true" width="1440" height="280"/>
+  <div class="hero-skyline hero-dogwoods">
+    <picture><source srcset="assets/images/vsyc27-dogwoods-hero.webp" type="image/webp"/><img src="assets/images/vsyc27-dogwoods-hero.png" alt="" aria-hidden="true" width="1440" height="280"/></picture>
   </div>
 </section>
 
