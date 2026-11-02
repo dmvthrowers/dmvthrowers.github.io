@@ -27,11 +27,12 @@ its build order is Wave 10 of `BUILD_PLAN.md`.
 
 ## Now
 
-1. **#76 Archive VSYC-26 and reset the contest pages for VSYC-27** — target is October.
-   Keep the date and venue of VSYC-26 exactly as they are on the archived pages.
-2. **Stale post-event wording** on VSYC pages: `vsyc26.html` OG/Twitter descriptions still end
-   "Free to spectate", and `vsyc26-dueling-stars.html` says "Stella Duellum returns to VA States".
-   Fold into #76.
+1. ~~**#76 Archive VSYC-26 and reset the contest pages for VSYC-27.**~~ Done 2026-11-02 (#181–#183):
+   `vsyc27.html` with everything TBD, the VSYC-26 pages kept as the archive, frozen standings in
+   `archive/2026/`, and every nav, the map, the event hub and the org profile pointing to VSYC-27.
+2. ~~**Stale post-event wording** on VSYC pages.~~ Done: `vsyc26.html` share text and
+   `vsyc26-dueling-stars.html` are past tense, and the VSYC-26 Event JSON-LD no longer lists
+   "InStock" offers.
 3. **Press kit says "Founded 2023"**; the club was founded in 2021. Fix the source and re-export
    `assets/documents/DMV Throwers Press Kit.pdf`.
 4. **Meetup booking gate** ([spec](hub/specs/00-meetup-booking-gate.md)). `scripts/update_meetup.py`
@@ -113,9 +114,23 @@ Exchange) and the registration template plus VA-States (Phase 4). Full plan:
   (archive) and #43 (contest app plans), site #135 (status page link) and #136 (this roadmap).
 - **Check production's migration history:** `0032_revoke_anon_table_access` reads
   `20261001190000` now but read `20261001205725` earlier on 2026-10-06.
-- **Re-check the VA-States roadmap's "Now" list:** close the VSYC-26 registration flag, remove
-  dead Vercel env vars, Stripe webhook events (refunds, disputes), turn on backups and test a
-  restore, rotate contest-day staff accounts.
+- **Registration app owner steps** (details in VA-States `docs/ROADMAP.md`, "Now"). Registration is
+  already closed (archive mode, 2026-11-02). Still to do:
+  - **Turn on backups and test a restore**: set `SUPABASE_DB_URL` (secret) and `BACKUP_AGE_RECIPIENT`
+    (variable) for `db-backup.yml`. Do this well before January; the purge refuses to run without a
+    fresh backup.
+  - **Deactivate contest-day staff accounts** (judge, DJ, audio tech) in `vsyc_staff_accounts`.
+  - **Remove dead Vercel env vars**: `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `DJ_PIN`, `JUDGE_PIN`.
+  - **Stripe webhook**: confirm it subscribes to `charge.refunded`; for dispute alerts, apply migration
+    0046 and subscribe `charge.dispute.created` and `.closed`.
+- **January 2027: full rollover and purge.** Reminder set for Jan 5; checklist in VA-States
+  `docs/ROADMAP.md` ("January 2027: full rollover and purge"). The purge is run by the owner.
+- **VSYC-27 basics:** pick the venue (Dulles Town Center or Fredericksburg), confirm the date, get the
+  insurance/COI, then fill in `vsyc27.html` and the app's `contest.next`.
+- **YoYo Map DNS cutover** to `map.dmvthrowers.club` (Vercel domain + DNS record), then update links.
+- **Event hub launch decision** for `events.dmvthrowers.club` (Gaps item 7 below).
+- **Codex review credits:** the Codex PR reviewer is out of usage, so its reviews fail on every PR.
+  Top up or turn it off.
 - **Supply the lo-fi tracks** for `vsyc26-music/lofi/`.
 
 ## Decisions needed (owner)
