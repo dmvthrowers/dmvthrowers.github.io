@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--
+  vsyc26-results.html — VSYC-26 podium + Virginia State Champion highlights.
+  Links out to the full live leaderboard at register.dmvthrowers.club/results for
+  complete standings; this page is the announcement/highlight recap, not the source of truth.
+  Part of the VSYC-26 sub-site; shares assets/css/vsyc26.css and contest nav with vsyc26.html.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <base href="/"/>
+    <link rel="manifest" href="assets/images/vsyc26-site.webmanifest"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;"/>
+  <title>X Division · VSYC-26 Results</title>
+  <meta name="description" content="VSYC-26 final results: division champions and Virginia State Champions for X Division, 1A, and Sport/Beginner/Junior. September 19, 2026 at Dulles Town Center."/>
+  <meta property="og:title" content="Results · VSYC-26 · Brought to You by Goodles"/>
+  <meta property="og:description" content="Division champions and Virginia State Champions from VSYC-26 · September 19, 2026 · Dulles Town Center"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/archive/2026/X.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/og/vsyc26-share.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="VSYC-26 Virginia State Yo-Yo Contest, September 19, 2026, Dulles Town Center"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="Results · VSYC-26 · Brought to You by Goodles"/>
+  <meta name="twitter:description" content="Division champions and Virginia State Champions from VSYC-26"/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/og/vsyc26-share.png"/>
+  <meta name="twitter:image:alt" content="VSYC-26 Virginia State Yo-Yo Contest, September 19, 2026, Dulles Town Center"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="keywords" content="VSYC-26 results, yo-yo contest results 2026, Virginia state yo-yo champion, VSYC-26 podium"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <meta name="geo.placename" content="Sterling, Virginia"/>
+  <link rel="canonical" href="https://dmvthrowers.club/archive/2026/X.html"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/vsyc26-va-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/vsyc26-va-logo-32.png"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/vsyc26-va-logo-48.png"/>
+  <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
+  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20261102" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="assets/css/vsyc26.css?v=20261102"/></noscript>
+  <link rel="preload" href="assets/fonts/playfair-display-latin-61a963.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="assets/fonts/montserrat-latin-49e242.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/fonts.css"/>
+  <style>
+    /* Click-to-play finals videos: the YouTube iframe is only created after a click */
+    .vid-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }
+    .vid-embed { border: 1px solid var(--gold); background: var(--navy-deep); min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 16px; text-align: center; }
+    .vid-embed.playing { aspect-ratio: 16 / 9; min-height: 0; padding: 0; }
+    .vid-embed iframe { width: 100%; height: 100%; border: 0; }
+    .vid-embed .vid-title { color: var(--white); font-size: 0.95rem; font-weight: 600; }
+    .vid-play { background: var(--gold); color: var(--navy-deep); border: 0; font-weight: 700; letter-spacing: 0.08em; font-size: 0.8rem; padding: 10px 18px; cursor: pointer; }
+    .vid-embed .vid-note { color: rgba(255,255,255,0.75); font-size: 0.75rem; }
+    .vid-embed .vid-note a { color: var(--white); text-decoration: underline; }
+    /* Social links on winners with a public profile. Page-specific: not reused elsewhere yet. */
+    .social-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .social-link { font-size: 0.64rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 9px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; }
+    .social-link:hover { background: var(--gold); color: var(--navy-deep); }
+    .day-photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+    .day-subhead { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 32px 0 0; }
+    .day-photos-stage { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .day-photos-stage img { aspect-ratio: 3 / 2; object-fit: cover; }
+    .day-photos img, .day-podium img { width: 100%; height: auto; display: block; border: 1px solid var(--border); }
+  </style>
+  </head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: contest date banner + sponsor shortcut. -->
+<div id="top-bar">
+  <span>VSYC-26 ARCHIVE · HELD SEPT 19, 2026 · VSYC-27 COMING SOON</span>
+  <a href="vsyc27.html">VSYC-27 →</a>
+</div>
+
+<!-- Contest sub-site nav. aria-current="page" marks the active tab. -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="vsyc26.html" class="nav-brand">
+      <picture><source srcset="assets/images/vsyc26-va-logo-68.webp" type="image/webp" width="34" height="34"/><img src="assets/images/vsyc26-va-logo-68.png" alt="VA State Yo-Yo Competition logo" class="footer-logo" width="34" height="34"/></picture>
+      <div>
+        <div class="nav-brand-main">VSYC-26</div>
+        <div class="nav-brand-sub">VIRGINIA STATE YO-YO CONTEST</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link nav-home">← DMV THROWERS</a>
+      <a href="vsyc26.html" class="nav-link">ABOUT</a>
+      <a href="vsyc26-results.html" class="nav-link active" aria-current="page">RESULTS</a>
+      <a href="vsyc26-schedule.html" class="nav-link">SCHEDULE</a>
+      <a href="vsyc26-register.html" class="nav-link">REGISTER</a>
+      <a href="vsyc26-sponsors.html" class="nav-link">SPONSORS</a>
+      <a href="vsyc26-venue.html" class="nav-link">VENUE</a>
+      <a href="vsyc26-rules.html" class="nav-link">RULES</a>
+      <a href="vsyc26-dueling-stars.html" class="nav-link">STELLA DUELLUM</a>
+      <a href="vsyc26-faq.html" class="nav-link">FAQ</a>
+      <div class="nav-more" id="nav-more">
+        <button type="button" class="nav-link nav-more-btn" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">MORE <span class="nav-more-caret">▾</span></button>
+        <div class="nav-more-menu" id="nav-more-menu" role="menu">
+          <a href="vsyc26-recap.html" role="menuitem">RECAP</a>
+          <a href="vsyc26-twirly-tour.html" role="menuitem">TWIRLY TOUR</a>
+          <a href="vsyc26-merch.html" role="menuitem">MERCH</a>
+          <a href="https://register.dmvthrowers.club/directory" role="menuitem">DIRECTORY</a>
+          <a href="https://register.dmvthrowers.club/results" role="menuitem">FULL LEADERBOARD</a>
+        </div>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" class="mobile-home">← DMV THROWERS</a>
+  <a href="vsyc26.html">ABOUT</a>
+  <a href="vsyc26-results.html">RESULTS</a>
+  <a href="vsyc26-schedule.html">SCHEDULE</a>
+  <a href="vsyc26-register.html">REGISTER</a>
+  <a href="vsyc26-sponsors.html">SPONSORS</a>
+  <a href="vsyc26-venue.html">VENUE</a>
+  <a href="vsyc26-rules.html">RULES</a>
+  <a href="vsyc26-dueling-stars.html">STELLA DUELLUM</a>
+  <a href="vsyc26-faq.html">FAQ</a>
+  <div class="mobile-more-label">More</div>
+  <a href="vsyc26-recap.html">RECAP</a>
+  <a href="vsyc26-twirly-tour.html">TWIRLY TOUR</a>
+  <a href="vsyc26-merch.html">MERCH</a>
+  <a href="https://register.dmvthrowers.club/directory">DIRECTORY</a>
+  <a href="https://register.dmvthrowers.club/results">FULL LEADERBOARD</a>
+</div>
+
+<main id="main-content" role="main">
+  <section class="archive-division">
+    <p><a href="archive/2026/index.html">← All VSYC-26 results</a></p>
+    <h1>X Division</h1>
+    <h2>Standings</h2>
+    <table class="archive-table">
+      <thead><tr><th scope="col">Place</th><th scope="col">Name</th><th scope="col">From</th><th scope="col">Result</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">1</th><td>Chandler Steele</td><td>Xenia, OH</td><td>91.00 <span class="archive-detail">1 judge</span></td></tr>
+        <tr><th scope="row">2</th><td>Drew Buscemi</td><td>Long Island, NY</td><td>59.93 <span class="archive-detail">1 judge</span></td></tr>
+        <tr><th scope="row">3</th><td>Richard Pigkaso</td><td>Bronx, NY</td><td>52.64 <span class="archive-detail">1 judge</span></td></tr>
+        <tr><th scope="row">4</th><td>Alex Curfman <strong class="archive-champion">VA State Champion</strong></td><td>Henrico, VA</td><td>40.77 <span class="archive-detail">1 judge</span></td></tr>
+        <tr><th scope="row">5</th><td>Theodore Munoz</td><td>Mansfield, OH</td><td>40.30 <span class="archive-detail">1 judge</span></td></tr>
+        <tr><th scope="row">6</th><td>Will</td><td>Richmond, VA</td><td>39.06 <span class="archive-detail">1 judge</span></td></tr>
+        <tr><th scope="row">7</th><td>Tucker B.</td><td>MT</td><td>25.05 <span class="archive-detail">1 judge</span></td></tr>
+        <tr><th scope="row">8</th><td>Arthur Foley</td><td>Falls Church, VA</td><td>20.34 <span class="archive-detail">1 judge</span></td></tr>
+      </tbody>
+    </table>
+
+  </section>
+</main>
+
+<!-- Footer. Contest sub-site uses its own footer structure (not about.html's). -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-flex">
+        <picture><source srcset="assets/images/vsyc26-va-logo-68.webp" type="image/webp" width="34" height="34"/><img src="assets/images/vsyc26-va-logo-68.png" alt="VA State Yo-Yo Competition logo" class="footer-logo" loading="lazy" width="34" height="34"/></picture>
+        <div>
+          <div class="footer-title">VIRGINIA STATE YO-YO CONTEST 2026</div>
+          <div class="footer-subtitle">ORGANIZED BY DMV THROWERS · VSYC-26</div>
+          <div class="footer-presented">BROUGHT TO YOU BY <span>GOODLES</span></div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="vsyc26.html" class="footer-link">About</a>
+        <a href="vsyc26-results.html" class="footer-link">Results</a>
+        <a href="vsyc26-recap.html" class="footer-link">Recap</a>
+        <a href="vsyc26-schedule.html" class="footer-link">Schedule</a>
+        <a href="vsyc26-register.html" class="footer-link">Register</a>
+        <a href="vsyc26-sponsors.html" class="footer-link">Sponsors</a>
+        <a href="vsyc26-venue.html" class="footer-link">Venue</a>
+        <a href="vsyc26-rules.html" class="footer-link">Rules</a>
+        <a href="vsyc26-dueling-stars.html" class="footer-link">Stella Duellum</a>
+        <a href="vsyc26-twirly-tour.html" class="footer-link">Twirly Tour</a>
+        <a href="vsyc26-merch.html" class="footer-link">Merch</a>
+        <a href="vsyc26-faq.html" class="footer-link">Contact</a>
+        <a href="vsyc26-terms.html" class="footer-link">Terms</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="index.html" class="footer-link">← Club Site</a>
+        <a href="https://github.com/dmvthrowers" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://stats.uptimerobot.com/7XjeeDhuSq" target="_blank" rel="noopener noreferrer" class="footer-link">Status</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Virginia State Yo-Yo Contest · Brought to you by Goodles · Organized by DMV Throwers Yo-Yo & Skill Toy Club</span>
+      <span class="footer-copy">vastateyoyocontest@gmail.com · @vastateyoyocontest · September 19, 2026 · Dulles Town Center</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger/mobile-menu toggle. Kept on every page; not extracted to mobile-enhancements.js. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+
+  // "More" dropdown (desktop) — Recap/Twirly Tour/Merch/Directory/Leaderboard
+  var moreWrap = document.getElementById('nav-more');
+  var moreBtn = document.getElementById('nav-more-btn');
+  var moreMenu = document.getElementById('nav-more-menu');
+  if (moreWrap && moreBtn && moreMenu) {
+    moreBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = moreMenu.classList.toggle('open');
+      moreWrap.classList.toggle('open', isOpen);
+      moreBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e) {
+      if (!moreWrap.contains(e.target)) {
+        moreMenu.classList.remove('open');
+        moreWrap.classList.remove('open');
+        moreBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
+  <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+<script>
+  // Click-to-play: the YouTube iframe is only created after the visitor presses play.
+  document.querySelectorAll('.vid-embed .vid-play').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var w = b.closest('.vid-embed'), f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + w.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = w.querySelector('.vid-title').textContent;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+      w.innerHTML = ''; w.classList.add('playing'); w.appendChild(f);
+    });
+  });
+</script>
+  <script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>
