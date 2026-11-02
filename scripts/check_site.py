@@ -137,7 +137,8 @@ for page in pages:
         crumbs = crumbs or any(isinstance(i, dict) and i.get("@type") == "BreadcrumbList" for i in items)
     if page.name != "404.html" and not crumbs:
         err("no BreadcrumbList JSON-LD")
-    group = "vsyc26" if page.name.startswith("vsyc26") else "club"
+    m = re.match(r"vsyc\d\d", page.name)  # each contest year (vsyc26, vsyc27, ...) is its own group
+    group = m.group(0) if m else "club"
     nav = block(html, r'<nav aria-label="Main navigation"', "</nav>")
     foot = block(html, r"<footer[ >]", "</footer>")
     if page.name != "404.html":  # the error page has a deliberately minimal nav and no footer

@@ -44,7 +44,16 @@ One shared JS file (`assets/js/mobile-enhancements.js`) is loaded on every page 
 
 The hubs carry a small script that forwards old deep links (`learn-yoyo.html#some-section`) to the part that now holds that section. Hub ↔ part links are plain `href`s — when you move a section, update both sides and the forwarder.
 
-### VSYC-26 contest sub-site
+### VSYC-27 (next contest)
+
+| Page | Purpose |
+| --- | --- |
+| `vsyc27.html` | Hub for the 2027 contest. Date, venue, divisions and fees say TBD until confirmed; add an `Event` JSON-LD once date and venue are set. The club nav's VSYC button and footer point here. Its nav and footer are checked as their own group (`vsyc27*`) |
+
+### VSYC-26 contest sub-site (2026 archive)
+
+The 2026 pages are kept as a permanent archive: results, stats, survey recap and sponsors stay as they are. The top bar on each says "VSYC-26 ARCHIVE" and links to `vsyc27.html`. Put 2027 news on `vsyc27.html`, not here.
+
 
 | Page | Purpose |
 | --- | --- |

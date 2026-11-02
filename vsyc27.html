@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--
+  vsyc27.html — Hub page for the Virginia State Yo-Yo Contest 2027 (VSYC-27).
+  Sections: top bar · contest nav · mobile menu · hero (TBD facts) · planning status · 2026 archive links · footer.
+  Uses the VSYC stylesheet (assets/css/vsyc26.css). Date, venue, divisions and fees are TBD on purpose:
+  fill them in here as they are confirmed, and add an Event JSON-LD block once the date and venue are set.
+  The 2026 contest is archived as-is on vsyc26.html and vsyc26-*.html. Don't edit those for 2027 news.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="DMV Throwers"/>
+  <base href="/"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;"/>
+  <title>Virginia State Yo-Yo Contest 2027 · VSYC-27</title>
+  <meta name="description" content="Virginia State Yo-Yo Contest 2027 (VSYC-27). Date, venue and divisions TBD. Organized by DMV Throwers. See the VSYC-26 archive for 2026 results."/>
+  <meta property="og:title" content="VSYC-27 · Virginia State Yo-Yo Contest 2027"/>
+  <meta property="og:description" content="Date and venue TBD · Free to spectate · Organized by DMV Throwers"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://dmvthrowers.club/vsyc27.html"/>
+  <meta property="og:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
+  <meta property="og:image:width" content="512"/>
+  <meta property="og:image:height" content="512"/>
+  <meta property="og:image:alt" content="Virginia State Yo-Yo Contest logo"/>
+  <meta property="og:site_name" content="DMV Throwers"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@dmv_throwers"/>
+  <meta name="twitter:title" content="VSYC-27 · Virginia State Yo-Yo Contest 2027"/>
+  <meta name="twitter:description" content="Date and venue TBD · Free to spectate · Organized by DMV Throwers"/>
+  <meta name="twitter:image" content="https://dmvthrowers.club/assets/images/vsyc26-va-logo-512.png"/>
+  <meta name="twitter:image:alt" content="Virginia State Yo-Yo Contest logo"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="geo.region" content="US-VA"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/vsyc26-va-logo-16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/vsyc26-va-logo-32.png"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/vsyc26-va-logo-48.png"/>
+  <link rel="apple-touch-icon" href="assets/images/vsyc26-va-logo-180.png"/>
+  <link rel="canonical" href="https://dmvthrowers.club/vsyc27.html"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dmvthrowers.club/"},
+      {"@type": "ListItem", "position": 2, "name": "VSYC-27", "item": "https://dmvthrowers.club/vsyc27.html"}
+    ]
+  }
+  </script>
+  <link rel="preload" href="assets/fonts/playfair-display-latin-61a963.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="preload" href="assets/fonts/montserrat-latin-49e242.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/fonts.css"/>
+  <link rel="stylesheet" href="assets/css/vsyc26.css?v=20261007"/>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Top bar: planning status + shortcut to the 2026 archive. -->
+<div id="top-bar">
+  <span>VSYC-27 · DATE AND VENUE TBD · WE'RE PLANNING NOW</span>
+  <a href="vsyc26.html">2026 ARCHIVE →</a>
+</div>
+
+<!-- Contest nav. aria-current="page" marks the active tab. Add 2027 pages here as they go live. -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="vsyc27.html" class="nav-brand">
+      <picture><source srcset="assets/images/vsyc26-va-logo-68.webp" type="image/webp" width="34" height="34"/><img src="assets/images/vsyc26-va-logo-68.png" alt="VA State Yo-Yo Competition logo" class="footer-logo" width="34" height="34"/></picture>
+      <div>
+        <div class="nav-brand-main">VSYC-27</div>
+        <div class="nav-brand-sub">VIRGINIA STATE YO-YO CONTEST</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link nav-home">← DMV THROWERS</a>
+      <a href="vsyc27.html" class="nav-link active" aria-current="page">ABOUT</a>
+      <a href="vsyc26.html" class="nav-link">2026 ARCHIVE</a>
+      <a href="vsyc26-results.html" class="nav-link">2026 RESULTS</a>
+      <a href="contact.html" class="nav-link">CONTACT</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- Mobile menu: hidden until the hamburger button toggles the .open class. -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" class="mobile-home">← DMV THROWERS</a>
+  <a href="vsyc27.html">ABOUT</a>
+  <a href="vsyc26.html">2026 ARCHIVE</a>
+  <a href="vsyc26-results.html">2026 RESULTS</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<main id="main-content" role="main">
+<!-- Hero: headline + TBD facts. Swap TBD for real values as they are confirmed. -->
+<section id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="hero-badge">17TH ANNUAL</span>
+      <span class="hero-edition">VIRGINIA TRADITION SINCE 2006</span>
+    </div>
+    <h1 class="hero-title">VIRGINIA STATE<br/><span>YO-YO CONTEST</span></h1>
+    <span class="hero-year" aria-hidden="true">2027</span>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">DATE</span>
+        <span class="hero-meta-val">TBD</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">TIME</span>
+        <span class="hero-meta-val">TBD</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">VENUE</span>
+        <span class="hero-meta-val">TBD</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">ADMISSION</span>
+        <span class="hero-meta-val">Free to Spectate</span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-gold">GET IN TOUCH</a>
+      <a href="vsyc26.html" class="btn btn-outline">SEE VSYC-26</a>
+    </div>
+  </div>
+  <div class="hero-skyline">
+    <img src="assets/images/vsyc-marigolds-hero.svg" alt="" aria-hidden="true" width="1440" height="280"/>
+  </div>
+</section>
+
+<!-- Planning status. Every fact is TBD until confirmed. -->
+<div class="section-wrap bg-navy" id="about">
+  <div class="section">
+    <div class="gold-tag">PLANNING NOW</div>
+    <h2 class="section-title">VSYC-27 Is Coming</h2>
+    <div class="divider-gold"></div>
+    <div class="grid-2col">
+      <div>
+        <p class="p-style">The Virginia State Yo-Yo Contest comes back in 2027. We're locking in the date, venue and divisions now. Nothing is set yet, so everything here says TBD until it is.</p>
+        <p class="p-style2">Registration isn't open yet. When it opens, you'll find it here first.</p>
+        <p class="p-style2">Have a venue idea? Want to sponsor, judge or volunteer? Email <a href="mailto:vastateyoyocontest@gmail.com" class="rules-link">vastateyoyocontest@gmail.com</a> or use the <a href="contact.html" class="rules-link">contact form</a>.</p>
+        <p class="p-style2">Your 2026 survey answers shape the plan: a tighter schedule, better sound, and earlier awards. <a href="vsyc26.html#heard" class="rules-link">See what you told us</a>.</p>
+        <div class="flex-gap">
+          <span class="tag-style">FREE TO SPECTATE</span>
+          <span class="tag-style">ALL AGES</span>
+          <span class="tag-style">ALL LEVELS</span>
+        </div>
+      </div>
+      <div>
+        <div class="facts-grid facts-margin">
+          <div class="fact-card"><div class="fact-label">DATE</div><div class="fact-val">TBD</div></div>
+          <div class="fact-card"><div class="fact-label">HOURS</div><div class="fact-val">TBD</div></div>
+          <div class="fact-card"><div class="fact-label">VENUE</div><div class="fact-val">TBD</div></div>
+          <div class="fact-card"><div class="fact-label">DIVISIONS</div><div class="fact-val">TBD</div></div>
+          <div class="fact-card"><div class="fact-label">ENTRY FEE</div><div class="fact-val">TBD</div></div>
+          <div class="fact-card"><div class="fact-label">REGISTRATION</div><div class="fact-val">Not Open Yet</div></div>
+          <div class="fact-card"><div class="fact-label">SPONSORS</div><div class="fact-val">TBD</div></div>
+          <div class="fact-card"><div class="fact-label">ORGANIZER</div><div class="fact-val">DMV Throwers</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Links into the 2026 archive. -->
+<div class="section-wrap" id="archive">
+  <div class="section">
+    <div class="gold-tag">LAST YEAR</div>
+    <h2 class="section-title">VSYC-26 Archive</h2>
+    <div class="divider-gold"></div>
+    <p class="sponsor-p">September 19, 2026 at Dulles Town Center. 50 competitors from 14 states and 13 clubs, run by 20 volunteers. Every result, run and photo is saved.</p>
+    <div class="flex-gap">
+      <a href="vsyc26-results.html" class="btn btn-gold">2026 RESULTS</a>
+      <a href="vsyc26-recap.html" class="btn btn-outline">2026 RECAP</a>
+      <a href="vsyc26.html" class="btn btn-outline">FULL ARCHIVE</a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- Footer. VSYC-27 footer; keep it identical on any vsyc27-*.html pages added later. -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-flex">
+        <picture><source srcset="assets/images/vsyc26-va-logo-68.webp" type="image/webp" width="34" height="34"/><img src="assets/images/vsyc26-va-logo-68.png" alt="VA State Yo-Yo Competition logo" class="footer-logo" loading="lazy" width="34" height="34"/></picture>
+        <div>
+          <div class="footer-title">VIRGINIA STATE YO-YO CONTEST 2027</div>
+          <div class="footer-subtitle">ORGANIZED BY DMV THROWERS · VSYC-27</div>
+        </div>
+      </div>
+      <nav aria-label="Footer">
+        <a href="vsyc27.html" class="footer-link">About</a>
+        <a href="vsyc26.html" class="footer-link">VSYC-26 Archive</a>
+        <a href="vsyc26-results.html" class="footer-link">2026 Results</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="code-of-conduct.html" class="footer-link">Code of Conduct</a>
+        <a href="privacy.html" class="footer-link">Privacy</a>
+        <a href="index.html" class="footer-link">← Club Site</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Virginia State Yo-Yo Contest · Organized by DMV Throwers Yo-Yo & Skill Toy Club</span>
+      <span class="footer-copy">vastateyoyocontest@gmail.com · @vastateyoyocontest · Date and venue TBD</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Inline hamburger toggle. -->
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+  });
+</script>
+  <!-- Shared mobile UX enhancements (skip-link polish, external link rel, lazy-load, scroll-to-top). -->
+  <script src="assets/js/mobile-enhancements.js" defer></script>
+</body>
+</html>
