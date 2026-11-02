@@ -1,0 +1,921 @@
+{
+  "season": "2026",
+  "contest": "Virginia State Yo-Yo Contest",
+  "shortName": "VSYC-26",
+  "dateAndPlace": "September 19, 2026 · Dulles Town Center, Sterling",
+  "generatedAt": "2026-11-02T12:00:08.537Z",
+  "divisions": [
+    {
+      "code": "1A",
+      "name": "1A — Single String",
+      "format": "freestyle",
+      "rounds": [
+        {
+          "name": "Final",
+          "rows": [
+            {
+              "place": 1,
+              "name": "Ryan Kim",
+              "city": "Rosedale",
+              "state": "MD",
+              "result": "95.50",
+              "detail": "1 judge"
+            },
+            {
+              "place": 2,
+              "name": "Connor Sheahan",
+              "city": "Boulder",
+              "state": "CO",
+              "result": "84.71",
+              "detail": "1 judge"
+            },
+            {
+              "place": 3,
+              "name": "Colin Beckford",
+              "city": "Cleveland",
+              "state": "OH",
+              "result": "79.56",
+              "detail": "1 judge"
+            },
+            {
+              "place": 4,
+              "name": "Nathan Joseph",
+              "city": "North East",
+              "state": "MD",
+              "result": "76.21",
+              "detail": "1 judge"
+            },
+            {
+              "place": 5,
+              "name": "Ari K.",
+              "city": null,
+              "state": "OH",
+              "result": "73.40",
+              "detail": "1 judge"
+            },
+            {
+              "place": 6,
+              "name": "Lucas Xue",
+              "city": "Dublin",
+              "state": "OH",
+              "result": "71.15",
+              "detail": "1 judge"
+            },
+            {
+              "place": 7,
+              "name": "Gavin Hubner",
+              "city": "Grand Haven",
+              "state": "MI",
+              "result": "65.18",
+              "detail": "1 judge"
+            },
+            {
+              "place": 8,
+              "name": "Drew Buscemi",
+              "city": "Long Island",
+              "state": "NY",
+              "result": "57.15",
+              "detail": "1 judge"
+            },
+            {
+              "place": 9,
+              "name": "Aidan Cioch",
+              "city": "Westfield",
+              "state": "MA",
+              "result": "55.10",
+              "detail": "1 judge"
+            },
+            {
+              "place": 10,
+              "name": "Adam Criser",
+              "city": "Winfield",
+              "state": "WV",
+              "result": "52.49",
+              "detail": "1 judge"
+            },
+            {
+              "place": 11,
+              "name": "David Kane",
+              "city": "Bethesda",
+              "state": "MD",
+              "result": "50.95",
+              "detail": "1 judge"
+            },
+            {
+              "place": 12,
+              "name": "Sam Bentz",
+              "city": "Frederick",
+              "state": "MD",
+              "result": "49.87",
+              "detail": "1 judge"
+            },
+            {
+              "place": 13,
+              "name": "Bryant Baus",
+              "city": "Virginia Beach",
+              "state": "VA",
+              "result": "48.48",
+              "detail": "1 judge",
+              "champion": true
+            },
+            {
+              "place": 14,
+              "name": "Tucker B.",
+              "city": null,
+              "state": "MT",
+              "result": "47.14",
+              "detail": "1 judge"
+            },
+            {
+              "place": 15,
+              "name": "Andrew G.",
+              "city": null,
+              "state": "NC",
+              "result": "45.16",
+              "detail": "1 judge"
+            },
+            {
+              "place": 16,
+              "name": "Ibrahim Osman",
+              "city": "Reston",
+              "state": "VA",
+              "result": "43.73",
+              "detail": "1 judge"
+            },
+            {
+              "place": 17,
+              "name": "Connor M.",
+              "city": null,
+              "state": "NJ",
+              "result": "41.13",
+              "detail": "1 judge"
+            },
+            {
+              "place": 18,
+              "name": "John B.",
+              "city": null,
+              "state": "PA",
+              "result": "31.99",
+              "detail": "1 judge"
+            },
+            {
+              "place": 19,
+              "name": "Philip Pacific",
+              "city": "Dallas",
+              "state": "TX",
+              "result": "29.56",
+              "detail": "1 judge"
+            },
+            {
+              "place": 20,
+              "name": "Byrne-Cox",
+              "city": "Lynchburg",
+              "state": "VA",
+              "result": "29.28",
+              "detail": "1 judge"
+            },
+            {
+              "place": 21,
+              "name": "Gabriel Wilson",
+              "city": "Easthampton",
+              "state": "MA",
+              "result": "27.94",
+              "detail": "1 judge"
+            },
+            {
+              "place": 22,
+              "name": "Danny Shamis",
+              "city": "Andover",
+              "state": "MA",
+              "result": "27.88",
+              "detail": "1 judge"
+            },
+            {
+              "place": 23,
+              "name": "Timothy Harianja",
+              "city": "Tysons Corner",
+              "state": "VA",
+              "result": "27.29",
+              "detail": "1 judge"
+            },
+            {
+              "place": 24,
+              "name": "Matthew Steiner",
+              "city": "Boardman",
+              "state": "OH",
+              "result": "25.52",
+              "detail": "1 judge"
+            },
+            {
+              "place": 25,
+              "name": "Theodore Munoz",
+              "city": "Mansfield",
+              "state": "OH",
+              "result": "23.48",
+              "detail": "1 judge"
+            },
+            {
+              "place": 26,
+              "name": "Gabriel Cabral",
+              "city": "California",
+              "state": "MD",
+              "result": "21.79",
+              "detail": "1 judge"
+            },
+            {
+              "place": 27,
+              "name": "Richard Pigkaso",
+              "city": "Bronx",
+              "state": "NY",
+              "result": "13.02",
+              "detail": "1 judge"
+            },
+            {
+              "place": 28,
+              "name": "Ben Wolin",
+              "city": "Arlington",
+              "state": "VA",
+              "result": "7.42",
+              "detail": "1 judge"
+            },
+            {
+              "place": 29,
+              "name": "Johnny Le",
+              "city": "Richmond",
+              "state": "VA",
+              "result": "7.09",
+              "detail": "1 judge"
+            },
+            {
+              "place": 30,
+              "name": "William Murphy",
+              "city": "Henrico",
+              "state": "VA",
+              "result": "2.83",
+              "detail": "1 judge"
+            },
+            {
+              "place": 31,
+              "name": "Mikayil M.",
+              "city": null,
+              "state": "MD",
+              "result": "-2.01",
+              "detail": "1 judge"
+            },
+            {
+              "place": 32,
+              "name": "Chad Pelletier",
+              "city": "Marlton",
+              "state": "NJ",
+              "result": "-2.57",
+              "detail": "1 judge"
+            }
+          ]
+        }
+      ],
+      "final": [
+        {
+          "place": 1,
+          "name": "Ryan Kim",
+          "city": "Rosedale",
+          "state": "MD",
+          "result": "95.50",
+          "detail": "1 judge"
+        },
+        {
+          "place": 2,
+          "name": "Connor Sheahan",
+          "city": "Boulder",
+          "state": "CO",
+          "result": "84.71",
+          "detail": "1 judge"
+        },
+        {
+          "place": 3,
+          "name": "Colin Beckford",
+          "city": "Cleveland",
+          "state": "OH",
+          "result": "79.56",
+          "detail": "1 judge"
+        },
+        {
+          "place": 4,
+          "name": "Nathan Joseph",
+          "city": "North East",
+          "state": "MD",
+          "result": "76.21",
+          "detail": "1 judge"
+        },
+        {
+          "place": 5,
+          "name": "Ari K.",
+          "city": null,
+          "state": "OH",
+          "result": "73.40",
+          "detail": "1 judge"
+        },
+        {
+          "place": 6,
+          "name": "Lucas Xue",
+          "city": "Dublin",
+          "state": "OH",
+          "result": "71.15",
+          "detail": "1 judge"
+        },
+        {
+          "place": 7,
+          "name": "Gavin Hubner",
+          "city": "Grand Haven",
+          "state": "MI",
+          "result": "65.18",
+          "detail": "1 judge"
+        },
+        {
+          "place": 8,
+          "name": "Drew Buscemi",
+          "city": "Long Island",
+          "state": "NY",
+          "result": "57.15",
+          "detail": "1 judge"
+        },
+        {
+          "place": 9,
+          "name": "Aidan Cioch",
+          "city": "Westfield",
+          "state": "MA",
+          "result": "55.10",
+          "detail": "1 judge"
+        },
+        {
+          "place": 10,
+          "name": "Adam Criser",
+          "city": "Winfield",
+          "state": "WV",
+          "result": "52.49",
+          "detail": "1 judge"
+        },
+        {
+          "place": 11,
+          "name": "David Kane",
+          "city": "Bethesda",
+          "state": "MD",
+          "result": "50.95",
+          "detail": "1 judge"
+        },
+        {
+          "place": 12,
+          "name": "Sam Bentz",
+          "city": "Frederick",
+          "state": "MD",
+          "result": "49.87",
+          "detail": "1 judge"
+        },
+        {
+          "place": 13,
+          "name": "Bryant Baus",
+          "city": "Virginia Beach",
+          "state": "VA",
+          "result": "48.48",
+          "detail": "1 judge",
+          "champion": true
+        },
+        {
+          "place": 14,
+          "name": "Tucker B.",
+          "city": null,
+          "state": "MT",
+          "result": "47.14",
+          "detail": "1 judge"
+        },
+        {
+          "place": 15,
+          "name": "Andrew G.",
+          "city": null,
+          "state": "NC",
+          "result": "45.16",
+          "detail": "1 judge"
+        },
+        {
+          "place": 16,
+          "name": "Ibrahim Osman",
+          "city": "Reston",
+          "state": "VA",
+          "result": "43.73",
+          "detail": "1 judge"
+        },
+        {
+          "place": 17,
+          "name": "Connor M.",
+          "city": null,
+          "state": "NJ",
+          "result": "41.13",
+          "detail": "1 judge"
+        },
+        {
+          "place": 18,
+          "name": "John B.",
+          "city": null,
+          "state": "PA",
+          "result": "31.99",
+          "detail": "1 judge"
+        },
+        {
+          "place": 19,
+          "name": "Philip Pacific",
+          "city": "Dallas",
+          "state": "TX",
+          "result": "29.56",
+          "detail": "1 judge"
+        },
+        {
+          "place": 20,
+          "name": "Byrne-Cox",
+          "city": "Lynchburg",
+          "state": "VA",
+          "result": "29.28",
+          "detail": "1 judge"
+        },
+        {
+          "place": 21,
+          "name": "Gabriel Wilson",
+          "city": "Easthampton",
+          "state": "MA",
+          "result": "27.94",
+          "detail": "1 judge"
+        },
+        {
+          "place": 22,
+          "name": "Danny Shamis",
+          "city": "Andover",
+          "state": "MA",
+          "result": "27.88",
+          "detail": "1 judge"
+        },
+        {
+          "place": 23,
+          "name": "Timothy Harianja",
+          "city": "Tysons Corner",
+          "state": "VA",
+          "result": "27.29",
+          "detail": "1 judge"
+        },
+        {
+          "place": 24,
+          "name": "Matthew Steiner",
+          "city": "Boardman",
+          "state": "OH",
+          "result": "25.52",
+          "detail": "1 judge"
+        },
+        {
+          "place": 25,
+          "name": "Theodore Munoz",
+          "city": "Mansfield",
+          "state": "OH",
+          "result": "23.48",
+          "detail": "1 judge"
+        },
+        {
+          "place": 26,
+          "name": "Gabriel Cabral",
+          "city": "California",
+          "state": "MD",
+          "result": "21.79",
+          "detail": "1 judge"
+        },
+        {
+          "place": 27,
+          "name": "Richard Pigkaso",
+          "city": "Bronx",
+          "state": "NY",
+          "result": "13.02",
+          "detail": "1 judge"
+        },
+        {
+          "place": 28,
+          "name": "Ben Wolin",
+          "city": "Arlington",
+          "state": "VA",
+          "result": "7.42",
+          "detail": "1 judge"
+        },
+        {
+          "place": 29,
+          "name": "Johnny Le",
+          "city": "Richmond",
+          "state": "VA",
+          "result": "7.09",
+          "detail": "1 judge"
+        },
+        {
+          "place": 30,
+          "name": "William Murphy",
+          "city": "Henrico",
+          "state": "VA",
+          "result": "2.83",
+          "detail": "1 judge"
+        },
+        {
+          "place": 31,
+          "name": "Mikayil M.",
+          "city": null,
+          "state": "MD",
+          "result": "-2.01",
+          "detail": "1 judge"
+        },
+        {
+          "place": 32,
+          "name": "Chad Pelletier",
+          "city": "Marlton",
+          "state": "NJ",
+          "result": "-2.57",
+          "detail": "1 judge"
+        }
+      ]
+    },
+    {
+      "code": "X",
+      "name": "X Division",
+      "format": "freestyle",
+      "rounds": [
+        {
+          "name": "Final",
+          "rows": [
+            {
+              "place": 1,
+              "name": "Chandler Steele",
+              "city": "Xenia",
+              "state": "OH",
+              "result": "91.00",
+              "detail": "1 judge"
+            },
+            {
+              "place": 2,
+              "name": "Drew Buscemi",
+              "city": "Long Island",
+              "state": "NY",
+              "result": "59.93",
+              "detail": "1 judge"
+            },
+            {
+              "place": 3,
+              "name": "Richard Pigkaso",
+              "city": "Bronx",
+              "state": "NY",
+              "result": "52.64",
+              "detail": "1 judge"
+            },
+            {
+              "place": 4,
+              "name": "Alex Curfman",
+              "city": "Henrico",
+              "state": "VA",
+              "result": "40.77",
+              "detail": "1 judge",
+              "champion": true
+            },
+            {
+              "place": 5,
+              "name": "Theodore Munoz",
+              "city": "Mansfield",
+              "state": "OH",
+              "result": "40.30",
+              "detail": "1 judge"
+            },
+            {
+              "place": 6,
+              "name": "Will",
+              "city": "Richmond",
+              "state": "VA",
+              "result": "39.06",
+              "detail": "1 judge"
+            },
+            {
+              "place": 7,
+              "name": "Tucker B.",
+              "city": null,
+              "state": "MT",
+              "result": "25.05",
+              "detail": "1 judge"
+            },
+            {
+              "place": 8,
+              "name": "Arthur Foley",
+              "city": "Falls Church",
+              "state": "VA",
+              "result": "20.34",
+              "detail": "1 judge"
+            }
+          ]
+        }
+      ],
+      "final": [
+        {
+          "place": 1,
+          "name": "Chandler Steele",
+          "city": "Xenia",
+          "state": "OH",
+          "result": "91.00",
+          "detail": "1 judge"
+        },
+        {
+          "place": 2,
+          "name": "Drew Buscemi",
+          "city": "Long Island",
+          "state": "NY",
+          "result": "59.93",
+          "detail": "1 judge"
+        },
+        {
+          "place": 3,
+          "name": "Richard Pigkaso",
+          "city": "Bronx",
+          "state": "NY",
+          "result": "52.64",
+          "detail": "1 judge"
+        },
+        {
+          "place": 4,
+          "name": "Alex Curfman",
+          "city": "Henrico",
+          "state": "VA",
+          "result": "40.77",
+          "detail": "1 judge",
+          "champion": true
+        },
+        {
+          "place": 5,
+          "name": "Theodore Munoz",
+          "city": "Mansfield",
+          "state": "OH",
+          "result": "40.30",
+          "detail": "1 judge"
+        },
+        {
+          "place": 6,
+          "name": "Will",
+          "city": "Richmond",
+          "state": "VA",
+          "result": "39.06",
+          "detail": "1 judge"
+        },
+        {
+          "place": 7,
+          "name": "Tucker B.",
+          "city": null,
+          "state": "MT",
+          "result": "25.05",
+          "detail": "1 judge"
+        },
+        {
+          "place": 8,
+          "name": "Arthur Foley",
+          "city": "Falls Church",
+          "state": "VA",
+          "result": "20.34",
+          "detail": "1 judge"
+        }
+      ]
+    },
+    {
+      "code": "SBJ",
+      "name": "Sport / Beginner / Junior",
+      "format": "freestyle",
+      "rounds": [
+        {
+          "name": "Final",
+          "rows": [
+            {
+              "place": 1,
+              "name": "Steen H.",
+              "city": null,
+              "state": "GA",
+              "result": "74.03",
+              "detail": "1 judge"
+            },
+            {
+              "place": 2,
+              "name": "Larkin M.",
+              "city": null,
+              "state": "NC",
+              "result": "71.62",
+              "detail": "1 judge"
+            },
+            {
+              "place": 3,
+              "name": "Joshua",
+              "city": "Mooresville",
+              "state": "NC",
+              "result": "59.52",
+              "detail": "1 judge"
+            },
+            {
+              "place": 4,
+              "name": "Cameron M.",
+              "city": null,
+              "state": "NC",
+              "result": "58.65",
+              "detail": "1 judge"
+            },
+            {
+              "place": 5,
+              "name": "Christian E.",
+              "city": null,
+              "state": "VA",
+              "result": "54.91",
+              "detail": "1 judge",
+              "champion": true
+            },
+            {
+              "place": 6,
+              "name": "Drew M.",
+              "city": null,
+              "state": "VA",
+              "result": "39.94",
+              "detail": "1 judge"
+            },
+            {
+              "place": 7,
+              "name": "Muhammad F.",
+              "city": null,
+              "state": "VA",
+              "result": "38.13",
+              "detail": "1 judge"
+            },
+            {
+              "place": 8,
+              "name": "Ayush S.",
+              "city": null,
+              "state": "VA",
+              "result": "35.66",
+              "detail": "1 judge"
+            },
+            {
+              "place": 9,
+              "name": "Oliver M.",
+              "city": null,
+              "state": "MD",
+              "result": "35.39",
+              "detail": "1 judge"
+            },
+            {
+              "place": 10,
+              "name": "David Oladimeji",
+              "city": "Frederick",
+              "state": "MD",
+              "result": "31.56",
+              "detail": "1 judge"
+            },
+            {
+              "place": 11,
+              "name": "Mr Grapes",
+              "city": "Midlothian",
+              "state": "VA",
+              "result": "30.09",
+              "detail": "1 judge"
+            },
+            {
+              "place": 12,
+              "name": "Logan L.",
+              "city": null,
+              "state": "VA",
+              "result": "23.70",
+              "detail": "1 judge"
+            },
+            {
+              "place": 13,
+              "name": "Bman",
+              "city": null,
+              "state": "VA",
+              "result": "22.85",
+              "detail": "1 judge"
+            },
+            {
+              "place": 14,
+              "name": "Sunjay S.",
+              "city": null,
+              "state": "VA",
+              "result": "16.81",
+              "detail": "1 judge"
+            }
+          ]
+        }
+      ],
+      "final": [
+        {
+          "place": 1,
+          "name": "Steen H.",
+          "city": null,
+          "state": "GA",
+          "result": "74.03",
+          "detail": "1 judge"
+        },
+        {
+          "place": 2,
+          "name": "Larkin M.",
+          "city": null,
+          "state": "NC",
+          "result": "71.62",
+          "detail": "1 judge"
+        },
+        {
+          "place": 3,
+          "name": "Joshua",
+          "city": "Mooresville",
+          "state": "NC",
+          "result": "59.52",
+          "detail": "1 judge"
+        },
+        {
+          "place": 4,
+          "name": "Cameron M.",
+          "city": null,
+          "state": "NC",
+          "result": "58.65",
+          "detail": "1 judge"
+        },
+        {
+          "place": 5,
+          "name": "Christian E.",
+          "city": null,
+          "state": "VA",
+          "result": "54.91",
+          "detail": "1 judge",
+          "champion": true
+        },
+        {
+          "place": 6,
+          "name": "Drew M.",
+          "city": null,
+          "state": "VA",
+          "result": "39.94",
+          "detail": "1 judge"
+        },
+        {
+          "place": 7,
+          "name": "Muhammad F.",
+          "city": null,
+          "state": "VA",
+          "result": "38.13",
+          "detail": "1 judge"
+        },
+        {
+          "place": 8,
+          "name": "Ayush S.",
+          "city": null,
+          "state": "VA",
+          "result": "35.66",
+          "detail": "1 judge"
+        },
+        {
+          "place": 9,
+          "name": "Oliver M.",
+          "city": null,
+          "state": "MD",
+          "result": "35.39",
+          "detail": "1 judge"
+        },
+        {
+          "place": 10,
+          "name": "David Oladimeji",
+          "city": "Frederick",
+          "state": "MD",
+          "result": "31.56",
+          "detail": "1 judge"
+        },
+        {
+          "place": 11,
+          "name": "Mr Grapes",
+          "city": "Midlothian",
+          "state": "VA",
+          "result": "30.09",
+          "detail": "1 judge"
+        },
+        {
+          "place": 12,
+          "name": "Logan L.",
+          "city": null,
+          "state": "VA",
+          "result": "23.70",
+          "detail": "1 judge"
+        },
+        {
+          "place": 13,
+          "name": "Bman",
+          "city": null,
+          "state": "VA",
+          "result": "22.85",
+          "detail": "1 judge"
+        },
+        {
+          "place": 14,
+          "name": "Sunjay S.",
+          "city": null,
+          "state": "VA",
+          "result": "16.81",
+          "detail": "1 judge"
+        }
+      ]
+    }
+  ]
+}

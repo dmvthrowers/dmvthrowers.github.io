@@ -173,6 +173,34 @@
 
   <!-- VSYC-26 (archive) -->
   <url>
+    <loc>https://dmvthrowers.club/archive/2026/index.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://dmvthrowers.club/archive/2026/1A.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://dmvthrowers.club/archive/2026/X.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://dmvthrowers.club/archive/2026/SBJ.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://dmvthrowers.club/vsyc26.html</loc>
     <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
