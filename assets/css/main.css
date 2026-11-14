@@ -98,7 +98,7 @@
   --footer-link: #8fa8d8; /* Light muted blue — readable on navy #102040 (≈5.5:1 contrast) */
   --footer-copy: #fff; /* White for max contrast in footer */
   --footer-brand-sub: #C9A84C; /* Gold subtext: about 7:1 on navy (the old deep red was about 1.5:1) */
-  --vsyc-label: #a00000; /* Deeper red for VSYC label */
+  --vsyc-label: #C9A84C; /* VSYC gold for the banner label: about 7:1 on navy (red was below 3:1) */
   --team-label: #0a1a3a; /* Darker for team label */
 }
 html {
@@ -210,7 +210,7 @@ nav.guide-pager { background: none; padding-left: 0; padding-right: 0; }
 /* footer brand text — two naming conventions used across pages */
 .footer-title, .footer-brand-main { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: white; }
 .footer-subtitle, .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.16em; color: var(--footer-brand-sub); font-weight: 700; }
-.vsyc-label { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--red); font-weight: 700; margin-bottom: 8px; }
+.vsyc-label { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--vsyc-label); font-weight: 700; margin-bottom: 8px; }
 .team-teaser-label { font-size: 0.65rem; letter-spacing: 0.18em; color: var(--team-label); font-weight: 700; margin-bottom: 4px; }
 /* .vsyc-banner: layout declared here; bg + color shared with about.html's inline override */
 .vsyc-banner { background: var(--navy); color: white; padding: 32px 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }

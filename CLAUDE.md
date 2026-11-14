@@ -9,7 +9,7 @@ A hand-maintained static site served by GitHub Pages at a custom domain. No buil
 Two clusters of pages share a common look but live in separate stylesheets:
 
 - **Main club site** — `index.html`, `about.html`, `team.html`, `events.html`, `gallery.html`, `resources.html`, `faq.html`, `contact.html`, `privacy.html`, `code-of-conduct.html`, `404.html`. Uses `assets/css/main.css`.
-- **VSYC-26 contest sub-site** — `vsyc26.html` and `vsyc26-*.html` (schedule, register, sponsors, venue, rules, faq, terms). Uses `assets/css/vsyc26.css`.
+- **VSYC contest pages** — `vsyc27.html` (the next contest; details TBD) plus the VSYC-26 archive: `vsyc26.html`, `vsyc26-*.html` and the frozen standings in `archive/2026/`. All use `assets/css/vsyc26.css`.
 
 One shared JS file (`assets/js/mobile-enhancements.js`) is loaded on every page for progressive enhancement.
 
@@ -166,7 +166,7 @@ broken link, fix or drop the link on every page that has it. Don't weaken the ch
 
 ## Accessibility check
 
-`.github/workflows/a11y.yml` runs axe on every page (`node scripts/a11y_test.js .`, needs Playwright and axe-core). It is report-only for now. Known findings left for a design call: the red `.vsyc-label` on the navy VSYC banner (index.html), the red link on navy in the teachers resource list, the light footer links over red in the teachers page, and the gold-outline buttons on the VSYC rules page. Fix them with brand-token colours, then remove `continue-on-error` from the workflow.
+`.github/workflows/a11y.yml` runs axe on every page (`node scripts/a11y_test.js .`, needs Playwright and axe-core). It is report-only for now. Known findings left for a design call (the `.vsyc-label` on the index.html banner is now VSYC gold): the red link on navy in the teachers resource list, the light footer links over red in the teachers page, and the gold-outline buttons on the VSYC rules page. Fix them with brand-token colours, then remove `continue-on-error` from the workflow.
 
 ## Where things live
 
